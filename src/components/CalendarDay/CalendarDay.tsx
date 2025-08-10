@@ -20,9 +20,9 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
         <div
           key={idx}
           className={styles.holiday}
-          title={`${holiday.name} (${holiday.country})`}
+          title={`${holiday.localName}`}
         >
-          {holiday.name}
+          {holiday.country}: {holiday.name}
         </div>
       ))}
     </div>
