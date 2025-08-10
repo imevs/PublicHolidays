@@ -1,0 +1,37 @@
+import React from 'react';
+import { monthNames } from '../../utils/dateUtils';
+import styles from './MonthNavigation.module.css';
+
+interface MonthNavigationProps {
+  currentDate: Date;
+  onNavigateMonth: (direction: number) => void;
+}
+
+const MonthNavigation: React.FC<MonthNavigationProps> = ({
+  currentDate,
+  onNavigateMonth
+}) => {
+  return (
+    <div className={styles.monthNavigation}>
+      <button
+        className={styles.navButton}
+        onClick={() => onNavigateMonth(-1)}
+      >
+        ← Previous
+      </button>
+
+      <h2 className={styles.monthTitle}>
+        {`${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`}
+      </h2>
+
+      <button
+        className={styles.navButton}
+        onClick={() => onNavigateMonth(1)}
+      >
+        Next →
+      </button>
+    </div>
+  );
+};
+
+export default MonthNavigation;

@@ -1,0 +1,36 @@
+.controlGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.controlGroup label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.countryFilter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.countryChip {
+  padding: 6px 12px;
+  background: #e9ecef;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.countryChip.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.countryChip:hover {
+  border-color: #667eea;
+}

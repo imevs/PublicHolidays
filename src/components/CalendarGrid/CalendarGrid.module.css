@@ -1,0 +1,24 @@
+.calendarGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: #e9ecef;
+  margin: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.calendarHeader {
+  background: #495057;
+  color: white;
+  padding: 15px 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .calendarGrid {
+    margin: 20px;
+  }
+}
