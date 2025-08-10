@@ -18,6 +18,40 @@ const countries = args.slice(separatorIndex + 1);
 
 const API_BASE = "https://date.nager.at/api/v3/PublicHolidays";
 
+// ISO 3166-1 alpha-2 to country name mapping (short list, extend if needed)
+const countryNames: Record<string, string> = {
+    US: "United States",
+    DE: "Germany",
+    FR: "France",
+    GB: "United Kingdom",
+    CA: "Canada",
+    AU: "Australia",
+    JP: "Japan",
+    CN: "China",
+    IT: "Italy",
+    ES: "Spain",
+    RU: "Russia",
+    BR: "Brazil",
+    IN: "India",
+    MX: "Mexico"
+    // Add more as needed
+};
+
+// Fields to exclude
+const excludeFields = new Set(["fixed", "global", "counties", "launchYear", "types"]);
+
+function cleanHolidayData(data: any[]): any[] {
+    return data.map(item => {
+        const cleaned: Record<string, any> = {};
+        for (const [key, value] of Object.entries(item)) {
+            if (!excludeFields.has(key)) {
+                cleaned[key] = value;
+            }
+        }
+        return cleaned;
+    });
+}
+
 async function fetchHolidays(year: number, country: string) {
     const url = `${API_BASE}/${year}/${country}`;
     console.log(`Fetching: ${url}`);
@@ -25,7 +59,8 @@ async function fetchHolidays(year: number, country: string) {
     if (!res.ok) {
         throw new Error(`Failed to fetch holidays for ${country} in ${year}: ${res.statusText}`);
     }
-    return res.json();
+    const json = await res.json();
+    return cleanHolidayData(json);
 }
 
 async function saveToTsFile(country: string, data: Record<number, any>) {
@@ -35,11 +70,15 @@ async function saveToTsFile(country: string, data: Record<number, any>) {
     }
     const filePath = path.join(dir, `${country}.ts`);
 
-    const tsContent =
-        `// Auto-generated holiday data for ${country}
-// Source: https://date.nager.at
+    const countryName = countryNames[country] || country;
 
-export const holidays_${country} = ${JSON.stringify(data, null, 2)} as const;
+    const tsContent =
+        `
+export const holidays_${country} = {
+  countryCode: "${country}",
+  countryName: "${countryName}",
+  years: ${JSON.stringify(data, null, 2)}
+} as const;
 `;
 
     fs.writeFileSync(filePath, tsContent, "utf-8");
