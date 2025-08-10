@@ -16,29 +16,10 @@ if (separatorIndex === -1 || separatorIndex < 1 || separatorIndex === args.lengt
 const years = args.slice(0, separatorIndex).map(y => parseInt(y, 10));
 const countries = args.slice(separatorIndex + 1);
 
-const API_BASE = "https://date.nager.at/api/v3/PublicHolidays";
-
-// ISO 3166-1 alpha-2 to country name mapping (short list, extend if needed)
-const countryNames: Record<string, string> = {
-    US: "United States",
-    DE: "Germany",
-    FR: "France",
-    GB: "United Kingdom",
-    CA: "Canada",
-    AU: "Australia",
-    JP: "Japan",
-    CN: "China",
-    IT: "Italy",
-    ES: "Spain",
-    RU: "Russia",
-    BR: "Brazil",
-    IN: "India",
-    MX: "Mexico"
-    // Add more as needed
-};
+const API_BASE = "https://date.nager.at/api/v3";
 
 // Fields to exclude
-const excludeFields = new Set(["fixed", "global", "counties", "launchYear", "types"]);
+const excludeFields = new Set(["fixed", "global", "counties", "launchYear", "types", "countryCode"]);
 
 function cleanHolidayData(data: any[]): any[] {
     return data.map(item => {
@@ -52,8 +33,18 @@ function cleanHolidayData(data: any[]): any[] {
     });
 }
 
+async function fetchAvailableCountries(): Promise<Record<string, string>> {
+    console.log(`Fetching available countries from ${API_BASE}/AvailableCountries`);
+    const res = await fetch(`${API_BASE}/AvailableCountries`);
+    if (!res.ok) {
+        throw new Error(`Failed to fetch available countries: ${res.statusText}`);
+    }
+    const json: { countryCode: string; name: string }[] = await res.json();
+    return Object.fromEntries(json.map(c => [c.countryCode, c.name]));
+}
+
 async function fetchHolidays(year: number, country: string) {
-    const url = `${API_BASE}/${year}/${country}`;
+    const url = `${API_BASE}/PublicHolidays/${year}/${country}`;
     console.log(`Fetching: ${url}`);
     const res = await fetch(url);
     if (!res.ok) {
@@ -63,17 +54,17 @@ async function fetchHolidays(year: number, country: string) {
     return cleanHolidayData(json);
 }
 
-async function saveToTsFile(country: string, data: Record<number, any>) {
-    const dir = path.join(__dirname, "holidays");
+async function saveToTsFile(country: string, countryName: string, data: Record<number, any>) {
+    const dir = path.join(__dirname, "../src/data/holidays");
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
     }
     const filePath = path.join(dir, `${country}.ts`);
 
-    const countryName = countryNames[country] || country;
-
     const tsContent =
-        `
+        `// Auto-generated holiday data for ${country}
+// Source: https://date.nager.at
+
 export const holidays_${country} = {
   countryCode: "${country}",
   countryName: "${countryName}",
@@ -86,7 +77,13 @@ export const holidays_${country} = {
 }
 
 async function main() {
+    const countryMap = await fetchAvailableCountries();
+
     for (const country of countries) {
+        if (!countryMap[country]) {
+            console.warn(`⚠️ Country code "${country}" not found in API — skipping.`);
+            continue;
+        }
         const allData: Record<number, any> = {};
         for (const year of years) {
             try {
@@ -96,7 +93,7 @@ async function main() {
                 console.error(`Error for ${country} in ${year}:`, err);
             }
         }
-        await saveToTsFile(country, allData);
+        await saveToTsFile(country, countryMap[country], allData);
     }
 }
 
