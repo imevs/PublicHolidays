@@ -1,15 +1,15 @@
+import { allHolidays as holidaysData } from "../data/holidays";
+
 export interface Holiday {
   date: string;
   name: string;
+  localName: string;
 }
 
 export interface CountryHolidays {
-  name: string;
-  holidays: Holiday[];
-}
-
-export interface HolidaysData {
-  [countryCode: string]: CountryHolidays;
+  countryCode: string;
+  countryName: string;
+  years: Record<string, Holiday[]>;
 }
 
 export interface CalendarDay {
@@ -24,4 +24,4 @@ export interface HolidayWithCountry extends Holiday {
   country: string;
 }
 
-export type CountryCode = 'LV' | 'SE' | 'PL' | 'ES' | 'EE' | 'UA';
+export type CountryCode = keyof typeof holidaysData;

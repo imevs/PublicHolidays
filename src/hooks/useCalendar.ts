@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { CalendarDay, CountryCode, HolidayWithCountry } from '../types';
-import { holidaysData } from '../data/holidays';
+import { allHolidays as holidaysData } from '../data/holidays';
 import { formatDateString, isSameDate } from '../utils/dateUtils';
 
 export const useCalendar = () => {
@@ -18,7 +18,7 @@ export const useCalendar = () => {
         if (holiday.date === dateStr) {
           holidays.push({
             ...holiday,
-            country: holidaysData[countryCode].name
+            country: holidaysData[countryCode].countryName,
           });
         }
       });
@@ -32,7 +32,7 @@ export const useCalendar = () => {
     const month = currentDate.getMonth();
 
     const firstDay = new Date(year, month, 1);
-    const lastDay = new Date(year, month + 1, 0);
+    // const lastDay = new Date(year, month + 1, 0);
     const startDate = new Date(firstDay);
     startDate.setDate(startDate.getDate() - firstDay.getDay());
 

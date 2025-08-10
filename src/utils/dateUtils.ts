@@ -7,7 +7,7 @@ export const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 export const generateYears = (): number[] => {
   const currentYear = new Date().getFullYear();
-  return Array.from({ length: 2 }, (_, i) => currentYear - 2 + i);
+  return Array.from({ length: 3 }, (_, i) => currentYear - 1 + i);
 };
 
 export const formatDateString = (date: Date): string => {
