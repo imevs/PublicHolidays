@@ -1,3 +1,6 @@
+import * as timezone_mock from 'timezone-mock';
+timezone_mock.register('US/Eastern');
+
 import { renderHook, act } from '@testing-library/react';
 import { useCalendar } from '../hooks/useCalendar';
 import { allHolidays } from '../data/holidays'; // Import holidays data for testing
@@ -43,5 +46,56 @@ describe('useCalendar', () => {
     const { result } = renderHook(() => useCalendar());
     expect(Array.isArray(result.current.calendarDays)).toBe(true);
     expect(result.current.calendarDays).toHaveLength(42);
+  });
+
+  it('calendarDays for fixed currentDate contains correct holidays', () => {
+    window.location.hash = 'date=2025-01-01&countries=LV';
+    const { result } = renderHook(() => useCalendar());
+    const currentDate = result.current.currentDate;
+    expect(currentDate.getUTCFullYear()).toBe(2025);
+    expect(currentDate.getUTCMonth()).toBe(0);
+    expect(currentDate.getUTCDate()).toBe(1);
+    const matchingDay = result.current.calendarDays.find(day =>
+      day.date.getFullYear() === currentDate.getFullYear() &&
+      day.date.getMonth() === currentDate.getMonth() &&
+      day.date.getDate() === currentDate.getDate()
+    );
+    expect(matchingDay).toBeDefined();
+    const expectedHolidays = [
+      {
+        name: "New Year's Day",
+        localName: "Jaunais Gads",
+        date: "2025-01-01",
+        country: "Latvia",
+        countryCode: "LV"
+      }
+    ];
+    expect(matchingDay?.holidays).toEqual(expectedHolidays);
+  });
+
+  it('all calendarDays for November have correct holidays for selected country', () => {
+    const countryHolidays = allHolidays['LV'].holidays;
+    window.location.hash = 'date=2025-11-01&countries=LV'; // November 2025, Latvia
+    const { result } = renderHook(() => useCalendar());
+    const novemberDays = result.current.calendarDays.filter(day => day.date.getMonth() === 10); // November is month 10
+    expect(novemberDays.length).toBeGreaterThan(0);
+    for (const day of novemberDays) {
+      const dateStr = day.date.toISOString().split('T')[0];
+      const expectedHolidays = countryHolidays
+        .filter((holiday: any) => holiday.date === dateStr)
+        .map((holiday: any) => ({
+          ...holiday,
+          country: allHolidays['LV'].countryName,
+          countryCode: 'LV',
+        }));
+      expect(day.holidays).toEqual(expectedHolidays);
+    }
+  });
+
+  it('check current date time zone is US/Eastern', () => {
+    const date = new Date("2025-01-01");
+    expect(date.getTimezoneOffset()).toBe(300); // EST timezone offset
+    expect(date.toISOString()).toBe("2025-01-01T00:00:00.000Z"); // 5 hours ahead of UTC
+    expect(date.getUTCFullYear()).toBe(2025);
   });
 });
