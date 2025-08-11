@@ -46,7 +46,7 @@ describe('CalendarDay', () => {
       isCurrentMonth: true,
       isToday: false,
       holidays: [
-        { name: 'Christmas', localName: 'Ziemassvētki', date: '2025-12-25', country: 'Latvia' },
+        { name: 'Christmas', localName: 'Ziemassvētki', date: '2025-12-25', country: 'Latvia', countryCode: 'LV' },
       ],
       date: new Date(2025, 11, 25),
     };
@@ -60,7 +60,7 @@ describe('CalendarDay', () => {
       isCurrentMonth: true,
       isToday: false,
       holidays: [
-        { name: 'Christmas', localName: 'Ziemassvētki', date: '2025-12-25', country: 'Latvia' },
+        { name: 'Christmas', localName: 'Ziemassvētki', date: '2025-12-25', country: 'Latvia', countryCode: 'LV' },
       ],
       date: new Date(2025, 11, 25),
     };
