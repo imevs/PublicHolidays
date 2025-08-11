@@ -19,7 +19,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
       <div className={styles.dayNumber}>{day.dayNumber}</div>
       {day.holidays.map((holiday, idx) => {
         // Compose the class for the country-specific holiday using shared CSS
-        const countryClass = countryColors[`holiday-${holiday.countryCode}`] || '';
+        const countryClass = countryColors[`country-${holiday.countryCode}`] || '';
         return (
           <div
             key={idx}

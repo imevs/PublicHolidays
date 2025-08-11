@@ -27,7 +27,7 @@
 
 .holiday {
   /* Default holiday style, fallback */
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  /* background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%); */
   color: white;
   padding: 4px 8px;
   border-radius: 6px;
