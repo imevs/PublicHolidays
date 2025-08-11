@@ -3,13 +3,12 @@ import { CalendarDay, CountryCode, HolidayWithCountry } from '../types';
 import { allHolidays as holidaysData } from '../data/holidays';
 import { formatDateString, isSameDate } from '../utils/dateUtils';
 
-
 const dateFormatter = new Intl.DateTimeFormat('en-CA'); // Canadian English uses YYYY-MM-DD format
 
 export const useCalendar = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
   const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(['LV']);
-  const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
+  const [selectedYear, setSelectedYear] = useState(new Date().getUTCFullYear());
 
   useEffect(() => {
     const urlSearchParams = new URLSearchParams(window.location.hash.replace("#", ""));
@@ -19,8 +18,8 @@ export const useCalendar = () => {
     }
     const date = (urlSearchParams.get("date") ?? "");
     if (date) {
-      setCurrentDate(new Date(date));
-      setSelectedYear(new Date(date).getFullYear());
+      setCurrentDate(new Date(date + 'T00:00:00Z'));
+      setSelectedYear(new Date(date + 'T00:00:00Z').getFullYear());
     }
   }, []);
 
@@ -44,22 +43,22 @@ export const useCalendar = () => {
   };
 
   const calendarDays = useMemo((): CalendarDay[] => {
-    const year = currentDate.getFullYear();
-    const month = currentDate.getMonth();
+    const year = currentDate.getUTCFullYear();
+    const month = currentDate.getUTCMonth();
 
-    const firstDay = new Date(year, month, 1);
-    // const lastDay = new Date(year, month + 1, 0);
+//    const firstDay = new Date(year, month, 1);
+    const firstDay = new Date(Date.UTC(year, month, 1));
     const startDate = new Date(firstDay);
-    startDate.setDate(startDate.getDate() - firstDay.getDay());
+    startDate.setUTCDate(startDate.getUTCDate() - firstDay.getUTCDay());
 
     const days: CalendarDay[] = [];
     const today = new Date();
 
     for (let i = 0; i < 42; i++) {
       const date = new Date(startDate);
-      date.setDate(startDate.getDate() + i);
+      date.setDate(startDate.getUTCDate() + i);
 
-      const isCurrentMonth = date.getMonth() === month;
+      const isCurrentMonth = date.getUTCMonth() === month;
       const isToday = isSameDate(date, today);
       const holidays = getHolidaysForDate(date);
 
@@ -77,7 +76,7 @@ export const useCalendar = () => {
 
   const navigateMonth = (direction: number): void => {
     const newDate = new Date(currentDate);
-    newDate.setMonth(currentDate.getMonth() + direction);
+    newDate.setUTCMonth(currentDate.getUTCMonth() + direction);
     const params = new URLSearchParams(window.location.hash.replace("#", ""));
     params.set("date", dateFormatter.format(newDate))
     window.location.hash = decodeURIComponent(params.toString());
@@ -98,7 +97,7 @@ export const useCalendar = () => {
 
   const handleYearChange = (year: number): void => {
     const newDate = new Date(currentDate);
-    newDate.setFullYear(year);
+    newDate.setUTCFullYear(year);
     const params = new URLSearchParams(window.location.hash.replace("#", ""));
     params.set("date", dateFormatter.format(newDate))
     window.location.hash = decodeURIComponent(params.toString());
