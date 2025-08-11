@@ -66,7 +66,8 @@ describe('useCalendar', () => {
         name: "New Year's Day",
         localName: "Jaunais Gads",
         date: "2025-01-01",
-        country: "Latvia"
+        country: "Latvia",
+        countryCode: "LV"
       }
     ];
     expect(matchingDay?.holidays).toEqual(expectedHolidays);
@@ -85,6 +86,7 @@ describe('useCalendar', () => {
         .map((holiday: any) => ({
           ...holiday,
           country: allHolidays['LV'].countryName,
+          countryCode: 'LV',
         }));
       expect(day.holidays).toEqual(expectedHolidays);
     }
