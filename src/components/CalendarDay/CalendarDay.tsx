@@ -1,6 +1,7 @@
 import React from 'react';
 import { CalendarDay as CalendarDayType } from '../../types';
 import styles from './CalendarDay.module.css';
+import countryColors from '../shared/countryColors.module.css';
 
 interface CalendarDayProps {
   day: CalendarDayType;
@@ -17,8 +18,8 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
     <div className={dayClasses}>
       <div className={styles.dayNumber}>{day.dayNumber}</div>
       {day.holidays.map((holiday, idx) => {
-        // Compose the class for the country-specific holiday
-  const countryClass = styles[`holiday-${holiday.countryCode}`] || styles.holiday;
+        // Compose the class for the country-specific holiday using shared CSS
+        const countryClass = countryColors[`holiday-${holiday.countryCode}`] || '';
         return (
           <div
             key={idx}
