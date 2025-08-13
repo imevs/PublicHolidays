@@ -20,5 +20,7 @@
 @media (max-width: 768px) {
   .calendarGrid {
     margin: 20px;
+    overflow: scroll;
+    width: calc(100% - 2 * 20px);
   }
 }
