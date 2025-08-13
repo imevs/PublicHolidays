@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CountryCode } from '../../types';
 import { allHolidays as holidaysData } from '../../data/holidays/index';
-import { countryOffsets } from '../../utils/timeZones';
+import { countryOffsets, countryTimeZones } from '../../utils/timeZones';
 import styles from './CountryFilter.module.css';
 
 interface CountryFilterProps {
@@ -14,6 +14,22 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                                                          onToggleCountry
                                                      }) => {
     const [showTimezones, setShowTimezones] = useState(false); // State to toggle timezone visibility
+
+    // Function to get the local time for a given timezone
+    const getLocalTime = (timeZone: string) => {
+        const formatter = new Intl.DateTimeFormat('en-US', {
+            timeZone,
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
+        });
+        return formatter.format(new Date());
+    };
+
     return (
         <div className={styles.controlGroup}>
             <label>Select Countries</label>
@@ -23,6 +39,7 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                         key={code}
                         className={`${styles.countryChip} ${selectedCountries.includes(code) ? styles.active : ''}`}
                         onClick={() => onToggleCountry(code)}
+                        title={"Local time: " + getLocalTime(countryTimeZones[code])}
                     >
                         {data.countryName}
                         {showTimezones && (
