@@ -3,7 +3,7 @@ timezone_mock.register('US/Eastern');
 
 import { renderHook, act } from '@testing-library/react';
 import { useCalendar } from '../hooks/useCalendar';
-import { allHolidays } from '../data/holidays'; // Import holidays data for testing
+import { allHolidays } from '../data/holidays_v2'; // Import holidays data for testing
 
 describe('useCalendar', () => {
   it('returns current date and selected countries', () => {
