@@ -13,7 +13,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({ calendarDays }) => {
       <div style={{ width: '100%' }}>
         <div className={styles.calendarGrid}>
           {dayNames.map(day => (
-              <div key={day} className={styles.calendarHeader}>
+              <div key={day} className={styles.calendarHeader + " " + (['Sat', 'Sun'].includes(day) ? styles.weekend : "")}>
                 {day}
               </div>
           ))}

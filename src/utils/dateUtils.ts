@@ -3,7 +3,7 @@ export const monthNames = [
   'July', 'August', 'September', 'October', 'November', 'December'
 ];
 
-export const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+export const dayNames = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 export const generateYears = (): number[] => {
   const currentYear = new Date().getFullYear();

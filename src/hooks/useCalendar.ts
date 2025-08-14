@@ -49,7 +49,7 @@ export const useCalendar = () => {
 //    const firstDay = new Date(year, month, 1);
     const firstDay = new Date(Date.UTC(year, month, 1));
     const startDate = new Date(firstDay);
-    startDate.setUTCDate(startDate.getUTCDate() - firstDay.getUTCDay());
+    startDate.setUTCDate(startDate.getUTCDate() - (firstDay.getUTCDay() === 0 ? 6 : firstDay.getUTCDay() - 1));
 
     const days: CalendarDay[] = [];
     const today = new Date();
