@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { CountryCode } from '../../types';
-import { allHolidays as holidaysData } from '../../data/holidays/index';
+import { allHolidays as holidaysData } from '../../data/holidays_v2/index';
 import { countryOffsets, countryTimeZones } from '../../utils/timeZones';
 import styles from './CountryFilter.module.css';
 

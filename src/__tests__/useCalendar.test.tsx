@@ -3,7 +3,7 @@ timezone_mock.register('US/Eastern');
 
 import { renderHook, act } from '@testing-library/react';
 import { useCalendar } from '../hooks/useCalendar';
-import { allHolidays } from '../data/holidays'; // Import holidays data for testing
+import { allHolidays } from '../data/holidays_v2'; // Import holidays data for testing
 
 describe('useCalendar', () => {
   it('returns current date and selected countries', () => {
@@ -63,10 +63,14 @@ describe('useCalendar', () => {
     expect(matchingDay).toBeDefined();
     const expectedHolidays = [
       {
-        name: "New Year's Day",
-        localName: "Jaunais Gads",
+        country: "Latvia",
         date: "2025-01-01",
-        country: "Latvia"
+        "localName": "New Year’s Day is the first day of the year, or January 1, in the Gregorian calendar.",
+        "name": "New Year's Day",
+        "primary_type": "National holiday",
+        "type": [
+          "National holiday"
+        ]
       }
     ];
     expect(matchingDay?.holidays).toEqual(expectedHolidays);

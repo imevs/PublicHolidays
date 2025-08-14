@@ -1,4 +1,4 @@
-import { allHolidays as holidaysData } from "../data/holidays";
+import { allHolidays as holidaysData } from "../data/holidays_v2";
 
 export interface Holiday {
   date: string;

@@ -17,8 +17,8 @@ describe('dateUtils', () => {
 
   it('dayNames contains 7 days', () => {
     expect(dayNames).toHaveLength(7);
-    expect(dayNames[0]).toBe('Sun');
-    expect(dayNames[6]).toBe('Sat');
+    expect(dayNames[6]).toBe('Sun');
+    expect(dayNames[5]).toBe('Sat');
   });
 
   it('generateYears returns 3 years including current', () => {
@@ -28,7 +28,7 @@ describe('dateUtils', () => {
   });
 
   it('formats a date as YYYY-MM-DD', () => {
-    const date = new Date(2025, 7, 10); // August 10, 2025
+    const date = new Date(Date.UTC(2025, 7, 10)); // August 10, 2025
     expect(formatDateString(date)).toBe('2025-08-10');
   });
 

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { CalendarDay, CountryCode, HolidayWithCountry } from '../types';
-import { allHolidays as holidaysData } from '../data/holidays';
+import { allHolidays as holidaysData } from '../data/holidays_v2';
 import { formatDateString, isSameDate } from '../utils/dateUtils';
 
 const dateFormatter = new Intl.DateTimeFormat('en-CA'); // Canadian English uses YYYY-MM-DD format
@@ -30,7 +30,7 @@ export const useCalendar = () => {
     selectedCountries.forEach(countryCode => {
       const countryHolidays = holidaysData[countryCode]?.holidays || [];
       countryHolidays.forEach(holiday => {
-        if (holiday.date === dateStr) {
+        if (holiday.date === dateStr && holiday.type?.includes("National holiday")) {
           holidays.push({
             ...holiday,
             country: holidaysData[countryCode].countryName,
@@ -49,7 +49,7 @@ export const useCalendar = () => {
 //    const firstDay = new Date(year, month, 1);
     const firstDay = new Date(Date.UTC(year, month, 1));
     const startDate = new Date(firstDay);
-    startDate.setUTCDate(startDate.getUTCDate() - firstDay.getUTCDay());
+    startDate.setUTCDate(startDate.getUTCDate() - (firstDay.getUTCDay() === 0 ? 6 : firstDay.getUTCDay() - 1));
 
     const days: CalendarDay[] = [];
     const today = new Date();
