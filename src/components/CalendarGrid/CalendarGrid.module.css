@@ -28,3 +28,91 @@
 .weekend {
   background: lightcoral;
 }
+
+.yearGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.monthContainer {
+  /*border: 1px solid #ccc;*/
+  padding: 10px;
+  /*border-radius: 5px;*/
+  width: 400px;
+}
+
+.monthHeader {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.monthGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.dayCell {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.dayCell.holiday {
+  background-color: #ffefef;
+}
+
+.holidayIndicatorsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.holidayIndicator {
+  display: block;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.popupContent {
+  padding: 20px;
+  text-align: center;
+}
+
+.popupContent h3 {
+  margin-bottom: 10px;
+}
+
+.popupContent ul {
+  list-style: none;
+  padding: 0;
+}
+
+.popupContent button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.popupContent button:hover {
+  background: #005bb5;
+}
