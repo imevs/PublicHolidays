@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { CountryCode } from '../../types';
-import { allHolidays as holidaysData } from '../../data/holidays_v2/index';
+import { allHolidays as holidaysData } from '../../data/holidays/index';
 import { countryOffsets, countryTimeZones } from '../../utils/timeZones';
 import styles from './CountryFilter.module.css';
+import { getFlagEmoji } from "../../utils/countryFlags";
 
 interface CountryFilterProps {
     selectedCountries: CountryCode[];
@@ -41,7 +42,7 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                         onClick={() => onToggleCountry(code)}
                         title={"Local time: " + getLocalTime(countryTimeZones[code])}
                     >
-                        {data.countryName}
+                        {getFlagEmoji(code)} {data.countryName}
                         {showTimezones && (
                             <span className={styles.offset}>
                                 {countryOffsets[code] ? ` (UTC${countryOffsets[code]})` : ''}

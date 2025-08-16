@@ -1,5 +1,6 @@
 import React from 'react';
 import { CalendarDay as CalendarDayType } from '../../types';
+import { getFlagEmoji } from "../../utils/countryFlags";
 import styles from './CalendarDay.module.css';
 
 interface CalendarDayProps {
@@ -22,7 +23,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
           className={styles.holiday}
           title={`${holiday.localName}`}
         >
-          {holiday.country}: {holiday.name}
+          {getFlagEmoji(holiday.countryCode)} {holiday.country}: {holiday.name}
         </div>
       ))}
     </div>

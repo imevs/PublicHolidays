@@ -34,6 +34,7 @@ export const useCalendar = () => {
           holidays.push({
             ...holiday,
             country: holidaysData[countryCode].countryName,
+            countryCode: countryCode,
           });
         }
       });

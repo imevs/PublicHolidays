@@ -22,6 +22,7 @@ export interface CalendarDay {
 
 export interface HolidayWithCountry extends Holiday {
   country: string;
+  countryCode: CountryCode;
 }
 
 export type CountryCode = keyof typeof holidaysData;
