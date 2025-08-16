@@ -17,3 +17,11 @@ export const formatDateString = (date: Date): string => {
 export const isSameDate = (date1: Date, date2: Date): boolean => {
   return date1.toDateString() === date2.toDateString();
 };
+
+export const getDaysInMonth = (year: number, month: number): number => {
+  return new Date(year, month + 1, 0).getDate();
+};
+
+export const getMonthName = (month: number): string => {
+  return new Date(0, month).toLocaleString('en-US', { month: 'long' });
+};

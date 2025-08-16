@@ -37,15 +37,15 @@ describe('useCalendar', () => {
     const { result } = renderHook(() => useCalendar());
     const initialMonth = result.current.currentDate.getMonth();
     act(() => {
-      result.current.navigateMonth(1);
+      result.current.navigateMonth(initialMonth + 1);
     });
     expect(result.current.currentDate.getMonth()).toBe((initialMonth + 1) % 12);
   });
 
   it('calendarDays returns 42 days', () => {
     const { result } = renderHook(() => useCalendar());
-    expect(Array.isArray(result.current.calendarDays)).toBe(true);
-    expect(result.current.calendarDays).toHaveLength(42);
+    expect(Array.isArray(result.current.selectedMonthDays)).toBe(true);
+    expect(result.current.selectedMonthDays).toHaveLength(42);
   });
 
   it('calendarDays for fixed currentDate contains correct holidays', () => {
@@ -55,7 +55,7 @@ describe('useCalendar', () => {
     expect(currentDate.getUTCFullYear()).toBe(2025);
     expect(currentDate.getUTCMonth()).toBe(0);
     expect(currentDate.getUTCDate()).toBe(1);
-    const matchingDay = result.current.calendarDays.find(day =>
+    const matchingDay = result.current.selectedMonthDays.find(day =>
       day.date.getFullYear() === currentDate.getFullYear() &&
       day.date.getMonth() === currentDate.getMonth() &&
       day.date.getDate() === currentDate.getDate()
@@ -81,7 +81,7 @@ describe('useCalendar', () => {
     const countryHolidays = allHolidays['LV'].holidays;
     window.location.hash = 'date=2025-11-01&countries=LV'; // November 2025, Latvia
     const { result } = renderHook(() => useCalendar());
-    const novemberDays = result.current.calendarDays.filter(day => day.date.getMonth() === 10); // November is month 10
+    const novemberDays = result.current.selectedMonthDays.filter(day => day.date.getMonth() === 10); // November is month 10
     expect(novemberDays.length).toBeGreaterThan(0);
     for (const day of novemberDays) {
       const dateStr = day.date.toISOString().split('T')[0];
