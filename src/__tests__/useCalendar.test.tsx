@@ -64,6 +64,7 @@ describe('useCalendar', () => {
     const expectedHolidays = [
       {
         country: "Latvia",
+        countryCode: "LV",
         date: "2025-01-01",
         "localName": "New Year’s Day is the first day of the year, or January 1, in the Gregorian calendar.",
         "name": "New Year's Day",
@@ -89,6 +90,7 @@ describe('useCalendar', () => {
         .map((holiday: any) => ({
           ...holiday,
           country: allHolidays['LV'].countryName,
+          countryCode: 'LV',
         }));
       expect(day.holidays).toEqual(expectedHolidays);
     }
