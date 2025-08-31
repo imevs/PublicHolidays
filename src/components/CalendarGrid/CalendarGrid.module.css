@@ -48,6 +48,11 @@
   margin-bottom: 10px;
   cursor: pointer;
   text-decoration: underline;
+  transition: transform .15s ease;
+}
+
+.monthHeader:hover {
+  transform: translateY(-2px);
 }
 
 .monthGrid {
@@ -61,11 +66,12 @@
   padding: 5px;
   border: 1px solid #ddd;
   border-radius: 3px;
-  cursor: pointer;
+  min-height: 52px;
 }
 
 .dayCell.holiday {
   background-color: #ffefef;
+  cursor: pointer;
 }
 
 .holidayIndicatorsList {
@@ -89,6 +95,13 @@
   z-index: 1000;
 }
 
+@media (max-width: 600px) {
+  .popup {
+    width: 75vw;
+  }
+}
+
+
 .popupContent {
   padding: 20px;
   text-align: center;
@@ -106,10 +119,14 @@
 .popupContent li {
   text-align: left;
   padding-top: 10px;
+  padding-left: 15px;
 }
 
-.popupContent .country {
-  padding-left: 5px;
+.popupContent li::before {
+  content: attr(data-flag);
+  position: absolute;
+  left: 12px;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,.35));
 }
 
 .popupContent button {

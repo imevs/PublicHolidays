@@ -16,8 +16,8 @@
   flex-direction: column;
 }
 
-.controlGroup label {
-  font-weight: 600;
+.controlGroup .controlGroupLabel {
+  font-weight: bold;
   margin-bottom: 8px;
   color: #495057;
   font-size: 0.9rem;

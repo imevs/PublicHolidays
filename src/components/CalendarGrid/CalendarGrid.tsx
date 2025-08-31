@@ -89,6 +89,12 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                                 {Array.from({ length: daysInMonth }, (_, day) => {
                                     const date = new Date(Date.UTC(currentYear, month, day + 1));
                                     const dayHolidays = selectedYearDays.find(d => isSameDate(d.date, date))?.holidays || [];
+                                    const seen = new Set<string>();
+                                    const dayHolidaysUnique = dayHolidays.filter(h => {
+                                        if (seen.has(h.countryCode)) { return false; }
+                                        seen.add(h.countryCode);
+                                        return true;
+                                    });
                                     return (
                                         <div
                                             key={day}
@@ -97,7 +103,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                                         >
                                             {day + 1}
                                             <div className={styles.holidayIndicatorsList}>
-                                                {dayHolidays.map((holiday) => (
+                                                {dayHolidaysUnique.map((holiday) => (
                                                     <div key={holiday.countryCode + holiday.name}
                                                          className={styles.holidayIndicator}>
                                                         {getFlagEmoji(holiday.countryCode)}
@@ -125,8 +131,8 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                         <h3>Holidays on {formatDateString(selectedDay)}</h3>
                         <ul>
                             {selectedYearDays.find(d => isSameDate(d.date, selectedDay))?.holidays?.map((holiday, index) => (
-                                <li key={index}>
-                                    {getFlagEmoji(holiday.countryCode)} <strong className={styles.country}>{holiday.country}</strong>: {holiday.name}
+                                <li key={index} data-flag={getFlagEmoji(holiday.countryCode)}>
+                                    <strong>{holiday.country}</strong>: {holiday.name}
                                 </li>
                             ))}
                         </ul>
