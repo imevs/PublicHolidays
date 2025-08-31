@@ -1,8 +1,8 @@
-import React from 'react';
-import { CountryCode } from '../../types';
-import CountryFilter from '../CountryFilter/CountryFilter';
-import { generateYears } from '../../utils/dateUtils';
-import styles from './Controls.module.css';
+import React from "react";
+import { CountryCode } from "../../types";
+import CountryFilter from "../CountryFilter/CountryFilter";
+import { generateYears } from "../../utils/dateUtils";
+import styles from "./Controls.module.css";
 
 interface ControlsProps {
     selectedYear: number;

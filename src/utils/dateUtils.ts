@@ -1,9 +1,9 @@
 export const monthNames = [
-    'January', 'February', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
 ];
 
-export const dayNames = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+export const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 export const generateYears = (): number[] => {
     const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ export const generateYears = (): number[] => {
 };
 
 export const formatDateString = (date: Date): string => {
-    return date.toISOString().split('T')[0];
+    return date.toISOString().split("T")[0];
 };
 
 export const isSameDate = (date1: Date, date2: Date): boolean => {
@@ -23,5 +23,5 @@ export const getDaysInMonth = (year: number, month: number): number => {
 };
 
 export const getMonthName = (month: number): string => {
-    return new Date(0, month).toLocaleString('en-US', { month: 'long' });
+    return new Date(0, month).toLocaleString("en-US", { month: "long" });
 };

@@ -10,10 +10,12 @@ module.exports = [
         files: ['**/*.{js,jsx}'],
         plugins: {
             stylistic,
+            'stylistic/quotes': ['error', 'double'],
         },
         rules: {
             'no-unused-vars': 'off',
             'stylistic/indent': ['error', 4],
+            'stylistic/quotes': ['error', 'double'],
         },
     },
     {
@@ -32,6 +34,7 @@ module.exports = [
         rules: {
             ...tseslint.configs.recommended.rules,
             'no-unused-vars': 'off',
+            'stylistic/quotes': ['error', 'double'],
             'stylistic/indent': ['error', 4],
         },
     },

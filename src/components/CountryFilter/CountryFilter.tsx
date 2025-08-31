@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { CountryCode } from '../../types';
-import { allHolidays as holidaysData } from '../../data/holidays/index';
-import { countryOffsets, countryTimeZones } from '../../utils/timeZones';
-import styles from './CountryFilter.module.css';
+import React, { useState } from "react";
+import { CountryCode } from "../../types";
+import { allHolidays as holidaysData } from "../../data/holidays/index";
+import { countryOffsets, countryTimeZones } from "../../utils/timeZones";
+import styles from "./CountryFilter.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags";
 
 interface CountryFilterProps {
@@ -18,14 +18,14 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
 
     // Function to get the local time for a given timezone
     const getLocalTime = (timeZone: string) => {
-        const formatter = new Intl.DateTimeFormat('en-US', {
+        const formatter = new Intl.DateTimeFormat("en-US", {
             timeZone,
             year: "numeric",
             month: "2-digit",
             day: "2-digit",
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
             hour12: false
         });
         return formatter.format(new Date());
@@ -50,14 +50,14 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                 {(Object.entries(holidaysData) as [CountryCode, typeof holidaysData[keyof typeof holidaysData]][]).map(([code, data]) => (
                     <div
                         key={code}
-                        className={`${styles.countryChip} ${selectedCountries.includes(code) ? styles.active : ''}`}
+                        className={`${styles.countryChip} ${selectedCountries.includes(code) ? styles.active : ""}`}
                         onClick={() => onToggleCountry(code)}
                         title={"Local time: " + getLocalTime(countryTimeZones[code])}
                     >
                         {getFlagEmoji(code)} {data.countryName}
                         {showTimezones && (
                             <span className={styles.offset}>
-                                {countryOffsets[code] ? ` (UTC${countryOffsets[code]})` : ''}
+                                {countryOffsets[code] ? ` (UTC${countryOffsets[code]})` : ""}
                             </span>
                         )}
                     </div>

@@ -58,7 +58,7 @@ function getUTCOffset(timeZone: string, date = new Date()) {
     const parts = formatter.formatToParts(date);
     const offsetPart = parts ? parts.find(p => p.type === "timeZoneName")?.value : ""; 
     const result = offsetPart?.replace("GMT", "").replace("UTC", "") ?? "";
-    return result.startsWith("+") || result.startsWith("-") ? result : `+0`;
+    return result.startsWith("+") || result.startsWith("-") ? result : "+0";
 }
   
 // Build a table of countries with their offsets

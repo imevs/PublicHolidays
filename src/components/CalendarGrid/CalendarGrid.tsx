@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { CalendarDay as CalendarDayType } from '../../types';
-import CalendarDay from '../CalendarDay/CalendarDay';
-import { dayNames, formatDateString, getDaysInMonth, getMonthName, isSameDate } from '../../utils/dateUtils';
-import styles from './CalendarGrid.module.css';
+import React, { useState, useEffect } from "react";
+import { CalendarDay as CalendarDayType } from "../../types";
+import CalendarDay from "../CalendarDay/CalendarDay";
+import { dayNames, formatDateString, getDaysInMonth, getMonthName, isSameDate } from "../../utils/dateUtils";
+import styles from "./CalendarGrid.module.css";
 import MonthNavigation from "../MonthNavigation/MonthNavigation";
 import { getFlagEmoji } from "../../utils/countryFlags";
 
@@ -49,7 +49,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                 {dayNames.map(day => (
                     <div
                         key={day}
-                        className={`${styles.calendarHeader} ${['Sat', 'Sun'].includes(day) ? styles.weekend : ''}`}
+                        className={`${styles.calendarHeader} ${["Sat", "Sun"].includes(day) ? styles.weekend : ""}`}
                     >
                         {day}
                     </div>
@@ -98,7 +98,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                                     return (
                                         <div
                                             key={day}
-                                            className={`${styles.dayCell} ${dayHolidays.length > 0 ? styles.holiday : ''}`}
+                                            className={`${styles.dayCell} ${dayHolidays.length > 0 ? styles.holiday : ""}`}
                                             onClick={() => dayHolidays.length > 0 && setSelectedDay(date)}
                                         >
                                             {day + 1}
@@ -122,8 +122,8 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
     };
 
     return (
-        <div style={{ width: '100%' }}>
-            {mode === 'month' ? renderMonthView() : renderYearView()}
+        <div style={{ width: "100%" }}>
+            {mode === "month" ? renderMonthView() : renderYearView()}
 
             {selectedDay && (
                 <div className={styles.popup}>

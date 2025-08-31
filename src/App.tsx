@@ -1,8 +1,8 @@
-import React from 'react';
-import { useCalendar } from './hooks/useCalendar';
-import Controls from './components/Controls/Controls';
-import CalendarGrid from './components/CalendarGrid/CalendarGrid';
-import styles from './App.module.css';
+import React from "react";
+import { useCalendar } from "./hooks/useCalendar";
+import Controls from "./components/Controls/Controls";
+import CalendarGrid from "./components/CalendarGrid/CalendarGrid";
+import styles from "./App.module.css";
 
 const App: React.FC = () => {
     const {

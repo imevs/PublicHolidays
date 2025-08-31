@@ -1,6 +1,6 @@
-import React from 'react';
-import { monthNames } from '../../utils/dateUtils';
-import styles from './MonthNavigation.module.css';
+import React from "react";
+import { monthNames } from "../../utils/dateUtils";
+import styles from "./MonthNavigation.module.css";
 
 interface MonthNavigationProps {
     currentDate: Date;
