@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CalendarDay as CalendarDayType } from '../../types';
 import CalendarDay from '../CalendarDay/CalendarDay';
 import { dayNames, formatDateString, getDaysInMonth, getMonthName, isSameDate } from '../../utils/dateUtils';
@@ -22,6 +22,21 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
     const [selectedDay, setSelectedDay] = useState<Date | null>(null); // State for selected day in popup
     const [mode, setMode] = useState<"month" | "year">("month"); // State for selected day in popup
 
+    useEffect(() => {
+      const handleClickOutside = (event: MouseEvent) => {
+        const popupElement = document.querySelector(`.${styles.popup}`);
+        if (popupElement && !popupElement.contains(event.target as Node)) {
+          setSelectedDay(null);
+        }
+      };
+  
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, []);
+
+    
     const renderMonthView = () => (
         <>
             <MonthNavigation
@@ -61,6 +76,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                         <div key={month} className={styles.monthContainer}>
                             <div
                                 className={styles.monthHeader}
+                                title="Click to switch on month view"
                                 onClick={() => {
                                     setMode("month");
                                     onNavigateMonth(month);
@@ -110,7 +126,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                         <ul>
                             {selectedYearDays.find(d => isSameDate(d.date, selectedDay))?.holidays?.map((holiday, index) => (
                                 <li key={index}>
-                                    <strong>{getFlagEmoji(holiday.countryCode)}{holiday.country}</strong>: {holiday.name}
+                                    {getFlagEmoji(holiday.countryCode)} <strong className={styles.country}>{holiday.country}</strong>: {holiday.name}
                                 </li>
                             ))}
                         </ul>
