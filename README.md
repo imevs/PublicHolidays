@@ -1,26 +1,33 @@
 # Holiday Calendar - Multi-Country Public Holidays
 
-A modern React + TypeScript application for tracking public holidays across Latvia, Sweden, Poland, Spain, Estonia, and Ukraine.
+React + TypeScript application for tracking public holidays across multiple Europe countries.
 
 ## Features
 
-- 📅 Interactive calendar with month/year navigation
-- 🌍 Multi-country holiday support (6 countries)
-- 🎨 Modern, responsive design with CSS modules
-- 📱 Mobile-friendly interface
-- ⚡ Built with Vite for fast development
-- 🔧 TypeScript for type safety
-- 🎯 Custom hooks for state management
+- 📅 **Interactive Calendar**: Navigate through months and years with ease.
+- 🎨 **Modern Design**: Responsive and visually appealing interface.
+- 📱 **Mobile-Friendly**: Optimized for both desktop and mobile devices.
+- 🔧 **TypeScript Integration**: Ensures type safety and better developer experience.
+- 🎯 **Custom Hooks**: Simplifies state management and improves code reusability.
+- 🗓️ **Year View**: View holidays for the entire year with indicators for holiday dates.
+- 🛠️ **Holiday Details Popup**: Click on a holiday to view detailed descriptions in a popup.
+- 🇺🇳 **Country Flags**: Displays country flags alongside holiday names for better context.
 
-## Supported Countries
+## How It Works
+- Monthly View: Displays a calendar for the selected month with holidays highlighted.
+- Yearly View: Shows all 12 months in a grid with small indicators for holidays.
+- Holiday Details: Clicking on a holiday opens a popup with detailed information.
+- Country Selection: Filter holidays by selecting specific countries.
 
-- **Latvia (LV)**: 13 holidays including Midsummer, Independence days
-- **Sweden (SE)**: 15 holidays including National Day, Midsummer
-- **Poland (PL)**: 13 holidays including Constitution Day, Corpus Christi
-- **Spain (ES)**: 10 holidays including National Day, regional holidays
-- **Estonia (EE)**: 13 holidays including Victory Day, Independence Day
-- **Ukraine (UA)**: 11 holidays including Orthodox holidays, Independence Day
+## Technologies Used
+- React: Component-based UI library.
+- TypeScript: Static typing for better code quality.
+- Vite: Fast build tool for modern web applications.
+- CSS Modules: Scoped and modular CSS for styling.
+- Intl API: Used for timezone and date formatting.
 
-## Quick Start
-
-1. Clone and install dependencies:
+## Future Enhancements
+- 🌐 Add support for more countries.
+- 📊 Integrate analytics to track user interactions.
+- 🔍 Add search functionality for holidays.
+- 🗓️ Allow custom holiday creation by users.

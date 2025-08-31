@@ -33,7 +33,19 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
 
     return (
         <div className={styles.controlGroup}>
-            <label>Select Countries</label>
+            <label className={styles.controlGroupLabel}>Select Countries</label>
+            <div className={styles.checkboxContainer}>
+                <input
+                    type="checkbox"
+                    id="showTimezones"
+                    className={styles.checkbox}
+                    checked={showTimezones}
+                    onChange={() => setShowTimezones(!showTimezones)}
+                />
+                <label htmlFor="showTimezones" className={styles.checkboxLabel}>
+                    Show Timezones
+                </label>
+            </div>
             <div className={styles.countryFilter}>
                 {(Object.entries(holidaysData) as [CountryCode, typeof holidaysData[keyof typeof holidaysData]][]).map(([code, data]) => (
                     <div
@@ -50,18 +62,6 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                         )}
                     </div>
                 ))}
-            </div>
-            <div className={styles.checkboxContainer}>
-                <input
-                    type="checkbox"
-                    id="showTimezones"
-                    className={styles.checkbox}
-                    checked={showTimezones}
-                    onChange={() => setShowTimezones(!showTimezones)}
-                />
-                <label htmlFor="showTimezones" className={styles.checkboxLabel}>
-                    Show Timezones
-                </label>
             </div>
         </div>
     );

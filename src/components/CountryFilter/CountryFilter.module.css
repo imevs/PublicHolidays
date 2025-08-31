@@ -3,11 +3,11 @@
   flex-direction: column;
 }
 
-.controlGroup label {
-  font-weight: 600;
+.controlGroup .controlGroupLabel {
   margin-bottom: 8px;
   color: #495057;
   font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .countryFilter {
@@ -38,8 +38,17 @@
 .checkboxContainer {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: calc(-0.9rem - 9px);
+  margin-bottom: 9px;
   justify-content: flex-end;
+}
+
+@media (max-width: 500px) {
+  .checkboxContainer {
+    margin-top: 9px;
+    margin-bottom: 9px;
+    justify-content: flex-start;
+  }
 }
 
 /* Custom checkbox styling */

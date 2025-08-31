@@ -23,7 +23,7 @@ const Controls: React.FC<ControlsProps> = ({
     <div className={styles.controls}>
       <div className={styles.controlsGrid}>
         <div className={styles.controlGroup}>
-          <label>Select Year</label>
+          <label className={styles.controlGroupLabel}>Select Year</label>
           <select
             className={styles.select}
             value={selectedYear}
