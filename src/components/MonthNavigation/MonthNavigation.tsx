@@ -22,7 +22,11 @@ const MonthNavigation: React.FC<MonthNavigationProps> = ({
                 ← Previous
             </button>
 
-            <h2 className={styles.monthTitle} onClick={onNavigateYear}>
+            <h2
+                title="Click to see whole year"
+                className={styles.monthTitle}
+                onClick={onNavigateYear}
+            >
                 {`${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`}
             </h2>
 
