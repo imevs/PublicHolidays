@@ -1,6 +1,6 @@
-import React from 'react';
-import { monthNames } from '../../utils/dateUtils';
-import styles from './MonthNavigation.module.css';
+import React from "react";
+import { monthNames } from "../../utils/dateUtils";
+import styles from "./MonthNavigation.module.css";
 
 interface MonthNavigationProps {
     currentDate: Date;
@@ -9,10 +9,10 @@ interface MonthNavigationProps {
 }
 
 const MonthNavigation: React.FC<MonthNavigationProps> = ({
-                                                             currentDate,
-                                                             onNavigateYear,
-                                                             onNavigateMonth
-                                                         }) => {
+    currentDate,
+    onNavigateYear,
+    onNavigateMonth
+}) => {
     return (
         <div className={styles.monthNavigation}>
             <button

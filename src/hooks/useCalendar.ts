@@ -1,13 +1,13 @@
-import { useEffect, useMemo, useState } from 'react';
-import { CalendarDay, CountryCode, HolidayWithCountry } from '../types';
-import { allHolidays as holidaysData } from '../data/holidays_v2';
-import { formatDateString, isSameDate } from '../utils/dateUtils';
+import { useEffect, useMemo, useState } from "react";
+import { CalendarDay, CountryCode, HolidayWithCountry } from "../types";
+import { allHolidays as holidaysData } from "../data/holidays_v2";
+import { formatDateString, isSameDate } from "../utils/dateUtils";
 
-const dateFormatter = new Intl.DateTimeFormat('en-CA'); // Canadian English uses YYYY-MM-DD format
+const dateFormatter = new Intl.DateTimeFormat("en-CA"); // Canadian English uses YYYY-MM-DD format
 
 export const useCalendar = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
-    const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(['LV']);
+    const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(["LV"]);
     const [selectedYear, setSelectedYear] = useState(new Date().getUTCFullYear());
 
     useEffect(() => {
@@ -18,8 +18,8 @@ export const useCalendar = () => {
         }
         const date = (urlSearchParams.get("date") ?? "");
         if (date) {
-            setCurrentDate(new Date(date + 'T00:00:00Z'));
-            setSelectedYear(new Date(date + 'T00:00:00Z').getFullYear());
+            setCurrentDate(new Date(date + "T00:00:00Z"));
+            setSelectedYear(new Date(date + "T00:00:00Z").getFullYear());
         }
     }, []);
 
