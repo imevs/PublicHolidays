@@ -9,10 +9,10 @@ interface MonthNavigationProps {
 }
 
 const MonthNavigation: React.FC<MonthNavigationProps> = ({
-                                                             currentDate,
-                                                             onNavigateYear,
-                                                             onNavigateMonth
-                                                         }) => {
+    currentDate,
+    onNavigateYear,
+    onNavigateMonth
+}) => {
     return (
         <div className={styles.monthNavigation}>
             <button

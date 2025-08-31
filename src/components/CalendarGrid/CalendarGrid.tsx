@@ -14,26 +14,26 @@ interface CalendarGridProps {
 }
 
 const CalendarGrid: React.FC<CalendarGridProps> = ({
-                                                       selectedMonthDays,
-                                                       selectedYearDays,
-                                                       currentDate,
-                                                       onNavigateMonth
-                                                   }) => {
+    selectedMonthDays,
+    selectedYearDays,
+    currentDate,
+    onNavigateMonth
+}) => {
     const [selectedDay, setSelectedDay] = useState<Date | null>(null); // State for selected day in popup
     const [mode, setMode] = useState<"month" | "year">("month"); // State for selected day in popup
 
     useEffect(() => {
-      const handleClickOutside = (event: MouseEvent) => {
-        const popupElement = document.querySelector(`.${styles.popup}`);
-        if (popupElement && !popupElement.contains(event.target as Node)) {
-          setSelectedDay(null);
-        }
-      };
+        const handleClickOutside = (event: MouseEvent) => {
+            const popupElement = document.querySelector(`.${styles.popup}`);
+            if (popupElement && !popupElement.contains(event.target as Node)) {
+                setSelectedDay(null);
+            }
+        };
   
-      document.addEventListener("mousedown", handleClickOutside);
-      return () => {
-        document.removeEventListener("mousedown", handleClickOutside);
-      };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
     }, []);
 
     
@@ -105,7 +105,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                                             <div className={styles.holidayIndicatorsList}>
                                                 {dayHolidaysUnique.map((holiday) => (
                                                     <div key={holiday.countryCode + holiday.name}
-                                                         className={styles.holidayIndicator}>
+                                                        className={styles.holidayIndicator}>
                                                         {getFlagEmoji(holiday.countryCode)}
                                                     </div>
                                                 ))}

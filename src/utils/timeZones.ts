@@ -47,26 +47,26 @@ export const countryTimeZones: Record<CountryCode, string> = {
     SK: "Europe/Bratislava",
     TR: "Europe/Istanbul",
     UA: "Europe/Kyiv",
-  };
+};
   
-  // Function to get UTC offset (e.g., "+01", "-03") for a time zone
-  function getUTCOffset(timeZone: string, date = new Date()) {
+// Function to get UTC offset (e.g., "+01", "-03") for a time zone
+function getUTCOffset(timeZone: string, date = new Date()) {
     const formatter = new Intl.DateTimeFormat("en-US", {
-      timeZone,
-      timeZoneName: "shortOffset"
+        timeZone,
+        timeZoneName: "shortOffset"
     });
     const parts = formatter.formatToParts(date);
     const offsetPart = parts ? parts.find(p => p.type === "timeZoneName")?.value : ""; 
     const result = offsetPart?.replace("GMT", "").replace("UTC", "") ?? "";
     return result.startsWith("+") || result.startsWith("-") ? result : `+0`;
-  }
+}
   
-  // Build a table of countries with their offsets
+// Build a table of countries with their offsets
 const europeOffsets = Object.entries(countryTimeZones).map(([countryCode, tz]) => ({
     countryCode: countryCode as CountryCode,
     timeZone: tz,
     offset: getUTCOffset(tz)
-  }));
+}));
 
 export const countryOffsets = europeOffsets.reduce((acc, { countryCode, offset }) => {
     acc[countryCode] = offset;

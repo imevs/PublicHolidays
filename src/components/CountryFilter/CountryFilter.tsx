@@ -11,9 +11,9 @@ interface CountryFilterProps {
 }
 
 const CountryFilter: React.FC<CountryFilterProps> = ({
-                                                         selectedCountries,
-                                                         onToggleCountry
-                                                     }) => {
+    selectedCountries,
+    onToggleCountry
+}) => {
     const [showTimezones, setShowTimezones] = useState(false); // State to toggle timezone visibility
 
     // Function to get the local time for a given timezone

@@ -1,28 +1,28 @@
 import { allHolidays as holidaysData } from "../data/holidays_v2";
 
 export interface Holiday {
-  date: string;
-  name: string;
-  localName: string;
+    date: string;
+    name: string;
+    localName: string;
 }
 
 export interface CountryHolidays {
-  countryCode: string;
-  countryName: string;
-  years: Record<string, Holiday[]>;
+    countryCode: string;
+    countryName: string;
+    years: Record<string, Holiday[]>;
 }
 
 export interface CalendarDay {
-  date: Date;
-  isCurrentMonth: boolean;
-  isToday: boolean;
-  holidays: HolidayWithCountry[];
-  dayNumber: number;
+    date: Date;
+    isCurrentMonth: boolean;
+    isToday: boolean;
+    holidays: HolidayWithCountry[];
+    dayNumber: number;
 }
 
 export interface HolidayWithCountry extends Holiday {
-  country: string;
-  countryCode: CountryCode;
+    country: string;
+    countryCode: CountryCode;
 }
 
 export type CountryCode = keyof typeof holidaysData;
