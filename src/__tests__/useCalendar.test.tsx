@@ -86,8 +86,8 @@ describe('useCalendar', () => {
     for (const day of novemberDays) {
       const dateStr = day.date.toISOString().split('T')[0];
       const expectedHolidays = countryHolidays
-        .filter((holiday: any) => holiday.date === dateStr)
-        .map((holiday: any) => ({
+        .filter((holiday) => holiday.date === dateStr)
+        .map((holiday) => ({
           ...holiday,
           country: allHolidays['LV'].countryName,
           countryCode: 'LV',

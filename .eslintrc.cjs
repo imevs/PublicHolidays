@@ -3,11 +3,10 @@ module.exports = {
   env: { browser: true, es2020: true },
   extends: [
     'eslint:recommended',
-    '@typescript-eslint/recommended',
-    'eslint:recommended',
-    '@typescript-eslint/recommended-type-checked',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignorePatterns: ['scripts', 'dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
   parserOptions: {
@@ -17,6 +16,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
   },
   rules: {
+    'no-unused-vars': 'off',
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
