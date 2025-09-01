@@ -8,6 +8,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-CA"); // Canadian English uses
 export const useCalendar = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(["LV"]);
+    const [mode, setMode] = useState<"month" | "year">("year");
 
     useEffect(() => {
         const urlSearchParams = new URLSearchParams(window.location.hash.replace("#", ""));
@@ -18,6 +19,10 @@ export const useCalendar = () => {
         const date = urlSearchParams.get("date") ?? "";
         if (date) {
             setCurrentDate(new Date(date + "T00:00:00Z"));
+        }
+        const urlMode = urlSearchParams.get("mode") as "month" | "year";
+        if (urlMode === "month" || urlMode === "year") {
+            setMode(urlMode);
         }
     }, []);
 
@@ -126,13 +131,22 @@ export const useCalendar = () => {
         setCurrentDate(newDate);
     };
 
+    const handleModeChange = (newMode: "month" | "year"): void => {
+        const params = new URLSearchParams(window.location.hash.replace("#", ""));
+        params.set("mode", newMode);
+        window.location.hash = decodeURIComponent(params.toString());
+        setMode(newMode);
+    };
+
     return {
         currentDate,
         selectedCountries,
         selectedMonthDays,
         selectedYearDays,
+        mode,
         navigateMonth,
         toggleCountry,
-        handleDateChange
+        handleDateChange,
+        handleModeChange
     };
 };

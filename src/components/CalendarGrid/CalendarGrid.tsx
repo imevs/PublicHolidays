@@ -10,6 +10,8 @@ interface CalendarGridProps {
     selectedYearDays: CalendarDayType[];
     selectedMonthDays: CalendarDayType[];
     currentDate: Date;
+    mode: "month" | "year";
+    onModeChange: (mode: "month" | "year") => void;
     onNavigateMonth: (direction: number) => void;
 }
 
@@ -17,10 +19,11 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
     selectedMonthDays,
     selectedYearDays,
     currentDate,
+    mode,
+    onModeChange,
     onNavigateMonth
 }) => {
     const [selectedDay, setSelectedDay] = useState<Date | null>(null); // State for selected day in popup
-    const [mode, setMode] = useState<"month" | "year">("month"); // State for selected day in popup
     const [highlightedMonth, setHighlightedMonth] = useState<number | null>(null); // State for highlighted month
     const yearGridRef = useRef<HTMLDivElement | null>(null); // Ref for the year grid container
 
@@ -54,7 +57,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
             <MonthNavigation
                 currentDate={currentDate}
                 onNavigateMonth={onNavigateMonth}
-                onNavigateYear={() => setMode("year")}
+                onNavigateYear={() => onModeChange("year")}
             />
 
             <div className={styles.calendarGrid}>
@@ -93,7 +96,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                                 className={styles.monthHeader}
                                 title="Click to switch on month view"
                                 onClick={() => {
-                                    setMode("month");
+                                    onModeChange("month");
                                     onNavigateMonth(month);
                                 }}
                             >
