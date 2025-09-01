@@ -5,6 +5,7 @@ import { dayNames, formatDateString, getDaysInMonth, getMonthName, isSameDate } 
 import styles from "./CalendarGrid.module.css";
 import MonthNavigation from "../MonthNavigation/MonthNavigation";
 import { getFlagEmoji } from "../../utils/countryFlags";
+import { getLink } from "../../data/holidays_descriptions/all";
 
 interface CalendarGridProps {
     selectedYearDays: CalendarDayType[];
@@ -150,7 +151,8 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                         <ul>
                             {selectedYearDays.find(d => isSameDate(d.date, selectedDay))?.holidays?.map((holiday, index) => (
                                 <li key={index} data-flag={getFlagEmoji(holiday.countryCode)}>
-                                    <strong>{holiday.country}</strong>: {holiday.name}
+                                    <a target="_blank" href={getLink(undefined, holiday.country, "public holidays")}><strong>{holiday.country}</strong></a>:{" "}
+                                    <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name)}>{holiday.name}</a>
                                 </li>
                             ))}
                         </ul>
