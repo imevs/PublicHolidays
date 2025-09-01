@@ -1,0 +1,3135 @@
+{
+  "Albania": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Albania",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Albania#New_Year%27s_Day"
+      },
+      {
+        "name": "Summer Day",
+        "date": "14 March",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Albania#14_March"
+      },
+      {
+        "name": "Nevruz",
+        "date": "21 March",
+        "detail_link": "https://en.wikipedia.org/wiki/Nawruz"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Albania#1_May"
+      },
+      {
+        "name": "Independence Day",
+        "date": "28 November",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day_%28Albania%29"
+      },
+      {
+        "name": "Christmas Day (Orthodox/Western)",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      }
+    ]
+  },
+  "Andorra": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Andorra",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Andorra#1_January"
+      },
+      {
+        "name": "Epiphany",
+        "date": "6 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Epiphany"
+      },
+      {
+        "name": "Andorra National Day",
+        "date": "8 September",
+        "detail_link": "https://en.wikipedia.org/wiki/National_Day_of_Andorra"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      }
+    ]
+  },
+  "Armenia": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Armenia",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Armenia#New_Year%27s_Day"
+      },
+      {
+        "name": "Armenian Christmas",
+        "date": "6 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas_in_Armenia"
+      },
+      {
+        "name": "International Women's Day",
+        "date": "8 March",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Women%27s_Day"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Armenia#1_May"
+      },
+      {
+        "name": "Independence Day",
+        "date": "21 September",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day_%28Armenia%29"
+      },
+      {
+        "name": "Republic Day",
+        "date": "28 May",
+        "detail_link": "https://en.wikipedia.org/wiki/Republic_Day_%28Armenia%29"
+      }
+    ]
+  },
+  "Austria": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Austria",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Austria#1_January"
+      },
+      {
+        "name": "Epiphany",
+        "date": "6 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Epiphany"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Austria#1_May"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Corpus Christi",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Corpus_Christi",
+        "rule": "60 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Assumption of Mary",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "National Day",
+        "date": "26 October",
+        "detail_link": "https://en.wikipedia.org/wiki/National_Day_of_Austria"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Immaculate Conception",
+        "date": "8 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Immaculate_Conception"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      }
+    ]
+  },
+  "Azerbaijan": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Azerbaijan",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Azerbaijan#New_Year%27s_Day"
+      },
+      {
+        "name": "International Women's Day",
+        "date": "8 March",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Women%27s_Day"
+      },
+      {
+        "name": "Novruz",
+        "date": "20–24 March",
+        "detail_link": "https://en.wikipedia.org/wiki/Novruz"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/Labour_Day"
+      },
+      {
+        "name": "Republic Day",
+        "date": "28 May",
+        "detail_link": "https://en.wikipedia.org/wiki/Republic_Day_%28Azerbaijan%29"
+      },
+      {
+        "name": "Independence Day",
+        "date": "18 October",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day_%28Azerbaijan%29"
+      },
+      {
+        "name": "Victory Day",
+        "date": "8 November",
+        "detail_link": "https://en.wikipedia.org/wiki/Victory_Day_%28Azerbaijan%29"
+      },
+      {
+        "name": "Day of Solidarity of World Azerbaijanis",
+        "date": "31 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Azerbaijan#31_December"
+      }
+    ]
+  },
+  "Belarus": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Belarus",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Belarus#New_Year%27s_Day"
+      },
+      {
+        "name": "Orthodox Christmas",
+        "date": "7 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas_in_Belarus"
+      },
+      {
+        "name": "International Women's Day",
+        "date": "8 March",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Women%27s_Day"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/Labour_Day"
+      },
+      {
+        "name": "Victory Day",
+        "date": "9 May",
+        "detail_link": "https://en.wikipedia.org/wiki/Victory_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "3 July",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day_%28Belarus%29"
+      },
+      {
+        "name": "October Revolution Day",
+        "date": "7 November",
+        "detail_link": "https://en.wikipedia.org/wiki/October_Revolution"
+      }
+    ]
+  },
+  "Belgium": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Belgium",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Belgium#1_January"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Belgium#1_May"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Belgian National Day",
+        "date": "21 July",
+        "detail_link": "https://en.wikipedia.org/wiki/Belgian_National_Day"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Armistice Day",
+        "date": "11 November",
+        "detail_link": "https://en.wikipedia.org/wiki/Armistice_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      }
+    ]
+  },
+  "Bosnia and Herzegovina": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Bosnia_and_Herzegovina",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Bosnia_and_Herzegovina#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Statehood Day",
+        "date": "25 November",
+        "detail_link": "https://en.wikipedia.org/wiki/Statehood_Day"
+      }
+    ]
+  },
+  "Bulgaria": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Bulgaria",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Bulgaria#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Liberation Day",
+        "date": "3 March",
+        "detail_link": "https://en.wikipedia.org/wiki/Liberation_Day"
+      }
+    ]
+  },
+  "Croatia": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Croatia",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Croatia#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Statehood Day",
+        "date": "25 June",
+        "detail_link": "https://en.wikipedia.org/wiki/Statehood_Day"
+      }
+    ]
+  },
+  "Cyprus": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Cyprus",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Cyprus#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "1 October",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "Czech Republic": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Czech_Republic",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Czech_Republic#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independent Czechoslovak State Day",
+        "date": "28 October",
+        "detail_link": "https://en.wikipedia.org/wiki/Independent_Czechoslovak_State_Day"
+      }
+    ]
+  },
+  "Denmark": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Denmark",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Denmark#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Constitution Day",
+        "date": "5 June",
+        "detail_link": "https://en.wikipedia.org/wiki/Constitution_Day"
+      }
+    ]
+  },
+  "Estonia": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Estonia",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Estonia#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "24 February",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "Finland": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Finland",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Finland#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "6 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "France": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_France",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_France#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Bastille Day",
+        "date": "14 July",
+        "detail_link": "https://en.wikipedia.org/wiki/Bastille_Day"
+      }
+    ]
+  },
+  "Georgia": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Georgia",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Georgia#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "26 May",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "Germany": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Germany",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Germany#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "German Unity Day",
+        "date": "3 October",
+        "detail_link": "https://en.wikipedia.org/wiki/German_Unity_Day"
+      }
+    ]
+  },
+  "Greece": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Greece",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Greece#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "25 March",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "Hungary": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Hungary",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Hungary#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Saint Stephen's Day",
+        "date": "20 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Saint_Stephen's_Day"
+      }
+    ]
+  },
+  "Iceland": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Iceland",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Iceland#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "National Day",
+        "date": "17 June",
+        "detail_link": "https://en.wikipedia.org/wiki/National_Day"
+      }
+    ]
+  },
+  "Ireland": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Ireland",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Ireland#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "St. Patrick's Day",
+        "date": "17 March",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Patrick's_Day"
+      }
+    ]
+  },
+  "Italy": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Italy",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Italy#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Republic Day",
+        "date": "2 June",
+        "detail_link": "https://en.wikipedia.org/wiki/Republic_Day"
+      }
+    ]
+  },
+  "Kazakhstan": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Kazakhstan",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Kazakhstan#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "16 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "Kosovo": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Kosovo",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Kosovo#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "17 February",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "Latvia": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Latvia",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Latvia#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Proclamation Day",
+        "date": "18 November",
+        "detail_link": "https://en.wikipedia.org/wiki/Proclamation_Day"
+      }
+    ]
+  },
+  "Liechtenstein": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Liechtenstein",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Liechtenstein#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "National Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/National_Day"
+      }
+    ]
+  },
+  "Lithuania": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Lithuania",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Lithuania#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "16 February",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "Luxembourg": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Luxembourg",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Luxembourg#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "National Day",
+        "date": "23 June",
+        "detail_link": "https://en.wikipedia.org/wiki/National_Day"
+      }
+    ]
+  },
+  "Malta": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Malta",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Malta#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "21 September",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "Moldova": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Moldova",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Moldova#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "27 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "Monaco": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Monaco",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Monaco#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Sovereign Prince's Day",
+        "date": "19 November",
+        "detail_link": "https://en.wikipedia.org/wiki/Sovereign_Prince's_Day"
+      }
+    ]
+  },
+  "Montenegro": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Montenegro",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Montenegro#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Statehood Day",
+        "date": "13 July",
+        "detail_link": "https://en.wikipedia.org/wiki/Statehood_Day"
+      }
+    ]
+  },
+  "Netherlands": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Netherlands",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Netherlands#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "King's Day",
+        "date": "27 April",
+        "detail_link": "https://en.wikipedia.org/wiki/King's_Day"
+      }
+    ]
+  },
+  "North Macedonia": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_North_Macedonia",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_North_Macedonia#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "8 September",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "Norway": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Norway",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Norway#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Constitution Day",
+        "date": "17 May",
+        "detail_link": "https://en.wikipedia.org/wiki/Constitution_Day"
+      }
+    ]
+  },
+  "Poland": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Poland",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Poland#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "11 November",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "Portugal": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Portugal",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Portugal#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Portugal Day",
+        "date": "10 June",
+        "detail_link": "https://en.wikipedia.org/wiki/Portugal_Day"
+      }
+    ]
+  },
+  "Romania": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Romania",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Romania#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Great Union Day",
+        "date": "1 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Great_Union_Day"
+      }
+    ]
+  },
+  "Russia": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Russia",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Russia#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Russia Day",
+        "date": "12 June",
+        "detail_link": "https://en.wikipedia.org/wiki/Russia_Day"
+      }
+    ]
+  },
+  "San Marino": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_San_Marino",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_San_Marino#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Founding of the Republic",
+        "date": "3 September",
+        "detail_link": "https://en.wikipedia.org/wiki/Founding_of_the_Republic"
+      }
+    ]
+  },
+  "Serbia": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Serbia",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Serbia#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Statehood Day",
+        "date": "15 February",
+        "detail_link": "https://en.wikipedia.org/wiki/Statehood_Day"
+      }
+    ]
+  },
+  "Slovakia": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Slovakia",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Slovakia#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Constitution Day",
+        "date": "1 September",
+        "detail_link": "https://en.wikipedia.org/wiki/Constitution_Day"
+      }
+    ]
+  },
+  "Slovenia": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Slovenia",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Slovenia#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Statehood Day",
+        "date": "25 June",
+        "detail_link": "https://en.wikipedia.org/wiki/Statehood_Day"
+      }
+    ]
+  },
+  "Spain": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Spain",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Spain#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "National Day",
+        "date": "12 October",
+        "detail_link": "https://en.wikipedia.org/wiki/National_Day"
+      }
+    ]
+  },
+  "Sweden": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Sweden",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Sweden#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "National Day",
+        "date": "6 June",
+        "detail_link": "https://en.wikipedia.org/wiki/National_Day"
+      }
+    ]
+  },
+  "Switzerland": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Switzerland",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Switzerland#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Swiss National Day",
+        "date": "1 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Swiss_National_Day"
+      }
+    ]
+  },
+  "Turkey": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Turkey",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Turkey#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Republic Day",
+        "date": "29 October",
+        "detail_link": "https://en.wikipedia.org/wiki/Republic_Day"
+      }
+    ]
+  },
+  "Ukraine": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Ukraine",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Ukraine#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Independence Day",
+        "date": "24 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Independence_Day"
+      }
+    ]
+  },
+  "United Kingdom": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_United_Kingdom",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_United_Kingdom#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Bank Holidays (no single national day)",
+        "date": "varies",
+        "detail_link": "https://en.wikipedia.org/wiki/Bank_Holidays_(no_single_national_day)"
+      }
+    ]
+  },
+  "Vatican City": {
+    "wikipedia": "https://en.wikipedia.org/wiki/Public_holidays_in_Vatican_City",
+    "holidays": [
+      {
+        "name": "New Year's Day",
+        "date": "1 January",
+        "detail_link": "https://en.wikipedia.org/wiki/Public_holidays_in_Vatican_City#1_January"
+      },
+      {
+        "name": "Good Friday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Easter Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after March 21)"
+      },
+      {
+        "name": "Labour Day",
+        "date": "1 May",
+        "detail_link": "https://en.wikipedia.org/wiki/International_Workers%27_Day"
+      },
+      {
+        "name": "Ascension Day",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "name": "Whit Monday",
+        "date": "moveable",
+        "detail_link": "https://en.wikipedia.org/wiki/Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "name": "Assumption Day",
+        "date": "15 August",
+        "detail_link": "https://en.wikipedia.org/wiki/Assumption_of_Mary"
+      },
+      {
+        "name": "All Saints' Day",
+        "date": "1 November",
+        "detail_link": "https://en.wikipedia.org/wiki/All_Saints%27_Day"
+      },
+      {
+        "name": "Christmas Day",
+        "date": "25 December",
+        "detail_link": "https://en.wikipedia.org/wiki/Christmas"
+      },
+      {
+        "name": "St. Stephen's Day / Boxing Day",
+        "date": "26 December",
+        "detail_link": "https://en.wikipedia.org/wiki/St._Stephen%27s_Day"
+      },
+      {
+        "name": "Solemnity of Saints Peter and Paul",
+        "date": "feast",
+        "detail_link": "https://en.wikipedia.org/wiki/Solemnity_of_Saints_Peter_and_Paul"
+      }
+    ]
+  }
+}

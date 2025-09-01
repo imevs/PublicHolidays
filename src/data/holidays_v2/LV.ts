@@ -23,7 +23,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-03-20T05:06:28+02:00",
+            "date": "2024-03-20",
             "localName": "March Equinox in Latvia (Riga)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -59,7 +59,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-03-31T03:00:00+02:00",
+            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in Latvia",
             "name": "Daylight Saving Time starts",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -131,7 +131,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-06-20T23:50:59+03:00",
+            "date": "2024-06-20",
             "localName": "June Solstice in Latvia (Riga)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -167,7 +167,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-09-22T15:43:33+03:00",
+            "date": "2024-09-22",
             "localName": "September Equinox in Latvia (Riga)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -176,7 +176,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-10-27T04:00:00+03:00",
+            "date": "2024-10-27",
             "localName": "Daylight Saving Time ends in Latvia",
             "name": "Daylight Saving Time ends",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -203,7 +203,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-12-21T11:20:34+02:00",
+            "date": "2024-12-21",
             "localName": "December Solstice in Latvia (Riga)",
             "name": "December Solstice",
             "primary_type": "Season",
@@ -266,7 +266,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-03-20T11:01:21+02:00",
+            "date": "2025-03-20",
             "localName": "March Equinox in Latvia (Riga)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -275,7 +275,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-03-30T03:00:00+02:00",
+            "date": "2025-03-30",
             "localName": "Daylight Saving Time starts in Latvia",
             "name": "Daylight Saving Time starts",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -374,7 +374,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-06-21T05:42:15+03:00",
+            "date": "2025-06-21",
             "localName": "June Solstice in Latvia (Riga)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -410,7 +410,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-09-22T21:19:22+03:00",
+            "date": "2025-09-22",
             "localName": "September Equinox in Latvia (Riga)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -419,7 +419,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-10-26T04:00:00+03:00",
+            "date": "2025-10-26",
             "localName": "Daylight Saving Time ends in Latvia",
             "name": "Daylight Saving Time ends",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -446,7 +446,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-12-21T17:03:05+02:00",
+            "date": "2025-12-21",
             "localName": "December Solstice in Latvia (Riga)",
             "name": "December Solstice",
             "primary_type": "Season",
@@ -509,7 +509,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-03-20T16:46:00+02:00",
+            "date": "2026-03-20",
             "localName": "March Equinox in Latvia (Riga)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -518,7 +518,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-03-29T03:00:00+02:00",
+            "date": "2026-03-29",
             "localName": "Daylight Saving Time starts in Latvia",
             "name": "Daylight Saving Time starts",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -608,7 +608,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-06-21T11:24:30+03:00",
+            "date": "2026-06-21",
             "localName": "June Solstice in Latvia (Riga)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -644,7 +644,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-09-23T03:05:13+03:00",
+            "date": "2026-09-23",
             "localName": "September Equinox in Latvia (Riga)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -653,7 +653,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-10-25T04:00:00+03:00",
+            "date": "2026-10-25",
             "localName": "Daylight Saving Time ends in Latvia",
             "name": "Daylight Saving Time ends",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -680,7 +680,7 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-12-21T22:50:14+02:00",
+            "date": "2026-12-21",
             "localName": "December Solstice in Latvia (Riga)",
             "name": "December Solstice",
             "primary_type": "Season",

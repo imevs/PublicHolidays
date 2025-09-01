@@ -59,7 +59,7 @@ export const holidays_IE: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-03-20T03:06:28+00:00",
+            "date": "2024-03-20",
             "localName": "March Equinox in Ireland (Dublin)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -158,7 +158,7 @@ export const holidays_IE: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-06-20T21:50:59+01:00",
+            "date": "2024-06-20",
             "localName": "June Solstice in Ireland (Dublin)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -176,7 +176,7 @@ export const holidays_IE: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-09-22T13:43:33+01:00",
+            "date": "2024-09-22",
             "localName": "September Equinox in Ireland (Dublin)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -212,7 +212,7 @@ export const holidays_IE: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-12-21T09:20:34+00:00",
+            "date": "2024-12-21",
             "localName": "December Solstice in Ireland (Dublin)",
             "name": "December Solstice",
             "primary_type": "Season",
@@ -302,7 +302,7 @@ export const holidays_IE: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-03-20T09:01:21+00:00",
+            "date": "2025-03-20",
             "localName": "March Equinox in Ireland (Dublin)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -410,7 +410,7 @@ export const holidays_IE: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-06-21T03:42:15+01:00",
+            "date": "2025-06-21",
             "localName": "June Solstice in Ireland (Dublin)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -428,7 +428,7 @@ export const holidays_IE: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-09-22T19:19:22+01:00",
+            "date": "2025-09-22",
             "localName": "September Equinox in Ireland (Dublin)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -464,7 +464,7 @@ export const holidays_IE: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-12-21T15:03:05+00:00",
+            "date": "2025-12-21",
             "localName": "December Solstice in Ireland (Dublin)",
             "name": "December Solstice",
             "primary_type": "Season",
@@ -563,7 +563,7 @@ export const holidays_IE: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-03-20T14:46:00+00:00",
+            "date": "2026-03-20",
             "localName": "March Equinox in Ireland (Dublin)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -662,7 +662,7 @@ export const holidays_IE: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-06-21T09:24:30+01:00",
+            "date": "2026-06-21",
             "localName": "June Solstice in Ireland (Dublin)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -680,7 +680,7 @@ export const holidays_IE: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-09-23T01:05:13+01:00",
+            "date": "2026-09-23",
             "localName": "September Equinox in Ireland (Dublin)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -716,7 +716,7 @@ export const holidays_IE: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-12-21T20:50:14+00:00",
+            "date": "2026-12-21",
             "localName": "December Solstice in Ireland (Dublin)",
             "name": "December Solstice",
             "primary_type": "Season",

@@ -23,7 +23,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-03-20T04:06:28+01:00",
+            "date": "2024-03-20",
             "localName": "March Equinox in Monaco (Monaco)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -59,7 +59,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-03-31T02:00:00+01:00",
+            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in Monaco",
             "name": "Daylight Saving Time starts",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -140,7 +140,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-06-20T22:50:59+02:00",
+            "date": "2024-06-20",
             "localName": "June Solstice in Monaco (Monaco)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -194,7 +194,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-09-22T14:43:33+02:00",
+            "date": "2024-09-22",
             "localName": "September Equinox in Monaco (Monaco)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -203,7 +203,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-10-27T03:00:00+02:00",
+            "date": "2024-10-27",
             "localName": "Daylight Saving Time ends in Monaco",
             "name": "Daylight Saving Time ends",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -248,7 +248,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-12-21T10:20:34+01:00",
+            "date": "2024-12-21",
             "localName": "December Solstice in Monaco (Monaco)",
             "name": "December Solstice",
             "primary_type": "Season",
@@ -302,7 +302,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-03-20T10:01:21+01:00",
+            "date": "2025-03-20",
             "localName": "March Equinox in Monaco (Monaco)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -311,7 +311,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-03-30T02:00:00+01:00",
+            "date": "2025-03-30",
             "localName": "Daylight Saving Time starts in Monaco",
             "name": "Daylight Saving Time starts",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -419,7 +419,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-06-21T04:42:15+02:00",
+            "date": "2025-06-21",
             "localName": "June Solstice in Monaco (Monaco)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -473,7 +473,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-09-22T20:19:22+02:00",
+            "date": "2025-09-22",
             "localName": "September Equinox in Monaco (Monaco)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -482,7 +482,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-10-26T03:00:00+02:00",
+            "date": "2025-10-26",
             "localName": "Daylight Saving Time ends in Monaco",
             "name": "Daylight Saving Time ends",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -518,7 +518,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-12-21T16:03:05+01:00",
+            "date": "2025-12-21",
             "localName": "December Solstice in Monaco (Monaco)",
             "name": "December Solstice",
             "primary_type": "Season",
@@ -572,7 +572,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-03-20T15:46:00+01:00",
+            "date": "2026-03-20",
             "localName": "March Equinox in Monaco (Monaco)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -581,7 +581,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-03-29T02:00:00+01:00",
+            "date": "2026-03-29",
             "localName": "Daylight Saving Time starts in Monaco",
             "name": "Daylight Saving Time starts",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -689,7 +689,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-06-21T10:24:30+02:00",
+            "date": "2026-06-21",
             "localName": "June Solstice in Monaco (Monaco)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -743,7 +743,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-09-23T02:05:13+02:00",
+            "date": "2026-09-23",
             "localName": "September Equinox in Monaco (Monaco)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -752,7 +752,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-10-25T03:00:00+02:00",
+            "date": "2026-10-25",
             "localName": "Daylight Saving Time ends in Monaco",
             "name": "Daylight Saving Time ends",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -797,7 +797,7 @@ export const holidays_MC: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-12-21T21:50:14+01:00",
+            "date": "2026-12-21",
             "localName": "December Solstice in Monaco (Monaco)",
             "name": "December Solstice",
             "primary_type": "Season",

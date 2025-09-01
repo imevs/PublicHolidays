@@ -189,7 +189,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-03-20T03:06:28+00:00",
+            "date": "2024-03-20",
             "localName": "March Equinox in the United Kingdom (London)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -258,7 +258,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-03-31T01:00:00+00:00",
+            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in the United Kingdom",
             "name": "Daylight Saving Time starts",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -531,7 +531,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-06-20T21:50:59+01:00",
+            "date": "2024-06-20",
             "localName": "June Solstice in the United Kingdom (London)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -656,7 +656,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-09-22T13:43:33+01:00",
+            "date": "2024-09-22",
             "localName": "September Equinox in the United Kingdom (London)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -735,7 +735,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-10-27T02:00:00+01:00",
+            "date": "2024-10-27",
             "localName": "Daylight Saving Time ends in the United Kingdom",
             "name": "Daylight Saving Time ends",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -841,7 +841,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-12-21T09:20:34+00:00",
+            "date": "2024-12-21",
             "localName": "December Solstice in the United Kingdom (London)",
             "name": "December Solstice",
             "primary_type": "Season",
@@ -1093,7 +1093,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-03-20T09:01:21+00:00",
+            "date": "2025-03-20",
             "localName": "March Equinox in the United Kingdom (London)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -1131,7 +1131,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-03-30T01:00:00+00:00",
+            "date": "2025-03-30",
             "localName": "Daylight Saving Time starts in the United Kingdom",
             "name": "Daylight Saving Time starts",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -1454,7 +1454,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-06-21T03:42:15+01:00",
+            "date": "2025-06-21",
             "localName": "June Solstice in the United Kingdom (London)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -1588,7 +1588,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-09-22T19:19:22+01:00",
+            "date": "2025-09-22",
             "localName": "September Equinox in the United Kingdom (London)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -1677,7 +1677,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-10-26T02:00:00+01:00",
+            "date": "2025-10-26",
             "localName": "Daylight Saving Time ends in the United Kingdom",
             "name": "Daylight Saving Time ends",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -1783,7 +1783,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-12-21T15:03:05+00:00",
+            "date": "2025-12-21",
             "localName": "December Solstice in the United Kingdom (London)",
             "name": "December Solstice",
             "primary_type": "Season",
@@ -2034,7 +2034,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-03-20T14:46:00+00:00",
+            "date": "2026-03-20",
             "localName": "March Equinox in the United Kingdom (London)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -2053,7 +2053,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-03-29T01:00:00+00:00",
+            "date": "2026-03-29",
             "localName": "Daylight Saving Time starts in the United Kingdom",
             "name": "Daylight Saving Time starts",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -2356,7 +2356,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-06-21T09:24:30+01:00",
+            "date": "2026-06-21",
             "localName": "June Solstice in the United Kingdom (London)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -2490,7 +2490,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-09-23T01:05:13+01:00",
+            "date": "2026-09-23",
             "localName": "September Equinox in the United Kingdom (London)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -2549,7 +2549,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-10-25T02:00:00+01:00",
+            "date": "2026-10-25",
             "localName": "Daylight Saving Time ends in the United Kingdom",
             "name": "Daylight Saving Time ends",
             "primary_type": "Clock change/Daylight Saving Time",
@@ -2655,7 +2655,7 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-12-21T20:50:14+00:00",
+            "date": "2026-12-21",
             "localName": "December Solstice in the United Kingdom (London)",
             "name": "December Solstice",
             "primary_type": "Season",

@@ -69,7 +69,7 @@ export const holidays_BY: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-03-20T06:06:28+03:00",
+            "date": "2024-03-20",
             "localName": "March Equinox in Belarus (Minsk)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -151,7 +151,7 @@ export const holidays_BY: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-06-20T23:50:59+03:00",
+            "date": "2024-06-20",
             "localName": "June Solstice in Belarus (Minsk)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -205,7 +205,7 @@ export const holidays_BY: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-09-22T15:43:33+03:00",
+            "date": "2024-09-22",
             "localName": "September Equinox in Belarus (Minsk)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -250,7 +250,7 @@ export const holidays_BY: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-12-21T12:20:34+03:00",
+            "date": "2024-12-21",
             "localName": "December Solstice in Belarus (Minsk)",
             "name": "December Solstice",
             "primary_type": "Season",
@@ -359,7 +359,7 @@ export const holidays_BY: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-03-20T12:01:21+03:00",
+            "date": "2025-03-20",
             "localName": "March Equinox in Belarus (Minsk)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -459,7 +459,7 @@ export const holidays_BY: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-06-21T05:42:15+03:00",
+            "date": "2025-06-21",
             "localName": "June Solstice in Belarus (Minsk)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -531,7 +531,7 @@ export const holidays_BY: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-09-22T21:19:22+03:00",
+            "date": "2025-09-22",
             "localName": "September Equinox in Belarus (Minsk)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -585,7 +585,7 @@ export const holidays_BY: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-12-21T18:03:05+03:00",
+            "date": "2025-12-21",
             "localName": "December Solstice in Belarus (Minsk)",
             "name": "December Solstice",
             "primary_type": "Season",
@@ -685,7 +685,7 @@ export const holidays_BY: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-03-20T17:46:00+03:00",
+            "date": "2026-03-20",
             "localName": "March Equinox in Belarus (Minsk)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -758,7 +758,7 @@ export const holidays_BY: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-06-21T11:24:30+03:00",
+            "date": "2026-06-21",
             "localName": "June Solstice in Belarus (Minsk)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -812,7 +812,7 @@ export const holidays_BY: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-09-23T03:05:13+03:00",
+            "date": "2026-09-23",
             "localName": "September Equinox in Belarus (Minsk)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -857,7 +857,7 @@ export const holidays_BY: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-12-21T23:50:14+03:00",
+            "date": "2026-12-21",
             "localName": "December Solstice in Belarus (Minsk)",
             "name": "December Solstice",
             "primary_type": "Season",
