@@ -13,6 +13,7 @@
   cursor: pointer;
   text-decoration: underline;
   transition: transform .15s ease;
+  text-align: center;
 }
 
 .monthTitle:hover {

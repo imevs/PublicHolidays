@@ -6,6 +6,10 @@ import { useCalendar } from "../hooks/useCalendar";
 import { allHolidays } from "../data/holidays_v2"; // Import holidays data for testing
 
 describe("useCalendar", () => {
+    beforeEach(() => {
+        window.location.hash = "";
+    });
+
     it("returns current date and selected countries", () => {
         const { result } = renderHook(() => useCalendar());
         expect(result.current.currentDate).toBeInstanceOf(Date);
@@ -13,12 +17,16 @@ describe("useCalendar", () => {
         expect(result.current.selectedCountries.length).toBeGreaterThan(0);
     });
 
-    it("updates year when handleYearChange is called", () => {
+    it("updates the current date when handleDateChange is called", () => {
         const { result } = renderHook(() => useCalendar());
+        const newDate = new Date("2025-12-25");
+
         act(() => {
-            result.current.handleYearChange(2024);
+            result.current.handleDateChange(newDate);
         });
-        expect(result.current.selectedYear).toBe(2024);
+
+        expect(result.current.currentDate.toISOString()).toEqual(newDate.toISOString());
+        expect(window.location.hash).toContain("date=2025-12-25");
     });
 
     it("toggles countries using toggleCountry", () => {
@@ -35,11 +43,11 @@ describe("useCalendar", () => {
 
     it("navigates months using navigateMonth", () => {
         const { result } = renderHook(() => useCalendar());
-        const initialMonth = result.current.currentDate.getMonth();
+        const initialMonth = result.current.currentDate.getUTCMonth();
         act(() => {
-            result.current.navigateMonth(initialMonth + 1);
+            result.current.navigateMonth(initialMonth + 1); // Navigate to the next month
         });
-        expect(result.current.currentDate.getMonth()).toBe((initialMonth + 1) % 12);
+        expect(result.current.currentDate.getUTCMonth()).toBe((initialMonth + 1) % 12);
     });
 
     it("calendarDays returns 42 days", () => {
@@ -57,8 +65,8 @@ describe("useCalendar", () => {
         expect(currentDate.getUTCDate()).toBe(1);
         const matchingDay = result.current.selectedMonthDays.find(day =>
             day.date.getFullYear() === currentDate.getFullYear() &&
-      day.date.getMonth() === currentDate.getMonth() &&
-      day.date.getDate() === currentDate.getDate()
+            day.date.getMonth() === currentDate.getMonth() &&
+            day.date.getDate() === currentDate.getDate()
         );
         expect(matchingDay).toBeDefined();
         const expectedHolidays = [

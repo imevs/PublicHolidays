@@ -1,36 +1,66 @@
 import React from "react";
 import { CountryCode } from "../../types";
 import CountryFilter from "../CountryFilter/CountryFilter";
-import { generateYears } from "../../utils/dateUtils";
+import { generateYears, getMonthName } from "../../utils/dateUtils";
 import styles from "./Controls.module.css";
 
 interface ControlsProps {
-    selectedYear: number;
+    selectedDate: Date;
     selectedCountries: CountryCode[];
-    onYearChange: (year: number) => void;
+    onDateChange: (date: Date) => void;
     onToggleCountry: (countryCode: CountryCode) => void;
 }
 
 const Controls: React.FC<ControlsProps> = ({
-    selectedYear,
+    selectedDate,
     selectedCountries,
-    onYearChange,
+    onDateChange,
     onToggleCountry
 }) => {
     const years = generateYears();
+    const selectedYear = selectedDate.getFullYear();
+    const selectedMonth = selectedDate.getMonth();
+    const months = Array.from({ length: 12 }, (_, i) => i); // Generate an array of months (0-11)
 
     return (
         <div className={styles.controls}>
             <div className={styles.controlsGrid}>
+                {/* Year Selection */}
                 <div className={styles.controlGroup}>
                     <label className={styles.controlGroupLabel}>Select Year</label>
                     <select
                         className={styles.select}
                         value={selectedYear}
-                        onChange={(e) => onYearChange(parseInt(e.target.value))}
+                        onChange={(e) => {
+                            const newYear = parseInt(e.target.value);
+                            const updatedDate = new Date(selectedDate);
+                            updatedDate.setFullYear(newYear);
+                            onDateChange(updatedDate);
+                        }}
                     >
                         {years.map(year => (
                             <option key={year} value={year}>{year}</option>
+                        ))}
+                    </select>
+                </div>
+
+                {/* Month Selection */}
+                <div className={styles.controlGroup}>
+                    <label className={styles.controlGroupLabel}>Select Month</label>
+                    <select
+                        className={styles.select}
+                        value={selectedMonth}
+                        onChange={(e) => {
+                            const newMonth = parseInt(e.target.value);
+                            const updatedDate = new Date(selectedDate);
+                            updatedDate.setMonth(newMonth);
+                            onDateChange(updatedDate);
+                        }}
+                    >
+                        {months.map(month => (
+                            <option key={month} value={month}>
+                                {getMonthName(month)}
+                            </option>
                         ))}
                     </select>
                 </div>
