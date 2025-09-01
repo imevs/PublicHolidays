@@ -1,0 +1,2596 @@
+{
+  "Albania": {
+    "wiki": "Public_holidays_in_Albania",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Albania#New_Year%27s_Day"
+      },
+      {
+        "date": "14-03",
+        "l": "Public_holidays_in_Albania#14_March"
+      },
+      {
+        "date": "21-03",
+        "l": "Nawruz"
+      },
+      {
+        "date": "1-05",
+        "l": "Public_holidays_in_Albania#1_May"
+      },
+      {
+        "date": "28-11",
+        "l": "Independence_Day_%28Albania%29"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      }
+    ]
+  },
+  "Andorra": {
+    "wiki": "Public_holidays_in_Andorra",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Andorra#1_January"
+      },
+      {
+        "date": "6-01",
+        "l": "Epiphany"
+      },
+      {
+        "date": "8-09",
+        "l": "National_Day_of_Andorra"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      }
+    ]
+  },
+  "Armenia": {
+    "wiki": "Public_holidays_in_Armenia",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Armenia#New_Year%27s_Day"
+      },
+      {
+        "date": "6-01",
+        "l": "Christmas_in_Armenia"
+      },
+      {
+        "date": "8-03",
+        "l": "International_Women%27s_Day"
+      },
+      {
+        "date": "1-05",
+        "l": "Public_holidays_in_Armenia#1_May"
+      },
+      {
+        "date": "21-09",
+        "l": "Independence_Day_%28Armenia%29"
+      },
+      {
+        "date": "28-05",
+        "l": "Republic_Day_%28Armenia%29"
+      }
+    ]
+  },
+  "Austria": {
+    "wiki": "Public_holidays_in_Austria",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Austria#1_January"
+      },
+      {
+        "date": "6-01",
+        "l": "Epiphany"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "Public_holidays_in_Austria#1_May"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Corpus_Christi",
+        "rule": "60 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "26-10",
+        "l": "National_Day_of_Austria"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "8-12",
+        "l": "Immaculate_Conception"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      }
+    ]
+  },
+  "Azerbaijan": {
+    "wiki": "Public_holidays_in_Azerbaijan",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Azerbaijan#New_Year%27s_Day"
+      },
+      {
+        "date": "8-03",
+        "l": "International_Women%27s_Day"
+      },
+      {
+        "date": "20–24-03",
+        "l": "Novruz"
+      },
+      {
+        "date": "1-05",
+        "l": "Labour_Day"
+      },
+      {
+        "date": "28-05",
+        "l": "Republic_Day_%28Azerbaijan%29"
+      },
+      {
+        "date": "18-10",
+        "l": "Independence_Day_%28Azerbaijan%29"
+      },
+      {
+        "date": "8-11",
+        "l": "Victory_Day_%28Azerbaijan%29"
+      },
+      {
+        "date": "31-12",
+        "l": "Public_holidays_in_Azerbaijan#31_December"
+      }
+    ]
+  },
+  "Belarus": {
+    "wiki": "Public_holidays_in_Belarus",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Belarus#New_Year%27s_Day"
+      },
+      {
+        "date": "7-01",
+        "l": "Christmas_in_Belarus"
+      },
+      {
+        "date": "8-03",
+        "l": "International_Women%27s_Day"
+      },
+      {
+        "date": "1-05",
+        "l": "Labour_Day"
+      },
+      {
+        "date": "9-05",
+        "l": "Victory_Day"
+      },
+      {
+        "date": "3-07",
+        "l": "Independence_Day_%28Belarus%29"
+      },
+      {
+        "date": "7-11",
+        "l": "October_Revolution"
+      }
+    ]
+  },
+  "Belgium": {
+    "wiki": "Public_holidays_in_Belgium",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Belgium#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "Public_holidays_in_Belgium#1_May"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "21-07",
+        "l": "Belgian_National_Day"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "11-11",
+        "l": "Armistice_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      }
+    ]
+  },
+  "Bosnia and Herzegovina": {
+    "wiki": "Public_holidays_in_Bosnia_and_Herzegovina",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Bosnia_and_Herzegovina#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "25-11",
+        "l": "Statehood_Day"
+      }
+    ]
+  },
+  "Bulgaria": {
+    "wiki": "Public_holidays_in_Bulgaria",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Bulgaria#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "3-03",
+        "l": "Liberation_Day"
+      }
+    ]
+  },
+  "Croatia": {
+    "wiki": "Public_holidays_in_Croatia",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Croatia#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "25-06",
+        "l": "Statehood_Day"
+      }
+    ]
+  },
+  "Cyprus": {
+    "wiki": "Public_holidays_in_Cyprus",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Cyprus#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "1-10",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "Czech Republic": {
+    "wiki": "Public_holidays_in_Czech_Republic",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Czech_Republic#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "28-10",
+        "l": "Independent_Czechoslovak_State_Day"
+      }
+    ]
+  },
+  "Denmark": {
+    "wiki": "Public_holidays_in_Denmark",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Denmark#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "5-06",
+        "l": "Constitution_Day"
+      }
+    ]
+  },
+  "Estonia": {
+    "wiki": "Public_holidays_in_Estonia",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Estonia#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "24-02",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "Finland": {
+    "wiki": "Public_holidays_in_Finland",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Finland#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "6-12",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "France": {
+    "wiki": "Public_holidays_in_France",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_France#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "14-07",
+        "l": "Bastille_Day"
+      }
+    ]
+  },
+  "Georgia": {
+    "wiki": "Public_holidays_in_Georgia",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Georgia#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "26-05",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "Germany": {
+    "wiki": "Public_holidays_in_Germany",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Germany#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "3-10",
+        "l": "German_Unity_Day"
+      }
+    ]
+  },
+  "Greece": {
+    "wiki": "Public_holidays_in_Greece",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Greece#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "25-03",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "Hungary": {
+    "wiki": "Public_holidays_in_Hungary",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Hungary#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "20-08",
+        "l": "Saint_Stephen's_Day"
+      }
+    ]
+  },
+  "Iceland": {
+    "wiki": "Public_holidays_in_Iceland",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Iceland#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "17-06",
+        "l": "National_Day"
+      }
+    ]
+  },
+  "Ireland": {
+    "wiki": "Public_holidays_in_Ireland",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Ireland#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "17-03",
+        "l": "St._Patrick's_Day"
+      }
+    ]
+  },
+  "Italy": {
+    "wiki": "Public_holidays_in_Italy",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Italy#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "2-06",
+        "l": "Republic_Day"
+      }
+    ]
+  },
+  "Kazakhstan": {
+    "wiki": "Public_holidays_in_Kazakhstan",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Kazakhstan#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "16-12",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "Kosovo": {
+    "wiki": "Public_holidays_in_Kosovo",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Kosovo#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "17-02",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "Latvia": {
+    "wiki": "Public_holidays_in_Latvia",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Latvia#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "18-11",
+        "l": "Proclamation_Day"
+      }
+    ]
+  },
+  "Liechtenstein": {
+    "wiki": "Public_holidays_in_Liechtenstein",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Liechtenstein#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "15-08",
+        "l": "National_Day"
+      }
+    ]
+  },
+  "Lithuania": {
+    "wiki": "Public_holidays_in_Lithuania",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Lithuania#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "16-02",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "Luxembourg": {
+    "wiki": "Public_holidays_in_Luxembourg",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Luxembourg#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "23-06",
+        "l": "National_Day"
+      }
+    ]
+  },
+  "Malta": {
+    "wiki": "Public_holidays_in_Malta",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Malta#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "21-09",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "Moldova": {
+    "wiki": "Public_holidays_in_Moldova",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Moldova#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "27-08",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "Monaco": {
+    "wiki": "Public_holidays_in_Monaco",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Monaco#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "19-11",
+        "l": "Sovereign_Prince's_Day"
+      }
+    ]
+  },
+  "Montenegro": {
+    "wiki": "Public_holidays_in_Montenegro",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Montenegro#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "13-07",
+        "l": "Statehood_Day"
+      }
+    ]
+  },
+  "Netherlands": {
+    "wiki": "Public_holidays_in_Netherlands",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Netherlands#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "27-04",
+        "l": "King's_Day"
+      }
+    ]
+  },
+  "North Macedonia": {
+    "wiki": "Public_holidays_in_North_Macedonia",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_North_Macedonia#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "8-09",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "Norway": {
+    "wiki": "Public_holidays_in_Norway",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Norway#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "17-05",
+        "l": "Constitution_Day"
+      }
+    ]
+  },
+  "Poland": {
+    "wiki": "Public_holidays_in_Poland",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Poland#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "11-11",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "Portugal": {
+    "wiki": "Public_holidays_in_Portugal",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Portugal#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "10-06",
+        "l": "Portugal_Day"
+      }
+    ]
+  },
+  "Romania": {
+    "wiki": "Public_holidays_in_Romania",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Romania#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "1-12",
+        "l": "Great_Union_Day"
+      }
+    ]
+  },
+  "Russia": {
+    "wiki": "Public_holidays_in_Russia",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Russia#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "12-06",
+        "l": "Russia_Day"
+      }
+    ]
+  },
+  "San Marino": {
+    "wiki": "Public_holidays_in_San_Marino",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_San_Marino#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "3-09",
+        "l": "Founding_of_the_Republic"
+      }
+    ]
+  },
+  "Serbia": {
+    "wiki": "Public_holidays_in_Serbia",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Serbia#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "15-02",
+        "l": "Statehood_Day"
+      }
+    ]
+  },
+  "Slovakia": {
+    "wiki": "Public_holidays_in_Slovakia",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Slovakia#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "1-09",
+        "l": "Constitution_Day"
+      }
+    ]
+  },
+  "Slovenia": {
+    "wiki": "Public_holidays_in_Slovenia",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Slovenia#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "25-06",
+        "l": "Statehood_Day"
+      }
+    ]
+  },
+  "Spain": {
+    "wiki": "Public_holidays_in_Spain",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Spain#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "12-10",
+        "l": "National_Day"
+      }
+    ]
+  },
+  "Sweden": {
+    "wiki": "Public_holidays_in_Sweden",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Sweden#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "6-06",
+        "l": "National_Day"
+      }
+    ]
+  },
+  "Switzerland": {
+    "wiki": "Public_holidays_in_Switzerland",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Switzerland#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "1-08",
+        "l": "Swiss_National_Day"
+      }
+    ]
+  },
+  "Turkey": {
+    "wiki": "Public_holidays_in_Turkey",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Turkey#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "29-10",
+        "l": "Republic_Day"
+      }
+    ]
+  },
+  "Ukraine": {
+    "wiki": "Public_holidays_in_Ukraine",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Ukraine#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "24-08",
+        "l": "Independence_Day"
+      }
+    ]
+  },
+  "United Kingdom": {
+    "wiki": "Public_holidays_in_United_Kingdom",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_United_Kingdom#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "varies",
+        "l": "Bank_Holidays_(no_single_national_day)"
+      }
+    ]
+  },
+  "Vatican City": {
+    "wiki": "Public_holidays_in_Vatican_City",
+    "holidays": [
+      {
+        "date": "1-01",
+        "l": "Public_holidays_in_Vatican_City#1_January"
+      },
+      {
+        "date": "moveable",
+        "l": "Good_Friday",
+        "rule": "The Friday before Easter Sunday (calculated as first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "moveable",
+        "l": "Easter_Monday",
+        "rule": "The Monday following Easter Sunday (first Sunday after the first full moon on or after-03 21)"
+      },
+      {
+        "date": "1-05",
+        "l": "International_Workers%27_Day"
+      },
+      {
+        "date": "moveable",
+        "l": "Ascension_Thursday",
+        "rule": "40 days after Easter Sunday (Thursday)"
+      },
+      {
+        "date": "moveable",
+        "l": "Whit_Monday",
+        "rule": "The Monday after Pentecost (49 days after Easter Sunday)"
+      },
+      {
+        "date": "15-08",
+        "l": "Assumption_of_Mary"
+      },
+      {
+        "date": "1-11",
+        "l": "All_Saints%27_Day"
+      },
+      {
+        "date": "25-12",
+        "l": "Christmas"
+      },
+      {
+        "date": "26-12",
+        "l": "St._Stephen%27s_Day"
+      },
+      {
+        "date": "feast",
+        "l": "Solemnity_of_Saints_Peter_and_Paul"
+      }
+    ]
+  }
+}
