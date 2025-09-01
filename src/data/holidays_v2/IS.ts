@@ -41,7 +41,7 @@ export const holidays_IS: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-03-20T03:06:28+00:00",
+            "date": "2024-03-20",
             "localName": "March Equinox in Iceland (Reykjavik)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -158,7 +158,7 @@ export const holidays_IS: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-06-20T20:50:59+00:00",
+            "date": "2024-06-20",
             "localName": "June Solstice in Iceland (Reykjavik)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -176,7 +176,7 @@ export const holidays_IS: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-09-22T12:43:33+00:00",
+            "date": "2024-09-22",
             "localName": "September Equinox in Iceland (Reykjavik)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -212,7 +212,7 @@ export const holidays_IS: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-12-21T09:20:34+00:00",
+            "date": "2024-12-21",
             "localName": "December Solstice in Iceland (Reykjavik)",
             "name": "December Solstice",
             "primary_type": "Season",
@@ -293,7 +293,7 @@ export const holidays_IS: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-03-20T09:01:21+00:00",
+            "date": "2025-03-20",
             "localName": "March Equinox in Iceland (Reykjavik)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -410,7 +410,7 @@ export const holidays_IS: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-06-21T02:42:15+00:00",
+            "date": "2025-06-21",
             "localName": "June Solstice in Iceland (Reykjavik)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -428,7 +428,7 @@ export const holidays_IS: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-09-22T18:19:22+00:00",
+            "date": "2025-09-22",
             "localName": "September Equinox in Iceland (Reykjavik)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -464,7 +464,7 @@ export const holidays_IS: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-12-21T15:03:05+00:00",
+            "date": "2025-12-21",
             "localName": "December Solstice in Iceland (Reykjavik)",
             "name": "December Solstice",
             "primary_type": "Season",
@@ -545,7 +545,7 @@ export const holidays_IS: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-03-20T14:46:00+00:00",
+            "date": "2026-03-20",
             "localName": "March Equinox in Iceland (Reykjavik)",
             "name": "March Equinox",
             "primary_type": "Season",
@@ -662,7 +662,7 @@ export const holidays_IS: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-06-21T08:24:30+00:00",
+            "date": "2026-06-21",
             "localName": "June Solstice in Iceland (Reykjavik)",
             "name": "June Solstice",
             "primary_type": "Season",
@@ -680,7 +680,7 @@ export const holidays_IS: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-09-23T00:05:13+00:00",
+            "date": "2026-09-23",
             "localName": "September Equinox in Iceland (Reykjavik)",
             "name": "September Equinox",
             "primary_type": "Season",
@@ -716,7 +716,7 @@ export const holidays_IS: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-12-21T20:50:14+00:00",
+            "date": "2026-12-21",
             "localName": "December Solstice in Iceland (Reykjavik)",
             "name": "December Solstice",
             "primary_type": "Season",
