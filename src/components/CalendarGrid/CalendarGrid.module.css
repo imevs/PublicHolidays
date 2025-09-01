@@ -33,13 +33,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 5px;
 }
 
 .monthContainer {
   /*border: 1px solid #ccc;*/
   padding: 10px;
   /*border-radius: 5px;*/
-  width: 400px;
+  width: 395px;
 }
 
 .monthHeader {
@@ -141,4 +142,18 @@
 
 .popupContent button:hover {
   background: #005bb5;
+}
+
+.highlightedMonth {
+  border-radius: 10px;
+  animation: highlightMonth 1s ease-in-out 2 500ms;
+}
+
+@keyframes highlightMonth {
+  0%, 100% {
+    background-color: transparent;
+  }
+  50% {
+    background-color: rgba(0, 123, 255, 0.1);
+  }
 }

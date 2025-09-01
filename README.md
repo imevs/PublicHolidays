@@ -12,6 +12,7 @@ React + TypeScript application for tracking public holidays across multiple Euro
 - 🗓️ **Year View**: View holidays for the entire year with indicators for holiday dates.
 - 🛠️ **Holiday Details Popup**: Click on a holiday to view detailed descriptions in a popup.
 - 🇺🇳 **Country Flags**: Displays country flags alongside holiday names for better context.
+- ✅ ** No cookies **: state is saved in address params only
 
 ## How It Works
 - Monthly View: Displays a calendar for the selected month with holidays highlighted.

@@ -8,18 +8,21 @@ const dateFormatter = new Intl.DateTimeFormat("en-CA"); // Canadian English uses
 export const useCalendar = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(["LV"]);
-    const [selectedYear, setSelectedYear] = useState(new Date().getUTCFullYear());
+    const [mode, setMode] = useState<"month" | "year">("year");
 
     useEffect(() => {
         const urlSearchParams = new URLSearchParams(window.location.hash.replace("#", ""));
-        const countries = (urlSearchParams.get("countries") ?? "");
+        const countries = urlSearchParams.get("countries") ?? "";
         if (countries) {
             setSelectedCountries(countries.split(",") as CountryCode[]);
         }
-        const date = (urlSearchParams.get("date") ?? "");
+        const date = urlSearchParams.get("date") ?? "";
         if (date) {
             setCurrentDate(new Date(date + "T00:00:00Z"));
-            setSelectedYear(new Date(date + "T00:00:00Z").getFullYear());
+        }
+        const urlMode = urlSearchParams.get("mode") as "month" | "year";
+        if (urlMode === "month" || urlMode === "year") {
+            setMode(urlMode);
         }
     }, []);
 
@@ -73,11 +76,10 @@ export const useCalendar = () => {
         return days;
     }, [currentDate, selectedCountries]);
 
-    const currentYear = currentDate.getUTCFullYear();
     const selectedYearDays = useMemo((): CalendarDay[] => {
-        const firstDay = new Date(Date.UTC(currentYear, 0, 1, 12, 0, 0));// use 12:00 as a starting time so day zone changes do not affect dates
+        const currentYear = currentDate.getUTCFullYear();
+        const firstDay = new Date(Date.UTC(currentYear, 0, 1, 12, 0, 0)); // Use 12:00 as a starting time so day zone changes do not affect dates
         const startDate = new Date(firstDay);
-
 
         const days: CalendarDay[] = [];
         const today = new Date();
@@ -99,7 +101,7 @@ export const useCalendar = () => {
         }
 
         return days;
-    }, [currentYear, selectedCountries]);
+    }, [currentDate, selectedCountries]);
 
     const navigateMonth = (nextMonth: number): void => {
         const newDate = new Date(currentDate);
@@ -122,24 +124,29 @@ export const useCalendar = () => {
         });
     };
 
-    const handleYearChange = (year: number): void => {
-        const newDate = new Date(currentDate);
-        newDate.setUTCFullYear(year);
+    const handleDateChange = (newDate: Date): void => {
         const params = new URLSearchParams(window.location.hash.replace("#", ""));
         params.set("date", dateFormatter.format(newDate));
         window.location.hash = decodeURIComponent(params.toString());
         setCurrentDate(newDate);
-        setSelectedYear(year);
+    };
+
+    const handleModeChange = (newMode: "month" | "year"): void => {
+        const params = new URLSearchParams(window.location.hash.replace("#", ""));
+        params.set("mode", newMode);
+        window.location.hash = decodeURIComponent(params.toString());
+        setMode(newMode);
     };
 
     return {
         currentDate,
         selectedCountries,
-        selectedYear,
         selectedMonthDays,
         selectedYearDays,
+        mode,
         navigateMonth,
         toggleCountry,
-        handleYearChange
+        handleDateChange,
+        handleModeChange
     };
 };
