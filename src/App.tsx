@@ -22,7 +22,11 @@ const App: React.FC = () => {
     return (
         <div className={styles.app}>
             <div className={styles.header}>
-                <h1>🌍 Public Holidays Calendar</h1>
+                <h1>
+                    <a href=".">
+                        🌍 Public Holidays Calendar
+                    </a>
+                </h1>
                 <p>Track public holidays across multiple countries</p>
             </div>
 
