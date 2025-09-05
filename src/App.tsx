@@ -14,7 +14,9 @@ const App: React.FC = () => {
         navigateMonth,
         toggleCountry,
         handleDateChange,
-        handleModeChange
+        handleModeChange,
+        showAllCountries,
+        setShowAllCountries,
     } = useCalendar();
 
     return (
@@ -26,6 +28,8 @@ const App: React.FC = () => {
 
             <div className={styles.container}>
                 <Controls
+                    showAllCountries={showAllCountries}
+                    setShowAllCountries={setShowAllCountries}
                     selectedDate={currentDate}
                     selectedCountries={selectedCountries}
                     onDateChange={handleDateChange}

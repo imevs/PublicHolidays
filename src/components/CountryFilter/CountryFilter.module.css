@@ -16,6 +16,7 @@
   gap: 10px;
 }
 
+.toggleFilter,
 .countryChip {
   padding: 6px 12px;
   background: #e9ecef;
@@ -26,11 +27,13 @@
   border: 2px solid transparent;
 }
 
+.toggleFilter,
 .countryChip.active {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
 }
 
+.toggleFilter:hover,
 .countryChip:hover {
   border-color: #667eea;
 }

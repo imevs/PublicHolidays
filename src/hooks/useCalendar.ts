@@ -9,6 +9,7 @@ export const useCalendar = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(["LV"]);
     const [mode, setMode] = useState<"month" | "year">("year");
+    const [showAllCountries, setShowAllCountries] = useState(false);
 
     useEffect(() => {
         const urlSearchParams = new URLSearchParams(window.location.hash.replace("#", ""));
@@ -24,6 +25,8 @@ export const useCalendar = () => {
         if (urlMode === "month" || urlMode === "year") {
             setMode(urlMode);
         }
+        const showAll = urlSearchParams.get("all") as "1" | "0";
+        setShowAllCountries(showAll === "1");
     }, []);
 
     const getHolidaysForDate = (date: Date): HolidayWithCountry[] => {
@@ -138,6 +141,13 @@ export const useCalendar = () => {
         setMode(newMode);
     };
 
+    const onShowAllCountries = (state: boolean) => {
+        const params = new URLSearchParams(window.location.hash.replace("#", ""));
+        params.set("all", state ? "1" : "0");
+        window.location.hash = decodeURIComponent(params.toString());
+        setShowAllCountries(state);
+    };
+
     return {
         currentDate,
         selectedCountries,
@@ -147,6 +157,8 @@ export const useCalendar = () => {
         navigateMonth,
         toggleCountry,
         handleDateChange,
-        handleModeChange
+        handleModeChange,
+        showAllCountries,
+        setShowAllCountries: onShowAllCountries,
     };
 };
