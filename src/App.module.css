@@ -12,6 +12,12 @@
   margin-bottom: 30px;
 }
 
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+.header a,
 .header h1 {
   font-size: 2.5rem;
   font-weight: 700;

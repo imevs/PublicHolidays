@@ -14,18 +14,26 @@ const App: React.FC = () => {
         navigateMonth,
         toggleCountry,
         handleDateChange,
-        handleModeChange
+        handleModeChange,
+        showAllCountries,
+        setShowAllCountries,
     } = useCalendar();
 
     return (
         <div className={styles.app}>
             <div className={styles.header}>
-                <h1>🌍 Public Holidays Calendar</h1>
+                <h1>
+                    <a href=".">
+                        🌍 Public Holidays Calendar
+                    </a>
+                </h1>
                 <p>Track public holidays across multiple countries</p>
             </div>
 
             <div className={styles.container}>
                 <Controls
+                    showAllCountries={showAllCountries}
+                    setShowAllCountries={setShowAllCountries}
                     selectedDate={currentDate}
                     selectedCountries={selectedCountries}
                     onDateChange={handleDateChange}

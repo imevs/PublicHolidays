@@ -1,22 +1,18 @@
 import React from "react";
-import { CountryCode } from "../../types";
-import CountryFilter from "../CountryFilter/CountryFilter";
+import CountryFilter, { type CountryFilterProps } from "../CountryFilter/CountryFilter";
 import { generateYears, getMonthName } from "../../utils/dateUtils";
 import styles from "./Controls.module.css";
 
-interface ControlsProps {
+interface ControlsProps extends CountryFilterProps {
     selectedDate: Date;
-    selectedCountries: CountryCode[];
     onDateChange: (date: Date) => void;
-    onToggleCountry: (countryCode: CountryCode) => void;
 }
 
-const Controls: React.FC<ControlsProps> = ({
-    selectedDate,
-    selectedCountries,
-    onDateChange,
-    onToggleCountry
-}) => {
+const Controls: React.FC<ControlsProps> = (props) => {
+    const {
+        selectedDate,
+        onDateChange,
+    } = props;
     const years = generateYears();
     const selectedYear = selectedDate.getFullYear();
     const selectedMonth = selectedDate.getMonth();
@@ -65,10 +61,7 @@ const Controls: React.FC<ControlsProps> = ({
                     </select>
                 </div>
 
-                <CountryFilter
-                    selectedCountries={selectedCountries}
-                    onToggleCountry={onToggleCountry}
-                />
+                <CountryFilter {...props} />
             </div>
         </div>
     );

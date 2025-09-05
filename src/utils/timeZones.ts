@@ -2,7 +2,7 @@ import { CountryCode } from "../types";
 
 // Country code → primary time zone mapping (IANA names)
 // Note: some countries have multiple time zones — here is the main one
-export const countryTimeZones: Record<CountryCode, string> = {
+const countryTimeZones: Record<CountryCode, string> = {
     AD: "Europe/Andorra",
     AL: "Europe/Tirane",
     AT: "Europe/Vienna",
@@ -48,13 +48,35 @@ export const countryTimeZones: Record<CountryCode, string> = {
     TR: "Europe/Istanbul",
     UA: "Europe/Kyiv",
 };
+export const countryTimeZonesFallBack: Partial<Record<CountryCode, string>> = {
+    UA: "Europe/Kiev",
+};
   
 // Function to get UTC offset (e.g., "+01", "-03") for a time zone
-function getUTCOffset(timeZone: string, date = new Date()) {
-    const formatter = new Intl.DateTimeFormat("en-US", {
-        timeZone,
-        timeZoneName: "shortOffset"
-    });
+function getUTCOffset(timeZone: string, reserveTz: string | undefined) {
+    const date = new Date()
+    let formatter: Intl.DateTimeFormat | undefined = undefined;
+    try {
+        formatter = new Intl.DateTimeFormat("fr-FR", {
+            timeZone,
+            timeZoneName: "shortOffset"
+        });
+    } catch (ex: unknown) {
+        if (reserveTz) {
+            try {
+                formatter = new Intl.DateTimeFormat("fr-FR", {
+                    timeZone: reserveTz,
+                    timeZoneName: "shortOffset"
+                });
+            } catch (ex2: unknown) {
+                window.console.error(ex2);
+            }
+        }
+        window.console.error(ex);
+    }
+    if (!formatter) {
+        return "unknown timeZone";
+    }
     const parts = formatter.formatToParts(date);
     const offsetPart = parts ? parts.find(p => p.type === "timeZoneName")?.value : ""; 
     const result = offsetPart?.replace("GMT", "").replace("UTC", "") ?? "";
@@ -65,7 +87,7 @@ function getUTCOffset(timeZone: string, date = new Date()) {
 const europeOffsets = Object.entries(countryTimeZones).map(([countryCode, tz]) => ({
     countryCode: countryCode as CountryCode,
     timeZone: tz,
-    offset: getUTCOffset(tz)
+    offset: getUTCOffset(tz, countryTimeZonesFallBack[countryCode as CountryCode])
 }));
 
 export const countryOffsets = europeOffsets.reduce((acc, { countryCode, offset }) => {
@@ -73,4 +95,28 @@ export const countryOffsets = europeOffsets.reduce((acc, { countryCode, offset }
     return acc;
 }, {} as Record<CountryCode, string>);
 
+// Function to get the local time for a given timezone
+export const getLocalTime = (country: CountryCode) => {
+    const options = {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        // second: "2-digit",
+        hour12: false
+    } as const;
+    try {
+        const formatter = new Intl.DateTimeFormat("fr-FR", { timeZone: countryTimeZones[country], ...options });
+        return formatter.format(new Date());
+    } catch (e) {
+        window.console.error(e);
+    }
+    try {
+        const formatter = new Intl.DateTimeFormat("fr-FR", { timeZone: countryTimeZonesFallBack[country], ...options });
+        return formatter.format(new Date());
+    } catch (e) {
+        window.console.error(e);
+    }
+};
 
