@@ -57,14 +57,14 @@ function getUTCOffset(timeZone: string, reserveTz: string | undefined) {
     const date = new Date()
     let formatter: Intl.DateTimeFormat | undefined = undefined;
     try {
-        formatter = new Intl.DateTimeFormat("en-US", {
+        formatter = new Intl.DateTimeFormat("fr-FR", {
             timeZone,
             timeZoneName: "shortOffset"
         });
     } catch (ex: unknown) {
         if (reserveTz) {
             try {
-                formatter = new Intl.DateTimeFormat("en-US", {
+                formatter = new Intl.DateTimeFormat("fr-FR", {
                     timeZone: reserveTz,
                     timeZoneName: "shortOffset"
                 });
@@ -103,17 +103,17 @@ export const getLocalTime = (country: CountryCode) => {
         day: "2-digit",
         hour: "2-digit",
         minute: "2-digit",
-        second: "2-digit",
+        // second: "2-digit",
         hour12: false
     } as const;
     try {
-        const formatter = new Intl.DateTimeFormat("en-US", { timeZone: countryTimeZones[country], ...options });
+        const formatter = new Intl.DateTimeFormat("fr-FR", { timeZone: countryTimeZones[country], ...options });
         return formatter.format(new Date());
     } catch (e) {
         window.console.error(e);
     }
     try {
-        const formatter = new Intl.DateTimeFormat("en-US", { timeZone: countryTimeZonesFallBack[country], ...options });
+        const formatter = new Intl.DateTimeFormat("fr-FR", { timeZone: countryTimeZonesFallBack[country], ...options });
         return formatter.format(new Date());
     } catch (e) {
         window.console.error(e);

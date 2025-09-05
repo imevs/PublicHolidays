@@ -49,12 +49,12 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                             key={code}
                             className={`${styles.countryChip} ${selectedCountries.includes(code) ? styles.active : ""}`}
                             onClick={() => onToggleCountry(code)}
-                            title={"Local time: " + getLocalTime(code)}
+                            title={"Current time: " + getLocalTime(code)}
                         >
                             {getFlagEmoji(code)} {data.countryName}
                             {showTimezones && (
                                 <span className={styles.offset}>
-                                    {countryOffsets[code] ? ` (UTC${countryOffsets[code]})` : ""}
+                                    {showAllCountries ? (countryOffsets[code] ? ` (UTC${countryOffsets[code]})` : "") : " - " + getLocalTime(code)}
                                 </span>
                             )}
                         </div>
