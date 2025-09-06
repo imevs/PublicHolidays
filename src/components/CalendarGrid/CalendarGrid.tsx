@@ -107,7 +107,8 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                                 {Array.from({ length: dayOfWeek }, (_, day) => <div key={day} />)}
                                 {Array.from({ length: daysInMonth }, (_, day) => {
                                     const date = new Date(Date.UTC(currentYear, month, day + 1));
-                                    const dayHolidays = selectedYearDays.find(d => isSameDate(d.date, date))?.holidays || [];
+                                    const currentDay = selectedYearDays.find(d => isSameDate(d.date, date));
+                                    const dayHolidays = currentDay?.holidays || [];
                                     const seen = new Set<string>();
                                     const dayHolidaysUnique = dayHolidays.filter(h => {
                                         if (seen.has(h.countryCode)) { return false; }
@@ -117,7 +118,11 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                                     return (
                                         <div
                                             key={day}
-                                            className={`${styles.dayCell} ${dayHolidays.length > 0 ? styles.holiday : ""}`}
+                                            className={`
+                                                ${currentDay?.isToday ? styles.today : ""} 
+                                                ${styles.dayCell} 
+                                                ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}`
+                                            }
                                             onClick={() => dayHolidays.length > 0 && setSelectedDay(date)}
                                         >
                                             {day + 1}

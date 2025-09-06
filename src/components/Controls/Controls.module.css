@@ -25,7 +25,7 @@
 
 .select {
   padding: 12px 16px;
-  border: 2px solid #e9ecef;
+  border: 1px solid #0078d4;
   border-radius: 12px;
   font-size: 1rem;
   transition: all 0.2s ease;
@@ -42,5 +42,11 @@
 @media (max-width: 768px) {
   .controlsGrid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1200px) {
+  .controls {
+    padding: 15px;
   }
 }

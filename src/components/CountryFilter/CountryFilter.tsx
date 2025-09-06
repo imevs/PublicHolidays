@@ -38,7 +38,7 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                     onChange={() => setShowTimezones(!showTimezones)}
                 />
                 <label htmlFor="showTimezones" className={styles.checkboxLabel}>
-                    Show Timezones
+                    {showAllCountries ? "Show timezones" : "Show local time"}
                 </label>
             </div>
             <div className={styles.countryFilter}>

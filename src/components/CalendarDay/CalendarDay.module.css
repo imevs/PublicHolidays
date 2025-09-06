@@ -23,6 +23,7 @@
 .dayNumber {
   font-weight: 600;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .holiday {

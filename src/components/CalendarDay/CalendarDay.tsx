@@ -16,12 +16,11 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
     ].filter(Boolean).join(" ");
 
     return (
-        <div className={dayClasses}>
+        <div key={day.date.toDateString()} className={dayClasses}>
             <div className={styles.dayNumber}>{day.dayNumber}</div>
             {day.holidays.map((holiday, idx) => (
-                <a href={getLink(holiday.date, holiday.country, holiday.name)} target="_blank" rel="noopener noreferrer">
+                <a key={idx} href={getLink(holiday.date, holiday.country, holiday.name)} target="_blank" rel="noopener noreferrer">
                     <div
-                        key={idx}
                         className={styles.holiday}
                         title={`${holiday.localName}`}
                     >

@@ -8,6 +8,7 @@ describe("CalendarDay", () => {
             dayNumber: 10,
             isCurrentMonth: true,
             isToday: false,
+            isWeekend: false,
             holidays: [],
             date: new Date(2025, 7, 10),
         };
@@ -21,6 +22,7 @@ describe("CalendarDay", () => {
             dayNumber: 15,
             isCurrentMonth: true,
             isToday: true,
+            isWeekend: false,
             holidays: [],
             date: new Date(2025, 7, 15),
         };
@@ -32,6 +34,7 @@ describe("CalendarDay", () => {
         const day = {
             dayNumber: 1,
             isCurrentMonth: false,
+            isWeekend: false,
             isToday: false,
             holidays: [],
             date: new Date(2025, 6, 1),
@@ -45,6 +48,7 @@ describe("CalendarDay", () => {
             dayNumber: 25,
             isCurrentMonth: true,
             isToday: false,
+            isWeekend: false,
             holidays: [
                 { name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia", countryCode: "LV" as const },
             ],
@@ -58,6 +62,7 @@ describe("CalendarDay", () => {
         const day = {
             dayNumber: 25,
             isCurrentMonth: true,
+            isWeekend: false,
             isToday: false,
             holidays: [
                 { name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia", countryCode: "LV" as const },
