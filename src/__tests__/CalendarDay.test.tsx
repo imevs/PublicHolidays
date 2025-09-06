@@ -50,7 +50,7 @@ describe("CalendarDay", () => {
             isToday: false,
             isWeekend: false,
             holidays: [
-                { name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia", countryCode: "LV" as const },
+                { name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia" as const, countryCode: "LV" as const },
             ],
             date: new Date(2025, 11, 25),
         };
@@ -65,7 +65,7 @@ describe("CalendarDay", () => {
             isWeekend: false,
             isToday: false,
             holidays: [
-                { name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia", countryCode: "LV" as const },
+                { name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia" as const, countryCode: "LV" as const },
             ],
             date: new Date(2025, 11, 25),
         };

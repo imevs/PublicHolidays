@@ -1,4 +1,4 @@
-export function getLink(date: string | undefined, country: string, name: string): string | undefined {
+export function getLink(date: string | undefined, country: CountryName, name: string): string | undefined {
     if (!date) {
         return "https://en.wikipedia.org/wiki/" + descriptions[country].wiki;
     }
@@ -19,7 +19,9 @@ type Description = {
     }[];
 };
 
-const descriptions: Record<string, Description> = {
+export type CountryName = keyof typeof descriptions;
+
+const descriptions = {
     "Albania": {
         wiki: "Public_holidays_in_Albania",
         holidays: [
@@ -494,7 +496,7 @@ const descriptions: Record<string, Description> = {
             }
         ]
     },
-    "Czech Republic": {
+    "Czechia": {
         wiki: "Public_holidays_in_Czech_Republic",
         holidays: [
             {
@@ -2406,7 +2408,7 @@ const descriptions: Record<string, Description> = {
             }
         ]
     },
-    "Turkey": {
+    "Türkiye": {
         wiki: "Public_holidays_in_Turkey",
         holidays: [
             {
@@ -2618,4 +2620,4 @@ const descriptions: Record<string, Description> = {
             }
         ]
     }
-};
+} satisfies Record<string, Description>;
