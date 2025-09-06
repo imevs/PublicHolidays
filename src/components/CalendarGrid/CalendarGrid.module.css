@@ -145,6 +145,11 @@
   background: #005bb5;
 }
 
+.today {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white;
+}
+
 .highlightedMonth {
   border-radius: 10px;
   animation: highlightMonth 1s ease-in-out 2 500ms;

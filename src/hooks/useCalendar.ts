@@ -71,6 +71,7 @@ export const useCalendar = () => {
                 date,
                 isCurrentMonth,
                 isToday,
+                isWeekend: [6,0].includes(date.getDay()),
                 holidays,
                 dayNumber: date.getDate()
             });
@@ -97,6 +98,7 @@ export const useCalendar = () => {
             days.push({
                 date,
                 isCurrentMonth: false,
+                isWeekend: [6,0].includes(date.getDay()),
                 isToday,
                 holidays,
                 dayNumber: date.getDate()
