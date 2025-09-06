@@ -1,4 +1,5 @@
 import { allHolidays as holidaysData } from "../data/holidays_v2";
+import type { CountryName } from "../data/holidays_descriptions/all";
 
 export interface Holiday {
     date: string;
@@ -22,7 +23,7 @@ export interface CalendarDay {
 }
 
 export interface HolidayWithCountry extends Holiday {
-    country: string;
+    country: CountryName;
     countryCode: CountryCode;
 }
 

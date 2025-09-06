@@ -1,5 +1,7 @@
 // Auto-generated types
 
+import type { CountryName } from "../holidays_descriptions/all";
+
 export type Holiday = {
     date: string;
     localName: string;
@@ -10,6 +12,6 @@ export type Holiday = {
 
 export type CountryHolidays = {
     countryCode: string;
-    countryName: string;
+    countryName: CountryName;
     holidays: Holiday[];
 };
