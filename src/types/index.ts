@@ -1,5 +1,4 @@
-import { allHolidays as holidaysData } from "../data/holidays_v2";
-import type { CountryName } from "../data/holidays_descriptions/all";
+import type { CountryCode, CountryName } from "../data/countryNames";
 
 export interface Holiday {
     date: string;
@@ -26,5 +25,3 @@ export interface HolidayWithCountry extends Holiday {
     country: CountryName;
     countryCode: CountryCode;
 }
-
-export type CountryCode = keyof typeof holidaysData;

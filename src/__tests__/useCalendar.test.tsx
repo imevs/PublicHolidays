@@ -11,14 +11,14 @@ describe("useCalendar", () => {
     });
 
     it("returns current date and selected countries", () => {
-        const { result } = renderHook(() => useCalendar());
+        const { result } = renderHook(() => useCalendar(allHolidays));
         expect(result.current.currentDate).toBeInstanceOf(Date);
         expect(Array.isArray(result.current.selectedCountries)).toBe(true);
         expect(result.current.selectedCountries.length).toBeGreaterThan(0);
     });
 
     it("updates the current date when handleDateChange is called", () => {
-        const { result } = renderHook(() => useCalendar());
+        const { result } = renderHook(() => useCalendar(allHolidays));
         const newDate = new Date("2025-12-25");
 
         act(() => {
@@ -30,7 +30,7 @@ describe("useCalendar", () => {
     });
 
     it("toggles countries using toggleCountry", () => {
-        const { result } = renderHook(() => useCalendar());
+        const { result } = renderHook(() => useCalendar(allHolidays));
         act(() => {
             result.current.toggleCountry("DE");
         });
@@ -42,7 +42,7 @@ describe("useCalendar", () => {
     });
 
     it("navigates months using navigateMonth", () => {
-        const { result } = renderHook(() => useCalendar());
+        const { result } = renderHook(() => useCalendar(allHolidays));
         const initialMonth = result.current.currentDate.getUTCMonth();
         act(() => {
             result.current.navigateMonth(initialMonth + 1); // Navigate to the next month
@@ -51,14 +51,15 @@ describe("useCalendar", () => {
     });
 
     it("calendarDays returns 42 days", () => {
-        const { result } = renderHook(() => useCalendar());
+        const { result } = renderHook(() => useCalendar(allHolidays));
         expect(Array.isArray(result.current.selectedMonthDays)).toBe(true);
         expect(result.current.selectedMonthDays).toHaveLength(42);
     });
 
-    it("calendarDays for fixed currentDate contains correct holidays", () => {
+    it("calendarDays for fixed currentDate contains correct holidays", async () => {
         window.location.hash = "date=2025-01-01&countries=LV";
-        const { result } = renderHook(() => useCalendar());
+        const { result } = renderHook(() => useCalendar(allHolidays));
+        await Promise.resolve();
         const currentDate = result.current.currentDate;
         expect(currentDate.getUTCFullYear()).toBe(2025);
         expect(currentDate.getUTCMonth()).toBe(0);
@@ -88,7 +89,7 @@ describe("useCalendar", () => {
     it("all calendarDays for November have correct holidays for selected country", () => {
         const countryHolidays = allHolidays["LV"].holidays;
         window.location.hash = "date=2025-11-01&countries=LV"; // November 2025, Latvia
-        const { result } = renderHook(() => useCalendar());
+        const { result } = renderHook(() => useCalendar(allHolidays));
         const novemberDays = result.current.selectedMonthDays.filter(day => day.date.getMonth() === 10); // November is month 10
         expect(novemberDays.length).toBeGreaterThan(0);
         for (const day of novemberDays) {

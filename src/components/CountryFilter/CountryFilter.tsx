@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { CountryCode } from "../../types";
-import { allHolidays as holidaysData } from "../../data/holidays/index";
 import { countryOffsets, getLocalTime } from "../../utils/timeZones";
 import styles from "./CountryFilter.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags";
+import { type CountryCode, CountryName, countryNames } from "../../data/countryNames";
 
 export interface CountryFilterProps {
     selectedCountries: CountryCode[];
@@ -42,16 +41,16 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                 </label>
             </div>
             <div className={styles.countryFilter}>
-                {(Object.entries(holidaysData) as [CountryCode, typeof holidaysData[keyof typeof holidaysData]][])
+                {(Object.entries(countryNames) as [CountryCode, CountryName][])
                     .filter(([code]) => showAllCountries || selectedCountries.includes(code))
-                    .map(([code, data]) => (
+                    .map(([code, countryName]) => (
                         <div
                             key={code}
                             className={`${styles.countryChip} ${selectedCountries.includes(code) ? styles.active : ""}`}
                             onClick={() => onToggleCountry(code)}
                             title={"Current time: " + getLocalTime(code)}
                         >
-                            {getFlagEmoji(code)} {data.countryName}
+                            {getFlagEmoji(code)} {countryName}
                             {showTimezones && (
                                 <span className={styles.offset}>
                                     {showAllCountries ? (countryOffsets[code] ? ` (UTC${countryOffsets[code]})` : "") : " - " + getLocalTime(code)}
