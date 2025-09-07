@@ -1,6 +1,6 @@
 // Auto-generated types
 
-import type { CountryName } from "../holidays_descriptions/all";
+import type { CountryName } from "../countryNames";
 
 export type Holiday = {
     date: string;

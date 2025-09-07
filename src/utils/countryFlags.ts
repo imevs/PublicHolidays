@@ -1,6 +1,6 @@
-import type { CountryCode } from "../types";
-
 // Function to convert a country code to a flag emoji
+import type { CountryCode } from "../data/countryNames";
+
 export const getFlagEmoji = (countryCode: CountryCode) => {
     return countryCode
         .toUpperCase()

@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import { CalendarDay, CountryCode, HolidayWithCountry } from "../types";
-import { allHolidays as holidaysData } from "../data/holidays_v2";
+import { CalendarDay, HolidayWithCountry } from "../types";
 import { formatDateString, isSameDate } from "../utils/dateUtils";
+import type { CountryHolidays } from "../data/holidays_v2/types";
+import type { CountryCode } from "../data/countryNames";
 
 const dateFormatter = new Intl.DateTimeFormat("en-CA"); // Canadian English uses YYYY-MM-DD format
 
-export const useCalendar = () => {
+export const useCalendar = (holidaysData: Record<CountryCode, CountryHolidays> | undefined) => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(["LV"]);
     const [mode, setMode] = useState<"month" | "year">("year");
@@ -30,6 +31,9 @@ export const useCalendar = () => {
     }, []);
 
     const getHolidaysForDate = (date: Date): HolidayWithCountry[] => {
+        if (!holidaysData) {
+            return [];
+        }
         const dateStr = formatDateString(date);
         const holidays: HolidayWithCountry[] = [];
 

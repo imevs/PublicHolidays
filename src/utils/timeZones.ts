@@ -1,7 +1,7 @@
-import { CountryCode } from "../types";
-
 // Country code → primary time zone mapping (IANA names)
 // Note: some countries have multiple time zones — here is the main one
+import type { CountryCode } from "../data/countryNames";
+
 const countryTimeZones: Record<CountryCode, string> = {
     AD: "Europe/Andorra",
     AL: "Europe/Tirane",

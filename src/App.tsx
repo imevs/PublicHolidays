@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useCalendar } from "./hooks/useCalendar";
 import Controls from "./components/Controls/Controls";
 import CalendarGrid from "./components/CalendarGrid/CalendarGrid";
 import styles from "./App.module.css";
+import type { CountryCode } from "./data/countryNames";
+import type { CountryHolidays } from "./data/holidays_v2/types";
 
 const App: React.FC = () => {
+    useEffect(() => {
+        import("./data/holidays_v2").then((holidays) => {
+            setHolidaysData(holidays.allHolidays);
+        });
+    }, []);
+    const [holidaysData, setHolidaysData] = useState<Record<CountryCode, CountryHolidays> | undefined>(undefined);
+
     const {
         currentDate,
         selectedCountries,
@@ -17,7 +26,7 @@ const App: React.FC = () => {
         handleModeChange,
         showAllCountries,
         setShowAllCountries,
-    } = useCalendar();
+    } = useCalendar(holidaysData);
 
     return (
         <div className={styles.app}>

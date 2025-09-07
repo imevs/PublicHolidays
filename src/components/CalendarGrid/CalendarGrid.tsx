@@ -5,7 +5,7 @@ import { dayNames, formatDateString, getDaysInMonth, getMonthName, isSameDate } 
 import styles from "./CalendarGrid.module.css";
 import MonthNavigation from "../MonthNavigation/MonthNavigation";
 import { getFlagEmoji } from "../../utils/countryFlags";
-import { getLink } from "../../data/holidays_descriptions/all";
+import { getLink } from "../../data/holidays_descriptions/getLink";
 
 interface CalendarGridProps {
     selectedYearDays: CalendarDayType[];
@@ -27,6 +27,12 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
     const [selectedDay, setSelectedDay] = useState<Date | null>(null); // State for selected day in popup
     const [highlightedMonth, setHighlightedMonth] = useState<number | null>(null); // State for highlighted month
     const yearGridRef = useRef<HTMLDivElement | null>(null); // Ref for the year grid container
+    const [countryData, setCountryData] = useState({});
+    useEffect(() => {
+        import("../../data/holidays_descriptions/all").then(data => {
+            setCountryData(data.descriptions);
+        });
+    }, []);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -156,8 +162,8 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                         <ul>
                             {selectedYearDays.find(d => isSameDate(d.date, selectedDay))?.holidays?.map((holiday, index) => (
                                 <li key={index} data-flag={getFlagEmoji(holiday.countryCode)}>
-                                    <a target="_blank" href={getLink(undefined, holiday.country, "public holidays")}><strong>{holiday.country}</strong></a>:{" "}
-                                    <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name)}>{holiday.name}</a>
+                                    <a target="_blank" href={getLink(undefined, holiday.country, "public holidays", countryData)}><strong>{holiday.country}</strong></a>:{" "}
+                                    <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name, countryData)}>{holiday.name}</a>
                                 </li>
                             ))}
                         </ul>
