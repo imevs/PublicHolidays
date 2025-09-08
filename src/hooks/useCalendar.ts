@@ -82,7 +82,7 @@ export const useCalendar = (holidaysData: Record<CountryCode, CountryHolidays> |
         }
 
         return days;
-    }, [currentDate, selectedCountries]);
+    }, [currentDate, selectedCountries, holidaysData]);
 
     const selectedYearDays = useMemo((): CalendarDay[] => {
         const currentYear = currentDate.getUTCFullYear();
@@ -110,7 +110,7 @@ export const useCalendar = (holidaysData: Record<CountryCode, CountryHolidays> |
         }
 
         return days;
-    }, [currentDate, selectedCountries]);
+    }, [currentDate, selectedCountries, holidaysData]);
 
     const navigateMonth = (nextMonth: number): void => {
         const newDate = new Date(currentDate);
