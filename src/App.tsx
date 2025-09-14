@@ -3,16 +3,15 @@ import { useCalendar } from "./hooks/useCalendar";
 import Controls from "./components/Controls/Controls";
 import CalendarGrid from "./components/CalendarGrid/CalendarGrid";
 import styles from "./App.module.css";
-import type { CountryCode } from "./data/countryNames";
 import type { CountryHolidays } from "./data/holidays_v2/types";
 
 const App: React.FC = () => {
     useEffect(() => {
-        import("./data/holidays_v2").then((holidays) => {
-            setHolidaysData(holidays.allHolidays);
+        import("./data/holidays_v2").then(({ allHolidays }) => {
+            setHolidaysData(Object.values(allHolidays));
         });
     }, []);
-    const [holidaysData, setHolidaysData] = useState<Record<CountryCode, CountryHolidays> | undefined>(undefined);
+    const [holidaysData, setHolidaysData] = useState<CountryHolidays[]>([]);
 
     const {
         currentDate,
