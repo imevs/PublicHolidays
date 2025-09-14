@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { CalendarDay as CalendarDayType } from "../../types";
+import { CalendarDay as CalendarDayType, type HolidayWithCountry } from "../../types";
 import CalendarDay from "../CalendarDay/CalendarDay";
 import { dayNames, formatDateString, getDaysInMonth, getMonthName, isSameDate } from "../../utils/dateUtils";
 import styles from "./CalendarGrid.module.css";
@@ -114,9 +114,10 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                                 {Array.from({ length: daysInMonth }, (_, day) => {
                                     const date = new Date(Date.UTC(currentYear, month, day + 1));
                                     const currentDay = selectedYearDays.find(d => isSameDate(d.date, date));
-                                    const dayHolidays = currentDay?.holidays || [];
+                                    const dayHolidays = currentDay?.events || [];
                                     const seen = new Set<string>();
-                                    const dayHolidaysUnique = dayHolidays.filter(h => {
+                                    const dayHolidaysUnique = dayHolidays.filter((h): h is HolidayWithCountry => {
+                                        if (h.type !== "publicHoliday") { return false; }
                                         if (seen.has(h.countryCode)) { return false; }
                                         seen.add(h.countryCode);
                                         return true;
@@ -160,12 +161,15 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                     <div className={styles.popupContent}>
                         <h3>Holidays on {formatDateString(selectedDay)}</h3>
                         <ul>
-                            {selectedYearDays.find(d => isSameDate(d.date, selectedDay))?.holidays?.map((holiday, index) => (
-                                <li key={index} data-flag={getFlagEmoji(holiday.countryCode)}>
-                                    <a target="_blank" href={getLink(undefined, holiday.country, "public holidays", countryData)}><strong>{holiday.country}</strong></a>:{" "}
-                                    <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name, countryData)}>{holiday.name}</a>
-                                </li>
-                            ))}
+                            {selectedYearDays.find(d => isSameDate(d.date, selectedDay))
+                                ?.events
+                                .filter(h => h.type === "publicHoliday")
+                                ?.map((holiday, index) => (
+                                    <li key={index} data-flag={getFlagEmoji(holiday.countryCode)}>
+                                        <a target="_blank" href={getLink(undefined, holiday.country, "public holidays", countryData)}><strong>{holiday.country}</strong></a>:{" "}
+                                        <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name, countryData)}>{holiday.name}</a>
+                                    </li>
+                                ))}
                         </ul>
                         <button onClick={() => setSelectedDay(null)}>Close</button>
                     </div>

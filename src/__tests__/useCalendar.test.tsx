@@ -83,7 +83,7 @@ describe("useCalendar", () => {
                 ]
             }
         ];
-        expect(matchingDay?.holidays).toEqual(expectedHolidays);
+        expect(matchingDay?.events).toEqual(expectedHolidays);
     });
 
     it("all calendarDays for November have correct holidays for selected country", () => {
@@ -101,7 +101,7 @@ describe("useCalendar", () => {
                     country: allHolidays["LV"].countryName,
                     countryCode: "LV",
                 }));
-            expect(day.holidays).toEqual(expectedHolidays);
+            expect(day.events).toEqual(expectedHolidays);
         }
     });
 

@@ -25,7 +25,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
     return (
         <div key={day.date.toDateString()} className={dayClasses}>
             <div className={styles.dayNumber}>{day.dayNumber}</div>
-            {day.holidays.map((holiday, idx) => (
+            {day.events.map((holiday, idx) => holiday.type === "publicHoliday" ? (
                 <a
                     key={idx}
                     href={getLink(holiday.date, holiday.country, holiday.name, countryData)}
@@ -36,6 +36,10 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
                         {getFlagEmoji(holiday.countryCode)} {holiday.country}: {holiday.name}
                     </div>
                 </a>
+            ) : (
+                <div className={styles.holiday} title={`${holiday.localName}`}>
+                    {holiday.name}
+                </div>
             ))}
         </div>
     );

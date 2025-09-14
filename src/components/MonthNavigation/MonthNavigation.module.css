@@ -4,6 +4,7 @@
   align-items: center;
   margin: 0 30px 20px 30px;
   padding: 20px 0;
+  height: 70px;
 }
 
 .monthTitle {
@@ -14,6 +15,7 @@
   text-decoration: underline;
   transition: transform .15s ease;
   text-align: center;
+  padding: 0 5px;
 }
 
 .monthTitle:hover {
@@ -29,6 +31,7 @@
   cursor: pointer;
   font-weight: 600;
   transition: all 0.2s ease;
+  min-width: 120px;
 }
 
 .navButton:hover {

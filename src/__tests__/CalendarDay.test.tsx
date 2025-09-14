@@ -5,11 +5,12 @@ import CalendarDay from "../components/CalendarDay/CalendarDay";
 describe("CalendarDay", () => {
     it("renders the day number", () => {
         const day = {
+            type: "publicHoliday" as const,
             dayNumber: 10,
             isCurrentMonth: true,
             isToday: false,
             isWeekend: false,
-            holidays: [],
+            events: [],
             date: new Date(2025, 7, 10),
         };
         render(<CalendarDay day={day} />);
@@ -19,11 +20,12 @@ describe("CalendarDay", () => {
     // Removed className checks, focusing on rendering logic and props
     it("renders today correctly when isToday is true", () => {
         const day = {
+            type: "publicHoliday" as const,
             dayNumber: 15,
             isCurrentMonth: true,
             isToday: true,
             isWeekend: false,
-            holidays: [],
+            events: [],
             date: new Date(2025, 7, 15),
         };
         render(<CalendarDay day={day} />);
@@ -32,11 +34,12 @@ describe("CalendarDay", () => {
 
     it("renders other month day correctly when isCurrentMonth is false", () => {
         const day = {
+            type: "publicHoliday" as const,
             dayNumber: 1,
             isCurrentMonth: false,
             isWeekend: false,
             isToday: false,
-            holidays: [],
+            events: [],
             date: new Date(2025, 6, 1),
         };
         render(<CalendarDay day={day} />);
@@ -49,8 +52,8 @@ describe("CalendarDay", () => {
             isCurrentMonth: true,
             isToday: false,
             isWeekend: false,
-            holidays: [
-                { name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia" as const, countryCode: "LV" as const },
+            events: [
+                { type: "publicHoliday" as const, name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia" as const, countryCode: "LV" as const },
             ],
             date: new Date(2025, 11, 25),
         };
@@ -64,8 +67,8 @@ describe("CalendarDay", () => {
             isCurrentMonth: true,
             isWeekend: false,
             isToday: false,
-            holidays: [
-                { name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia" as const, countryCode: "LV" as const },
+            events: [
+                { type: "publicHoliday" as const, name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia" as const, countryCode: "LV" as const },
             ],
             date: new Date(2025, 11, 25),
         };

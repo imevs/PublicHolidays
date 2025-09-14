@@ -1,27 +1,28 @@
 import type { CountryCode, CountryName } from "../data/countryNames";
 
-export interface Holiday {
-    date: string;
-    name: string;
-    localName: string;
-}
-
-export interface CountryHolidays {
-    countryCode: string;
-    countryName: string;
-    years: Record<string, Holiday[]>;
-}
-
 export interface CalendarDay {
     date: Date;
     isCurrentMonth: boolean;
     isToday: boolean;
     isWeekend: boolean;
-    holidays: HolidayWithCountry[];
+    events: CalendarEvent[];
     dayNumber: number;
 }
 
-export interface HolidayWithCountry extends Holiday {
+export type CalendarEvent = HolidayWithCountry | OtherEvent;
+
+export interface HolidayWithCountry {
+    date: string;
+    name: string;
+    localName: string;
+    type: "publicHoliday";
     country: CountryName;
     countryCode: CountryCode;
+}
+
+export interface OtherEvent {
+    date: string;
+    name: string;
+    localName: string;
+    type: "other";
 }
