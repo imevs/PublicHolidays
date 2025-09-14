@@ -1,17 +1,17 @@
 // Auto-generated types
 
-import type { CountryName } from "../countryNames";
+import type { CountryCode, CountryName } from "../countryNames";
 
 export type Holiday = {
     date: string;
     localName: string;
     name: string;
     primary_type?: string;
-    type?: string[];
+    type?: string[]; // "National holiday"
 };
 
 export type CountryHolidays = {
-    countryCode: string;
+    countryCode: CountryCode;
     countryName: CountryName;
     holidays: Holiday[];
 };

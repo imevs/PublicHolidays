@@ -6,7 +6,7 @@ import type { CountryCode } from "../data/countryNames";
 
 const dateFormatter = new Intl.DateTimeFormat("en-CA"); // Canadian English uses YYYY-MM-DD format
 
-export const useCalendar = (holidaysData: Record<CountryCode, CountryHolidays> | undefined) => {
+export const useCalendar = (holidaysData: CountryHolidays[]) => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(["LV"]);
     const [mode, setMode] = useState<"month" | "year">("year");
@@ -38,14 +38,14 @@ export const useCalendar = (holidaysData: Record<CountryCode, CountryHolidays> |
         const holidays: CalendarEvent[] = [];
 
         selectedCountries.forEach(countryCode => {
-            const countryHolidays = holidaysData[countryCode]?.holidays || [];
-            countryHolidays.forEach(holiday => {
+            const countryData = holidaysData.find(h => h.countryCode === countryCode);
+            countryData?.holidays.forEach(holiday => {
                 if (holiday.date === dateStr && holiday.type?.includes("National holiday")) {
                     holidays.push({
                         ...holiday,
                         type: "publicHoliday",
-                        country: holidaysData[countryCode].countryName,
-                        countryCode: countryCode,
+                        country: countryData.countryName,
+                        countryCode: countryData.countryCode,
                     });
                 }
             });
