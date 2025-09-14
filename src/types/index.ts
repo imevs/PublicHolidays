@@ -15,7 +15,8 @@ export interface HolidayWithCountry {
     date: string;
     name: string;
     localName: string;
-    type: "publicHoliday";
+    kind: "publicHoliday";
+    type: string[] | undefined;
     country: CountryName;
     countryCode: CountryCode;
 }
@@ -24,5 +25,5 @@ export interface OtherEvent {
     date: string;
     name: string;
     localName: string;
-    type: "other";
+    kind: "other";
 }

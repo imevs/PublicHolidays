@@ -25,7 +25,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
     return (
         <div key={day.date.toDateString()} className={dayClasses}>
             <div className={styles.dayNumber}>{day.dayNumber}</div>
-            {day.events.map((holiday, idx) => holiday.type === "publicHoliday" ? (
+            {day.events.map((holiday, idx) => holiday.kind === "publicHoliday" ? (
                 <a
                     key={idx}
                     href={getLink(holiday.date, holiday.country, holiday.name, countryData)}

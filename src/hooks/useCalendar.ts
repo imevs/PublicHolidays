@@ -1,12 +1,11 @@
 import { useEffect, useMemo, useState } from "react";
-import { CalendarDay, CalendarEvent } from "../types";
+import { CalendarDay, CalendarEvent, type HolidayWithCountry } from "../types";
 import { formatDateString, isSameDate } from "../utils/dateUtils";
-import type { CountryHolidays } from "../data/holidays_v2/types";
 import type { CountryCode } from "../data/countryNames";
 
 const dateFormatter = new Intl.DateTimeFormat("en-CA"); // Canadian English uses YYYY-MM-DD format
 
-export const useCalendar = (holidaysData: CountryHolidays[]) => {
+export const useCalendar = (holidaysData: CalendarEvent[]) => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(["LV"]);
     const [mode, setMode] = useState<"month" | "year">("year");
@@ -31,22 +30,15 @@ export const useCalendar = (holidaysData: CountryHolidays[]) => {
     }, []);
 
     const getHolidaysForDate = (date: Date): CalendarEvent[] => {
-        if (!holidaysData) {
-            return [];
-        }
         const dateStr = formatDateString(date);
         const holidays: CalendarEvent[] = [];
 
         selectedCountries.forEach(countryCode => {
-            const countryData = holidaysData.find(h => h.countryCode === countryCode);
-            countryData?.holidays.forEach(holiday => {
+            const countryData: HolidayWithCountry[] = holidaysData
+                .filter((h): h is HolidayWithCountry => h.kind === "publicHoliday" && h.countryCode === countryCode);
+            countryData.forEach(holiday => {
                 if (holiday.date === dateStr && holiday.type?.includes("National holiday")) {
-                    holidays.push({
-                        ...holiday,
-                        type: "publicHoliday",
-                        country: countryData.countryName,
-                        countryCode: countryData.countryCode,
-                    });
+                    holidays.push(holiday);
                 }
             });
         });

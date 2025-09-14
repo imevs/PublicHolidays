@@ -117,7 +117,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                                     const dayHolidays = currentDay?.events || [];
                                     const seen = new Set<string>();
                                     const dayHolidaysUnique = dayHolidays.filter((h): h is HolidayWithCountry => {
-                                        if (h.type !== "publicHoliday") { return false; }
+                                        if (h.kind !== "publicHoliday") { return false; }
                                         if (seen.has(h.countryCode)) { return false; }
                                         seen.add(h.countryCode);
                                         return true;
@@ -163,7 +163,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                         <ul>
                             {selectedYearDays.find(d => isSameDate(d.date, selectedDay))
                                 ?.events
-                                .filter(h => h.type === "publicHoliday")
+                                .filter(h => h.kind === "publicHoliday")
                                 ?.map((holiday, index) => (
                                     <li key={index} data-flag={getFlagEmoji(holiday.countryCode)}>
                                         <a target="_blank" href={getLink(undefined, holiday.country, "public holidays", countryData)}><strong>{holiday.country}</strong></a>:{" "}
