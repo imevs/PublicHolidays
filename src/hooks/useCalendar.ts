@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { CalendarDay, HolidayWithCountry } from "../types";
+import { CalendarDay, CalendarEvent } from "../types";
 import { formatDateString, isSameDate } from "../utils/dateUtils";
 import type { CountryHolidays } from "../data/holidays_v2/types";
 import type { CountryCode } from "../data/countryNames";
@@ -30,12 +30,12 @@ export const useCalendar = (holidaysData: Record<CountryCode, CountryHolidays> |
         setShowAllCountries(showAll === "1");
     }, []);
 
-    const getHolidaysForDate = (date: Date): HolidayWithCountry[] => {
+    const getHolidaysForDate = (date: Date): CalendarEvent[] => {
         if (!holidaysData) {
             return [];
         }
         const dateStr = formatDateString(date);
-        const holidays: HolidayWithCountry[] = [];
+        const holidays: CalendarEvent[] = [];
 
         selectedCountries.forEach(countryCode => {
             const countryHolidays = holidaysData[countryCode]?.holidays || [];
@@ -43,6 +43,7 @@ export const useCalendar = (holidaysData: Record<CountryCode, CountryHolidays> |
                 if (holiday.date === dateStr && holiday.type?.includes("National holiday")) {
                     holidays.push({
                         ...holiday,
+                        type: "publicHoliday",
                         country: holidaysData[countryCode].countryName,
                         countryCode: countryCode,
                     });
@@ -76,7 +77,7 @@ export const useCalendar = (holidaysData: Record<CountryCode, CountryHolidays> |
                 isCurrentMonth,
                 isToday,
                 isWeekend: [6,0].includes(date.getDay()),
-                holidays,
+                events: holidays,
                 dayNumber: date.getDate()
             });
         }
@@ -104,7 +105,7 @@ export const useCalendar = (holidaysData: Record<CountryCode, CountryHolidays> |
                 isCurrentMonth: false,
                 isWeekend: [6,0].includes(date.getDay()),
                 isToday,
-                holidays,
+                events: holidays,
                 dayNumber: date.getDate()
             });
         }
