@@ -3,15 +3,24 @@ import { useCalendar } from "./hooks/useCalendar";
 import Controls from "./components/Controls/Controls";
 import CalendarGrid from "./components/CalendarGrid/CalendarGrid";
 import styles from "./App.module.css";
-import type { CountryHolidays } from "./data/holidays_v2/types";
+import { CalendarEvent } from "./types";
+import { convertEvents } from "./utils/convertEvents";
 
 const App: React.FC = () => {
     useEffect(() => {
+        // setHolidaysData([
+        //     {
+        //         name: "Birthday",
+        //         date: "2025-09-25",
+        //         type: "other",
+        //         localName: "День рождения",
+        //     }
+        // ]);
         import("./data/holidays_v2").then(({ allHolidays }) => {
-            setHolidaysData(Object.values(allHolidays));
+            setHolidaysData(convertEvents(Object.values(allHolidays)));
         });
     }, []);
-    const [holidaysData, setHolidaysData] = useState<CountryHolidays[]>([]);
+    const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
 
     const {
         currentDate,
@@ -26,7 +35,6 @@ const App: React.FC = () => {
         showAllCountries,
         setShowAllCountries,
     } = useCalendar(holidaysData);
-
     return (
         <div className={styles.app}>
             <div className={styles.header}>

@@ -7,7 +7,7 @@ export type Holiday = {
     localName: string;
     name: string;
     primary_type?: string;
-    type?: string[]; // "National holiday"
+    type: string[]; // "National holiday"
 };
 
 export type CountryHolidays = {
