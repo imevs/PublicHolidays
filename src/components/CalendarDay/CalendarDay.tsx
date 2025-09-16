@@ -38,7 +38,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
                 </a>
             ) : (
                 <div className={styles.holiday} title={`${holiday.localName}`}>
-                    {holiday.name}
+                    {holiday.icon} {holiday.name}
                 </div>
             ))}
         </div>

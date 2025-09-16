@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { CalendarDay, CalendarEvent, type HolidayWithCountry } from "../types";
+import { CalendarDay, CalendarEvent } from "../types";
 import { formatDateString, isSameDate } from "../utils/dateUtils";
 import type { CountryCode } from "../data/countryNames";
 
@@ -33,14 +33,14 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         const dateStr = formatDateString(date);
         const holidays: CalendarEvent[] = [];
 
+        holidays.push(...holidaysData.filter(h => h.kind === "other" && h.date === dateStr));
+
         selectedCountries.forEach(countryCode => {
-            const countryData: HolidayWithCountry[] = holidaysData
-                .filter((h): h is HolidayWithCountry => h.kind === "publicHoliday" && h.countryCode === countryCode);
-            countryData.forEach(holiday => {
-                if (holiday.date === dateStr && holiday.type?.includes("National holiday")) {
-                    holidays.push(holiday);
-                }
-            });
+            holidays.push(...holidaysData.filter(h =>
+                h.kind === "publicHoliday" &&
+                h.countryCode === countryCode &&
+                h.type?.includes("National holiday") === true &&
+                h.date === dateStr));
         });
 
         return holidays;

@@ -24,6 +24,7 @@ export interface HolidayWithCountry {
 export interface OtherEvent {
     date: string;
     name: string;
+    icon: string;
     localName: string;
     kind: "other";
 }

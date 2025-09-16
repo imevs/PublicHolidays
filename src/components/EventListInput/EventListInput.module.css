@@ -1,0 +1,101 @@
+.container {
+  width: 95%;
+  margin: auto;
+  color: #ffffff;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  color: black;
+  font-size: 14px;
+}
+
+.wrapper {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.icons {
+  padding: 18px 8px 8px 8px;
+  position: absolute;
+  width: 40px;
+  right: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.icons:has(.lineRow:hover) {
+  width: 100%;
+}
+
+.lineRow {
+  margin-top: 3px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.indicator {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  border-radius: 7px;
+  margin-right: 8px;
+  font-size: 12px;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.indicatorValid {
+  background: #d4f8e8;
+  color: #05684a;
+  border: 1px solid #9fe6c8;
+  cursor: pointer;
+}
+
+.indicatorInvalid {
+  background: #fdecea;
+  color: #a33;
+  border: 1px solid #f5c6c6;
+}
+
+.textarea {
+  width: 100%;
+  height: 160px;
+  font-family: monospace;
+  padding: 15px 10px 5px 20px; /* left padding to make room for icons */
+  line-height: 26px;
+  box-sizing: border-box;
+  resize: vertical;
+  border-radius: 10px;
+}
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%; /* put it on the top */
+  background-color: white;
+  border: 1px solid black;
+  width: max-content;
+  opacity: 0;
+  color: black;
+  padding: 5px 5px;
+  transition: opacity 0.25s ease-in-out;
+  pointer-events: none;
+}
+
+[data-tooltip]:hover {
+  border: 1px solid red;
+}
+
+[data-tooltip]:hover:after {
+  opacity: 1;
+}

@@ -1,10 +1,35 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
+import FamilyEvents from "./FamilyEvents.tsx";
 import "./index.css";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-    <React.StrictMode>
-        <App />
-    </React.StrictMode>,
+import { createBrowserRouter, Outlet } from "react-router";
+import { RouterProvider } from "react-router/dom";
+
+function Root() {
+    return <Outlet />;
+}
+
+const router = createBrowserRouter([
+    {
+        path: "/PublicHolidays",
+        Component: Root,
+        children: [
+            {
+                index: true,
+                path: "Holidays",
+                Component: App,
+            },
+            {
+                path: "FamilyEvents",
+                Component: FamilyEvents,
+            },
+        ],
+    },
+]);
+
+const root = document.getElementById("root")!;
+
+ReactDOM.createRoot(root).render(
+    <RouterProvider router={router} />,
 );
