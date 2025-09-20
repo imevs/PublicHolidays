@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useCalendar } from "./hooks/useCalendar";
 import Controls from "./components/Controls/Controls";
 import CalendarGrid from "./components/CalendarGrid/CalendarGrid";
-import styles from "./App.module.css";
+import styles from "./Holidays.module.css";
 import { CalendarEvent } from "./types";
 import { convertEvents } from "./utils/convertEvents";
+import { EventsList } from "./components/EventsList/EventsList";
 
-const App: React.FC = () => {
+const Holidays: React.FC = () => {
     useEffect(() => {
         import("./data/holidays_v2").then(({ allHolidays }) => {
             setHolidaysData(convertEvents(Object.values(allHolidays)));
@@ -56,9 +57,15 @@ const App: React.FC = () => {
                     onModeChange={handleModeChange}
                     onNavigateMonth={navigateMonth}
                 />
+
+                <EventsList
+                    selectedYearDays={selectedYearDays}
+                    currentDate={currentDate}
+                    mode={mode}
+                />
             </div>
         </div>
     );
 };
 
-export default App;
+export default Holidays;
