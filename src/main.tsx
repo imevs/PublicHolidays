@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import Holidays from "./Holidays.tsx";
 import FamilyEvents from "./FamilyEvents.tsx";
 import "./index.css";
 
@@ -18,7 +18,7 @@ const router = createBrowserRouter([
             {
                 index: true,
                 path: "Holidays",
-                Component: App,
+                Component: Holidays,
             },
             {
                 path: "FamilyEvents",

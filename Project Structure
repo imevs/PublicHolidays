@@ -5,8 +5,8 @@ holiday-calendar/
 ├── index.html
 ├── src/
 │   ├── main.tsx
-│   ├── App.tsx
-│   ├── App.module.css
+│   ├── Holidays.tsx
+│   ├── Holidays.module.css
 │   ├── types/
 │   │   └── index.ts
 │   ├── data/

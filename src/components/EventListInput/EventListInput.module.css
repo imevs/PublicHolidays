@@ -54,13 +54,13 @@
   background: #d4f8e8;
   color: #05684a;
   border: 1px solid #9fe6c8;
-  cursor: pointer;
 }
 
 .indicatorInvalid {
   background: #fdecea;
   color: #a33;
   border: 1px solid #f5c6c6;
+  cursor: pointer;
 }
 
 .textarea {
