@@ -32,7 +32,7 @@ const Holidays: React.FC = () => {
         <div className={styles.app}>
             <div className={styles.header}>
                 <h1>
-                    <a href=".">
+                    <a href="./Holidays">
                         🌍 Public Holidays Calendar
                     </a>
                 </h1>

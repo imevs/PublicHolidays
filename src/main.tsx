@@ -21,7 +21,7 @@ const router = createBrowserRouter([
                 Component: Holidays,
             },
             {
-                path: "FamilyEvents",
+                path: "Events",
                 Component: FamilyEvents,
             },
         ],
