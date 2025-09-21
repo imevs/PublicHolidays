@@ -78,6 +78,7 @@ describe("useCalendar", () => {
                 date: "2025-01-01",
                 "localName": "New Year’s Day is the first day of the year, or January 1, in the Gregorian calendar.",
                 "name": "New Year's Day",
+                "kind": "publicHoliday",
                 "primary_type": "National holiday",
                 "type": [
                     "National holiday"
@@ -99,6 +100,7 @@ describe("useCalendar", () => {
                 .filter((holiday) => holiday.date === dateStr)
                 .map((holiday) => ({
                     ...holiday,
+                    "kind": "publicHoliday",
                     country: allHolidays["LV"].countryName,
                     countryCode: "LV",
                 }));

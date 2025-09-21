@@ -20,8 +20,8 @@ const FamilyEvents: React.FC = () => {
         <div className={styles.app}>
             <div className={styles.header}>
                 <h1>
-                    <a href=".">
-                        🌍 Family Events Calendar
+                    <a href="./Holidays">
+                        🌍 Events Calendar
                     </a>
                 </h1>
             </div>

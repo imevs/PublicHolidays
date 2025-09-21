@@ -90,7 +90,8 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
             date.setDate(i);
 
             const isToday = isSameDate(date, today);
-            const holidays = getHolidaysForDate(date);
+            const isCurrentYear = date.getUTCFullYear() === currentYear;
+            const holidays = isCurrentYear ? getHolidaysForDate(date) : [];
 
             days.push({
                 date,
