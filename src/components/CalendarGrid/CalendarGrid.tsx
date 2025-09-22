@@ -1,7 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
 import { CalendarDay as CalendarDayType, type HolidayWithCountry } from "../../types";
 import CalendarDay from "../CalendarDay/CalendarDay";
-import { dayNames, formatDateString, getDaysInMonth, getMonthName, isSameDate } from "../../utils/dateUtils";
+import {
+    DayIndexes,
+    dayNames,
+    formatDateString,
+    getDaysInMonth,
+    getMonthName,
+    isSameDate
+} from "../../utils/dateUtils";
 import styles from "./CalendarGrid.module.css";
 import MonthNavigation from "../MonthNavigation/MonthNavigation";
 import { getFlagEmoji } from "../../utils/countryFlags";
@@ -92,7 +99,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                     const daysInMonth = getDaysInMonth(currentYear, month);
                     const monthName = getMonthName(month);
                     const firstDay = new Date(Date.UTC(currentYear, month, 1));
-                    const dayOfWeek = firstDay.getUTCDay() === 0 ? 6 : firstDay.getUTCDay() - 1;
+                    const dayOfWeek = firstDay.getUTCDay() === DayIndexes.Sunday ? 6 : firstDay.getUTCDay() - 1;
 
                     return (
                         <div
