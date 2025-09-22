@@ -5,6 +5,15 @@ export const monthNames = [
 
 export const dayNames = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 export const fullDayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+export const DayIndexes = {
+    Monday: 1,
+    Tuesday: 2,
+    Wednesday: 3,
+    Thursday: 4,
+    Friday: 5,
+    Saturday: 6,
+    Sunday: 0,
+};
 
 export const generateYears = (): number[] => {
     const currentYear = new Date().getFullYear();
@@ -16,7 +25,7 @@ export const formatDateString = (date: Date): string => {
 };
 
 export const getDayName = (date: Date): string => {
-    return fullDayNames[date.getDay() === 0 ? 6 : date.getDay() - 1];
+    return fullDayNames[date.getUTCDay() === DayIndexes.Sunday ? 6 : date.getUTCDay() - 1];
 }
 
 export const isSameDate = (date1: Date, date2: Date): boolean => {

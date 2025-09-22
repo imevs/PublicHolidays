@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { CalendarDay, CalendarEvent } from "../types";
-import { formatDateString, isSameDate } from "../utils/dateUtils";
+import { DayIndexes, formatDateString, isSameDate } from "../utils/dateUtils";
 import type { CountryCode } from "../data/countryNames";
 
 const dateFormatter = new Intl.DateTimeFormat("en-CA"); // Canadian English uses YYYY-MM-DD format
@@ -51,7 +51,9 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         const month = currentDate.getUTCMonth();
         const firstDay = new Date(Date.UTC(year, month, 1));
         const startDate = new Date(firstDay);
-        startDate.setUTCDate(startDate.getUTCDate() - (firstDay.getUTCDay() === 0 ? 6 : firstDay.getUTCDay() - 1));
+        startDate.setUTCDate(startDate.getUTCDate() - (
+            firstDay.getUTCDay() === DayIndexes.Sunday ? 6 : firstDay.getUTCDay() - 1
+        ));
 
         const days: CalendarDay[] = [];
         const today = new Date();
@@ -59,6 +61,9 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         for (let i = 0; i < 42; i++) {
             const date = new Date(startDate);
             date.setDate(startDate.getUTCDate() + i);
+            if (date.getUTCDay() === DayIndexes.Monday && date.getUTCMonth() === month + 1) {
+                break;
+            }
 
             const isCurrentMonth = date.getUTCMonth() === month;
             const isToday = isSameDate(date, today);
@@ -68,10 +73,13 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
                 date,
                 isCurrentMonth,
                 isToday,
-                isWeekend: [6,0].includes(date.getDay()),
+                isWeekend: [DayIndexes.Saturday, DayIndexes.Sunday].includes(date.getUTCDay()),
                 events: holidays,
                 dayNumber: date.getDate()
             });
+            if (date.getUTCDay() === DayIndexes.Sunday && date.getUTCMonth() === month + 1) {
+                break;
+            }
         }
 
         return days;
@@ -96,7 +104,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
             days.push({
                 date,
                 isCurrentMonth: false,
-                isWeekend: [6,0].includes(date.getDay()),
+                isWeekend: [DayIndexes.Saturday, DayIndexes.Sunday].includes(date.getUTCDay()),
                 isToday,
                 events: holidays,
                 dayNumber: date.getDate()
