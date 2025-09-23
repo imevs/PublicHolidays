@@ -4,6 +4,7 @@ import { formatDateString, getDayName } from "../../utils/dateUtils";
 import styles from "./EventsList.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags";
 import { useCallback } from "react";
+import { exportCalendarToFile } from "../EventListInput/generateICS";
 
 export type EventsListProps = {
     selectedYearDays: CalendarDayType[];
@@ -21,7 +22,7 @@ export function EventsList({
         (selectedYearDays ?? [])
             .filter(day => day.events.length)
             .map((date) => {
-                date.events.map(event => {
+                date.events.forEach(event => {
                     dataText += event.kind === "publicHoliday"
                         ? formatDateString(date.date) + " " +
                         getFlagEmoji(event.countryCode) + " " +
@@ -30,19 +31,26 @@ export function EventsList({
                 });
             });
         localStorage.setItem("holidaysData", dataText);
+        document.location = "/PublicHolidays/Events";
     }, [selectedYearDays]);
+
+    const exportCalendar = useCallback(() => {
+        const data = selectedYearDays.map(d => d.events).flat();
+        exportCalendarToFile(data);
+    }, [selectedYearDays]);
+
     return <div className={styles.eventsList}>
-        <h2 style={{ marginBottom: 15 }} onClick={editEvents}>
-            <a href="./Events">
-                Edit events list
-            </a>
+        <button className={styles.actionButton} onClick={exportCalendar}>Export to .ics</button>
+        <button className={styles.actionButton} onClick={editEvents} style={{ right: 120 }}>Edit events</button>
+        <h2 style={{ marginBottom: 15 }}>
+            Events list
         </h2>
         {selectedYearDays
             .filter(day => mode === "month" ? day.date.getUTCMonth() === currentDate.getUTCMonth() : true)
             .filter(day => day.events.length)
-            .map(date => (<div className={styles.dateEvents}>
-                {
-                    date.events.map(event => (
+            .map(date => (
+                <div className={styles.dateEvents}>
+                    {date.events.map(event => (
                         event.kind === "publicHoliday"
                             ? <div className={styles.events}>
                                 {formatDateString(date.date)} ({getDayName(date.date)}) {getFlagEmoji(event.countryCode)} {event.country}: {event.name}
@@ -50,9 +58,9 @@ export function EventsList({
                             : <div className={styles.events}>
                                 {formatDateString(date.date)} {event.icon} {event.name}
                             </div>
-                    ))
-                }
-            </div>))
+                    ))}
+                </div>
+            ))
         }
     </div>;
 }

@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 import { CalendarEvent } from "../../types";
 import styles from "./EventListInput.module.css";
+import { exportCalendarToFile } from "./generateICS";
 
 function parseData(input: string): CalendarEvent[] {
     return input.split("\n")
@@ -33,7 +34,7 @@ function isIcon(symbol: string): boolean {
 
 const defaultData = `
 2025-09-10 🎂 Birthday of Joe
-2025-09-19 🎂 Birthday of Lena
+2025-09-19 🎂 Birthday of Chuck
 2025-09-27 🎂 Birthday of Dima
 `;
 
@@ -59,6 +60,7 @@ export function EventListInput(props: {
     const textRef = useRef<HTMLTextAreaElement | null>(null);
     const iconsRef = useRef<HTMLDivElement | null>(null);
     const [dataText, setDataText] = useState<string>(defaultData.trim());
+    const [holidaysParsed, setHolidays] = useState<CalendarEvent[]>([]);
     const lines = dataText.split("\n");
 
     useEffect(() => {
@@ -72,6 +74,7 @@ export function EventListInput(props: {
         const lines = dataText.split("\n").map(l => l.trim()).filter(l => l.length);
         const validLines = lines.filter(l => validateLine(l).valid).join("\n");
         props.setHolidaysData(parseData(validLines));
+        setHolidays(parseData(validLines));
         localStorage.setItem("holidaysData", dataText);
     }, [dataText]);
 
@@ -85,10 +88,15 @@ export function EventListInput(props: {
         }
     }, [textRef.current]);
 
+    const exportCalendar = useCallback(() => {
+        exportCalendarToFile(holidaysParsed);
+    }, [holidaysParsed]);
+
     return <div className={styles.container}>
         <label htmlFor="events-data" className={styles.label}>
             Calendar events. Format: <code>YYYY-MM-DD [icon] event name</code>.
         </label>
+        <button onClick={exportCalendar} style={{ position: "absolute", right: 0, top: 0 }}>Save to .ics</button>
 
         <div className={styles.wrapper}>
             <div ref={iconsRef} className={styles.icons}>
