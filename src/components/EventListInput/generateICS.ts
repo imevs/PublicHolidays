@@ -1,5 +1,8 @@
 import type { CalendarEvent } from "../../types";
 import { getFlagEmoji } from "../../utils/countryFlags";
+import { formatDateString } from "../../utils/dateUtils";
+import { countryTimeZones } from "../../utils/timeZones";
+import type { CountryCode } from "../../data/countryNames";
 
 function formatDateToYYYYMMDD(d: Date) {
     const y = d.getFullYear();
@@ -48,15 +51,16 @@ export function buildICS(events: CalendarEvent[]) {
         const uid = `${ev.date}-${Math.random().toString(36).slice(2, 10)}@holiday-calendar`;
         const icon = ev.kind === "other"
             ? (ev.icon ? ev.icon + " " : "")
-            : getFlagEmoji(ev.countryCode);
+            : getFlagEmoji(ev.countryCode) + " ";
         const summary = escapeICSText(`${icon}${ev.name}`);
 
         lines.push("BEGIN:VEVENT");
         lines.push(`UID:${uid}`);
         lines.push(`DTSTAMP:${dtstamp}`);
         lines.push(`CREATED:${dtstamp}`);
-        lines.push(`DTSTART;VALUE=DATE:${dtstart}`);
-        lines.push(`DTEND;VALUE=DATE:${dtend}`);
+        const timezone = ev.kind === "publicHoliday" ? `TZID=${countryTimeZones[ev.countryCode]};` : "";
+        lines.push(`DTSTART;${timezone}VALUE=DATE:${dtstart}`);
+        lines.push(`DTEND;${timezone}VALUE=DATE:${dtend}`);
         lines.push(`SUMMARY:${summary}`);
         if (description) {
             lines.push(`DESCRIPTION:${description}`);
@@ -82,3 +86,113 @@ export function exportCalendarToFile(holidaysParsed: CalendarEvent[])  {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
 }
+
+const unescapeValue = (v: string) =>
+    v
+        .replace(/\\\\/g, "\\")
+        .replace(/\\n/gi, "\n")
+        .replace(/\\,/g, ",")
+        .replace(/\\;/g, ";");
+
+export function parseICS(raw: string): CalendarEvent[] {
+    // normalize newlines
+    let s = raw.replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+
+    // unfold folded lines per RFC: lines starting with space or tab are continuations -> remove the newline and the leading space/tab
+    s = s.replace(/\n[ \t]/g, "");
+
+    const lines = s.split("\n");
+
+    const events: CalendarEvent[] = [];
+    let current: Partial<CalendarEvent> | null = null;
+    let lastProp: string | null = null;
+
+    for (const line of lines) {
+        const trimmed = line.replace(/\r$/, "");
+
+        if (trimmed === "BEGIN:VEVENT") {
+            current = {};
+            lastProp = null;
+            continue;
+        }
+        if (trimmed === "END:VEVENT") {
+            if (current) {
+                if (current.kind === "other") {
+                    events.push({
+                        date: current.date || "",
+                        name: current.name || "",
+                        localName: current.localName ?? "",
+                        kind: "other",
+                        icon: current.icon ?? "",
+                    });
+                } else {
+                    events.push({
+                        date: current.date || "",
+                        name: current.name || "",
+                        localName: current.localName ?? "",
+                        kind: "publicHoliday",
+                        countryCode: "AL",
+                        country: "Sweden",
+                        type: undefined,
+                    });
+                }
+            }
+            current = null;
+            lastProp = null;
+            continue;
+        }
+
+        if (!current) continue;
+
+        const colonIdx = trimmed.indexOf(":");
+        if (colonIdx === -1) {
+            // line without ":" -> treat as raw continuation (insert newline then text) for last property
+            if (lastProp === "SUMMARY") {
+                current.name = (current.name || "") + "\n" + trimmed;
+            } else if (lastProp === "DESCRIPTION") {
+                current.localName = (current.localName || "") + "\n" + trimmed;
+            }
+            continue;
+        }
+
+        const keyParts = trimmed.substring(0, colonIdx).split(";");
+        const valuePart = trimmed.substring(colonIdx + 1);
+
+        const propName = keyParts[0].toUpperCase();
+
+        if (propName === "DTSTART") {
+            const TZID = keyParts.map(p => p.split("=")).find(([k]) => k === "TZID" )?.[1];
+            if (TZID) {
+                const countryCode = (Object.entries(countryTimeZones) as [CountryCode, string][])
+                    .find(([, zone]) => zone === TZID)?.[0];
+                if (countryCode) {
+                    current.kind = "other";
+                    if (current.kind === "other") {
+                        current.icon = getFlagEmoji(countryCode);
+                    } else if (current.kind === "publicHoliday") {
+                        current.countryCode = countryCode;
+                    }
+                }
+            }
+            const dateRaw = valuePart.trim();
+            const ymd = dateRaw.slice(0, 8);
+            if (/^\d{8}$/.test(ymd)) {
+                current.date = `${ymd.slice(0, 4)}-${ymd.slice(4, 6)}-${ymd.slice(6, 8)}`;
+            } else {
+                // fallback: try to parse as Date (handles datetimes with timezone)
+                const parsed = new Date(dateRaw);
+                if (!isNaN(parsed.getTime())) {
+                    current.date = formatDateString(parsed);
+                }
+            }
+        } else if (propName === "SUMMARY") {
+            current.name = unescapeValue(valuePart);
+        } else if (propName === "DESCRIPTION") {
+            current.localName = unescapeValue(valuePart);
+        }
+        lastProp = propName;
+    }
+
+    return events;
+}
+

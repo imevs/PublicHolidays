@@ -2,7 +2,8 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { CalendarEvent } from "../../types";
 import styles from "./EventListInput.module.css";
-import { exportCalendarToFile } from "./generateICS";
+import { exportCalendarToFile, parseICS } from "./generateICS";
+import { getFlagEmoji } from "../../utils/countryFlags";
 
 function parseData(input: string): CalendarEvent[] {
     return input.split("\n")
@@ -59,10 +60,32 @@ export function EventListInput(props: {
 }) {
     const textRef = useRef<HTMLTextAreaElement | null>(null);
     const iconsRef = useRef<HTMLDivElement | null>(null);
+    const fileInputRef = useRef<HTMLInputElement | null>(null);
     const [dataText, setDataText] = useState<string>(defaultData.trim());
     const [holidaysParsed, setHolidays] = useState<CalendarEvent[]>([]);
     const lines = dataText.split("\n");
-
+   
+    const handleImportFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => {
+            const text = String(reader.result || "");
+            const parsed = parseICS(text);
+            // set local state and notify parent
+            setHolidays(parsed);
+            props.setHolidaysData(parsed);
+            // update textarea so user sees imported events in the same format
+            const lines = parsed.map(ev =>
+                `${ev.date} ${ev.kind === "other" ? ev.icon : getFlagEmoji(ev.countryCode)} ${ev.name}`,
+            ).join("\n");
+            setDataText(lines);
+            // clear the input so same file can be re-imported if needed
+            if (fileInputRef.current) fileInputRef.current.value = "";
+        };
+        reader.readAsText(file);
+    };
+   
     useEffect(() => {
         const data = localStorage.getItem("holidaysData");
         if (data) {
@@ -96,7 +119,11 @@ export function EventListInput(props: {
         <label htmlFor="events-data" className={styles.label}>
             Calendar events. Format: <code>YYYY-MM-DD [icon] event name</code>.
         </label>
-        <button onClick={exportCalendar} style={{ position: "absolute", right: 0, top: 0 }}>Save to .ics</button>
+        <div style={{ position: "absolute", right: 0, top: 0 }}>
+            <button onClick={exportCalendar}>Save to .ics</button>
+            <button onClick={() => fileInputRef.current?.click()} style={{ marginLeft: 8 }}>Import .ics</button>
+            <input ref={fileInputRef} type="file" accept=".ics,text/calendar" style={{ display: "none" }} onChange={handleImportFile} />
+        </div>
 
         <div className={styles.wrapper}>
             <div ref={iconsRef} className={styles.icons}>
