@@ -12,7 +12,7 @@ describe("CalendarDay", () => {
             isToday: false,
             isWeekend: false,
             events: [],
-            date: new UTCDate(2025, 7, 10),
+            date: new UTCDate("2025-07-10"),
         };
         render(<CalendarDay day={day} />);
         expect(screen.getByText("10")).toBeInTheDocument();
@@ -27,7 +27,7 @@ describe("CalendarDay", () => {
             isToday: true,
             isWeekend: false,
             events: [],
-            date: new UTCDate(2025, 7, 15),
+            date: new UTCDate("2025-07-15"),
         };
         render(<CalendarDay day={day} />);
         expect(screen.getByText("15")).toBeInTheDocument();
@@ -41,7 +41,7 @@ describe("CalendarDay", () => {
             isWeekend: false,
             isToday: false,
             events: [],
-            date:  new UTCDate(2025, 6, 1),
+            date:  new UTCDate("2025-06-01"),
         };
         render(<CalendarDay day={day} />);
         expect(screen.getByText("1")).toBeInTheDocument();
@@ -56,7 +56,7 @@ describe("CalendarDay", () => {
             events: [
                 { kind: "publicHoliday" as const, type: [""], name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia" as const, countryCode: "LV" as const },
             ],
-            date:  new UTCDate(2025, 11, 25),
+            date:  new UTCDate("2025-11-25"),
         };
         render(<CalendarDay day={day} />);
         expect(screen.getByText(/Latvia: Christmas/)).toBeInTheDocument();
@@ -71,7 +71,7 @@ describe("CalendarDay", () => {
             events: [
                 { kind: "publicHoliday" as const, type: [""], name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia" as const, countryCode: "LV" as const },
             ],
-            date: new UTCDate(2025, 11, 25),
+            date: new UTCDate("2025-11-25"),
         };
         render(<CalendarDay day={day} />);
         const holidayDiv = screen.getByText(/Latvia: Christmas/);

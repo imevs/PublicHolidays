@@ -99,7 +99,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                 {Array.from({ length: 12 }, (_, month) => {
                     const daysInMonth = getDaysInMonth(currentYear, month);
                     const monthName = getMonthName(month);
-                    const firstDay = new UTCDate(Date.UTC(currentYear, month, 1));
+                    const firstDay = new UTCDate(`${currentYear}-${String(month + 1).padStart(2, "0")}-01`);
                     const dayOfWeek = convertDayToEUFormat(firstDay.getDay()) - 1;
                     const emptyCells = Array.from({ length: dayOfWeek }, (_, day) => <div key={day} />);
 
@@ -121,7 +121,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                             <div className={styles.monthGrid}>
                                 {emptyCells}
                                 {Array.from({ length: daysInMonth }, (_, day) => {
-                                    const date = new UTCDate(Date.UTC(currentYear, month, day + 1));
+                                    const date = new UTCDate(`${currentYear}-${String(month + 1).padStart(2, "0")}-${day + 1}`);
                                     const currentDay = selectedYearDays.find(d => isSameDate(d.date, date));
                                     const dayHolidays = currentDay?.events || [];
                                     const seen = new Set<string>();

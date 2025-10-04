@@ -20,7 +20,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         }
         const date = urlSearchParams.get("date") ?? "";
         if (date) {
-            setCurrentDate(new UTCDate(date + "T00:00:00Z"));
+            setCurrentDate(new UTCDate(date));
         }
         const urlMode = urlSearchParams.get("mode") as "month" | "year";
         if (urlMode === "month" || urlMode === "year") {
@@ -50,7 +50,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     const selectedMonthDays = useMemo((): CalendarDay[] => {
         const year = currentDate.getFullYear();
         const month = currentDate.getMonth();
-        const firstDay = new UTCDate(Date.UTC(year, month, 1));
+        const firstDay = new UTCDate(`${year}-${String(month + 1).padStart(2, "0")}-01`);
         const startDate = new UTCDate(firstDay);
         startDate.setDate(startDate.getDate() + 1 - convertDayToEUFormat(firstDay.getDay()));
 
@@ -86,7 +86,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
 
     const selectedYearDays = useMemo((): CalendarDay[] => {
         const currentYear = currentDate.getFullYear();
-        const firstDay = new UTCDate(Date.UTC(currentYear, 0, 1, 12, 0, 0)); // Use 12:00 as a starting time so day zone changes do not affect dates
+        const firstDay = new UTCDate(`${currentYear}-01-01`);
         const startDate = new UTCDate(firstDay);
 
         const days: CalendarDay[] = [];
