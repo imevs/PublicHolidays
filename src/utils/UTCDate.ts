@@ -1,28 +1,17 @@
 export class UTCDate {
     public date: Date;
 
-    constructor(year?: number | UTCDate | string, monthIndex?: number, date?: number/*, hours = 0, minutes = 0, seconds = 0, ms = 0*/) {
-        if (year instanceof UTCDate) {
-            this.date = new Date(year.valueOf());
-        } else if (typeof year === "string") {
+    constructor(d?: UTCDate | string) {
+        if (d instanceof UTCDate) {
+            this.date = new Date(d.valueOf());
+        } else if (typeof d === "string") {
             // "2025-12-25T00:00:00.000Z"
-            this.date = new Date(year);
-            // this.date = new Date(Date.UTC(year, monthIndex, date, hours, minutes, seconds, ms));
-        } else if (typeof year === "number") {
-            // "2025-12-25T00:00:00.000Z"
-            // this.date = new Date(`${year}-${String(monthIndex ?? 0).padStart(2, "0")}-${String(date).padStart(2, "0")}T${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}.${String(ms).padStart(3, "0")}Z`);
-            if (monthIndex !== undefined) {
-                this.date = new Date(year, monthIndex, date);
-            } else {
-                this.date = new Date(year);
-            }
+            const [year, month, day] = d.split("T")[0].split("-");
+            // Use 12:00 as a starting time so day zone changes do not affect dates
+            this.date = new Date(Date.UTC(Number(year), Number(month) - 1, Number(day), 12));
         } else {
             this.date = new Date();
         }
-    }
-
-    static fromDate(date: Date): UTCDate {
-        return new UTCDate(date.getFullYear(), date.getMonth(), date.getDate());
     }
 
     toISOString(): string {

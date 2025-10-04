@@ -1,7 +1,6 @@
 import { buildICS, parseICS } from "./generateICS";
 import * as assert from "node:assert";
 
-// typescript
 describe("generateICS", () => {
     describe("parseICS", () => {
         it("parses all-day DTSTART and unescapes SUMMARY/DESCRIPTION", () => {

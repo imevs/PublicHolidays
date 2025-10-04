@@ -113,7 +113,7 @@ describe("useCalendar", () => {
     it("check current date time zone is US/Eastern", () => {
         const date = new UTCDate("2025-01-01");
         expect(date.getTimezoneOffset()).toBe(300); // EST timezone offset
-        expect(date.toISOString()).toBe("2025-01-01T00:00:00.000Z"); // 5 hours ahead of UTC
+        expect(date.toISOString()).toBe("2025-01-01T12:00:00.000Z");
         expect(date.getFullYear()).toBe(2025);
     });
 });

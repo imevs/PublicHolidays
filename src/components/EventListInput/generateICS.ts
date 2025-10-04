@@ -42,7 +42,7 @@ export function buildICS(events: CalendarEvent[]) {
 
     for (const ev of events) {
         // parse date and build all-day event (DTSTART;VALUE=DATE and DTEND next day)
-        const d = new UTCDate(`${ev.date}T00:00:00.000Z`);
+        const d = new UTCDate(ev.date);
         const dtstart = formatDateToYYYYMMDD(d);
         const dNext = new UTCDate(d);
         dNext.setDate(dNext.getDate() + 1);
