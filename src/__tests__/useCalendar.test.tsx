@@ -45,11 +45,11 @@ describe("useCalendar", () => {
 
     it("navigates months using navigateMonth", () => {
         const { result } = renderHook(() => useCalendar(convertEvents(Object.values(allHolidays))));
-        const initialMonth = result.current.currentDate.getUTCMonth();
+        const initialMonth = result.current.currentDate.getMonth();
         act(() => {
             result.current.navigateMonth(initialMonth + 1); // Navigate to the next month
         });
-        expect(result.current.currentDate.getUTCMonth()).toBe((initialMonth + 1) % 12);
+        expect(result.current.currentDate.getMonth()).toBe((initialMonth + 1) % 12);
     });
 
     it("calendarDays returns 42 days", () => {
@@ -64,9 +64,9 @@ describe("useCalendar", () => {
         const { result } = renderHook(() => useCalendar(convertEvents(Object.values(allHolidays))));
         await Promise.resolve();
         const currentDate = result.current.currentDate;
-        expect(currentDate.getUTCFullYear()).toBe(2025);
-        expect(currentDate.getUTCMonth()).toBe(0);
-        expect(currentDate.getUTCDate()).toBe(1);
+        expect(currentDate.getFullYear()).toBe(2025);
+        expect(currentDate.getMonth()).toBe(0);
+        expect(currentDate.getDate()).toBe(1);
         const matchingDay = result.current.selectedMonthDays.find(day =>
             day.date.getFullYear() === currentDate.getFullYear() &&
             day.date.getMonth() === currentDate.getMonth() &&
@@ -114,6 +114,6 @@ describe("useCalendar", () => {
         const date = new UTCDate("2025-01-01");
         expect(date.getTimezoneOffset()).toBe(300); // EST timezone offset
         expect(date.toISOString()).toBe("2025-01-01T00:00:00.000Z"); // 5 hours ahead of UTC
-        expect(date.getUTCFullYear()).toBe(2025);
+        expect(date.getFullYear()).toBe(2025);
     });
 });

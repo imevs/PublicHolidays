@@ -31,7 +31,7 @@ export function convertDayToEUFormat(dayOfWeek: number): number {
 }
 
 export const getDayName = (date: UTCDate): string => {
-    return fullDayNames[convertDayToEUFormat(date.getUTCDay()) - 1]; // array indexing starts from 0
+    return fullDayNames[convertDayToEUFormat(date.getDay()) - 1]; // array indexing starts from 0
 }
 
 export const isSameDate = (date1: UTCDate, date2: UTCDate): boolean => {
