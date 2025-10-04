@@ -1,5 +1,3 @@
-// ...existing code...
-
 import {
     monthNames,
     dayNames,
@@ -7,6 +5,7 @@ import {
     formatDateString,
     isSameDate,
 } from "../utils/dateUtils";
+import { UTCDate } from "../utils/UTCDate";
 
 describe("dateUtils", () => {
     it("monthNames contains 12 months", () => {
@@ -28,19 +27,19 @@ describe("dateUtils", () => {
     });
 
     it("formats a date as YYYY-MM-DD", () => {
-        const date = new Date(Date.UTC(2025, 7, 10)); // August 10, 2025
+        const date = new UTCDate(Date.UTC(2025, 7, 10)); // August 10, 2025
         expect(formatDateString(date)).toBe("2025-08-10");
     });
 
     it("isSameDate returns true for same date", () => {
-        const d1 = new Date(2025, 7, 10);
-        const d2 = new Date(2025, 7, 10);
+        const d1 = new UTCDate(2025, 7, 10);
+        const d2 = new UTCDate(2025, 7, 10);
         expect(isSameDate(d1, d2)).toBe(true);
     });
 
     it("isSameDate returns false for different dates", () => {
-        const d1 = new Date(2025, 7, 10);
-        const d2 = new Date(2025, 7, 11);
+        const d1 = new UTCDate(2025, 7, 10);
+        const d2 = new UTCDate(2025, 7, 11);
         expect(isSameDate(d1, d2)).toBe(false);
     });
 });

@@ -3,15 +3,16 @@ import { getFlagEmoji } from "../../utils/countryFlags";
 import { formatDateString } from "../../utils/dateUtils";
 import { countryTimeZones } from "../../utils/timeZones";
 import type { CountryCode } from "../../data/countryNames";
+import { UTCDate } from "../../utils/UTCDate";
 
-function formatDateToYYYYMMDD(d: Date) {
+function formatDateToYYYYMMDD(d: UTCDate) {
     const y = d.getFullYear();
     const m = String(d.getMonth() + 1).padStart(2, "0");
     const day = String(d.getDate()).padStart(2, "0");
     return `${y}${m}${day}`;
 }
 
-function formatDateTimeUTC(d: Date) {
+function formatDateTimeUTC(d: UTCDate) {
     const y = d.getUTCFullYear();
     const m = String(d.getUTCMonth() + 1).padStart(2, "0");
     const day = String(d.getUTCDate()).padStart(2, "0");
@@ -36,14 +37,14 @@ export function buildICS(events: CalendarEvent[]) {
         "PRODID:-//holiday-calendar-full//EN",
     ];
 
-    const now = new Date();
+    const now = new UTCDate();
     const dtstamp = formatDateTimeUTC(now);
 
     for (const ev of events) {
         // parse date and build all-day event (DTSTART;VALUE=DATE and DTEND next day)
-        const d = new Date(`${ev.date}T00:00:00`);
+        const d = new UTCDate(`${ev.date}T00:00:00.000Z`);
         const dtstart = formatDateToYYYYMMDD(d);
-        const dNext = new Date(d);
+        const dNext = new UTCDate(d);
         dNext.setDate(dNext.getDate() + 1);
         const dtend = formatDateToYYYYMMDD(dNext);
 
@@ -180,7 +181,7 @@ export function parseICS(raw: string): CalendarEvent[] {
                 current.date = `${ymd.slice(0, 4)}-${ymd.slice(4, 6)}-${ymd.slice(6, 8)}`;
             } else {
                 // fallback: try to parse as Date (handles datetimes with timezone)
-                const parsed = new Date(dateRaw);
+                const parsed = new UTCDate(dateRaw);
                 if (!isNaN(parsed.getTime())) {
                     current.date = formatDateString(parsed);
                 }

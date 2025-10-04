@@ -5,6 +5,7 @@ import { renderHook, act } from "@testing-library/react";
 import { useCalendar } from "../hooks/useCalendar";
 import { allHolidays } from "../data/holidays_v2";
 import { convertEvents } from "../utils/convertEvents";
+import { UTCDate } from "../utils/UTCDate";
 
 describe("useCalendar", () => {
     beforeEach(() => {
@@ -13,14 +14,14 @@ describe("useCalendar", () => {
 
     it("returns current date and selected countries", () => {
         const { result } = renderHook(() => useCalendar(convertEvents(Object.values(allHolidays))));
-        expect(result.current.currentDate).toBeInstanceOf(Date);
+        expect(result.current.currentDate).toBeInstanceOf(UTCDate);
         expect(Array.isArray(result.current.selectedCountries)).toBe(true);
         expect(result.current.selectedCountries.length).toBeGreaterThan(0);
     });
 
     it("updates the current date when handleDateChange is called", () => {
         const { result } = renderHook(() => useCalendar(convertEvents(Object.values(allHolidays))));
-        const newDate = new Date("2025-12-25");
+        const newDate = new UTCDate("2025-12-25");
 
         act(() => {
             result.current.handleDateChange(newDate);
@@ -52,6 +53,7 @@ describe("useCalendar", () => {
     });
 
     it("calendarDays returns 42 days", () => {
+        window.location.hash = "date=2025-06-01&countries=LV";
         const { result } = renderHook(() => useCalendar(convertEvents(Object.values(allHolidays))));
         expect(Array.isArray(result.current.selectedMonthDays)).toBe(true);
         expect(result.current.selectedMonthDays).toHaveLength(42);
@@ -109,7 +111,7 @@ describe("useCalendar", () => {
     });
 
     it("check current date time zone is US/Eastern", () => {
-        const date = new Date("2025-01-01");
+        const date = new UTCDate("2025-01-01");
         expect(date.getTimezoneOffset()).toBe(300); // EST timezone offset
         expect(date.toISOString()).toBe("2025-01-01T00:00:00.000Z"); // 5 hours ahead of UTC
         expect(date.getUTCFullYear()).toBe(2025);

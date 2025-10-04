@@ -2,10 +2,11 @@ import React from "react";
 import CountryFilter, { type CountryFilterProps } from "../CountryFilter/CountryFilter";
 import { generateYears, getMonthName } from "../../utils/dateUtils";
 import styles from "./Controls.module.css";
+import { UTCDate } from "../../utils/UTCDate";
 
 interface ControlsProps extends CountryFilterProps {
-    selectedDate: Date;
-    onDateChange: (date: Date) => void;
+    selectedDate: UTCDate;
+    onDateChange: (date: UTCDate) => void;
 }
 
 const Controls: React.FC<ControlsProps> = (props) => {
@@ -29,7 +30,7 @@ const Controls: React.FC<ControlsProps> = (props) => {
                         value={selectedYear}
                         onChange={(e) => {
                             const newYear = parseInt(e.target.value);
-                            const updatedDate = new Date(selectedDate);
+                            const updatedDate = new UTCDate(selectedDate);
                             updatedDate.setFullYear(newYear);
                             onDateChange(updatedDate);
                         }}
@@ -48,7 +49,7 @@ const Controls: React.FC<ControlsProps> = (props) => {
                         value={selectedMonth}
                         onChange={(e) => {
                             const newMonth = parseInt(e.target.value);
-                            const updatedDate = new Date(selectedDate);
+                            const updatedDate = new UTCDate(selectedDate);
                             updatedDate.setMonth(newMonth);
                             onDateChange(updatedDate);
                         }}

@@ -5,10 +5,11 @@ import styles from "./EventsList.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags";
 import { useCallback } from "react";
 import { exportCalendarToFile } from "../EventListInput/generateICS";
+import type { UTCDate } from "../../utils/UTCDate";
 
 export type EventsListProps = {
     selectedYearDays: CalendarDayType[];
-    currentDate: Date;
+    currentDate: UTCDate;
     mode: "month" | "year";
 }
 

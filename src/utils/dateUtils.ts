@@ -1,3 +1,5 @@
+import { UTCDate } from "./UTCDate";
+
 export const monthNames = [
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
@@ -20,15 +22,19 @@ export const generateYears = (): number[] => {
     return Array.from({ length: 3 }, (_, i) => currentYear - 1 + i);
 };
 
-export const formatDateString = (date: Date): string => {
+export const formatDateString = (date: UTCDate): string => {
     return date.toISOString().split("T")[0];
 };
 
-export const getDayName = (date: Date): string => {
-    return fullDayNames[date.getUTCDay() === DayIndexes.Sunday ? 6 : date.getUTCDay() - 1];
+export function convertDayToEUFormat(dayOfWeek: number): number {
+    return dayOfWeek === DayIndexes.Sunday ? 7 : dayOfWeek;
 }
 
-export const isSameDate = (date1: Date, date2: Date): boolean => {
+export const getDayName = (date: UTCDate): string => {
+    return fullDayNames[convertDayToEUFormat(date.getUTCDay()) - 1]; // array indexing starts from 0
+}
+
+export const isSameDate = (date1: UTCDate, date2: UTCDate): boolean => {
     return date1.toDateString() === date2.toDateString();
 };
 
@@ -38,4 +44,8 @@ export const getDaysInMonth = (year: number, month: number): number => {
 
 export const getMonthName = (month: number): string => {
     return new Date(0, month).toLocaleString("en-US", { month: "long" });
+};
+
+export const getNextMonth = (num: number): number => {
+    return (num + 1) % 12;
 };

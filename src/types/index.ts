@@ -1,7 +1,8 @@
 import type { CountryCode, CountryName } from "../data/countryNames";
+import { UTCDate } from "../utils/UTCDate";
 
 export interface CalendarDay {
-    date: Date;
+    date: UTCDate;
     isCurrentMonth: boolean;
     isToday: boolean;
     isWeekend: boolean;
