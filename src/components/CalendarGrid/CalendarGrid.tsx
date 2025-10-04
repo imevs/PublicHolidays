@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { CalendarDay as CalendarDayType, type HolidayWithCountry } from "../../types";
 import CalendarDay from "../CalendarDay/CalendarDay";
 import {
-    DayIndexes,
+    convertDayToEUFormat,
     dayNames,
     formatDateString,
     getDaysInMonth,
@@ -13,11 +13,12 @@ import styles from "./CalendarGrid.module.css";
 import MonthNavigation from "../MonthNavigation/MonthNavigation";
 import { getFlagEmoji } from "../../utils/countryFlags";
 import { getLink } from "../../data/holidays_descriptions/getLink";
+import { UTCDate } from "../../utils/UTCDate";
 
 interface CalendarGridProps {
     selectedYearDays: CalendarDayType[];
     selectedMonthDays: CalendarDayType[];
-    currentDate: Date;
+    currentDate: UTCDate;
     mode: "month" | "year";
     onModeChange: (mode: "month" | "year") => void;
     onNavigateMonth: (direction: number) => void;
@@ -31,7 +32,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
     onModeChange,
     onNavigateMonth
 }) => {
-    const [selectedDay, setSelectedDay] = useState<Date | null>(null); // State for selected day in popup
+    const [selectedDay, setSelectedDay] = useState<UTCDate | null>(null); // State for selected day in popup
     const [highlightedMonth, setHighlightedMonth] = useState<number | null>(null); // State for highlighted month
     const yearGridRef = useRef<HTMLDivElement | null>(null); // Ref for the year grid container
     const [countryData, setCountryData] = useState({});
@@ -98,8 +99,9 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                 {Array.from({ length: 12 }, (_, month) => {
                     const daysInMonth = getDaysInMonth(currentYear, month);
                     const monthName = getMonthName(month);
-                    const firstDay = new Date(Date.UTC(currentYear, month, 1));
-                    const dayOfWeek = firstDay.getUTCDay() === DayIndexes.Sunday ? 6 : firstDay.getUTCDay() - 1;
+                    const firstDay = new UTCDate(Date.UTC(currentYear, month, 1));
+                    const dayOfWeek = convertDayToEUFormat(firstDay.getUTCDay()) - 1;
+                    const emptyCells = Array.from({ length: dayOfWeek }, (_, day) => <div key={day} />);
 
                     return (
                         <div
@@ -117,9 +119,9 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                                 {monthName}
                             </div>
                             <div className={styles.monthGrid}>
-                                {Array.from({ length: dayOfWeek }, (_, day) => <div key={day} />)}
+                                {emptyCells}
                                 {Array.from({ length: daysInMonth }, (_, day) => {
-                                    const date = new Date(Date.UTC(currentYear, month, day + 1));
+                                    const date = new UTCDate(Date.UTC(currentYear, month, day + 1));
                                     const currentDay = selectedYearDays.find(d => isSameDate(d.date, date));
                                     const dayHolidays = currentDay?.events || [];
                                     const seen = new Set<string>();

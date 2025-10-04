@@ -1,9 +1,10 @@
 import React from "react";
 import { monthNames } from "../../utils/dateUtils";
 import styles from "./MonthNavigation.module.css";
+import type { UTCDate } from "../../utils/UTCDate";
 
 interface MonthNavigationProps {
-    currentDate: Date;
+    currentDate: UTCDate;
     onNavigateYear: () => void;
     onNavigateMonth: (direction: number) => void;
 }

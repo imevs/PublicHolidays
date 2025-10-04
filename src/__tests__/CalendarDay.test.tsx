@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import CalendarDay from "../components/CalendarDay/CalendarDay";
+import { UTCDate } from "../utils/UTCDate";
 
 describe("CalendarDay", () => {
     it("renders the day number", () => {
@@ -11,7 +12,7 @@ describe("CalendarDay", () => {
             isToday: false,
             isWeekend: false,
             events: [],
-            date: new Date(2025, 7, 10),
+            date: new UTCDate(2025, 7, 10),
         };
         render(<CalendarDay day={day} />);
         expect(screen.getByText("10")).toBeInTheDocument();
@@ -26,7 +27,7 @@ describe("CalendarDay", () => {
             isToday: true,
             isWeekend: false,
             events: [],
-            date: new Date(2025, 7, 15),
+            date: new UTCDate(2025, 7, 15),
         };
         render(<CalendarDay day={day} />);
         expect(screen.getByText("15")).toBeInTheDocument();
@@ -40,7 +41,7 @@ describe("CalendarDay", () => {
             isWeekend: false,
             isToday: false,
             events: [],
-            date: new Date(2025, 6, 1),
+            date:  new UTCDate(2025, 6, 1),
         };
         render(<CalendarDay day={day} />);
         expect(screen.getByText("1")).toBeInTheDocument();
@@ -55,7 +56,7 @@ describe("CalendarDay", () => {
             events: [
                 { kind: "publicHoliday" as const, type: [""], name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia" as const, countryCode: "LV" as const },
             ],
-            date: new Date(2025, 11, 25),
+            date:  new UTCDate(2025, 11, 25),
         };
         render(<CalendarDay day={day} />);
         expect(screen.getByText(/Latvia: Christmas/)).toBeInTheDocument();
@@ -70,7 +71,7 @@ describe("CalendarDay", () => {
             events: [
                 { kind: "publicHoliday" as const, type: [""], name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia" as const, countryCode: "LV" as const },
             ],
-            date: new Date(2025, 11, 25),
+            date: new UTCDate(2025, 11, 25),
         };
         render(<CalendarDay day={day} />);
         const holidayDiv = screen.getByText(/Latvia: Christmas/);
