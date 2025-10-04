@@ -33,48 +33,36 @@ export class UTCDate {
         return this.date.getTimezoneOffset();
     }
 
+    getHours(): number {
+        return this.date.getUTCHours();
+    }
+
+    getMinutes(): number {
+        return this.date.getUTCMinutes();
+    }
+
+    getSeconds(): number {
+        return this.date.getUTCSeconds();
+    }
+
     getTime(): number {
         return this.date.getTime();
     }
 
-    getUTCFullYear(): number {
-        return this.date.getUTCFullYear();
-    }
-
-    getFullYear(): number {
-        return this.date.getFullYear();
-    }
-
-    getUTCMonth(): number {
-        return this.date.getUTCMonth();
-    }
-
-    getMonth(): number {
-        return this.date.getMonth();
-    }
-
-    getUTCDate(): number {
-        return this.date.getUTCDate();
-    }
-
-    getUTCDay(): number {
+    getDay(): number {
         return this.date.getUTCDay();
     }
 
+    getFullYear(): number {
+        return this.date.getUTCFullYear();
+    }
+
+    getMonth(): number {
+        return this.date.getUTCMonth();
+    }
+
     getDate(): number {
-        return this.date.getDate();
-    }
-
-    getUTCHours(): number {
-        return this.date.getUTCHours();
-    }
-
-    getUTCMinutes(): number {
-        return this.date.getUTCMinutes();
-    }
-
-    getUTCSeconds(): number {
-        return this.date.getUTCSeconds();
+        return this.date.getUTCDate();
     }
 
     toDateString(): string {
@@ -82,31 +70,15 @@ export class UTCDate {
     }
 
     setFullYear(year: number): void {
-        this.date.setFullYear(year);
-    }
-
-    setUTCFullYear(year: number): void {
         this.date.setUTCFullYear(year);
     }
 
     setMonth(month: number): void {
-        this.date.setMonth(month);
-    }
-
-    setUTCMonth(month: number): void {
         this.date.setUTCMonth(month);
     }
 
     setDate(date: number): void {
-        this.date.setDate(date);
-    }
-
-    setUTCDate(date: number): void {
         this.date.setUTCDate(date);
-    }
-
-    setUTCHours(hours: number): void {
-        this.date.setUTCHours(hours);
     }
 
     valueOf(): number {

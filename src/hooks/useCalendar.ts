@@ -48,23 +48,23 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     };
 
     const selectedMonthDays = useMemo((): CalendarDay[] => {
-        const year = currentDate.getUTCFullYear();
-        const month = currentDate.getUTCMonth();
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth();
         const firstDay = new UTCDate(Date.UTC(year, month, 1));
         const startDate = new UTCDate(firstDay);
-        startDate.setUTCDate(startDate.getUTCDate() + 1 - convertDayToEUFormat(firstDay.getUTCDay()));
+        startDate.setDate(startDate.getDate() + 1 - convertDayToEUFormat(firstDay.getDay()));
 
         const days: CalendarDay[] = [];
         const today = new UTCDate();
 
         for (let i = 0; i < 42; i++) {
             const date = new UTCDate(startDate);
-            date.setUTCDate(startDate.getUTCDate() + i);
-            if (date.getUTCDay() === DayIndexes.Monday && date.getUTCMonth() === getNextMonth(month)) {
+            date.setDate(startDate.getDate() + i);
+            if (date.getDay() === DayIndexes.Monday && date.getMonth() === getNextMonth(month)) {
                 break;
             }
 
-            const isCurrentMonth = date.getUTCMonth() === month;
+            const isCurrentMonth = date.getMonth() === month;
             const isToday = isSameDate(date, today);
             const holidays = getHolidaysForDate(date);
 
@@ -72,11 +72,11 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
                 date,
                 isCurrentMonth,
                 isToday,
-                isWeekend: [DayIndexes.Saturday, DayIndexes.Sunday].includes(date.getUTCDay()),
+                isWeekend: [DayIndexes.Saturday, DayIndexes.Sunday].includes(date.getDay()),
                 events: holidays,
-                dayNumber: date.getUTCDate()
+                dayNumber: date.getDate()
             });
-            if (date.getUTCDay() === DayIndexes.Sunday && date.getUTCMonth() === getNextMonth(month)) {
+            if (date.getDay() === DayIndexes.Sunday && date.getMonth() === getNextMonth(month)) {
                 break;
             }
         }
@@ -85,7 +85,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     }, [currentDate, selectedCountries, holidaysData]);
 
     const selectedYearDays = useMemo((): CalendarDay[] => {
-        const currentYear = currentDate.getUTCFullYear();
+        const currentYear = currentDate.getFullYear();
         const firstDay = new UTCDate(Date.UTC(currentYear, 0, 1, 12, 0, 0)); // Use 12:00 as a starting time so day zone changes do not affect dates
         const startDate = new UTCDate(firstDay);
 
@@ -97,13 +97,13 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
             date.setDate(i);
 
             const isToday = isSameDate(date, today);
-            const isCurrentYear = date.getUTCFullYear() === currentYear;
+            const isCurrentYear = date.getFullYear() === currentYear;
             const holidays = isCurrentYear ? getHolidaysForDate(date) : [];
 
             days.push({
                 date,
                 isCurrentMonth: false,
-                isWeekend: [DayIndexes.Saturday, DayIndexes.Sunday].includes(date.getUTCDay()),
+                isWeekend: [DayIndexes.Saturday, DayIndexes.Sunday].includes(date.getDay()),
                 isToday,
                 events: holidays,
                 dayNumber: date.getDate()
@@ -115,7 +115,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
 
     const navigateMonth = (nextMonth: number): void => {
         const newDate = new UTCDate(currentDate);
-        newDate.setUTCMonth(nextMonth);
+        newDate.setMonth(nextMonth);
         const params = new URLSearchParams(window.location.hash.replace("#", ""));
         params.set("date", dateFormatter.format(newDate.valueOf()));
         window.location.hash = decodeURIComponent(params.toString());

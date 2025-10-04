@@ -47,7 +47,7 @@ export function EventsList({
             Events list
         </h2>
         {selectedYearDays
-            .filter(day => mode === "month" ? day.date.getUTCMonth() === currentDate.getUTCMonth() : true)
+            .filter(day => mode === "month" ? day.date.getMonth() === currentDate.getMonth() : true)
             .filter(day => day.events.length)
             .map(date => (
                 <div className={styles.dateEvents}>

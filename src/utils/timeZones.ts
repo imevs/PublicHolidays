@@ -53,7 +53,7 @@ export const countryTimeZonesFallBack: Partial<Record<CountryCode, string>> = {
 };
   
 // Function to get UTC offset (e.g., "+01", "-03") for a time zone
-function getUTCOffset(timeZone: string, reserveTz: string | undefined) {
+function getOffset(timeZone: string, reserveTz: string | undefined) {
     const date = new Date()
     let formatter: Intl.DateTimeFormat | undefined = undefined;
     try {
@@ -87,7 +87,7 @@ function getUTCOffset(timeZone: string, reserveTz: string | undefined) {
 const europeOffsets = Object.entries(countryTimeZones).map(([countryCode, tz]) => ({
     countryCode: countryCode as CountryCode,
     timeZone: tz,
-    offset: getUTCOffset(tz, countryTimeZonesFallBack[countryCode as CountryCode])
+    offset: getOffset(tz, countryTimeZonesFallBack[countryCode as CountryCode])
 }));
 
 export const countryOffsets = europeOffsets.reduce((acc, { countryCode, offset }) => {
