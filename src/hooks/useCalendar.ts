@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { CalendarDay, CalendarEvent } from "../types";
 import { convertDayToEUFormat, DayIndexes, formatDateString, getNextMonth, isSameDate } from "../utils/dateUtils";
 import type { CountryCode } from "../data/countryNames";
@@ -12,7 +12,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     const [mode, setMode] = useState<"month" | "year">("year");
     const [showAllCountries, setShowAllCountries] = useState(false);
 
-    useEffect(() => {
+    const loadStateFromSearchParams = useCallback(() => {
         const urlSearchParams = new URLSearchParams(window.location.hash.replace("#", ""));
         const countries = urlSearchParams.get("countries") ?? "";
         if (countries) {
@@ -28,6 +28,14 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         }
         const showAll = urlSearchParams.get("all") as "1" | "0";
         setShowAllCountries(showAll === "1");
+    }, []);
+
+    useEffect(() => {
+        loadStateFromSearchParams();
+        window.addEventListener("hashchange", loadStateFromSearchParams);
+        return () => {
+            window.removeEventListener("hashchange", loadStateFromSearchParams);
+        };
     }, []);
 
     const getHolidaysForDate = (date: UTCDate): CalendarEvent[] => {
