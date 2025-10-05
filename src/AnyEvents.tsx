@@ -42,6 +42,7 @@ const AnyEvents: React.FC = () => {
                     onModeChange={handleModeChange}
                     onNavigateMonth={navigateMonth}
                 />
+
                 <EventListInput setHolidaysData={setHolidaysData} />
             </div>
         </div>

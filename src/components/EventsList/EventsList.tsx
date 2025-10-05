@@ -1,10 +1,10 @@
 import { CalendarDay as CalendarDayType } from "../../types";
-import { formatDateString, getDayName } from "../../utils/dateUtils";
+import { formatDateString, formatDateToReadable } from "../../utils/dateUtils";
 
 import styles from "./EventsList.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags";
 import { useCallback } from "react";
-import { exportCalendarToFile } from "../EventListInput/generateICS";
+import { exportCalendarToFile } from "../../utils/generateICS";
 import type { UTCDate } from "../../utils/UTCDate";
 
 export type EventsListProps = {
@@ -43,21 +43,21 @@ export function EventsList({
     return <div className={styles.eventsList}>
         <button className={styles.actionButton} onClick={exportCalendar}>Export to .ics</button>
         <button className={styles.actionButton} onClick={editEvents} style={{ right: 120 }}>Edit events</button>
-        <h2 style={{ marginBottom: 15 }}>
-            Events list
-        </h2>
         {selectedYearDays
             .filter(day => mode === "month" ? day.date.getMonth() === currentDate.getMonth() : true)
             .filter(day => day.events.length)
             .map(date => (
                 <div className={styles.dateEvents}>
+                    <div className={styles.eventsDate}>
+                        <b>{formatDateToReadable(date.date)}</b>
+                    </div>
                     {date.events.map(event => (
                         event.kind === "publicHoliday"
                             ? <div className={styles.events}>
-                                {formatDateString(date.date)} ({getDayName(date.date)}) {getFlagEmoji(event.countryCode)} {event.country}: {event.name}
+                                {getFlagEmoji(event.countryCode)} {event.country}: {event.name}
                             </div>
                             : <div className={styles.events}>
-                                {formatDateString(date.date)} {event.icon} {event.name}
+                                {event.icon} {event.name}
                             </div>
                     ))}
                 </div>

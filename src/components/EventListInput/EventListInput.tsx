@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import { CalendarEvent } from "../../types";
 import styles from "./EventListInput.module.css";
-import { exportCalendarToFile, parseICS } from "./generateICS";
+import { exportCalendarToFile, parseICS } from "../../utils/generateICS";
 import { getFlagEmoji } from "../../utils/countryFlags";
 
 function parseData(input: string): CalendarEvent[] {

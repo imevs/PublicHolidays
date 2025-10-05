@@ -6,14 +6,10 @@ import "./index.css";
 import { createBrowserRouter, Outlet } from "react-router";
 import { RouterProvider } from "react-router/dom";
 
-function Root() {
-    return <Outlet />;
-}
-
 const router = createBrowserRouter([
     {
         path: "/PublicHolidays",
-        Component: Root,
+        Component: Outlet,
         children: [
             {
                 index: true,

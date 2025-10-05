@@ -1,5 +1,5 @@
 export class UTCDate {
-    public date: Date;
+    private date: Date;
 
     constructor(d?: UTCDate | string) {
         if (d instanceof UTCDate) {
