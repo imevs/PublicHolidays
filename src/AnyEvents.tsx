@@ -4,8 +4,9 @@ import CalendarGrid from "./components/CalendarGrid/CalendarGrid";
 import styles from "./Holidays.module.css";
 import { CalendarEvent } from "./types";
 import { EventListInput } from "./components/EventListInput/EventListInput";
+import Controls from "./components/Controls/Controls";
 
-const FamilyEvents: React.FC = () => {
+const AnyEvents: React.FC = () => {
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
 
     const {
@@ -15,6 +16,7 @@ const FamilyEvents: React.FC = () => {
         mode,
         navigateMonth,
         handleModeChange,
+        handleDateChange,
     } = useCalendar(holidaysData);
     return (
         <div className={styles.app}>
@@ -27,6 +29,11 @@ const FamilyEvents: React.FC = () => {
             </div>
 
             <div className={styles.container}>
+                <Controls
+                    selectedDate={currentDate}
+                    onDateChange={handleDateChange}
+                />
+
                 <CalendarGrid
                     selectedYearDays={selectedYearDays}
                     selectedMonthDays={selectedMonthDays}
@@ -41,4 +48,4 @@ const FamilyEvents: React.FC = () => {
     );
 };
 
-export default FamilyEvents;
+export default AnyEvents;

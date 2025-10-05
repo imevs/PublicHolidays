@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom/client";
 import Holidays from "./Holidays.tsx";
-import FamilyEvents from "./FamilyEvents.tsx";
+import AnyEvents from "./AnyEvents.tsx";
 import "./index.css";
 
 import { createBrowserRouter, Outlet } from "react-router";
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "Events",
-                Component: FamilyEvents,
+                Component: AnyEvents,
             },
         ],
     },

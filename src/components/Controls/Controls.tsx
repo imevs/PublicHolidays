@@ -1,12 +1,12 @@
 import React from "react";
-import CountryFilter, { type CountryFilterProps } from "../CountryFilter/CountryFilter";
 import { generateYears, getMonthName } from "../../utils/dateUtils";
 import styles from "./Controls.module.css";
 import { UTCDate } from "../../utils/UTCDate";
 
-interface ControlsProps extends CountryFilterProps {
+interface ControlsProps {
     selectedDate: UTCDate;
     onDateChange: (date: UTCDate) => void;
+    extraControls?: React.ReactElement;
 }
 
 const Controls: React.FC<ControlsProps> = (props) => {
@@ -62,7 +62,7 @@ const Controls: React.FC<ControlsProps> = (props) => {
                     </select>
                 </div>
 
-                <CountryFilter {...props} />
+                {props.extraControls}
             </div>
         </div>
     );

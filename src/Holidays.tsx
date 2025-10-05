@@ -6,6 +6,7 @@ import styles from "./Holidays.module.css";
 import { CalendarEvent } from "./types";
 import { convertEvents } from "./utils/convertEvents";
 import { EventsList } from "./components/EventsList/EventsList";
+import CountryFilter from "./components/CountryFilter/CountryFilter";
 
 const Holidays: React.FC = () => {
     useEffect(() => {
@@ -41,12 +42,14 @@ const Holidays: React.FC = () => {
 
             <div className={styles.container}>
                 <Controls
-                    showAllCountries={showAllCountries}
-                    setShowAllCountries={setShowAllCountries}
                     selectedDate={currentDate}
-                    selectedCountries={selectedCountries}
                     onDateChange={handleDateChange}
-                    onToggleCountry={toggleCountry}
+                    extraControls={<CountryFilter
+                        showAllCountries={showAllCountries}
+                        setShowAllCountries={setShowAllCountries}
+                        selectedCountries={selectedCountries}
+                        onToggleCountry={toggleCountry}
+                    />}
                 />
 
                 <CalendarGrid
