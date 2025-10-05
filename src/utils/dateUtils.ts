@@ -18,7 +18,7 @@ export const DayIndexes = {
 };
 
 export const generateYears = (): number[] => {
-    const currentYear = new Date().getFullYear();
+    const currentYear = new UTCDate().getFullYear();
     return Array.from({ length: 3 }, (_, i) => currentYear - 1 + i);
 };
 
@@ -49,3 +49,20 @@ export const getMonthName = (month: number): string => {
 export const getNextMonth = (num: number): number => {
     return (num + 1) % 12;
 };
+
+export function formatDateToReadable(date: UTCDate) {
+    const dateFormatter = new Intl.DateTimeFormat("en-US", {
+        month: "long",
+        day: "numeric",
+        year: "numeric",
+    });
+
+    const weekdayFormatter = new Intl.DateTimeFormat("en-US", {
+        weekday: "long",
+    });
+
+    const formattedDate = dateFormatter.format(date.valueOf());
+    const weekday = weekdayFormatter.format(date.valueOf());
+
+    return `${formattedDate} (${weekday})`;
+}

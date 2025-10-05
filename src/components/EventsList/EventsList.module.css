@@ -3,9 +3,22 @@
     position: relative;
 }
 
+.dateEvents:first-of-type {
+    border-top: none;
+}
+
+.eventsDate {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .dateEvents {
     margin-bottom: 10px;
     border-top: 1px solid #e4e4e4;
+}
+
+.events {
+    padding-left: 20px;
 }
 
 .actionButton {

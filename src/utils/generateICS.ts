@@ -1,9 +1,9 @@
-import type { CalendarEvent } from "../../types";
-import { getFlagEmoji } from "../../utils/countryFlags";
-import { formatDateString } from "../../utils/dateUtils";
-import { countryTimeZones } from "../../utils/timeZones";
-import type { CountryCode } from "../../data/countryNames";
-import { UTCDate } from "../../utils/UTCDate";
+import type { CalendarEvent } from "../types";
+import { getFlagEmoji } from "./countryFlags";
+import { formatDateString } from "./dateUtils";
+import { countryTimeZones } from "./timeZones";
+import type { CountryCode } from "../data/countryNames";
+import { UTCDate } from "./UTCDate";
 
 function formatDateToYYYYMMDD(d: UTCDate) {
     const y = d.getFullYear();

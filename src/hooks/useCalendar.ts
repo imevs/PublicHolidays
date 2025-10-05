@@ -32,19 +32,16 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
 
     const getHolidaysForDate = (date: UTCDate): CalendarEvent[] => {
         const dateStr = formatDateString(date);
-        const holidays: CalendarEvent[] = [];
-
-        holidays.push(...holidaysData.filter(h => h.kind === "other" && h.date === dateStr));
-
-        selectedCountries.forEach(countryCode => {
-            holidays.push(...holidaysData.filter(h =>
-                h.kind === "publicHoliday" &&
-                h.countryCode === countryCode &&
-                h.type?.includes("National holiday") === true &&
-                h.date === dateStr));
-        });
-
-        return holidays;
+        return [
+            ...holidaysData.filter(h => h.kind === "other" && h.date === dateStr),
+            ...selectedCountries.flatMap(countryCode =>
+                holidaysData.filter(h =>
+                    h.kind === "publicHoliday" && h.countryCode === countryCode &&
+                    h.type?.includes("National holiday") === true &&
+                    h.date === dateStr
+                ),
+            ),
+        ];
     };
 
     const selectedMonthDays = useMemo((): CalendarDay[] => {
