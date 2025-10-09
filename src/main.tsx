@@ -13,11 +13,10 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                path: "Holidays",
                 Component: Holidays,
             },
             {
-                path: "Events",
+                path: "EditEvents",
                 Component: AnyEvents,
             },
         ],
