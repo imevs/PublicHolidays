@@ -1,5 +1,5 @@
 import type { CountryCode, CountryName } from "../data/countryNames";
-import { UTCDate } from "../utils/UTCDate";
+import { type DateString, UTCDate } from "../utils/UTCDate";
 
 export interface CalendarDay {
     date: UTCDate;
@@ -13,7 +13,7 @@ export interface CalendarDay {
 export type CalendarEvent = HolidayWithCountry | OtherEvent;
 
 export interface HolidayWithCountry {
-    date: string;
+    date: DateString | null;
     name: string;
     localName: string;
     kind: "publicHoliday";
@@ -23,7 +23,7 @@ export interface HolidayWithCountry {
 }
 
 export interface OtherEvent {
-    date: string;
+    date: DateString | null;
     name: string;
     icon: string;
     localName: string;

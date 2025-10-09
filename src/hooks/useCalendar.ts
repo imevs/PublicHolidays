@@ -2,7 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { CalendarDay, CalendarEvent } from "../types";
 import { convertDayToEUFormat, DayIndexes, formatDateString, getNextMonth, isSameDate } from "../utils/dateUtils";
 import type { CountryCode } from "../data/countryNames";
-import { UTCDate } from "../utils/UTCDate";
+import { type DateString, UTCDate } from "../utils/UTCDate";
 
 const dateFormatter = new Intl.DateTimeFormat("en-CA"); // Canadian English uses YYYY-MM-DD format
 
@@ -20,7 +20,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         }
         const date = urlSearchParams.get("date") ?? "";
         if (date) {
-            setCurrentDate(new UTCDate(date));
+            setCurrentDate(new UTCDate(date as DateString));
         }
         const urlMode = urlSearchParams.get("mode") as "month" | "year";
         if (urlMode === "month" || urlMode === "year") {

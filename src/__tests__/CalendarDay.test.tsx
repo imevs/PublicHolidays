@@ -54,7 +54,7 @@ describe("CalendarDay", () => {
             isToday: false,
             isWeekend: false,
             events: [
-                { kind: "publicHoliday" as const, type: [""], name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia" as const, countryCode: "LV" as const },
+                { kind: "publicHoliday" as const, type: [""], name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25" as const, country: "Latvia" as const, countryCode: "LV" as const },
             ],
             date:  new UTCDate("2025-11-25"),
         };
@@ -69,7 +69,7 @@ describe("CalendarDay", () => {
             isWeekend: false,
             isToday: false,
             events: [
-                { kind: "publicHoliday" as const, type: [""], name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25", country: "Latvia" as const, countryCode: "LV" as const },
+                { kind: "publicHoliday" as const, type: [""], name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25" as const, country: "Latvia" as const, countryCode: "LV" as const },
             ],
             date: new UTCDate("2025-11-25"),
         };

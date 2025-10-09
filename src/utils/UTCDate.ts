@@ -1,7 +1,9 @@
+// type Digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+export type DateString = `${number | string}-${number | string}-${number | string}`;
 export class UTCDate {
     private date: Date;
 
-    constructor(d?: UTCDate | string) {
+    constructor(d?: UTCDate | DateString) {
         if (d instanceof UTCDate) {
             this.date = new Date(d.valueOf());
         } else if (typeof d === "string") {
