@@ -94,7 +94,7 @@ describe("generateICS", () => {
     describe("buildICS", () => {
         it("produces a VCALENDAR with a VEVENT and correct DTSTART/DTEND for all-day event", () => {
             const ev = {
-                date: "2025-12-25",
+                date: "2025-12-25" as const,
                 icon: "🎄",
                 name: "Christmas",
                 localName: "",
@@ -122,7 +122,7 @@ describe("generateICS", () => {
             const name = "A,B;C\\D\nE";
             const localName = "L1,L2;L3\\L4\nL5";
             const ev = {
-                date: "2023-07-04",
+                date: "2023-07-04" as const,
                 icon: "🏳️",
                 name,
                 localName,
@@ -143,7 +143,7 @@ describe("generateICS", () => {
 
         it("uses localName as DESCRIPTION when provided and includes icon in SUMMARY", () => {
             const ev = {
-                date: "2024-01-01",
+                date: "2024-01-01" as const,
                 icon: "✨",
                 name: "New Year",
                 localName: "Neujahr",

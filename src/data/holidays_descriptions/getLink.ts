@@ -1,7 +1,7 @@
 import type { Description } from "./all";
 import type { CountryName } from "../countryNames";
 
-export function getLink(date: string | undefined, country: CountryName, name: string, descriptions: Record<string, Description>): string | undefined {
+export function getLink(date: string | undefined | null, country: CountryName, name: string, descriptions: Record<string, Description>): string | undefined {
     if (Object.keys(descriptions).length === 0) {
         return undefined;
     }

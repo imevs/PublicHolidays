@@ -1,4 +1,4 @@
-import { UTCDate } from "./UTCDate";
+import { type DateString, UTCDate } from "./UTCDate";
 
 export const monthNames = [
     "January", "February", "March", "April", "May", "June",
@@ -22,8 +22,8 @@ export const generateYears = (): number[] => {
     return Array.from({ length: 3 }, (_, i) => currentYear - 1 + i);
 };
 
-export const formatDateString = (date: UTCDate): string => {
-    return date.toISOString().split("T")[0];
+export const formatDateString = (date: UTCDate): DateString => {
+    return date.toISOString().split("T")[0] as unknown as DateString;
 };
 
 export function convertDayToEUFormat(dayOfWeek: number): number {

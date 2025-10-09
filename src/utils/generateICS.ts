@@ -3,7 +3,7 @@ import { getFlagEmoji } from "./countryFlags";
 import { formatDateString } from "./dateUtils";
 import { countryTimeZones } from "./timeZones";
 import type { CountryCode } from "../data/countryNames";
-import { UTCDate } from "./UTCDate";
+import { type DateString, UTCDate } from "./UTCDate";
 
 function formatDateToYYYYMMDD(d: UTCDate) {
     const y = d.getFullYear();
@@ -42,6 +42,9 @@ export function buildICS(events: CalendarEvent[]) {
 
     for (const ev of events) {
         // parse date and build all-day event (DTSTART;VALUE=DATE and DTEND next day)
+        if (!ev.date) {
+            continue;
+        }
         const d = new UTCDate(ev.date);
         const dtstart = formatDateToYYYYMMDD(d);
         const dNext = new UTCDate(d);
@@ -120,7 +123,7 @@ export function parseICS(raw: string): CalendarEvent[] {
             if (current) {
                 if (current.kind === "other") {
                     events.push({
-                        date: current.date || "",
+                        date: current.date ?? null,
                         name: current.name || "",
                         localName: current.localName ?? "",
                         kind: "other",
@@ -128,7 +131,7 @@ export function parseICS(raw: string): CalendarEvent[] {
                     });
                 } else {
                     events.push({
-                        date: current.date || "",
+                        date: current.date ?? null,
                         name: current.name || "",
                         localName: current.localName ?? "",
                         kind: "publicHoliday",
@@ -181,7 +184,7 @@ export function parseICS(raw: string): CalendarEvent[] {
                 current.date = `${ymd.slice(0, 4)}-${ymd.slice(4, 6)}-${ymd.slice(6, 8)}`;
             } else {
                 // fallback: try to parse as Date (handles datetimes with timezone)
-                const parsed = new UTCDate(dateRaw);
+                const parsed = new UTCDate(dateRaw as DateString);
                 if (!isNaN(parsed.getTime())) {
                     current.date = formatDateString(parsed);
                 }

@@ -4,6 +4,7 @@ import { CalendarEvent } from "../../types";
 import styles from "./EventListInput.module.css";
 import { exportCalendarToFile, parseICS } from "../../utils/generateICS";
 import { getFlagEmoji } from "../../utils/countryFlags";
+import type { DateString } from "../../utils/UTCDate";
 
 function parseData(input: string): CalendarEvent[] {
     return input.split("\n")
@@ -16,7 +17,7 @@ function parseData(input: string): CalendarEvent[] {
             return {
                 name: description,
                 icon: isIcon(icon) ? icon : "",
-                date: date,
+                date: date as DateString,
                 kind: "other" as const,
                 localName: description,
             };
@@ -41,17 +42,17 @@ const defaultData = `
 
 function validateLine(line: string): { valid: boolean; error?: string } {
     const trimmed = line.trim();
-    if (!trimmed) return { valid: false, error: "Empty line" };
+    if (!trimmed) { return { valid: false, error: "Empty line" }; }
 
     const parts = trimmed.split(/\s+/);
-    if (parts.length < 2) return { valid: false, error: "Expect at least date and name" };
+    if (parts.length < 2) { return { valid: false, error: "Expect at least date and name" }; }
 
     const date = parts[0];
-    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-    if (!dateRegex.test(date)) return { valid: false, error: "Date must be YYYY-MM-DD" };
+    const dateRegex = /^(\d{4}-)?\d{2}-\d{2}$/;
+    if (!dateRegex.test(date)) { return { valid: false, error: "Date must be YYYY-MM-DD or MM-DD" }; }
 
     const d = new Date(date);
-    if (Number.isNaN(d.getTime())) return { valid: false, error: "Invalid date" };
+    if (Number.isNaN(d.getTime())) { return { valid: false, error: "Invalid date" }; }
     return { valid: true };
 }
 
