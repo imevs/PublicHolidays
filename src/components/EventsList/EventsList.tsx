@@ -32,7 +32,7 @@ export function EventsList({
                 });
             });
         localStorage.setItem("holidaysData", dataText);
-        document.location = "/PublicHolidays/Events";
+        document.location = "/PublicHolidays/EditEvents";
     }, [selectedYearDays]);
 
     const exportCalendar = useCallback(() => {
