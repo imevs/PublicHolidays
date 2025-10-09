@@ -1,19 +1,36 @@
 // type Digit = "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
-export type DateString = `${number | string}-${number | string}-${number | string}`;
+type DatePart = number | string;
+export type DateString = DateTwoParts | DateThreeParts;
+export type DateTwoParts = `${DatePart}-${DatePart}`;
+export type DateThreeParts = `${DatePart}-${DatePart}-${DatePart}`;
 export class UTCDate {
+    protected isYearDefined = true;
     private date: Date;
 
-    constructor(d?: UTCDate | DateString) {
+    constructor(d?: UTCDate | DateThreeParts) {
         if (d instanceof UTCDate) {
             this.date = new Date(d.valueOf());
         } else if (typeof d === "string") {
             // "2025-12-25T00:00:00.000Z"
-            const [year, month, day] = d.split("T")[0].split("-");
-            // Use 12:00 as a starting time so day zone changes do not affect dates
-            this.date = new Date(Date.UTC(Number(year), Number(month) - 1, Number(day), 12));
+            const parts = d.split("T")[0].split("-");
+            if (parts.length === 3) {
+                const [year, month, day] = parts;
+                // Use 12:00 as a starting time so day zone changes do not affect dates
+                this.date = new Date(Date.UTC(Number(year), Number(month) - 1, Number(day), 12));
+            } else {
+                const [month, day] = parts;
+                // Use 12:00 as a starting time so day zone changes do not affect dates
+                this.date = new Date(Date.UTC(2025, Number(month) - 1, Number(day), 12));
+            }
         } else {
             this.date = new Date();
         }
+    }
+
+    static fromMonthAndDay(d: DateString, defaultYear: number): UTCDate {
+        const r = new UTCDate(d.split("-").length === 3 ? d as DateThreeParts : `${defaultYear}-${d}`);
+        r.isYearDefined = d.split("-").length === 3;
+        return r;
     }
 
     toISOString(): string {

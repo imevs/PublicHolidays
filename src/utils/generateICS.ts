@@ -45,7 +45,7 @@ export function buildICS(events: CalendarEvent[]) {
         if (!ev.date) {
             continue;
         }
-        const d = new UTCDate(ev.date);
+        const d = UTCDate.fromMonthAndDay(ev.date, 2025);
         const dtstart = formatDateToYYYYMMDD(d);
         const dNext = new UTCDate(d);
         dNext.setDate(dNext.getDate() + 1);
@@ -184,7 +184,7 @@ export function parseICS(raw: string): CalendarEvent[] {
                 current.date = `${ymd.slice(0, 4)}-${ymd.slice(4, 6)}-${ymd.slice(6, 8)}`;
             } else {
                 // fallback: try to parse as Date (handles datetimes with timezone)
-                const parsed = new UTCDate(dateRaw as DateString);
+                const parsed = UTCDate.fromMonthAndDay(dateRaw as DateString, 2025);
                 if (!isNaN(parsed.getTime())) {
                     current.date = formatDateString(parsed);
                 }
