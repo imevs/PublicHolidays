@@ -6,21 +6,29 @@ import { exportCalendarToFile, parseICS } from "../../utils/generateICS";
 import { getFlagEmoji } from "../../utils/countryFlags";
 import type { DateString } from "../../utils/UTCDate";
 
+const yearsRange = [2023, 2024, 2025, 2026, 2027];
+
 function parseData(input: string): CalendarEvent[] {
     return input.split("\n")
         .map(s => s.trim())
         .filter(s => s.length)
-        .map(s => {
+        .flatMap(s => {
             const parts = s.split(" ");
             const [date, icon, ...name] = parts;
             const description = isIcon(icon) ? name.join(" ") : icon + " " + name.join(" ");
-            return {
+            return date.split("-").length === 3 ? {
                 name: description,
                 icon: isIcon(icon) ? icon : "",
                 date: date as DateString,
                 kind: "other" as const,
                 localName: description,
-            };
+            } : yearsRange.map(year => ({
+                name: description,
+                icon: isIcon(icon) ? icon : "",
+                date: `${year}-${date}`,
+                kind: "other" as const,
+                localName: description,
+            }));
         });
 }
 
