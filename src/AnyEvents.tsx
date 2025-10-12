@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useCalendar } from "./hooks/useCalendar";
 import CalendarGrid from "./components/CalendarGrid/CalendarGrid";
 import styles from "./Holidays.module.css";
-import { CalendarEvent } from "./types";
+import { CalendarEvent, type OtherEvent } from "./types";
 import { EventListInput } from "./components/EventListInput/EventListInput";
 import Controls from "./components/Controls/Controls";
+
+const defaultData = `
+2025-09-10 🎂 Birthday of Joe
+2025-09-19 🎂 Birthday of Chuck
+2025-09-27 🎂 Birthday of Dima
+`;
 
 const AnyEvents: React.FC = () => {
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
@@ -18,6 +24,24 @@ const AnyEvents: React.FC = () => {
         handleModeChange,
         handleDateChange,
     } = useCalendar(holidaysData);
+    const [dataText, setDataText] = useState<string>(defaultData.trim());
+    useEffect(() => {
+        const data = localStorage.getItem("holidaysData");
+        if (data) {
+            setDataText(data);
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem("holidaysData", dataText);
+    }, [dataText]);
+
+    const onNewEvent = useCallback((newEvent: OtherEvent) => {
+        setDataText((prevState) => {
+            return prevState + "" + "\n" + (newEvent.date + " " + newEvent.icon + " " + newEvent.name);
+        });
+    }, []);
+
     return (
         <div className={styles.app}>
             <div className={styles.header}>
@@ -41,9 +65,10 @@ const AnyEvents: React.FC = () => {
                     mode={mode}
                     onModeChange={handleModeChange}
                     onNavigateMonth={navigateMonth}
+                    onNewEvent={onNewEvent}
                 />
 
-                <EventListInput setHolidaysData={setHolidaysData} />
+                <EventListInput setHolidaysData={setHolidaysData} dataText={dataText} setDataText={setDataText} />
             </div>
         </div>
     );

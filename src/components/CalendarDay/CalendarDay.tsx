@@ -3,12 +3,14 @@ import { CalendarDay as CalendarDayType } from "../../types";
 import { getFlagEmoji } from "../../utils/countryFlags";
 import styles from "./CalendarDay.module.css";
 import { getLink } from "../../data/holidays_descriptions/getLink";
+import { UTCDate } from "../../utils/UTCDate";
 
 interface CalendarDayProps {
     day: CalendarDayType;
+    setIsPopupOpen(date: UTCDate): void;
 }
 
-const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
+const CalendarDay: React.FC<CalendarDayProps> = ({ day, setIsPopupOpen }) => {
     const dayClasses = [
         styles.calendarDay,
         !day.isCurrentMonth && styles.otherMonth,
@@ -23,12 +25,17 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
     }, []);
 
     return (
-        <div key={day.date.toDateString()} className={dayClasses}>
+        <div
+            key={day.date.toDateString()}
+            className={dayClasses}
+            onClick={() => setIsPopupOpen(day.date)}
+        >
             <div className={styles.dayNumber}>{day.dayNumber}</div>
             {day.isCurrentMonth && day.events.map((holiday, idx) => holiday.kind === "publicHoliday" ? (
                 <a
                     key={idx}
                     href={getLink(holiday.date, holiday.country, holiday.name, countryData)}
+                    onClick={(e) => e.stopPropagation()}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
@@ -37,7 +44,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day }) => {
                     </div>
                 </a>
             ) : (
-                <div className={styles.holiday} title={`${holiday.localName}`}>
+                <div className={styles.holiday} title={`${holiday.localName}`} onClick={(e) => e.stopPropagation()}>
                     {holiday.icon} {holiday.name}
                 </div>
             ))}

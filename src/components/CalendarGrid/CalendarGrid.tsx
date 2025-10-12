@@ -1,5 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { CalendarDay as CalendarDayType, type HolidayWithCountry } from "../../types";
+import {
+    CalendarDay as CalendarDayType,
+    type HolidayWithCountry,
+    type OtherEvent
+} from "../../types";
 import CalendarDay from "../CalendarDay/CalendarDay";
 import {
     convertDayToEUFormat,
@@ -14,8 +18,10 @@ import MonthNavigation from "../MonthNavigation/MonthNavigation";
 import { getFlagEmoji } from "../../utils/countryFlags";
 import { getLink } from "../../data/holidays_descriptions/getLink";
 import { UTCDate } from "../../utils/UTCDate";
+import EventPopup from "../EventPopup/EventPopup";
 
 interface CalendarGridProps {
+    onNewEvent?: (date: OtherEvent) => void; // if not defined will not show popup for new event
     selectedYearDays: CalendarDayType[];
     selectedMonthDays: CalendarDayType[];
     currentDate: UTCDate;
@@ -30,12 +36,14 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
     currentDate,
     mode,
     onModeChange,
+    onNewEvent,
     onNavigateMonth
 }) => {
     const [selectedDay, setSelectedDay] = useState<UTCDate | null>(null); // State for selected day in popup
     const [highlightedMonth, setHighlightedMonth] = useState<number | null>(null); // State for highlighted month
     const yearGridRef = useRef<HTMLDivElement | null>(null); // Ref for the year grid container
     const [countryData, setCountryData] = useState({});
+    const [dateForPopup, setIsPopupOpen] = useState<UTCDate | null>(null);
     useEffect(() => {
         import("../../data/holidays_descriptions/all").then(data => {
             setCountryData(data.descriptions);
@@ -86,7 +94,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                 ))}
 
                 {selectedMonthDays.map((day, index) => (
-                    <CalendarDay key={index} day={day}/>
+                    <CalendarDay key={day.date + "" + index} day={day} setIsPopupOpen={setIsPopupOpen} />
                 ))}
             </div>
         </>
@@ -166,9 +174,14 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
     };
 
     return (
-        <div style={{ width: "100%" }}>
+        <div className={styles.calendarGridContainer}>
             {mode === "month" ? renderMonthView() : renderYearView()}
-
+            {dateForPopup && onNewEvent && (
+                <EventPopup
+                    initialDate={formatDateString(dateForPopup)}
+                    onNewEvent={(data) => { if (data) { onNewEvent(data); } setIsPopupOpen(null); }}
+                />
+            )}
             {selectedDay && (
                 <div className={styles.popup}>
                     <div className={styles.popupContent}>

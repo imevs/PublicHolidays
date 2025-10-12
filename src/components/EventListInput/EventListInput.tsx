@@ -42,12 +42,6 @@ function isIcon(symbol: string): boolean {
     return emojiRegex.test(symbol);
 }
 
-const defaultData = `
-2025-09-10 🎂 Birthday of Joe
-2025-09-19 🎂 Birthday of Chuck
-2025-09-27 🎂 Birthday of Dima
-`;
-
 function validateLine(line: string): { valid: boolean; error?: string } {
     const trimmed = line.trim();
     if (!trimmed) { return { valid: false, error: "Empty line" }; }
@@ -65,15 +59,14 @@ function validateLine(line: string): { valid: boolean; error?: string } {
 }
 
 export function EventListInput(props: {
+    dataText: string;
+    setDataText(text: string): void;
     setHolidaysData: (data: CalendarEvent[]) => void
 }) {
     const textRef = useRef<HTMLTextAreaElement | null>(null);
     const iconsRef = useRef<HTMLDivElement | null>(null);
     const fileInputRef = useRef<HTMLInputElement | null>(null);
-    const [dataText, setDataText] = useState<string>(defaultData.trim());
     const [holidaysParsed, setHolidays] = useState<CalendarEvent[]>([]);
-    const lines = dataText.split("\n");
-   
     const handleImportFile = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         if (!file) return;
@@ -88,27 +81,19 @@ export function EventListInput(props: {
             const lines = parsed.map(ev =>
                 `${ev.date} ${ev.kind === "other" ? ev.icon : getFlagEmoji(ev.countryCode)} ${ev.name}`,
             ).join("\n");
-            setDataText(lines);
+            props.setDataText(lines);
             // clear the input so same file can be re-imported if needed
             if (fileInputRef.current) fileInputRef.current.value = "";
         };
         reader.readAsText(file);
     };
-   
-    useEffect(() => {
-        const data = localStorage.getItem("holidaysData");
-        if (data) {
-            setDataText(data);
-        }
-    }, []);
 
     useEffect(() => {
-        const lines = dataText.split("\n").map(l => l.trim()).filter(l => l.length);
+        const lines = props.dataText.split("\n").map(l => l.trim()).filter(l => l.length);
         const validLines = lines.filter(l => validateLine(l).valid).join("\n");
         props.setHolidaysData(parseData(validLines));
         setHolidays(parseData(validLines));
-        localStorage.setItem("holidaysData", dataText);
-    }, [dataText]);
+    }, [props.dataText]);
 
     useEffect(() => {
         if (textRef.current) {
@@ -136,7 +121,7 @@ export function EventListInput(props: {
 
         <div className={styles.wrapper}>
             <div ref={iconsRef} className={styles.icons}>
-                {lines.map((line, idx) => {
+                {props.dataText.split("\n").map((line, idx) => {
                     const result = validateLine(line);
                     return (
                         <div
@@ -155,8 +140,8 @@ export function EventListInput(props: {
             <textarea
                 id="events-data"
                 ref={textRef}
-                value={dataText}
-                onChange={(e) => setDataText(e.target.value)}
+                value={props.dataText}
+                onChange={(e) => props.setDataText(e.target.value)}
                 onScroll={(event) => {
                     if (iconsRef.current) {
                         iconsRef.current.scrollTop = (event.target as Element).scrollTop;
