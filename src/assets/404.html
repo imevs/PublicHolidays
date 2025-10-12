@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>SPA Redirect</title>
+</head>
+<body>
+Redirecting...
+<script>
+    setTimeout(() => {
+        const pathname = window.location.pathname;
+        window.location.href = 'https://imevs.github.io/PublicHolidays/?path=' + pathname;
+    }, 1000)
+</script>
+</body>
+</html>
