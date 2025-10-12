@@ -51,16 +51,16 @@ export function EventsList({
             .filter(day => mode === "month" ? day.date.getMonth() === currentDate.getMonth() : true)
             .filter(day => day.events.length)
             .map(date => (
-                <div className={styles.dateEvents}>
+                <div className={styles.dateEvents} key={date.date.valueOf()}>
                     <div className={styles.eventsDate}>
                         <b>{formatDateToReadable(date.date)}</b>
                     </div>
                     {date.events.map(event => (
                         event.kind === "publicHoliday"
-                            ? <div className={styles.events}>
+                            ? <div className={styles.events} key={event.name + event.countryCode}>
                                 {getFlagEmoji(event.countryCode)} {event.country}: {event.name}
                             </div>
-                            : <div className={styles.events}>
+                            : <div className={styles.events} key={event.name}>
                                 {event.icon} {event.name}
                             </div>
                     ))}
