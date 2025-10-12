@@ -9,6 +9,11 @@
   padding: 1px;
 }
 
+.calendarGridContainer {
+  width: 100%;
+  position: relative;
+}
+
 .calendarHeader {
   background: #495057;
   color: white;
