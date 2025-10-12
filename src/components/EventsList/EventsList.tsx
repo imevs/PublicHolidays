@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router";
+import { useCallback } from "react";
+
 import { CalendarDay as CalendarDayType } from "../../types";
 import { formatDateString, formatDateToReadable } from "../../utils/dateUtils";
 
 import styles from "./EventsList.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags";
-import { useCallback } from "react";
 import { exportCalendarToFile } from "../../utils/generateICS";
 import type { UTCDate } from "../../utils/UTCDate";
 
@@ -18,6 +20,8 @@ export function EventsList({
     currentDate,
     mode,
 }: EventsListProps) {
+    const navigate = useNavigate()
+
     const editEvents = useCallback(() => {
         let dataText = "";
         (selectedYearDays ?? [])
@@ -32,7 +36,7 @@ export function EventsList({
                 });
             });
         localStorage.setItem("holidaysData", dataText);
-        document.location = "/PublicHolidays/EditEvents";
+        navigate("/PublicHolidays/EditEvents");
     }, [selectedYearDays]);
 
     const exportCalendar = useCallback(() => {
