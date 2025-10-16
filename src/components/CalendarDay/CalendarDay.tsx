@@ -44,7 +44,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day, setIsPopupOpen }) => {
                     </div>
                 </a>
             ) : (
-                <div className={styles.holiday} title={`${holiday.localName}`} onClick={(e) => e.stopPropagation()}>
+                <div key={idx} className={styles.holiday} title={`${holiday.localName}`} onClick={(e) => e.stopPropagation()}>
                     {holiday.icon} {holiday.name}
                 </div>
             ))}

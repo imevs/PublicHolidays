@@ -9,9 +9,8 @@
 Redirecting...
 <script>
     setTimeout(() => {
-        const pathname = window.location.pathname + window.location.hash;
-        window.location.href = 'https://imevs.github.io/PublicHolidays/?path=' + pathname;
-    }, 500)
+        location.href = '/PublicHolidays/?path=' + location.pathname + location.hash;
+    }, 100)
 </script>
 </body>
 </html>
