@@ -6,6 +6,10 @@ import { type DateThreeParts, UTCDate } from "../utils/UTCDate";
 
 const dateFormatter = new Intl.DateTimeFormat("en-CA"); // Canadian English uses YYYY-MM-DD format
 
+function getParams() {
+    return new URLSearchParams(window.location.search || window.location.hash.replace("#", ""));
+}
+
 export const useCalendar = (holidaysData: CalendarEvent[]) => {
     const [currentDate, setCurrentDate] = useState(new UTCDate());
     const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(["LV"]);
@@ -13,7 +17,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     const [showAllCountries, setShowAllCountries] = useState(false);
 
     const loadStateFromSearchParams = useCallback(() => {
-        const urlSearchParams = new URLSearchParams(window.location.hash.replace("#", ""));
+        const urlSearchParams = getParams();
         const countries = urlSearchParams.get("countries") ?? "";
         if (countries) {
             setSelectedCountries(countries.split(",") as CountryCode[]);
@@ -121,7 +125,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     const navigateMonth = (nextMonth: number): void => {
         const newDate = new UTCDate(currentDate);
         newDate.setMonth(nextMonth);
-        const params = new URLSearchParams(window.location.hash.replace("#", ""));
+        const params = getParams();
         params.set("date", dateFormatter.format(newDate.valueOf()));
         window.location.hash = decodeURIComponent(params.toString());
         setCurrentDate(newDate);
@@ -132,7 +136,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
             const newCountries = prev.includes(countryCode)
                 ? prev.filter(c => c !== countryCode)
                 : [...prev, countryCode];
-            const params = new URLSearchParams(window.location.hash.replace("#", ""));
+            const params = getParams();
             params.set("countries", newCountries.join(","));
             window.location.hash = decodeURIComponent(params.toString());
             return newCountries;
@@ -140,21 +144,21 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     };
 
     const handleDateChange = (newDate: UTCDate): void => {
-        const params = new URLSearchParams(window.location.hash.replace("#", ""));
+        const params = getParams();
         params.set("date", dateFormatter.format(newDate.valueOf()));
         window.location.hash = decodeURIComponent(params.toString());
         setCurrentDate(newDate);
     };
 
     const handleModeChange = (newMode: "month" | "year"): void => {
-        const params = new URLSearchParams(window.location.hash.replace("#", ""));
+        const params = getParams();
         params.set("mode", newMode);
         window.location.hash = decodeURIComponent(params.toString());
         setMode(newMode);
     };
 
     const onShowAllCountries = (state: boolean) => {
-        const params = new URLSearchParams(window.location.hash.replace("#", ""));
+        const params = getParams();
         params.set("all", state ? "1" : "0");
         window.location.hash = decodeURIComponent(params.toString());
         setShowAllCountries(state);

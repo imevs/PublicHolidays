@@ -14,12 +14,12 @@ const baseName = "PublicHolidays"; //import.meta.env.VITE_SITE_BASE
 
 const Holidays: React.FC = () => {
     const [searchParams] = useSearchParams();
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     useEffect(() => {
         const path = searchParams?.get("path");
         if (path?.includes(baseName)) {
-            navigate(path);
+            navigate(path + location.hash);
         }
     }, [])
 
