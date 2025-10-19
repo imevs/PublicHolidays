@@ -14,10 +14,10 @@ function clearFromEmoji(s: string): string {
 
 const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
     const ref = useRef<HTMLDivElement | null>(null);
+    const nameRef = useRef<HTMLInputElement | null>(null);
     const [name, setName] = useState("");
-    const [oneTime, setOneTime] = useState(true);
-    const [iconsVisible, setIconsVisible] = useState(false);
-    const [icon, setIcon] = useState("🎉");
+    const [oneTime, setOneTime] = useState(false);
+    const [icon, setIcon] = useState("🎂");
 
     useEffect(() => {
         const onDocClick = (e: MouseEvent) => {
@@ -31,7 +31,7 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
 
     const handleSave = () => {
         onNewEvent({
-            date: oneTime ? initialDate.substring(5) as DateTwoParts : initialDate,
+            date: oneTime ? initialDate : initialDate.substring(5) as DateTwoParts,
             name: clearFromEmoji(name),
             icon: icon,
             localName: "",
@@ -42,50 +42,69 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
     const onIconClick = useCallback((e: React.MouseEvent<Element>) => {
         const el = e.target as Element;
         if (el.tagName === "SPAN") {
-            setIconsVisible(false);
             setIcon(el.innerHTML);
             setName((origin) => {
                 return el.innerHTML + " " + clearFromEmoji(origin);
             });
+            nameRef.current?.focus();
         }
     }, []);
+
+    const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+        if (e.key === "Enter" && name.trim()) {
+            e.preventDefault();
+            handleSave();
+        } else if (e.key === "Escape") {
+            onNewEvent(null);
+        }
+    }, [handleSave, name]);
 
     return (
         <div
             ref={ref}
             className={styles.popup}
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => { e.stopPropagation(); }}
             role="dialog"
             aria-modal="true"
         >
             <p><b>Add new event for {initialDate}</b></p>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                <label>
-                    Name
-                    <input value={name} required type="text" onChange={e => setName(e.target.value)}/>
-                </label>
-                <button className={styles["emoji-button"]} onClick={() => {
-                    setIconsVisible(!iconsVisible);
-                }}>😀 Icons</button>
-
+                <div className={styles.nameContainer}>
+                    <label htmlFor="eventName">Name</label>
+                    <input
+                        onKeyDown={handleKeyDown}
+                        id="eventName"
+                        ref={nameRef}
+                        value={name}
+                        required
+                        type="text"
+                        onChange={e => setName(e.target.value)}
+                    />
+                </div>
                 <div
                     className={styles["emoji-popup"]}
-                    style={{ display: iconsVisible ? "block" : "none" }}
+                    style={{ display: "block" }}
                     onClick={onIconClick}
                 >
+                    <span>🎂</span><span>💍</span><span>👸</span><span>👴🏼</span><span>👵</span>
                     <span>😀</span><span>😁</span><span>😂</span><span>🤣</span><span>😊</span>
                     <span>😍</span><span>😎</span><span>😏</span><span>🤔</span><span>😴</span>
                     <span>😡</span><span>😭</span><span>🤯</span><span>🤩</span><span>😇</span>
                     <span>🥰</span><span>😤</span><span>😈</span><span>👻</span><span>🔥</span>
                 </div>
 
-                <label>
-                    One-time
-                    <input type="checkbox" checked={oneTime} onChange={e => setOneTime(e.target.checked)}/>
-                </label>
+                <input
+                    type="checkbox"
+                    id="oneTime"
+                    className={styles.checkbox}
+                    checked={oneTime}
+                    onChange={(e) => setOneTime(e.target.checked)}
+                />
+                <label htmlFor="oneTime" className={styles.checkboxLabel}>One-time</label>
+
                 <div style={{ display: "flex", gap: 8 }}>
-                    <button type="button" onClick={handleSave}>Save</button>
-                    <button type="button" onClick={() => onNewEvent(null)}>Cancel</button>
+                    <button type="button" onClick={handleSave}>Save (Enter)</button>
+                    <button type="button" onClick={() => onNewEvent(null)}>Cancel (Esc)</button>
                 </div>
             </div>
         </div>

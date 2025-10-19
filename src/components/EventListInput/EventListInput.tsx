@@ -110,14 +110,15 @@ export function EventListInput(props: {
     }, [holidaysParsed]);
 
     return <div className={styles.container}>
-        <label htmlFor="events-data" className={styles.label}>
-            Calendar events. Format: <code>YYYY-MM-DD [icon] event name</code>.
-        </label>
-        <div style={{ position: "absolute", right: 0, top: 0 }}>
+        <div style={{ paddingBottom: 5, textAlign: "end" }}>
             <button onClick={exportCalendar}>Save to .ics</button>
             <button onClick={() => fileInputRef.current?.click()} style={{ marginLeft: 8 }}>Import .ics</button>
             <input ref={fileInputRef} type="file" accept=".ics,text/calendar" style={{ display: "none" }} onChange={handleImportFile} />
         </div>
+
+        <label htmlFor="events-data" className={styles.label}>
+            Calendar events. Format: <code>YYYY-MM-DD [icon] event name</code>.
+        </label>
 
         <div className={styles.wrapper}>
             <div ref={iconsRef} className={styles.icons}>
