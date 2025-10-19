@@ -54,3 +54,16 @@
     border-radius: 0;
   }
 }
+
+button {
+  padding: 10px 15px;
+  background: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005bb5;
+}
