@@ -50,7 +50,7 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
         }
     }, []);
 
-    const handleKeyDown = useCallback((e: React.KeyboardEvent) => {
+    const handleKeyDown = useCallback((e: KeyboardEvent | React.KeyboardEvent) => {
         if (e.key === "Enter" && name.trim()) {
             e.preventDefault();
             handleSave();
@@ -58,6 +58,11 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
             onNewEvent(null);
         }
     }, [handleSave, name]);
+
+    useEffect(() => {
+        document.addEventListener("keydown", handleKeyDown);
+        return () => document.removeEventListener("keydown", handleKeyDown);
+    }, []);
 
     return (
         <div
