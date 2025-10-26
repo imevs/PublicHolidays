@@ -8,15 +8,17 @@ import { UTCDate } from "../../utils/UTCDate";
 interface CalendarDayProps {
     day: CalendarDayType;
     isSelected?: boolean;
+    isEditable: boolean;
     setDateForPopup(date: UTCDate): void;
 }
 
-const CalendarDay: React.FC<CalendarDayProps> = ({ day, setDateForPopup, isSelected }) => {
+const CalendarDay: React.FC<CalendarDayProps> = ({ day, setDateForPopup, isSelected, isEditable }) => {
     const dayClasses = [
         styles.calendarDay,
         !day.isCurrentMonth && styles.otherMonth,
         day.isToday && styles.today,
         isSelected ? styles.selectedDate : "",
+        isEditable ? styles.isClickable : "",
         day.isWeekend || day.events.length ? styles.holiday : "",
     ].filter(Boolean).join(" ");
 

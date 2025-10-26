@@ -1,9 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import {
-    CalendarDay as CalendarDayType,
-    type HolidayWithCountry,
-    type OtherEvent
-} from "../../types";
+import React, { useEffect, useRef, useState } from "react";
+import { CalendarDay as CalendarDayType, type HolidayWithCountry, type OtherEvent } from "../../types";
 import CalendarDay from "../CalendarDay/CalendarDay";
 import {
     convertDayToEUFormat,
@@ -20,6 +16,7 @@ import { getFlagEmoji } from "../../utils/countryFlags";
 import { getLink } from "../../data/holidays_descriptions/getLink";
 import { UTCDate } from "../../utils/UTCDate";
 import EventPopup from "../EventPopup/EventPopup";
+import { usePrevious } from "./UsePrevious";
 
 interface CalendarGridProps {
     onNewEvent?: (date: OtherEvent) => void; // if not defined will not show popup for new event
@@ -35,6 +32,172 @@ function cn(classes: string) {
     return classes.split("\n").map(line => line.trim()).filter(Boolean).join(" ");
 }
 
+const DaysOfWeeks = () => dayNames.map(day => (
+    <div
+        key={day}
+        className={`${styles.calendarHeader} ${isWeekend(day) ? styles.weekend : ""}`}
+    >{day}</div>
+));
+
+type MonthViewProps = {
+    dateForPopup: UTCDate | null;
+    isEditable: boolean;
+    setDateForPopup: (date: UTCDate) => void;
+    currentDate: UTCDate;
+    selectedDays: CalendarDayType[];
+    onModeChange: (mode: "month" | "year") => void;
+    onNavigateMonth: (direction: number) => void;
+};
+
+const MonthView = ({
+    selectedDays,
+    onNavigateMonth,
+    onModeChange,
+    currentDate,
+    dateForPopup,
+    setDateForPopup,
+    isEditable,
+}: MonthViewProps) => {
+    const prevDays = usePrevious(selectedDays);
+
+    return <>
+        <MonthNavigation
+            currentDate={currentDate}
+            onNavigateMonth={onNavigateMonth}
+            onNavigateYear={() => onModeChange("year")}
+        />
+
+        {prevDays && <div className={styles.calendarGrid} style={{ display: "none" }}>
+            <DaysOfWeeks/>
+
+            {prevDays.map((day, index) => (
+                <CalendarDay
+                    key={day.date + "" + index}
+                    day={day}
+                    setDateForPopup={setDateForPopup}
+                    isSelected={false}
+                    isEditable={isEditable}
+                />
+            ))}
+        </div>}
+
+        <div className={styles.calendarGrid}>
+            <DaysOfWeeks/>
+
+            {selectedDays.map((day, index) => (
+                <CalendarDay
+                    key={day.date + "" + index}
+                    day={day}
+                    setDateForPopup={setDateForPopup}
+                    isSelected={dateForPopup === day.date}
+                    isEditable={isEditable}
+                />
+            ))}
+        </div>
+    </>;
+};
+
+const YearView = ({
+    selectedDays,
+    onNavigateMonth,
+    onModeChange,
+    currentDate,
+    dateForPopup,
+    setDateForPopup,
+    isEditable,
+    setSelectedDay,
+}: MonthViewProps & { setSelectedDay: (date: UTCDate | null) => void; }) => {
+    const currentYear = currentDate.getFullYear();
+    const [highlightedMonth, setHighlightedMonth] = useState<number | null>(null); // State for highlighted month
+    const yearGridRef = useRef<HTMLDivElement | null>(null); // Ref for the year grid container
+
+    const currentMonth = currentDate.getMonth();
+    useEffect(() => {
+        if (yearGridRef.current) {
+            const monthElement = yearGridRef.current.querySelectorAll(`.${styles.monthContainer}`)[currentMonth];
+            if (monthElement) {
+                monthElement.scrollIntoView({ behavior: "smooth", block: "center" });
+                setHighlightedMonth(currentMonth);
+            }
+        }
+    }, [currentMonth]);
+
+    return (
+        <div ref={yearGridRef} className={styles.yearGrid}>
+            {Array.from({ length: 12 }, (_, month) => {
+                const daysInMonth = getDaysInMonth(currentYear, month);
+                const monthName = getMonthName(month);
+                const firstDay = new UTCDate(`${currentYear}-${String(month + 1).padStart(2, "0")}-01`);
+                const dayOfWeek = convertDayToEUFormat(firstDay.getDay()) - 1;
+                const emptyCells = Array.from({ length: dayOfWeek }, (_, day) => <div key={day} />);
+
+                return (
+                    <div
+                        key={month}
+                        className={`${styles.monthContainer} ${highlightedMonth === month ? styles.highlightedMonth : ""}`}
+                    >
+                        <div
+                            className={styles.monthHeader}
+                            title="Click to switch on month view"
+                            onClick={() => {
+                                onModeChange("month");
+                                onNavigateMonth(month);
+                            }}
+                        >
+                            {monthName}
+                        </div>
+                        <div className={styles.monthGrid}>
+                            {emptyCells}
+                            {Array.from({ length: daysInMonth }, (_, day) => {
+                                const date = new UTCDate(`${currentYear}-${String(month + 1).padStart(2, "0")}-${day + 1}`);
+                                const currentDay = selectedDays.find(d => isSameDate(d.date, date));
+                                const dayHolidays = currentDay?.events || [];
+                                const seen = new Set<string>();
+                                const dayCountryHolidaysUnique = dayHolidays.filter((h): h is HolidayWithCountry => {
+                                    if (h.kind !== "publicHoliday") { return false; }
+                                    if (seen.has(h.countryCode)) { return false; }
+                                    seen.add(h.countryCode);
+                                    return true;
+                                });
+                                return (
+                                    <div
+                                        key={day}
+                                        className={cn(`
+                                                ${currentDay?.isToday ? styles.today : ""}
+                                                ${dateForPopup?.valueOf() === date.valueOf() ? styles.selectedDate : ""} 
+                                                ${styles.dayCell} 
+                                                ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}
+                                                ${dayHolidays.length > 0 || isEditable ? styles.isClickable : ""}
+                                            `)}
+                                        style={{
+                                            borderRadius: `${day === 0 ? 10 : 0}px 0px ${day === daysInMonth - 1 ? 10 : 0}px 0px`,
+                                        }}
+                                        onClick={() => dayHolidays.length > 0 ? setSelectedDay(date) : setDateForPopup(date)}
+                                    >
+                                        {day + 1}
+                                        <div className={styles.holidayIndicatorsList}>
+                                            {dayCountryHolidaysUnique.map((holiday) => (
+                                                <div key={holiday.countryCode + holiday.name} className={styles.holidayIndicator}>
+                                                    {getFlagEmoji(holiday.countryCode)}
+                                                </div>
+                                            ))}
+                                            {dayHolidays.filter((h) => h.kind === "other").map(h => (
+                                                <div key={h.name} className={styles.holidayIndicator}>
+                                                    {h.icon}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
+                );
+            })}
+        </div>
+    );
+};
+
 const CalendarGrid: React.FC<CalendarGridProps> = ({
     selectedMonthDays,
     selectedYearDays,
@@ -45,10 +208,9 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
     onNavigateMonth
 }) => {
     const [selectedDay, setSelectedDay] = useState<UTCDate | null>(null); // State for selected day in popup
-    const [highlightedMonth, setHighlightedMonth] = useState<number | null>(null); // State for highlighted month
-    const yearGridRef = useRef<HTMLDivElement | null>(null); // Ref for the year grid container
     const [countryData, setCountryData] = useState({});
     const [dateForPopup, setDateForPopup] = useState<UTCDate | null>(null);
+
     useEffect(() => {
         import("../../data/holidays_descriptions/all").then(data => {
             setCountryData(data.descriptions);
@@ -69,126 +231,28 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
         };
     }, []);
 
-    const currentMonth = currentDate.getMonth();
-    useEffect(() => {
-        if (mode === "year" && yearGridRef.current) {
-            const monthElement = yearGridRef.current.querySelectorAll(`.${styles.monthContainer}`)[currentMonth];
-            if (monthElement) {
-                monthElement.scrollIntoView({ behavior: "smooth", block: "center" });
-                setHighlightedMonth(currentMonth);
-            }
-        }
-    }, [mode, currentMonth]);
-
-    const renderMonthView = () => (
-        <>
-            <MonthNavigation
-                currentDate={currentDate}
-                onNavigateMonth={onNavigateMonth}
-                onNavigateYear={() => onModeChange("year")}
-            />
-
-            <div className={styles.calendarGrid}>
-                {dayNames.map(day => (
-                    <div
-                        key={day}
-                        className={`${styles.calendarHeader} ${isWeekend(day) ? styles.weekend : ""}`}
-                    >{day}</div>
-                ))}
-
-                {selectedMonthDays.map((day, index) => (
-                    <CalendarDay
-                        key={day.date + "" + index}
-                        day={day}
-                        setDateForPopup={setDateForPopup}
-                        isSelected={dateForPopup === day.date}
-                    />
-                ))}
-            </div>
-        </>
-    );
-
-    const renderYearView = () => {
-        const currentYear = currentDate.getFullYear();
-        return (
-            <div ref={yearGridRef} className={styles.yearGrid}>
-                {Array.from({ length: 12 }, (_, month) => {
-                    const daysInMonth = getDaysInMonth(currentYear, month);
-                    const monthName = getMonthName(month);
-                    const firstDay = new UTCDate(`${currentYear}-${String(month + 1).padStart(2, "0")}-01`);
-                    const dayOfWeek = convertDayToEUFormat(firstDay.getDay()) - 1;
-                    const emptyCells = Array.from({ length: dayOfWeek }, (_, day) => <div key={day} />);
-
-                    return (
-                        <div
-                            key={month}
-                            className={`${styles.monthContainer} ${highlightedMonth === month ? styles.highlightedMonth : ""}`}
-                        >
-                            <div
-                                className={styles.monthHeader}
-                                title="Click to switch on month view"
-                                onClick={() => {
-                                    onModeChange("month");
-                                    onNavigateMonth(month);
-                                }}
-                            >
-                                {monthName}
-                            </div>
-                            <div className={styles.monthGrid}>
-                                {emptyCells}
-                                {Array.from({ length: daysInMonth }, (_, day) => {
-                                    const date = new UTCDate(`${currentYear}-${String(month + 1).padStart(2, "0")}-${day + 1}`);
-                                    const currentDay = selectedYearDays.find(d => isSameDate(d.date, date));
-                                    const dayHolidays = currentDay?.events || [];
-                                    const seen = new Set<string>();
-                                    const dayCountryHolidaysUnique = dayHolidays.filter((h): h is HolidayWithCountry => {
-                                        if (h.kind !== "publicHoliday") { return false; }
-                                        if (seen.has(h.countryCode)) { return false; }
-                                        seen.add(h.countryCode);
-                                        return true;
-                                    });
-                                    return (
-                                        <div
-                                            key={day}
-                                            className={cn(`
-                                                ${currentDay?.isToday ? styles.today : ""}
-                                                ${dateForPopup?.valueOf() === date.valueOf() ? styles.selectedDate : ""} 
-                                                ${styles.dayCell} 
-                                                ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}
-                                                ${dayHolidays.length > 0 || onNewEvent ? styles.isClickable : ""}
-                                            `)}
-                                            style={{
-                                                borderRadius: `${day === 0 ? 10 : 0}px 0px ${day === daysInMonth - 1 ? 10 : 0}px 0px`,
-                                            }}
-                                            onClick={() => dayHolidays.length > 0 ? setSelectedDay(date) : setDateForPopup(date)}
-                                        >
-                                            {day + 1}
-                                            <div className={styles.holidayIndicatorsList}>
-                                                {dayCountryHolidaysUnique.map((holiday) => (
-                                                    <div key={holiday.countryCode + holiday.name} className={styles.holidayIndicator}>
-                                                        {getFlagEmoji(holiday.countryCode)}
-                                                    </div>
-                                                ))}
-                                                {dayHolidays.filter((h) => h.kind === "other").map(h => (
-                                                    <div key={h.name} className={styles.holidayIndicator}>
-                                                        {h.icon}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    );
-                                })}
-                            </div>
-                        </div>
-                    );
-                })}
-            </div>
-        );
-    };
-
     return (
         <div className={styles.calendarGridContainer}>
-            {mode === "month" ? renderMonthView() : renderYearView()}
+            {mode === "month"
+                ? <MonthView
+                    selectedDays={selectedMonthDays}
+                    onNavigateMonth={onNavigateMonth}
+                    onModeChange={onModeChange}
+                    currentDate={currentDate}
+                    dateForPopup={dateForPopup}
+                    setDateForPopup={setDateForPopup}
+                    isEditable={onNewEvent !== undefined}
+                />
+                : <YearView
+                    selectedDays={selectedYearDays}
+                    onNavigateMonth={onNavigateMonth}
+                    onModeChange={onModeChange}
+                    currentDate={currentDate}
+                    dateForPopup={dateForPopup}
+                    setDateForPopup={setDateForPopup}
+                    isEditable={onNewEvent !== undefined}
+                    setSelectedDay={setSelectedDay}
+                />}
             {dateForPopup && onNewEvent && (
                 <EventPopup
                     initialDate={formatDateString(dateForPopup)}
