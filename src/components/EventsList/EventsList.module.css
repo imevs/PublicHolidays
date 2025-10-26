@@ -3,7 +3,24 @@
     position: relative;
 }
 
-.dateEvents:first-of-type {
+.eventsWrapper {
+    column-count: 3;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+    .eventsWrapper {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 800px) {
+    .eventsWrapper {
+        column-count: 1;
+    }
+}
+
+.dateEvents:last-of-type {
     border-top: none;
 }
 
@@ -13,8 +30,10 @@
 }
 
 .dateEvents {
-    margin-bottom: 10px;
-    border-top: 1px solid #e4e4e4;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4e4e4;
+    display:inline-block;
+    width: 100%;
 }
 
 .events {
