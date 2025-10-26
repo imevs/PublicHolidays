@@ -12,6 +12,10 @@ function clearFromEmoji(s: string): string {
     return s.replace(/(\p{Emoji_Presentation}|\p{Emoji}\uFE0F)\s/u, "");
 }
 
+function Emoji() {
+    return "🎂💍👸👴🏼👵😀😁😂🤣😊😍😎😏🤔😴😡😭🤯🤩😇🥰😤😈👻🔥".split("").map(s => <span key={s}>{s}</span>);
+}
+
 const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
     const ref = useRef<HTMLDivElement | null>(null);
     const nameRef = useRef<HTMLInputElement | null>(null);
@@ -86,16 +90,8 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
                         onChange={e => setName(e.target.value)}
                     />
                 </div>
-                <div
-                    className={styles["emoji-popup"]}
-                    style={{ display: "block" }}
-                    onClick={onIconClick}
-                >
-                    <span>🎂</span><span>💍</span><span>👸</span><span>👴🏼</span><span>👵</span>
-                    <span>😀</span><span>😁</span><span>😂</span><span>🤣</span><span>😊</span>
-                    <span>😍</span><span>😎</span><span>😏</span><span>🤔</span><span>😴</span>
-                    <span>😡</span><span>😭</span><span>🤯</span><span>🤩</span><span>😇</span>
-                    <span>🥰</span><span>😤</span><span>😈</span><span>👻</span><span>🔥</span>
+                <div className={styles["emoji-popup"]} onClick={onIconClick}>
+                    <Emoji />
                 </div>
 
                 <input
