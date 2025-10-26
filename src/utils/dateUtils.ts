@@ -65,3 +65,7 @@ export function formatDateToReadable(date: UTCDate) {
 
     return `${formattedDate} (${weekday})`;
 }
+
+export function isWeekend(day: number | string) {
+    return [DayIndexes.Saturday, DayIndexes.Sunday, "Sun", "Sat"].includes(day)
+}

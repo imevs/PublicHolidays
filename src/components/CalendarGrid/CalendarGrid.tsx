@@ -11,7 +11,8 @@ import {
     formatDateString,
     getDaysInMonth,
     getMonthName,
-    isSameDate
+    isSameDate,
+    isWeekend,
 } from "../../utils/dateUtils";
 import styles from "./CalendarGrid.module.css";
 import MonthNavigation from "../MonthNavigation/MonthNavigation";
@@ -91,7 +92,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                 {dayNames.map(day => (
                     <div
                         key={day}
-                        className={`${styles.calendarHeader} ${["Sat", "Sun"].includes(day) ? styles.weekend : ""}`}
+                        className={`${styles.calendarHeader} ${isWeekend(day) ? styles.weekend : ""}`}
                     >{day}</div>
                 ))}
 

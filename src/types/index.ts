@@ -4,6 +4,7 @@ import { type DateString, UTCDate } from "../utils/UTCDate";
 export interface CalendarDay {
     date: UTCDate;
     isCurrentMonth: boolean;
+    isSideMonth: boolean;
     isToday: boolean;
     isWeekend: boolean;
     events: CalendarEvent[];
