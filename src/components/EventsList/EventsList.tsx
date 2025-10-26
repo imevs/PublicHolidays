@@ -47,25 +47,27 @@ export function EventsList({
     return <div className={styles.eventsList}>
         <button className={styles.actionButton} onClick={exportCalendar}>Export to .ics</button>
         <button className={styles.actionButton} onClick={editEvents} style={{ right: 120 }}>Edit events</button>
-        {selectedYearDays
-            .filter(day => mode === "month" ? day.date.getMonth() === currentDate.getMonth() : true)
-            .filter(day => day.events.length)
-            .map(date => (
-                <div className={styles.dateEvents} key={date.date.valueOf()}>
-                    <div className={styles.eventsDate}>
-                        <b>{formatDateToReadable(date.date)}</b>
+        <div className={styles.eventsWrapper}>
+            {selectedYearDays
+                .filter(day => mode === "month" ? day.date.getMonth() === currentDate.getMonth() : true)
+                .filter(day => day.events.length)
+                .map(date => (
+                    <div className={styles.dateEvents} key={date.date.valueOf()}>
+                        <div className={styles.eventsDate}>
+                            <b>{formatDateToReadable(date.date)}</b>
+                        </div>
+                        {date.events.map(event => (
+                            event.kind === "publicHoliday"
+                                ? <div className={styles.events} key={event.name + event.countryCode}>
+                                    {getFlagEmoji(event.countryCode)} {event.country}: {event.name}
+                                </div>
+                                : <div className={styles.events} key={event.name}>
+                                    {event.icon} {event.name}
+                                </div>
+                        ))}
                     </div>
-                    {date.events.map(event => (
-                        event.kind === "publicHoliday"
-                            ? <div className={styles.events} key={event.name + event.countryCode}>
-                                {getFlagEmoji(event.countryCode)} {event.country}: {event.name}
-                            </div>
-                            : <div className={styles.events} key={event.name}>
-                                {event.icon} {event.name}
-                            </div>
-                    ))}
-                </div>
-            ))
-        }
+                ))
+            }
+        </div>
     </div>;
 }
