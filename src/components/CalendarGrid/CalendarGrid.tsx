@@ -155,6 +155,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                                                 ${dateForPopup?.valueOf() === date.valueOf() ? styles.selectedDate : ""} 
                                                 ${styles.dayCell} 
                                                 ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}
+                                                ${dayHolidays.length > 0 || onNewEvent ? styles.isClickable : ""}
                                             `)}
                                             style={{
                                                 borderRadius: `${day === 0 ? 10 : 0}px 0px ${day === daysInMonth - 1 ? 10 : 0}px 0px`,
