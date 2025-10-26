@@ -7,7 +7,7 @@ import { UTCDate } from "../../utils/UTCDate";
 
 interface CalendarDayProps {
     day: CalendarDayType;
-    isSelected: boolean;
+    isSelected?: boolean;
     setDateForPopup(date: UTCDate): void;
 }
 

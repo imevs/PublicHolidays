@@ -1,6 +1,13 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { CalendarDay, CalendarEvent } from "../types";
-import { convertDayToEUFormat, DayIndexes, formatDateString, getNextMonth, isSameDate } from "../utils/dateUtils";
+import {
+    convertDayToEUFormat,
+    DayIndexes,
+    formatDateString,
+    getNextMonth,
+    isSameDate,
+    isWeekend
+} from "../utils/dateUtils";
 import type { CountryCode } from "../data/countryNames";
 import { type DateThreeParts, UTCDate } from "../utils/UTCDate";
 
@@ -8,6 +15,57 @@ const dateFormatter = new Intl.DateTimeFormat("en-CA"); // Canadian English uses
 
 function getParams() {
     return new URLSearchParams(window.location.search || window.location.hash.replace("#", ""));
+}
+
+function calcSelectedMonthDays(currentDate: UTCDate, holidaysData: CalendarEvent[], selectedCountries: CountryCode[], month: number) {
+    const year = currentDate.getFullYear();
+    const firstDay = new UTCDate(`${year}-${String(month + 1).padStart(2, "0")}-01`);
+    const startDate = new UTCDate(firstDay);
+    startDate.setDate(startDate.getDate() + 1 - convertDayToEUFormat(firstDay.getDay()));
+
+    const days: CalendarDay[] = [];
+    const today = new UTCDate();
+
+    let isSideMonth = true;
+    for (let i = 0; i < 366; i++) {
+        const date = new UTCDate(startDate);
+        date.setDate(startDate.getDate() + i);
+        if (date.getDay() === DayIndexes.Monday && date.getMonth() === getNextMonth(month)) {
+            isSideMonth = false;
+        }
+
+        const isToday = isSameDate(date, today);
+        const holidays = getHolidaysForDate(date, holidaysData, selectedCountries);
+
+        days.push({
+            date,
+            isSideMonth: date.getMonth() !== month && isSideMonth,
+            isCurrentMonth: date.getMonth() === month,
+            isToday,
+            isWeekend: isWeekend(date.getDay()),
+            events: holidays,
+            dayNumber: date.getDate()
+        });
+        if (date.getDay() === DayIndexes.Sunday && date.getMonth() === getNextMonth(month)) {
+            isSideMonth = false;
+        }
+    }
+
+    return days;
+}
+
+function getHolidaysForDate(date: UTCDate, holidaysData: CalendarEvent[], selectedCountries: CountryCode[]): CalendarEvent[] {
+    const dateStr = formatDateString(date);
+    return [
+        ...holidaysData.filter(h => h.kind === "other" && h.date === dateStr),
+        ...selectedCountries.flatMap(countryCode =>
+            holidaysData.filter(h =>
+                h.kind === "publicHoliday" && h.countryCode === countryCode &&
+                h.type?.includes("National holiday") === true &&
+                h.date === dateStr
+            ),
+        ),
+    ];
 }
 
 export const useCalendar = (holidaysData: CalendarEvent[]) => {
@@ -42,84 +100,12 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         };
     }, []);
 
-    const getHolidaysForDate = (date: UTCDate): CalendarEvent[] => {
-        const dateStr = formatDateString(date);
-        return [
-            ...holidaysData.filter(h => h.kind === "other" && h.date === dateStr),
-            ...selectedCountries.flatMap(countryCode =>
-                holidaysData.filter(h =>
-                    h.kind === "publicHoliday" && h.countryCode === countryCode &&
-                    h.type?.includes("National holiday") === true &&
-                    h.date === dateStr
-                ),
-            ),
-        ];
-    };
-
     const selectedMonthDays = useMemo((): CalendarDay[] => {
-        const year = currentDate.getFullYear();
-        const month = currentDate.getMonth();
-        const firstDay = new UTCDate(`${year}-${String(month + 1).padStart(2, "0")}-01`);
-        const startDate = new UTCDate(firstDay);
-        startDate.setDate(startDate.getDate() + 1 - convertDayToEUFormat(firstDay.getDay()));
-
-        const days: CalendarDay[] = [];
-        const today = new UTCDate();
-
-        for (let i = 0; i < 42; i++) {
-            const date = new UTCDate(startDate);
-            date.setDate(startDate.getDate() + i);
-            if (date.getDay() === DayIndexes.Monday && date.getMonth() === getNextMonth(month)) {
-                break;
-            }
-
-            const isCurrentMonth = date.getMonth() === month;
-            const isToday = isSameDate(date, today);
-            const holidays = getHolidaysForDate(date);
-
-            days.push({
-                date,
-                isCurrentMonth,
-                isToday,
-                isWeekend: [DayIndexes.Saturday, DayIndexes.Sunday].includes(date.getDay()),
-                events: holidays,
-                dayNumber: date.getDate()
-            });
-            if (date.getDay() === DayIndexes.Sunday && date.getMonth() === getNextMonth(month)) {
-                break;
-            }
-        }
-
-        return days;
+        return calcSelectedMonthDays(currentDate, holidaysData, selectedCountries, currentDate.getMonth()).filter(d => d.isSideMonth || d.isCurrentMonth);
     }, [currentDate, selectedCountries, holidaysData]);
 
     const selectedYearDays = useMemo((): CalendarDay[] => {
-        const currentYear = currentDate.getFullYear();
-        const firstDay = new UTCDate(`${currentYear}-01-01`);
-        const startDate = new UTCDate(firstDay);
-
-        const days: CalendarDay[] = [];
-        const today = new UTCDate();
-
-        for (let i = 1; i <= 366; i++) {
-            const date = new UTCDate(startDate);
-            date.setDate(i);
-
-            const isToday = isSameDate(date, today);
-            const isCurrentYear = date.getFullYear() === currentYear;
-            const holidays = isCurrentYear ? getHolidaysForDate(date) : [];
-
-            days.push({
-                date,
-                isCurrentMonth: false,
-                isWeekend: [DayIndexes.Saturday, DayIndexes.Sunday].includes(date.getDay()),
-                isToday,
-                events: holidays,
-                dayNumber: date.getDate()
-            });
-        }
-
-        return days;
+        return calcSelectedMonthDays(currentDate, holidaysData, selectedCountries, 1);
     }, [currentDate, selectedCountries, holidaysData]);
 
     const navigateMonth = (nextMonth: number): void => {

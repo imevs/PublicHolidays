@@ -9,12 +9,13 @@ describe("CalendarDay", () => {
             kind: "publicHoliday" as const,
             dayNumber: 10,
             isCurrentMonth: true,
+            isSideMonth: false,
             isToday: false,
             isWeekend: false,
             events: [],
             date: new UTCDate("2025-07-10"),
         };
-        render(<CalendarDay day={day} setIsPopupOpen={() => {}} />);
+        render(<CalendarDay day={day} setDateForPopup={() => {}} />);
         expect(screen.getByText("10")).toBeInTheDocument();
     });
 
@@ -24,12 +25,13 @@ describe("CalendarDay", () => {
             kind: "publicHoliday" as const,
             dayNumber: 15,
             isCurrentMonth: true,
+            isSideMonth: false,
             isToday: true,
             isWeekend: false,
             events: [],
             date: new UTCDate("2025-07-15"),
         };
-        render(<CalendarDay day={day} setIsPopupOpen={() => {}} />);
+        render(<CalendarDay day={day} setDateForPopup={() => {}} />);
         expect(screen.getByText("15")).toBeInTheDocument();
     });
 
@@ -37,13 +39,14 @@ describe("CalendarDay", () => {
         const day = {
             kind: "publicHoliday" as const,
             dayNumber: 1,
+            isSideMonth: false,
             isCurrentMonth: false,
             isWeekend: false,
             isToday: false,
             events: [],
             date:  new UTCDate("2025-06-01"),
         };
-        render(<CalendarDay day={day} setIsPopupOpen={() => {}} />);
+        render(<CalendarDay day={day} setDateForPopup={() => {}} />);
         expect(screen.getByText("1")).toBeInTheDocument();
     });
 
@@ -51,6 +54,7 @@ describe("CalendarDay", () => {
         const day = {
             dayNumber: 25,
             isCurrentMonth: true,
+            isSideMonth: false,
             isToday: false,
             isWeekend: false,
             events: [
@@ -58,13 +62,14 @@ describe("CalendarDay", () => {
             ],
             date:  new UTCDate("2025-11-25"),
         };
-        render(<CalendarDay day={day} setIsPopupOpen={() => {}} />);
+        render(<CalendarDay day={day} setDateForPopup={() => {}} />);
         expect(screen.getByText(/Latvia: Christmas/)).toBeInTheDocument();
     });
 
     it("sets holiday title attribute for accessibility", () => {
         const day = {
             dayNumber: 25,
+            isSideMonth: false,
             isCurrentMonth: true,
             isWeekend: false,
             isToday: false,
@@ -73,7 +78,7 @@ describe("CalendarDay", () => {
             ],
             date: new UTCDate("2025-11-25"),
         };
-        render(<CalendarDay day={day} setIsPopupOpen={() => {}} />);
+        render(<CalendarDay day={day} setDateForPopup={() => {}} />);
         const holidayDiv = screen.getByText(/Latvia: Christmas/);
         expect(holidayDiv).toHaveAttribute("title", "Ziemassvētki");
     });
