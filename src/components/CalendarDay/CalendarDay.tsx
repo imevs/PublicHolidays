@@ -7,14 +7,17 @@ import { UTCDate } from "../../utils/UTCDate";
 
 interface CalendarDayProps {
     day: CalendarDayType;
-    setIsPopupOpen(date: UTCDate): void;
+    isSelected: boolean;
+    setDateForPopup(date: UTCDate): void;
 }
 
-const CalendarDay: React.FC<CalendarDayProps> = ({ day, setIsPopupOpen }) => {
+const CalendarDay: React.FC<CalendarDayProps> = ({ day, setDateForPopup, isSelected }) => {
     const dayClasses = [
         styles.calendarDay,
         !day.isCurrentMonth && styles.otherMonth,
-        day.isToday && styles.today
+        day.isToday && styles.today,
+        isSelected ? styles.selectedDate : "",
+        day.isWeekend || day.events.length ? styles.holiday : "",
     ].filter(Boolean).join(" ");
 
     const [countryData, setCountryData] = useState({});
@@ -28,7 +31,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day, setIsPopupOpen }) => {
         <div
             key={day.date.toDateString()}
             className={dayClasses}
-            onClick={() => setIsPopupOpen(day.date)}
+            onClick={() => setDateForPopup(day.date)}
         >
             <div className={styles.dayNumber}>{day.dayNumber}</div>
             {day.isCurrentMonth && day.events.map((holiday, idx) => holiday.kind === "publicHoliday" ? (
@@ -39,12 +42,12 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day, setIsPopupOpen }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <div className={styles.holiday} title={`${holiday.localName}`}>
+                    <div className={styles.event} title={`${holiday.localName}`}>
                         {getFlagEmoji(holiday.countryCode)} {holiday.country}: {holiday.name}
                     </div>
                 </a>
             ) : (
-                <div key={idx} className={styles.holiday} title={`${holiday.localName}`} onClick={(e) => e.stopPropagation()}>
+                <div key={idx} className={styles.event} title={`${holiday.localName}`} onClick={(e) => e.stopPropagation()}>
                     {holiday.icon} {holiday.name}
                 </div>
             ))}

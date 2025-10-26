@@ -74,11 +74,16 @@
   border: 0.5px solid #ddd;
   /*border-radius: 3px;*/
   min-height: 52px;
+  cursor: pointer;
 }
 
-.dayCell.holiday {
+/*.dayCell*/.holiday {
   background-color: #ffefef;
-  cursor: pointer;
+}
+
+/* increase priority to override color */
+.dayCell.selectedDate {
+  background: #ddd;
 }
 
 .holidayIndicatorsList {

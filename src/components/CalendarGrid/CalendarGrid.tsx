@@ -30,6 +30,10 @@ interface CalendarGridProps {
     onNavigateMonth: (direction: number) => void;
 }
 
+function cn(classes: string) {
+    return classes.split("\n").map(line => line.trim()).filter(Boolean).join(" ");
+}
+
 const CalendarGrid: React.FC<CalendarGridProps> = ({
     selectedMonthDays,
     selectedYearDays,
@@ -43,7 +47,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
     const [highlightedMonth, setHighlightedMonth] = useState<number | null>(null); // State for highlighted month
     const yearGridRef = useRef<HTMLDivElement | null>(null); // Ref for the year grid container
     const [countryData, setCountryData] = useState({});
-    const [dateForPopup, setIsPopupOpen] = useState<UTCDate | null>(null);
+    const [dateForPopup, setDateForPopup] = useState<UTCDate | null>(null);
     useEffect(() => {
         import("../../data/holidays_descriptions/all").then(data => {
             setCountryData(data.descriptions);
@@ -88,13 +92,16 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                     <div
                         key={day}
                         className={`${styles.calendarHeader} ${["Sat", "Sun"].includes(day) ? styles.weekend : ""}`}
-                    >
-                        {day}
-                    </div>
+                    >{day}</div>
                 ))}
 
                 {selectedMonthDays.map((day, index) => (
-                    <CalendarDay key={day.date + "" + index} day={day} setIsPopupOpen={setIsPopupOpen} />
+                    <CalendarDay
+                        key={day.date + "" + index}
+                        day={day}
+                        setDateForPopup={setDateForPopup}
+                        isSelected={dateForPopup === day.date}
+                    />
                 ))}
             </div>
         </>
@@ -142,12 +149,16 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                                     return (
                                         <div
                                             key={day}
-                                            className={`
-                                                ${currentDay?.isToday ? styles.today : ""} 
+                                            className={cn(`
+                                                ${currentDay?.isToday ? styles.today : ""}
+                                                ${dateForPopup?.valueOf() === date.valueOf() ? styles.selectedDate : ""} 
                                                 ${styles.dayCell} 
-                                                ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}`
-                                            }
-                                            onClick={() => dayHolidays.length > 0 && setSelectedDay(date)}
+                                                ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}
+                                            `)}
+                                            style={{
+                                                borderRadius: `${day === 0 ? 10 : 0}px 0px ${day === daysInMonth - 1 ? 10 : 0}px 0px`,
+                                            }}
+                                            onClick={() => dayHolidays.length > 0 ? setSelectedDay(date) : setDateForPopup(date)}
                                         >
                                             {day + 1}
                                             <div className={styles.holidayIndicatorsList}>
@@ -179,7 +190,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
             {dateForPopup && onNewEvent && (
                 <EventPopup
                     initialDate={formatDateString(dateForPopup)}
-                    onNewEvent={(data) => { if (data) { onNewEvent(data); } setIsPopupOpen(null); }}
+                    onNewEvent={(data) => { if (data) { onNewEvent(data); } setDateForPopup(null); }}
                 />
             )}
             {selectedDay && (

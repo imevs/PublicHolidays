@@ -4,6 +4,7 @@
   padding: 10px;
   position: relative;
   transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 .calendarDay:hover {
@@ -20,13 +21,17 @@
   color: white;
 }
 
+.calendarDay.selectedDate {
+  background: #ddd;
+}
+
 .dayNumber {
   font-weight: 600;
   margin-bottom: 5px;
   text-align: center;
 }
 
-.holiday {
+.event {
   background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
   padding: 4px 8px;
   border-radius: 6px;
@@ -35,6 +40,10 @@
   font-weight: 500;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   animation: fadeIn 0.3s ease-in;
+}
+
+.holiday {
+  background-color: #ffefef;
 }
 
 @keyframes fadeIn {
