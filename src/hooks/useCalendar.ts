@@ -105,7 +105,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     }, [currentDate, selectedCountries, holidaysData]);
 
     const selectedYearDays = useMemo((): CalendarDay[] => {
-        return calcSelectedMonthDays(currentDate, holidaysData, selectedCountries, 1);
+        return calcSelectedMonthDays(currentDate, holidaysData, selectedCountries, 0);
     }, [currentDate, selectedCountries, holidaysData]);
 
     const navigateMonth = (nextMonth: number): void => {
