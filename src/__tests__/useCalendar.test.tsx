@@ -47,9 +47,9 @@ describe("useCalendar", () => {
         const { result } = renderHook(() => useCalendar(convertEvents(Object.values(allHolidays))));
         const initialMonth = result.current.currentDate.getMonth();
         act(() => {
-            result.current.navigateMonth(initialMonth + 1); // Navigate to the next month
+            const res = result.current.navigateMonth(initialMonth + 1, result.current.currentDate); // Navigate to the next month
+            expect(res.getMonth()).toBe((initialMonth + 1) % 12);
         });
-        expect(result.current.currentDate.getMonth()).toBe((initialMonth + 1) % 12);
     });
 
     it("calendarDays returns 42 days", () => {
