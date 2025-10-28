@@ -25,7 +25,7 @@ interface CalendarGridProps {
     currentDate: UTCDate;
     mode: "month" | "year";
     onModeChange: (mode: "month" | "year") => void;
-    onNavigateMonth: (direction: number) => void;
+    onNavigateMonth: (direction: number, curDate: UTCDate) => void;
 }
 
 function cn(classes: string) {
@@ -40,26 +40,37 @@ const DaysOfWeeks = () => dayNames.map(day => (
 ));
 
 type MonthViewProps = {
+    shouldAnimate?: boolean;
     dateForPopup: UTCDate | null;
     isEditable: boolean;
     setDateForPopup: (date: UTCDate) => void;
-    currentDate: UTCDate;
     selectedDays: CalendarDayType[];
+    currentDate: UTCDate;
     onModeChange: (mode: "month" | "year") => void;
-    onNavigateMonth: (direction: number) => void;
+    onNavigateMonth: (direction: number, curDate: UTCDate) => void;
 };
 
-const MonthView = ({
-    selectedDays,
-    onNavigateMonth,
-    onModeChange,
-    currentDate,
-    dateForPopup,
-    setDateForPopup,
-    isEditable,
-}: MonthViewProps) => {
-    const prevDays = usePrevious(selectedDays);
+const MonthView = (props: MonthViewProps) => {
+    const {
+        shouldAnimate,
+        selectedDays,
+        onNavigateMonth,
+        onModeChange,
+        currentDate,
+        dateForPopup,
+        setDateForPopup,
+        isEditable,
+    } = props;
 
+    const prevDays = usePrevious(selectedDays);
+    const prevDate = usePrevious(currentDate);
+    const classes = styles.calendarGrid + " " + (
+        prevDate && shouldAnimate ? (
+            prevDate.valueOf() < currentDate.valueOf()
+                ? styles.animateHidingForward
+                : styles.animateHidingBackward
+        ) : styles.hidden
+    );
     return <>
         <MonthNavigation
             currentDate={currentDate}
@@ -67,7 +78,7 @@ const MonthView = ({
             onNavigateYear={() => onModeChange("year")}
         />
 
-        {prevDays && <div className={styles.calendarGrid} style={{ display: "none" }}>
+        {prevDays && <div key={currentDate.valueOf()} className={classes}>
             <DaysOfWeeks/>
 
             {prevDays.map((day, index) => (
@@ -141,7 +152,7 @@ const YearView = ({
                             title="Click to switch on month view"
                             onClick={() => {
                                 onModeChange("month");
-                                onNavigateMonth(month);
+                                onNavigateMonth(month, currentDate);
                             }}
                         >
                             {monthName}
@@ -198,18 +209,20 @@ const YearView = ({
     );
 };
 
-const CalendarGrid: React.FC<CalendarGridProps> = ({
-    selectedMonthDays,
-    selectedYearDays,
-    currentDate,
-    mode,
-    onModeChange,
-    onNewEvent,
-    onNavigateMonth
-}) => {
+const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
+    const {
+        selectedMonthDays,
+        selectedYearDays,
+        currentDate,
+        mode,
+        onModeChange,
+        onNewEvent,
+        onNavigateMonth
+    } = props;
     const [selectedDay, setSelectedDay] = useState<UTCDate | null>(null); // State for selected day in popup
     const [countryData, setCountryData] = useState({});
     const [dateForPopup, setDateForPopup] = useState<UTCDate | null>(null);
+    const [shouldAnimate, setShouldAnimate] = useState<boolean>(false);
 
     useEffect(() => {
         import("../../data/holidays_descriptions/all").then(data => {
@@ -235,8 +248,9 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
         <div className={styles.calendarGridContainer}>
             {mode === "month"
                 ? <MonthView
+                    shouldAnimate={shouldAnimate}
                     selectedDays={selectedMonthDays}
-                    onNavigateMonth={onNavigateMonth}
+                    onNavigateMonth={(direction: number, curDate: UTCDate) => { setShouldAnimate(true); onNavigateMonth(direction, curDate) }}
                     onModeChange={onModeChange}
                     currentDate={currentDate}
                     dateForPopup={dateForPopup}
@@ -246,7 +260,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = ({
                 : <YearView
                     selectedDays={selectedYearDays}
                     onNavigateMonth={onNavigateMonth}
-                    onModeChange={onModeChange}
+                    onModeChange={(mode: "month" | "year") => { setShouldAnimate(false); onModeChange(mode); }}
                     currentDate={currentDate}
                     dateForPopup={dateForPopup}
                     setDateForPopup={setDateForPopup}

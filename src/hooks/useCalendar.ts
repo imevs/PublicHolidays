@@ -40,7 +40,7 @@ function calcSelectedMonthDays(currentDate: UTCDate, holidaysData: CalendarEvent
         days.push({
             date,
             isSideMonth: date.getMonth() !== month && isSideMonth,
-            isCurrentMonth: date.getMonth() === month,
+            isCurrentMonth: date.getMonth() === month && date.getFullYear() === year,
             isToday,
             isWeekend: isWeekend(date.getDay()),
             events: holidays,
@@ -69,7 +69,12 @@ function getHolidaysForDate(date: UTCDate, holidaysData: CalendarEvent[], select
 }
 
 export const useCalendar = (holidaysData: CalendarEvent[]) => {
-    const [currentDate, setCurrentDate] = useState(new UTCDate());
+    const [currentDate, setCurrentDateWithoutCheck] = useState(new UTCDate());
+    const setCurrentDate = (date: UTCDate) => {
+        if (date.valueOf() !== currentDate.valueOf()) {
+            setCurrentDateWithoutCheck(date)
+        }
+    };
     const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(["LV"]);
     const [mode, setMode] = useState<"month" | "year">("year");
     const [showAllCountries, setShowAllCountries] = useState(false);
@@ -108,16 +113,16 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         return calcSelectedMonthDays(currentDate, holidaysData, selectedCountries, 0);
     }, [currentDate, selectedCountries, holidaysData]);
 
-    const navigateMonth = (nextMonth: number): void => {
-        const newDate = new UTCDate(currentDate);
+    const navigateMonth = useCallback((nextMonth: number, curDate: UTCDate): UTCDate => {
+        const newDate = new UTCDate(curDate);
         newDate.setMonth(nextMonth);
         const params = getParams();
         params.set("date", dateFormatter.format(newDate.valueOf()));
-        window.location.hash = decodeURIComponent(params.toString());
-        setCurrentDate(newDate);
-    };
+        window.location.hash = decodeURIComponent(params.toString()); // will trigger hashchange event
+        return newDate;
+    }, []);
 
-    const toggleCountry = (countryCode: CountryCode): void => {
+    const toggleCountry = useCallback((countryCode: CountryCode): void => {
         setSelectedCountries(prev => {
             const newCountries = prev.includes(countryCode)
                 ? prev.filter(c => c !== countryCode)
@@ -127,28 +132,28 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
             window.location.hash = decodeURIComponent(params.toString());
             return newCountries;
         });
-    };
+    }, []);
 
-    const handleDateChange = (newDate: UTCDate): void => {
+    const handleDateChange = useCallback((newDate: UTCDate): void => {
         const params = getParams();
         params.set("date", dateFormatter.format(newDate.valueOf()));
         window.location.hash = decodeURIComponent(params.toString());
         setCurrentDate(newDate);
-    };
+    }, []);
 
-    const handleModeChange = (newMode: "month" | "year"): void => {
+    const handleModeChange = useCallback((newMode: "month" | "year"): void => {
         const params = getParams();
         params.set("mode", newMode);
         window.location.hash = decodeURIComponent(params.toString());
         setMode(newMode);
-    };
+    }, []);
 
-    const onShowAllCountries = (state: boolean) => {
+    const onShowAllCountries = useCallback((state: boolean) => {
         const params = getParams();
         params.set("all", state ? "1" : "0");
         window.location.hash = decodeURIComponent(params.toString());
         setShowAllCountries(state);
-    };
+    }, []);
 
     return {
         currentDate,

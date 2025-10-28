@@ -6,7 +6,7 @@ import type { UTCDate } from "../../utils/UTCDate";
 interface MonthNavigationProps {
     currentDate: UTCDate;
     onNavigateYear: () => void;
-    onNavigateMonth: (direction: number) => void;
+    onNavigateMonth: (direction: number, curDate: UTCDate) => void;
 }
 
 const MonthNavigation: React.FC<MonthNavigationProps> = ({
@@ -18,7 +18,7 @@ const MonthNavigation: React.FC<MonthNavigationProps> = ({
         <div className={styles.monthNavigation}>
             <button
                 className={styles.navButton}
-                onClick={() => onNavigateMonth(currentDate.getMonth() - 1)}
+                onClick={() => onNavigateMonth(currentDate.getMonth() - 1, currentDate)}
             >
                 ← Previous
             </button>
@@ -33,7 +33,7 @@ const MonthNavigation: React.FC<MonthNavigationProps> = ({
 
             <button
                 className={styles.navButton}
-                onClick={() => onNavigateMonth(currentDate.getMonth() + 1)}
+                onClick={() => onNavigateMonth(currentDate.getMonth() + 1, currentDate)}
             >
                 Next →
             </button>

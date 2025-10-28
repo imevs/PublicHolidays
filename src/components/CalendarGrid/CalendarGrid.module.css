@@ -7,6 +7,7 @@
   border-radius: 12px;
   overflow: hidden;
   padding: 1px;
+  width: calc(100% - 60px);
 }
 
 .calendarGridContainer {
@@ -28,6 +29,11 @@
     margin: 20px;
     overflow: scroll;
     width: calc(100% - 2 * 20px);
+    &.hidden,
+    &.animateHidingForward,
+    &.animateHidingBackward {
+      margin-top: 0;
+    }
   }
 }
 
@@ -171,5 +177,61 @@
   }
   50% {
     background-color: rgba(0, 123, 255, 0.1);
+  }
+}
+
+.hidden,
+.animateHidingForward,
+.animateHidingBackward {
+  opacity: 0;
+  position: absolute;
+  margin-top: 10px;
+  z-index: 1;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.animateHidingForward {
+  animation-name: animateHidingForward, animateHidingOpacity;
+}
+
+.animateHidingBackward {
+  animation-name: animateHidingBackward, animateHidingOpacity;
+}
+
+@keyframes animateHidingOpacity {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes animateHidingForward {
+  0% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animateHidingBackward {
+  0% {
+    transform: translateX(0);
+  }
+  90% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }
