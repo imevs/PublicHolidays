@@ -63,27 +63,34 @@ export function EventListInput(props: {
     setDataText(text: string): void;
     setHolidaysData: (data: CalendarEvent[]) => void
 }) {
+    const icsLinkRef = useRef<HTMLInputElement | null>(null);
     const textRef = useRef<HTMLTextAreaElement | null>(null);
     const iconsRef = useRef<HTMLDivElement | null>(null);
     const fileInputRef = useRef<HTMLInputElement | null>(null);
     const [holidaysParsed, setHolidays] = useState<CalendarEvent[]>([]);
+
+    const handleICS = useCallback((text: string) => {
+        const parsed = parseICS(text);
+        // set local state and notify parent
+        setHolidays(parsed);
+        props.setHolidaysData(parsed);
+        // update textarea so user sees imported events in the same format
+        const lines = parsed.map(ev =>
+            `${ev.date} ${ev.kind === "other" ? ev.icon : getFlagEmoji(ev.countryCode)} ${ev.name}`,
+        ).join("\n");
+        props.setDataText(lines);
+    }, []);
+
     const handleImportFile = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
         if (!file) return;
         const reader = new FileReader();
         reader.onload = () => {
-            const text = String(reader.result || "");
-            const parsed = parseICS(text);
-            // set local state and notify parent
-            setHolidays(parsed);
-            props.setHolidaysData(parsed);
-            // update textarea so user sees imported events in the same format
-            const lines = parsed.map(ev =>
-                `${ev.date} ${ev.kind === "other" ? ev.icon : getFlagEmoji(ev.countryCode)} ${ev.name}`,
-            ).join("\n");
-            props.setDataText(lines);
+            handleICS(String(reader.result || ""));
             // clear the input so same file can be re-imported if needed
-            if (fileInputRef.current) fileInputRef.current.value = "";
+            if (fileInputRef.current) {
+                fileInputRef.current.value = "";
+            }
         };
         reader.readAsText(file);
     };
@@ -109,10 +116,22 @@ export function EventListInput(props: {
         exportCalendarToFile(holidaysParsed);
     }, [holidaysParsed]);
 
+    const loadCalendar = useCallback(() => {
+        if (icsLinkRef.current?.value) {
+            fetch(icsLinkRef.current.value).then(res => res.text()).then(data => {
+                handleICS(data);
+            });
+        }
+    }, []);
+
     return <div className={styles.container}>
-        <div style={{ paddingBottom: 5, textAlign: "end" }}>
+        <div className={styles.controls}>
+            <input ref={icsLinkRef} placeholder="Add link to .ICS file" />
+            <button onClick={loadCalendar}>Load ICS</button>
+        </div>
+        <div className={styles.controls}>
             <button onClick={exportCalendar}>Save to .ics</button>
-            <button onClick={() => fileInputRef.current?.click()} style={{ marginLeft: 8 }}>Import .ics</button>
+            <button onClick={() => fileInputRef.current?.click()}>Import .ics</button>
             <input ref={fileInputRef} type="file" accept=".ics,text/calendar" style={{ display: "none" }} onChange={handleImportFile} />
         </div>
 
