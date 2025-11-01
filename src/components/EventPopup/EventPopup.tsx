@@ -12,9 +12,8 @@ function clearFromEmoji(s: string): string {
     return s.replace(/(\p{Emoji_Presentation}|\p{Emoji}\uFE0F)\s/u, "");
 }
 
-function Emoji() {
-    return "🎂💍👸👴🏼👵😀😁😂🤣😊😍😎😏🤔😴😡😭🤯🤩😇🥰😤😈👻🔥".split("").map(s => <span key={s}>{s}</span>);
-}
+const Emoji = () => "🎂💍👸👴🏼👵😀😁😂🤣😊😍😎😏🤔😴😡😭🤯🤩😇🥰😤😈👻🔥"
+    .split("").map((s, i) => <span key={i}>{s}</span>);
 
 const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
     const ref = useRef<HTMLDivElement | null>(null);
@@ -69,46 +68,49 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
     }, []);
 
     return (
-        <div
-            ref={ref}
-            className={styles.popup}
-            onClick={(e) => { e.stopPropagation(); }}
-            role="dialog"
-            aria-modal="true"
-        >
-            <p><b>Add new event for {initialDate}</b></p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                <div className={styles.nameContainer}>
-                    <label htmlFor="eventName">Name</label>
+        <>
+            <div className={styles.shadow} />
+            <div
+                ref={ref}
+                className={styles.popup}
+                onClick={(e) => { e.stopPropagation(); }}
+                role="dialog"
+                aria-modal="true"
+            >
+                <p><b>Add new event for {initialDate}</b></p>
+                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+                    <div className={styles.nameContainer}>
+                        <label htmlFor="eventName">Name</label>
+                        <input
+                            onKeyDown={handleKeyDown}
+                            id="eventName"
+                            ref={nameRef}
+                            value={name}
+                            required
+                            type="text"
+                            onChange={e => setName(e.target.value)}
+                        />
+                    </div>
+                    <div className={styles["emoji-popup"]} onClick={onIconClick}>
+                        <Emoji />
+                    </div>
+
                     <input
-                        onKeyDown={handleKeyDown}
-                        id="eventName"
-                        ref={nameRef}
-                        value={name}
-                        required
-                        type="text"
-                        onChange={e => setName(e.target.value)}
+                        type="checkbox"
+                        id="oneTime"
+                        className={styles.checkbox}
+                        checked={oneTime}
+                        onChange={(e) => setOneTime(e.target.checked)}
                     />
-                </div>
-                <div className={styles["emoji-popup"]} onClick={onIconClick}>
-                    <Emoji />
-                </div>
+                    <label htmlFor="oneTime" className={styles.checkboxLabel}>One-time</label>
 
-                <input
-                    type="checkbox"
-                    id="oneTime"
-                    className={styles.checkbox}
-                    checked={oneTime}
-                    onChange={(e) => setOneTime(e.target.checked)}
-                />
-                <label htmlFor="oneTime" className={styles.checkboxLabel}>One-time</label>
-
-                <div style={{ display: "flex", gap: 8 }}>
-                    <button type="button" onClick={handleSave}>Save (Enter)</button>
-                    <button type="button" onClick={() => onNewEvent(null)}>Cancel (Esc)</button>
+                    <div style={{ display: "flex", gap: 8 }}>
+                        <button type="button" onClick={handleSave}>Save (Enter)</button>
+                        <button type="button" onClick={() => onNewEvent(null)}>Cancel (Esc)</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 

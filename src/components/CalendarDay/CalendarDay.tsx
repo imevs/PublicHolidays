@@ -19,7 +19,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day, setDateForPopup, isSelec
         day.isToday && styles.today,
         isSelected ? styles.selectedDate : "",
         isEditable ? styles.isClickable : "",
-        day.isWeekend || day.events.length ? styles.holiday : "",
+        day.isWeekend ? styles.holiday : "",
     ].filter(Boolean).join(" ");
 
     const [countryData, setCountryData] = useState({});
