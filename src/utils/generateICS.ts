@@ -2,7 +2,7 @@ import type { CalendarEvent } from "../types";
 import { getFlagEmoji } from "./countryFlags";
 import { formatDateString } from "./dateUtils";
 import { countryTimeZones } from "./timeZones";
-import type { CountryCode } from "../data/countryNames";
+import { type CountryCode, type CountryName, countryNames } from "../data/countryNames";
 import { type DateString, UTCDate } from "./UTCDate";
 
 function formatDateToYYYYMMDD(d: UTCDate) {
@@ -110,6 +110,7 @@ export function parseICS(raw: string): CalendarEvent[] {
     const events: CalendarEvent[] = [];
     let current: Partial<CalendarEvent> | null = null;
     let lastProp: string | null = null;
+    let country: CountryCode | undefined = undefined;
 
     for (const line of lines) {
         const trimmed = line.replace(/\r$/, "");
@@ -129,14 +130,14 @@ export function parseICS(raw: string): CalendarEvent[] {
                         kind: "other",
                         icon: current.icon ?? "",
                     });
-                } else {
+                } else if (current.kind === "publicHoliday") {
                     events.push({
                         date: current.date ?? null,
                         name: current.name || "",
                         localName: current.localName ?? "",
                         kind: "publicHoliday",
-                        countryCode: "AL",
-                        country: "Sweden",
+                        countryCode: current.countryCode ?? "SE",
+                        country: current.country ?? "Sweden",
                         type: undefined,
                     });
                 }
@@ -146,9 +147,18 @@ export function parseICS(raw: string): CalendarEvent[] {
             continue;
         }
 
+        const colonIdx = trimmed.indexOf(":");
+        const keyParts = trimmed.substring(0, colonIdx).split(";");
+        const valuePart = trimmed.substring(colonIdx + 1);
+
+        const propName = keyParts[0].toUpperCase();
+        if (propName === "X-WR-CALNAME") {
+            country = (Object.entries(countryNames) as [CountryCode, CountryName][])
+                .find(([, name]) => valuePart.toLowerCase().includes(name.toLowerCase()))?.[0];
+        }
+
         if (!current) continue;
 
-        const colonIdx = trimmed.indexOf(":");
         if (colonIdx === -1) {
             // line without ":" -> treat as raw continuation (insert newline then text) for last property
             if (lastProp === "SUMMARY") {
@@ -159,25 +169,23 @@ export function parseICS(raw: string): CalendarEvent[] {
             continue;
         }
 
-        const keyParts = trimmed.substring(0, colonIdx).split(";");
-        const valuePart = trimmed.substring(colonIdx + 1);
-
-        const propName = keyParts[0].toUpperCase();
-
         if (propName === "DTSTART") {
             const TZID = keyParts.map(p => p.split("=")).find(([k]) => k === "TZID" )?.[1];
+            current.kind = "other";
             if (TZID) {
                 const countryCode = (Object.entries(countryTimeZones) as [CountryCode, string][])
                     .find(([, zone]) => zone === TZID)?.[0];
                 if (countryCode) {
-                    current.kind = "other";
-                    if (current.kind === "other") {
-                        current.icon = getFlagEmoji(countryCode);
-                    } else if (current.kind === "publicHoliday") {
-                        current.countryCode = countryCode;
-                    }
+                    current.kind = "publicHoliday";
+                }
+                if (current.kind === "publicHoliday") {
+                    current.countryCode = countryCode;
                 }
             }
+            if (current.kind === "other" && country) {
+                current.icon = getFlagEmoji(country);
+            }
+
             const dateRaw = valuePart.trim();
             const ymd = dateRaw.slice(0, 8);
             if (/^\d{8}$/.test(ymd)) {

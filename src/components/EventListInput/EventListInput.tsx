@@ -118,8 +118,11 @@ export function EventListInput(props: {
 
     const loadCalendar = useCallback(() => {
         if (icsLinkRef.current?.value) {
-            fetch(icsLinkRef.current.value).then(res => res.text()).then(data => {
+            const proxy = "https://api.codetabs.com/v1/proxy/?quest=";
+            fetch(proxy + encodeURIComponent(icsLinkRef.current.value)).then(res => res.text()).then(data => {
                 handleICS(data);
+            }).catch(e => {
+                console.error(e);
             });
         }
     }, []);

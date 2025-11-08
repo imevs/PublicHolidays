@@ -12,7 +12,7 @@ function clearFromEmoji(s: string): string {
     return s.replace(/(\p{Emoji_Presentation}|\p{Emoji}\uFE0F)\s/u, "");
 }
 
-const Emoji = () => "🎂💍👸👴🏼👵😀😁😂🤣😊😍😎😏🤔😴😡😭🤯🤩😇🥰😤😈👻🔥"
+const Emoji = () => "🎈🎁🎂💍👸👴🏼👵😀😁😂🤣😊😍😎😏🤔😴😡😭🤯🤩😇🥰😤😈👻🔥"
     .split("").map((s, i) => <span key={i}>{s}</span>);
 
 const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
