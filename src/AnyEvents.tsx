@@ -27,7 +27,7 @@ const AnyEvents: React.FC = () => {
     const [dataText, setDataText] = useState<string>(defaultData.trim());
     useEffect(() => {
         const data = localStorage.getItem("holidaysData");
-        if (data) {
+        if (data !== null) {
             setDataText(data);
         }
     }, []);

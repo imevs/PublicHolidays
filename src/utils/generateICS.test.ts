@@ -42,9 +42,9 @@ describe("generateICS", () => {
 
             expect(evs).toHaveLength(1);
             const ev = evs[0];
-            expect(ev.kind).toBe("other");
-            assert(ev.kind === "other");
-            expect(ev.icon).toBe("🇱🇻");
+            expect(ev.kind).toBe("publicHoliday");
+            assert(ev.kind === "publicHoliday");
+            expect(ev.countryCode).toBe("LV");
         });
 
         it("parses UTC and local date-time DTSTART values", () => {
