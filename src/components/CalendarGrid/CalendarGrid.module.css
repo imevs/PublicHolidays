@@ -180,13 +180,17 @@
   }
 }
 
+.animateHidingForward,
+.animateHidingBackward {
+  z-index: 1;
+}
+
 .hidden,
 .animateHidingForward,
 .animateHidingBackward {
   opacity: 0;
   position: absolute;
   margin-top: 10px;
-  z-index: 1;
   animation-duration: 0.5s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
