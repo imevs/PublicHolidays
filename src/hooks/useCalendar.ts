@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { CalendarDay, CalendarEvent } from "../types";
 import {
     convertDayToEUFormat,
+    dateLocale,
     DayIndexes,
     formatDateString,
     getNextMonth,
@@ -11,13 +12,13 @@ import {
 import type { CountryCode } from "../data/countryNames";
 import { type DateThreeParts, UTCDate } from "../utils/UTCDate";
 
-const dateFormatter = new Intl.DateTimeFormat("en-CA"); // Canadian English uses YYYY-MM-DD format
+const dateFormatter = new Intl.DateTimeFormat(dateLocale);
 
 function getParams() {
     return new URLSearchParams(window.location.search || window.location.hash.replace("#", ""));
 }
 
-function calcSelectedMonthDays(currentDate: UTCDate, holidaysData: CalendarEvent[], selectedCountries: CountryCode[], month: number) {
+function calcSelectedDays(currentDate: UTCDate, holidaysData: CalendarEvent[], selectedCountries: CountryCode[], month: number) {
     const year = currentDate.getFullYear();
     const firstDay = new UTCDate(`${year}-${String(month + 1).padStart(2, "0")}-01`);
     const startDate = new UTCDate(firstDay);
@@ -27,7 +28,7 @@ function calcSelectedMonthDays(currentDate: UTCDate, holidaysData: CalendarEvent
     const today = new UTCDate();
 
     let isSideMonth = true;
-    for (let i = 0; i < 366; i++) {
+    for (let i = 0; i <= 366; i++) {
         const date = new UTCDate(startDate);
         date.setDate(startDate.getDate() + i);
         if (date.getDay() === DayIndexes.Monday && date.getMonth() === getNextMonth(month)) {
@@ -106,11 +107,11 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     }, []);
 
     const selectedMonthDays = useMemo((): CalendarDay[] => {
-        return calcSelectedMonthDays(currentDate, holidaysData, selectedCountries, currentDate.getMonth()).filter(d => d.isSideMonth || d.isCurrentMonth);
+        return calcSelectedDays(currentDate, holidaysData, selectedCountries, currentDate.getMonth()).filter(d => d.isSideMonth || d.isCurrentMonth);
     }, [currentDate, selectedCountries, holidaysData]);
 
     const selectedYearDays = useMemo((): CalendarDay[] => {
-        return calcSelectedMonthDays(currentDate, holidaysData, selectedCountries, 0);
+        return calcSelectedDays(currentDate, holidaysData, selectedCountries, 0);
     }, [currentDate, selectedCountries, holidaysData]);
 
     const navigateMonth = useCallback((nextMonth: number, curDate: UTCDate): UTCDate => {

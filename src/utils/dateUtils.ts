@@ -16,6 +16,7 @@ export const DayIndexes = {
     Saturday: 6,
     Sunday: 0,
 };
+export const dateLocale = "en-CA"; // Canadian English uses "YYYY-MM-DD, HH:mm" format
 
 export const generateYears = (): number[] => {
     const currentYear = new UTCDate().getFullYear();
@@ -43,7 +44,7 @@ export const getDaysInMonth = (year: number, month: number): number => {
 };
 
 export const getMonthName = (month: number): string => {
-    return new Date(0, month).toLocaleString("en-US", { month: "long" });
+    return new Date(0, month).toLocaleString(dateLocale, { month: "long" });
 };
 
 export const getNextMonth = (num: number): number => {
@@ -51,12 +52,12 @@ export const getNextMonth = (num: number): number => {
 };
 
 export function formatDateToReadable(date: UTCDate) {
-    const dateFormatter = new Intl.DateTimeFormat("en-US", {
+    const dateFormatter = new Intl.DateTimeFormat(dateLocale, {
         month: "long",
         day: "numeric",
     });
 
-    const weekdayFormatter = new Intl.DateTimeFormat("en-US", {
+    const weekdayFormatter = new Intl.DateTimeFormat(dateLocale, {
         weekday: "long",
     });
 
