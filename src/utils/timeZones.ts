@@ -1,6 +1,7 @@
 // Country code → primary time zone mapping (IANA names)
 // Note: some countries have multiple time zones — here is the main one
 import type { CountryCode } from "../data/countryNames";
+import { dateLocale } from "./dateUtils";
 
 export const countryTimeZones: Record<CountryCode, string> = {
     AD: "Europe/Andorra",
@@ -57,14 +58,14 @@ function getOffset(timeZone: string, reserveTz: string | undefined) {
     const date = new Date()
     let formatter: Intl.DateTimeFormat | undefined = undefined;
     try {
-        formatter = new Intl.DateTimeFormat("fr-FR", {
+        formatter = new Intl.DateTimeFormat(dateLocale, {
             timeZone,
             timeZoneName: "shortOffset"
         });
     } catch (ex: unknown) {
         if (reserveTz) {
             try {
-                formatter = new Intl.DateTimeFormat("fr-FR", {
+                formatter = new Intl.DateTimeFormat(dateLocale, {
                     timeZone: reserveTz,
                     timeZoneName: "shortOffset"
                 });
@@ -107,13 +108,13 @@ export const getLocalTime = (country: CountryCode) => {
         hour12: false
     } as const;
     try {
-        const formatter = new Intl.DateTimeFormat("fr-FR", { timeZone: countryTimeZones[country], ...options });
+        const formatter = new Intl.DateTimeFormat(dateLocale, { timeZone: countryTimeZones[country], ...options });
         return formatter.format(new Date());
     } catch (e) {
         window.console.error(e);
     }
     try {
-        const formatter = new Intl.DateTimeFormat("fr-FR", { timeZone: countryTimeZonesFallBack[country], ...options });
+        const formatter = new Intl.DateTimeFormat(dateLocale, { timeZone: countryTimeZonesFallBack[country], ...options });
         return formatter.format(new Date());
     } catch (e) {
         window.console.error(e);
