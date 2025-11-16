@@ -57,6 +57,9 @@ export class UTCDate {
         return this.date.getTime();
     }
 
+    /**
+     * An integer corresponding to the day of the week for the given date according to universal time: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on.
+     */
     getDay(): number {
         return this.date.getUTCDay();
     }
@@ -65,10 +68,16 @@ export class UTCDate {
         return this.date.getUTCFullYear();
     }
 
+    /**
+     * Starts from 0
+     */
     getMonth(): number {
         return this.date.getUTCMonth();
     }
 
+    /**
+     * An integer, between 1 and 31
+     */
     getDate(): number {
         return this.date.getUTCDate();
     }

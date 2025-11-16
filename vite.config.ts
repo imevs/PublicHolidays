@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
-import { APP_BASE_NAME } from "./src/consts";
+export const APP_BASE_NAME = "PublicHolidays";
 
 export default defineConfig({
     plugins: [

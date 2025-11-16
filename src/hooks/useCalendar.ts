@@ -34,7 +34,7 @@ function calcSelectedDays(
     const today = new UTCDate();
 
     let isSideMonth = true;
-    for (let i = 0; i <= 367; i++) {
+    for (let i = 0; i <= 366 + 6; i++) {
         const date = new UTCDate(startDate);
         date.setDate(startDate.getDate() + i);
         if (date.getDay() === DayIndexes.Monday && date.getMonth() === getNextMonth(month)) {
@@ -42,12 +42,14 @@ function calcSelectedDays(
         }
 
         const isToday = isSameDate(date, today);
-        const holidays = getHolidaysForDate(date, holidaysData, selectedCountries);
+        const isCurrentYear = date.getFullYear() === year;
 
+        const holidays = isCurrentYear ? getHolidaysForDate(date, holidaysData, selectedCountries) : [];
         days.push({
             date,
             isSideMonth: date.getMonth() !== month && isSideMonth,
-            isCurrentMonth: date.getMonth() === month && date.getFullYear() === year,
+            isCurrentMonth: date.getMonth() === month && isCurrentYear,
+            isCurrentYear: isCurrentYear,
             isToday,
             isWeekend: isWeekend(date.getDay()),
             events: showAllHolidays || !isWeekend(date.getDay()) ? holidays : [],
@@ -75,7 +77,7 @@ function getHolidaysForDate(date: UTCDate, holidaysData: CalendarEvent[], select
     ];
 }
 
-export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays: boolean) => {
+export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = true) => {
     const [currentDate, setCurrentDateWithoutCheck] = useState(new UTCDate());
     const setCurrentDate = (date: UTCDate) => {
         if (date.valueOf() !== currentDate.valueOf()) {
