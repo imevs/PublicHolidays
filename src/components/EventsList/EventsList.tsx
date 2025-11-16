@@ -8,6 +8,7 @@ import styles from "./EventsList.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags";
 import { exportCalendarToFile } from "../../utils/generateICS";
 import type { UTCDate } from "../../utils/UTCDate";
+import { APP_BASE_NAME } from "../../consts";
 
 export type EventsListProps = {
     selectedYearDays: CalendarDayType[];
@@ -36,7 +37,7 @@ export function EventsList({
                 });
             });
         localStorage.setItem("holidaysData", dataText);
-        navigate("/PublicHolidays/EditEvents");
+        navigate(`/${APP_BASE_NAME}/EditEvents`);
     }, [selectedYearDays]);
 
     const exportCalendar = useCallback(() => {

@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import fetch from "node-fetch";
+import { APP_BASE_NAME } from "../src/consts";
 
 type RawHoliday = {
     date: string;
@@ -94,7 +95,7 @@ async function fetchAvailableCountries(): Promise<Record<string, string>> {
 }
 
 async function fetchHolidays(year: number, country: string): Promise<Holiday[]> {
-    const url = `${API_BASE}/PublicHolidays/${year}/${country}`;
+    const url = `${API_BASE}/${APP_BASE_NAME}/${year}/${country}`;
     const res = await fetch(url);
     if (!res.ok) {
         throw new Error(

@@ -9,8 +9,7 @@ import { CalendarEvent } from "./types";
 import { convertEvents } from "./utils/convertEvents";
 import { EventsList } from "./components/EventsList/EventsList";
 import CountryFilter from "./components/CountryFilter/CountryFilter";
-
-const baseName = "PublicHolidays"; //import.meta.env.VITE_SITE_BASE
+import { APP_BASE_NAME } from "./consts";
 
 const Holidays: React.FC = () => {
     const [searchParams] = useSearchParams();
@@ -18,7 +17,7 @@ const Holidays: React.FC = () => {
 
     useEffect(() => {
         const path = searchParams?.get("path");
-        if (path?.includes(baseName)) {
+        if (path?.includes(APP_BASE_NAME)) {
             navigate(path + location.hash);
         }
     }, [])
@@ -29,6 +28,7 @@ const Holidays: React.FC = () => {
         });
     }, []);
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
+    const [showAllHolidays, setShowAllHolidays] = useState(false);
 
     const {
         currentDate,
@@ -42,7 +42,8 @@ const Holidays: React.FC = () => {
         handleModeChange,
         showAllCountries,
         setShowAllCountries,
-    } = useCalendar(holidaysData);
+    } = useCalendar(holidaysData, showAllHolidays);
+
     return (
         <div className={styles.app}>
             <div className={styles.header}>
@@ -63,6 +64,7 @@ const Holidays: React.FC = () => {
                         setShowAllCountries={setShowAllCountries}
                         selectedCountries={selectedCountries}
                         onToggleCountry={toggleCountry}
+                        setShowAllHolidays={setShowAllHolidays}
                     />}
                 />
 
