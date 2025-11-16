@@ -18,7 +18,13 @@ function getParams() {
     return new URLSearchParams(window.location.search || window.location.hash.replace("#", ""));
 }
 
-function calcSelectedDays(currentDate: UTCDate, holidaysData: CalendarEvent[], selectedCountries: CountryCode[], month: number) {
+function calcSelectedDays(
+    currentDate: UTCDate,
+    holidaysData: CalendarEvent[],
+    selectedCountries: CountryCode[],
+    month: number,
+    showAllHolidays: boolean,
+) {
     const year = currentDate.getFullYear();
     const firstDay = new UTCDate(`${year}-${String(month + 1).padStart(2, "0")}-01`);
     const startDate = new UTCDate(firstDay);
@@ -28,7 +34,7 @@ function calcSelectedDays(currentDate: UTCDate, holidaysData: CalendarEvent[], s
     const today = new UTCDate();
 
     let isSideMonth = true;
-    for (let i = 0; i <= 366; i++) {
+    for (let i = 0; i <= 367; i++) {
         const date = new UTCDate(startDate);
         date.setDate(startDate.getDate() + i);
         if (date.getDay() === DayIndexes.Monday && date.getMonth() === getNextMonth(month)) {
@@ -44,7 +50,7 @@ function calcSelectedDays(currentDate: UTCDate, holidaysData: CalendarEvent[], s
             isCurrentMonth: date.getMonth() === month && date.getFullYear() === year,
             isToday,
             isWeekend: isWeekend(date.getDay()),
-            events: holidays,
+            events: showAllHolidays || !isWeekend(date.getDay()) ? holidays : [],
             dayNumber: date.getDate()
         });
         if (date.getDay() === DayIndexes.Sunday && date.getMonth() === getNextMonth(month)) {
@@ -69,7 +75,7 @@ function getHolidaysForDate(date: UTCDate, holidaysData: CalendarEvent[], select
     ];
 }
 
-export const useCalendar = (holidaysData: CalendarEvent[]) => {
+export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays: boolean) => {
     const [currentDate, setCurrentDateWithoutCheck] = useState(new UTCDate());
     const setCurrentDate = (date: UTCDate) => {
         if (date.valueOf() !== currentDate.valueOf()) {
@@ -107,12 +113,13 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     }, []);
 
     const selectedMonthDays = useMemo((): CalendarDay[] => {
-        return calcSelectedDays(currentDate, holidaysData, selectedCountries, currentDate.getMonth()).filter(d => d.isSideMonth || d.isCurrentMonth);
-    }, [currentDate, selectedCountries, holidaysData]);
+        return calcSelectedDays(currentDate, holidaysData, selectedCountries, currentDate.getMonth(), showAllHolidays)
+            .filter(d => d.isSideMonth || d.isCurrentMonth);
+    }, [currentDate, selectedCountries, holidaysData, showAllHolidays]);
 
     const selectedYearDays = useMemo((): CalendarDay[] => {
-        return calcSelectedDays(currentDate, holidaysData, selectedCountries, 0);
-    }, [currentDate, selectedCountries, holidaysData]);
+        return calcSelectedDays(currentDate, holidaysData, selectedCountries, 0, showAllHolidays);
+    }, [currentDate, selectedCountries, holidaysData, showAllHolidays]);
 
     const navigateMonth = useCallback((nextMonth: number, curDate: UTCDate): UTCDate => {
         const newDate = new UTCDate(curDate);

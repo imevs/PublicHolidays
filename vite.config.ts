@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
+import { APP_BASE_NAME } from "./src/consts";
+
 export default defineConfig({
     plugins: [
         react(),
@@ -14,8 +16,8 @@ export default defineConfig({
             ]
         }),
     ],
-    base: "/PublicHolidays/",
+    base: `/${APP_BASE_NAME}/`,
     build: {
-        outDir: "./dist/PublicHolidays",
+        outDir: "./dist/" + APP_BASE_NAME,
     },
 });

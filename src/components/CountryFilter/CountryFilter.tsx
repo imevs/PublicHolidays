@@ -9,6 +9,7 @@ export interface CountryFilterProps {
     onToggleCountry: (countryCode: CountryCode) => void;
     showAllCountries: boolean;
     setShowAllCountries: (showAllCountries: boolean) => void;
+    setShowAllHolidays: (showAllHolidays: boolean) => void;
 }
 
 const CountryFilter: React.FC<CountryFilterProps> = ({
@@ -16,8 +17,10 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
     showAllCountries,
     onToggleCountry,
     setShowAllCountries,
+    setShowAllHolidays,
 }) => {
     const [showTimezones, setShowTimezones] = useState(false); // State to toggle timezone visibility
+    const [showExtraHolidaysOnly, setShowExtraHolidaysOnly] = useState(false);
 
     useEffect(() => {
         if (selectedCountries.length === 0) {
@@ -25,10 +28,24 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
         }
     }, [setShowAllCountries, selectedCountries]);
 
+    useEffect(() => {
+        setShowAllHolidays(!showExtraHolidaysOnly);
+    }, [showExtraHolidaysOnly]);
+
     return (
         <div className={styles.controlGroup}>
             <label className={styles.controlGroupLabel}>Select Countries</label>
             <div className={styles.checkboxContainer}>
+                <input
+                    type="checkbox"
+                    id="showExtraHolidaysOnly"
+                    className={styles.checkbox}
+                    checked={showExtraHolidaysOnly}
+                    onChange={() => setShowExtraHolidaysOnly(!showExtraHolidaysOnly)}
+                />
+                <label htmlFor="showExtraHolidaysOnly" className={styles.checkboxLabel}>
+                    Show only extra holidays
+                </label>
                 <input
                     type="checkbox"
                     id="showTimezones"
