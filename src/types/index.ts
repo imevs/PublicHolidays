@@ -3,6 +3,7 @@ import { type DateString, UTCDate } from "../utils/UTCDate";
 
 export interface CalendarDay {
     date: UTCDate;
+    isCurrentYear: boolean;
     isCurrentMonth: boolean;
     isSideMonth: boolean;
     isToday: boolean;

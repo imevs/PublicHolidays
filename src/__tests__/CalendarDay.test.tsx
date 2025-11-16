@@ -8,6 +8,7 @@ describe("CalendarDay", () => {
         const day = {
             kind: "publicHoliday" as const,
             dayNumber: 10,
+            isCurrentYear: true,
             isCurrentMonth: true,
             isSideMonth: false,
             isToday: false,
@@ -24,6 +25,7 @@ describe("CalendarDay", () => {
         const day = {
             kind: "publicHoliday" as const,
             dayNumber: 15,
+            isCurrentYear: true,
             isCurrentMonth: true,
             isSideMonth: false,
             isToday: true,
@@ -41,6 +43,7 @@ describe("CalendarDay", () => {
             dayNumber: 1,
             isSideMonth: false,
             isCurrentMonth: false,
+            isCurrentYear: false,
             isWeekend: false,
             isToday: false,
             events: [],
@@ -56,6 +59,7 @@ describe("CalendarDay", () => {
             isCurrentMonth: true,
             isSideMonth: false,
             isToday: false,
+            isCurrentYear: false,
             isWeekend: false,
             events: [
                 { kind: "publicHoliday" as const, type: [""], name: "Christmas", localName: "Ziemassvētki", date: "2025-12-25" as const, country: "Latvia" as const, countryCode: "LV" as const },
@@ -71,6 +75,7 @@ describe("CalendarDay", () => {
             dayNumber: 25,
             isSideMonth: false,
             isCurrentMonth: true,
+            isCurrentYear: true,
             isWeekend: false,
             isToday: false,
             events: [
