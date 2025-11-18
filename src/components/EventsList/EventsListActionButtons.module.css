@@ -10,3 +10,13 @@
     align-items: stretch;
     gap: 10px;
 }
+
+@media (max-width: 450px) {
+    .actionButtonContainer {
+        margin: 2px;
+        gap: 2px;
+    }
+    .actionButton {
+        padding: 5px;
+    }
+}
