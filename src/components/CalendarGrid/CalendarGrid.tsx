@@ -121,7 +121,7 @@ const YearView = ({
     useEffect(() => {
         if (yearGridRef.current) {
             const monthElement = yearGridRef.current.querySelectorAll(`.${styles.monthContainer}`)[currentMonth];
-            if (monthElement) {
+            if (monthElement && !currentDate.isToday()) {
                 monthElement.scrollIntoView({ behavior: "smooth", block: "center" });
                 setHighlightedMonth(currentMonth);
             }

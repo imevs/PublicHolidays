@@ -125,6 +125,7 @@ export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = tru
 
     const navigateMonth = useCallback((nextMonth: number, curDate: UTCDate): UTCDate => {
         const newDate = new UTCDate(curDate);
+        newDate.setDate(1);
         newDate.setMonth(nextMonth);
         const params = getParams();
         params.set("date", dateFormatter.format(newDate.valueOf()));
