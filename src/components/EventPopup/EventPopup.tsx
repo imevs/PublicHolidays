@@ -11,9 +11,13 @@ interface EventPopupProps {
 function clearFromEmoji(s: string): string {
     return s.replace(/(\p{Emoji_Presentation}|\p{Emoji}\uFE0F)\s/u, "");
 }
+const icons = [
+    "🎈", "🎁", "🎂", "💍", "👸", "👴🏼", "👵", "😀", "😁", "😂",
+    "🤣", "😊", "😍", "😎", "😏", "🤔", "😴", "😡", "😭", "🤯",
+    "🤩", "😇", "🥰", "😤", "😈", "👻", "🔥"
+];
 
-const Emoji = () => "🎈🎁🎂💍👸👴🏼👵😀😁😂🤣😊😍😎😏🤔😴😡😭🤯🤩😇🥰😤😈👻🔥"
-    .split("").map((s, i) => <span key={i}>{s}</span>);
+const Emoji = () => icons.map((s, i) => <span key={i}>{s}</span>);
 
 const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
     const ref = useRef<HTMLDivElement | null>(null);
