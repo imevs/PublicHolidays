@@ -71,6 +71,7 @@ const AnyEvents: React.FC = () => {
                     selectedMonthDays={selectedMonthDays}
                     currentDate={currentDate}
                     mode={mode}
+                    countryData={{}}
                     onModeChange={handleModeChange}
                     onNewEvent={onNewEvent}
                 />

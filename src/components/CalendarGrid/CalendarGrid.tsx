@@ -17,6 +17,7 @@ import { getLink } from "../../data/holidays_descriptions/getLink";
 import { UTCDate } from "../../utils/UTCDate";
 import EventPopup from "../EventPopup/EventPopup";
 import { usePrevious } from "./UsePrevious";
+import type { Description } from "../../data/holidays_descriptions/all";
 
 interface CalendarGridProps {
     onNewEvent?: (date: OtherEvent) => void; // if not defined will not show popup for new event
@@ -24,6 +25,7 @@ interface CalendarGridProps {
     selectedMonthDays: CalendarDayType[];
     currentDate: UTCDate;
     mode: "month" | "year";
+    countryData: Record<string, Description>;
     onModeChange: (mode: "month" | "year", month: number) => void;
 }
 
@@ -211,18 +213,12 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
         mode,
         onModeChange,
         onNewEvent,
+        countryData,
     } = props;
     const prevMode = usePrevious(props)?.mode;
     const [selectedDay, setSelectedDay] = useState<UTCDate | null>(null); // State for selected day in popup
-    const [countryData, setCountryData] = useState({});
     const [dateForPopup, setDateForPopup] = useState<UTCDate | null>(null);
     const [shouldAnimate, setShouldAnimate] = useState<boolean>(prevMode === mode);
-
-    useEffect(() => {
-        import("../../data/holidays_descriptions/all").then(data => {
-            setCountryData(data.descriptions);
-        });
-    }, []);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {

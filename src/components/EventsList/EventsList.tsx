@@ -4,17 +4,21 @@ import { formatDateToReadable } from "../../utils/dateUtils";
 import styles from "./EventsList.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags";
 import type { UTCDate } from "../../utils/UTCDate";
+import { getLink } from "../../data/holidays_descriptions/getLink";
+import type { Description } from "../../data/holidays_descriptions/all";
 
 export type EventsListProps = {
     selectedYearDays: CalendarDayType[];
     currentDate: UTCDate;
     mode: "month" | "year";
+    countryData: Record<string, Description>;
 }
 
 export function EventsList({
     selectedYearDays,
     currentDate,
     mode,
+    countryData,
 }: EventsListProps) {
     return <div className={styles.eventsList}>
         <div className={styles.eventsWrapper}>
@@ -29,7 +33,9 @@ export function EventsList({
                         {date.events.map(event => (
                             event.kind === "publicHoliday"
                                 ? <div className={styles.events} key={event.name + event.countryCode}>
-                                    {getFlagEmoji(event.countryCode)} {event.country}: {event.name}
+                                    <span>{getFlagEmoji(event.countryCode)}&nbsp;</span>
+                                    <strong>{event.country}&nbsp;</strong>
+                                    <a target="_blank" href={getLink(event.date, event.country, event.name, countryData)}>{event.name}</a>
                                 </div>
                                 : <div className={styles.events} key={event.name}>
                                     {event.icon} {event.name}
