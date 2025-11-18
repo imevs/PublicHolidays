@@ -76,7 +76,11 @@ const Holidays: React.FC = () => {
                         setShowAllHolidays={setShowAllHolidays}
                     />}
                 />
-                <ActionButtons selectedYearDays={selectedYearDays} />
+                <ActionButtons
+                    selectedYearDays={selectedYearDays}
+                    viewMode={mode}
+                    toggleMode={() => handleModeChange(mode === "month" ? "year" : "month", currentDate.getMonth())}
+                />
 
                 <CalendarGrid
                     selectedYearDays={selectedYearDays}

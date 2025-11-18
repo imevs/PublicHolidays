@@ -9,6 +9,8 @@ import styles from "./EventsListActionButtons.module.css";
 
 interface ActionButtonsProps {
     selectedYearDays: CalendarDayType[];
+    viewMode: "month" | "year";
+    toggleMode(): void;
 }
 
 function getCountriesNames(selectedYearDays: CalendarDayType[]) {
@@ -22,7 +24,7 @@ function getCountriesNames(selectedYearDays: CalendarDayType[]) {
     ));
 }
 
-export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays }) => {
+export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays, viewMode, toggleMode }) => {
     const navigate = useNavigate();
 
     const editEvents = () => {
@@ -57,6 +59,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays }
 
     return (
         <div className={styles.actionButtonContainer}>
+            <button className={styles.actionButton} onClick={toggleMode}>{viewMode === "month" ? "Switch to year mode" : "Switch to month mode"}</button>
             <button className={styles.actionButton} onClick={exportAllCalendars}>Download separate .ics files for selected countries</button>
             <button className={styles.actionButton} onClick={exportCalendar}>Download combined .ics file</button>
             <button className={styles.actionButton} onClick={editEvents} style={{ right: 120 }}>Create custom calendar</button>
