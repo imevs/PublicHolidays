@@ -1,11 +1,12 @@
 .actionButton {
     float: right;
     cursor: pointer;
-    padding: 10px;
-    margin-left: 15px;
 }
 
 .actionButtonContainer {
     margin: 15px;
-    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    gap: 10px;
 }

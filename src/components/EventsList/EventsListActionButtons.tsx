@@ -38,7 +38,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays }
 
     return (
         <div className={styles.actionButtonContainer}>
-            <button className={styles.actionButton} onClick={exportCalendar}>Export to .ics</button>
+            <button className={styles.actionButton} onClick={exportCalendar}>Download separate .ics files for selected countries</button>
+            <button className={styles.actionButton} onClick={exportCalendar}>Download combined .ics file</button>
             <button className={styles.actionButton} onClick={editEvents} style={{ right: 120 }}>Create custom calendar</button>
         </div>
     );

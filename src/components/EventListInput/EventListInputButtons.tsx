@@ -58,22 +58,25 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
     }, [holidaysParsed]);
 
     return (
-        <>
-            <div className={styles.controls}>
-                <input ref={icsLinkRef} value={icsUrl} onChange={e => setIcsUrl(e.target.value)} placeholder="Add link to .ICS file" />
+        <div className={styles.controls}>
+            <div className={styles.controlsGroup}>
+                <input
+                    ref={icsLinkRef}
+                    value={icsUrl}
+                    onChange={e => setIcsUrl(e.target.value)}
+                    placeholder="Add link to .ICS file"
+                />
                 <button onClick={loadCalendar}>Load ICS</button>
             </div>
-            <div className={styles.controls}>
-                <button onClick={exportCalendar}>Save to .ics</button>
-                <button onClick={() => fileInputRef.current?.click()}>Import .ics</button>
-                <input
-                    ref={fileInputRef}
-                    type="file"
-                    accept=".ics,text/calendar"
-                    style={{ display: "none" }}
-                    onChange={handleImportFile}
-                />
-            </div>
-        </>
+            <button onClick={exportCalendar}>Save to .ics</button>
+            <button onClick={() => fileInputRef.current?.click()}>Import .ics</button>
+            <input
+                ref={fileInputRef}
+                type="file"
+                accept=".ics,text/calendar"
+                style={{ display: "none" }}
+                onChange={handleImportFile}
+            />
+        </div>
     );
 };
