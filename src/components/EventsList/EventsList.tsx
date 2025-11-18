@@ -1,14 +1,10 @@
-import { useNavigate } from "react-router";
-import { useCallback } from "react";
-
 import { CalendarDay as CalendarDayType } from "../../types";
-import { formatDateString, formatDateToReadable } from "../../utils/dateUtils";
+import { formatDateToReadable } from "../../utils/dateUtils";
 
 import styles from "./EventsList.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags";
-import { exportCalendarToFile } from "../../utils/generateICS";
 import type { UTCDate } from "../../utils/UTCDate";
-import { APP_BASE_NAME } from "../../consts";
+import { ActionButtons } from "./EventsListActionButtons";
 
 export type EventsListProps = {
     selectedYearDays: CalendarDayType[];
@@ -21,33 +17,8 @@ export function EventsList({
     currentDate,
     mode,
 }: EventsListProps) {
-    const navigate = useNavigate()
-
-    const editEvents = useCallback(() => {
-        let dataText = "";
-        (selectedYearDays ?? [])
-            .filter(day => day.events.length)
-            .map((date) => {
-                date.events.forEach(event => {
-                    dataText += event.kind === "publicHoliday"
-                        ? formatDateString(date.date) + " " +
-                        getFlagEmoji(event.countryCode) + " " +
-                        event.country + ": " + event.name + "\n"
-                        : "";
-                });
-            });
-        localStorage.setItem("holidaysData", dataText);
-        navigate(`/${APP_BASE_NAME}/EditEvents`);
-    }, [selectedYearDays]);
-
-    const exportCalendar = useCallback(() => {
-        const data = selectedYearDays.map(d => d.events).flat();
-        exportCalendarToFile(data);
-    }, [selectedYearDays]);
-
     return <div className={styles.eventsList}>
-        <button className={styles.actionButton} onClick={exportCalendar}>Export to .ics</button>
-        <button className={styles.actionButton} onClick={editEvents} style={{ right: 120 }}>Create custom calendar</button>
+        <ActionButtons selectedYearDays={selectedYearDays} />
         <div className={styles.eventsWrapper}>
             {selectedYearDays
                 .filter(day => mode === "month" ? day.date.getMonth() === currentDate.getMonth() : true)
