@@ -24,7 +24,7 @@ interface CalendarGridProps {
     selectedMonthDays: CalendarDayType[];
     currentDate: UTCDate;
     mode: "month" | "year";
-    onModeChange: (mode: "month" | "year") => void;
+    onModeChange: (mode: "month" | "year", month: number) => void;
 }
 
 function cn(classes: string) {
@@ -45,7 +45,7 @@ type MonthViewProps = {
     setDateForPopup: (date: UTCDate) => void;
     selectedDays: CalendarDayType[];
     currentDate: UTCDate;
-    onModeChange: (mode: "month" | "year") => void;
+    onModeChange: (mode: "month" | "year", month: number) => void;
 };
 
 const MonthView = (props: MonthViewProps) => {
@@ -71,7 +71,7 @@ const MonthView = (props: MonthViewProps) => {
     return <>
         <MonthNavigation
             currentDate={currentDate}
-            onNavigateYear={() => onModeChange("year")}
+            onNavigateYear={() => onModeChange("year", 1)}
         />
 
         {prevDays && <div key={currentDate.valueOf()} className={classes}>
@@ -146,7 +146,7 @@ const YearView = ({
                             className={styles.monthHeader}
                             title="Click to switch on month view"
                             onClick={() => {
-                                onModeChange("month");
+                                onModeChange("month", month);
                             }}
                         >
                             {monthName}
@@ -212,10 +212,11 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
         onModeChange,
         onNewEvent,
     } = props;
+    const prevMode = usePrevious(props)?.mode;
     const [selectedDay, setSelectedDay] = useState<UTCDate | null>(null); // State for selected day in popup
     const [countryData, setCountryData] = useState({});
     const [dateForPopup, setDateForPopup] = useState<UTCDate | null>(null);
-    const [shouldAnimate, setShouldAnimate] = useState<boolean>(false);
+    const [shouldAnimate, setShouldAnimate] = useState<boolean>(prevMode === mode);
 
     useEffect(() => {
         import("../../data/holidays_descriptions/all").then(data => {
@@ -251,7 +252,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                 />
                 : <YearView
                     selectedDays={selectedYearDays}
-                    onModeChange={(mode: "month" | "year") => { setShouldAnimate(false); onModeChange(mode); }}
+                    onModeChange={(mode: "month" | "year", month) => { setShouldAnimate(false); onModeChange(mode, month); }}
                     currentDate={currentDate}
                     dateForPopup={dateForPopup}
                     setDateForPopup={setDateForPopup}

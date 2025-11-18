@@ -123,15 +123,16 @@ export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = tru
         return calcSelectedDays(currentDate, holidaysData, selectedCountries, 0, showAllHolidays);
     }, [currentDate, selectedCountries, holidaysData, showAllHolidays]);
 
-    const navigateMonth = useCallback((nextMonth: number, curDate: UTCDate): UTCDate => {
-        const newDate = new UTCDate(curDate);
+    const navigateMonth = useCallback((nextMonth: number): UTCDate => {
+        const newDate = new UTCDate(currentDate);
+        console.log(currentDate);
         newDate.setDate(1);
         newDate.setMonth(nextMonth);
         const params = getParams();
         params.set("date", dateFormatter.format(newDate.valueOf()));
         window.location.hash = decodeURIComponent(params.toString()); // will trigger hashchange event
         return newDate;
-    }, []);
+    }, [currentDate]);
 
     const toggleCountry = useCallback((countryCode: CountryCode): void => {
         setSelectedCountries(prev => {
@@ -152,12 +153,17 @@ export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = tru
         setCurrentDate(newDate);
     }, []);
 
-    const handleModeChange = useCallback((newMode: "month" | "year"): void => {
+    const handleModeChange = useCallback((newMode: "month" | "year", month: number): void => {
         const params = getParams();
         params.set("mode", newMode);
+        if (newMode === "month") {
+            const newDate = new UTCDate(currentDate);
+            newDate.setMonth(month);
+            params.set("date", dateFormatter.format(newDate.valueOf()));
+        }
         window.location.hash = decodeURIComponent(params.toString());
         setMode(newMode);
-    }, []);
+    }, [currentDate]);
 
     const onShowAllCountries = useCallback((state: boolean) => {
         const params = getParams();

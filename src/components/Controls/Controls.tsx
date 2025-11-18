@@ -7,7 +7,7 @@ interface ControlsProps {
     selectedDate: UTCDate;
     onDateChange: (date: UTCDate) => void;
     extraControls?: React.ReactElement;
-    onNavigateMonth: (direction: number, curDate: UTCDate) => void;
+    onNavigateMonth: (direction: number) => void;
 }
 
 const Controls: React.FC<ControlsProps> = (props) => {
@@ -30,7 +30,7 @@ const Controls: React.FC<ControlsProps> = (props) => {
                     <div className={styles.controlGroupItem}>
                         <button
                             className={styles.navButton}
-                            onClick={() => onNavigateMonth(selectedDate.getMonth() - 12, selectedDate)}
+                            onClick={() => onNavigateMonth(selectedDate.getMonth() - 12)}
                         >
                             ← Previous
                         </button>
@@ -50,7 +50,7 @@ const Controls: React.FC<ControlsProps> = (props) => {
                         </select>
                         <button
                             className={styles.navButton}
-                            onClick={() => onNavigateMonth(selectedDate.getMonth() + 12, selectedDate)}
+                            onClick={() => onNavigateMonth(selectedDate.getMonth() + 12)}
                         >
                             Next →
                         </button>
@@ -63,7 +63,7 @@ const Controls: React.FC<ControlsProps> = (props) => {
                     <div className={styles.controlGroupItem}>
                         <button
                             className={styles.navButton}
-                            onClick={() => onNavigateMonth(selectedDate.getMonth() - 1, selectedDate)}
+                            onClick={() => onNavigateMonth(selectedDate.getMonth() - 1)}
                         >
                             ← Previous
                         </button>
@@ -87,7 +87,7 @@ const Controls: React.FC<ControlsProps> = (props) => {
                         </select>
                         <button
                             className={styles.navButton}
-                            onClick={() => onNavigateMonth(selectedDate.getMonth() + 1, selectedDate)}
+                            onClick={() => onNavigateMonth(selectedDate.getMonth() + 1)}
                         >
                             Next →
                         </button>
