@@ -78,13 +78,13 @@ export function buildICS(events: CalendarEvent[]) {
     return lines.join("\r\n");
 }
 
-export function exportCalendarToFile(holidaysParsed: CalendarEvent[])  {
+export function exportCalendarToFile(holidaysParsed: CalendarEvent[], fileName = "calendar_events")  {
     const data = buildICS(holidaysParsed);
     const blob = new Blob([data], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "calendar_events.ics";
+    a.download = fileName + ".ics";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

@@ -6,6 +6,7 @@ import { CalendarEvent, type OtherEvent } from "./types";
 import { EventListInput } from "./components/EventListInput/EventListInput";
 import Controls from "./components/Controls/Controls";
 import { EventListInputButtons } from "./components/EventListInput/EventListInputButtons";
+import { STORAGE_KEY } from "./consts";
 
 const defaultData = `
 2025-09-10 🎂 Birthday of Joe
@@ -27,14 +28,14 @@ const AnyEvents: React.FC = () => {
     } = useCalendar(holidaysData);
     const [dataText, setDataText] = useState<string>(defaultData.trim());
     useEffect(() => {
-        const data = localStorage.getItem("holidaysData");
+        const data = localStorage.getItem(STORAGE_KEY);
         if (data !== null) {
             setDataText(data);
         }
     }, []);
 
     useEffect(() => {
-        localStorage.setItem("holidaysData", dataText);
+        localStorage.setItem(STORAGE_KEY, dataText);
     }, [dataText]);
 
     const onNewEvent = useCallback((newEvent: OtherEvent) => {
