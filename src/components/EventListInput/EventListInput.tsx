@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 import { CalendarEvent } from "../../types";
 import styles from "./EventListInput.module.css";
 import type { DateString } from "../../utils/UTCDate";
-import { EventListInputButtons } from "./EventListInputButtons";
 
 const yearsRange = [2023, 2024, 2025, 2026, 2027];
 
@@ -64,13 +63,11 @@ export function EventListInput(props: {
 }) {
     const textRef = useRef<HTMLTextAreaElement | null>(null);
     const iconsRef = useRef<HTMLDivElement | null>(null);
-    const [holidaysParsed, setHolidays] = useState<CalendarEvent[]>([]);
 
     useEffect(() => {
         const lines = props.dataText.split("\n").map(l => l.trim()).filter(l => l.length);
         const validLines = lines.filter(l => validateLine(l).valid).join("\n");
         props.setHolidaysData(parseData(validLines));
-        setHolidays(parseData(validLines));
     }, [props.dataText]);
 
     useEffect(() => {
@@ -84,11 +81,6 @@ export function EventListInput(props: {
     }, [textRef.current]);
 
     return <div className={styles.container}>
-        <EventListInputButtons
-            setDataText={props.setDataText}
-            setHolidaysData={props.setHolidaysData}
-            holidaysParsed={holidaysParsed}
-        />
         <label htmlFor="events-data" className={styles.label}>
             Calendar events. Format: <code>YYYY-MM-DD [icon] event name</code>.
         </label>

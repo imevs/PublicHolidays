@@ -5,6 +5,7 @@ import styles from "./Holidays.module.css";
 import { CalendarEvent, type OtherEvent } from "./types";
 import { EventListInput } from "./components/EventListInput/EventListInput";
 import Controls from "./components/Controls/Controls";
+import { EventListInputButtons } from "./components/EventListInput/EventListInputButtons";
 
 const defaultData = `
 2025-09-10 🎂 Birthday of Joe
@@ -57,6 +58,12 @@ const AnyEvents: React.FC = () => {
                     selectedDate={currentDate}
                     onDateChange={handleDateChange}
                     onNavigateMonth={navigateMonth}
+                />
+
+                <EventListInputButtons
+                    setDataText={setDataText}
+                    setHolidaysData={setHolidaysData}
+                    holidaysParsed={holidaysData}
                 />
 
                 <CalendarGrid
