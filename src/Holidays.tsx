@@ -59,6 +59,7 @@ const Holidays: React.FC = () => {
                 <Controls
                     selectedDate={currentDate}
                     onDateChange={handleDateChange}
+                    onNavigateMonth={navigateMonth}
                     extraControls={<CountryFilter
                         showAllCountries={showAllCountries}
                         setShowAllCountries={setShowAllCountries}
@@ -74,7 +75,6 @@ const Holidays: React.FC = () => {
                     currentDate={currentDate}
                     mode={mode}
                     onModeChange={handleModeChange}
-                    onNavigateMonth={navigateMonth}
                 />
 
                 <EventsList

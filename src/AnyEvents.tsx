@@ -56,6 +56,7 @@ const AnyEvents: React.FC = () => {
                 <Controls
                     selectedDate={currentDate}
                     onDateChange={handleDateChange}
+                    onNavigateMonth={navigateMonth}
                 />
 
                 <CalendarGrid
@@ -64,7 +65,6 @@ const AnyEvents: React.FC = () => {
                     currentDate={currentDate}
                     mode={mode}
                     onModeChange={handleModeChange}
-                    onNavigateMonth={navigateMonth}
                     onNewEvent={onNewEvent}
                 />
 

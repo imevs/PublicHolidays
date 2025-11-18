@@ -6,23 +6,14 @@ import type { UTCDate } from "../../utils/UTCDate";
 interface MonthNavigationProps {
     currentDate: UTCDate;
     onNavigateYear: () => void;
-    onNavigateMonth: (direction: number, curDate: UTCDate) => void;
 }
 
 const MonthNavigation: React.FC<MonthNavigationProps> = ({
     currentDate,
-    onNavigateYear,
-    onNavigateMonth
+    onNavigateYear
 }) => {
     return (
         <div className={styles.monthNavigation}>
-            <button
-                className={styles.navButton}
-                onClick={() => onNavigateMonth(currentDate.getMonth() - 1, currentDate)}
-            >
-                ← Previous
-            </button>
-
             <h2
                 title="Click to see whole year"
                 className={styles.monthTitle}
@@ -30,13 +21,6 @@ const MonthNavigation: React.FC<MonthNavigationProps> = ({
             >
                 {`${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`}
             </h2>
-
-            <button
-                className={styles.navButton}
-                onClick={() => onNavigateMonth(currentDate.getMonth() + 1, currentDate)}
-            >
-                Next →
-            </button>
         </div>
     );
 };
