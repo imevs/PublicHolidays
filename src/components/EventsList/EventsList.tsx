@@ -47,7 +47,7 @@ export function EventsList({
 
     return <div className={styles.eventsList}>
         <button className={styles.actionButton} onClick={exportCalendar}>Export to .ics</button>
-        <button className={styles.actionButton} onClick={editEvents} style={{ right: 120 }}>Edit events</button>
+        <button className={styles.actionButton} onClick={editEvents} style={{ right: 120 }}>Create custom calendar</button>
         <div className={styles.eventsWrapper}>
             {selectedYearDays
                 .filter(day => mode === "month" ? day.date.getMonth() === currentDate.getMonth() : true)
