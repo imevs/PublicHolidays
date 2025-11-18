@@ -39,10 +39,3 @@
 .events {
     padding-left: 20px;
 }
-
-.actionButton {
-    float: right;
-    cursor: pointer;
-    padding: 5px 10px;
-    margin: 0 10px;
-}
