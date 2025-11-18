@@ -10,6 +10,7 @@ import { convertEvents } from "./utils/convertEvents";
 import { EventsList } from "./components/EventsList/EventsList";
 import CountryFilter from "./components/CountryFilter/CountryFilter";
 import { APP_BASE_NAME } from "./consts";
+import { ActionButtons } from "./components/EventsList/EventsListActionButtons";
 
 const Holidays: React.FC = () => {
     const [searchParams] = useSearchParams();
@@ -68,6 +69,7 @@ const Holidays: React.FC = () => {
                         setShowAllHolidays={setShowAllHolidays}
                     />}
                 />
+                <ActionButtons selectedYearDays={selectedYearDays} />
 
                 <CalendarGrid
                     selectedYearDays={selectedYearDays}

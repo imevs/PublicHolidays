@@ -4,7 +4,6 @@ import { formatDateToReadable } from "../../utils/dateUtils";
 import styles from "./EventsList.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags";
 import type { UTCDate } from "../../utils/UTCDate";
-import { ActionButtons } from "./EventsListActionButtons";
 
 export type EventsListProps = {
     selectedYearDays: CalendarDayType[];
@@ -18,7 +17,6 @@ export function EventsList({
     mode,
 }: EventsListProps) {
     return <div className={styles.eventsList}>
-        <ActionButtons selectedYearDays={selectedYearDays} />
         <div className={styles.eventsWrapper}>
             {selectedYearDays
                 .filter(day => mode === "month" ? day.date.getMonth() === currentDate.getMonth() : true)
