@@ -44,6 +44,13 @@ const Holidays: React.FC = () => {
         showAllCountries,
         setShowAllCountries,
     } = useCalendar(holidaysData, showAllHolidays);
+    const [countryData, setCountryData] = useState({});
+
+    useEffect(() => {
+        import("./data/holidays_descriptions/all").then(data => {
+            setCountryData(data.descriptions);
+        });
+    }, []);
 
     return (
         <div className={styles.app}>
@@ -77,12 +84,14 @@ const Holidays: React.FC = () => {
                     currentDate={currentDate}
                     mode={mode}
                     onModeChange={handleModeChange}
+                    countryData={countryData}
                 />
 
                 <EventsList
                     selectedYearDays={selectedYearDays}
                     currentDate={currentDate}
                     mode={mode}
+                    countryData={countryData}
                 />
             </div>
         </div>
