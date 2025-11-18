@@ -24,6 +24,13 @@
   font-size: 0.9rem;
 }
 
+@media (max-width: 1200px) {
+  .calendarGrid {
+    margin: 15px;
+    width: calc(100% - 2 * 15px);
+  }
+}
+
 @media (max-width: 768px) {
   .calendarGrid {
     margin: 20px;

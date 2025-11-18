@@ -2,9 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 30px 20px 30px;
-  padding: 20px 0;
-  height: 70px;
+  margin: 20px 30px 20px 30px;
 }
 
 .monthTitle {
@@ -22,8 +20,8 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .monthNavigation {
-    margin: 0 20px 20px 20px;
+    margin: 15px;
   }
 }
