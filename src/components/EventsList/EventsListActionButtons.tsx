@@ -60,8 +60,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays, 
     return (
         <div className={styles.actionButtonContainer}>
             <button className={styles.actionButton} onClick={toggleMode}>{viewMode === "month" ? "Switch to year mode" : "Switch to month mode"}</button>
-            <button className={styles.actionButton} onClick={exportAllCalendars}>Download separate .ics files for selected countries</button>
-            <button className={styles.actionButton} onClick={exportCalendar}>Download combined .ics file</button>
+            <button className={styles.actionButton} onClick={exportAllCalendars}>Download separate ICS files</button>
+            <button className={styles.actionButton} onClick={exportCalendar}>Download combined ICS file</button>
             <button className={styles.actionButton} onClick={editEvents} style={{ right: 120 }}>Create custom calendar</button>
         </div>
     );
