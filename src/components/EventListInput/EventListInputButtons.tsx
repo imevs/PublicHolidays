@@ -63,6 +63,7 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
                 <input
                     ref={icsLinkRef}
                     value={icsUrl}
+                    type="url"
                     onChange={e => setIcsUrl(e.target.value)}
                     placeholder="Add link to .ICS file"
                 />
