@@ -75,6 +75,7 @@ const Controls: React.FC<ControlsProps> = (props) => {
                                 const newMonth = parseInt(e.target.value);
                                 const updatedDate = new UTCDate(selectedDate);
                                 updatedDate.setMonth(newMonth);
+                                updatedDate.setDate(1);
                                 onDateChange(updatedDate);
                             }}
                         >

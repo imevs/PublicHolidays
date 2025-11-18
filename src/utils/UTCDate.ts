@@ -33,6 +33,12 @@ export class UTCDate {
         return r;
     }
 
+    isToday(): boolean {
+        return today.getFullYear() === this.date.getFullYear() &&
+            today.getMonth() === this.date.getMonth() &&
+            today.getDate() === this.date.getDate();
+    }
+
     toISOString(): string {
         return this.date.toISOString();
     }
@@ -102,3 +108,5 @@ export class UTCDate {
         return this.date.valueOf();
     }
 }
+
+const today = new UTCDate();
