@@ -15,7 +15,7 @@ import { type DateThreeParts, UTCDate } from "../utils/UTCDate";
 const dateFormatter = new Intl.DateTimeFormat(dateLocale);
 
 function getParams() {
-    return new URLSearchParams(window.location.search || window.location.hash.replace("#", ""));
+    return new URLSearchParams(window.location.hash.replace("#", ""));
 }
 
 function calcSelectedDays(
@@ -125,7 +125,6 @@ export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = tru
 
     const navigateMonth = useCallback((nextMonth: number): UTCDate => {
         const newDate = new UTCDate(currentDate);
-        console.log(currentDate);
         newDate.setDate(1);
         newDate.setMonth(nextMonth);
         const params = getParams();
