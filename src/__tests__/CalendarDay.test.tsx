@@ -16,7 +16,7 @@ describe("CalendarDay", () => {
             events: [],
             date: new UTCDate("2025-07-10"),
         };
-        render(<CalendarDay day={day} setDateForPopup={() => {}} isEditable={false} />);
+        render(<CalendarDay countryData={{}} day={day} setDateForPopup={() => {}} isEditable={false} />);
         expect(screen.getByText("10")).toBeInTheDocument();
     });
 
@@ -33,7 +33,7 @@ describe("CalendarDay", () => {
             events: [],
             date: new UTCDate("2025-07-15"),
         };
-        render(<CalendarDay day={day} setDateForPopup={() => {}} isEditable={false} />);
+        render(<CalendarDay countryData={{}} day={day} setDateForPopup={() => {}} isEditable={false} />);
         expect(screen.getByText("15")).toBeInTheDocument();
     });
 
@@ -49,7 +49,7 @@ describe("CalendarDay", () => {
             events: [],
             date:  new UTCDate("2025-06-01"),
         };
-        render(<CalendarDay day={day} setDateForPopup={() => {}} isEditable={false} />);
+        render(<CalendarDay countryData={{}} day={day} setDateForPopup={() => {}} isEditable={false} />);
         expect(screen.getByText("1")).toBeInTheDocument();
     });
 
@@ -66,7 +66,7 @@ describe("CalendarDay", () => {
             ],
             date:  new UTCDate("2025-11-25"),
         };
-        render(<CalendarDay day={day} setDateForPopup={() => {}} isEditable={false} />);
+        render(<CalendarDay countryData={{}} day={day} setDateForPopup={() => {}} isEditable={false} />);
         expect(screen.getByText(/Latvia: Christmas/)).toBeInTheDocument();
     });
 
@@ -83,7 +83,7 @@ describe("CalendarDay", () => {
             ],
             date: new UTCDate("2025-11-25"),
         };
-        render(<CalendarDay day={day} setDateForPopup={() => {}} isEditable={false} />);
+        render(<CalendarDay countryData={{}} day={day} setDateForPopup={() => {}} isEditable={false} />);
         const holidayDiv = screen.getByText(/Latvia: Christmas/);
         expect(holidayDiv).toHaveAttribute("title", "Ziemassvētki");
     });

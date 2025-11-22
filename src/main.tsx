@@ -1,5 +1,4 @@
 import ReactDOM from "react-dom/client";
-import Holidays from "./Holidays.tsx";
 import AnyEvents from "./AnyEvents.tsx";
 import "./index.css";
 
@@ -14,7 +13,9 @@ const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                Component: Holidays,
+                async lazy() {
+                    return { Component: (await import("./Holidays.tsx")).Holidays };
+                },
             },
             {
                 path: "EditEvents",

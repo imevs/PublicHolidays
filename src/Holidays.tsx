@@ -12,7 +12,7 @@ import CountryFilter from "./components/CountryFilter/CountryFilter";
 import { APP_BASE_NAME } from "./consts";
 import { ActionButtons } from "./components/EventsList/EventsListActionButtons";
 
-const Holidays: React.FC = () => {
+export const Holidays: React.FC = () => {
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
 
