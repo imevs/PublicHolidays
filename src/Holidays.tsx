@@ -1,4 +1,3 @@
-import { useNavigate, useSearchParams } from "react-router";
 import React, { useEffect, useState } from "react";
 
 import { useCalendar } from "./hooks/useCalendar";
@@ -9,20 +8,9 @@ import { CalendarEvent } from "./types";
 import { convertEvents } from "./utils/convertEvents";
 import { EventsList } from "./components/EventsList/EventsList";
 import CountryFilter from "./components/CountryFilter/CountryFilter";
-import { APP_BASE_NAME } from "./consts";
 import { ActionButtons } from "./components/EventsList/EventsListActionButtons";
 
 export const Holidays: React.FC = () => {
-    const [searchParams] = useSearchParams();
-    const navigate = useNavigate();
-
-    useEffect(() => {
-        const path = searchParams?.get("path");
-        if (path?.includes(APP_BASE_NAME)) {
-            navigate(path + location.hash);
-        }
-    }, [])
-
     useEffect(() => {
         import("./data/holidays_v2").then(({ allHolidays }) => {
             setHolidaysData(convertEvents(Object.values(allHolidays)));
