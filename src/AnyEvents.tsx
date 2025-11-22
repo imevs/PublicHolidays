@@ -14,7 +14,7 @@ const defaultData = `
 2025-09-27 🎂 Birthday of Dima
 `;
 
-const AnyEvents: React.FC = () => {
+export const AnyEvents: React.FC = () => {
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
 
     const {
