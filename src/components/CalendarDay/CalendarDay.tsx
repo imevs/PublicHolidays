@@ -1,18 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { CalendarDay as CalendarDayType } from "../../types";
 import { getFlagEmoji } from "../../utils/countryFlags";
 import styles from "./CalendarDay.module.css";
 import { getLink } from "../../data/holidays_descriptions/getLink";
 import { UTCDate } from "../../utils/UTCDate";
+import type { Description } from "../../data/holidays_descriptions/all";
 
 interface CalendarDayProps {
     day: CalendarDayType;
     isSelected?: boolean;
     isEditable: boolean;
+    countryData: Record<string, Description>;
     setDateForPopup(date: UTCDate): void;
 }
 
-const CalendarDay: React.FC<CalendarDayProps> = ({ day, setDateForPopup, isSelected, isEditable }) => {
+const CalendarDay: React.FC<CalendarDayProps> = ({
+    day,
+    setDateForPopup,
+    isSelected,
+    isEditable,
+    countryData,
+}) => {
     const dayClasses = [
         styles.calendarDay,
         !day.isCurrentMonth && styles.otherMonth,
@@ -21,13 +29,6 @@ const CalendarDay: React.FC<CalendarDayProps> = ({ day, setDateForPopup, isSelec
         isEditable ? styles.isClickable : "",
         day.isWeekend ? styles.holiday : "",
     ].filter(Boolean).join(" ");
-
-    const [countryData, setCountryData] = useState({});
-    useEffect(() => {
-        import("../../data/holidays_descriptions/all").then(data => {
-            setCountryData(data.descriptions);
-        });
-    }, []);
 
     return (
         <div

@@ -47,6 +47,7 @@ type MonthViewProps = {
     setDateForPopup: (date: UTCDate) => void;
     selectedDays: CalendarDayType[];
     currentDate: UTCDate;
+    countryData: Record<string, Description>;
     onModeChange: (mode: "month" | "year", month: number) => void;
 };
 
@@ -59,6 +60,7 @@ const MonthView = (props: MonthViewProps) => {
         dateForPopup,
         setDateForPopup,
         isEditable,
+        countryData,
     } = props;
 
     const prevDays = usePrevious(selectedDays);
@@ -86,6 +88,7 @@ const MonthView = (props: MonthViewProps) => {
                     setDateForPopup={setDateForPopup}
                     isSelected={false}
                     isEditable={isEditable}
+                    countryData={countryData}
                 />
             ))}
         </div>}
@@ -100,6 +103,7 @@ const MonthView = (props: MonthViewProps) => {
                     setDateForPopup={setDateForPopup}
                     isSelected={dateForPopup === day.date}
                     isEditable={isEditable}
+                    countryData={countryData}
                 />
             ))}
         </div>
@@ -245,6 +249,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                     dateForPopup={dateForPopup}
                     setDateForPopup={setDateForPopup}
                     isEditable={onNewEvent !== undefined}
+                    countryData={countryData}
                 />
                 : <YearView
                     selectedDays={selectedYearDays}
@@ -254,6 +259,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                     setDateForPopup={setDateForPopup}
                     isEditable={onNewEvent !== undefined}
                     setSelectedDay={setSelectedDay}
+                    countryData={countryData}
                 />}
             {dateForPopup && onNewEvent && (
                 <EventPopup
