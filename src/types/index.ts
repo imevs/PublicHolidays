@@ -15,7 +15,7 @@ export interface CalendarDay {
 export type CalendarEvent = HolidayWithCountry | OtherEvent;
 
 export interface HolidayWithCountry {
-    date: DateString | null;
+    date: DateString;
     name: string;
     localName: string;
     kind: "publicHoliday";
@@ -25,7 +25,7 @@ export interface HolidayWithCountry {
 }
 
 export interface OtherEvent {
-    date: DateString | null;
+    date: DateString;
     name: string;
     icon: string;
     localName: string;

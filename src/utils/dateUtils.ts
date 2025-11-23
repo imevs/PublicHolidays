@@ -1,4 +1,5 @@
 import { type DateString, UTCDate } from "./UTCDate";
+import { dateLocale } from "../consts";
 
 export const monthNames = [
     "January", "February", "March", "April", "May", "June",
@@ -16,7 +17,6 @@ export const DayIndexes = {
     Saturday: 6,
     Sunday: 0,
 };
-export const dateLocale = "en-CA"; // Canadian English uses "YYYY-MM-DD, HH:mm" format
 
 export const generateYears = (): number[] => {
     const currentYear = new UTCDate().getFullYear();
@@ -51,16 +51,16 @@ export const getNextMonth = (num: number): number => {
     return (num + 1) % 12;
 };
 
+const dateFormatter = new Intl.DateTimeFormat(dateLocale, {
+    month: "long",
+    day: "numeric",
+});
+
+const weekdayFormatter = new Intl.DateTimeFormat(dateLocale, {
+    weekday: "long",
+});
+
 export function formatDateToReadable(date: UTCDate) {
-    const dateFormatter = new Intl.DateTimeFormat(dateLocale, {
-        month: "long",
-        day: "numeric",
-    });
-
-    const weekdayFormatter = new Intl.DateTimeFormat(dateLocale, {
-        weekday: "long",
-    });
-
     const formattedDate = dateFormatter.format(date.valueOf());
     const weekday = weekdayFormatter.format(date.valueOf());
 

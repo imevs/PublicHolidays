@@ -124,7 +124,7 @@ export function parseICS(raw: string): CalendarEvent[] {
             if (current) {
                 if (current.kind === "other") {
                     events.push({
-                        date: current.date ?? null,
+                        date: current.date!,
                         name: current.name || "",
                         localName: current.localName ?? "",
                         kind: "other",
@@ -132,7 +132,7 @@ export function parseICS(raw: string): CalendarEvent[] {
                     });
                 } else if (current.kind === "publicHoliday") {
                     events.push({
-                        date: current.date ?? null,
+                        date: current.date!,
                         name: current.name || "",
                         localName: current.localName ?? "",
                         kind: "publicHoliday",
