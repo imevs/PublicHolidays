@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { formatDateString } from "../../utils/dateUtils";
 import { getFlagEmoji } from "../../utils/countryFlags";
@@ -6,6 +6,11 @@ import { exportCalendarToFile } from "../../utils/generateICS";
 import { APP_BASE_NAME, STORAGE_KEY } from "../../consts";
 import type { CalendarDay as CalendarDayType } from "../../types";
 import styles from "./EventsListActionButtons.module.css";
+import {
+    hasServiceWorker,
+    registerNotifications,
+    stopNotifications,
+} from "../../notifications/notifications";
 
 interface ActionButtonsProps {
     selectedYearDays: CalendarDayType[];
@@ -26,6 +31,11 @@ function getCountriesNames(selectedYearDays: CalendarDayType[]) {
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays, viewMode, toggleMode }) => {
     const navigate = useNavigate();
+    const [notificationsEnabled, enableNotification] = useState(false);
+
+    useEffect(() => {
+        registerNotifications([], true, enableNotification);
+    }, []);
 
     const editEvents = () => {
         const dataText = (selectedYearDays ?? [])
@@ -57,8 +67,19 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays, 
         });
     };
 
+    const getNotifications = useCallback(() => {
+        if (notificationsEnabled) {
+            stopNotifications();
+        } else {
+            registerNotifications(selectedYearDays.flatMap(
+                d => d.events.filter(e => e.kind === "publicHoliday"),
+            ), false, enableNotification);
+        }
+    }, [notificationsEnabled, enableNotification]);
+
     return (
         <div className={styles.actionButtonContainer}>
+            {hasServiceWorker && <button className={styles.actionButton} onClick={getNotifications}>{notificationsEnabled ? "Disable notifications" : "Get notifications"}</button>}
             <button className={styles.actionButton} onClick={toggleMode}>{viewMode === "month" ? "Switch to year mode" : "Switch to month mode"}</button>
             <button className={styles.actionButton} onClick={exportAllCalendars}>Download separate ICS files</button>
             <button className={styles.actionButton} onClick={exportCalendar}>Download combined ICS file</button>

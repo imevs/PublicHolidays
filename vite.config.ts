@@ -17,6 +17,7 @@ export default defineConfig({
         }),
     ],
     base: `/${APP_BASE_NAME}/`,
+    publicDir: "./src/assets",
     build: {
         outDir: "./dist/" + APP_BASE_NAME,
     },

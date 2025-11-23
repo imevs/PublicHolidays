@@ -1,7 +1,7 @@
 // Country code → primary time zone mapping (IANA names)
 // Note: some countries have multiple time zones — here is the main one
 import type { CountryCode } from "../data/countryNames";
-import { dateLocale } from "./dateUtils";
+import { dateLocale } from "../consts";
 
 export const countryTimeZones: Record<CountryCode, string> = {
     AD: "Europe/Andorra",
@@ -104,8 +104,6 @@ export const getLocalTime = (country: CountryCode) => {
         day: "2-digit",
         hour: "2-digit",
         minute: "2-digit",
-        // second: "2-digit",
-        hour12: false
     } as const;
     try {
         const formatter = new Intl.DateTimeFormat(dateLocale, { timeZone: countryTimeZones[country], ...options });

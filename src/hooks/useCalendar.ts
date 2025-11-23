@@ -2,7 +2,6 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { CalendarDay, CalendarEvent } from "../types";
 import {
     convertDayToEUFormat,
-    dateLocale,
     DayIndexes,
     formatDateString,
     getNextMonth,
@@ -11,6 +10,7 @@ import {
 } from "../utils/dateUtils";
 import type { CountryCode } from "../data/countryNames";
 import { type DateThreeParts, UTCDate } from "../utils/UTCDate";
+import { dateLocale } from "../consts";
 
 const dateFormatter = new Intl.DateTimeFormat(dateLocale);
 
