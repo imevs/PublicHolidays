@@ -1,9 +1,10 @@
 .calendarDay {
-  background: white;
+  background: var(--day-cell-bg);
   min-height: 120px;
   padding: 10px;
   position: relative;
   transition: all 0.2s ease;
+  color: var(--text-main);
 }
 
 .isClickable {
@@ -11,12 +12,12 @@
 }
 
 .calendarDay:hover {
-  background: #f8f9fa;
+  background: var(--day-hover);
 }
 
 .otherMonth {
-  background: #f8f9fa !important;
-  color: #6c757d;
+  background: var(--day-hover) !important;
+  color: var(--text-muted);
 }
 
 .today {
@@ -25,7 +26,7 @@
 }
 
 .calendarDay.selectedDate {
-  background: #ddd;
+  background: var(--selected-day-bg);
 }
 
 .dayNumber {
@@ -41,7 +42,7 @@
   font-size: 0.7rem;
   margin-bottom: 2px;
   font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.3s ease-in;
   color: white;
 }
@@ -55,6 +56,7 @@
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);

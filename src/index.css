@@ -5,12 +5,119 @@
   font-size: 16px;
 }
 
+:root {
+  --app-bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --text-main: #333;
+  --text-header: white;
+  --text-muted: rgba(255, 255, 255, 0.9);
+
+  --container-bg: white;
+  --container-shadow: rgba(0, 0, 0, 0.1);
+
+  --button-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --button-text: white;
+  --button-shadow: rgba(102, 126, 234, 0.4);
+
+  --grid-bg: #e9ecef;
+  --grid-header-bg: #495057;
+  --grid-header-text: white;
+
+  --day-cell-bg: white;
+  --day-border: #ddd;
+  --day-hover: #f8f9fa;
+
+  --holiday-bg: #ffefef;
+  --selected-day-bg: #ddd;
+
+  --popup-bg: white;
+  --popup-border: #ccc;
+
+  --input-bg: white;
+  --input-border: #ccc;
+
+  --weekend-bg: lightcoral;
+
+  --controls-bg-gradient: linear-gradient(90deg, #f8f9fa 0%, #e9ecef 100%);
+  --controls-border: #dee2e6;
+  --controls-label: #495057;
+  --input-text: #495057;
+  --input-focus-border: #667eea;
+
+  --link-color: #0066cc;
+  --link-hover: #004499;
+}
+
+[data-theme='dark'] {
+  --app-bg-gradient: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+  --text-main: #e5e7eb;
+  /* gray-200 */
+  --text-header: #f3f4f6;
+  /* gray-100 */
+  --text-muted: rgba(255, 255, 255, 0.7);
+
+  --container-bg: #1f2937;
+  /* gray-800 */
+  --container-shadow: rgba(0, 0, 0, 0.5);
+
+  --button-bg: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  /* blue-500 to blue-600 */
+  --button-text: white;
+  --button-shadow: rgba(59, 130, 246, 0.4);
+
+  --grid-bg: #374151;
+  /* gray-700 */
+  --grid-header-bg: #111827;
+  /* gray-900 */
+  --grid-header-text: #e5e7eb;
+
+  --day-cell-bg: #1f2937;
+  --day-border: #374151;
+  --day-hover: #374151;
+
+  --holiday-bg: #451a1a;
+  /* Dark red/brown */
+  --selected-day-bg: #374151;
+
+  --popup-bg: #1f2937;
+  --popup-border: #374151;
+
+  --input-bg: #374151;
+  --input-border: #4b5563;
+
+  --weekend-bg: #8b3a3a;
+  /* Darker coral */
+
+  --controls-bg-gradient: linear-gradient(90deg, #111827 0%, #1f2937 100%);
+  --controls-border: #374151;
+  --controls-label: #e5e7eb;
+  --input-text: #e5e7eb;
+  --input-focus-border: #3b82f6;
+
+  --link-color: #60a5fa;
+  /* blue-400 for better contrast on dark */
+  --link-hover: #93c5fd;
+  /* blue-300 */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--app-bg-gradient);
+  /* Ensure body has bg if app doesn't cover it */
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
 }
 
 #root {

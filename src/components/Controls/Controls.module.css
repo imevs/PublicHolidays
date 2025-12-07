@@ -1,7 +1,7 @@
 .controls {
   padding: 20px;
-  background: linear-gradient(90deg, #f8f9fa 0%, #e9ecef 100%);
-  border-bottom: 1px solid #dee2e6;
+  background: var(--controls-bg-gradient);
+  border-bottom: 1px solid var(--controls-border);
 }
 
 .controlsGrid {
@@ -25,25 +25,25 @@
 .controlGroup .controlGroupLabel {
   font-weight: bold;
   margin-bottom: 8px;
-  color: #495057;
+  color: var(--controls-label);
   font-size: 0.9rem;
 }
 
 .select {
   padding: 11px 16px 10px 16px;
-  border: 1px solid #0078d4;
+  border: 1px solid var(--input-border);
   border-radius: 12px;
   font-size: 1rem;
   transition: all 0.2s ease;
-  background: white;
-  color: #495057;
+  background: var(--input-bg);
+  color: var(--input-text);
   margin: 0 6px;
   flex: 1;
 }
 
 .select:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: var(--input-focus-border);
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
@@ -66,7 +66,7 @@
 
 .navButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 5px 15px var(--button-shadow);
 }
 
 .navButton:disabled {
