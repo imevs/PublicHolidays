@@ -125,7 +125,7 @@
   background: var(--popup-bg);
   border: 1px solid var(--popup-border);
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px var(--container-shadow);
   z-index: 1000;
   color: var(--popup-text);
 }
@@ -161,26 +161,26 @@
   content: attr(data-flag);
   position: absolute;
   left: 12px;
-  filter: drop-shadow(0 1px 0 rgba(0, 0, 0, .35));
+  filter: drop-shadow(0 1px 0 var(--flag-shadow));
 }
 
 .popupContent button {
   margin-top: 10px;
   padding: 10px 15px;
-  background: #0078d4;
-  color: white;
+  background: var(--primary-blue);
+  color: var(--text-white);
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .popupContent button:hover {
-  background: #005bb5;
+  background: var(--primary-blue-hover);
 }
 
 .today {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-  color: white !important;
+  background: var(--primary-gradient) !important;
+  color: var(--text-white) !important;
 }
 
 .highlightedMonth {
@@ -196,7 +196,7 @@
   }
 
   50% {
-    background-color: rgba(0, 123, 255, 0.1);
+    background-color: var(--highlight-month-bg);
   }
 }
 

@@ -45,6 +45,56 @@
 
   --link-color: #0066cc;
   --link-hover: #004499;
+
+  /* Extracted Colors */
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --primary-blue: #0078d4;
+  --primary-blue-hover: #005bb5;
+
+  --checkbox-checked-bg: #0078d4;
+  --checkbox-mark-color: #fff;
+
+  --status-valid-bg: #d4f8e8;
+  --status-valid-text: #05684a;
+  --status-valid-border: #9fe6c8;
+
+  --status-invalid-bg: #fdecea;
+  --status-invalid-text: #a33;
+  --status-invalid-border: #f5c6c6;
+
+  --tooltip-bg: white;
+  --tooltip-border: black;
+  --tooltip-border-hover: red;
+  --tooltip-text: black;
+
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+  --emoji-popup-bg: white;
+  --emoji-popup-border: #ccc;
+  --emoji-popup-shadow: rgba(0, 0, 0, 0.1);
+  --emoji-button-bg: #3b82f6;
+
+  --header-text-shadow: rgba(0, 0, 0, 0.3);
+
+  --theme-toggle-bg: rgba(255, 255, 255, 0.2);
+  --theme-toggle-border: rgba(255, 255, 255, 0.3);
+  --theme-toggle-hover-bg: rgba(255, 255, 255, 0.3);
+
+  --event-bg-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  --event-shadow: rgba(0, 0, 0, 0.1);
+
+  --holiday-text: lightcoral;
+
+  --highlight-month-bg: rgba(0, 123, 255, 0.1);
+
+  --select-focus-shadow: rgba(102, 126, 234, 0.1);
+  --button-disabled-bg: #6c757d;
+
+  --text-inverse: #ffffff;
+  --input-border-dark: black;
+  --checkbox-bg: #ffffff;
+  --text-white: white;
+  --flag-shadow: rgba(0, 0, 0, 0.35);
 }
 
 [data-theme='dark'] {
@@ -97,6 +147,56 @@
   /* blue-400 for better contrast on dark */
   --link-hover: #93c5fd;
   /* blue-300 */
+
+  /* Extracted Colors */
+  --primary-gradient: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  --primary-blue: #3b82f6;
+  --primary-blue-hover: #2563eb;
+
+  --checkbox-checked-bg: #3b82f6;
+  --checkbox-mark-color: #fff;
+
+  --status-valid-bg: #064e3b;
+  --status-valid-text: #6ee7b7;
+  --status-valid-border: #065f46;
+
+  --status-invalid-bg: #7f1d1d;
+  --status-invalid-text: #fca5a5;
+  --status-invalid-border: #991b1b;
+
+  --tooltip-bg: #374151;
+  --tooltip-border: #9ca3af;
+  --tooltip-border-hover: #f87171;
+  --tooltip-text: #e5e7eb;
+
+  --overlay-bg: rgba(0, 0, 0, 0.7);
+
+  --emoji-popup-bg: #1f2937;
+  --emoji-popup-border: #4b5563;
+  --emoji-popup-shadow: rgba(0, 0, 0, 0.5);
+  --emoji-button-bg: #3b82f6;
+
+  --header-text-shadow: rgba(0, 0, 0, 0.5);
+
+  --theme-toggle-bg: rgba(0, 0, 0, 0.2);
+  --theme-toggle-border: rgba(255, 255, 255, 0.1);
+  --theme-toggle-hover-bg: rgba(255, 255, 255, 0.1);
+
+  --event-bg-gradient: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  --event-shadow: rgba(0, 0, 0, 0.5);
+
+  --holiday-text: #fca5a5;
+
+  --highlight-month-bg: rgba(59, 130, 246, 0.2);
+
+  --select-focus-shadow: rgba(59, 130, 246, 0.2);
+  --button-disabled-bg: #4b5563;
+
+  --text-inverse: #e5e7eb;
+  --input-border-dark: #9ca3af;
+  --checkbox-bg: #374151;
+  --text-white: white;
+  --flag-shadow: rgba(0, 0, 0, 0.6);
 }
 
 body {

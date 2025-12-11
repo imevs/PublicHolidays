@@ -38,7 +38,7 @@
 
 .toggleFilter:hover,
 .countryChip:hover {
-  border-color: #667eea;
+  border-color: var(--input-focus-border);
 }
 
 .checkboxContainer {
@@ -89,9 +89,9 @@
 }
 
 .checkbox:checked+.checkboxLabel::before {
-  background-color: #0078d4;
+  background-color: var(--checkbox-checked-bg);
   /* Primary color */
-  border-color: #0078d4;
+  border-color: var(--checkbox-checked-bg);
 }
 
 .checkboxLabel::after {
@@ -102,7 +102,7 @@
   transform: translateY(-50%) scale(0);
   width: 8px;
   height: 8px;
-  background-color: #fff;
+  background-color: var(--checkbox-mark-color);
   border-radius: 2px;
   transition: transform 0.2s;
 }

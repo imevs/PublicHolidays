@@ -23,7 +23,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 10px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 4px var(--header-text-shadow);
 }
 
 .header p {
@@ -78,9 +78,9 @@ button:hover {
   top: 20px;
   right: 20px;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--theme-toggle-bg);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--theme-toggle-border);
   width: 44px;
   height: 44px;
   display: flex;
@@ -92,6 +92,6 @@ button:hover {
 }
 
 .themeToggle:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--theme-toggle-hover-bg);
   transform: scale(1.1);
 }

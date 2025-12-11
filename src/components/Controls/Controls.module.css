@@ -44,7 +44,7 @@
 .select:focus {
   outline: none;
   border-color: var(--input-focus-border);
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+  box-shadow: 0 0 0 3px var(--select-focus-shadow);
 }
 
 @media (max-width: 768px) {
@@ -60,7 +60,7 @@
 }
 
 .navButton {
-  color: white;
+  color: var(--button-text);
   font-weight: 600;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .navButton:disabled {
-  background: #6c757d;
+  background: var(--button-disabled-bg);
   cursor: not-allowed;
   transform: none;
   box-shadow: none;
