@@ -115,6 +115,7 @@
 
 .holidayIndicator {
   display: block;
+  filter: drop-shadow(var(--flag-shadow));
 }
 
 .popup {
@@ -161,7 +162,7 @@
   content: attr(data-flag);
   position: absolute;
   left: 12px;
-  filter: drop-shadow(0 1px 0 var(--flag-shadow));
+  filter: drop-shadow(var(--flag-shadow));
 }
 
 .popupContent button {
