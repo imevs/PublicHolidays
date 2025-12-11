@@ -21,8 +21,8 @@
 }
 
 .today {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
-  color: white;
+  background: var(--primary-gradient) !important;
+  color: var(--text-white);
 }
 
 .calendarDay.selectedDate {
@@ -36,19 +36,19 @@
 }
 
 .event {
-  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  background: var(--event-bg-gradient);
   padding: 4px 8px;
   border-radius: 6px;
   font-size: 0.7rem;
   margin-bottom: 2px;
   font-weight: 500;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--event-shadow);
   animation: fadeIn 0.3s ease-in;
-  color: white;
+  color: var(--text-white);
 }
 
 .holiday {
-  color: lightcoral;
+  color: var(--holiday-text);
 }
 
 @keyframes fadeIn {
