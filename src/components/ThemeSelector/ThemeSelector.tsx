@@ -13,6 +13,7 @@ export const themes: Theme[] = [
     { id: "dark", name: "Dark", icon: "🌙" },
     { id: "ocean", name: "Ocean", icon: "🌊" },
     { id: "sunset", name: "Sunset", icon: "🌅" },
+    { id: "ios", name: "iOS", icon: "🍎" },
 ];
 
 const THEME_STORAGE_KEY = "theme";
