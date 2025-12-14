@@ -11,11 +11,19 @@
     gap: 10px;
 }
 
+.buttonIcon {
+    margin-right: 6px;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+}
+
 @media (max-width: 450px) {
     .actionButtonContainer {
         margin: 2px;
         gap: 2px;
     }
+
     .actionButton {
         padding: 5px;
     }
