@@ -9,6 +9,7 @@ import { convertEvents } from "./utils/convertEvents";
 import { EventsList } from "./components/EventsList/EventsList";
 import CountryFilter from "./components/CountryFilter/CountryFilter";
 import { ActionButtons } from "./components/EventsList/EventsListActionButtons";
+import ThemeSelector from "./components/ThemeSelector/ThemeSelector";
 
 export const Holidays: React.FC = () => {
     useEffect(() => {
@@ -18,18 +19,6 @@ export const Holidays: React.FC = () => {
     }, []);
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
     const [showAllHolidays, setShowAllHolidays] = useState(false);
-
-    // Theme state
-    const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "light");
-
-    useEffect(() => {
-        document.documentElement.setAttribute("data-theme", theme);
-        localStorage.setItem("theme", theme);
-    }, [theme]);
-
-    const toggleTheme = () => {
-        setTheme(prev => prev === "light" ? "dark" : "light");
-    };
 
     const {
         currentDate,
@@ -54,14 +43,7 @@ export const Holidays: React.FC = () => {
 
     return (
         <div className={styles.app}>
-            <button
-                className={styles.themeToggle}
-                onClick={toggleTheme}
-                title={`Switch to ${theme === "light" ? "Dark" : "Light"} Mode`}
-                aria-label="Toggle Theme"
-            >
-                {theme === "light" ? "🌙" : "☀️"}
-            </button>
+            <ThemeSelector />
             <div className={styles.header}>
                 <h1>
                     <a href="./">

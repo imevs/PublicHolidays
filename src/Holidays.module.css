@@ -72,26 +72,3 @@ button:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 15px var(--button-shadow);
 }
-
-.themeToggle {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  background: var(--theme-toggle-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--theme-toggle-border);
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  padding: 0;
-  border-radius: 50%;
-}
-
-.themeToggle:hover {
-  background: var(--theme-toggle-hover-bg);
-  transform: scale(1.1);
-}
