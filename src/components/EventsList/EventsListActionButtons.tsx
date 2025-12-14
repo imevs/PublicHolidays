@@ -79,11 +79,28 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays, 
 
     return (
         <div className={styles.actionButtonContainer}>
-            {hasServiceWorker && <button className={styles.actionButton} onClick={getNotifications}>{notificationsEnabled ? "Disable notifications" : "Get notifications"}</button>}
-            <button className={styles.actionButton} onClick={toggleMode}>{viewMode === "month" ? "Switch to year mode" : "Switch to month mode"}</button>
-            <button className={styles.actionButton} onClick={exportAllCalendars}>Download separate ICS files</button>
-            <button className={styles.actionButton} onClick={exportCalendar}>Download combined ICS file</button>
-            <button className={styles.actionButton} onClick={editEvents} style={{ right: 120 }}>Create custom calendar</button>
+            {hasServiceWorker && (
+                <button className={styles.actionButton} onClick={getNotifications}>
+                    <span className={styles.buttonIcon}>{notificationsEnabled ? "🔕" : "🔔"}</span>
+                    {notificationsEnabled ? "Disable notifications" : "Get notifications"}
+                </button>
+            )}
+            <button className={styles.actionButton} onClick={toggleMode}>
+                <span className={styles.buttonIcon}>{viewMode === "month" ? "🗓️" : "📅"}</span>
+                {viewMode === "month" ? "Switch to year mode" : "Switch to month mode"}
+            </button>
+            <button className={styles.actionButton} onClick={exportAllCalendars}>
+                <span className={styles.buttonIcon}>📥</span>
+                Download separate ICS files
+            </button>
+            <button className={styles.actionButton} onClick={exportCalendar}>
+                <span className={styles.buttonIcon}>📥</span>
+                Download combined ICS file
+            </button>
+            <button className={styles.actionButton} onClick={editEvents} style={{ right: 120 }}>
+                <span className={styles.buttonIcon}>✏️</span>
+                Create custom calendar
+            </button>
         </div>
     );
 };
