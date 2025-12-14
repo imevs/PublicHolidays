@@ -477,6 +477,130 @@
   --flag-shadow: 0px 0px 1px rgba(255, 247, 237, 0.6);
 }
 
+/* iOS Theme - Following Apple's Human Interface Guidelines */
+[data-theme='ios'] {
+  /* iOS uses light, airy backgrounds */
+  --app-bg-gradient: linear-gradient(135deg, #f2f2f7 0%, #e5e5ea 100%);
+  --text-main: #000000;
+  --text-header: #000000;
+  --text-muted: rgba(60, 60, 67, 0.6);
+  /* iOS secondary label color */
+
+  /* Clean white containers with subtle shadows */
+  --container-bg: #ffffff;
+  --container-shadow: rgba(0, 0, 0, 0.04);
+
+  /* iOS System Blue */
+  --button-bg: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+  --button-text: #ffffff;
+  --button-shadow: rgba(0, 122, 255, 0.3);
+
+  /* Grid colors matching iOS calendar */
+  --grid-bg: #f2f2f7;
+  --grid-header-bg: #ffffff;
+  --grid-header-text: rgba(60, 60, 67, 0.6);
+
+  /* Day cells with iOS styling */
+  --day-cell-bg: #ffffff;
+  --day-border: rgba(60, 60, 67, 0.12);
+  /* Separator color */
+  --day-hover: rgba(0, 122, 255, 0.08);
+
+  /* Holiday styling */
+  --holiday-bg: rgba(255, 59, 48, 0.08);
+  /* iOS System Red tint */
+  --selected-day-bg: rgba(0, 122, 255, 0.15);
+
+  /* Popups with frosted glass effect */
+  --popup-bg: rgba(255, 255, 255, 0.95);
+  --popup-border: rgba(0, 0, 0, 0.08);
+
+  /* iOS-style inputs */
+  --input-bg: rgba(120, 120, 128, 0.12);
+  /* iOS fill color */
+  --input-border: rgba(0, 0, 0, 0.08);
+
+  /* Weekend highlight */
+  --weekend-bg: rgba(255, 149, 0, 0.12);
+  /* iOS System Orange tint */
+
+  /* Controls */
+  --controls-bg-gradient: linear-gradient(90deg, #ffffff 0%, #fafafa 100%);
+  --controls-border: rgba(60, 60, 67, 0.12);
+  --controls-label: rgba(60, 60, 67, 0.6);
+  --input-text: #000000;
+  --input-focus-border: #007AFF;
+
+  /* Links */
+  --link-color: #007AFF;
+  --link-hover: #0051D5;
+
+  /* Primary colors */
+  --primary-gradient: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+  --primary-blue: #007AFF;
+  --primary-blue-hover: #0051D5;
+
+  /* Checkboxes */
+  --checkbox-checked-bg: #007AFF;
+  --checkbox-mark-color: #ffffff;
+
+  /* Status indicators */
+  --status-valid-bg: rgba(52, 199, 89, 0.12);
+  /* iOS System Green tint */
+  --status-valid-text: #30B370;
+  --status-valid-border: rgba(52, 199, 89, 0.3);
+
+  --status-invalid-bg: rgba(255, 59, 48, 0.12);
+  /* iOS System Red tint */
+  --status-invalid-text: #FF3B30;
+  --status-invalid-border: rgba(255, 59, 48, 0.3);
+
+  /* Tooltips */
+  --tooltip-bg: rgba(255, 255, 255, 0.95);
+  --tooltip-border: rgba(0, 0, 0, 0.12);
+  --tooltip-border-hover: #007AFF;
+  --tooltip-text: #000000;
+
+  /* Overlay */
+  --overlay-bg: rgba(0, 0, 0, 0.4);
+
+  /* Emoji popup */
+  --emoji-popup-bg: rgba(255, 255, 255, 0.95);
+  --emoji-popup-border: rgba(0, 0, 0, 0.08);
+  --emoji-popup-shadow: rgba(0, 0, 0, 0.1);
+  --emoji-button-bg: #007AFF;
+
+  /* iOS doesn't use heavy text shadows */
+  --header-text-shadow: rgba(0, 0, 0, 0.05);
+
+  /* Theme toggle with frosted glass */
+  --theme-toggle-bg: rgba(255, 255, 255, 0.7);
+  --theme-toggle-border: rgba(0, 0, 0, 0.1);
+  --theme-toggle-hover-bg: rgba(255, 255, 255, 0.85);
+
+  /* Event cards */
+  --event-bg-gradient: linear-gradient(135deg, #FF3B30 0%, #D70015 100%);
+  /* iOS System Red */
+  --event-shadow: rgba(0, 0, 0, 0.06);
+
+  /* Holiday text */
+  --holiday-text: #FF3B30;
+
+  /* Highlight */
+  --highlight-month-bg: rgba(0, 122, 255, 0.1);
+
+  /* Select focus */
+  --select-focus-shadow: rgba(0, 122, 255, 0.15);
+  --button-disabled-bg: rgba(120, 120, 128, 0.3);
+
+  /* Additional iOS colors */
+  --text-inverse: #ffffff;
+  --input-border-dark: rgba(0, 0, 0, 0.2);
+  --checkbox-bg: #ffffff;
+  --text-white: #ffffff;
+  --flag-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
