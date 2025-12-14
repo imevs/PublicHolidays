@@ -601,6 +601,139 @@
   --flag-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);
 }
 
+/* Material Design Theme - Following Google's Material Design 3 Guidelines */
+[data-theme='material'] {
+  /* Material Design uses vibrant, colorful backgrounds */
+  --app-bg-gradient: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+  --text-main: #212121;
+  /* Material Design primary text */
+  --text-header: #1976D2;
+  /* Material Blue */
+  --text-muted: rgba(0, 0, 0, 0.6);
+  /* Material Design secondary text */
+
+  /* Material surfaces with elevation */
+  --container-bg: #FFFFFF;
+  --container-shadow: rgba(0, 0, 0, 0.12);
+
+  /* Material Design Primary Blue */
+  --button-bg: linear-gradient(135deg, #1976D2 0%, #1565C0 100%);
+  --button-text: #FFFFFF;
+  --button-shadow: rgba(25, 118, 210, 0.4);
+
+  /* Grid with Material styling */
+  --grid-bg: #FAFAFA;
+  --grid-header-bg: #1976D2;
+  --grid-header-text: #FFFFFF;
+
+  /* Day cells with Material elevation */
+  --day-cell-bg: #FFFFFF;
+  --day-border: rgba(0, 0, 0, 0.12);
+  --day-hover: #E3F2FD;
+
+  /* Holiday styling with Material colors */
+  --holiday-bg: #FFEBEE;
+  /* Material Red 50 */
+  --selected-day-bg: #BBDEFB;
+  /* Material Blue 100 */
+
+  /* Elevated surfaces */
+  --popup-bg: #FFFFFF;
+  --popup-border: rgba(0, 0, 0, 0.12);
+
+  /* Material text fields */
+  --input-bg: #F5F5F5;
+  /* Material Gray 100 */
+  --input-border: rgba(0, 0, 0, 0.38);
+
+  /* Weekend highlight */
+  --weekend-bg: #FFE0B2;
+  /* Material Orange 100 */
+
+  /* Controls with Material styling */
+  --controls-bg-gradient: linear-gradient(90deg, #FFFFFF 0%, #FAFAFA 100%);
+  --controls-border: rgba(0, 0, 0, 0.12);
+  --controls-label: rgba(0, 0, 0, 0.87);
+  --input-text: rgba(0, 0, 0, 0.87);
+  --input-focus-border: #1976D2;
+
+  /* Material links */
+  --link-color: #1976D2;
+  --link-hover: #1565C0;
+
+  /* Primary colors */
+  --primary-gradient: linear-gradient(135deg, #1976D2 0%, #1565C0 100%);
+  --primary-blue: #1976D2;
+  --primary-blue-hover: #1565C0;
+
+  /* Material checkboxes */
+  --checkbox-checked-bg: #1976D2;
+  --checkbox-mark-color: #FFFFFF;
+
+  /* Status indicators with Material colors */
+  --status-valid-bg: #E8F5E9;
+  /* Material Green 50 */
+  --status-valid-text: #2E7D32;
+  /* Material Green 800 */
+  --status-valid-border: #81C784;
+  /* Material Green 300 */
+
+  --status-invalid-bg: #FFEBEE;
+  /* Material Red 50 */
+  --status-invalid-text: #C62828;
+  /* Material Red 800 */
+  --status-invalid-border: #E57373;
+  /* Material Red 300 */
+
+  /* Material tooltips */
+  --tooltip-bg: #616161;
+  /* Material Gray 700 */
+  --tooltip-border: rgba(0, 0, 0, 0.12);
+  --tooltip-border-hover: #1976D2;
+  --tooltip-text: #FFFFFF;
+
+  /* Overlay */
+  --overlay-bg: rgba(0, 0, 0, 0.5);
+
+  /* Emoji popup */
+  --emoji-popup-bg: #FFFFFF;
+  --emoji-popup-border: rgba(0, 0, 0, 0.12);
+  --emoji-popup-shadow: rgba(0, 0, 0, 0.2);
+  --emoji-button-bg: #1976D2;
+
+  /* Material uses moderate shadows */
+  --header-text-shadow: rgba(0, 0, 0, 0.2);
+
+  /* Theme toggle with Material elevation */
+  --theme-toggle-bg: rgba(255, 255, 255, 0.9);
+  --theme-toggle-border: rgba(0, 0, 0, 0.12);
+  --theme-toggle-hover-bg: rgba(255, 255, 255, 1);
+
+  /* Event cards with Material colors */
+  --event-bg-gradient: linear-gradient(135deg, #EF5350 0%, #E53935 100%);
+  /* Material Red */
+  --event-shadow: rgba(0, 0, 0, 0.14);
+
+  /* Holiday text */
+  --holiday-text: #D32F2F;
+  /* Material Red 700 */
+
+  /* Highlight */
+  --highlight-month-bg: rgba(25, 118, 210, 0.12);
+
+  /* Select focus with Material ripple effect concept */
+  --select-focus-shadow: rgba(25, 118, 210, 0.2);
+  --button-disabled-bg: #BDBDBD;
+  /* Material Gray 400 */
+
+  /* Additional Material colors */
+  --text-inverse: #FFFFFF;
+  --input-border-dark: rgba(0, 0, 0, 0.6);
+  --checkbox-bg: #FFFFFF;
+  --text-white: #FFFFFF;
+  --flag-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
