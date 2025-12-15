@@ -9,6 +9,26 @@ import { getFlagEmoji } from "../utils/countryFlags";
 
 declare const self: ServiceWorkerGlobalScope;
 
+// Periodic Background Sync types (some TS DOM libs don't include these yet)
+declare global {
+    interface PeriodicSyncOptions { minInterval?: number }
+    interface PeriodicSyncManager {
+        register(tag: string, options?: PeriodicSyncOptions): Promise<void>;
+        unregister(tag: string): Promise<void>;
+        getTags?(): Promise<string[]>;
+    }
+    interface PeriodicSyncEvent extends Event {
+        readonly tag: string;
+        waitUntil(promise: Promise<unknown>): void;
+    }
+    interface ServiceWorkerRegistration {
+        periodicSync?: PeriodicSyncManager;
+    }
+    interface ServiceWorkerGlobalScopeEventMap {
+        periodicsync: PeriodicSyncEvent;
+    }
+}
+
 self.addEventListener("install", () => {
     self.skipWaiting();
 });
@@ -52,17 +72,50 @@ let interval = 0;
 self.addEventListener("message", (event) => {
     console.log("SW received message", event.data.type);
     if (event.data.type === startNotificationsCommand) {
-        events = event.data.events;
-        console.log("registered events", events.length);
-        clearInterval(interval);
-        const minute = 1000 * 60;
-        interval = self.setInterval(() => {
-            checkEvents();
-        }, minute * 0.5);
+        // Keep worker alive while we attempt registration
+        event.waitUntil((async () => {
+            events = event.data.events;
+            console.log("registered events", events.length);
+            clearInterval(interval);
+
+            // Try Periodic Background Sync registration (1 hour)
+            const hour = 1000 * 60 * 60;
+            const periodic: PeriodicSyncManager | undefined = (self.registration as ServiceWorkerRegistration).periodicSync;
+            if (periodic) {
+                try {
+                    await periodic.register("holiday-check", { minInterval: hour });
+                    console.log("registered periodic sync: holiday-check");
+                } catch (err) {
+                    console.warn("periodic sync registration failed, falling back to setInterval", err);
+                    interval = self.setInterval(() => {
+                        checkEvents();
+                    }, hour);
+                }
+            } else {
+                // Fallback for browsers without Periodic Sync support
+                interval = self.setInterval(() => {
+                    checkEvents();
+                }, hour);
+            }
+        })());
     }
     if (event.data.type === stopNotificationsCommand) {
-        clearInterval(interval);
-        interval = 0;
+        event.waitUntil((async () => {
+            // Try unregistering periodic sync if available
+            try {
+                const periodic: PeriodicSyncManager | undefined = (self.registration as ServiceWorkerRegistration).periodicSync;
+                if (periodic && typeof periodic.unregister === "function") {
+                    await periodic.unregister("holiday-check");
+                    console.log("unregistered periodic sync: holiday-check");
+                }
+            } catch (err) {
+                console.warn("periodic sync unregister failed", err);
+            }
+
+            // Clear fallback interval
+            clearInterval(interval);
+            interval = 0;
+        })());
     }
     if (event.data.type === getNotificationsStatusCommand) {
         self.clients.matchAll({ type: "window" }).then((clientList) => {
@@ -76,7 +129,14 @@ self.addEventListener("message", (event) => {
     }
 });
 
-function checkEvents() {
+// Periodic Background Sync event listener
+self.addEventListener("periodicsync", (event: PeriodicSyncEvent) => {
+    if (event.tag === "holiday-check") {
+        event.waitUntil(checkEvents());
+    }
+});
+
+async function checkEvents() {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
 
@@ -89,7 +149,7 @@ function checkEvents() {
     const upcoming = events
         .filter(event => event.date === tomorrowString && !event.shown);
     if (upcoming.length) {
-        sendNotification(upcoming);
+        await sendNotification(upcoming);
     }
 
     console.log(events.length + " events checked");
