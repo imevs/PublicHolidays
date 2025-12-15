@@ -7,7 +7,7 @@ export interface Theme {
     icon: string;
 }
 
-export const themes: Theme[] = [
+const themes: Theme[] = [
     { id: "neutral", name: "Neutral", icon: "⚪" },
     { id: "vibrant", name: "Vibrant", icon: "🎨" },
     { id: "dark", name: "Dark", icon: "🌙" },
