@@ -6,7 +6,6 @@
 
 .controlsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
   gap: 20px;
   align-items: end;
 }
@@ -45,12 +44,6 @@
   outline: none;
   border-color: var(--input-focus-border);
   box-shadow: 0 0 0 3px var(--select-focus-shadow);
-}
-
-@media (max-width: 768px) {
-  .controlsGrid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 1200px) {

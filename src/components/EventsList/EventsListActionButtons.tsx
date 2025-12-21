@@ -6,6 +6,8 @@ import { exportCalendarToFile } from "../../utils/generateICS";
 import { APP_BASE_NAME, STORAGE_KEY } from "../../consts";
 import type { CalendarDay as CalendarDayType } from "../../types";
 import styles from "./EventsListActionButtons.module.css";
+import { SlidingPanel } from "../SlidingPanel/SlidingPanel";
+import { useResizeObserver } from "../../hooks/useResizeObserver";
 import {
     hasServiceWorker,
     registerNotifications,
@@ -32,6 +34,8 @@ function getCountriesNames(selectedYearDays: CalendarDayType[]) {
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays, viewMode, toggleMode }) => {
     const navigate = useNavigate();
     const [notificationsEnabled, enableNotification] = useState(false);
+    const [panelOpen, setPanelOpen] = useState(false);
+    const [isNarrow, containerRef] = useResizeObserver(600);
 
     useEffect(() => {
         registerNotifications([], true, enableNotification);
@@ -77,8 +81,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays, 
         }
     }, [notificationsEnabled, enableNotification]);
 
-    return (
-        <div className={styles.actionButtonContainer}>
+    const actionButtonsContent = (
+        <>
             {hasServiceWorker && (
                 <button className={styles.actionButton} onClick={getNotifications}>
                     <span className={styles.buttonIcon}>{notificationsEnabled ? "🔕" : "🔔"}</span>
@@ -101,6 +105,27 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays, 
                 <span className={styles.buttonIcon}>✏️</span>
                 Create custom calendar
             </button>
+        </>
+    );
+
+    return (
+        <div ref={containerRef}>
+            {isNarrow ? (
+                <SlidingPanel
+                    isOpen={panelOpen}
+                    onToggle={() => setPanelOpen(!panelOpen)}
+                    toggleLabel="Actions"
+                    id="actions-panel"
+                >
+                    <div className={`${styles.actionButtonContainer} ${styles.panel}`}>
+                        {actionButtonsContent}
+                    </div>
+                </SlidingPanel>
+            ) : (
+                <div className={styles.actionButtonContainer}>
+                    {actionButtonsContent}
+                </div>
+            )}
         </div>
     );
 };

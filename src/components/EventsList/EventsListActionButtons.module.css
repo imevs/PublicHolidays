@@ -1,14 +1,27 @@
 .actionButton {
-    float: right;
     cursor: pointer;
+    padding: 10px;
 }
 
 .actionButtonContainer {
     margin: 15px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: stretch;
+    flex-wrap: wrap;
     gap: 10px;
+}
+
+.actionButtonContainer.panel {
+    flex-direction: column;
+    margin: 0;
+    gap: 8px;
+}
+
+.actionButtonContainer.panel .actionButton {
+    width: 100%;
+    padding: 12px;
+    text-align: left;
 }
 
 .buttonIcon {
@@ -18,13 +31,22 @@
     align-items: center;
 }
 
-@media (max-width: 450px) {
-    .actionButtonContainer {
-        margin: 2px;
-        gap: 2px;
+@media (max-width: 600px) {
+    .actionButton {
+        width: 300px;
     }
 
+    .actionButtonContainer {
+        display: none;
+    }
+
+    .actionButtonContainer.panel {
+        display: flex;
+    }
+}
+
+@media (max-width: 900px) {
     .actionButton {
-        padding: 5px;
+        width: 150px;
     }
 }
