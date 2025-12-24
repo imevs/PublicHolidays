@@ -4,9 +4,9 @@ name: CI
 
 # Controls when the action will run.
 on:
-  # Triggers the workflow on push events but only for the main branch
+  # Triggers the workflow on push events for all branches
   push:
-    branches: [ main ]
+    branches: [ '**' ]
   pull_request:
     branches: [ main ]
 
@@ -27,6 +27,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
+        env:
+          APP_BRANCH_NAME: ${{ github.ref_name }}
+          APP_BASE_NAME: ${{ github.ref_name == 'main' && '' || format('branch_{0}', github.ref_name) }}
         run: npm i && npm run lint && npm run test && npm run build
 
       - name: Deploy to GitHub Pages
@@ -34,4 +37,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/PublicHolidays  # or the folder your build output goes to
+          publish_dir: ./dist/PublicHolidays
+          destination_dir: ${{ github.ref_name }}

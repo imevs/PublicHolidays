@@ -4,7 +4,7 @@ const stylistic = require('@stylistic/eslint-plugin');
 
 module.exports = [
     {
-        ignores: ['scripts/**', 'dist/**'],
+        ignores: ['scripts/**', 'dist/**', "src/assets/**" ],
     },
     {
         files: ['**/*.{js,jsx}'],
