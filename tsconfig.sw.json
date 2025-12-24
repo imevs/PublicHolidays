@@ -8,6 +8,7 @@
     "types": ["serviceworker"]
   },
   "include": [
+    "./src/env.d.ts",
     "./src/assets/SW.ts"
   ]
 }
