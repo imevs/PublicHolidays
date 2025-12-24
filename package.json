@@ -8,7 +8,7 @@
     "build-sw": "esbuild ./src/assets/SW.ts --bundle --outfile=./src/assets/SW.js --format=iife",
     "compile-sw": "tsc -p ./tsconfig.sw.json",
     "test": "jest --watchAll=false",
-    "build": "tsc && vite build",
+    "build": "tsc && npm run build-sw && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
