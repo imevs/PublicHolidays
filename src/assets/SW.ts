@@ -1,9 +1,10 @@
-import { dateLocale } from "../consts";
+import { APP_BASE_NAME, dateLocale } from "../consts";
 import {
     startNotificationsCommand,
     type HolidayDTO,
     stopNotificationsCommand,
-    getNotificationsStatusCommand, notificationsWereSet
+    getNotificationsStatusCommand,
+    notificationsWereSet,
 } from "../notifications/types";
 import { getFlagEmoji } from "../utils/countryFlags";
 
@@ -61,7 +62,8 @@ self.addEventListener("notificationclick", (event) => {
                     events.filter(e => notification.date === e.date && notification.name === e.name)
                         .forEach(e => { e.shown = true; });
                 });
-                return self.clients.openWindow(`/PublicHolidays/Holidays#countries=${getCountriesNames(eventData)}&mode=month&date=${event.notification.data}`);
+                return self.clients.openWindow(
+                    "/" + APP_BASE_NAME + `/Holidays#countries=${getCountriesNames(eventData)}&mode=month&date=${event.notification.data}`);
             }
         })
     );

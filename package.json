@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build-sw": "esbuild ./src/assets/SW.ts --bundle --outfile=./src/assets/SW.js --format=iife",
+    "build-sw": "esbuild ./src/assets/SW.ts --bundle --outfile=./src/assets/SW.js --format=esm",
     "compile-sw": "tsc -p ./tsconfig.sw.json",
     "test": "jest --watchAll=false",
     "build": "tsc && npm run build-sw && vite build",
