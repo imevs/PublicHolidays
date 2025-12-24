@@ -16,7 +16,7 @@ export default ({ mode }: { mode: string }) => {
                 targets: [
                     {
                         src: "./src/assets/404.html",
-                        dest: "./"
+                        dest: "../../"
                     },
                 ]
             }),
@@ -25,7 +25,7 @@ export default ({ mode }: { mode: string }) => {
                 apply: "build",
                 enforce: "post",
                 closeBundle() {
-                    const notFoundPath = path.join(process.cwd(), `dist/${APP_BASE_NAME}/404.html`);
+                    const notFoundPath = path.join(process.cwd(), "dist/404.html");
                     if (fs.existsSync(notFoundPath)) {
                         let content = fs.readFileSync(notFoundPath, "utf-8");
                         content = content.replace(/APP_BASE_NAME_PLACEHOLDER/g, APP_BASE_NAME);

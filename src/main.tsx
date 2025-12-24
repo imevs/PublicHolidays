@@ -13,7 +13,7 @@ export const Index: React.FC = () => {
     useEffect(() => {
         const path = searchParams?.get("path");
         if (path?.includes(APP_BASE_NAME)) {
-            navigate(path + location.hash);
+            navigate(path?.replace("/" + APP_BASE_NAME + "/", "") + location.hash);
         } else {
             navigate("Holidays");
         }
@@ -21,10 +21,14 @@ export const Index: React.FC = () => {
     return null;
 };
 
+const App = () => {
+    return <Outlet />;
+}
+
 const router = createBrowserRouter([
     {
         path: "/" + APP_BASE_NAME,
-        Component: Outlet,
+        Component: App,
         children: [
             {
                 index: true,

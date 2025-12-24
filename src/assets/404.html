@@ -12,7 +12,9 @@
 Redirecting...
 <script>
     setTimeout(() => {
-        location.href = '/APP_BASE_NAME_PLACEHOLDER/?path=' + location.pathname + location.hash;
+        const parts = location.pathname.split('/');
+        const destUrl  = [parts[0], parts[1], parts[2]].join('/');
+        location.href = destUrl + '/?path=' + location.pathname + location.hash;
     }, 50)
 </script>
 </body>

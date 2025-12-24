@@ -1,4 +1,3 @@
-import { APP_BASE_NAME, dateLocale } from "../consts";
 import {
     startNotificationsCommand,
     type HolidayDTO,
@@ -7,6 +6,9 @@ import {
     notificationsWereSet,
 } from "../notifications/types";
 import { getFlagEmoji } from "../utils/countryFlags";
+
+const dateLocale = "en-CA"; // Canadian English uses "YYYY-MM-DD, HH:mm" format
+const APP_BASE_NAME = "PublicHolidays/main";
 
 declare const self: ServiceWorkerGlobalScope;
 
