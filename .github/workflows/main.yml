@@ -30,7 +30,7 @@ jobs:
         env:
           APP_BRANCH_NAME: ${{ github.ref_name }}
           APP_BASE_NAME: ${{ github.ref_name == 'main' && 'PublicHolidays/main' || format('PublicHolidays/branch_{0}', github.ref_name) }}
-        run: npm i && npm run lint && npm run test && APP_BASE_NAME="${{ env.APP_BASE_NAME }}" npm run build
+        run: npm i && npm run lint && npm run test && APP_BASE_NAME="${{ github.ref_name == 'main' && 'PublicHolidays/main' || format('PublicHolidays/branch_{0}', github.ref_name) }}" npm run build
 
       - name: Deploy to GitHub Pages
         if: success() && github.event_name == 'push'
