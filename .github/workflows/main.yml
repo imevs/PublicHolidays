@@ -28,9 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         env:
-          APP_BRANCH_NAME: ${{ github.ref_name }}
-          APP_BASE_NAME: ${{ github.ref_name == 'main' && 'PublicHolidays/main' || format('PublicHolidays/branch_{0}', github.ref_name) }}
-        run: npm i && npm run lint && npm run test && APP_BASE_NAME="${{ github.ref_name == 'main' && 'PublicHolidays/main' || format('PublicHolidays/branch_{0}', github.ref_name) }}" npm run build
+          APP_FOLDER_NAME: ${{ github.ref_name == 'main' && 'main' || format('branch_{0}', github.ref_name) }}
+        run: npm i && npm run lint && npm run test && APP_BASE_NAME="${{ format('PublicHolidays/{0}', env.APP_FOLDER_NAME) }}" npm run build
 
       - name: Deploy to GitHub Pages
         if: success() && github.event_name == 'push'
@@ -38,4 +37,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/PublicHolidays
-          destination_dir: ${{ github.ref_name == 'main' && 'main' || format('branch_{0}', github.ref_name) }}
+          destination_dir: ${{ env.APP_FOLDER_NAME }}
