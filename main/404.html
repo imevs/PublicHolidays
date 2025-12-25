@@ -12,6 +12,10 @@
 Redirecting...
 <script>
     setTimeout(() => {
+        if (location.pathname === "/PublicHolidays" || location.pathname === "/PublicHolidays/") {
+            location.href = "/PublicHolidays/main";
+            return;
+        }
         const parts = location.pathname.split('/');
         const destUrl  = [parts[0], parts[1], parts[2]].join('/');
         location.href = destUrl + '/?path=' + location.pathname + location.hash;
