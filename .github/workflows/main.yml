@@ -36,5 +36,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/PublicHolidays
+          publish_dir: ${{ format('./dist/PublicHolidays/{0}', env.APP_FOLDER_NAME) }}
+          keep_files: true
           destination_dir: ${{ env.APP_FOLDER_NAME }}
