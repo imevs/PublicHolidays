@@ -19,23 +19,63 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    env:
+      APP_FOLDER_NAME: ${{ github.ref_name == 'main' && 'main' || format('{0}', github.ref_name) }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
+      - id: determine_deploy
+        name: Determine deploy condition
+        # Compute the branch/event condition once and expose it as a step output
+        run: |
+          echo "should_deploy=${{ github.event_name == 'push' && (github.ref_name == 'main' || startsWith(github.ref_name, 'bugfix') || startsWith(github.ref_name, 'feature')) }}" >> $GITHUB_OUTPUT
+
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        env:
-          APP_FOLDER_NAME: ${{ github.ref_name == 'main' && 'main' || format('branch_{0}', github.ref_name) }}
         run: npm i && npm run lint && npm run test && APP_BASE_NAME="${{ format('PublicHolidays/{0}', env.APP_FOLDER_NAME) }}" npm run build
 
       - name: Deploy to GitHub Pages
-        if: success() && github.event_name == 'push'
+        if: success() && steps.determine_deploy.outputs.should_deploy == 'true'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ${{ format('./dist/PublicHolidays/{0}', env.APP_FOLDER_NAME) }}
           keep_files: true
           destination_dir: ${{ env.APP_FOLDER_NAME }}
+
+      - name: Comment on GitHub Pages
+        if: success() && steps.determine_deploy.outputs.should_deploy == 'true'
+        uses: actions/github-script@v8
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            // Find the branch name from the ref (refs/heads/<branch>)
+            const branch = context.ref.replace('refs/heads/', '');
+
+            // List open PRs where the head matches this branch
+            const pulls = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              head: `${context.repo.owner}:${branch}`,
+              state: 'open'
+            });
+
+            if (!pulls.data || pulls.data.length === 0) {
+              core.info(`No open pull request found for branch: ${branch}. Skipping PR comment.`);
+              return;
+            }
+
+            const pr = pulls.data[0];
+            const pagesUrl = `https://${context.repo.owner}.github.io/${context.repo.repo}/${process.env.APP_FOLDER_NAME}`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              body: `✅ Your changes have been deployed to GitHub Pages.\n\n📍 Preview: ${pagesUrl}`
+            });
+
+            core.info(`Posted deployment comment to PR #${pr.number}`);
