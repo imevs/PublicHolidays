@@ -16,7 +16,7 @@ export default ({ mode }: { mode: string }) => {
                 targets: [
                     {
                         src: "./src/assets/404.html",
-                        dest: "../../"
+                        dest: "../"
                     },
                 ]
             }),
@@ -35,7 +35,7 @@ export default ({ mode }: { mode: string }) => {
             }
         ],
         define: {
-            "import.meta.env.VITE_APP_BASE_NAME": JSON.stringify(APP_BASE_NAME)
+            "process.env.APP_BASE_NAME": JSON.stringify(APP_BASE_NAME)
         },
         base: `/${APP_BASE_NAME}/`,
         publicDir: "./src/assets",
