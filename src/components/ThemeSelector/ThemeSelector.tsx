@@ -17,6 +17,9 @@ const themes: Theme[] = [
     { id: "material", name: "Material", icon: "🔷" },
     { id: "creme", name: "Creme", icon: "☕" },
     { id: "pencil", name: "Pencil Sketch", icon: "✏️" },
+    { id: "seasonal", name: "Seasonal", icon: "🌍" },
+    { id: "lightblue", name: "Light Blue", icon: "❄️" },
+    { id: "brightblue", name: "Bright Blue", icon: "❅" },
 ];
 
 const THEME_STORAGE_KEY = "theme";

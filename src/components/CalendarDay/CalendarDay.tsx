@@ -30,10 +30,13 @@ const CalendarDay: React.FC<CalendarDayProps> = ({
         day.isWeekend ? styles.holiday : "",
     ].filter(Boolean).join(" ");
 
+    const monthNumber = day.date.getMonth() + 1; // 1-12
+
     return (
         <div
             key={day.date.toDateString()}
             className={dayClasses}
+            data-month={monthNumber}
             onClick={() => setDateForPopup(day.date)}
         >
             <div className={styles.dayNumber}>{day.dayNumber}</div>

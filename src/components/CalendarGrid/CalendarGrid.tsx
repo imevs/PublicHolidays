@@ -180,6 +180,7 @@ const YearView = ({
                                                 ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}
                                                 ${dayHolidays.length > 0 || isEditable ? styles.isClickable : ""}
                                             `)}
+                                        data-month={month + 1}
                                         style={{
                                             borderRadius: `${day === 0 ? 10 : 0}px 0px ${day === daysInMonth - 1 ? 10 : 0}px 0px`,
                                         }}

@@ -1272,6 +1272,384 @@ a:hover {
   text-decoration: underline;
 }
 
+/* ============================================================================
+   SEASONAL THEME - Each day element styled based on its month
+   ============================================================================ */
+
+/* January - Winter, Snow, New Year Celebration */
+[data-theme='seasonal'] [data-month='1'] {
+  --app-bg-gradient: linear-gradient(135deg, #e8f4f8 0%, #c5dfe8 100%) !important;
+  background: linear-gradient(135deg, #e8f4f8 0%, #c5dfe8 100%) !important;
+  --text-main: #1a3a4a;
+  --day-cell-bg: #f5fafc !important;
+  --day-border: #b3d9f2 !important;
+  --day-hover: #e8f4f8 !important;
+  --holiday-bg: #cce5f5 !important;
+  --selected-day-bg: #a3d5f7 !important;
+}
+
+/* February - Late Winter, Romantic */
+[data-theme='seasonal'] [data-month='2'] {
+  --day-cell-bg: #faf5fa !important;
+  --day-border: #e8c8e8 !important;
+  --day-hover: #f5e8f5 !important;
+  background: linear-gradient(135deg, #f0e6f0 0%, #e8d5e8 100%) !important;
+  --holiday-bg: #f0d8f0 !important;
+  --selected-day-bg: #e8c0e8 !important;
+}
+
+/* March - Spring Beginning, Flowers Starting */
+[data-theme='seasonal'] [data-month='3'] {
+  --day-cell-bg: #f5fae8 !important;
+  --day-border: #c8e8a8 !important;
+  --day-hover: #f0f8d8 !important;
+  background: linear-gradient(135deg, #e8f5d8 0%, #d5f0c5 100%) !important;
+  --holiday-bg: #d8f0b8 !important;
+  --selected-day-bg: #c8e88a !important;
+}
+
+/* April - Spring in Full Bloom */
+[data-theme='seasonal'] [data-month='4'] {
+  --day-cell-bg: #fffaf8 !important;
+  --day-border: #f0c8a8 !important;
+  --day-hover: #fff0e8 !important;
+  background: linear-gradient(135deg, #ffe8d8 0%, #ffd9c0 100%) !important;
+  --holiday-bg: #ffd8b8 !important;
+  --selected-day-bg: #ffc8a0 !important;
+}
+
+/* May - Late Spring, Green and Fresh */
+[data-theme='seasonal'] [data-month='5'] {
+  --day-cell-bg: #f0fae8 !important;
+  --day-border: #a8e888 !important;
+  --day-hover: #e0f8d8 !important;
+  background: linear-gradient(135deg, #d8f5d0 0%, #b8f0a8 100%) !important;
+  --holiday-bg: #c8f0a8 !important;
+  --selected-day-bg: #b0e88a !important;
+}
+
+/* June - Summer Start, Warm and Sunny */
+[data-theme='seasonal'] [data-month='6'] {
+  --day-cell-bg: #fffdf9 !important;
+  --day-border: #f5d8a8 !important;
+  --day-hover: #fffbe8 !important;
+  background: linear-gradient(135deg, #fffadb 0%, #fff5b8 100%) !important;
+  --holiday-bg: #fff0c0 !important;
+  --selected-day-bg: #ffe8a0 !important;
+}
+
+/* July - Mid Summer, Hot and Bright */
+[data-theme='seasonal'] [data-month='7'] {
+  --day-cell-bg: #fffbf8 !important;
+  --day-border: #ffd8a8 !important;
+  --day-hover: #fff8e8 !important;
+  background: linear-gradient(135deg, #fff8e8 0%, #fff3d0 100%) !important;
+  --holiday-bg: #ffe8b0 !important;
+  --selected-day-bg: #ffd890 !important;
+}
+
+/* August - Late Summer, Green and Warm */
+[data-theme='seasonal'] [data-month='8'] {
+  --day-cell-bg: #faf8f5 !important;
+  --day-border: #d8d8a8 !important;
+  --day-hover: #f5f5e0 !important;
+  background: linear-gradient(135deg, #f5f5d0 0%, #ede8b8 100%) !important;
+  --holiday-bg: #e8e8b0 !important;
+  --selected-day-bg: #d8d890 !important;
+}
+
+/* September - Early Fall, Transition */
+[data-theme='seasonal'] [data-month='9'] {
+  --day-cell-bg: #fffcf8 !important;
+  --day-border: #f0c8a0 !important;
+  --day-hover: #fff5e8 !important;
+  background: linear-gradient(135deg, #ffe8c0 0%, #ffd9a8 100%) !important;
+  --holiday-bg: #ffd0a0 !important;
+  --selected-day-bg: #ffc088 !important;
+}
+
+/* October - Fall, Leaves and Orange */
+[data-theme='seasonal'] [data-month='10'] {
+  --day-cell-bg: #fff8f0 !important;
+  --day-border: #ffb878 !important;
+  --day-hover: #fff0e0 !important;
+  background: linear-gradient(135deg, #ffd0a0 0%, #ffb878 100%) !important;
+  --holiday-bg: #ffa860 !important;
+  --selected-day-bg: #ff9840 !important;
+}
+
+/* November - Late Fall, Darker Tones */
+[data-theme='seasonal'] [data-month='11'] {
+  --day-cell-bg: #faf5f0 !important;
+  --day-border: #d8b8a0 !important;
+  --day-hover: #f0e0d0 !important;
+  background: linear-gradient(135deg, #e8c8a8 0%, #d8b090 100%) !important;
+  --holiday-bg: #e0b8a0 !important;
+  --selected-day-bg: #d0a080 !important;
+}
+
+/* December - Winter, Christmas and New Year */
+[data-theme='seasonal'] [data-month='12'] {
+  --day-cell-bg: #f5fafc !important;
+  --day-border: #a8d8f0 !important;
+  --day-hover: #e8f5fa !important;
+  background: linear-gradient(135deg, #e8f5f8 0%, #c8e8f0 100%) !important;
+  --holiday-bg: #ffd700 !important;
+  --selected-day-bg: #ffed4e !important;
+}
+
+/* Base seasonal theme styling */
+[data-theme='seasonal'] {
+  --text-main: #1a3a4a;
+  --text-header: #0d1f2d;
+  --text-muted: rgba(26, 58, 74, 0.65);
+  --container-bg: #f0f8fc;
+  --container-shadow: rgba(0, 0, 0, 0.08);
+  --button-bg: linear-gradient(135deg, #4a90c0 0%, #2c5aa0 100%);
+  --button-text: white;
+  --button-shadow: rgba(0, 0, 0, 0.15);
+  --grid-bg: #e0f2fb;
+  --grid-header-bg: #3a6a8a;
+  --grid-header-text: white;
+  --popup-bg: #f5fafc;
+  --popup-border: #c8d8e8;
+  --input-bg: #f5fafc;
+  --input-border: #c8d8e8;
+  --weekend-bg: #d4e8f5;
+  --controls-bg-gradient: linear-gradient(90deg, #f0f8fc 0%, #e0f2fb 100%);
+  --controls-border: #c8d8e8;
+  --controls-label: #2a5a80;
+  --input-text: #1a3a4a;
+  --input-focus-border: #4a90c0;
+  --link-color: #4a7aa0;
+  --link-hover: #2a5a80;
+  --primary-blue: #4a90c0;
+  --primary-blue-hover: #2c5aa0;
+  --checkbox-checked-bg: #4a90c0;
+  --checkbox-mark-color: #ffffff;
+  --status-valid-bg: #d4edda;
+  --status-valid-text: #155724;
+  --status-valid-border: #a8d8b8;
+  --status-invalid-bg: #f8d7da;
+  --status-invalid-text: #721c24;
+  --status-invalid-border: #d9a8b3;
+  --tooltip-bg: #f0f8fc;
+  --tooltip-border: #c8d8e8;
+  --tooltip-border-hover: #4a90c0;
+  --tooltip-text: #1a3a4a;
+  --overlay-bg: rgba(26, 58, 74, 0.5);
+  --emoji-popup-bg: #f5fafc;
+  --emoji-popup-border: #c8d8e8;
+  --emoji-popup-shadow: rgba(26, 58, 74, 0.1);
+  --emoji-button-bg: #4a90c0;
+  --header-text-shadow: rgba(26, 58, 74, 0.1);
+  --theme-toggle-bg: rgba(240, 248, 252, 0.4);
+  --theme-toggle-border: rgba(26, 58, 74, 0.12);
+  --theme-toggle-hover-bg: rgba(240, 248, 252, 0.6);
+  --event-bg-gradient: linear-gradient(135deg, #4a90c0 0%, #2c5aa0 100%);
+  --event-shadow: rgba(26, 58, 74, 0.08);
+  --holiday-text: #2a5a80;
+  --highlight-month-bg: rgba(74, 144, 192, 0.08);
+  --select-focus-shadow: rgba(74, 144, 192, 0.1);
+  --button-disabled-bg: #c8c8c8;
+  --text-inverse: #ffffff;
+  --input-border-dark: #4a90c0;
+  --checkbox-bg: #ffffff;
+  --text-white: white;
+  --flag-shadow: 0px 0px 1px rgba(26, 58, 74, 0.12);
+  --primary-gradient: linear-gradient(135deg, #4a90c0 0%, #2c5aa0 100%);
+}
+
+/* Light Blue Theme - Based on January (Winter, Snow) */
+[data-theme='lightblue'] {
+  --app-bg-gradient: linear-gradient(135deg, #e8f4f8 0%, #c5dfe8 100%);
+  --text-main: #1a3a4a;
+  --text-header: #0d1f2d;
+  --text-muted: rgba(26, 58, 74, 0.65);
+  --container-bg: #f0f8fc;
+  --container-shadow: rgba(0, 0, 0, 0.08);
+  --button-bg: linear-gradient(135deg, #4a90c0 0%, #2c5aa0 100%);
+  --button-text: white;
+  --button-shadow: rgba(0, 0, 0, 0.15);
+  --grid-bg: #e0f2fb;
+  --grid-header-bg: #3a6a8a;
+  --grid-header-text: white;
+  --day-cell-bg: #f5fafc;
+  --day-border: #b3d9f2;
+  --day-hover: #e8f4f8;
+  --holiday-bg: #cce5f5;
+  --selected-day-bg: #a3d5f7;
+  --popup-bg: #f5fafc;
+  --popup-border: #c8d8e8;
+  --input-bg: #f5fafc;
+  --input-border: #c8d8e8;
+  --weekend-bg: #d4e8f5;
+  --controls-bg-gradient: linear-gradient(90deg, #f0f8fc 0%, #e0f2fb 100%);
+  --controls-border: #c8d8e8;
+  --controls-label: #2a5a80;
+  --input-text: #1a3a4a;
+  --input-focus-border: #4a90c0;
+  --link-color: #4a7aa0;
+  --link-hover: #2a5a80;
+  --primary-blue: #4a90c0;
+  --primary-blue-hover: #2c5aa0;
+  --checkbox-checked-bg: #4a90c0;
+  --checkbox-mark-color: #ffffff;
+  --status-valid-bg: #d4edda;
+  --status-valid-text: #155724;
+  --status-valid-border: #a8d8b8;
+  --status-invalid-bg: #f8d7da;
+  --status-invalid-text: #721c24;
+  --status-invalid-border: #d9a8b3;
+  --tooltip-bg: #f0f8fc;
+  --tooltip-border: #c8d8e8;
+  --tooltip-border-hover: #4a90c0;
+  --tooltip-text: #1a3a4a;
+  --overlay-bg: rgba(26, 58, 74, 0.5);
+  --emoji-popup-bg: #f5fafc;
+  --emoji-popup-border: #c8d8e8;
+  --emoji-popup-shadow: rgba(26, 58, 74, 0.1);
+  --emoji-button-bg: #4a90c0;
+  --header-text-shadow: rgba(26, 58, 74, 0.1);
+  --theme-toggle-bg: rgba(240, 248, 252, 0.4);
+  --theme-toggle-border: rgba(26, 58, 74, 0.12);
+  --theme-toggle-hover-bg: rgba(240, 248, 252, 0.6);
+  --primary-gradient: linear-gradient(135deg, #4a90c0 0%, #2c5aa0 100%);
+  --event-bg-gradient: linear-gradient(135deg, #4a90c0 0%, #2c5aa0 100%);
+  --event-shadow: rgba(26, 58, 74, 0.08);
+  --holiday-text: #2a5a80;
+  --highlight-month-bg: rgba(74, 144, 192, 0.08);
+  --select-focus-shadow: rgba(74, 144, 192, 0.1);
+  --button-disabled-bg: #c8c8c8;
+  --text-inverse: #ffffff;
+  --input-border-dark: #4a90c0;
+  --checkbox-bg: #ffffff;
+  --text-white: white;
+  --flag-shadow: 0px 0px 1px rgba(26, 58, 74, 0.12);
+}
+
+/* Light Blue snowfall animation */
+[data-theme='lightblue'] #root::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(238,238,238,.2)),
+    radial-gradient(2px 2px at 60px 70px, #fff, rgba(255,255,255,.5)),
+    radial-gradient(1px 1px at 50px 50px, #fff, rgba(255,255,255,.2)),
+    radial-gradient(1px 1px at 130px 80px, #fff, rgba(255,255,255,.2)),
+    radial-gradient(2px 2px at 90px 10px, #eee, rgba(238,238,238,.2));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: snowfall 10s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Bright Blue Theme - Based on December (Winter, Christmas, New Year) */
+[data-theme='brightblue'] {
+  --app-bg-gradient: linear-gradient(135deg, #e8f5f8 0%, #c8e8f0 100%);
+  --text-main: #1a3a4a;
+  --text-header: #0d2235;
+  --text-muted: rgba(26, 58, 74, 0.65);
+  --container-bg: #f0f8fc;
+  --container-shadow: rgba(0, 0, 0, 0.08);
+  --button-bg: linear-gradient(135deg, #c02030 0%, #8a0a20 100%);
+  --button-text: white;
+  --button-shadow: rgba(0, 0, 0, 0.15);
+  --grid-bg: #d8f0f8;
+  --grid-header-bg: #2a5a8a;
+  --grid-header-text: white;
+  --day-cell-bg: #f5fafc;
+  --day-border: #a8d8f0;
+  --day-hover: #e8f5fa;
+  --holiday-bg: #ffd700;
+  --selected-day-bg: #ffed4e;
+  --popup-bg: #f5fafc;
+  --popup-border: #c8d8e8;
+  --input-bg: #f5fafc;
+  --input-border: #c8d8e8;
+  --weekend-bg: #c8f0ff;
+  --controls-bg-gradient: linear-gradient(90deg, #f0f8fc 0%, #d8f0f8 100%);
+  --controls-border: #c8d8e8;
+  --controls-label: #0d2235;
+  --input-text: #1a3a4a;
+  --input-focus-border: #2a5a8a;
+  --link-color: #2a5a8a;
+  --link-hover: #0d2235;
+  --primary-blue: #2a5a8a;
+  --primary-blue-hover: #0d2235;
+  --checkbox-checked-bg: #2a5a8a;
+  --checkbox-mark-color: #ffffff;
+  --status-valid-bg: #d4edda;
+  --status-valid-text: #155724;
+  --status-valid-border: #a8d8b8;
+  --status-invalid-bg: #f8d7da;
+  --status-invalid-text: #721c24;
+  --status-invalid-border: #d9a8b3;
+  --tooltip-bg: #f0f8fc;
+  --tooltip-border: #c8d8e8;
+  --tooltip-border-hover: #2a5a8a;
+  --tooltip-text: #1a3a4a;
+  --overlay-bg: rgba(26, 58, 74, 0.5);
+  --emoji-popup-bg: #f5fafc;
+  --emoji-popup-border: #c8d8e8;
+  --emoji-popup-shadow: rgba(26, 58, 74, 0.1);
+  --emoji-button-bg: #2a5a8a;
+  --header-text-shadow: rgba(26, 58, 74, 0.1);
+  --theme-toggle-bg: rgba(240, 248, 252, 0.4);
+  --theme-toggle-border: rgba(26, 58, 74, 0.12);
+  --theme-toggle-hover-bg: rgba(240, 248, 252, 0.6);
+  --primary-gradient: linear-gradient(135deg, #2a5a8a 0%, #0d2235 100%);
+  --event-bg-gradient: linear-gradient(135deg, #c02030 0%, #8a0a20 100%);
+  --event-shadow: rgba(26, 58, 74, 0.08);
+  --holiday-text: #0d2235;
+  --highlight-month-bg: rgba(42, 90, 138, 0.08);
+  --select-focus-shadow: rgba(42, 90, 138, 0.1);
+  --button-disabled-bg: #c8c8c8;
+  --text-inverse: #ffffff;
+  --input-border-dark: #2a5a8a;
+  --checkbox-bg: #ffffff;
+  --text-white: white;
+  --flag-shadow: 0px 0px 1px rgba(26, 58, 74, 0.12);
+}
+
+/* Bright Blue snowfall and gold gleam animations */
+[data-theme='brightblue'] #root::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(2px 2px at 10px 20px, #fff, rgba(255,255,255,.5)),
+    radial-gradient(2px 2px at 60px 70px, #eee, rgba(238,238,238,.2)),
+    radial-gradient(1px 1px at 50px 50px, #fff, rgba(255,255,255,.3)),
+    radial-gradient(1px 1px at 130px 80px, #eee, rgba(238,238,238,.2)),
+    radial-gradient(2px 2px at 90px 10px, #fff, rgba(255,255,255,.4));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: snowfall 12s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+[data-theme='brightblue'] #root::after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(180deg, transparent 0%, rgba(255, 215, 0, 0.15) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+
 #root {
   min-height: 100vh;
 }
