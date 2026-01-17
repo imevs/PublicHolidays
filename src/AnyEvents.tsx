@@ -7,6 +7,7 @@ import { EventListInput } from "./components/EventListInput/EventListInput";
 import Controls from "./components/Controls/Controls";
 import { EventListInputButtons } from "./components/EventListInput/EventListInputButtons";
 import { STORAGE_KEY } from "./consts";
+import ThemeSelector from "./components/ThemeSelector/ThemeSelector";
 
 const defaultData = `
 2025-09-10 🎂 Birthday of Joe
@@ -46,6 +47,7 @@ export const AnyEvents: React.FC = () => {
 
     return (
         <div className={styles.app}>
+            <ThemeSelector />
             <div className={styles.header}>
                 <h1>
                     <a href="./">
