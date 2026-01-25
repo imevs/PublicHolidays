@@ -757,7 +757,7 @@
   --day-hover: #f5eee6;
 
   --holiday-bg: #ffe5d9;
-  --selected-day-bg: #f0e6d8;
+  --selected-day-bg: #ffe5d9;
 
   --popup-bg: #fffdf8;
   --popup-border: #c4b5a0;
@@ -765,7 +765,7 @@
   --input-bg: #fffdf8;
   --input-border: #ddd0c4;
 
-  --weekend-bg: #e8dcc9;
+  --weekend-bg: #ffe5d9;
 
   --controls-bg-gradient: linear-gradient(90deg, #fffef9 0%, #faf6f0 100%);
   --controls-border: #e5d9cc;
@@ -824,6 +824,12 @@
   --checkbox-bg: #fffdf8;
   --text-white: #fffdf8;
   --flag-shadow: 0px 0px 2px rgba(74, 55, 40, 0.15);
+}
+
+/* Creme theme: Improve text contrast on light holiday backgrounds */
+[data-theme='creme'] .holiday,
+[data-theme='creme'] .dayCell.selectedDate {
+  color: #2a1810 !important;
 }
 
 /* Creme visual effects using CSS */
@@ -1400,6 +1406,7 @@ a:hover {
 
 /* Base seasonal theme styling */
 [data-theme='seasonal'] {
+  --app-bg-gradient: linear-gradient(135deg, #e8f4f8 0%, #c5dfe8 100%);
   --text-main: #1a3a4a;
   --text-header: #0d1f2d;
   --text-muted: rgba(26, 58, 74, 0.65);
@@ -1478,12 +1485,12 @@ a:hover {
   --day-border: #b3d9f2;
   --day-hover: #e8f4f8;
   --holiday-bg: #cce5f5;
-  --selected-day-bg: #a3d5f7;
+  --selected-day-bg: #cce5f5;
   --popup-bg: #f5fafc;
   --popup-border: #c8d8e8;
   --input-bg: #f5fafc;
   --input-border: #c8d8e8;
-  --weekend-bg: #d4e8f5;
+  --weekend-bg: #cce5f5;
   --controls-bg-gradient: linear-gradient(90deg, #f0f8fc 0%, #e0f2fb 100%);
   --controls-border: #c8d8e8;
   --controls-label: #2a5a80;
@@ -1528,6 +1535,12 @@ a:hover {
   --flag-shadow: 0px 0px 1px rgba(26, 58, 74, 0.12);
 }
 
+/* Light Blue theme: Improve text contrast on light holiday backgrounds */
+[data-theme='lightblue'] .holiday,
+[data-theme='lightblue'] .dayCell.selectedDate {
+  color: #0d1f2d !important;
+}
+
 /* Light Blue snowfall animation */
 [data-theme='lightblue'] #root::before {
   content: '';
@@ -1567,12 +1580,12 @@ a:hover {
   --day-border: #a8d8f0;
   --day-hover: #e8f5fa;
   --holiday-bg: #ffd700;
-  --selected-day-bg: #ffed4e;
+  --selected-day-bg: #ffd700;
   --popup-bg: #f5fafc;
   --popup-border: #c8d8e8;
   --input-bg: #f5fafc;
   --input-border: #c8d8e8;
-  --weekend-bg: #c8f0ff;
+  --weekend-bg: #ffd700;
   --controls-bg-gradient: linear-gradient(90deg, #f0f8fc 0%, #d8f0f8 100%);
   --controls-border: #c8d8e8;
   --controls-label: #0d2235;

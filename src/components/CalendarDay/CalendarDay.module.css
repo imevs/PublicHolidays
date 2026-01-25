@@ -27,6 +27,7 @@
 
 .calendarDay.selectedDate {
   background: var(--selected-day-bg);
+  color: var(--text-main);
 }
 
 .dayNumber {
