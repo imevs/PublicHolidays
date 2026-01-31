@@ -851,217 +851,169 @@
 /* Pencil Sketch Theme - Realistic hand-drawn pencil aesthetic with cross-hatching and paper texture */
 [data-theme='pencil'] {
   /* Multi-layer hatching: paper texture + pencil marks */
-  --app-bg-gradient: 
-    repeating-linear-gradient(
-      90deg,
+  --app-bg-gradient:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.02) 1px,
-      rgba(0, 0, 0, 0.02) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.02) 2px),
+    repeating-linear-gradient(45deg,
       #f9f9f9,
       #f9f9f9 1px,
       #f5f5f5 1px,
-      #f5f5f5 3px
-    ),
-    repeating-linear-gradient(
-      -45deg,
+      #f5f5f5 3px),
+    repeating-linear-gradient(-45deg,
       transparent,
       transparent 2px,
       rgba(0, 0, 0, 0.01) 2px,
-      rgba(0, 0, 0, 0.01) 3px
-    ),
+      rgba(0, 0, 0, 0.01) 3px),
     #f7f7f7;
   --text-main: #2a2a2a;
   --text-header: #161616;
   --text-muted: rgba(42, 42, 42, 0.65);
 
-  --container-bg: 
-    repeating-linear-gradient(
-      90deg,
+  --container-bg:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.015) 1px,
-      rgba(0, 0, 0, 0.015) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.015) 2px),
+    repeating-linear-gradient(45deg,
       #fbfbfb,
       #fbfbfb 1px,
       #fafafa 1px,
-      #fafafa 3px
-    ),
+      #fafafa 3px),
     #fafafa;
   --container-shadow: rgba(0, 0, 0, 0.08);
 
-  --button-bg: 
-    repeating-linear-gradient(
-      45deg,
+  --button-bg:
+    repeating-linear-gradient(45deg,
       transparent,
       transparent 2px,
       rgba(0, 0, 0, 0.08) 2px,
-      rgba(0, 0, 0, 0.08) 4px
-    ),
-    repeating-linear-gradient(
-      -45deg,
+      rgba(0, 0, 0, 0.08) 4px),
+    repeating-linear-gradient(-45deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.05) 1px,
-      rgba(0, 0, 0, 0.05) 3px
-    ),
+      rgba(0, 0, 0, 0.05) 3px),
     linear-gradient(180deg, #545454 0%, #3a3a3a 100%);
   --button-text: #f8f8f8;
   --button-shadow: rgba(0, 0, 0, 0.25);
 
-  --grid-bg: 
-    repeating-linear-gradient(
-      90deg,
+  --grid-bg:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.02) 1px,
-      rgba(0, 0, 0, 0.02) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.02) 2px),
+    repeating-linear-gradient(45deg,
       #f1f1f1,
       #f1f1f1 1px,
       #ececec 1px,
-      #ececec 3px
-    ),
+      #ececec 3px),
     #f0f0f0;
   --grid-header-bg: #464646;
   --grid-header-text: #f9f9f9;
 
-  --day-cell-bg: 
-    repeating-linear-gradient(
-      90deg,
+  --day-cell-bg:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.01) 1px,
-      rgba(0, 0, 0, 0.01) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.01) 2px),
+    repeating-linear-gradient(45deg,
       #fbfbfb,
       #fbfbfb 1px,
       #fafafa 1px,
-      #fafafa 3px
-    ),
+      #fafafa 3px),
     #fafafa;
   --day-border: #dadadada;
-  --day-hover: 
-    repeating-linear-gradient(
-      90deg,
+  --day-hover:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.025) 1px,
-      rgba(0, 0, 0, 0.025) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.025) 2px),
+    repeating-linear-gradient(45deg,
       #f0f0f0,
       #f0f0f0 1px,
       #ebebeb 1px,
-      #ebebeb 3px
-    ),
+      #ebebeb 3px),
     #f0f0f0;
 
-  --holiday-bg: 
-    repeating-linear-gradient(
-      45deg,
+  --holiday-bg:
+    repeating-linear-gradient(45deg,
       transparent,
       transparent 2px,
       rgba(139, 90, 43, 0.08) 2px,
-      rgba(139, 90, 43, 0.08) 4px
-    ),
-    repeating-linear-gradient(
-      -45deg,
+      rgba(139, 90, 43, 0.08) 4px),
+    repeating-linear-gradient(-45deg,
       transparent,
       transparent 1px,
       rgba(139, 90, 43, 0.04) 1px,
-      rgba(139, 90, 43, 0.04) 3px
-    ),
+      rgba(139, 90, 43, 0.04) 3px),
     #e8e4e4;
-  --selected-day-bg: 
-    repeating-linear-gradient(
-      45deg,
+  --selected-day-bg:
+    repeating-linear-gradient(45deg,
       transparent,
       transparent 2px,
       rgba(0, 0, 0, 0.1) 2px,
-      rgba(0, 0, 0, 0.1) 4px
-    ),
-    repeating-linear-gradient(
-      -45deg,
+      rgba(0, 0, 0, 0.1) 4px),
+    repeating-linear-gradient(-45deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.05) 1px,
-      rgba(0, 0, 0, 0.05) 3px
-    ),
+      rgba(0, 0, 0, 0.05) 3px),
     #dcdcdc;
 
-  --popup-bg: 
-    repeating-linear-gradient(
-      90deg,
+  --popup-bg:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.015) 1px,
-      rgba(0, 0, 0, 0.015) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.015) 2px),
+    repeating-linear-gradient(45deg,
       #fbfbfb,
       #fbfbfb 1px,
       #fafafa 1px,
-      #fafafa 3px
-    ),
+      #fafafa 3px),
     #fafafa;
   --popup-border: #cacaca;
 
-  --input-bg: 
-    repeating-linear-gradient(
-      90deg,
+  --input-bg:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.01) 1px,
-      rgba(0, 0, 0, 0.01) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.01) 2px),
+    repeating-linear-gradient(45deg,
       #fbfbfb,
       #fbfbfb 1px,
       #fafafa 1px,
-      #fafafa 3px
-    ),
+      #fafafa 3px),
     #fafafa;
   --input-border: #d8d8d8;
 
-  --weekend-bg: 
-    repeating-linear-gradient(
-      45deg,
+  --weekend-bg:
+    repeating-linear-gradient(45deg,
       transparent,
       transparent 2px,
       rgba(0, 0, 0, 0.05) 2px,
-      rgba(0, 0, 0, 0.05) 4px
-    ),
+      rgba(0, 0, 0, 0.05) 4px),
     #e0e0e0;
 
-  --controls-bg-gradient: 
-    repeating-linear-gradient(
-      90deg,
+  --controls-bg-gradient:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.015) 1px,
-      rgba(0, 0, 0, 0.015) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.015) 2px),
+    repeating-linear-gradient(45deg,
       #fcfcfc,
       #fcfcfc 1px,
       #f8f8f8 1px,
-      #f8f8f8 3px
-    ),
+      #f8f8f8 3px),
     linear-gradient(90deg, #fbfbfb 0%, #f2f2f2 100%);
   --controls-border: #e0e0e0;
   --controls-label: #3a3a3a;
@@ -1071,21 +1023,17 @@
   --link-color: #484848;
   --link-hover: #2a2a2a;
 
-  --primary-gradient: 
-    repeating-linear-gradient(
-      45deg,
+  --primary-gradient:
+    repeating-linear-gradient(45deg,
       transparent,
       transparent 2px,
       rgba(0, 0, 0, 0.08) 2px,
-      rgba(0, 0, 0, 0.08) 4px
-    ),
-    repeating-linear-gradient(
-      -45deg,
+      rgba(0, 0, 0, 0.08) 4px),
+    repeating-linear-gradient(-45deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.05) 1px,
-      rgba(0, 0, 0, 0.05) 3px
-    ),
+      rgba(0, 0, 0, 0.05) 3px),
     linear-gradient(180deg, #545454 0%, #3a3a3a 100%);
   --primary-blue: #5a5a5a;
   --primary-blue-hover: #3a3a3a;
@@ -1101,21 +1049,17 @@
   --status-invalid-text: #721c24;
   --status-invalid-border: #d9a8b3;
 
-  --tooltip-bg: 
-    repeating-linear-gradient(
-      90deg,
+  --tooltip-bg:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.015) 1px,
-      rgba(0, 0, 0, 0.015) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.015) 2px),
+    repeating-linear-gradient(45deg,
       #fbfbfb,
       #fbfbfb 1px,
       #fafafa 1px,
-      #fafafa 3px
-    ),
+      #fafafa 3px),
     #fafafa;
   --tooltip-border: #c8c8c8;
   --tooltip-border-hover: #5a5a5a;
@@ -1123,21 +1067,17 @@
 
   --overlay-bg: rgba(42, 42, 42, 0.55);
 
-  --emoji-popup-bg: 
-    repeating-linear-gradient(
-      90deg,
+  --emoji-popup-bg:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.015) 1px,
-      rgba(0, 0, 0, 0.015) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.015) 2px),
+    repeating-linear-gradient(45deg,
       #fbfbfb,
       #fbfbfb 1px,
       #fafafa 1px,
-      #fafafa 3px
-    ),
+      #fafafa 3px),
     #fafafa;
   --emoji-popup-border: #d8d8d8;
   --emoji-popup-shadow: rgba(42, 42, 42, 0.12);
@@ -1145,66 +1085,52 @@
 
   --header-text-shadow: rgba(42, 42, 42, 0.1);
 
-  --theme-toggle-bg: 
-    repeating-linear-gradient(
-      90deg,
+  --theme-toggle-bg:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.01) 1px,
-      rgba(0, 0, 0, 0.01) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.01) 2px),
+    repeating-linear-gradient(45deg,
       rgba(250, 250, 250, 0.5),
       rgba(250, 250, 250, 0.5) 1px,
       rgba(245, 245, 245, 0.4) 1px,
-      rgba(245, 245, 245, 0.4) 3px
-    );
+      rgba(245, 245, 245, 0.4) 3px);
   --theme-toggle-border: rgba(42, 42, 42, 0.15);
-  --theme-toggle-hover-bg: 
-    repeating-linear-gradient(
-      90deg,
+  --theme-toggle-hover-bg:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.015) 1px,
-      rgba(0, 0, 0, 0.015) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.015) 2px),
+    repeating-linear-gradient(45deg,
       rgba(250, 250, 250, 0.7),
       rgba(250, 250, 250, 0.7) 1px,
       rgba(245, 245, 245, 0.6) 1px,
-      rgba(245, 245, 245, 0.6) 3px
-    );
+      rgba(245, 245, 245, 0.6) 3px);
 
-  --event-bg-gradient: 
-    repeating-linear-gradient(
-      45deg,
+  --event-bg-gradient:
+    repeating-linear-gradient(45deg,
       transparent,
       transparent 2px,
       rgba(0, 0, 0, 0.1) 2px,
-      rgba(0, 0, 0, 0.1) 4px
-    ),
-    repeating-linear-gradient(
-      -45deg,
+      rgba(0, 0, 0, 0.1) 4px),
+    repeating-linear-gradient(-45deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.06) 1px,
-      rgba(0, 0, 0, 0.06) 3px
-    ),
+      rgba(0, 0, 0, 0.06) 3px),
     linear-gradient(180deg, #6b6b6b 0%, #4a4a4a 100%);
   --event-shadow: rgba(42, 42, 42, 0.12);
 
   --holiday-text: #5a5a5a;
 
-  --highlight-month-bg: 
-    repeating-linear-gradient(
-      45deg,
+  --highlight-month-bg:
+    repeating-linear-gradient(45deg,
       transparent,
       transparent 2px,
       rgba(90, 90, 90, 0.06) 2px,
-      rgba(90, 90, 90, 0.06) 4px
-    ),
+      rgba(90, 90, 90, 0.06) 4px),
     rgba(90, 90, 90, 0.06);
 
   --select-focus-shadow: rgba(90, 90, 90, 0.15);
@@ -1212,21 +1138,17 @@
 
   --text-inverse: #f9f9f9;
   --input-border-dark: #4a4a4a;
-  --checkbox-bg: 
-    repeating-linear-gradient(
-      90deg,
+  --checkbox-bg:
+    repeating-linear-gradient(90deg,
       transparent,
       transparent 1px,
       rgba(0, 0, 0, 0.01) 1px,
-      rgba(0, 0, 0, 0.01) 2px
-    ),
-    repeating-linear-gradient(
-      45deg,
+      rgba(0, 0, 0, 0.01) 2px),
+    repeating-linear-gradient(45deg,
       #fbfbfb,
       #fbfbfb 1px,
       #fafafa 1px,
-      #fafafa 3px
-    ),
+      #fafafa 3px),
     #fafafa;
   --text-white: #f9f9f9;
   --flag-shadow: 0px 1px 2px rgba(42, 42, 42, 0.15);
@@ -1549,12 +1471,12 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, #eee, rgba(238,238,238,.2)),
-    radial-gradient(2px 2px at 60px 70px, #fff, rgba(255,255,255,.5)),
-    radial-gradient(1px 1px at 50px 50px, #fff, rgba(255,255,255,.2)),
-    radial-gradient(1px 1px at 130px 80px, #fff, rgba(255,255,255,.2)),
-    radial-gradient(2px 2px at 90px 10px, #eee, rgba(238,238,238,.2));
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #eee, rgba(238, 238, 238, .2)),
+    radial-gradient(2px 2px at 60px 70px, #fff, rgba(255, 255, 255, .5)),
+    radial-gradient(1px 1px at 50px 50px, #fff, rgba(255, 255, 255, .2)),
+    radial-gradient(1px 1px at 130px 80px, #fff, rgba(255, 255, 255, .2)),
+    radial-gradient(2px 2px at 90px 10px, #eee, rgba(238, 238, 238, .2));
   background-repeat: repeat;
   background-size: 200px 200px;
   animation: snowfall 10s linear infinite;
@@ -1638,12 +1560,12 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    radial-gradient(2px 2px at 10px 20px, #fff, rgba(255,255,255,.5)),
-    radial-gradient(2px 2px at 60px 70px, #eee, rgba(238,238,238,.2)),
-    radial-gradient(1px 1px at 50px 50px, #fff, rgba(255,255,255,.3)),
-    radial-gradient(1px 1px at 130px 80px, #eee, rgba(238,238,238,.2)),
-    radial-gradient(2px 2px at 90px 10px, #fff, rgba(255,255,255,.4));
+  background-image:
+    radial-gradient(2px 2px at 10px 20px, #fff, rgba(255, 255, 255, .5)),
+    radial-gradient(2px 2px at 60px 70px, #eee, rgba(238, 238, 238, .2)),
+    radial-gradient(1px 1px at 50px 50px, #fff, rgba(255, 255, 255, .3)),
+    radial-gradient(1px 1px at 130px 80px, #eee, rgba(238, 238, 238, .2)),
+    radial-gradient(2px 2px at 90px 10px, #fff, rgba(255, 255, 255, .4));
   background-repeat: repeat;
   background-size: 200px 200px;
   animation: snowfall 12s linear infinite;
@@ -1665,4 +1587,88 @@ a:hover {
 
 #root {
   min-height: 100vh;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  #calendar-grid-print-container,
+  #calendar-grid-print-container * {
+    visibility: visible;
+  }
+
+  #calendar-grid-print-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Optimization for A4 fitting */
+  [class*="yearGrid"] {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 5px !important;
+    justify-content: start !important;
+    width: 100% !important;
+  }
+
+  [class*="monthContainer"] {
+    width: 100% !important;
+    padding: 2px !important;
+    margin: 0 !important;
+  }
+
+  [class*="monthHeader"] {
+    font-size: 0.9rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  [class*="dayCell"] {
+    min-height: 28px !important;
+    padding: 1px !important;
+    font-size: 0.7rem !important;
+  }
+
+  [class*="holidayIndicatorsList"] {
+    margin-top: 1px !important;
+  }
+
+  [class*="holidayIndicator"] {
+    font-size: 0.5rem !important;
+  }
+
+  /* Scale the year header down */
+  #calendar-grid-print-container h1 {
+    font-size: 1.2rem !important;
+    margin: 2px 0 !important;
+    text-align: center !important;
+  }
+
+  /* Ensure EventsList starts on a new page */
+  [class*="eventsList"] {
+    break-before: page !important;
+    margin-top: 20px !important;
+    display: block !important;
+  }
+
+  [class*="eventsWrapper"] {
+    /* Better readability for printed lists */
+    column-count: 2 !important;
+  }
+
+  .header,
+  .actionButton,
+  .controls {
+    display: none !important;
+  }
 }

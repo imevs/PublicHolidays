@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
+import html2canvas from "html2canvas";
 import { useNavigate } from "react-router";
 import { formatDateString } from "../../utils/dateUtils";
 import { getFlagEmoji } from "../../utils/countryFlags";
@@ -71,6 +72,47 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays, 
         });
     };
 
+    const saveAsImage = async () => {
+        const element = document.getElementById("calendar-grid-capture-container");
+        if (!element) return;
+
+        let bgColor = null;
+        if (element.parentElement) {
+            bgColor = getComputedStyle(element.parentElement).backgroundColor;
+        }
+
+        try {
+            const canvas = await html2canvas(element, {
+                backgroundColor: bgColor,
+                logging: false,
+                useCORS: true,
+                scale: 2,
+                onclone: (documentClone) => {
+                    const style = documentClone.createElement("style");
+                    style.innerHTML = `
+                        * {
+                            animation: none !important;
+                            transition: none !important;
+                        }
+                    `;
+                    documentClone.body.appendChild(style);
+                }
+            });
+
+            const image = canvas.toDataURL("image/png");
+            const link = document.createElement("a");
+            const timestamp = new Date().toISOString().split("T")[0];
+            link.href = image;
+            link.download = `calendar-${viewMode}-${timestamp}.png`;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } catch (error) {
+            console.error("Failed to capture calendar image:", error);
+            alert("Failed to save calendar image. Please try again.");
+        }
+    };
+
     const getNotifications = useCallback(() => {
         if (notificationsEnabled) {
             stopNotifications();
@@ -100,6 +142,10 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays, 
             <button className={styles.actionButton} onClick={exportCalendar}>
                 <span className={styles.buttonIcon}>📥</span>
                 Download combined ICS file
+            </button>
+            <button className={styles.actionButton} onClick={saveAsImage}>
+                <span className={styles.buttonIcon}>📷</span>
+                Save as Image
             </button>
             <button className={styles.actionButton} onClick={editEvents} style={{ right: 120 }}>
                 <span className={styles.buttonIcon}>✏️</span>

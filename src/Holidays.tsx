@@ -72,21 +72,23 @@ export const Holidays: React.FC = () => {
                     toggleMode={() => handleModeChange(mode === "month" ? "year" : "month", currentDate.getMonth())}
                 />
 
-                <CalendarGrid
-                    selectedYearDays={selectedYearDays}
-                    selectedMonthDays={selectedMonthDays}
-                    currentDate={currentDate}
-                    mode={mode}
-                    onModeChange={handleModeChange}
-                    countryData={countryData}
-                />
+                <div id="calendar-grid-print-container">
+                    <CalendarGrid
+                        selectedYearDays={selectedYearDays}
+                        selectedMonthDays={selectedMonthDays}
+                        currentDate={currentDate}
+                        mode={mode}
+                        onModeChange={handleModeChange}
+                        countryData={countryData}
+                    />
 
-                <EventsList
-                    selectedYearDays={selectedYearDays}
-                    currentDate={currentDate}
-                    mode={mode}
-                    countryData={countryData}
-                />
+                    <EventsList
+                        selectedYearDays={selectedYearDays}
+                        currentDate={currentDate}
+                        mode={mode}
+                        countryData={countryData}
+                    />
+                </div>
             </div>
         </div>
     );
