@@ -1,14 +1,12 @@
 // Auto-generated types
 
 import type { CountryCode, CountryName } from "../countryNames";
-import type { DateString } from "../../utils/UTCDate";
 
 export type Holiday = {
-    date: DateString;
+    date: string;
     localName: string;
     name: string;
-    primary_type?: string;
-    type: string[]; // "National holiday"
+    type: string[];
 };
 
 export type CountryHolidays = {
