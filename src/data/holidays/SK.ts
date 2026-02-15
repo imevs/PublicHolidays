@@ -1,7 +1,7 @@
 // Auto-generated holiday data for SK
 // Source: https://date.nager.at
 
-import { CountryHolidays } from "./types";
+import { CountryHolidays } from "./types.ts";
 
 export const holidays_SK: CountryHolidays = {
     countryCode: "SK",

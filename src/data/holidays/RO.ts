@@ -1,7 +1,7 @@
 // Auto-generated holiday data for RO
 // Source: https://date.nager.at
 
-import { CountryHolidays } from "./types";
+import { CountryHolidays } from "./types.ts";
 
 export const holidays_RO: CountryHolidays = {
     countryCode: "RO",

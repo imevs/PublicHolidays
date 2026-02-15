@@ -1,7 +1,7 @@
 // Auto-generated holiday data for FI
 // Source: https://date.nager.at
 
-import { CountryHolidays } from "./types";
+import { CountryHolidays } from "./types.ts";
 
 export const holidays_FI: CountryHolidays = {
     countryCode: "FI",

@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import { SlidingPanel } from "../components/SlidingPanel/SlidingPanel";
+import { SlidingPanel } from "../components/SlidingPanel/SlidingPanel.tsx";
 
 describe("SlidingPanel", () => {
     it("renders toggle button with correct aria attributes", () => {

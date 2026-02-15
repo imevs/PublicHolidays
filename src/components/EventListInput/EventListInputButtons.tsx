@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { exportCalendarToFile, parseICS } from "../../utils/generateICS";
-import { getFlagEmoji } from "../../utils/countryFlags";
-import type { CalendarEvent } from "../../types";
+import { exportCalendarToFile, parseICS } from "../../utils/generateICS.ts";
+import { getFlagEmoji } from "../../utils/countryFlags.ts";
+import type { CalendarEvent } from "../../types/index.ts";
 import styles from "./EventListInputButtons.module.css";
 import { useSearchParams } from "react-router";
 

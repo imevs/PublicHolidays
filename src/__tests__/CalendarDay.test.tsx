@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import CalendarDay from "../components/CalendarDay/CalendarDay";
-import { UTCDate } from "../utils/UTCDate";
+import CalendarDay from "../components/CalendarDay/CalendarDay.tsx";
+import { UTCDate } from "../utils/UTCDate.ts";
 
 describe("CalendarDay", () => {
     it("renders the day number", () => {

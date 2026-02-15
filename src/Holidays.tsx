@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from "react";
 
-import { useCalendar } from "./hooks/useCalendar";
-import Controls from "./components/Controls/Controls";
-import CalendarGrid from "./components/CalendarGrid/CalendarGrid";
+import { useCalendar } from "./hooks/useCalendar.ts";
+import Controls from "./components/Controls/Controls.tsx";
+import CalendarGrid from "./components/CalendarGrid/CalendarGrid.tsx";
 import styles from "./Holidays.module.css";
-import { CalendarEvent } from "./types";
-import { convertEvents } from "./utils/convertEvents";
-import { EventsList } from "./components/EventsList/EventsList";
-import CountryFilter from "./components/CountryFilter/CountryFilter";
-import { ActionButtons } from "./components/EventsList/EventsListActionButtons";
-import ThemeSelector from "./components/ThemeSelector/ThemeSelector";
+import { CalendarEvent } from "./types/index.ts";
+import { convertEvents } from "./utils/convertEvents.ts";
+import { EventsList } from "./components/EventsList/EventsList.tsx";
+import CountryFilter from "./components/CountryFilter/CountryFilter.tsx";
+import { ActionButtons } from "./components/EventsList/EventsListActionButtons.tsx";
+import ThemeSelector from "./components/ThemeSelector/ThemeSelector.tsx";
 
 export const Holidays: React.FC = () => {
     useEffect(() => {
-        import("./data/holidays_v2").then(({ allHolidays }) => {
+        import("./data/holidays_v2/index.ts").then(({ allHolidays }) => {
             setHolidaysData(convertEvents(Object.values(allHolidays)));
         });
     }, []);
@@ -36,7 +36,7 @@ export const Holidays: React.FC = () => {
     const [countryData, setCountryData] = useState({});
 
     useEffect(() => {
-        import("./data/holidays_descriptions/all").then(data => {
+        import("./data/holidays_descriptions/all.ts").then(data => {
             setCountryData(data.descriptions);
         });
     }, []);

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { CalendarDay as CalendarDayType, type HolidayWithCountry, type OtherEvent } from "../../types";
-import CalendarDay from "../CalendarDay/CalendarDay";
+import { CalendarDay as CalendarDayType, type HolidayWithCountry, type OtherEvent } from "../../types/index.ts";
+import CalendarDay from "../CalendarDay/CalendarDay.tsx";
 import {
     convertDayToEUFormat,
     dayNames,
@@ -9,15 +9,15 @@ import {
     getMonthName,
     isSameDate,
     isWeekend,
-} from "../../utils/dateUtils";
+} from "../../utils/dateUtils.ts";
 import styles from "./CalendarGrid.module.css";
-import MonthNavigation from "../MonthNavigation/MonthNavigation";
-import { getFlagEmoji } from "../../utils/countryFlags";
-import { getLink } from "../../data/holidays_descriptions/getLink";
-import { UTCDate } from "../../utils/UTCDate";
-import EventPopup from "../EventPopup/EventPopup";
-import { usePrevious } from "./UsePrevious";
-import type { Description } from "../../data/holidays_descriptions/all";
+import MonthNavigation from "../MonthNavigation/MonthNavigation.tsx";
+import { getFlagEmoji } from "../../utils/countryFlags.ts";
+import { getLink } from "../../data/holidays_descriptions/getLink.ts";
+import { UTCDate } from "../../utils/UTCDate.ts";
+import EventPopup from "../EventPopup/EventPopup.tsx";
+import { usePrevious } from "./UsePrevious.tsx";
+import type { Description } from "../../data/holidays_descriptions/all.ts";
 
 interface CalendarGridProps {
     onNewEvent?: (date: OtherEvent) => void; // if not defined will not show popup for new event

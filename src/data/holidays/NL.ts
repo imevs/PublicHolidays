@@ -1,7 +1,7 @@
 // Auto-generated holiday data for NL
 // Source: https://date.nager.at
 
-import { CountryHolidays } from "./types";
+import { CountryHolidays } from "./types.ts";
 
 export const holidays_NL: CountryHolidays = {
     countryCode: "NL",

@@ -1,4 +1,4 @@
-import { buildICS, parseICS } from "./generateICS";
+import { buildICS, parseICS } from "./generateICS.ts";
 import * as assert from "node:assert";
 
 describe("generateICS", () => {

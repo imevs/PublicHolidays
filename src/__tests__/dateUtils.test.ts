@@ -4,8 +4,8 @@ import {
     generateYears,
     formatDateString,
     isSameDate,
-} from "../utils/dateUtils";
-import { UTCDate } from "../utils/UTCDate";
+} from "../utils/dateUtils.ts";
+import { UTCDate } from "../utils/UTCDate.ts";
 
 describe("dateUtils", () => {
     it("monthNames contains 12 months", () => {

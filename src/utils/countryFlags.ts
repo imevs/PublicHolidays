@@ -1,5 +1,5 @@
 // Function to convert a country code to a flag emoji
-import type { CountryCode } from "../data/countryNames";
+import type { CountryCode } from "../data/countryNames.ts";
 
 export const getFlagEmoji = (countryCode: CountryCode) => {
     return countryCode

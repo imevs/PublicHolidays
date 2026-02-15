@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { CalendarDay, CalendarEvent } from "../types";
+import { CalendarDay, CalendarEvent } from "../types/index.ts";
 import {
     convertDayToEUFormat,
     DayIndexes,
@@ -7,10 +7,10 @@ import {
     getNextMonth,
     isSameDate,
     isWeekend
-} from "../utils/dateUtils";
-import type { CountryCode } from "../data/countryNames";
-import { type DateThreeParts, UTCDate } from "../utils/UTCDate";
-import { dateLocale } from "../consts";
+} from "../utils/dateUtils.ts";
+import type { CountryCode } from "../data/countryNames.ts";
+import { type DateThreeParts, UTCDate } from "../utils/UTCDate.ts";
+import { dateLocale } from "../consts.ts";
 
 const dateFormatter = new Intl.DateTimeFormat(dateLocale);
 

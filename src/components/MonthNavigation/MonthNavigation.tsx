@@ -1,7 +1,7 @@
 import React from "react";
-import { monthNames } from "../../utils/dateUtils";
+import { monthNames } from "../../utils/dateUtils.ts";
 import styles from "./MonthNavigation.module.css";
-import type { UTCDate } from "../../utils/UTCDate";
+import type { UTCDate } from "../../utils/UTCDate.ts";
 
 interface MonthNavigationProps {
     currentDate: UTCDate;

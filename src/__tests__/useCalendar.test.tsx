@@ -2,10 +2,10 @@ import * as timezone_mock from "timezone-mock";
 timezone_mock.register("US/Eastern");
 
 import { renderHook, act } from "@testing-library/react";
-import { useCalendar } from "../hooks/useCalendar";
-import { allHolidays } from "../data/holidays_v2";
-import { convertEvents } from "../utils/convertEvents";
-import { UTCDate } from "../utils/UTCDate";
+import { useCalendar } from "../hooks/useCalendar.ts";
+import { allHolidays } from "../data/holidays_v2/index.ts";
+import { convertEvents } from "../utils/convertEvents.ts";
+import { UTCDate } from "../utils/UTCDate.ts";
 
 describe("useCalendar", () => {
     beforeEach(() => {

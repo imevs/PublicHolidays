@@ -1,11 +1,11 @@
-import { CalendarDay as CalendarDayType } from "../../types";
-import { formatDateToReadable } from "../../utils/dateUtils";
+import { CalendarDay as CalendarDayType } from "../../types/index.ts";
+import { formatDateToReadable } from "../../utils/dateUtils.ts";
 
 import styles from "./EventsList.module.css";
-import { getFlagEmoji } from "../../utils/countryFlags";
-import type { UTCDate } from "../../utils/UTCDate";
-import { getLink } from "../../data/holidays_descriptions/getLink";
-import type { Description } from "../../data/holidays_descriptions/all";
+import { getFlagEmoji } from "../../utils/countryFlags.ts";
+import type { UTCDate } from "../../utils/UTCDate.ts";
+import { getLink } from "../../data/holidays_descriptions/getLink.ts";
+import type { Description } from "../../data/holidays_descriptions/all.ts";
 
 export type EventsListProps = {
     selectedYearDays: CalendarDayType[];

@@ -1,5 +1,5 @@
-import { type DateString, UTCDate } from "./UTCDate";
-import { dateLocale } from "../consts";
+import { type DateString, UTCDate } from "./UTCDate.ts";
+import { dateLocale } from "../consts.ts";
 
 export const monthNames = [
     "January", "February", "March", "April", "May", "June",
