@@ -167,7 +167,7 @@ async function saveToTsFile(
     await fs.mkdir(outDir, { recursive: true });
     const filePath = path.join(outDir, `${country}.ts`);
 
-    const content = `import { CountryHolidays } from "./types";
+    const content = `import type { CountryHolidays } from "./types";
 
 export const holidays_${country}: CountryHolidays = {
     countryCode: "${country}",
