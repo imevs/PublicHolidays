@@ -1,5 +1,5 @@
-import type { CountryCode, CountryName } from "../data/countryNames";
-import { type DateString, UTCDate } from "../utils/UTCDate";
+import type { CountryCode, CountryName } from "../data/countryNames.ts";
+import { type DateString, UTCDate } from "../utils/UTCDate.ts";
 
 export interface CalendarDay {
     date: UTCDate;

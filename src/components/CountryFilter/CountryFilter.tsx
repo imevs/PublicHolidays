@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { countryOffsets, getLocalTime } from "../../utils/timeZones";
+import { countryOffsets, getLocalTime } from "../../utils/timeZones.ts";
 import styles from "./CountryFilter.module.css";
-import { getFlagEmoji } from "../../utils/countryFlags";
-import { type CountryCode, CountryName, countryNames } from "../../data/countryNames";
+import { getFlagEmoji } from "../../utils/countryFlags.ts";
+import { type CountryCode, CountryName, countryNames } from "../../data/countryNames.ts";
 
 export interface CountryFilterProps {
     selectedCountries: CountryCode[];

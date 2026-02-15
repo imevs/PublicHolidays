@@ -1,7 +1,7 @@
 // Auto-generated holiday data for BA
 // Source: https://date.nager.at
 
-import { CountryHolidays } from "./types";
+import { CountryHolidays } from "./types.ts";
 
 export const holidays_BA: CountryHolidays = {
     countryCode: "BA",

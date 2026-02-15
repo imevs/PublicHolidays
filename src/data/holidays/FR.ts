@@ -1,7 +1,7 @@
 // Auto-generated holiday data for FR
 // Source: https://date.nager.at
 
-import { CountryHolidays } from "./types";
+import { CountryHolidays } from "./types.ts";
 
 export const holidays_FR: CountryHolidays = {
     countryCode: "FR",

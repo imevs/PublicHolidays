@@ -1,6 +1,6 @@
-import type { CountryHolidays } from "../data/holidays_v2/types";
-import type { CalendarEvent } from "../types";
-import type { DateString } from "./UTCDate";
+import type { CountryHolidays } from "../data/holidays_v2/types.ts";
+import type { CalendarEvent } from "../types/index.ts";
+import type { DateString } from "./UTCDate.ts";
 
 export function convertEvents(allHolidays: CountryHolidays[]): CalendarEvent[] {
     return allHolidays.flatMap(data => data.holidays.map(h => ({

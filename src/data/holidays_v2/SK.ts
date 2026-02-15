@@ -1,4 +1,4 @@
-import { CountryHolidays } from "./types";
+import type { CountryHolidays } from "./types.ts";
 
 export const holidays_SK: CountryHolidays = {
     countryCode: "SK",

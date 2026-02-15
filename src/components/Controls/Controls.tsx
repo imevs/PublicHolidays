@@ -1,7 +1,7 @@
 import React from "react";
-import { generateYears, getMonthName } from "../../utils/dateUtils";
+import { generateYears, getMonthName } from "../../utils/dateUtils.ts";
 import styles from "./Controls.module.css";
-import { UTCDate } from "../../utils/UTCDate";
+import { UTCDate } from "../../utils/UTCDate.ts";
 
 interface ControlsProps {
     selectedDate: UTCDate;

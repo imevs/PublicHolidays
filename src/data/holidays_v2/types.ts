@@ -1,6 +1,6 @@
 // Auto-generated types
 
-import type { CountryCode, CountryName } from "../countryNames";
+import type { CountryCode, CountryName } from "../countryNames.ts";
 
 export type Holiday = {
     date: string;

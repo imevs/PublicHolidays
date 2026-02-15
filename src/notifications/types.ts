@@ -1,4 +1,4 @@
-import type { CountryCode } from "../data/countryNames";
+import type { CountryCode } from "../data/countryNames.ts";
 
 export interface HolidayDTO {
     date: string;

@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./EventPopup.module.css";
-import type { OtherEvent } from "../../types";
-import type { DateString, DateTwoParts } from "../../utils/UTCDate";
+import type { OtherEvent } from "../../types/index.ts";
+import type { DateString, DateTwoParts } from "../../utils/UTCDate.ts";
 
 interface EventPopupProps {
     initialDate: DateString;

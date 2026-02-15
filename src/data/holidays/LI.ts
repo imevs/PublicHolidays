@@ -1,7 +1,7 @@
 // Auto-generated holiday data for LI
 // Source: https://date.nager.at
 
-import { CountryHolidays } from "./types";
+import { CountryHolidays } from "./types.ts";
 
 export const holidays_LI: CountryHolidays = {
     countryCode: "LI",

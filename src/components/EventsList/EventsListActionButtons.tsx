@@ -1,19 +1,19 @@
 import React, { useCallback, useEffect, useState } from "react";
 import html2canvas from "html2canvas";
 import { useNavigate } from "react-router";
-import { formatDateString } from "../../utils/dateUtils";
-import { getFlagEmoji } from "../../utils/countryFlags";
-import { exportCalendarToFile } from "../../utils/generateICS";
-import { APP_BASE_NAME, STORAGE_KEY } from "../../consts";
-import type { CalendarDay as CalendarDayType } from "../../types";
+import { formatDateString } from "../../utils/dateUtils.ts";
+import { getFlagEmoji } from "../../utils/countryFlags.ts";
+import { exportCalendarToFile } from "../../utils/generateICS.ts";
+import { APP_BASE_NAME, STORAGE_KEY } from "../../consts.ts";
+import type { CalendarDay as CalendarDayType } from "../../types/index.ts";
 import styles from "./EventsListActionButtons.module.css";
-import { SlidingPanel } from "../SlidingPanel/SlidingPanel";
-import { useResizeObserver } from "../../hooks/useResizeObserver";
+import { SlidingPanel } from "../SlidingPanel/SlidingPanel.tsx";
+import { useResizeObserver } from "../../hooks/useResizeObserver.ts";
 import {
     hasServiceWorker,
     registerNotifications,
     stopNotifications,
-} from "../../notifications/notifications";
+} from "../../notifications/notifications.ts";
 
 interface ActionButtonsProps {
     selectedYearDays: CalendarDayType[];

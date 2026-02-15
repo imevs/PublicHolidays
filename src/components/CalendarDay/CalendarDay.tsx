@@ -1,10 +1,10 @@
 import React from "react";
-import { CalendarDay as CalendarDayType } from "../../types";
-import { getFlagEmoji } from "../../utils/countryFlags";
+import { CalendarDay as CalendarDayType } from "../../types/index.ts";
+import { getFlagEmoji } from "../../utils/countryFlags.ts";
 import styles from "./CalendarDay.module.css";
-import { getLink } from "../../data/holidays_descriptions/getLink";
-import { UTCDate } from "../../utils/UTCDate";
-import type { Description } from "../../data/holidays_descriptions/all";
+import { getLink } from "../../data/holidays_descriptions/getLink.ts";
+import { UTCDate } from "../../utils/UTCDate.ts";
+import type { Description } from "../../data/holidays_descriptions/all.ts";
 
 interface CalendarDayProps {
     day: CalendarDayType;

@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 
-import { CalendarEvent } from "../../types";
+import { CalendarEvent } from "../../types/index.ts";
 import styles from "./EventListInput.module.css";
-import type { DateString } from "../../utils/UTCDate";
+import type { DateString } from "../../utils/UTCDate.ts";
 
 const yearsRange = [2023, 2024, 2025, 2026, 2027];
 

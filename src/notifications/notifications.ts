@@ -3,7 +3,7 @@ import {
     type HolidayDTO, notificationsWereSet,
     startNotificationsCommand,
     stopNotificationsCommand
-} from "./types";
+} from "./types.ts";
 
 export async function requestNotificationPermission(checkOnly: boolean) {
     if (!("Notification" in window)) {

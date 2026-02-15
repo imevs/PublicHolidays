@@ -1,13 +1,13 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { useCalendar } from "./hooks/useCalendar";
-import CalendarGrid from "./components/CalendarGrid/CalendarGrid";
+import { useCalendar } from "./hooks/useCalendar.ts";
+import CalendarGrid from "./components/CalendarGrid/CalendarGrid.tsx";
 import styles from "./Holidays.module.css";
-import { CalendarEvent, type OtherEvent } from "./types";
-import { EventListInput } from "./components/EventListInput/EventListInput";
-import Controls from "./components/Controls/Controls";
-import { EventListInputButtons } from "./components/EventListInput/EventListInputButtons";
-import { STORAGE_KEY } from "./consts";
-import ThemeSelector from "./components/ThemeSelector/ThemeSelector";
+import { CalendarEvent, type OtherEvent } from "./types/index.ts";
+import { EventListInput } from "./components/EventListInput/EventListInput.tsx";
+import Controls from "./components/Controls/Controls.tsx";
+import { EventListInputButtons } from "./components/EventListInput/EventListInputButtons.tsx";
+import { STORAGE_KEY } from "./consts.ts";
+import ThemeSelector from "./components/ThemeSelector/ThemeSelector.tsx";
 
 const defaultData = `
 2025-09-10 🎂 Birthday of Joe
