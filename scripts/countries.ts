@@ -112,7 +112,7 @@ export const countriesMap = Object.fromEntries([
     "name": "Suriname"
 }, { "countryCode": "SV", "name": "El Salvador" }, { "countryCode": "TN", "name": "Tunisia" }, {
     "countryCode": "TR",
-    "name": "Türkiye"
+    "name": "Turkey"
 }, { "countryCode": "UA", "name": "Ukraine" }, { "countryCode": "US", "name": "United States" }, {
     "countryCode": "UY",
     "name": "Uruguay"

@@ -4,6 +4,16 @@ import type { CountryCode } from "../data/countryNames.ts";
 import { dateLocale } from "../consts.ts";
 
 export const countryTimeZones: Record<CountryCode, string> = {
+    KR: "",
+    AU: "",
+    BR: "",
+    CA: "",
+    CN: "",
+    ID: "",
+    IN: "",
+    JP: "",
+    NZ: "",
+    US: "",
     AD: "Europe/Andorra",
     AL: "Europe/Tirane",
     AT: "Europe/Vienna",
@@ -47,7 +57,7 @@ export const countryTimeZones: Record<CountryCode, string> = {
     SI: "Europe/Ljubljana",
     SK: "Europe/Bratislava",
     TR: "Europe/Istanbul",
-    UA: "Europe/Kyiv",
+    UA: "Europe/Kyiv"
 };
 export const countryTimeZonesFallBack: Partial<Record<CountryCode, string>> = {
     UA: "Europe/Kiev",
