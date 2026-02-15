@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import fetch from "node-fetch";
-import { countriesMap } from "./countries";
+import { countriesMap } from "./countries.ts";
 
 type RawHoliday = {
     date: {
@@ -14,7 +14,6 @@ type RawHoliday = {
     };
     description: string;
     name: string;
-    primary_type: string;
     type: string[];
 };
 
@@ -22,7 +21,6 @@ export type Holiday = {
     date: string;
     localName: string;
     name: string;
-    primary_type: string;
     type: string[];
 };
 
@@ -70,14 +68,14 @@ const d = {
 type Response = typeof d;
 
 // Parse CLI args with simple custom logic
-// Usage: ts-node fetchHolidays.ts 2024 2025 -- US DE --outDir=someFolder
+// Usage: node fetchDataV2.ts 2024 2025 -- US DE --outDir=someFolder
 function parseArgs() {
     const args = process.argv.slice(2);
     const separatorIndex = args.indexOf("--");
 
     if (separatorIndex === -1 || separatorIndex < 1) {
         throw new Error(
-            "Usage: ts-node fetchHolidays.ts <year1> <year2> ... -- <countryCode1> <countryCode2> ... [--outDir=folder] --token=token"
+            "Usage: node etchDataV2.ts <year1> <year2> ... -- <countryCode1> <countryCode2> ... [--outDir=folder] --token=token"
         );
     }
 
@@ -94,12 +92,13 @@ function parseArgs() {
     // Everything after '--' until another --outDir= or end
     const rest = args.slice(separatorIndex + 1);
     const countries: string[] = [];
-    let outDir = "holidays";
+    let outDir = "holidays_v2";
     let token = "";
 
     for (const arg of rest) {
         if (arg.startsWith("--outDir=")) {
             outDir = arg.substring("--outDir=".length);
+        }
         if (arg.startsWith("--token=")) {
             token = arg.substring("--token=".length);
         } else if (arg.startsWith("--")) {
@@ -115,6 +114,7 @@ function parseArgs() {
 
     return { years, countries, outDir, token };
 }
+
 const API_BASE = "https://calendarific.com/api/v2/";
 // https://calendarific.com/api/v2/holidays?&api_key=&country=UA&year=2025
 
@@ -123,7 +123,6 @@ function cleanHolidayData(data: RawHoliday[]): Holiday[] {
         date: item.date.iso,
         localName: item.description,
         name: item.name,
-        primary_type: item.primary_type,
         type: item.type,
     }));
 }
@@ -171,9 +170,9 @@ async function saveToTsFile(
     const content = `import { CountryHolidays } from "./types";
 
 export const holidays_${country}: CountryHolidays = {
-  countryCode: "${country}",
-  countryName: "${countryName}",
-  holidays: ${JSON.stringify(data, null, 2)}
+    countryCode: "${country}",
+    countryName: "${countryName}",
+    holidays: ${JSON.stringify (data, null, 4)}
 } as const;
 `;
 
@@ -190,7 +189,6 @@ export type Holiday = {
   date: string;
   localName: string;
   name: string;
-  primary_type?: string;
   type?: string[];
 };
 
@@ -243,7 +241,7 @@ async function main() {
 
         for (const country of countries) {
             if (!countryMap[country]) {
-                console.warn(`⚠️ Country code "${country}" not found in API — skipping.`);
+                console.warn(`⚠️ Country code "${country}" not found in country map — skipping.`);
                 continue;
             }
 
