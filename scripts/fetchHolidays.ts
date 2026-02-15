@@ -1,8 +1,8 @@
 import fs from "fs/promises";
 import path from "path";
 import fetch from "node-fetch";
-import { APP_BASE_NAME } from "../src/consts";
 
+const APP_BASE_NAME = "PublicHolidays";
 type RawHoliday = {
     date: string;
     localName: string;
@@ -32,14 +32,14 @@ interface AvailableCountry {
 }
 
 // Parse CLI args with simple custom logic
-// Usage: ts-node fetchHolidays.ts 2024 2025 -- US DE --outDir=someFolder
+// Usage: node fetchHolidays.ts 2024 2025 -- US DE --outDir=someFolder
 function parseArgs() {
     const args = process.argv.slice(2);
     const separatorIndex = args.indexOf("--");
 
     if (separatorIndex === -1 || separatorIndex < 1) {
         throw new Error(
-            "Usage: ts-node fetchHolidays.ts <year1> <year2> ... -- <countryCode1> <countryCode2> ... [--outDir=folder]"
+            "Usage: node fetchHolidays.ts <year1> <year2> ... -- <countryCode1> <countryCode2> ... [--outDir=folder]"
         );
     }
 
