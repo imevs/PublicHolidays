@@ -1,5 +1,5 @@
 export const countryNames = {
-    "AD": "Andorra",
+    AD: "Andorra",
     "AL": "Albania",
     "AT": "Austria",
     "BA": "Bosnia and Herzegovina",
@@ -41,8 +41,18 @@ export const countryNames = {
     "SE": "Sweden",
     "SI": "Slovenia",
     "SK": "Slovakia",
-    "TR": "Türkiye",
-    "UA": "Ukraine"
+    "TR": "Turkey",
+    "UA": "Ukraine",
+    "BR": "Brazil",
+    "US": "United States",
+    "CN": "China",
+    ID: "Indonesia",
+    JP: "Japan",
+    IN: "India",
+    "NZ": "New Zealand",
+    AU: "Australia",
+    CA: "Canada",
+    KR: "South Korea",
 } as const;
 
 export type CountryCode = keyof typeof countryNames;

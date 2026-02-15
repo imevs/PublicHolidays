@@ -5,7 +5,7 @@ import { CountryHolidays } from "./types.ts";
 
 export const holidays_TR: CountryHolidays = {
     countryCode: "TR",
-    countryName: "Türkiye",
+    countryName: "Turkey",
     holidays: [
         {
             "date": "2024-01-01",

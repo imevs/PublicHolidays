@@ -2394,7 +2394,7 @@ export const descriptions = {
             }
         ]
     },
-    "Türkiye": {
+    "Turkey": {
         wiki: "Public_holidays_in_Turkey",
         holidays: [
             {
