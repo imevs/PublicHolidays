@@ -4,1125 +4,1125 @@ export const holidays_IS: CountryHolidays = {
     countryCode: "IS",
     countryName: "Iceland",
     holidays: [
-    {
-        "date": "2024-01-01",
-        "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
-        "name": "New Year's Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-01-06",
-        "localName": "Twelfth Night is a observance in Iceland",
-        "name": "Twelfth Night",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2024-02-14",
-        "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
-        "name": "Ash Wednesday",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2024-02-14",
-        "localName": "February 14 is Valentine's Day or Saint Valentine's Feast. The day of love owes its origins to ancient Roman and European Christian traditions.",
-        "name": "Valentine's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2024-03-20",
-        "localName": "March Equinox in Iceland (Reykjavik)",
-        "name": "March Equinox",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2024-03-28",
-        "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-        "name": "Maundy Thursday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-03-29",
-        "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
-        "name": "Good Friday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-03-30",
-        "localName": "Holy Saturday is the day before Easter Sunday.",
-        "name": "Holy Saturday",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2024-03-31",
-        "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-        "name": "Easter Sunday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-04-01",
-        "localName": "Easter Monday is the day after Easter Sunday.",
-        "name": "Easter Monday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-04-25",
-        "localName": "First Day of Summer is a national holiday in Iceland",
-        "name": "First Day of Summer",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-05-01",
-        "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-        "name": "Labour Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-05-09",
-        "localName": "Ascension Day is the 40th day of Easter. It is a religious holiday that commemorates the ascension of Jesus Christ into heaven.",
-        "name": "Ascension Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-05-12",
-        "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-        "name": "Mother's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2024-05-19",
-        "localName": "Many Christians all over the world annually observe Pentecost, also known as Whitsunday or Whit Sunday.",
-        "name": "Pentecost Sunday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-05-20",
-        "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
-        "name": "Pentecost Monday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-06-17",
-        "localName": "Icelandic Republic Day is a national holiday in Iceland",
-        "name": "Icelandic Republic Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-06-20",
-        "localName": "June Solstice in Iceland (Reykjavik)",
-        "name": "June Solstice",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2024-08-05",
-        "localName": "Commerce Day is a national holiday in Iceland",
-        "name": "Commerce Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-09-22",
-        "localName": "September Equinox in Iceland (Reykjavik)",
-        "name": "September Equinox",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2024-10-31",
-        "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-        "name": "Halloween",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2024-11-10",
-        "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-        "name": "Father's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2024-12-01",
-        "localName": "Independence Day is a observance in Iceland",
-        "name": "Independence Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2024-12-21",
-        "localName": "December Solstice in Iceland (Reykjavik)",
-        "name": "December Solstice",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2024-12-24",
-        "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
-        "name": "Christmas Eve",
-        "type": [
-            "Half-day holiday"
-        ]
-    },
-    {
-        "date": "2024-12-25",
-        "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
-        "name": "Christmas Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-12-26",
-        "localName": "Second Day of Christmas is a national holiday in Iceland",
-        "name": "Second Day of Christmas",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2024-12-31",
-        "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
-        "name": "New Year's Eve",
-        "type": [
-            "Half-day holiday"
-        ]
-    },
-    {
-        "date": "2025-01-01",
-        "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
-        "name": "New Year's Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-01-06",
-        "localName": "Twelfth Night is a observance in Iceland",
-        "name": "Twelfth Night",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2025-02-14",
-        "localName": "February 14 is Valentine's Day or Saint Valentine's Feast. The day of love owes its origins to ancient Roman and European Christian traditions.",
-        "name": "Valentine's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2025-03-05",
-        "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
-        "name": "Ash Wednesday",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2025-03-20",
-        "localName": "March Equinox in Iceland (Reykjavik)",
-        "name": "March Equinox",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2025-04-17",
-        "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-        "name": "Maundy Thursday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-04-18",
-        "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
-        "name": "Good Friday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-04-19",
-        "localName": "Holy Saturday is the day before Easter Sunday.",
-        "name": "Holy Saturday",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2025-04-20",
-        "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-        "name": "Easter Sunday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-04-21",
-        "localName": "Easter Monday is the day after Easter Sunday.",
-        "name": "Easter Monday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-04-24",
-        "localName": "First Day of Summer is a national holiday in Iceland",
-        "name": "First Day of Summer",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-05-01",
-        "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-        "name": "Labour Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-05-11",
-        "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-        "name": "Mother's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2025-05-29",
-        "localName": "Ascension Day is the 40th day of Easter. It is a religious holiday that commemorates the ascension of Jesus Christ into heaven.",
-        "name": "Ascension Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-06-08",
-        "localName": "Many Christians all over the world annually observe Pentecost, also known as Whitsunday or Whit Sunday.",
-        "name": "Pentecost Sunday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-06-09",
-        "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
-        "name": "Pentecost Monday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-06-17",
-        "localName": "Icelandic Republic Day is a national holiday in Iceland",
-        "name": "Icelandic Republic Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-06-21",
-        "localName": "June Solstice in Iceland (Reykjavik)",
-        "name": "June Solstice",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2025-08-04",
-        "localName": "Commerce Day is a national holiday in Iceland",
-        "name": "Commerce Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-09-22",
-        "localName": "September Equinox in Iceland (Reykjavik)",
-        "name": "September Equinox",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2025-10-31",
-        "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-        "name": "Halloween",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2025-11-09",
-        "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-        "name": "Father's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2025-12-01",
-        "localName": "Independence Day is a observance in Iceland",
-        "name": "Independence Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2025-12-21",
-        "localName": "December Solstice in Iceland (Reykjavik)",
-        "name": "December Solstice",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2025-12-24",
-        "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
-        "name": "Christmas Eve",
-        "type": [
-            "Half-day holiday"
-        ]
-    },
-    {
-        "date": "2025-12-25",
-        "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
-        "name": "Christmas Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-12-26",
-        "localName": "Second Day of Christmas is a national holiday in Iceland",
-        "name": "Second Day of Christmas",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2025-12-31",
-        "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
-        "name": "New Year's Eve",
-        "type": [
-            "Half-day holiday"
-        ]
-    },
-    {
-        "date": "2026-01-01",
-        "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
-        "name": "New Year's Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-01-06",
-        "localName": "Twelfth Night is a observance in Iceland",
-        "name": "Twelfth Night",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2026-02-14",
-        "localName": "February 14 is Valentine's Day or Saint Valentine's Feast. The day of love owes its origins to ancient Roman and European Christian traditions.",
-        "name": "Valentine's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2026-02-18",
-        "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
-        "name": "Ash Wednesday",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2026-03-20",
-        "localName": "March Equinox in Iceland (Reykjavik)",
-        "name": "March Equinox",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2026-04-02",
-        "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-        "name": "Maundy Thursday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-04-03",
-        "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
-        "name": "Good Friday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-04-04",
-        "localName": "Holy Saturday is the day before Easter Sunday.",
-        "name": "Holy Saturday",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2026-04-05",
-        "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-        "name": "Easter Sunday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-04-06",
-        "localName": "Easter Monday is the day after Easter Sunday.",
-        "name": "Easter Monday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-04-23",
-        "localName": "First Day of Summer is a national holiday in Iceland",
-        "name": "First Day of Summer",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-05-01",
-        "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-        "name": "Labour Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-05-10",
-        "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-        "name": "Mother's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2026-05-14",
-        "localName": "Ascension Day is the 40th day of Easter. It is a religious holiday that commemorates the ascension of Jesus Christ into heaven.",
-        "name": "Ascension Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-05-24",
-        "localName": "Many Christians all over the world annually observe Pentecost, also known as Whitsunday or Whit Sunday.",
-        "name": "Pentecost Sunday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-05-25",
-        "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
-        "name": "Pentecost Monday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-06-17",
-        "localName": "Icelandic Republic Day is a national holiday in Iceland",
-        "name": "Icelandic Republic Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-06-21",
-        "localName": "June Solstice in Iceland (Reykjavik)",
-        "name": "June Solstice",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2026-08-03",
-        "localName": "Commerce Day is a national holiday in Iceland",
-        "name": "Commerce Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-09-23",
-        "localName": "September Equinox in Iceland (Reykjavik)",
-        "name": "September Equinox",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2026-10-31",
-        "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-        "name": "Halloween",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2026-11-08",
-        "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-        "name": "Father's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2026-12-01",
-        "localName": "Independence Day is a observance in Iceland",
-        "name": "Independence Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2026-12-21",
-        "localName": "December Solstice in Iceland (Reykjavik)",
-        "name": "December Solstice",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2026-12-24",
-        "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
-        "name": "Christmas Eve",
-        "type": [
-            "Half-day holiday"
-        ]
-    },
-    {
-        "date": "2026-12-25",
-        "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
-        "name": "Christmas Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-12-26",
-        "localName": "Second Day of Christmas is a national holiday in Iceland",
-        "name": "Second Day of Christmas",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2026-12-31",
-        "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
-        "name": "New Year's Eve",
-        "type": [
-            "Half-day holiday"
-        ]
-    },
-    {
-        "date": "2027-01-01",
-        "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
-        "name": "New Year's Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-01-06",
-        "localName": "Twelfth Night is a observance in Iceland",
-        "name": "Twelfth Night",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2027-02-10",
-        "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
-        "name": "Ash Wednesday",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2027-02-14",
-        "localName": "February 14 is Valentine's Day or Saint Valentine's Feast. The day of love owes its origins to ancient Roman and European Christian traditions.",
-        "name": "Valentine's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2027-03-20",
-        "localName": "March Equinox in Iceland (Reykjavik)",
-        "name": "March Equinox",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2027-03-25",
-        "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-        "name": "Maundy Thursday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-03-26",
-        "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
-        "name": "Good Friday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-03-27",
-        "localName": "Holy Saturday is the day before Easter Sunday.",
-        "name": "Holy Saturday",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2027-03-28",
-        "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-        "name": "Easter Sunday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-03-29",
-        "localName": "Easter Monday is the day after Easter Sunday.",
-        "name": "Easter Monday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-04-22",
-        "localName": "First Day of Summer is a national holiday in Iceland",
-        "name": "First Day of Summer",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-05-01",
-        "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-        "name": "Labour Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-05-06",
-        "localName": "Ascension Day is the 40th day of Easter. It is a religious holiday that commemorates the ascension of Jesus Christ into heaven.",
-        "name": "Ascension Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-05-09",
-        "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-        "name": "Mother's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2027-05-16",
-        "localName": "Many Christians all over the world annually observe Pentecost, also known as Whitsunday or Whit Sunday.",
-        "name": "Pentecost Sunday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-05-17",
-        "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
-        "name": "Pentecost Monday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-06-17",
-        "localName": "Icelandic Republic Day is a national holiday in Iceland",
-        "name": "Icelandic Republic Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-06-21",
-        "localName": "June Solstice in Iceland (Reykjavik)",
-        "name": "June Solstice",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2027-08-02",
-        "localName": "Commerce Day is a national holiday in Iceland",
-        "name": "Commerce Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-09-23",
-        "localName": "September Equinox in Iceland (Reykjavik)",
-        "name": "September Equinox",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2027-10-31",
-        "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-        "name": "Halloween",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2027-11-14",
-        "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-        "name": "Father's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2027-12-01",
-        "localName": "Independence Day is a observance in Iceland",
-        "name": "Independence Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2027-12-22",
-        "localName": "December Solstice in Iceland (Reykjavik)",
-        "name": "December Solstice",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2027-12-24",
-        "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
-        "name": "Christmas Eve",
-        "type": [
-            "Half-day holiday"
-        ]
-    },
-    {
-        "date": "2027-12-25",
-        "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
-        "name": "Christmas Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-12-26",
-        "localName": "Second Day of Christmas is a national holiday in Iceland",
-        "name": "Second Day of Christmas",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2027-12-31",
-        "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
-        "name": "New Year's Eve",
-        "type": [
-            "Half-day holiday"
-        ]
-    },
-    {
-        "date": "2028-01-01",
-        "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
-        "name": "New Year's Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-01-06",
-        "localName": "Twelfth Night is a observance in Iceland",
-        "name": "Twelfth Night",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2028-02-14",
-        "localName": "February 14 is Valentine's Day or Saint Valentine's Feast. The day of love owes its origins to ancient Roman and European Christian traditions.",
-        "name": "Valentine's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2028-03-01",
-        "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
-        "name": "Ash Wednesday",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2028-03-20",
-        "localName": "March Equinox in Iceland (Reykjavik)",
-        "name": "March Equinox",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2028-04-13",
-        "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-        "name": "Maundy Thursday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-04-14",
-        "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
-        "name": "Good Friday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-04-15",
-        "localName": "Holy Saturday is the day before Easter Sunday.",
-        "name": "Holy Saturday",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2028-04-16",
-        "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-        "name": "Easter Sunday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-04-17",
-        "localName": "Easter Monday is the day after Easter Sunday.",
-        "name": "Easter Monday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-04-20",
-        "localName": "First Day of Summer is a national holiday in Iceland",
-        "name": "First Day of Summer",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-05-01",
-        "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-        "name": "Labour Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-05-14",
-        "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-        "name": "Mother's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2028-05-25",
-        "localName": "Ascension Day is the 40th day of Easter. It is a religious holiday that commemorates the ascension of Jesus Christ into heaven.",
-        "name": "Ascension Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-06-04",
-        "localName": "Many Christians all over the world annually observe Pentecost, also known as Whitsunday or Whit Sunday.",
-        "name": "Pentecost Sunday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-06-05",
-        "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
-        "name": "Pentecost Monday",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-06-17",
-        "localName": "Icelandic Republic Day is a national holiday in Iceland",
-        "name": "Icelandic Republic Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-06-20",
-        "localName": "June Solstice in Iceland (Reykjavik)",
-        "name": "June Solstice",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2028-08-07",
-        "localName": "Commerce Day is a national holiday in Iceland",
-        "name": "Commerce Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-09-22",
-        "localName": "September Equinox in Iceland (Reykjavik)",
-        "name": "September Equinox",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2028-10-31",
-        "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-        "name": "Halloween",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2028-11-12",
-        "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-        "name": "Father's Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2028-12-01",
-        "localName": "Independence Day is a observance in Iceland",
-        "name": "Independence Day",
-        "type": [
-            "Observance"
-        ]
-    },
-    {
-        "date": "2028-12-21",
-        "localName": "December Solstice in Iceland (Reykjavik)",
-        "name": "December Solstice",
-        "type": [
-            "Season"
-        ]
-    },
-    {
-        "date": "2028-12-24",
-        "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
-        "name": "Christmas Eve",
-        "type": [
-            "Half-day holiday"
-        ]
-    },
-    {
-        "date": "2028-12-25",
-        "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
-        "name": "Christmas Day",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-12-26",
-        "localName": "Second Day of Christmas is a national holiday in Iceland",
-        "name": "Second Day of Christmas",
-        "type": [
-            "National holiday"
-        ]
-    },
-    {
-        "date": "2028-12-31",
-        "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
-        "name": "New Year's Eve",
-        "type": [
-            "Half-day holiday"
-        ]
-    }
-]
+        {
+            "date": "2024-01-01",
+            "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
+            "name": "New Year's Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-01-06",
+            "localName": "Twelfth Night is a observance in Iceland",
+            "name": "Twelfth Night",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2024-02-14",
+            "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
+            "name": "Ash Wednesday",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2024-02-14",
+            "localName": "February 14 is Valentine's Day or Saint Valentine's Feast. The day of love owes its origins to ancient Roman and European Christian traditions.",
+            "name": "Valentine's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2024-03-20",
+            "localName": "March Equinox in Iceland (Reykjavik)",
+            "name": "March Equinox",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2024-03-28",
+            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
+            "name": "Maundy Thursday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-03-29",
+            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
+            "name": "Good Friday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-03-30",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Holy Saturday",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2024-03-31",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-04-01",
+            "localName": "Easter Monday is the day after Easter Sunday.",
+            "name": "Easter Monday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-04-25",
+            "localName": "First Day of Summer is a national holiday in Iceland",
+            "name": "First Day of Summer",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labour Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-05-09",
+            "localName": "Ascension Day is the 40th day of Easter. It is a religious holiday that commemorates the ascension of Jesus Christ into heaven.",
+            "name": "Ascension Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-05-12",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2024-05-19",
+            "localName": "Many Christians all over the world annually observe Pentecost, also known as Whitsunday or Whit Sunday.",
+            "name": "Pentecost Sunday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-05-20",
+            "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
+            "name": "Pentecost Monday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-06-17",
+            "localName": "Icelandic Republic Day is a national holiday in Iceland",
+            "name": "Icelandic Republic Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-06-20",
+            "localName": "June Solstice in Iceland (Reykjavik)",
+            "name": "June Solstice",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2024-08-05",
+            "localName": "Commerce Day is a national holiday in Iceland",
+            "name": "Commerce Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-09-22",
+            "localName": "September Equinox in Iceland (Reykjavik)",
+            "name": "September Equinox",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2024-10-31",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2024-11-10",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2024-12-01",
+            "localName": "Independence Day is a observance in Iceland",
+            "name": "Independence Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2024-12-21",
+            "localName": "December Solstice in Iceland (Reykjavik)",
+            "name": "December Solstice",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2024-12-24",
+            "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
+            "name": "Christmas Eve",
+            "type": [
+                "Half-day holiday"
+            ]
+        },
+        {
+            "date": "2024-12-25",
+            "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
+            "name": "Christmas Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-12-26",
+            "localName": "Second Day of Christmas is a national holiday in Iceland",
+            "name": "Second Day of Christmas",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-12-31",
+            "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
+            "name": "New Year's Eve",
+            "type": [
+                "Half-day holiday"
+            ]
+        },
+        {
+            "date": "2025-01-01",
+            "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
+            "name": "New Year's Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-01-06",
+            "localName": "Twelfth Night is a observance in Iceland",
+            "name": "Twelfth Night",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-02-14",
+            "localName": "February 14 is Valentine's Day or Saint Valentine's Feast. The day of love owes its origins to ancient Roman and European Christian traditions.",
+            "name": "Valentine's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-03-05",
+            "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
+            "name": "Ash Wednesday",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-03-20",
+            "localName": "March Equinox in Iceland (Reykjavik)",
+            "name": "March Equinox",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2025-04-17",
+            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
+            "name": "Maundy Thursday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-04-18",
+            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
+            "name": "Good Friday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-04-19",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Holy Saturday",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-04-20",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-04-21",
+            "localName": "Easter Monday is the day after Easter Sunday.",
+            "name": "Easter Monday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-04-24",
+            "localName": "First Day of Summer is a national holiday in Iceland",
+            "name": "First Day of Summer",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labour Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-05-11",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-05-29",
+            "localName": "Ascension Day is the 40th day of Easter. It is a religious holiday that commemorates the ascension of Jesus Christ into heaven.",
+            "name": "Ascension Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-06-08",
+            "localName": "Many Christians all over the world annually observe Pentecost, also known as Whitsunday or Whit Sunday.",
+            "name": "Pentecost Sunday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-06-09",
+            "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
+            "name": "Pentecost Monday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-06-17",
+            "localName": "Icelandic Republic Day is a national holiday in Iceland",
+            "name": "Icelandic Republic Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-06-21",
+            "localName": "June Solstice in Iceland (Reykjavik)",
+            "name": "June Solstice",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2025-08-04",
+            "localName": "Commerce Day is a national holiday in Iceland",
+            "name": "Commerce Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-09-22",
+            "localName": "September Equinox in Iceland (Reykjavik)",
+            "name": "September Equinox",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2025-10-31",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-11-09",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-12-01",
+            "localName": "Independence Day is a observance in Iceland",
+            "name": "Independence Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-12-21",
+            "localName": "December Solstice in Iceland (Reykjavik)",
+            "name": "December Solstice",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2025-12-24",
+            "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
+            "name": "Christmas Eve",
+            "type": [
+                "Half-day holiday"
+            ]
+        },
+        {
+            "date": "2025-12-25",
+            "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
+            "name": "Christmas Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-12-26",
+            "localName": "Second Day of Christmas is a national holiday in Iceland",
+            "name": "Second Day of Christmas",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-12-31",
+            "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
+            "name": "New Year's Eve",
+            "type": [
+                "Half-day holiday"
+            ]
+        },
+        {
+            "date": "2026-01-01",
+            "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
+            "name": "New Year's Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-01-06",
+            "localName": "Twelfth Night is a observance in Iceland",
+            "name": "Twelfth Night",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2026-02-14",
+            "localName": "February 14 is Valentine's Day or Saint Valentine's Feast. The day of love owes its origins to ancient Roman and European Christian traditions.",
+            "name": "Valentine's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2026-02-18",
+            "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
+            "name": "Ash Wednesday",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2026-03-20",
+            "localName": "March Equinox in Iceland (Reykjavik)",
+            "name": "March Equinox",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2026-04-02",
+            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
+            "name": "Maundy Thursday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-04-03",
+            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
+            "name": "Good Friday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-04-04",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Holy Saturday",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2026-04-05",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-04-06",
+            "localName": "Easter Monday is the day after Easter Sunday.",
+            "name": "Easter Monday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-04-23",
+            "localName": "First Day of Summer is a national holiday in Iceland",
+            "name": "First Day of Summer",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labour Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-05-10",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2026-05-14",
+            "localName": "Ascension Day is the 40th day of Easter. It is a religious holiday that commemorates the ascension of Jesus Christ into heaven.",
+            "name": "Ascension Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-05-24",
+            "localName": "Many Christians all over the world annually observe Pentecost, also known as Whitsunday or Whit Sunday.",
+            "name": "Pentecost Sunday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-05-25",
+            "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
+            "name": "Pentecost Monday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-06-17",
+            "localName": "Icelandic Republic Day is a national holiday in Iceland",
+            "name": "Icelandic Republic Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-06-21",
+            "localName": "June Solstice in Iceland (Reykjavik)",
+            "name": "June Solstice",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2026-08-03",
+            "localName": "Commerce Day is a national holiday in Iceland",
+            "name": "Commerce Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-09-23",
+            "localName": "September Equinox in Iceland (Reykjavik)",
+            "name": "September Equinox",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2026-10-31",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2026-11-08",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2026-12-01",
+            "localName": "Independence Day is a observance in Iceland",
+            "name": "Independence Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2026-12-21",
+            "localName": "December Solstice in Iceland (Reykjavik)",
+            "name": "December Solstice",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2026-12-24",
+            "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
+            "name": "Christmas Eve",
+            "type": [
+                "Half-day holiday"
+            ]
+        },
+        {
+            "date": "2026-12-25",
+            "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
+            "name": "Christmas Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-12-26",
+            "localName": "Second Day of Christmas is a national holiday in Iceland",
+            "name": "Second Day of Christmas",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-12-31",
+            "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
+            "name": "New Year's Eve",
+            "type": [
+                "Half-day holiday"
+            ]
+        },
+        {
+            "date": "2027-01-01",
+            "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
+            "name": "New Year's Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-01-06",
+            "localName": "Twelfth Night is a observance in Iceland",
+            "name": "Twelfth Night",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-02-10",
+            "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
+            "name": "Ash Wednesday",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-02-14",
+            "localName": "February 14 is Valentine's Day or Saint Valentine's Feast. The day of love owes its origins to ancient Roman and European Christian traditions.",
+            "name": "Valentine's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-03-20",
+            "localName": "March Equinox in Iceland (Reykjavik)",
+            "name": "March Equinox",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2027-03-25",
+            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
+            "name": "Maundy Thursday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-03-26",
+            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
+            "name": "Good Friday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-03-27",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Holy Saturday",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-03-28",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-03-29",
+            "localName": "Easter Monday is the day after Easter Sunday.",
+            "name": "Easter Monday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-04-22",
+            "localName": "First Day of Summer is a national holiday in Iceland",
+            "name": "First Day of Summer",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labour Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-05-06",
+            "localName": "Ascension Day is the 40th day of Easter. It is a religious holiday that commemorates the ascension of Jesus Christ into heaven.",
+            "name": "Ascension Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-05-09",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-05-16",
+            "localName": "Many Christians all over the world annually observe Pentecost, also known as Whitsunday or Whit Sunday.",
+            "name": "Pentecost Sunday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-05-17",
+            "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
+            "name": "Pentecost Monday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-06-17",
+            "localName": "Icelandic Republic Day is a national holiday in Iceland",
+            "name": "Icelandic Republic Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-06-21",
+            "localName": "June Solstice in Iceland (Reykjavik)",
+            "name": "June Solstice",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2027-08-02",
+            "localName": "Commerce Day is a national holiday in Iceland",
+            "name": "Commerce Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-09-23",
+            "localName": "September Equinox in Iceland (Reykjavik)",
+            "name": "September Equinox",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2027-10-31",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-11-14",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-12-01",
+            "localName": "Independence Day is a observance in Iceland",
+            "name": "Independence Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-12-22",
+            "localName": "December Solstice in Iceland (Reykjavik)",
+            "name": "December Solstice",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2027-12-24",
+            "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
+            "name": "Christmas Eve",
+            "type": [
+                "Half-day holiday"
+            ]
+        },
+        {
+            "date": "2027-12-25",
+            "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
+            "name": "Christmas Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-12-26",
+            "localName": "Second Day of Christmas is a national holiday in Iceland",
+            "name": "Second Day of Christmas",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-12-31",
+            "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
+            "name": "New Year's Eve",
+            "type": [
+                "Half-day holiday"
+            ]
+        },
+        {
+            "date": "2028-01-01",
+            "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
+            "name": "New Year's Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-01-06",
+            "localName": "Twelfth Night is a observance in Iceland",
+            "name": "Twelfth Night",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-02-14",
+            "localName": "February 14 is Valentine's Day or Saint Valentine's Feast. The day of love owes its origins to ancient Roman and European Christian traditions.",
+            "name": "Valentine's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-03-01",
+            "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
+            "name": "Ash Wednesday",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-03-20",
+            "localName": "March Equinox in Iceland (Reykjavik)",
+            "name": "March Equinox",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2028-04-13",
+            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
+            "name": "Maundy Thursday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-04-14",
+            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
+            "name": "Good Friday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-04-15",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Holy Saturday",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-04-16",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-04-17",
+            "localName": "Easter Monday is the day after Easter Sunday.",
+            "name": "Easter Monday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-04-20",
+            "localName": "First Day of Summer is a national holiday in Iceland",
+            "name": "First Day of Summer",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labour Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-05-14",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-05-25",
+            "localName": "Ascension Day is the 40th day of Easter. It is a religious holiday that commemorates the ascension of Jesus Christ into heaven.",
+            "name": "Ascension Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-06-04",
+            "localName": "Many Christians all over the world annually observe Pentecost, also known as Whitsunday or Whit Sunday.",
+            "name": "Pentecost Sunday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-06-05",
+            "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
+            "name": "Pentecost Monday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-06-17",
+            "localName": "Icelandic Republic Day is a national holiday in Iceland",
+            "name": "Icelandic Republic Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-06-20",
+            "localName": "June Solstice in Iceland (Reykjavik)",
+            "name": "June Solstice",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2028-08-07",
+            "localName": "Commerce Day is a national holiday in Iceland",
+            "name": "Commerce Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-09-22",
+            "localName": "September Equinox in Iceland (Reykjavik)",
+            "name": "September Equinox",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2028-10-31",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-11-12",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-12-01",
+            "localName": "Independence Day is a observance in Iceland",
+            "name": "Independence Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-12-21",
+            "localName": "December Solstice in Iceland (Reykjavik)",
+            "name": "December Solstice",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2028-12-24",
+            "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
+            "name": "Christmas Eve",
+            "type": [
+                "Half-day holiday"
+            ]
+        },
+        {
+            "date": "2028-12-25",
+            "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
+            "name": "Christmas Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-12-26",
+            "localName": "Second Day of Christmas is a national holiday in Iceland",
+            "name": "Second Day of Christmas",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-12-31",
+            "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
+            "name": "New Year's Eve",
+            "type": [
+                "Half-day holiday"
+            ]
+        }
+    ]
 } as const;
