@@ -19,7 +19,7 @@ export interface HolidayWithCountry {
     name: string;
     localName: string;
     kind: "publicHoliday";
-    type: string[] | undefined;
+    type?: string[];
     country: CountryName;
     countryCode: CountryCode;
 }
