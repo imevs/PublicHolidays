@@ -78,10 +78,9 @@ describe("useCalendar", () => {
                 country: "Latvia",
                 countryCode: "LV",
                 date: "2025-01-01",
-                "localName": "New Year’s Day is the first day of the year, or January 1, in the Gregorian calendar.",
+                "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
                 "name": "New Year's Day",
                 "kind": "publicHoliday",
-                "primary_type": "National holiday",
                 "type": [
                     "National holiday"
                 ]
