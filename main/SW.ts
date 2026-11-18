@@ -4,8 +4,8 @@ import {
     stopNotificationsCommand,
     getNotificationsStatusCommand,
     notificationsWereSet,
-} from "../notifications/types";
-import { getFlagEmoji } from "../utils/countryFlags";
+} from "../notifications/types.ts";
+import { getFlagEmoji } from "../utils/countryFlags.ts";
 
 const dateLocale = "en-CA"; // Canadian English uses "YYYY-MM-DD, HH:mm" format
 const APP_BASE_NAME = "PublicHolidays/main";
