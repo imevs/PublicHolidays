@@ -1,7 +1,7 @@
 {
   "name": "Holiday Calendar",
   "short_name": "Holidays",
-  "start_url": "/PublicHolidays/Holidays",
+  "start_url": "./Holidays",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#3b82f6",

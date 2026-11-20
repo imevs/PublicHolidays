@@ -45,6 +45,32 @@ describe("generateICS", () => {
             expect(ev.kind).toBe("publicHoliday");
             assert(ev.kind === "publicHoliday");
             expect(ev.countryCode).toBe("LV");
+            expect(ev.country).toBe("Latvia");
+        });
+
+        it("resolves country name from TZID instead of hardcoding Sweden", () => {
+            const ics = [
+                "BEGIN:VCALENDAR",
+                "BEGIN:VEVENT",
+                "DTSTART;TZID=Europe/Riga;VALUE=DATE:20251118",
+                "SUMMARY:Proclamation Day",
+                "END:VEVENT",
+                "BEGIN:VEVENT",
+                "DTSTART;TZID=America/New_York;VALUE=DATE:20250704",
+                "SUMMARY:Independence Day",
+                "END:VEVENT",
+                "BEGIN:VEVENT",
+                "DTSTART;TZID=Asia/Tokyo;VALUE=DATE:20250101",
+                "SUMMARY:New Year",
+                "END:VEVENT",
+                "END:VCALENDAR",
+            ].join("\r\n");
+
+            const evs = parseICS(ics);
+            expect(evs).toHaveLength(3);
+            expect(evs[0]).toMatchObject({ kind: "publicHoliday", countryCode: "LV", country: "Latvia" });
+            expect(evs[1]).toMatchObject({ kind: "publicHoliday", countryCode: "US", country: "United States" });
+            expect(evs[2]).toMatchObject({ kind: "publicHoliday", countryCode: "JP", country: "Japan" });
         });
 
         it("parses UTC and local date-time DTSTART values", () => {

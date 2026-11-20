@@ -132,13 +132,14 @@ export function parseICS(raw: string): CalendarEvent[] {
                         icon: current.icon ?? "",
                     });
                 } else if (current.kind === "publicHoliday") {
+                    const resolvedCode = current.countryCode ?? "SE";
                     events.push({
                         date: current.date!,
                         name: current.name || "",
                         localName: current.localName ?? "",
                         kind: "publicHoliday",
-                        countryCode: current.countryCode ?? "SE",
-                        country: current.country ?? "Sweden",
+                        countryCode: resolvedCode,
+                        country: current.country ?? countryNames[resolvedCode] ?? "Sweden",
                         type: undefined,
                     });
                 }
@@ -177,10 +178,10 @@ export function parseICS(raw: string): CalendarEvent[] {
                 const countryCode = (Object.entries(countryTimeZones) as [CountryCode, string][])
                     .find(([, zone]) => zone === TZID)?.[0];
                 if (countryCode) {
-                    current.kind = "publicHoliday";
-                }
-                if (current.kind === "publicHoliday") {
-                    current.countryCode = countryCode;
+                    const holidayEvent = current as Partial<Extract<CalendarEvent, { kind: "publicHoliday" }>>;
+                    holidayEvent.kind = "publicHoliday";
+                    holidayEvent.countryCode = countryCode;
+                    holidayEvent.country = countryNames[countryCode];
                 }
             }
             if (current.kind === "other" && country) {
