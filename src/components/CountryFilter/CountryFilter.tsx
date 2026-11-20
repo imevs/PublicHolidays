@@ -3,6 +3,7 @@ import { countryOffsets, getLocalTime } from "../../utils/timeZones.ts";
 import styles from "./CountryFilter.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags.ts";
 import { type CountryCode, CountryName, countryNames } from "../../data/countryNames.ts";
+import { handleKeyboardActivation } from "../../utils/a11y.ts";
 
 export interface CountryFilterProps {
     selectedCountries: CountryCode[];
@@ -63,8 +64,12 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                     .map(([code, countryName]) => (
                         <div
                             key={code}
+                            role="button"
+                            tabIndex={0}
+                            aria-pressed={selectedCountries.includes(code)}
                             className={`${styles.countryChip} ${selectedCountries.includes(code) ? styles.active : ""}`}
                             onClick={() => onToggleCountry(code)}
+                            onKeyDown={(e) => handleKeyboardActivation(e, () => onToggleCountry(code))}
                             title={"Current time: " + getLocalTime(code)}
                         >
                             {getFlagEmoji(code)} {countryName}
@@ -76,8 +81,11 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                         </div>
                     ))}
                 <div
+                    role="button"
+                    tabIndex={0}
                     className={`${styles.toggleFilter}`}
                     onClick={() => setShowAllCountries(!showAllCountries)}
+                    onKeyDown={(e) => handleKeyboardActivation(e, () => setShowAllCountries(!showAllCountries))}
                 >
                     {showAllCountries ? "Hide inactive" : "Show all"}
                 </div>

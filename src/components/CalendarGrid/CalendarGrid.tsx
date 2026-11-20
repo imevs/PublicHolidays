@@ -17,6 +17,7 @@ import { type DateString, UTCDate } from "../../utils/UTCDate.ts";
 import EventPopup from "../EventPopup/EventPopup.tsx";
 import { usePrevious } from "./UsePrevious.tsx";
 import type { Description } from "../../data/holidays_descriptions/all.ts";
+import { handleKeyboardActivation } from "../../utils/a11y.ts";
 
 interface CalendarGridProps {
     onNewEvent?: (date: OtherEvent) => void; // if not defined will not show popup for new event
@@ -161,9 +162,12 @@ const YearView = ({
                             <div
                                 className={styles.monthHeader}
                                 title="Click to switch on month view"
+                                role="button"
+                                tabIndex={0}
                                 onClick={() => {
                                     onModeChange("month", month);
                                 }}
+                                onKeyDown={(e) => handleKeyboardActivation(e, () => onModeChange("month", month))}
                             >
                                 {monthName}
                             </div>
@@ -180,6 +184,15 @@ const YearView = ({
                                         seen.add(h.countryCode);
                                         return true;
                                     });
+                                    const isDayClickable = dayHolidays.length > 0 || isEditable;
+                                    const handleDaySelect = () => {
+                                        const date = currentDay?.date ?? new UTCDate(dateStr);
+                                        if (dayHolidays.length > 0) {
+                                            setSelectedDay(date);
+                                        } else {
+                                            setDateForPopup(date);
+                                        }
+                                    };
                                     return (
                                         <div
                                             key={day}
@@ -188,20 +201,16 @@ const YearView = ({
                                                     ${dateForPopupStr === dateStr ? styles.selectedDate : ""} 
                                                     ${styles.dayCell} 
                                                     ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}
-                                                    ${dayHolidays.length > 0 || isEditable ? styles.isClickable : ""}
+                                                    ${isDayClickable ? styles.isClickable : ""}
                                                 `)}
                                             data-month={month + 1}
                                             style={{
                                                 borderRadius: `${day === 0 ? 10 : 0}px 0px ${day === daysInMonth - 1 ? 10 : 0}px 0px`,
                                             }}
-                                            onClick={() => {
-                                                const date = currentDay?.date ?? new UTCDate(dateStr);
-                                                if (dayHolidays.length > 0) {
-                                                    setSelectedDay(date);
-                                                } else {
-                                                    setDateForPopup(date);
-                                                }
-                                            }}
+                                            role={isDayClickable ? "button" : undefined}
+                                            tabIndex={isDayClickable ? 0 : undefined}
+                                            onClick={handleDaySelect}
+                                            onKeyDown={isDayClickable ? (e) => handleKeyboardActivation(e, handleDaySelect) : undefined}
                                         >
                                             {day + 1}
                                             <div className={styles.holidayIndicatorsList}>

@@ -13,8 +13,12 @@ import { countryNames, type CountryCode } from "../data/countryNames.ts";
 import { getLink } from "../data/holidays_descriptions/getLink.ts";
 import { descriptions } from "../data/holidays_descriptions/all.ts";
 import CalendarGrid from "../components/CalendarGrid/CalendarGrid.tsx";
+import CalendarDayComponent from "../components/CalendarDay/CalendarDay.tsx";
 import Controls from "../components/Controls/Controls.tsx";
+import CountryFilter from "../components/CountryFilter/CountryFilter.tsx";
 import EventPopup from "../components/EventPopup/EventPopup.tsx";
+import MonthNavigation from "../components/MonthNavigation/MonthNavigation.tsx";
+import { generateYears } from "../utils/dateUtils.ts";
 import { EventListInput } from "../components/EventListInput/EventListInput.tsx";
 import { ActionButtons } from "../components/EventsList/EventsListActionButtons.tsx";
 import * as notificationsModule from "../notifications/notifications.ts";
@@ -710,5 +714,240 @@ describe("Performance & Bundle optimizations (Section 3)", () => {
 
         const winResult = transformNationalHolidays(sampleModule, "C:\\repo\\src\\data\\holidays_v2\\US.ts");
         expect(winResult).toEqual(posixResult);
+    });
+});
+
+describe("UI, Accessibility & Year Range Fixes", () => {
+    it("generateYears expands to include selectedYear outside currentYear ± 1 while keeping default 3-year output", () => {
+        const currentYear = new UTCDate().getFullYear();
+        expect(generateYears()).toEqual([currentYear - 1, currentYear, currentYear + 1]);
+
+        const pastYears = generateYears(2020);
+        expect(pastYears[0]).toBe(2020);
+        expect(pastYears).toContain(currentYear + 1);
+
+        const futureYears = generateYears(2030);
+        expect(futureYears[0]).toBe(currentYear - 1);
+        expect(futureYears[futureYears.length - 1]).toBe(2030);
+    });
+
+    it("Controls renders matching select option when selectedDate is in 2020 or 2030", () => {
+        const { rerender } = render(
+            <Controls
+                selectedDate={new UTCDate("2020-05-01")}
+                onDateChange={jest.fn()}
+                onNavigateMonth={jest.fn()}
+            />
+        );
+        const selects = screen.getAllByRole("combobox");
+        const yearSelect = selects[0] as HTMLSelectElement;
+        expect(yearSelect.value).toBe("2020");
+        expect(screen.getByRole("option", { name: "2020" })).toBeInTheDocument();
+
+        rerender(
+            <Controls
+                selectedDate={new UTCDate("2030-05-01")}
+                onDateChange={jest.fn()}
+                onNavigateMonth={jest.fn()}
+            />
+        );
+        expect((screen.getAllByRole("combobox")[0] as HTMLSelectElement).value).toBe("2030");
+        expect(screen.getByRole("option", { name: "2030" })).toBeInTheDocument();
+    });
+
+    it("CountryFilter chips and toggle support keyboard activation and aria-pressed", () => {
+        const onToggleCountry = jest.fn();
+        const setShowAllCountries = jest.fn();
+        render(
+            <CountryFilter
+                selectedCountries={["LV"]}
+                onToggleCountry={onToggleCountry}
+                showAllCountries={true}
+                setShowAllCountries={setShowAllCountries}
+                setShowAllHolidays={jest.fn()}
+            />
+        );
+
+        const lvChip = screen.getByRole("button", { name: /Latvia/ });
+        const deChip = screen.getByRole("button", { name: /Germany/ });
+        expect(lvChip).toHaveAttribute("tabindex", "0");
+        expect(lvChip).toHaveAttribute("aria-pressed", "true");
+        expect(deChip).toHaveAttribute("aria-pressed", "false");
+
+        fireEvent.keyDown(lvChip, { key: "Enter" });
+        expect(onToggleCountry).toHaveBeenCalledWith("LV");
+
+        fireEvent.keyDown(deChip, { key: " " });
+        expect(onToggleCountry).toHaveBeenCalledWith("DE");
+
+        const toggleBtn = screen.getByRole("button", { name: "Hide inactive" });
+        expect(toggleBtn).toHaveAttribute("tabindex", "0");
+        fireEvent.keyDown(toggleBtn, { key: "Enter" });
+        expect(setShowAllCountries).toHaveBeenCalledWith(false);
+        fireEvent.keyDown(toggleBtn, { key: " " });
+        expect(setShowAllCountries).toHaveBeenCalledTimes(2);
+    });
+
+    it("MonthNavigation heading supports keyboard activation with Enter and Space", () => {
+        const onNavigateYear = jest.fn();
+        render(
+            <MonthNavigation
+                currentDate={new UTCDate("2025-05-01")}
+                onNavigateYear={onNavigateYear}
+            />
+        );
+
+        const heading = screen.getByRole("button", { name: "May 2025" });
+        expect(heading).toHaveAttribute("tabindex", "0");
+        fireEvent.keyDown(heading, { key: "Enter" });
+        fireEvent.keyDown(heading, { key: " " });
+        expect(onNavigateYear).toHaveBeenCalledTimes(2);
+    });
+
+    it("CalendarDay supports keyboard activation only when editable and target is the cell", () => {
+        const setDateForPopup = jest.fn();
+        const day: CalendarDay = {
+            dayNumber: 15,
+            isCurrentMonth: true,
+            isSideMonth: false,
+            isCurrentYear: true,
+            isWeekend: false,
+            isToday: false,
+            events: [
+                {
+                    kind: "publicHoliday",
+                    type: ["National holiday"],
+                    name: "Test Holiday",
+                    localName: "Test Holiday",
+                    date: "2025-05-15",
+                    country: "Latvia",
+                    countryCode: "LV",
+                },
+            ],
+            date: new UTCDate("2025-05-15"),
+        };
+
+        const { container, rerender } = render(
+            <CalendarDayComponent
+                day={day}
+                isEditable={false}
+                countryData={{}}
+                setDateForPopup={setDateForPopup}
+            />
+        );
+        const dayEl = container.querySelector("[data-month=\"5\"]")!;
+        expect(dayEl).not.toHaveAttribute("role", "button");
+        expect(dayEl).not.toHaveAttribute("tabindex");
+
+        rerender(
+            <CalendarDayComponent
+                day={day}
+                isEditable={true}
+                countryData={{}}
+                setDateForPopup={setDateForPopup}
+            />
+        );
+        expect(dayEl).toHaveAttribute("role", "button");
+        expect(dayEl).toHaveAttribute("tabindex", "0");
+
+        // Pressing Enter on child element must not trigger setDateForPopup
+        const childEvent = screen.getByText(/Test Holiday/);
+        fireEvent.keyDown(childEvent, { key: "Enter" });
+        expect(setDateForPopup).not.toHaveBeenCalled();
+
+        // Pressing Enter and Space directly on the day cell triggers setDateForPopup
+        fireEvent.keyDown(dayEl, { key: "Enter" });
+        fireEvent.keyDown(dayEl, { key: " " });
+        expect(setDateForPopup).toHaveBeenCalledTimes(2);
+        expect(setDateForPopup).toHaveBeenCalledWith(day.date);
+    });
+
+    it("CalendarGrid YearView month headers and clickable day cells support keyboard activation", () => {
+        const origScrollIntoView = HTMLElement.prototype.scrollIntoView;
+        HTMLElement.prototype.scrollIntoView = jest.fn();
+        const onModeChange = jest.fn();
+        const holidayDay: CalendarDay = {
+            dayNumber: 1,
+            isCurrentMonth: true,
+            isSideMonth: false,
+            isCurrentYear: true,
+            isWeekend: false,
+            isToday: false,
+            events: [
+                {
+                    kind: "publicHoliday",
+                    type: ["National holiday"],
+                    name: "Labour Day",
+                    localName: "Darba svētki",
+                    date: "2025-05-01",
+                    country: "Latvia",
+                    countryCode: "LV",
+                },
+            ],
+            date: new UTCDate("2025-05-01"),
+        };
+
+        try {
+            const { container } = render(
+                <CalendarGrid
+                    selectedYearDays={[holidayDay]}
+                    selectedMonthDays={[holidayDay]}
+                    currentDate={new UTCDate("2025-05-01")}
+                    mode="year"
+                    countryData={{}}
+                    onModeChange={onModeChange}
+                />
+            );
+
+            const mayHeader = screen.getByRole("button", { name: "May" });
+            expect(mayHeader).toHaveAttribute("tabindex", "0");
+            fireEvent.keyDown(mayHeader, { key: "Enter" });
+            expect(onModeChange).toHaveBeenCalledWith("month", 4);
+            fireEvent.keyDown(mayHeader, { key: " " });
+            expect(onModeChange).toHaveBeenCalledTimes(2);
+
+            const mayFirstCell = screen.getByText("🇱🇻").closest("[data-month=\"5\"]")!;
+            expect(mayFirstCell).toHaveAttribute("role", "button");
+            expect(mayFirstCell).toHaveAttribute("tabindex", "0");
+
+            const nonHolidayCell = container.querySelectorAll("[data-month=\"5\"]")[1];
+            expect(nonHolidayCell).not.toHaveAttribute("role", "button");
+            expect(nonHolidayCell).not.toHaveAttribute("tabindex");
+
+            fireEvent.keyDown(mayFirstCell, { key: "Enter" });
+            expect(screen.getByText("Events on 2025-05-01")).toBeInTheDocument();
+        } finally {
+            HTMLElement.prototype.scrollIntoView = origScrollIntoView;
+        }
+    });
+
+    it("EventPopup emoji spans support Enter and Space selection without submitting the form", () => {
+        const onNewEvent = jest.fn();
+        render(<EventPopup initialDate="2025-05-15" onNewEvent={onNewEvent} />);
+
+        const input = screen.getByLabelText("Name") as HTMLInputElement;
+        fireEvent.change(input, { target: { value: "Party" } });
+
+        const giftEmoji = screen.getByRole("button", { name: "🎁" });
+        expect(giftEmoji).toHaveAttribute("tabindex", "0");
+        fireEvent.keyDown(giftEmoji, { key: "Enter" });
+
+        expect(input.value).toBe("🎁 Party");
+        expect(onNewEvent).not.toHaveBeenCalled();
+
+        const fireEmoji = screen.getByRole("button", { name: "🔥" });
+        fireEvent.keyDown(fireEmoji, { key: " " });
+
+        expect(input.value).toBe("🔥 Party");
+        expect(onNewEvent).not.toHaveBeenCalled();
+
+        fireEvent.keyDown(input, { key: "Enter" });
+        expect(onNewEvent).toHaveBeenCalledWith({
+            date: "05-15",
+            name: "Party",
+            icon: "🔥",
+            localName: "",
+            kind: "other",
+        });
     });
 });
