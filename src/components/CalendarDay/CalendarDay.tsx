@@ -1,5 +1,5 @@
 import React from "react";
-import { CalendarDay as CalendarDayType } from "../../types/index.ts";
+import { CalendarDay as CalendarDayType, type OtherEvent } from "../../types/index.ts";
 import { getFlagEmoji } from "../../utils/countryFlags.ts";
 import styles from "./CalendarDay.module.css";
 import { getLink } from "../../data/holidays_descriptions/getLink.ts";
@@ -13,11 +13,13 @@ interface CalendarDayProps {
     isEditable: boolean;
     countryData: Record<string, Description>;
     setDateForPopup(date: UTCDate): void;
+    onSelectEvent?: (date: UTCDate, event: OtherEvent) => void;
 }
 
 const CalendarDay: React.FC<CalendarDayProps> = ({
     day,
     setDateForPopup,
+    onSelectEvent,
     isSelected,
     isEditable,
     countryData,
@@ -57,7 +59,22 @@ const CalendarDay: React.FC<CalendarDayProps> = ({
                     </div>
                 </a>
             ) : (
-                <div key={idx} className={styles.event} title={`${holiday.localName}`} onClick={(e) => e.stopPropagation()}>
+                <div
+                    key={idx}
+                    className={styles.event}
+                    title={`${holiday.localName}`}
+                    role={isEditable && onSelectEvent ? "button" : undefined}
+                    tabIndex={isEditable && onSelectEvent ? 0 : undefined}
+                    onClick={(e) => {
+                        e.stopPropagation();
+                        if (isEditable && onSelectEvent) {
+                            onSelectEvent(day.date, holiday);
+                        }
+                    }}
+                    onKeyDown={isEditable && onSelectEvent
+                        ? (e) => handleKeyboardActivation(e, () => onSelectEvent(day.date, holiday), { stopPropagation: true })
+                        : undefined}
+                >
                     {holiday.icon} {holiday.name}
                 </div>
             ))}

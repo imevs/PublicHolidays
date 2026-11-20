@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 import { useCalendar } from "./hooks/useCalendar.ts";
 import Controls from "./components/Controls/Controls.tsx";
@@ -10,8 +11,10 @@ import { EventsList } from "./components/EventsList/EventsList.tsx";
 import CountryFilter from "./components/CountryFilter/CountryFilter.tsx";
 import { ActionButtons } from "./components/EventsList/EventsListActionButtons.tsx";
 import ThemeSelector from "./components/ThemeSelector/ThemeSelector.tsx";
+import { APP_BASE_NAME } from "./consts.ts";
 
 export const Holidays: React.FC = () => {
+    const navigate = useNavigate();
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
     const [showAllHolidays, setShowAllHolidays] = useState(true);
 
@@ -45,14 +48,37 @@ export const Holidays: React.FC = () => {
     return (
         <div className={styles.app}>
             <ThemeSelector />
-            <div className={styles.header}>
+            <header className={styles.header}>
                 <h1>
                     <a href="./">
                         🌍 Public Holidays Calendar
                     </a>
                 </h1>
                 <p>Track public holidays across multiple countries</p>
-            </div>
+                <nav className={styles.primaryNav} aria-label="Primary">
+                    <a
+                        href={`/${APP_BASE_NAME}/Holidays`}
+                        aria-current="page"
+                        className={styles.navLink}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            navigate(`/${APP_BASE_NAME}/Holidays${window.location.hash}`);
+                        }}
+                    >
+                        🌍 Public Holidays
+                    </a>
+                    <a
+                        href={`/${APP_BASE_NAME}/EditEvents`}
+                        className={styles.navLink}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            navigate(`/${APP_BASE_NAME}/EditEvents${window.location.hash}`);
+                        }}
+                    >
+                        ✏️ Custom Events
+                    </a>
+                </nav>
+            </header>
 
             <div className={styles.container}>
                 <Controls
@@ -71,6 +97,7 @@ export const Holidays: React.FC = () => {
                     selectedYearDays={selectedYearDays}
                     viewMode={mode}
                     toggleMode={() => handleModeChange(mode === "month" ? "year" : "month", currentDate.getMonth())}
+                    onSetMode={(newMode) => handleModeChange(newMode, currentDate.getMonth())}
                 />
 
                 <div id="calendar-grid-print-container">

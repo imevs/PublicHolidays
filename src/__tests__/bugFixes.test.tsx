@@ -24,7 +24,7 @@ import { generateYears } from "../utils/dateUtils.ts";
 import { EventListInput } from "../components/EventListInput/EventListInput.tsx";
 import { EventListInputButtons } from "../components/EventListInput/EventListInputButtons.tsx";
 import { ActionButtons } from "../components/EventsList/EventsListActionButtons.tsx";
-import * as notificationsModule from "../notifications/notifications.ts";
+import * as generateICSModule from "../utils/generateICS.ts";
 import { UTCDate } from "../utils/UTCDate.ts";
 import type { CalendarDay, CalendarEvent } from "../types/index.ts";
 import { buildHolidaysIndex, getHolidaysForDate, useCalendar } from "../hooks/useCalendar.ts";
@@ -32,6 +32,7 @@ import { allHolidays } from "../data/holidays_v2/index.ts";
 import { convertEvents } from "../utils/convertEvents.ts";
 import { transformNationalHolidays } from "../utils/filterNationalHolidays.cjs";
 import { Holidays } from "../Holidays.tsx";
+import { AnyEvents } from "../AnyEvents.tsx";
 import {
     startNotificationsCommand,
     stopNotificationsCommand,
@@ -293,18 +294,14 @@ describe("notifications and EventsListActionButtons", () => {
         });
     });
 
-    it("ActionButtons getNotifications reads latest selectedYearDays instead of stale initial array", async () => {
+    it("ActionButtons Subscribe / Add to Calendar reads latest selectedYearDays and exports ICS with reminders", async () => {
         const OriginalResizeObserver = globalThis.ResizeObserver;
         globalThis.ResizeObserver = jest.fn().mockImplementation(() => ({
             observe: jest.fn(),
             unobserve: jest.fn(),
             disconnect: jest.fn(),
         }));
-        const registerSpy = jest.spyOn(notificationsModule, "registerNotifications").mockResolvedValue(undefined);
-        Object.defineProperty(notificationsModule, "hasServiceWorker", {
-            configurable: true,
-            value: true,
-        });
+        const exportSpy = jest.spyOn(generateICSModule, "exportCalendarToFile").mockImplementation(() => {});
 
         const dayWithHoliday: CalendarDay = {
             date: new UTCDate("2025-11-18"),
@@ -336,18 +333,72 @@ describe("notifications and EventsListActionButtons", () => {
                 <ActionButtons selectedYearDays={[dayWithHoliday]} viewMode="year" toggleMode={jest.fn()} />
             );
 
-            await act(async () => {
-                fireEvent.click(screen.getByText("Get notifications"));
-                await Promise.resolve();
-            });
+            fireEvent.click(screen.getByRole("button", { name: /Subscribe \/ Add to Calendar/i }));
+            expect(screen.getByRole("dialog")).toBeInTheDocument();
+            expect(screen.getByText(/Proclamation Day/)).toBeInTheDocument();
 
-            expect(registerSpy).toHaveBeenLastCalledWith(
+            fireEvent.click(screen.getByRole("button", { name: /Download \.ics for Calendar Import/i }));
+
+            expect(exportSpy).toHaveBeenLastCalledWith(
                 dayWithHoliday.events,
-                false,
-                expect.any(Function)
+                "Latvia_calendar",
+                { includeAlarm: true }
             );
         } finally {
-            registerSpy.mockRestore();
+            exportSpy.mockRestore();
+            globalThis.ResizeObserver = OriginalResizeObserver;
+        }
+    });
+
+    it("supports direct edit and delete of custom events from the Day Popup and unified navigation in AnyEvents", () => {
+        const origScrollIntoView = HTMLElement.prototype.scrollIntoView;
+        HTMLElement.prototype.scrollIntoView = jest.fn();
+        const OriginalResizeObserver = globalThis.ResizeObserver;
+        globalThis.ResizeObserver = jest.fn().mockImplementation(() => ({
+            observe: jest.fn(),
+            unobserve: jest.fn(),
+            disconnect: jest.fn(),
+        }));
+
+        localStorage.setItem("calendar_data", "2025-09-10 🎂 Birthday of Joe");
+        window.location.hash = "date=2025-09-01&mode=year";
+
+        try {
+            render(<AnyEvents />);
+
+            // Unified primary navigation is present with aria-current="page" on Custom Events
+            const customNav = screen.getByRole("link", { name: /Custom Events/i });
+            expect(customNav).toHaveAttribute("aria-current", "page");
+
+            // Toolbar view mode group is present in AnyEvents too
+            expect(screen.getByRole("toolbar", { name: "Calendar actions" })).toBeInTheDocument();
+
+            // Click Sept 10 in YearView to open the day popup
+            const sept10Cell = screen.getAllByText("🎂")[0].closest("[data-month=\"9\"]")!;
+            fireEvent.click(sept10Cell);
+
+            expect(screen.getByText("Events on 2025-09-10")).toBeInTheDocument();
+
+            // Click Edit on Birthday of Joe
+            fireEvent.click(screen.getByRole("button", { name: "Edit Birthday of Joe" }));
+            const nameInput = screen.getByLabelText("Name") as HTMLInputElement;
+            expect(nameInput.value).toBe("🎂 Birthday of Joe");
+
+            fireEvent.change(nameInput, { target: { value: "🎂 Birthday of Jane" } });
+            fireEvent.click(screen.getByRole("button", { name: "Save (Enter)" }));
+
+            expect((screen.getByLabelText(/Calendar events/i) as HTMLTextAreaElement).value).toContain("Birthday of Jane");
+
+            // Re-open Sept 10 popup and delete the event
+            const updatedCell = screen.getAllByText("🎂")[0].closest("[data-month=\"9\"]")!;
+            fireEvent.click(updatedCell);
+            fireEvent.click(screen.getByRole("button", { name: "Delete Birthday of Jane" }));
+
+            expect((screen.getByLabelText(/Calendar events/i) as HTMLTextAreaElement).value).not.toContain("Birthday of Jane");
+        } finally {
+            window.location.hash = "";
+            localStorage.removeItem("calendar_data");
+            HTMLElement.prototype.scrollIntoView = origScrollIntoView;
             globalThis.ResizeObserver = OriginalResizeObserver;
         }
     });

@@ -1,8 +1,8 @@
 .themeSelector {
-    position: fixed;
-    top: 10px;
+    position: absolute;
+    top: 14px;
     right: 20px;
-    z-index: 1000;
+    z-index: 100;
     display: flex;
     align-items: center;
     gap: 4px;
@@ -12,6 +12,15 @@
     border-radius: 24px;
     padding: 8px 16px;
     transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .themeSelector {
+        position: static;
+        width: fit-content;
+        margin: 0 12px 0 auto;
+        padding: 6px 12px;
+    }
 }
 
 .themeSelector:hover {
