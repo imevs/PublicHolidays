@@ -6,9 +6,7 @@ import {
     notificationsWereSet,
 } from "../notifications/types.ts";
 import { getFlagEmoji } from "../utils/countryFlags.ts";
-
-const dateLocale = "en-CA"; // Canadian English uses "YYYY-MM-DD, HH:mm" format
-const APP_BASE_NAME = "PublicHolidays/main";
+import { APP_BASE_NAME, dateLocale } from "../consts.ts";
 
 declare const self: ServiceWorkerGlobalScope;
 
@@ -41,15 +39,15 @@ self.addEventListener("activate", (event) => {
 });
 
 function getCountriesNames(selectedYearDays: HolidayDTO[]) {
-    return Array.from(new Set(selectedYearDays.map(ev => ev.country)));
+    return Array.from(new Set(selectedYearDays.map(ev => ev.countryCode).filter(Boolean)));
 }
 
 self.addEventListener("notificationclick", (event) => {
     event.notification.close();
     event.waitUntil(
         self.clients.matchAll({ type: "window" }).then((clientList) => {
-            const eventData = event.notification.data as HolidayDTO[];
-            for (let client of clientList) {
+            const eventData = (event.notification.data as HolidayDTO[]) ?? [];
+            for (const client of clientList) {
                 if ("focus" in client) {
                     eventData.forEach(notification => {
                         events.filter(e => notification.date === e.date && notification.name === e.name)
@@ -64,8 +62,9 @@ self.addEventListener("notificationclick", (event) => {
                     events.filter(e => notification.date === e.date && notification.name === e.name)
                         .forEach(e => { e.shown = true; });
                 });
+                const dateParam = eventData[0]?.date ?? "";
                 return self.clients.openWindow(
-                    "/" + APP_BASE_NAME + `/Holidays#countries=${getCountriesNames(eventData)}&mode=month&date=${event.notification.data}`);
+                    "/" + APP_BASE_NAME + `/Holidays#countries=${getCountriesNames(eventData).join(",")}&mode=month&date=${dateParam}`);
             }
         })
     );
@@ -73,14 +72,17 @@ self.addEventListener("notificationclick", (event) => {
 
 let events: HolidayDTO[] = [];
 let interval = 0;
+let isRegistered = false;
 self.addEventListener("message", (event) => {
     console.log("SW received message", event.data.type);
     if (event.data.type === startNotificationsCommand) {
+        events = event.data.events;
+        isRegistered = true;
         // Keep worker alive while we attempt registration
         event.waitUntil((async () => {
-            events = event.data.events;
             console.log("registered events", events.length);
             clearInterval(interval);
+            interval = 0;
 
             // Try Periodic Background Sync registration (1 hour)
             const hour = 1000 * 60 * 60;
@@ -104,6 +106,10 @@ self.addEventListener("message", (event) => {
         })());
     }
     if (event.data.type === stopNotificationsCommand) {
+        isRegistered = false;
+        events = [];
+        clearInterval(interval);
+        interval = 0;
         event.waitUntil((async () => {
             // Try unregistering periodic sync if available
             try {
@@ -115,10 +121,6 @@ self.addEventListener("message", (event) => {
             } catch (err) {
                 console.warn("periodic sync unregister failed", err);
             }
-
-            // Clear fallback interval
-            clearInterval(interval);
-            interval = 0;
         })());
     }
     if (event.data.type === getNotificationsStatusCommand) {
@@ -126,8 +128,8 @@ self.addEventListener("message", (event) => {
             clientList.forEach(client => {
                 client.postMessage({
                     type: notificationsWereSet,
-                    status: interval > 0,
-                })
+                    status: isRegistered || interval > 0,
+                });
             });
         });
     }
@@ -162,7 +164,8 @@ async function checkEvents() {
 async function sendNotification(data: HolidayDTO[]) {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
-    await self.registration.showNotification(`It's a holiday tomorrow ${tomorrow}! 🙌`, {
+    const tomorrowFormatted = data[0]?.date ?? tomorrow.toLocaleDateString(dateLocale);
+    await self.registration.showNotification(`It's a holiday tomorrow ${tomorrowFormatted}! 🙌`, {
         data: data,
         body: data.map(e => getFlagEmoji(e.countryCode) + " " + e.country + ": " + e.name).join("\n"),
         icon: "data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"%3E%3Ccircle cx=\"50\" cy=\"50\" r=\"40\" fill=\"%233b82f6\"/%3E%3Ctext x=\"50\" y=\"65\" font-size=\"50\" text-anchor=\"middle\" fill=\"white\"%3E⏰%3C/text%3E%3C/svg%3E",

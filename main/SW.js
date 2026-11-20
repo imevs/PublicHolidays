@@ -9,9 +9,13 @@ var getFlagEmoji = (countryCode) => {
   return countryCode.toUpperCase().replace(/./g, (char) => String.fromCodePoint(127397 + char.charCodeAt(0)));
 };
 
-// src/assets/SW.ts
+// src/consts.ts
+var buildTimeBaseName = true ? "PublicHolidays/main" : void 0;
+var runtimeEnvBaseName = globalThis.process?.env?.APP_BASE_NAME;
+var APP_BASE_NAME = buildTimeBaseName || runtimeEnvBaseName || "PublicHolidays";
 var dateLocale = "en-CA";
-var APP_BASE_NAME = "PublicHolidays/main";
+
+// src/assets/SW.ts
 self.addEventListener("install", () => {
   self.skipWaiting();
 });
@@ -19,14 +23,14 @@ self.addEventListener("activate", (event) => {
   event.waitUntil(self.clients.claim());
 });
 function getCountriesNames(selectedYearDays) {
-  return Array.from(new Set(selectedYearDays.map((ev) => ev.country)));
+  return Array.from(new Set(selectedYearDays.map((ev) => ev.countryCode).filter(Boolean)));
 }
 self.addEventListener("notificationclick", (event) => {
   event.notification.close();
   event.waitUntil(
     self.clients.matchAll({ type: "window" }).then((clientList) => {
-      const eventData = event.notification.data;
-      for (let client of clientList) {
+      const eventData = event.notification.data ?? [];
+      for (const client of clientList) {
         if ("focus" in client) {
           eventData.forEach((notification) => {
             events.filter((e) => notification.date === e.date && notification.name === e.name).forEach((e) => {
@@ -42,8 +46,9 @@ self.addEventListener("notificationclick", (event) => {
             e.shown = true;
           });
         });
+        const dateParam = eventData[0]?.date ?? "";
         return self.clients.openWindow(
-          "/" + APP_BASE_NAME + `/Holidays#countries=${getCountriesNames(eventData)}&mode=month&date=${event.notification.data}`
+          "/" + APP_BASE_NAME + `/Holidays#countries=${getCountriesNames(eventData).join(",")}&mode=month&date=${dateParam}`
         );
       }
     })
@@ -51,13 +56,16 @@ self.addEventListener("notificationclick", (event) => {
 });
 var events = [];
 var interval = 0;
+var isRegistered = false;
 self.addEventListener("message", (event) => {
   console.log("SW received message", event.data.type);
   if (event.data.type === startNotificationsCommand) {
+    events = event.data.events;
+    isRegistered = true;
     event.waitUntil((async () => {
-      events = event.data.events;
       console.log("registered events", events.length);
       clearInterval(interval);
+      interval = 0;
       const hour = 1e3 * 60 * 60;
       const periodic = self.registration.periodicSync;
       if (periodic) {
@@ -78,6 +86,10 @@ self.addEventListener("message", (event) => {
     })());
   }
   if (event.data.type === stopNotificationsCommand) {
+    isRegistered = false;
+    events = [];
+    clearInterval(interval);
+    interval = 0;
     event.waitUntil((async () => {
       try {
         const periodic = self.registration.periodicSync;
@@ -88,8 +100,6 @@ self.addEventListener("message", (event) => {
       } catch (err) {
         console.warn("periodic sync unregister failed", err);
       }
-      clearInterval(interval);
-      interval = 0;
     })());
   }
   if (event.data.type === getNotificationsStatusCommand) {
@@ -97,7 +107,7 @@ self.addEventListener("message", (event) => {
       clientList.forEach((client) => {
         client.postMessage({
           type: notificationsWereSet,
-          status: interval > 0
+          status: isRegistered || interval > 0
         });
       });
     });
@@ -125,7 +135,8 @@ async function checkEvents() {
 async function sendNotification(data) {
   const tomorrow = /* @__PURE__ */ new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
-  await self.registration.showNotification(`It's a holiday tomorrow ${tomorrow}! \u{1F64C}`, {
+  const tomorrowFormatted = data[0]?.date ?? tomorrow.toLocaleDateString(dateLocale);
+  await self.registration.showNotification(`It's a holiday tomorrow ${tomorrowFormatted}! \u{1F64C}`, {
     data,
     body: data.map((e) => getFlagEmoji(e.countryCode) + " " + e.country + ": " + e.name).join("\n"),
     icon: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Ccircle cx="50" cy="50" r="40" fill="%233b82f6"/%3E%3Ctext x="50" y="65" font-size="50" text-anchor="middle" fill="white"%3E\u23F0%3C/text%3E%3C/svg%3E',

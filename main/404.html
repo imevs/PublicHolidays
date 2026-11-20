@@ -12,13 +12,11 @@
 Redirecting...
 <script>
     setTimeout(() => {
-        if (location.pathname === "/PublicHolidays" || location.pathname === "/PublicHolidays/") {
-            location.href = "/PublicHolidays/main";
+        if (location.pathname === "/PublicHolidays/main" || location.pathname === "/PublicHolidays/main/") {
+            location.href = "/PublicHolidays/main/Holidays";
             return;
         }
-        const parts = location.pathname.split('/');
-        const destUrl  = [parts[0], parts[1], parts[2]].join('/');
-        location.href = destUrl + '/?path=' + location.pathname + location.hash;
+        location.href = "/PublicHolidays/main/?path=" + encodeURIComponent(location.pathname) + location.hash;
     }, 50)
 </script>
 </body>
