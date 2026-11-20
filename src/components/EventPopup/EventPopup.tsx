@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./EventPopup.module.css";
 import type { OtherEvent } from "../../types/index.ts";
 import type { DateString, DateTwoParts } from "../../utils/UTCDate.ts";
+import { handleKeyboardActivation } from "../../utils/a11y.ts";
 
 interface EventPopupProps {
     initialDate: DateString;
@@ -19,7 +20,7 @@ const icons = [
     "🤩", "😇", "🥰", "😤", "😈", "👻", "🔥"
 ];
 
-const Emoji = () => icons.map((s, i) => <span key={i}>{s}</span>);
+const Emoji = () => icons.map((s, i) => <span key={i} role="button" tabIndex={0}>{s}</span>);
 
 const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
     const ref = useRef<HTMLDivElement | null>(null);
@@ -48,17 +49,31 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
         });
     }, [onNewEvent, oneTime, initialDate, name, icon]);
 
+    const selectIcon = useCallback((selectedIcon: string) => {
+        setIcon(selectedIcon);
+        setName((origin) => selectedIcon + " " + clearFromEmoji(origin));
+        nameRef.current?.focus();
+    }, []);
+
     const onIconClick = useCallback((e: React.MouseEvent<Element>) => {
         const el = e.target as Element;
         if (el.tagName === "SPAN" && el.textContent) {
-            const selectedIcon = el.textContent;
-            setIcon(selectedIcon);
-            setName((origin) => selectedIcon + " " + clearFromEmoji(origin));
-            nameRef.current?.focus();
+            selectIcon(el.textContent);
         }
-    }, []);
+    }, [selectIcon]);
+
+    const onIconKeyDown = useCallback((e: React.KeyboardEvent<Element>) => {
+        const el = e.target as Element;
+        if (el.tagName === "SPAN" && el.textContent) {
+            const selectedIcon = el.textContent;
+            handleKeyboardActivation(e, () => selectIcon(selectedIcon), { stopPropagation: true });
+        }
+    }, [selectIcon]);
 
     const handleKeyDown = useCallback((e: KeyboardEvent) => {
+        if (e.defaultPrevented) {
+            return;
+        }
         if (e.key === "Enter" && name.trim()) {
             e.preventDefault();
             handleSave();
@@ -95,7 +110,7 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
                             onChange={e => setName(e.target.value)}
                         />
                     </div>
-                    <div className={styles["emoji-popup"]} onClick={onIconClick}>
+                    <div className={styles["emoji-popup"]} onClick={onIconClick} onKeyDown={onIconKeyDown}>
                         <Emoji />
                     </div>
 

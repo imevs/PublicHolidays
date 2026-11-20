@@ -5,6 +5,7 @@ import styles from "./CalendarDay.module.css";
 import { getLink } from "../../data/holidays_descriptions/getLink.ts";
 import { UTCDate } from "../../utils/UTCDate.ts";
 import type { Description } from "../../data/holidays_descriptions/all.ts";
+import { handleKeyboardActivation } from "../../utils/a11y.ts";
 
 interface CalendarDayProps {
     day: CalendarDayType;
@@ -37,7 +38,10 @@ const CalendarDay: React.FC<CalendarDayProps> = ({
             key={day.date.toDateString()}
             className={dayClasses}
             data-month={monthNumber}
+            role={isEditable ? "button" : undefined}
+            tabIndex={isEditable ? 0 : undefined}
             onClick={() => setDateForPopup(day.date)}
+            onKeyDown={isEditable ? (e) => handleKeyboardActivation(e, () => setDateForPopup(day.date), { selfOnly: true }) : undefined}
         >
             <div className={styles.dayNumber}>{day.dayNumber}</div>
             {day.isCurrentMonth && day.events.map((holiday, idx) => holiday.kind === "publicHoliday" ? (

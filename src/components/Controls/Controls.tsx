@@ -16,8 +16,8 @@ const Controls: React.FC<ControlsProps> = (props) => {
         onDateChange,
         onNavigateMonth,
     } = props;
-    const years = generateYears();
     const selectedYear = selectedDate.getFullYear();
+    const years = generateYears(selectedYear);
     const selectedMonth = selectedDate.getMonth();
     const months = Array.from({ length: 12 }, (_, i) => i); // Generate an array of months (0-11)
 

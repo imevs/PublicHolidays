@@ -18,9 +18,16 @@ export const DayIndexes = {
     Sunday: 0,
 };
 
-export const generateYears = (): number[] => {
+/**
+ * Generates a sorted, contiguous list of years centered around the current year
+ * and expanded to include `selectedYear` when provided.
+ */
+export const generateYears = (selectedYear?: number): number[] => {
     const currentYear = new UTCDate().getFullYear();
-    return Array.from({ length: 3 }, (_, i) => currentYear - 1 + i);
+    const hasValidSelected = selectedYear !== undefined && Number.isFinite(selectedYear);
+    const startYear = hasValidSelected ? Math.min(currentYear - 1, selectedYear) : currentYear - 1;
+    const endYear = hasValidSelected ? Math.max(currentYear + 1, selectedYear) : currentYear + 1;
+    return Array.from({ length: endYear - startYear + 1 }, (_, i) => startYear + i);
 };
 
 export const formatDateString = (date: UTCDate): DateString => {
