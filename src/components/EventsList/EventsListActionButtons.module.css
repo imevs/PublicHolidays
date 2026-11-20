@@ -13,7 +13,7 @@
     box-sizing: border-box;
     max-width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     gap: 12px;
@@ -33,12 +33,13 @@
     background: var(--input-bg);
     border: 1px solid var(--input-border);
     border-radius: 12px;
+    flex-shrink: 0;
 }
 
-.modeButton {
+.actionButtonContainer .modeButton {
     min-inline-size: 2.5rem;
     min-block-size: 2.25rem;
-    padding: 8px 14px;
+    padding: 8px 12px;
     border-radius: 9px;
     background: transparent !important;
     color: var(--input-text) !important;
@@ -57,26 +58,29 @@
     color: var(--button-text) !important;
     border-color: var(--input-focus-border);
     box-shadow: 0 2px 6px var(--button-shadow) !important;
+    justify-content: center;
 }
 
 .separator {
     inline-size: 0;
     block-size: 1.75rem;
     border-inline-start: 1px solid var(--controls-border);
+    flex-shrink: 0;
 }
 
 .actionsGroup {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
-.actionButton {
+.actionButtonContainer .actionButton {
     min-inline-size: 2.5rem;
     min-block-size: 2.25rem;
     cursor: pointer;
-    padding: 9px 14px;
+    padding: 8px 12px;
     font-weight: 600;
     font-size: 0.9rem;
     display: inline-flex;
@@ -304,9 +308,57 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px), (orientation: landscape) and (max-height: 540px) {
+    .stickyToolbarWrapper {
+        padding: 6px 12px;
+        padding-left: max(12px, env(safe-area-inset-left));
+        padding-right: max(12px, env(safe-area-inset-right));
+    }
+
+    .actionButtonContainer {
+        padding: 6px 10px;
+        gap: 8px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: none;
+        scroll-padding: 6px;
+    }
+
+    .actionsGroup {
+        gap: 8px;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+    }
+
+    .actionButtonContainer .modeButton,
+    .actionButtonContainer .actionButton {
+        min-inline-size: 0;
+        min-block-size: 2.25rem;
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 600px), (orientation: landscape) and (max-height: 540px) {
+    .separator {
+        position: absolute;
+        opacity: 0;
+        inline-size: 0;
+        block-size: 0;
+        border: 0;
+        pointer-events: none;
+    }
+
+    .desktopLabel {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
     .stickyToolbarWrapper {
         padding: 6px 8px;
+        padding-left: max(8px, env(safe-area-inset-left));
+        padding-right: max(8px, env(safe-area-inset-right));
     }
 
     .actionButtonContainer {
@@ -324,25 +376,26 @@
         flex-shrink: 0;
     }
 
-    .separator {
-        opacity: 0;
-        inline-size: 0;
-        border: 0;
-    }
-
     .actionsGroup {
         gap: 4px;
         flex-wrap: nowrap;
         flex-shrink: 0;
     }
 
-    .modeButton,
-    .actionButton {
+    .actionButtonContainer .modeButton, .actionButtonContainer .actionButton {
         min-inline-size: 0;
         min-block-size: 2.25rem;
-        padding: 6px 7px !important;
+        padding: 6px 7px;
         font-size: 0.76rem;
         border-radius: 8px;
+    }
+
+    .modeButton[aria-pressed="true"] .modeLabel {
+        display: none;
+    }
+
+    .modeButton[aria-pressed="true"] .buttonIcon {
+        margin-inline-end: 0;
     }
 
     .buttonIcon {
@@ -350,7 +403,7 @@
         font-size: 13px;
     }
 
-    .desktopLabel {
+    .customizeLabel {
         display: none;
     }
 

@@ -264,20 +264,22 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                             className={styles.modeButton}
                             aria-pressed={viewMode === "year"}
                             aria-label="Year view"
+                            title="Year view"
                             onClick={() => handleSelectMode("year")}
                         >
                             <span className={styles.buttonIcon} aria-hidden="true">🗓️</span>
-                            Year<span className={styles.desktopLabel}> view</span>
+                            <span className={styles.modeLabel}>Year<span className={styles.desktopLabel}> view</span></span>
                         </button>
                         <button
                             type="button"
                             className={styles.modeButton}
                             aria-pressed={viewMode === "month"}
                             aria-label="Month view"
+                            title="Month view"
                             onClick={() => handleSelectMode("month")}
                         >
                             <span className={styles.buttonIcon} aria-hidden="true">📅</span>
-                            Month<span className={styles.desktopLabel}> view</span>
+                            <span className={styles.modeLabel}>Month<span className={styles.desktopLabel}> view</span></span>
                         </button>
                     </div>
 
@@ -352,7 +354,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                                 onClick={editEvents}
                             >
                                 <span className={styles.buttonIcon} aria-hidden="true">✏️</span>
-                                <span className={styles.desktopLabel}>Create custom calendar</span>
+                                <span className={styles.customizeLabel}>Customize</span><span className={styles.desktopLabel}> calendar</span>
                             </button>
                         )}
                     </div>
