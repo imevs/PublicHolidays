@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./SlidingPanel.module.css";
 
 interface SlidingPanelProps {
@@ -25,27 +25,57 @@ export const SlidingPanel: React.FC<SlidingPanelProps> = ({
     children,
     id,
 }) => {
+    useEffect(() => {
+        if (!isOpen) return;
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "Escape") {
+                onToggle();
+            }
+        };
+        document.addEventListener("keydown", handleKeyDown);
+        return () => {
+            document.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [isOpen, onToggle]);
+
     return (
-        <div
-            id={id}
-            className={`${styles.panel} ${isOpen ? styles.open : styles.closed}`}
-            role="region"
-            aria-label="Actions panel"
-        >
-            <div className={styles.panelHeader}>
-                <button
-                    className={styles.toggleButton}
+        <>
+            {isOpen && (
+                <div
+                    className={styles.backdrop}
+                    data-testid="sliding-panel-backdrop"
                     onClick={onToggle}
-                    aria-expanded={isOpen}
-                    aria-label={toggleLabel}
-                    title={toggleLabel}
-                >
-                    <span className={styles.toggleIcon}>{isOpen ? "✕" : "⚙️"}</span>
-                </button>
+                    aria-hidden="true"
+                />
+            )}
+            <div
+                id={id}
+                className={`${styles.panel} ${isOpen ? styles.open : styles.closed}`}
+                role="region"
+                aria-label="Actions panel"
+            >
+                <div className={styles.panelHeader}>
+                    {isOpen && (
+                        <span className={styles.panelTitle}>{toggleLabel}</span>
+                    )}
+                    <button
+                        type="button"
+                        className={styles.toggleButton}
+                        onClick={onToggle}
+                        aria-expanded={isOpen}
+                        aria-label={toggleLabel}
+                        title={toggleLabel}
+                    >
+                        <span className={styles.toggleIcon}>{isOpen ? "✕" : "⚙️"}</span>
+                        {!isOpen && (
+                            <span className={styles.toggleText}>{toggleLabel}</span>
+                        )}
+                    </button>
+                </div>
+                <div className={styles.panelContent}>
+                    {children}
+                </div>
             </div>
-            <div className={styles.panelContent}>
-                {children}
-            </div>
-        </div>
+        </>
     );
 };

@@ -6,7 +6,10 @@ import { handleKeyboardActivation } from "../../utils/a11y.ts";
 
 interface EventPopupProps {
     initialDate: DateString;
+    initialEvent?: OtherEvent | null;
+    initialOneTime?: boolean;
     onNewEvent: (date: OtherEvent | null) => void;
+    onDeleteEvent?: () => void;
 }
 
 const LEADING_EMOJI_REGEX = /^(?:(?:\p{Regional_Indicator}{2}|(?:\p{Emoji_Presentation}|\p{Emoji}\uFE0F)\p{Emoji_Modifier}?)(?:\u200D(?:\p{Emoji_Presentation}|\p{Emoji}\uFE0F)\p{Emoji_Modifier}?)*)\s*/u;
@@ -22,12 +25,21 @@ const icons = [
 
 const Emoji = () => icons.map((s, i) => <span key={i} role="button" tabIndex={0}>{s}</span>);
 
-const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
+const EventPopup: React.FC<EventPopupProps> = ({
+    initialDate,
+    initialEvent,
+    initialOneTime = false,
+    onNewEvent,
+    onDeleteEvent,
+}) => {
     const ref = useRef<HTMLDivElement | null>(null);
     const nameRef = useRef<HTMLInputElement | null>(null);
-    const [name, setName] = useState("");
-    const [oneTime, setOneTime] = useState(false);
-    const [icon, setIcon] = useState("🎂");
+    const [name, setName] = useState(() => {
+        if (!initialEvent) return "";
+        return initialEvent.icon ? `${initialEvent.icon} ${initialEvent.name}` : initialEvent.name;
+    });
+    const [oneTime, setOneTime] = useState(initialOneTime);
+    const [icon, setIcon] = useState(initialEvent?.icon || "🎂");
 
     useEffect(() => {
         const onDocClick = (e: MouseEvent) => {
@@ -97,7 +109,7 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
                 role="dialog"
                 aria-modal="true"
             >
-                <p><b>Add new event for {initialDate}</b></p>
+                <p><b>{initialEvent ? `Edit event for ${initialDate}` : `Add new event for ${initialDate}`}</b></p>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                     <div className={styles.nameContainer}>
                         <label htmlFor="eventName">Name</label>
@@ -125,6 +137,9 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
 
                     <div style={{ display: "flex", gap: 8 }}>
                         <button type="button" onClick={handleSave}>Save (Enter)</button>
+                        {initialEvent && onDeleteEvent && (
+                            <button type="button" onClick={onDeleteEvent}>Delete</button>
+                        )}
                         <button type="button" onClick={() => onNewEvent(null)}>Cancel (Esc)</button>
                     </div>
                 </div>

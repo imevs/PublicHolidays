@@ -176,4 +176,56 @@ describe("SlidingPanel", () => {
         const toggleButton = panel?.querySelector("button");
         expect(toggleButton).toBeInTheDocument();
     });
+
+    it("calls onToggle when Escape key is pressed while open", () => {
+        const handleToggle = jest.fn();
+        render(
+            <SlidingPanel
+                isOpen={true}
+                onToggle={handleToggle}
+                toggleLabel="Test Actions"
+                id="test-panel"
+            >
+                <div>Panel content</div>
+            </SlidingPanel>
+        );
+
+        fireEvent.keyDown(document, { key: "Escape" });
+        expect(handleToggle).toHaveBeenCalledTimes(1);
+    });
+
+    it("does not call onToggle when Escape key is pressed while closed", () => {
+        const handleToggle = jest.fn();
+        render(
+            <SlidingPanel
+                isOpen={false}
+                onToggle={handleToggle}
+                toggleLabel="Test Actions"
+                id="test-panel"
+            >
+                <div>Panel content</div>
+            </SlidingPanel>
+        );
+
+        fireEvent.keyDown(document, { key: "Escape" });
+        expect(handleToggle).not.toHaveBeenCalled();
+    });
+
+    it("renders backdrop when open and calls onToggle when backdrop is clicked", () => {
+        const handleToggle = jest.fn();
+        render(
+            <SlidingPanel
+                isOpen={true}
+                onToggle={handleToggle}
+                toggleLabel="Test Actions"
+                id="test-panel"
+            >
+                <div>Panel content</div>
+            </SlidingPanel>
+        );
+
+        const backdrop = screen.getByTestId("sliding-panel-backdrop");
+        fireEvent.click(backdrop);
+        expect(handleToggle).toHaveBeenCalledTimes(1);
+    });
 });

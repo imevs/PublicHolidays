@@ -179,6 +179,37 @@
   background: var(--primary-blue-hover);
 }
 
+.customEventItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.eventItemActions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.smallActionBtn {
+  margin-top: 0 !important;
+  padding: 4px 8px !important;
+  font-size: 0.78rem;
+  border-radius: 5px !important;
+}
+
+.deleteActionBtn {
+  background: #dc2626 !important;
+}
+
+.popupFooterActions {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
 .today {
   background: var(--primary-gradient) !important;
   color: var(--text-white) !important;
