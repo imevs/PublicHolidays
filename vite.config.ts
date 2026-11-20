@@ -37,17 +37,23 @@ export default ({ mode }: { mode: string }) => {
                 apply: "build",
                 enforce: "post",
                 closeBundle() {
-                    const notFoundPath = path.join(process.cwd(), "dist/404.html");
-                    if (fs.existsSync(notFoundPath)) {
-                        let content = fs.readFileSync(notFoundPath, "utf-8");
-                        content = content.replace(/APP_BASE_NAME_PLACEHOLDER/g, APP_BASE_NAME);
-                        fs.writeFileSync(notFoundPath, content, "utf-8");
+                    const targets = [
+                        path.join(process.cwd(), "dist/404.html"),
+                        path.join(process.cwd(), "dist", APP_BASE_NAME, "404.html"),
+                    ];
+                    for (const filePath of targets) {
+                        if (fs.existsSync(filePath)) {
+                            let content = fs.readFileSync(filePath, "utf-8");
+                            content = content.replace(/APP_BASE_NAME_PLACEHOLDER/g, APP_BASE_NAME);
+                            fs.writeFileSync(filePath, content, "utf-8");
+                        }
                     }
                 }
             }
         ],
         define: {
-            "process.env.APP_BASE_NAME": JSON.stringify(APP_BASE_NAME)
+            "process.env.APP_BASE_NAME": JSON.stringify(APP_BASE_NAME),
+            __APP_BASE_NAME__: JSON.stringify(APP_BASE_NAME),
         },
         base: `/${APP_BASE_NAME}/`,
         publicDir: "./src/assets",

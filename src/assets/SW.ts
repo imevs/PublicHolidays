@@ -6,9 +6,7 @@ import {
     notificationsWereSet,
 } from "../notifications/types.ts";
 import { getFlagEmoji } from "../utils/countryFlags.ts";
-
-const dateLocale = "en-CA"; // Canadian English uses "YYYY-MM-DD, HH:mm" format
-const APP_BASE_NAME = "PublicHolidays/main";
+import { APP_BASE_NAME, dateLocale } from "../consts.ts";
 
 declare const self: ServiceWorkerGlobalScope;
 

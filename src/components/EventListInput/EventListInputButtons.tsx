@@ -14,11 +14,31 @@ const proxy = "https://api.codetabs.com/v1/proxy/?quest=";
 
 function loadExternalCalendar(url: string): Promise<string> {
     return fetch(proxy + encodeURIComponent(url))
-        .then(res => res.text())
+        .then(res => {
+            if (!res.ok) {
+                throw new Error(`HTTP ${res.status}`);
+            }
+            return res.text();
+        })
         .catch(e => {
             console.error(e);
             return "";
         });
+}
+
+function isCalendarStateHash(hash: string): boolean {
+    const cleanHash = hash.replace(/^#/, "");
+    if (!cleanHash) {
+        return true;
+    }
+    const hashParams = new URLSearchParams(cleanHash);
+    return (
+        /^(date|countries|mode|all)=/.test(cleanHash)
+        || hashParams.has("date")
+        || hashParams.has("countries")
+        || hashParams.has("mode")
+        || hashParams.has("all")
+    );
 }
 
 export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
@@ -27,21 +47,14 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
     holidaysParsed,
 }) => {
     const [searchParams] = useSearchParams();
-
-    useEffect(() => {
-        const ics = searchParams?.get("ics");
-        if (ics) {
-            const url = encodeURI(ics + window.location.hash).replace(/#/g, "%23").replace(/@/g, "%40");
-            setIcsUrl(ics);
-            loadExternalCalendar(url).then(handleICS);
-        }
-    }, []);
-
     const icsLinkRef = useRef<HTMLInputElement | null>(null);
     const fileInputRef = useRef<HTMLInputElement | null>(null);
     const [icsUrl, setIcsUrl] = useState("");
 
     const handleICS = useCallback((text: string) => {
+        if (!text || !text.includes("BEGIN:VCALENDAR")) {
+            return;
+        }
         const parsed = parseICS(text);
         setHolidaysData(parsed);
         const lines = parsed.map(ev =>
@@ -49,6 +62,17 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
         ).join("\n");
         setDataText(lines);
     }, [setDataText, setHolidaysData]);
+
+    useEffect(() => {
+        const ics = searchParams?.get("ics");
+        if (ics) {
+            const hash = window.location.hash;
+            const rawUrl = isCalendarStateHash(hash) ? ics : ics + hash;
+            const url = encodeURI(rawUrl).replace(/#/g, "%23").replace(/@/g, "%40");
+            setIcsUrl(rawUrl);
+            loadExternalCalendar(url).then(handleICS);
+        }
+    }, []);
 
     const handleImportFile = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];

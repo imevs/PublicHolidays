@@ -1,14 +1,18 @@
 {
   "compilerOptions": {
     "noEmit": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "target": "ES2020",
-    "module": "None",
-    "lib": ["ES2020"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "lib": ["ES2020", "WebWorker"],
     "types": ["serviceworker"]
   },
   "include": [
-    "./src/env.d.ts",
+    "./src/globals.d.ts",
     "./src/assets/SW.ts"
   ]
 }

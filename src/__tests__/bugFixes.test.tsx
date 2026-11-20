@@ -1,8 +1,10 @@
 import { render, screen, fireEvent, act, renderHook, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
+let mockSearchParams = new URLSearchParams();
 jest.mock("react-router", () => ({
     useNavigate: () => jest.fn(),
+    useSearchParams: () => [mockSearchParams],
 }));
 jest.mock("../components/CalendarGrid/UsePrevious.tsx", () => ({
     usePrevious: () => null,
@@ -20,6 +22,7 @@ import EventPopup from "../components/EventPopup/EventPopup.tsx";
 import MonthNavigation from "../components/MonthNavigation/MonthNavigation.tsx";
 import { generateYears } from "../utils/dateUtils.ts";
 import { EventListInput } from "../components/EventListInput/EventListInput.tsx";
+import { EventListInputButtons } from "../components/EventListInput/EventListInputButtons.tsx";
 import { ActionButtons } from "../components/EventsList/EventsListActionButtons.tsx";
 import * as notificationsModule from "../notifications/notifications.ts";
 import { UTCDate } from "../utils/UTCDate.ts";
@@ -448,7 +451,7 @@ describe("Service Worker (SW.ts)", () => {
                 });
                 await Promise.all(clickPromises);
                 expect(openWindow).toHaveBeenCalledWith(
-                    `/PublicHolidays/main/Holidays#countries=LV,DE&mode=month&date=${tomorrowString}`
+                    `/PublicHolidays/Holidays#countries=LV,DE&mode=month&date=${tomorrowString}`
                 );
 
                 // 5. Stop notifications and verify status becomes false
@@ -949,5 +952,138 @@ describe("UI, Accessibility & Year Range Fixes", () => {
             localName: "",
             kind: "other",
         });
+    });
+});
+
+describe("External ICS loader & URL handling (Item 3.1)", () => {
+    const origFetch = globalThis.fetch;
+
+    afterEach(() => {
+        globalThis.fetch = origFetch;
+        mockSearchParams = new URLSearchParams();
+        window.location.hash = "";
+        jest.restoreAllMocks();
+    });
+
+    it("does not append calendar state hash params to ?ics= URL and ignores HTTP error / non-ICS responses", async () => {
+        mockSearchParams = new URLSearchParams("ics=https://example.com/cal.ics");
+        window.location.hash = "#date=2025-01-01&mode=year&countries=LV";
+
+        const fetchMock = jest.fn().mockResolvedValue({
+            ok: false,
+            status: 502,
+            text: async () => "Bad Gateway",
+        });
+        globalThis.fetch = fetchMock as unknown as typeof fetch;
+        const consoleErrorSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+
+        const setDataText = jest.fn();
+        const setHolidaysData = jest.fn();
+
+        render(
+            <EventListInputButtons
+                setDataText={setDataText}
+                setHolidaysData={setHolidaysData}
+                holidaysParsed={[]}
+            />
+        );
+
+        await waitFor(() => {
+            expect(fetchMock).toHaveBeenCalledTimes(1);
+        });
+
+        expect(fetchMock).toHaveBeenCalledWith(
+            "https://api.codetabs.com/v1/proxy/?quest=" + encodeURIComponent("https://example.com/cal.ics")
+        );
+        expect(consoleErrorSpy).toHaveBeenCalled();
+        expect(setHolidaysData).not.toHaveBeenCalled();
+        expect(setDataText).not.toHaveBeenCalled();
+    });
+
+    it("ignores 200 OK non-ICS payload without wiping existing events and updates when valid VCALENDAR arrives", async () => {
+        const setDataText = jest.fn();
+        const setHolidaysData = jest.fn();
+
+        const fetchMock = jest.fn()
+            .mockResolvedValueOnce({
+                ok: true,
+                status: 200,
+                text: async () => "<html><body>Not an ICS file</body></html>",
+            })
+            .mockResolvedValueOnce({
+                ok: true,
+                status: 200,
+                text: async () => [
+                    "BEGIN:VCALENDAR",
+                    "BEGIN:VEVENT",
+                    "DTSTART;TZID=Europe/Riga;VALUE=DATE:20251118",
+                    "SUMMARY:Proclamation Day",
+                    "END:VEVENT",
+                    "END:VCALENDAR",
+                ].join("\r\n"),
+            });
+        globalThis.fetch = fetchMock as unknown as typeof fetch;
+
+        render(
+            <EventListInputButtons
+                setDataText={setDataText}
+                setHolidaysData={setHolidaysData}
+                holidaysParsed={[]}
+            />
+        );
+
+        const urlInput = screen.getByPlaceholderText("Add link to .ICS file");
+        fireEvent.change(urlInput, { target: { value: "https://example.com/bad.html" } });
+
+        fireEvent.click(screen.getByRole("button", { name: "Load ICS" }));
+        await waitFor(() => {
+            expect(fetchMock).toHaveBeenCalledTimes(1);
+        });
+        expect(setHolidaysData).not.toHaveBeenCalled();
+        expect(setDataText).not.toHaveBeenCalled();
+
+        fireEvent.change(urlInput, { target: { value: "https://example.com/good.ics" } });
+        fireEvent.click(screen.getByRole("button", { name: "Load ICS" }));
+        await waitFor(() => {
+            expect(setHolidaysData).toHaveBeenCalledTimes(1);
+        });
+        expect(setHolidaysData).toHaveBeenCalledWith([
+            expect.objectContaining({
+                date: "2025-11-18",
+                name: "Proclamation Day",
+                kind: "publicHoliday",
+                countryCode: "LV",
+                country: "Latvia",
+            }),
+        ]);
+        expect(setDataText).toHaveBeenCalledWith("2025-11-18 🇱🇻 Proclamation Day");
+    });
+
+    it("preserves non-calendar hash fragments for ?ics= URLs", async () => {
+        mockSearchParams = new URLSearchParams("ics=https://example.com/cal.ics");
+        window.location.hash = "#team-events";
+
+        const fetchMock = jest.fn().mockResolvedValue({
+            ok: true,
+            status: 200,
+            text: async () => "<html>not ics</html>",
+        });
+        globalThis.fetch = fetchMock as unknown as typeof fetch;
+
+        render(
+            <EventListInputButtons
+                setDataText={jest.fn()}
+                setHolidaysData={jest.fn()}
+                holidaysParsed={[]}
+            />
+        );
+
+        await waitFor(() => {
+            expect(fetchMock).toHaveBeenCalledTimes(1);
+        });
+
+        expect(fetchMock).toHaveBeenCalledWith(
+            "https://api.codetabs.com/v1/proxy/?quest=" + encodeURIComponent("https://example.com/cal.ics%23team-events")
+        );
     });
 });
