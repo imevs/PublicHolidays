@@ -157,6 +157,7 @@ export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = tru
         params.set("mode", newMode);
         if (newMode === "month") {
             const newDate = new UTCDate(currentDate);
+            newDate.setDate(1);
             newDate.setMonth(month);
             params.set("date", dateFormatter.format(newDate.valueOf()));
         }

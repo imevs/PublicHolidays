@@ -7,7 +7,7 @@ export class UTCDate {
     protected isYearDefined = true;
     private date: Date;
 
-    constructor(d?: UTCDate | DateThreeParts) {
+    constructor(d?: UTCDate | DateString) {
         if (d instanceof UTCDate) {
             this.date = new Date(d.valueOf());
         } else if (typeof d === "string") {
@@ -20,7 +20,7 @@ export class UTCDate {
             } else {
                 const [month, day] = parts;
                 // Use 12:00 as a starting time so day zone changes do not affect dates
-                this.date = new Date(Date.UTC(2025, Number(month) - 1, Number(day), 12));
+                this.date = new Date(Date.UTC(new Date().getUTCFullYear(), Number(month) - 1, Number(day), 12));
             }
         } else {
             this.date = new Date();
@@ -34,9 +34,10 @@ export class UTCDate {
     }
 
     isToday(): boolean {
-        return today.getFullYear() === this.date.getFullYear() &&
-            today.getMonth() === this.date.getMonth() &&
-            today.getDate() === this.date.getDate();
+        const now = new UTCDate();
+        return now.getFullYear() === this.getFullYear() &&
+            now.getMonth() === this.getMonth() &&
+            now.getDate() === this.getDate();
     }
 
     toISOString(): string {
@@ -89,7 +90,7 @@ export class UTCDate {
     }
 
     toDateString(): string {
-        return this.date.toDateString();
+        return this.date.toUTCString().slice(0, 16);
     }
 
     setFullYear(year: number): void {
@@ -108,5 +109,3 @@ export class UTCDate {
         return this.date.valueOf();
     }
 }
-
-const today = new UTCDate();

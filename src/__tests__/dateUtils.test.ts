@@ -42,4 +42,29 @@ describe("dateUtils", () => {
         const d2 = new UTCDate("2025-07-11");
         expect(isSameDate(d1, d2)).toBe(false);
     });
+
+    it("UTCDate uses UTC consistently for toDateString, isSameDate, isToday, and MM-DD constructor", () => {
+        jest.useFakeTimers();
+        try {
+            // 2027-07-11T01:00:00Z is still July 10 in negative UTC offsets locally,
+            // so UTCDate methods must agree on UTC 2027-07-11.
+            jest.setSystemTime(new Date("2027-07-11T01:00:00.000Z"));
+
+            const now = new UTCDate();
+            const utcDay = new UTCDate("2027-07-11");
+            const twoPart = new UTCDate("07-11");
+
+            expect(now.toDateString()).toBe(utcDay.toDateString());
+            expect(isSameDate(now, utcDay)).toBe(true);
+            expect(utcDay.isToday()).toBe(true);
+            expect(twoPart.getFullYear()).toBe(2027);
+            expect(twoPart.isToday()).toBe(true);
+
+            // Advancing system time must update isToday() dynamically
+            jest.setSystemTime(new Date("2027-07-12T12:00:00.000Z"));
+            expect(utcDay.isToday()).toBe(false);
+        } finally {
+            jest.useRealTimers();
+        }
+    });
 });

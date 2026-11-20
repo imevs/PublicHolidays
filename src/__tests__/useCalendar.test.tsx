@@ -115,4 +115,16 @@ describe("useCalendar", () => {
         expect(date.toISOString()).toBe("2025-01-01T12:00:00.000Z");
         expect(date.getFullYear()).toBe(2025);
     });
+
+    it("handleModeChange to month on the 31st does not overflow into next month", () => {
+        window.location.hash = "date=2025-01-31&countries=LV";
+        const { result } = renderHook(() => useCalendar(convertEvents(Object.values(allHolidays))));
+
+        act(() => {
+            result.current.handleModeChange("month", 1); // February
+        });
+
+        expect(window.location.hash).toContain("mode=month");
+        expect(window.location.hash).toContain("date=2025-02-01");
+    });
 });

@@ -36,7 +36,9 @@ export const getDayName = (date: UTCDate): string => {
 }
 
 export const isSameDate = (date1: UTCDate, date2: UTCDate): boolean => {
-    return date1.toDateString() === date2.toDateString();
+    return date1.getFullYear() === date2.getFullYear() &&
+        date1.getMonth() === date2.getMonth() &&
+        date1.getDate() === date2.getDate();
 };
 
 export const getDaysInMonth = (year: number, month: number): number => {

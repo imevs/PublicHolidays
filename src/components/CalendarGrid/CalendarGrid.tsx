@@ -162,7 +162,7 @@ const YearView = ({
                             <div className={styles.monthGrid}>
                                 {emptyCells}
                                 {Array.from({ length: daysInMonth }, (_, day) => {
-                                    const date = new UTCDate(`${currentYear}-${String(month + 1).padStart(2, "0")}-${day + 1}`);
+                                    const date = new UTCDate(`${currentYear}-${String(month + 1).padStart(2, "0")}-${String(day + 1).padStart(2, "0")}`);
                                     const currentDay = selectedDays.find(d => isSameDate(d.date, date));
                                     const dayHolidays = currentDay?.events || [];
                                     const seen = new Set<string>();

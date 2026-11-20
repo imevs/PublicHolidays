@@ -62,7 +62,8 @@ export function buildICS(events: CalendarEvent[]) {
         lines.push(`UID:${uid}`);
         lines.push(`DTSTAMP:${dtstamp}`);
         lines.push(`CREATED:${dtstamp}`);
-        const timezone = ev.kind === "publicHoliday" ? `TZID=${countryTimeZones[ev.countryCode]};` : "";
+        const tz = ev.kind === "publicHoliday" ? countryTimeZones[ev.countryCode] : "";
+        const timezone = tz ? `TZID=${tz};` : "";
         lines.push(`DTSTART;${timezone}VALUE=DATE:${dtstart}`);
         lines.push(`DTEND;${timezone}VALUE=DATE:${dtend}`);
         lines.push(`SUMMARY:${summary}`);

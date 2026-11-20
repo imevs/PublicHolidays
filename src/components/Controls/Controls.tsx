@@ -40,6 +40,7 @@ const Controls: React.FC<ControlsProps> = (props) => {
                             onChange={(e) => {
                                 const newYear = parseInt(e.target.value);
                                 const updatedDate = new UTCDate(selectedDate);
+                                updatedDate.setDate(1);
                                 updatedDate.setFullYear(newYear);
                                 onDateChange(updatedDate);
                             }}
@@ -74,8 +75,8 @@ const Controls: React.FC<ControlsProps> = (props) => {
                             onChange={(e) => {
                                 const newMonth = parseInt(e.target.value);
                                 const updatedDate = new UTCDate(selectedDate);
-                                updatedDate.setMonth(newMonth);
                                 updatedDate.setDate(1);
+                                updatedDate.setMonth(newMonth);
                                 onDateChange(updatedDate);
                             }}
                         >
