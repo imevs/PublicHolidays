@@ -18,7 +18,7 @@ export const Holidays: React.FC = () => {
         });
     }, []);
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
-    const [showAllHolidays, setShowAllHolidays] = useState(false);
+    const [showAllHolidays, setShowAllHolidays] = useState(true);
 
     const {
         currentDate,

@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { CalendarEvent } from "../../types/index.ts";
 import styles from "./EventListInput.module.css";
 import type { DateString } from "../../utils/UTCDate.ts";
+import { getDaysInMonth } from "../../utils/dateUtils.ts";
 
 const yearsRange = [2023, 2024, 2025, 2026, 2027];
 
@@ -51,8 +52,15 @@ function validateLine(line: string): { valid: boolean; error?: string } {
     const dateRegex = /^(\d{4}-)?\d{2}-\d{2}$/;
     if (!dateRegex.test(date)) { return { valid: false, error: "Date must be YYYY-MM-DD or MM-DD" }; }
 
-    const d = new Date(date);
-    if (Number.isNaN(d.getTime())) { return { valid: false, error: "Invalid date" }; }
+    const dateParts = date.split("-").map(Number);
+    const hasYear = dateParts.length === 3;
+    const year = hasYear ? dateParts[0] : 2024;
+    const month = hasYear ? dateParts[1] : dateParts[0];
+    const day = hasYear ? dateParts[2] : dateParts[1];
+
+    if (month < 1 || month > 12 || day < 1 || day > getDaysInMonth(year, month - 1)) {
+        return { valid: false, error: "Invalid date" };
+    }
     return { valid: true };
 }
 
@@ -71,14 +79,18 @@ export function EventListInput(props: {
     }, [props.dataText]);
 
     useEffect(() => {
-        if (textRef.current) {
-            new ResizeObserver(() => {
-                if (iconsRef.current) {
-                    iconsRef.current.style.height = textRef.current?.clientHeight + "px";
-                }
-            }).observe(textRef.current);
+        const textarea = textRef.current;
+        if (!textarea || typeof ResizeObserver === "undefined") {
+            return;
         }
-    }, [textRef.current]);
+        const observer = new ResizeObserver(() => {
+            if (iconsRef.current) {
+                iconsRef.current.style.height = textarea.clientHeight + "px";
+            }
+        });
+        observer.observe(textarea);
+        return () => observer.disconnect();
+    }, []);
 
     return <div className={styles.container}>
         <label htmlFor="events-data" className={styles.label}>

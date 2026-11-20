@@ -18,11 +18,24 @@ export async function requestNotificationPermission(checkOnly: boolean) {
 }
 
 export const hasServiceWorker = "serviceWorker" in navigator;
+
+let sw: ServiceWorker | null = null;
+let onStatusChange: ((s: boolean) => void) | null = null;
+let messageListenerAdded = false;
+
+function handleSWMessage(event: MessageEvent) {
+    if (event.data?.type === notificationsWereSet) {
+        onStatusChange?.(event.data.status);
+    }
+}
+
 export async function initServiceWorker(notificationsEnabled: (s: boolean) => void) {
     if (!hasServiceWorker) {
         console.error("❌ Service Worker not supported");
         return null;
     }
+
+    onStatusChange = notificationsEnabled;
 
     if (sw) {
         return sw;
@@ -30,23 +43,20 @@ export async function initServiceWorker(notificationsEnabled: (s: boolean) => vo
 
     try {
         await navigator.serviceWorker.register("./SW.js");
-        await navigator.serviceWorker.ready;
+        const registration = await navigator.serviceWorker.ready;
 
         console.log("✅ Service Worker active");
 
-        navigator.serviceWorker.addEventListener("message", (event) => {
-            if (event.data.type === notificationsWereSet) {
-                notificationsEnabled(event.data.status);
-            }
-        });
-        return navigator.serviceWorker.controller;
+        if (!messageListenerAdded) {
+            navigator.serviceWorker.addEventListener("message", handleSWMessage);
+            messageListenerAdded = true;
+        }
+        return navigator.serviceWorker.controller ?? registration.active;
     } catch (error) {
         console.error("Service Worker registration failed:", error);
         return null;
     }
 }
-
-let sw: ServiceWorker | null;
 
 export async function registerNotifications(
     data: HolidayDTO[],

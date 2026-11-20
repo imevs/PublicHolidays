@@ -161,5 +161,28 @@ describe("generateICS", () => {
             expect(descLine).toBeDefined();
             expect(descLine).toContain("Neujahr");
         });
+
+        it("includes TZID for public holidays with known timezones and omits TZID when timezone is missing", () => {
+            const usHoliday = {
+                date: "2025-07-04" as const,
+                name: "Independence Day",
+                localName: "Independence Day",
+                kind: "publicHoliday" as const,
+                country: "United States" as const,
+                countryCode: "US" as const,
+                type: ["National holiday"],
+            };
+            const unknownHoliday = {
+                ...usHoliday,
+                countryCode: "XX" as unknown as "US",
+            };
+
+            const usIcs = buildICS([usHoliday]);
+            expect(usIcs).toContain("DTSTART;TZID=America/New_York;VALUE=DATE:20250704");
+
+            const unknownIcs = buildICS([unknownHoliday]);
+            expect(unknownIcs).toContain("DTSTART;VALUE=DATE:20250704");
+            expect(unknownIcs).not.toContain("TZID=;");
+        });
     });
 });

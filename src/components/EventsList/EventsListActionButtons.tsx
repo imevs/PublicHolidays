@@ -121,7 +121,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ selectedYearDays, 
                 d => d.events.filter(e => e.kind === "publicHoliday"),
             ), false, enableNotification);
         }
-    }, [notificationsEnabled, enableNotification]);
+    }, [notificationsEnabled, enableNotification, selectedYearDays]);
 
     const actionButtonsContent = (
         <>

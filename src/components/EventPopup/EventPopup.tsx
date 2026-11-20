@@ -8,8 +8,10 @@ interface EventPopupProps {
     onNewEvent: (date: OtherEvent | null) => void;
 }
 
+const LEADING_EMOJI_REGEX = /^(?:(?:\p{Regional_Indicator}{2}|(?:\p{Emoji_Presentation}|\p{Emoji}\uFE0F)\p{Emoji_Modifier}?)(?:\u200D(?:\p{Emoji_Presentation}|\p{Emoji}\uFE0F)\p{Emoji_Modifier}?)*)\s*/u;
+
 function clearFromEmoji(s: string): string {
-    return s.replace(/(\p{Emoji_Presentation}|\p{Emoji}\uFE0F)\s/u, "");
+    return s.replace(LEADING_EMOJI_REGEX, "");
 }
 const icons = [
     "🎈", "🎁", "🎂", "💍", "👸", "👴🏼", "👵", "😀", "😁", "😂",
@@ -36,7 +38,7 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
         return () => document.removeEventListener("mousedown", onDocClick);
     }, [onNewEvent]);
 
-    const handleSave = () => {
+    const handleSave = useCallback(() => {
         onNewEvent({
             date: oneTime ? initialDate : initialDate.substring(5) as DateTwoParts,
             name: clearFromEmoji(name),
@@ -44,32 +46,31 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
             localName: "",
             kind: "other",
         });
-    };
+    }, [onNewEvent, oneTime, initialDate, name, icon]);
 
     const onIconClick = useCallback((e: React.MouseEvent<Element>) => {
         const el = e.target as Element;
-        if (el.tagName === "SPAN") {
-            setIcon(el.innerHTML);
-            setName((origin) => {
-                return el.innerHTML + " " + clearFromEmoji(origin);
-            });
+        if (el.tagName === "SPAN" && el.textContent) {
+            const selectedIcon = el.textContent;
+            setIcon(selectedIcon);
+            setName((origin) => selectedIcon + " " + clearFromEmoji(origin));
             nameRef.current?.focus();
         }
     }, []);
 
-    const handleKeyDown = useCallback((e: KeyboardEvent | React.KeyboardEvent) => {
+    const handleKeyDown = useCallback((e: KeyboardEvent) => {
         if (e.key === "Enter" && name.trim()) {
             e.preventDefault();
             handleSave();
         } else if (e.key === "Escape") {
             onNewEvent(null);
         }
-    }, [handleSave, name]);
+    }, [handleSave, name, onNewEvent]);
 
     useEffect(() => {
         document.addEventListener("keydown", handleKeyDown);
         return () => document.removeEventListener("keydown", handleKeyDown);
-    }, []);
+    }, [handleKeyDown]);
 
     return (
         <>
@@ -86,7 +87,6 @@ const EventPopup: React.FC<EventPopupProps> = ({ initialDate, onNewEvent }) => {
                     <div className={styles.nameContainer}>
                         <label htmlFor="eventName">Name</label>
                         <input
-                            onKeyDown={handleKeyDown}
                             id="eventName"
                             ref={nameRef}
                             value={name}
