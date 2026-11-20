@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { CalendarDay as CalendarDayType, type HolidayWithCountry, type OtherEvent } from "../../types/index.ts";
 import CalendarDay from "../CalendarDay/CalendarDay.tsx";
 import {
@@ -7,14 +7,13 @@ import {
     formatDateString,
     getDaysInMonth,
     getMonthName,
-    isSameDate,
     isWeekend,
 } from "../../utils/dateUtils.ts";
 import styles from "./CalendarGrid.module.css";
 import MonthNavigation from "../MonthNavigation/MonthNavigation.tsx";
 import { getFlagEmoji } from "../../utils/countryFlags.ts";
 import { getLink } from "../../data/holidays_descriptions/getLink.ts";
-import { UTCDate } from "../../utils/UTCDate.ts";
+import { type DateString, UTCDate } from "../../utils/UTCDate.ts";
 import EventPopup from "../EventPopup/EventPopup.tsx";
 import { usePrevious } from "./UsePrevious.tsx";
 import type { Description } from "../../data/holidays_descriptions/all.ts";
@@ -124,6 +123,15 @@ const YearView = ({
     const yearGridRef = useRef<HTMLDivElement | null>(null); // Ref for the year grid container
 
     const currentMonth = currentDate.getMonth();
+    const daysByDate = useMemo(() => {
+        const map = new Map<DateString, CalendarDayType>();
+        for (const d of selectedDays) {
+            map.set(formatDateString(d.date), d);
+        }
+        return map;
+    }, [selectedDays]);
+    const dateForPopupStr = dateForPopup ? formatDateString(dateForPopup) : null;
+
     useEffect(() => {
         if (yearGridRef.current) {
             const monthElement = yearGridRef.current.querySelectorAll(`.${styles.monthContainer}`)[currentMonth];
@@ -162,8 +170,8 @@ const YearView = ({
                             <div className={styles.monthGrid}>
                                 {emptyCells}
                                 {Array.from({ length: daysInMonth }, (_, day) => {
-                                    const date = new UTCDate(`${currentYear}-${String(month + 1).padStart(2, "0")}-${String(day + 1).padStart(2, "0")}`);
-                                    const currentDay = selectedDays.find(d => isSameDate(d.date, date));
+                                    const dateStr = `${currentYear}-${String(month + 1).padStart(2, "0")}-${String(day + 1).padStart(2, "0")}` as DateString;
+                                    const currentDay = daysByDate.get(dateStr);
                                     const dayHolidays = currentDay?.events || [];
                                     const seen = new Set<string>();
                                     const dayCountryHolidaysUnique = dayHolidays.filter((h): h is HolidayWithCountry => {
@@ -177,7 +185,7 @@ const YearView = ({
                                             key={day}
                                             className={cn(`
                                                     ${currentDay?.isToday ? styles.today : ""}
-                                                    ${dateForPopup?.valueOf() === date.valueOf() ? styles.selectedDate : ""} 
+                                                    ${dateForPopupStr === dateStr ? styles.selectedDate : ""} 
                                                     ${styles.dayCell} 
                                                     ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}
                                                     ${dayHolidays.length > 0 || isEditable ? styles.isClickable : ""}
@@ -186,7 +194,14 @@ const YearView = ({
                                             style={{
                                                 borderRadius: `${day === 0 ? 10 : 0}px 0px ${day === daysInMonth - 1 ? 10 : 0}px 0px`,
                                             }}
-                                            onClick={() => dayHolidays.length > 0 ? setSelectedDay(date) : setDateForPopup(date)}
+                                            onClick={() => {
+                                                const date = currentDay?.date ?? new UTCDate(dateStr);
+                                                if (dayHolidays.length > 0) {
+                                                    setSelectedDay(date);
+                                                } else {
+                                                    setDateForPopup(date);
+                                                }
+                                            }}
                                         >
                                             {day + 1}
                                             <div className={styles.holidayIndicatorsList}>
@@ -227,6 +242,18 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
     const [selectedDay, setSelectedDay] = useState<UTCDate | null>(null); // State for selected day in popup
     const [dateForPopup, setDateForPopup] = useState<UTCDate | null>(null);
     const [shouldAnimate, setShouldAnimate] = useState<boolean>(prevMode === mode);
+
+    const yearDaysByDate = useMemo(() => {
+        const map = new Map<DateString, CalendarDayType>();
+        for (const d of selectedYearDays) {
+            map.set(formatDateString(d.date), d);
+        }
+        return map;
+    }, [selectedYearDays]);
+
+    const selectedDayEvents = selectedDay
+        ? yearDaysByDate.get(formatDateString(selectedDay))?.events
+        : undefined;
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -276,19 +303,17 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                     <div className={styles.popupContent}>
                         <h3>Events on {formatDateString(selectedDay)}</h3>
                         <ul>
-                            {selectedYearDays.find(d => isSameDate(d.date, selectedDay))
-                                ?.events
-                                .filter(h => h.kind === "publicHoliday")
-                                ?.map((holiday, index) => (
+                            {selectedDayEvents
+                                ?.filter(h => h.kind === "publicHoliday")
+                                .map((holiday, index) => (
                                     <li key={index} data-flag={getFlagEmoji(holiday.countryCode)}>
                                         <a target="_blank" href={getLink(undefined, holiday.country, "public holidays", countryData)}><strong>{holiday.country}</strong></a>:{" "}
                                         <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name, countryData)}>{holiday.name}</a>
                                     </li>
                                 ))}
-                            {selectedYearDays.find(d => isSameDate(d.date, selectedDay))
-                                ?.events
-                                .filter(h => h.kind === "other")
-                                ?.map((holiday, index) => (
+                            {selectedDayEvents
+                                ?.filter(h => h.kind === "other")
+                                .map((holiday, index) => (
                                     <li key={index} data-flag={holiday.icon}>
                                         <span>{holiday.name}</span>
                                     </li>

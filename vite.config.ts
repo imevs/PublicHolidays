@@ -1,8 +1,19 @@
-import { defineConfig, loadEnv } from "vite";
+import { defineConfig, loadEnv, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import fs from "fs";
 import path from "path";
+import { transformNationalHolidays } from "./src/utils/filterNationalHolidays.cjs";
+
+export function filterNationalHolidaysPlugin(): Plugin {
+    return {
+        name: "filter-national-holidays",
+        enforce: "pre",
+        transform(code, id) {
+            return transformNationalHolidays(code, id);
+        },
+    };
+}
 
 export default ({ mode }: { mode: string }) => {
     const env = loadEnv(mode, process.cwd());
@@ -11,6 +22,7 @@ export default ({ mode }: { mode: string }) => {
 
     return defineConfig({
         plugins: [
+            filterNationalHolidaysPlugin(),
             react(),
             viteStaticCopy({
                 targets: [

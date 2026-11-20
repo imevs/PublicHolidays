@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, act } from "@testing-library/react";
+import { render, screen, fireEvent, act, renderHook, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 jest.mock("react-router", () => ({
@@ -19,7 +19,12 @@ import { EventListInput } from "../components/EventListInput/EventListInput.tsx"
 import { ActionButtons } from "../components/EventsList/EventsListActionButtons.tsx";
 import * as notificationsModule from "../notifications/notifications.ts";
 import { UTCDate } from "../utils/UTCDate.ts";
-import type { CalendarDay } from "../types/index.ts";
+import type { CalendarDay, CalendarEvent } from "../types/index.ts";
+import { buildHolidaysIndex, getHolidaysForDate, useCalendar } from "../hooks/useCalendar.ts";
+import { allHolidays } from "../data/holidays_v2/index.ts";
+import { convertEvents } from "../utils/convertEvents.ts";
+import { transformNationalHolidays } from "../utils/filterNationalHolidays.cjs";
+import { Holidays } from "../Holidays.tsx";
 import {
     startNotificationsCommand,
     stopNotificationsCommand,
@@ -459,5 +464,251 @@ describe("Service Worker (SW.ts)", () => {
         } finally {
             g.self = prevSelf;
         }
+    });
+});
+
+describe("Performance & Bundle optimizations (Section 3)", () => {
+    it("buildHolidaysIndex and getHolidaysForDate index by date and country in O(1) lookup", () => {
+        const events: CalendarEvent[] = [
+            {
+                kind: "publicHoliday",
+                date: "2025-01-01",
+                name: "LV New Year",
+                localName: "Jaunais gads",
+                country: "Latvia",
+                countryCode: "LV",
+                type: ["National holiday"],
+            },
+            {
+                kind: "publicHoliday",
+                date: "2025-01-01",
+                name: "DE New Year",
+                localName: "Neujahr",
+                country: "Germany",
+                countryCode: "DE",
+                type: ["National holiday"],
+            },
+            {
+                kind: "publicHoliday",
+                date: "2025-01-01",
+                name: "Non-National Observance",
+                localName: "Observance",
+                country: "Latvia",
+                countryCode: "LV",
+                type: ["Observance"],
+            },
+            {
+                kind: "other",
+                date: "2025-01-01",
+                name: "Custom Party",
+                localName: "Custom Party",
+                icon: "🎉",
+            },
+        ];
+
+        const index = buildHolidaysIndex(events);
+        const jan1 = new UTCDate("2025-01-01");
+
+        // Returns other events first, then national holidays in selectedCountries order
+        const result = getHolidaysForDate(jan1, index, ["DE", "LV"]);
+        expect(result.map(e => e.name)).toEqual([
+            "Custom Party",
+            "DE New Year",
+            "LV New Year",
+        ]);
+
+        // Unselected countries and non-national holidays are excluded
+        const lvOnly = getHolidaysForDate(jan1, index, ["LV"]);
+        expect(lvOnly.map(e => e.name)).toEqual(["Custom Party", "LV New Year"]);
+
+        // Dates without events return empty array
+        expect(getHolidaysForDate(new UTCDate("2025-01-02"), index, ["DE", "LV"])).toEqual([]);
+    });
+
+    it("useCalendar computes exact month grids (4, 5, and 6 weeks) and handles multi-country lookups fast", () => {
+        const allEvents = convertEvents(Object.values(allHolidays));
+
+        // 4-week month: Feb 2021 starts on Monday and has 28 days
+        window.location.hash = "date=2021-02-01&countries=LV";
+        const { result: feb2021 } = renderHook(() => useCalendar(allEvents));
+        expect(feb2021.current.selectedMonthDays).toHaveLength(28);
+        expect(feb2021.current.selectedMonthDays.every(d => d.isCurrentMonth)).toBe(true);
+
+        // 5-week month: Jan 2025 starts on Wednesday (2 leading days + 31 + 2 trailing = 35)
+        window.location.hash = "date=2025-01-01&countries=LV";
+        const { result: jan2025 } = renderHook(() => useCalendar(allEvents));
+        expect(jan2025.current.selectedMonthDays).toHaveLength(35);
+        expect(jan2025.current.selectedMonthDays.every(d => d.isSideMonth || d.isCurrentMonth)).toBe(true);
+
+        // 6-week month: June 2025 starts on Sunday (6 leading + 30 + 6 trailing = 42)
+        window.location.hash = "date=2025-06-01&countries=LV,DE,US,GB,FR";
+        const start = performance.now();
+        const { result: jun2025 } = renderHook(() => useCalendar(allEvents));
+        const elapsedMs = performance.now() - start;
+
+        expect(jun2025.current.selectedMonthDays).toHaveLength(42);
+        expect(jun2025.current.selectedYearDays).toHaveLength(373);
+        expect(elapsedMs).toBeLessThan(1000);
+        window.location.hash = "";
+    });
+
+    it("CalendarGrid YearView popup displays publicHoliday and other events via O(1) lookup", () => {
+        const origScrollIntoView = HTMLElement.prototype.scrollIntoView;
+        HTMLElement.prototype.scrollIntoView = jest.fn();
+
+        const may1 = new UTCDate("2025-05-01");
+        const selectedYearDays: CalendarDay[] = [
+            {
+                date: may1,
+                dayNumber: 1,
+                isSideMonth: false,
+                isCurrentMonth: true,
+                isCurrentYear: true,
+                isToday: false,
+                isWeekend: false,
+                events: [
+                    {
+                        kind: "publicHoliday",
+                        date: "2025-05-01",
+                        name: "Labour Day",
+                        localName: "Darba svētki",
+                        country: "Latvia",
+                        countryCode: "LV",
+                        type: ["National holiday"],
+                    },
+                    {
+                        kind: "other",
+                        date: "2025-05-01",
+                        name: "Spring Picnic",
+                        localName: "Spring Picnic",
+                        icon: "🧺",
+                    },
+                ],
+            },
+        ];
+
+        try {
+            render(
+                <CalendarGrid
+                    selectedYearDays={selectedYearDays}
+                    selectedMonthDays={[]}
+                    currentDate={may1}
+                    mode="year"
+                    countryData={{}}
+                    onModeChange={jest.fn()}
+                />
+            );
+
+            fireEvent.click(screen.getByText("🇱🇻").closest("[data-month=\"5\"]")!);
+
+            expect(screen.getByText("Events on 2025-05-01")).toBeInTheDocument();
+            expect(screen.getByText("Labour Day")).toBeInTheDocument();
+            expect(screen.getByText("Spring Picnic")).toBeInTheDocument();
+        } finally {
+            HTMLElement.prototype.scrollIntoView = origScrollIntoView;
+        }
+    });
+
+    it("Holidays loads allHolidays from index and switches countries cleanly", async () => {
+        const origScrollIntoView = HTMLElement.prototype.scrollIntoView;
+        HTMLElement.prototype.scrollIntoView = jest.fn();
+        const origResizeObserver = globalThis.ResizeObserver;
+        globalThis.ResizeObserver = jest.fn().mockImplementation(() => ({
+            observe: jest.fn(),
+            unobserve: jest.fn(),
+            disconnect: jest.fn(),
+        }));
+
+        window.location.hash = "date=2025-01-01&countries=LV";
+
+        try {
+            render(<Holidays />);
+
+            // Initially loads allHolidays and displays Latvia ("LV")
+            await waitFor(() => {
+                expect(screen.getAllByText("New Year's Day").length).toBeGreaterThan(0);
+            });
+            expect(screen.queryByText("Day of German Unity")).not.toBeInTheDocument();
+
+            // Add Germany via hashchange
+            await act(async () => {
+                window.location.hash = "date=2025-01-01&countries=LV,DE";
+                window.dispatchEvent(new HashChangeEvent("hashchange"));
+            });
+
+            await waitFor(() => {
+                expect(screen.getAllByText("Day of German Unity").length).toBeGreaterThan(0);
+            });
+            expect(screen.getAllByText("Republic of Latvia Proclamation Day")).toHaveLength(1);
+
+            // Switch to Germany only
+            await act(async () => {
+                window.location.hash = "date=2025-01-01&countries=DE";
+                window.dispatchEvent(new HashChangeEvent("hashchange"));
+            });
+
+            await waitFor(() => {
+                expect(screen.queryByText("Republic of Latvia Proclamation Day")).not.toBeInTheDocument();
+            });
+            expect(screen.getAllByText("Day of German Unity").length).toBeGreaterThan(0);
+        } finally {
+            window.location.hash = "";
+            HTMLElement.prototype.scrollIntoView = origScrollIntoView;
+            globalThis.ResizeObserver = origResizeObserver;
+        }
+    });
+
+    it("transformNationalHolidays filters country holiday files to only National holiday entries", () => {
+        const sampleModule = [
+            "import type { CountryHolidays } from \"./types\";",
+            "",
+            "export const holidays_US: CountryHolidays = {",
+            "    countryCode: \"US\",",
+            "    countryName: \"United States\",",
+            "    holidays: [",
+            "        {",
+            "            \"date\": \"2025-01-01\",",
+            "            \"localName\": \"New Year's Day\",",
+            "            \"name\": \"New Year's Day\",",
+            "            \"type\": [\"National holiday\"]",
+            "        },",
+            "        {",
+            "            \"date\": \"2025-01-01\",",
+            "            \"localName\": \"Local New Year\",",
+            "            \"name\": \"Local New Year\",",
+            "            \"type\": [\"Local holiday\"]",
+            "        },",
+            "        {",
+            "            \"date\": \"2025-12-25\",",
+            "            \"localName\": \"Christmas $100\",",
+            "            \"name\": \"Christmas Day\",",
+            "            \"type\": [\"National holiday\", \"Christian\"]",
+            "        },",
+            "        {",
+            "            \"date\": \"2025-02-14\",",
+            "            \"localName\": \"Valentine's Day\",",
+            "            \"name\": \"Valentine's Day\"",
+            "        }",
+            "    ]",
+            "} as const;",
+        ].join("\n");
+
+        // Ignores non-country files
+        expect(transformNationalHolidays(sampleModule, "/app/src/data/holidays_v2/index.ts")).toBeNull();
+        expect(transformNationalHolidays(sampleModule, "/app/src/data/holidays_v2/types.ts")).toBeNull();
+        expect(transformNationalHolidays(sampleModule, "/app/src/utils/other.ts")).toBeNull();
+
+        // Filters POSIX and Windows country file paths
+        const posixResult = transformNationalHolidays(sampleModule, "/app/src/data/holidays_v2/US.ts");
+        expect(posixResult).not.toBeNull();
+        expect(posixResult?.map).toBeNull();
+        expect(posixResult?.code).toContain("\"New Year's Day\"");
+        expect(posixResult?.code).toContain("\"Christmas $100\"");
+        expect(posixResult?.code).not.toContain("\"Local New Year\"");
+        expect(posixResult?.code).not.toContain("\"Valentine's Day\"");
+        expect(posixResult?.code).toMatch(/\} as const;$/);
+
+        const winResult = transformNationalHolidays(sampleModule, "C:\\repo\\src\\data\\holidays_v2\\US.ts");
+        expect(winResult).toEqual(posixResult);
     });
 });

@@ -12,11 +12,6 @@ import { ActionButtons } from "./components/EventsList/EventsListActionButtons.t
 import ThemeSelector from "./components/ThemeSelector/ThemeSelector.tsx";
 
 export const Holidays: React.FC = () => {
-    useEffect(() => {
-        import("./data/holidays_v2/index.ts").then(({ allHolidays }) => {
-            setHolidaysData(convertEvents(Object.values(allHolidays)));
-        });
-    }, []);
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
     const [showAllHolidays, setShowAllHolidays] = useState(true);
 
@@ -34,6 +29,12 @@ export const Holidays: React.FC = () => {
         setShowAllCountries,
     } = useCalendar(holidaysData, showAllHolidays);
     const [countryData, setCountryData] = useState({});
+
+    useEffect(() => {
+        import("./data/holidays_v2/index.ts").then(({ allHolidays }) => {
+            setHolidaysData(convertEvents(Object.values(allHolidays)));
+        });
+    }, []);
 
     useEffect(() => {
         import("./data/holidays_descriptions/all.ts").then(data => {
