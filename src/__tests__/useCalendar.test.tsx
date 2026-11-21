@@ -153,4 +153,117 @@ describe("useCalendar", () => {
         expect(window.location.hash).toContain("mode=month");
         expect(window.location.hash).toContain("date=2025-02-01");
     });
+
+    it("verifies isLongHoliday marks 3+ day holiday stretches and does NOT mark ordinary 2-day Sat+Sun weekends", () => {
+        // Let's test with a mock custom event or a known 3+ day stretch or check hook's calculation.
+        // Let's create events where Fri + Sat + Sun are holidays or part of a long weekend stretch.
+        const customEvents = [
+            {
+                name: "Friday Off",
+                date: "2025-03-21" as const,
+                kind: "other" as const,
+                isRange: false,
+                icon: "🎉",
+                localName: "Friday Off",
+            }
+        ];
+        // 2025-03-21 is Friday, 2025-03-22 is Saturday (weekend), 2025-03-23 is Sunday (weekend).
+        // Together: Friday (holiday/off), Saturday (weekend), Sunday (weekend) -> 3 consecutive days.
+        window.location.hash = "date=2025-03-01&countries=LV";
+        const { result } = renderHook(() => useCalendar(convertEvents(Object.values(allHolidays)).concat(customEvents)));
+
+        const marchDays = result.current.selectedMonthDays;
+        const friDay = marchDays.find(d => d.date.toISOString().startsWith("2025-03-21"));
+        const satDay = marchDays.find(d => d.date.toISOString().startsWith("2025-03-22"));
+        const sunDay = marchDays.find(d => d.date.toISOString().startsWith("2025-03-23"));
+
+        expect(friDay?.isLongHoliday).toBe(true);
+        expect(satDay?.isLongHoliday).toBe(true);
+        expect(sunDay?.isLongHoliday).toBe(true);
+
+        // Ordinary weekend (e.g. following weekend or previous without Friday/Monday holiday)
+        // Let's check a purely normal Sat+Sun weekend without adjacent holidays if any, or test standard weekend alone.
+        // Wait, standard weekend alone (just Sat+Sun) is 2 days, so it should NOT be marked as isLongHoliday.
+        const ordinarySat = marchDays.find(d => d.date.toISOString().startsWith("2025-03-15")); // Saturday
+        const ordinarySun = marchDays.find(d => d.date.toISOString().startsWith("2025-03-16")); // Sunday
+        // If there are no holidays on 15th and 16th, they are just normal Sat+Sun (2 days).
+        expect(ordinarySat?.isLongHoliday).toBeFalsy();
+        expect(ordinarySun?.isLongHoliday).toBeFalsy();
+    });
+
+    it("verifies previous-month days in selectedMonthDays have isLongHoliday true when a long holiday continues from the previous month", () => {
+        // Let's test a holiday on Friday of the previous month (e.g. Feb 28, 2025 is Friday),
+        // continuing into Saturday Mar 1 and Sunday Mar 2, 2025.
+        // Wait, March 2025 view has padding days from February (including Feb 28).
+        // Let's put a custom event or check Jan/Feb.
+        // Let's use Feb 28 (Friday) as a holiday, while March 1 is Saturday and March 2 is Sunday.
+        const customEvents = [
+            {
+                name: "Friday Holiday",
+                date: "2025-02-28" as const,
+                kind: "other" as const,
+                isRange: false,
+                icon: "🎉",
+                localName: "Friday Holiday",
+            }
+        ];
+        window.location.hash = "date=2025-03-01&countries=LV";
+        const { result } = renderHook(() => useCalendar(convertEvents(Object.values(allHolidays)).concat(customEvents)));
+
+        const marchMonthDays = result.current.selectedMonthDays;
+        const feb28Day = marchMonthDays.find(d => d.date.toISOString().startsWith("2025-02-28"));
+        const mar1Day = marchMonthDays.find(d => d.date.toISOString().startsWith("2025-03-01"));
+        const mar2Day = marchMonthDays.find(d => d.date.toISOString().startsWith("2025-03-02"));
+
+        expect(feb28Day).toBeDefined();
+        expect(feb28Day?.isCurrentMonth).toBe(false);
+        expect(feb28Day?.isLongHoliday).toBe(true);
+        expect(mar1Day?.isLongHoliday).toBe(true);
+        expect(mar2Day?.isLongHoliday).toBe(true);
+    });
+
+    it("verifies LV long holiday spanning Dec 31 to Jan 4", () => {
+        // For countries=LV, test date=2025-12-01 and date=2026-01-01
+        window.location.hash = "date=2025-12-01&countries=LV";
+        const { result: result2025, rerender } = renderHook(
+            ({ hash }) => {
+                window.location.hash = hash;
+                return useCalendar(convertEvents(Object.values(allHolidays)));
+            },
+            { initialProps: { hash: "date=2025-12-01&countries=LV" } }
+        );
+
+        const dayDec31_2025 = result2025.current.selectedYearDays.find(d => d.date.toISOString().startsWith("2025-12-31"));
+        expect(dayDec31_2025).toBeDefined();
+        expect(dayDec31_2025?.isLongHoliday).toBe(true);
+
+        rerender({ hash: "date=2026-01-01&countries=LV" });
+
+        const dayDec31_2026View = result2025.current.selectedYearDays.find(d => d.date.toISOString().startsWith("2025-12-31"));
+        expect(dayDec31_2026View).toBeDefined();
+        expect(dayDec31_2026View?.events.length).toBeGreaterThan(0);
+        expect(dayDec31_2026View?.isLongHoliday).toBe(true);
+
+        for (let day = 1; day <= 4; day++) {
+            const dateStr = `2026-01-0${day}`;
+            const targetDay = result2025.current.selectedYearDays.find(d => d.date.toISOString().startsWith(dateStr));
+            expect(targetDay).toBeDefined();
+            expect(targetDay?.isLongHoliday).toBe(true);
+        }
+    });
+
+    it("verifies LV long holiday spanning 2026-12-31 to 2027-01-03 in both year and month views", () => {
+        window.location.hash = "date=2026-12-01&countries=LV";
+        const { result } = renderHook(() => useCalendar(convertEvents(Object.values(allHolidays))));
+
+        const targetDates = ["2026-12-31", "2027-01-01", "2027-01-02", "2027-01-03"];
+        for (const dateStr of targetDates) {
+            const yearDay = result.current.selectedYearDays.find(d => d.date.toISOString().startsWith(dateStr));
+            const monthDay = result.current.selectedMonthDays.find(d => d.date.toISOString().startsWith(dateStr));
+            expect(yearDay).toBeDefined();
+            expect(yearDay?.isLongHoliday).toBe(true);
+            expect(monthDay).toBeDefined();
+            expect(monthDay?.isLongHoliday).toBe(true);
+        }
+    });
 });

@@ -30,6 +30,7 @@ interface CalendarGridProps {
     onModeChange: (mode: "month" | "year", month: number) => void;
     shouldScrollToMonth?: boolean;
     onScrolledToMonth?: () => void;
+    highlightLongHolidays?: boolean;
 }
 
 function cn(classes: string) {
@@ -56,6 +57,7 @@ type MonthViewProps = {
     currentDate: UTCDate;
     countryData: Record<string, Description>;
     onModeChange: (mode: "month" | "year", month: number) => void;
+    highlightLongHolidays?: boolean;
 };
 
 const MonthView = (props: MonthViewProps) => {
@@ -69,6 +71,7 @@ const MonthView = (props: MonthViewProps) => {
         onSelectEvent,
         isEditable,
         countryData,
+        highlightLongHolidays,
     } = props;
 
     const prevDays = usePrevious(selectedDays);
@@ -98,6 +101,7 @@ const MonthView = (props: MonthViewProps) => {
                     isSelected={false}
                     isEditable={isEditable}
                     countryData={countryData}
+                    highlightLongHolidays={highlightLongHolidays}
                 />
             ))}
         </div>}
@@ -114,6 +118,7 @@ const MonthView = (props: MonthViewProps) => {
                     isSelected={dateForPopup === day.date}
                     isEditable={isEditable}
                     countryData={countryData}
+                    highlightLongHolidays={highlightLongHolidays}
                 />
             ))}
         </div>
@@ -130,6 +135,7 @@ const YearView = ({
     setSelectedDay,
     shouldScrollToMonth,
     onScrolledToMonth,
+    highlightLongHolidays,
 }: MonthViewProps & {
     setSelectedDay: (date: UTCDate | null) => void;
     shouldScrollToMonth?: boolean;
@@ -174,7 +180,66 @@ const YearView = ({
                     const monthName = getMonthName(month);
                     const firstDay = new UTCDate(`${currentYear}-${String(month + 1).padStart(2, "0")}-01`);
                     const dayOfWeek = convertDayToEUFormat(firstDay.getDay()) - 1;
-                    const emptyCells = Array.from({ length: dayOfWeek }, (_, day) => <div key={day} />);
+
+                    const renderYearDayCell = (dateStr: DateString, dayNumber: number, borderRadius: string, isOtherMonth: boolean, key: string) => {
+                        const currentDay = daysByDate.get(dateStr);
+                        const dayHolidays = currentDay?.events || [];
+                        const seen = new Set<string>();
+                        const dayCountryHolidaysUnique = dayHolidays.filter((h): h is HolidayWithCountry => {
+                            if (h.kind !== "publicHoliday") { return false; }
+                            if (seen.has(h.countryCode)) { return false; }
+                            seen.add(h.countryCode);
+                            return true;
+                        });
+                        const isDayClickable = dayHolidays.length > 0 || isEditable;
+                        const firstRangeEvent = dayHolidays.find((h): h is OtherEvent => h.kind === "other" && Boolean(h.isRange));
+                        const handleDaySelect = () => {
+                            const date = currentDay?.date ?? new UTCDate(dateStr);
+                            if (dayHolidays.length > 0) {
+                                setSelectedDay(date);
+                            } else {
+                                setDateForPopup(date);
+                            }
+                        };
+                        return (
+                            <div
+                                key={key}
+                                className={cn(`
+                                    ${currentDay?.isToday ? styles.today : ""}
+                                    ${dateForPopupStr === dateStr ? styles.selectedDate : ""} 
+                                    ${styles.dayCell} 
+                                    ${isOtherMonth ? styles.otherMonth : ""}
+                                    ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}
+                                    ${isDayClickable ? styles.isClickable : ""}
+                                    ${firstRangeEvent ? styles.rangeDay : ""}
+                                    ${highlightLongHolidays && currentDay?.isLongHoliday ? styles.longHoliday : ""}
+                                `)}
+                                data-month={month + 1}
+                                style={{
+                                    borderRadius,
+                                    ...(firstRangeEvent?.color ? { "--range-color": firstRangeEvent.color } : {}),
+                                } as React.CSSProperties}
+                                role={isDayClickable ? "button" : undefined}
+                                tabIndex={isDayClickable ? 0 : undefined}
+                                onClick={handleDaySelect}
+                                onKeyDown={isDayClickable ? (e) => handleKeyboardActivation(e, handleDaySelect) : undefined}
+                            >
+                                {dayNumber}
+                                <div className={styles.holidayIndicatorsList}>
+                                    {dayCountryHolidaysUnique.map((holiday) => (
+                                        <div key={holiday.countryCode + holiday.name} className={styles.holidayIndicator}>
+                                            {getFlagEmoji(holiday.countryCode)}
+                                        </div>
+                                    ))}
+                                    {dayHolidays.filter((h) => h.kind === "other").map(h => (
+                                        <div key={h.name} className={styles.holidayIndicator}>
+                                            {h.icon}
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        );
+                    };
 
                     return (
                         <div
@@ -194,65 +259,67 @@ const YearView = ({
                                 {monthName}
                             </div>
                             <div className={styles.monthGrid}>
-                                {emptyCells}
-                                {Array.from({ length: daysInMonth }, (_, day) => {
-                                    const dateStr = `${currentYear}-${String(month + 1).padStart(2, "0")}-${String(day + 1).padStart(2, "0")}` as DateString;
-                                    const currentDay = daysByDate.get(dateStr);
-                                    const dayHolidays = currentDay?.events || [];
-                                    const seen = new Set<string>();
-                                    const dayCountryHolidaysUnique = dayHolidays.filter((h): h is HolidayWithCountry => {
-                                        if (h.kind !== "publicHoliday") { return false; }
-                                        if (seen.has(h.countryCode)) { return false; }
-                                        seen.add(h.countryCode);
-                                        return true;
-                                    });
-                                    const isDayClickable = dayHolidays.length > 0 || isEditable;
-                                    const firstRangeEvent = dayHolidays.find((h): h is OtherEvent => h.kind === "other" && Boolean(h.isRange));
-                                    const handleDaySelect = () => {
-                                        const date = currentDay?.date ?? new UTCDate(dateStr);
-                                        if (dayHolidays.length > 0) {
-                                            setSelectedDay(date);
-                                        } else {
-                                            setDateForPopup(date);
+                                {(() => {
+                                    const firstDayStr = formatDateString(firstDay);
+                                    const lastDay = new UTCDate(`${currentYear}-${String(month + 1).padStart(2, "0")}-${String(daysInMonth).padStart(2, "0")}`);
+                                    const lastDayStr = formatDateString(lastDay);
+                                    const maxTrailing = 7 - convertDayToEUFormat(lastDay.getDay());
+
+                                    let visibleLeadingCount = 0;
+                                    if (highlightLongHolidays && dayOfWeek > 0 && daysByDate.get(firstDayStr)?.isLongHoliday) {
+                                        for (let offset = 1; offset <= dayOfWeek; offset++) {
+                                            const prevDate = new UTCDate(firstDay);
+                                            prevDate.setDate(firstDay.getDate() - offset);
+                                            if (daysByDate.get(formatDateString(prevDate))?.isLongHoliday) {
+                                                visibleLeadingCount++;
+                                            } else {
+                                                break;
+                                            }
                                         }
-                                    };
+                                    }
+                                    const firstVisibleLeadingIdx = dayOfWeek - visibleLeadingCount;
+
+                                    let visibleTrailingCount = 0;
+                                    if (highlightLongHolidays && maxTrailing > 0 && daysByDate.get(lastDayStr)?.isLongHoliday) {
+                                        for (let offset = 1; offset <= maxTrailing; offset++) {
+                                            const nextDate = new UTCDate(lastDay);
+                                            nextDate.setDate(lastDay.getDate() + offset);
+                                            if (daysByDate.get(formatDateString(nextDate))?.isLongHoliday) {
+                                                visibleTrailingCount++;
+                                            } else {
+                                                break;
+                                            }
+                                        }
+                                    }
+
                                     return (
-                                        <div
-                                            key={day}
-                                            className={cn(`
-                                                    ${currentDay?.isToday ? styles.today : ""}
-                                                    ${dateForPopupStr === dateStr ? styles.selectedDate : ""} 
-                                                    ${styles.dayCell} 
-                                                    ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}
-                                                    ${isDayClickable ? styles.isClickable : ""}
-                                                    ${firstRangeEvent ? styles.rangeDay : ""}
-                                                `)}
-                                            data-month={month + 1}
-                                            style={{
-                                                borderRadius: `${day === 0 ? 10 : 0}px 0px ${day === daysInMonth - 1 ? 10 : 0}px 0px`,
-                                                ...(firstRangeEvent?.color ? { "--range-color": firstRangeEvent.color } : {}),
-                                            } as React.CSSProperties}
-                                            role={isDayClickable ? "button" : undefined}
-                                            tabIndex={isDayClickable ? 0 : undefined}
-                                            onClick={handleDaySelect}
-                                            onKeyDown={isDayClickable ? (e) => handleKeyboardActivation(e, handleDaySelect) : undefined}
-                                        >
-                                            {day + 1}
-                                            <div className={styles.holidayIndicatorsList}>
-                                                {dayCountryHolidaysUnique.map((holiday) => (
-                                                    <div key={holiday.countryCode + holiday.name} className={styles.holidayIndicator}>
-                                                        {getFlagEmoji(holiday.countryCode)}
-                                                    </div>
-                                                ))}
-                                                {dayHolidays.filter((h) => h.kind === "other").map(h => (
-                                                    <div key={h.name} className={styles.holidayIndicator}>
-                                                        {h.icon}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
+                                        <>
+                                            {Array.from({ length: dayOfWeek }, (_, idx) => {
+                                                if (idx < firstVisibleLeadingIdx) {
+                                                    return <div key={`empty-${idx}`} />;
+                                                }
+                                                const prevDate = new UTCDate(firstDay);
+                                                prevDate.setDate(firstDay.getDate() - (dayOfWeek - idx));
+                                                const prevDateStr = formatDateString(prevDate);
+                                                const topLeft = idx === firstVisibleLeadingIdx ? 10 : 0;
+                                                return renderYearDayCell(prevDateStr, prevDate.getDate(), `${topLeft}px 0px 0px 0px`, true, `prev-${idx}`);
+                                            })}
+                                            {Array.from({ length: daysInMonth }, (_, day) => {
+                                                const dateStr = `${currentYear}-${String(month + 1).padStart(2, "0")}-${String(day + 1).padStart(2, "0")}` as DateString;
+                                                const topLeft = visibleLeadingCount === 0 && day === 0 ? 10 : 0;
+                                                const bottomRight = visibleTrailingCount === 0 && day === daysInMonth - 1 ? 10 : 0;
+                                                return renderYearDayCell(dateStr, day + 1, `${topLeft}px 0px ${bottomRight}px 0px`, false, `${day}`);
+                                            })}
+                                            {Array.from({ length: visibleTrailingCount }, (_, idx) => {
+                                                const nextDate = new UTCDate(lastDay);
+                                                nextDate.setDate(lastDay.getDate() + idx + 1);
+                                                const nextDateStr = formatDateString(nextDate);
+                                                const bottomRight = idx === visibleTrailingCount - 1 ? 10 : 0;
+                                                return renderYearDayCell(nextDateStr, nextDate.getDate(), `0px 0px ${bottomRight}px 0px`, true, `next-${idx}`);
+                                            })}
+                                        </>
                                     );
-                                })}
+                                })()}
                             </div>
                         </div>
                     );
@@ -384,6 +451,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                     onSelectEvent={isEditable ? handleStartEditEvent : undefined}
                     isEditable={isEditable}
                     countryData={countryData}
+                    highlightLongHolidays={props.highlightLongHolidays}
                 />
                 : <YearView
                     selectedDays={selectedYearDays}
@@ -396,6 +464,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                     countryData={countryData}
                     shouldScrollToMonth={props.shouldScrollToMonth}
                     onScrolledToMonth={props.onScrolledToMonth}
+                    highlightLongHolidays={props.highlightLongHolidays}
                 />}
             {dateForPopup && onNewEvent && (
                 <EventPopup

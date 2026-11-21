@@ -49,6 +49,8 @@
   background: var(--weekend-bg);
 }
 
+
+
 .yearGrid {
   display: flex;
   flex-wrap: wrap;
@@ -117,6 +119,22 @@
 
 .holiday {
   background-color: var(--holiday-bg);
+}
+
+.dayCell.otherMonth {
+  background: var(--day-hover);
+  color: var(--text-muted);
+  opacity: 0.72;
+}
+
+.dayCell.longHoliday {
+  background: color-mix(in srgb, #f59e0b 24%, var(--day-cell-bg));
+  box-shadow: inset 0 -2px 0 #d97706;
+}
+
+.dayCell.otherMonth.longHoliday {
+  background: color-mix(in srgb, #f59e0b 20%, var(--day-hover));
+  box-shadow: inset 0 -2px 0 #d97706;
 }
 
 .rangeDay { background: color-mix(in srgb, #0d9488 16%, var(--day-cell-bg)); border-bottom: 2px solid #0d9488; }

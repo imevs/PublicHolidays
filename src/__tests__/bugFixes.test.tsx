@@ -658,7 +658,7 @@ describe("Performance & Bundle optimizations (Section 3)", () => {
                 />
             );
 
-            fireEvent.click(screen.getByText("🇱🇻").closest("[data-month=\"5\"]")!);
+            fireEvent.click(screen.getAllByText("🇱🇻").map(el => el.closest("[data-month=\"5\"]")).find(Boolean)!);
 
             expect(screen.getByText("Events on 2025-05-01")).toBeInTheDocument();
             expect(screen.getByText("Labour Day")).toBeInTheDocument();
@@ -987,7 +987,7 @@ describe("UI, Accessibility & Year Range Fixes", () => {
             fireEvent.keyDown(mayHeader, { key: " " });
             expect(onModeChange).toHaveBeenCalledTimes(2);
 
-            const mayFirstCell = screen.getByText("🇱🇻").closest("[data-month=\"5\"]")!;
+            const mayFirstCell = screen.getAllByText("🇱🇻").map(el => el.closest("[data-month=\"5\"]")).find(Boolean)!;
             expect(mayFirstCell).toHaveAttribute("role", "button");
             expect(mayFirstCell).toHaveAttribute("tabindex", "0");
 

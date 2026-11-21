@@ -45,7 +45,8 @@ export const de = {
     },
     countryFilter: {
         selectCountries: "Länder auswählen",
-        showExtraHolidaysOnly: "Nur zusätzliche Feiertage anzeigen",
+        showExtraHolidaysOnly: "Arbeitsfreie Tage anzeigen",
+        highlightLongHolidays: "Lange Feiertage hervorheben",
         showTimezones: "Zeitzonen anzeigen",
         showLocalTime: "Ortszeit anzeigen",
         currentTimePrefix: "Aktuelle Zeit:",
