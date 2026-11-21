@@ -1599,47 +1599,77 @@ a:hover {
     margin: 10mm;
   }
 
-  body * {
-    visibility: hidden;
+  html,
+  body,
+  #root,
+  [class*="app"],
+  [class*="container"] {
+    background: #ffffff !important;
+    color: #111827 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
-  #calendar-grid-print-container,
-  #calendar-grid-print-container * {
-    visibility: visible;
+  header,
+  nav,
+  dialog,
+  [class*="themeSelector"],
+  [class*="controls"],
+  [class*="stickyToolbarWrapper"],
+  [class*="panel"],
+  [class*="backdrop"],
+  [class*="animateHiding"],
+  [class*="hidden"],
+  [class*="navButton"],
+  [class*="EventListInput"],
+  div:has(> label[for="events-data"]) {
+    display: none !important;
   }
 
   #calendar-grid-print-container {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
+    position: static !important;
+    width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  /* Optimization for A4 fitting */
+  #calendar-grid-print-container h1 {
+    font-size: 1.25rem !important;
+    margin: 0 0 8px 0 !important;
+    text-align: center !important;
+    color: #111827 !important;
+  }
+
+  /* Year View A4 3x4 grid */
   [class*="yearGrid"] {
     display: grid !important;
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 5px !important;
-    justify-content: start !important;
+    gap: 6px !important;
     width: 100% !important;
   }
 
   [class*="monthContainer"] {
     width: 100% !important;
-    padding: 2px !important;
+    padding: 3px !important;
     margin: 0 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   [class*="monthHeader"] {
     font-size: 0.9rem !important;
     margin-bottom: 2px !important;
+    color: #111827 !important;
   }
 
   [class*="dayCell"] {
-    min-height: 28px !important;
-    padding: 1px !important;
+    min-height: 26px !important;
+    padding: 2px !important;
     font-size: 0.7rem !important;
   }
 
@@ -1648,31 +1678,48 @@ a:hover {
   }
 
   [class*="holidayIndicator"] {
-    font-size: 0.5rem !important;
+    font-size: 0.55rem !important;
   }
 
-  /* Scale the year header down */
-  #calendar-grid-print-container h1 {
-    font-size: 1.2rem !important;
-    margin: 2px 0 !important;
-    text-align: center !important;
+  /* Month View A4 fitting */
+  [class*="calendarGrid_"]:not([class*="Container"]) {
+    display: grid !important;
+    grid-template-columns: repeat(7, minmax(0, 1fr)) !important;
+    gap: 2px !important;
+    width: 100% !important;
   }
 
-  /* Ensure EventsList starts on a new page */
+  [class*="calendarDay"] {
+    min-height: 72px !important;
+    padding: 4px !important;
+    border: 1px solid #e5e7eb !important;
+  }
+
+  [class*="rangeEvent"],
+  [class*="rangeDay"],
+  [class*="hasRangeEvent"],
+  [class*="today"],
+  [class*="event"] {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* EventsList starts cleanly on a new page */
   [class*="eventsList"] {
     break-before: page !important;
-    margin-top: 20px !important;
+    page-break-before: always !important;
+    margin-top: 0 !important;
     display: block !important;
   }
 
   [class*="eventsWrapper"] {
-    /* Better readability for printed lists */
     column-count: 2 !important;
+    column-gap: 16px !important;
   }
 
-  .header,
-  .actionButton,
-  .controls {
-    display: none !important;
+  [class*="dateEvents"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 10px !important;
   }
 }
