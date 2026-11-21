@@ -36,6 +36,10 @@ export const Holidays: React.FC = () => {
     const [countryData, setCountryData] = useState({});
 
     useEffect(() => {
+        document.title = `Public Holidays Calendar ${currentDate.getFullYear()}`;
+    }, [currentDate]);
+
+    useEffect(() => {
         import("./data/holidays_v2/index.ts").then(({ allHolidays }) => {
             setHolidaysData(convertEvents(Object.values(allHolidays)));
         });
