@@ -13,6 +13,8 @@ export interface CountryFilterProps {
     showAllCountries: boolean;
     setShowAllCountries: (showAllCountries: boolean) => void;
     setShowAllHolidays: (showAllHolidays: boolean) => void;
+    highlightLongHolidays?: boolean;
+    setHighlightLongHolidays?: (highlight: boolean) => void;
 }
 
 const CountryFilter: React.FC<CountryFilterProps> = ({
@@ -21,6 +23,8 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
     onToggleCountry,
     setShowAllCountries,
     setShowAllHolidays,
+    highlightLongHolidays,
+    setHighlightLongHolidays,
 }) => {
     const { t, getCountryName, getContinentName } = useTranslation();
     const [showTimezones, setShowTimezones] = useState(false);
@@ -65,6 +69,20 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
         <div className={styles.controlGroup}>
             <label className={styles.controlGroupLabel}>{t.countryFilter.selectCountries}</label>
             <div className={styles.checkboxContainer}>
+                {setHighlightLongHolidays && (
+                    <>
+                        <input
+                            type="checkbox"
+                            id="highlightLongHolidays"
+                            className={styles.checkbox}
+                            checked={Boolean(highlightLongHolidays)}
+                            onChange={() => setHighlightLongHolidays(!highlightLongHolidays)}
+                        />
+                        <label htmlFor="highlightLongHolidays" className={styles.checkboxLabel}>
+                            {t.countryFilter.highlightLongHolidays}
+                        </label>
+                    </>
+                )}
                 <input
                     type="checkbox"
                     id="showExtraHolidaysOnly"

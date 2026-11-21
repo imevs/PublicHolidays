@@ -8,6 +8,7 @@ export interface CalendarDay {
     isSideMonth: boolean;
     isToday: boolean;
     isWeekend: boolean;
+    isLongHoliday?: boolean;
     events: CalendarEvent[];
     dayNumber: number;
 }

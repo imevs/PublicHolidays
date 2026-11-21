@@ -16,6 +16,7 @@ interface CalendarDayProps {
     countryData: Record<string, Description>;
     setDateForPopup(date: UTCDate): void;
     onSelectEvent?: (date: UTCDate, event: OtherEvent) => void;
+    highlightLongHolidays?: boolean;
 }
 
 const CalendarDay: React.FC<CalendarDayProps> = ({
@@ -25,6 +26,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({
     isSelected,
     isEditable,
     countryData,
+    highlightLongHolidays,
 }) => {
     const { getCountryName, language } = useTranslation();
     const hasRangeEvent = day.isCurrentMonth && day.events.some((e) => e.kind === "other" && e.isRange);
@@ -36,6 +38,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({
         isEditable ? styles.isClickable : "",
         day.isWeekend ? styles.holiday : "",
         hasRangeEvent && styles.hasRangeEvent,
+        highlightLongHolidays && day.isLongHoliday && styles.longHoliday,
     ].filter(Boolean).join(" ");
 
     const monthNumber = day.date.getMonth() + 1; // 1-12
