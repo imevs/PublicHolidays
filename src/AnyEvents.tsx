@@ -6,7 +6,6 @@ import styles from "./Holidays.module.css";
 import { CalendarEvent, type OtherEvent } from "./types/index.ts";
 import { EventListInput } from "./components/EventListInput/EventListInput.tsx";
 import Controls from "./components/Controls/Controls.tsx";
-import { EventListInputButtons } from "./components/EventListInput/EventListInputButtons.tsx";
 import { ActionButtons } from "./components/EventsList/EventsListActionButtons.tsx";
 import { EventsList } from "./components/EventsList/EventsList.tsx";
 import { APP_BASE_NAME, STORAGE_KEY } from "./consts.ts";
@@ -166,12 +165,8 @@ export const AnyEvents: React.FC = () => {
                     toggleMode={() => handleModeChange(mode === "month" ? "year" : "month", currentDate.getMonth())}
                     onSetMode={(newMode) => handleModeChange(newMode, currentDate.getMonth())}
                     isCustomEditor={true}
-                />
-
-                <EventListInputButtons
                     setDataText={setDataText}
                     setHolidaysData={setHolidaysData}
-                    holidaysParsed={holidaysData}
                 />
 
                 <div id="calendar-grid-print-container">
