@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { parseICS } from "../../utils/generateICS.ts";
 import { getFlagEmoji } from "../../utils/countryFlags.ts";
@@ -58,7 +58,7 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
     const [icsUrl, setIcsUrl] = useState("");
     const [menuOpen, setMenuOpen] = useState(false);
     const [urlModalOpen, setUrlModalOpen] = useState(false);
-    const [menuPos, setMenuPos] = useState<{ top: number; right: number } | null>(null);
+    const [menuPos, setMenuPos] = useState<{ top: number; left: number } | null>(null);
 
     const handleICS = useCallback((text: string) => {
         if (!text || !text.includes("BEGIN:VCALENDAR")) {
@@ -83,19 +83,29 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
         }
     }, [searchParams, handleICS]);
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (!menuOpen) {
             setMenuPos(null);
             return;
         }
         const updatePos = () => {
-            if (importButtonRef.current) {
-                const rect = importButtonRef.current.getBoundingClientRect();
-                setMenuPos({
-                    top: rect.bottom + 6,
-                    right: Math.max(10, window.innerWidth - rect.right),
-                });
+            if (!importButtonRef.current) return;
+            const rect = importButtonRef.current.getBoundingClientRect();
+            const menuWidth = menuRef.current?.offsetWidth || 220;
+            const menuHeight = menuRef.current?.offsetHeight || 106;
+            const vw = document.documentElement.clientWidth;
+            const vh = window.innerHeight;
+
+            let left = rect.right - menuWidth;
+            left = Math.max(10, Math.min(left, vw - menuWidth - 10));
+
+            let top = rect.bottom + 6;
+            if (top + menuHeight > vh - 10 && rect.top - menuHeight - 6 >= 10) {
+                top = rect.top - menuHeight - 6;
             }
+            top = Math.max(10, Math.min(top, vh - menuHeight - 10));
+
+            setMenuPos({ top, left });
         };
         updatePos();
 
@@ -184,7 +194,7 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
                     role="menu"
                     aria-label="Import options"
                     className={styles.dropdownMenu}
-                    style={{ top: menuPos.top, right: menuPos.right }}
+                    style={{ top: menuPos.top, left: menuPos.left }}
                 >
                     <button
                         type="button"

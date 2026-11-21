@@ -26,15 +26,18 @@ const Controls: React.FC<ControlsProps> = (props) => {
             <div className={styles.controlsGrid}>
                 {/* Year Selection */}
                 <div className={styles.controlGroup}>
-                    <label className={styles.controlGroupLabel}>Select Year</label>
+                    <label htmlFor="select-year" className={styles.controlGroupLabel}>Select Year</label>
                     <div className={styles.controlGroupItem}>
                         <button
+                            type="button"
                             className={styles.navButton}
+                            aria-label="Previous year"
                             onClick={() => onNavigateMonth(selectedDate.getMonth() - 12)}
                         >
-                            ← Previous
+                            ←<span className={styles.navButtonText}> Previous</span>
                         </button>
                         <select
+                            id="select-year"
                             className={styles.select}
                             value={selectedYear}
                             onChange={(e) => {
@@ -50,26 +53,31 @@ const Controls: React.FC<ControlsProps> = (props) => {
                             ))}
                         </select>
                         <button
+                            type="button"
                             className={styles.navButton}
+                            aria-label="Next year"
                             onClick={() => onNavigateMonth(selectedDate.getMonth() + 12)}
                         >
-                            Next →
+                            <span className={styles.navButtonText}>Next </span>→
                         </button>
                     </div>
                 </div>
 
                 {/* Month Selection */}
                 <div className={styles.controlGroup}>
-                    <label className={styles.controlGroupLabel}>Select Month</label>
+                    <label htmlFor="select-month" className={styles.controlGroupLabel}>Select Month</label>
                     <div className={styles.controlGroupItem}>
                         <button
+                            type="button"
                             className={styles.navButton}
+                            aria-label="Previous month"
                             onClick={() => onNavigateMonth(selectedDate.getMonth() - 1)}
                         >
-                            ← Previous
+                            ←<span className={styles.navButtonText}> Previous</span>
                         </button>
 
                         <select
+                            id="select-month"
                             className={styles.select}
                             value={selectedMonth}
                             onChange={(e) => {
@@ -87,10 +95,12 @@ const Controls: React.FC<ControlsProps> = (props) => {
                             ))}
                         </select>
                         <button
+                            type="button"
                             className={styles.navButton}
+                            aria-label="Next month"
                             onClick={() => onNavigateMonth(selectedDate.getMonth() + 1)}
                         >
-                            Next →
+                            <span className={styles.navButtonText}>Next </span>→
                         </button>
                     </div>
                 </div>
