@@ -23,8 +23,6 @@ const icons = [
     "🤩", "😇", "🥰", "😤", "😈", "👻", "🔥"
 ];
 
-const Emoji = () => icons.map((s, i) => <span key={i} role="button" tabIndex={0}>{s}</span>);
-
 const EventPopup: React.FC<EventPopupProps> = ({
     initialDate,
     initialEvent,
@@ -32,7 +30,7 @@ const EventPopup: React.FC<EventPopupProps> = ({
     onNewEvent,
     onDeleteEvent,
 }) => {
-    const ref = useRef<HTMLDivElement | null>(null);
+    const dialogRef = useRef<HTMLDialogElement | null>(null);
     const nameRef = useRef<HTMLInputElement | null>(null);
     const [name, setName] = useState(() => {
         if (!initialEvent) return "";
@@ -42,13 +40,48 @@ const EventPopup: React.FC<EventPopupProps> = ({
     const [icon, setIcon] = useState(initialEvent?.icon || "🎂");
 
     useEffect(() => {
-        const onDocClick = (e: MouseEvent) => {
-            if (ref.current && !ref.current.contains(e.target as Node)) {
-                onNewEvent(null);
-            }
+        const dialog = dialogRef.current;
+        if (!dialog) return;
+
+        if (typeof dialog.showModal === "function" && !dialog.open) {
+            dialog.showModal();
+        } else if (!dialog.hasAttribute("open")) {
+            dialog.setAttribute("open", "");
+        }
+    }, []);
+
+    useEffect(() => {
+        const dialog = dialogRef.current;
+        if (!dialog) return;
+
+        let downTarget: EventTarget | null = null;
+        const handlePointerDown = (e: PointerEvent) => {
+            downTarget = e.target;
         };
-        document.addEventListener("mousedown", onDocClick);
-        return () => document.removeEventListener("mousedown", onDocClick);
+        const handlePointerUp = (e: PointerEvent) => {
+            if (!dialog.open) return;
+            const rect = dialog.getBoundingClientRect();
+            const isInRect =
+                e.clientX >= rect.left &&
+                e.clientX <= rect.right &&
+                e.clientY >= rect.top &&
+                e.clientY <= rect.bottom;
+
+            if (!isInRect && downTarget === e.target) {
+                const hasClosedBy = "closedBy" in HTMLDialogElement.prototype;
+                if (!hasClosedBy) {
+                    onNewEvent(null);
+                }
+            }
+            downTarget = null;
+        };
+
+        dialog.addEventListener("pointerdown", handlePointerDown);
+        dialog.addEventListener("pointerup", handlePointerUp);
+        return () => {
+            dialog.removeEventListener("pointerdown", handlePointerDown);
+            dialog.removeEventListener("pointerup", handlePointerUp);
+        };
     }, [onNewEvent]);
 
     const handleSave = useCallback(() => {
@@ -100,32 +133,53 @@ const EventPopup: React.FC<EventPopupProps> = ({
     }, [handleKeyDown]);
 
     return (
-        <>
-            <div className={styles.shadow} />
-            <div
-                ref={ref}
-                className={styles.popup}
-                onClick={(e) => { e.stopPropagation(); }}
-                role="dialog"
-                aria-modal="true"
-            >
-                <p><b>{initialEvent ? `Edit event for ${initialDate}` : `Add new event for ${initialDate}`}</b></p>
-                <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                    <div className={styles.nameContainer}>
-                        <label htmlFor="eventName">Name</label>
-                        <input
-                            id="eventName"
-                            ref={nameRef}
-                            value={name}
-                            required
-                            type="text"
-                            onChange={e => setName(e.target.value)}
-                        />
-                    </div>
-                    <div className={styles["emoji-popup"]} onClick={onIconClick} onKeyDown={onIconKeyDown}>
-                        <Emoji />
-                    </div>
+        <dialog
+            ref={dialogRef}
+            className={styles.popup}
+            {...({ closedby: "any" } as React.DialogHTMLAttributes<HTMLDialogElement>)}
+            aria-labelledby="event-popup-title"
+            onClose={() => onNewEvent(null)}
+            onCancel={() => onNewEvent(null)}
+        >
+            <div className={styles.header}>
+                <h3 id="event-popup-title">
+                    {initialEvent ? `Edit event for ${initialDate}` : `Add new event for ${initialDate}`}
+                </h3>
+                <button
+                    type="button"
+                    className={styles.closeBtn}
+                    aria-label="Close"
+                    onClick={() => onNewEvent(null)}
+                >
+                    ✕
+                </button>
+            </div>
+            <div className={styles.body}>
+                <div className={styles.nameContainer}>
+                    <label htmlFor="eventName">Name</label>
+                    <input
+                        id="eventName"
+                        ref={nameRef}
+                        value={name}
+                        required
+                        type="text"
+                        onChange={e => setName(e.target.value)}
+                    />
+                </div>
+                <div className={styles.emojiGrid} onClick={onIconClick} onKeyDown={onIconKeyDown}>
+                    {icons.map((s, i) => (
+                        <span
+                            key={i}
+                            role="button"
+                            tabIndex={0}
+                            className={`${styles.emojiItem} ${icon === s ? styles.emojiItemActive : ""}`}
+                        >
+                            {s}
+                        </span>
+                    ))}
+                </div>
 
+                <div className={styles.checkboxRow}>
                     <input
                         type="checkbox"
                         id="oneTime"
@@ -134,17 +188,16 @@ const EventPopup: React.FC<EventPopupProps> = ({
                         onChange={(e) => setOneTime(e.target.checked)}
                     />
                     <label htmlFor="oneTime" className={styles.checkboxLabel}>One-time</label>
-
-                    <div style={{ display: "flex", gap: 8 }}>
-                        <button type="button" onClick={handleSave}>Save (Enter)</button>
-                        {initialEvent && onDeleteEvent && (
-                            <button type="button" onClick={onDeleteEvent}>Delete</button>
-                        )}
-                        <button type="button" onClick={() => onNewEvent(null)}>Cancel (Esc)</button>
-                    </div>
                 </div>
             </div>
-        </>
+            <div className={styles.footer}>
+                <button type="button" className={styles.saveBtn} onClick={handleSave}>Save (Enter)</button>
+                {initialEvent && onDeleteEvent && (
+                    <button type="button" className={styles.deleteBtn} onClick={onDeleteEvent}>Delete</button>
+                )}
+                <button type="button" className={styles.cancelBtn} onClick={() => onNewEvent(null)}>Cancel (Esc)</button>
+            </div>
+        </dialog>
     );
 };
 

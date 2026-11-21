@@ -809,7 +809,7 @@ describe("UI, Accessibility & Year Range Fixes", () => {
         expect(screen.getByRole("option", { name: "2030" })).toBeInTheDocument();
     });
 
-    it("CountryFilter chips and toggle support keyboard activation and aria-pressed", () => {
+    it("CountryFilter chips and toggle support keyboard activation and aria-pressed", async () => {
         const onToggleCountry = jest.fn();
         const setShowAllCountries = jest.fn();
         render(
@@ -822,8 +822,8 @@ describe("UI, Accessibility & Year Range Fixes", () => {
             />
         );
 
-        const lvChip = screen.getByRole("button", { name: /Latvia/ });
-        const deChip = screen.getByRole("button", { name: /Germany/ });
+        const lvChip = await screen.findByRole("button", { name: /Latvia/ });
+        const deChip = await screen.findByRole("button", { name: /Germany/ });
         expect(lvChip).toHaveAttribute("tabindex", "0");
         expect(lvChip).toHaveAttribute("aria-pressed", "true");
         expect(deChip).toHaveAttribute("aria-pressed", "false");
@@ -840,6 +840,32 @@ describe("UI, Accessibility & Year Range Fixes", () => {
         expect(setShowAllCountries).toHaveBeenCalledWith(false);
         fireEvent.keyDown(toggleBtn, { key: " " });
         expect(setShowAllCountries).toHaveBeenCalledTimes(2);
+    });
+
+    it("CountryFilter defaults to Europe, shows continent tags, and allows switching continents", async () => {
+        render(
+            <CountryFilter
+                selectedCountries={["LV", "CN"]}
+                onToggleCountry={jest.fn()}
+                showAllCountries={true}
+                setShowAllCountries={jest.fn()}
+                setShowAllHolidays={jest.fn()}
+            />
+        );
+
+        // Europe default expansion
+        const lvChip = await screen.findByRole("button", { name: /Latvia/ });
+        expect(lvChip).toBeInTheDocument();
+
+        // Asia continent tag with badge for selected CN
+        const asiaTag = screen.getByText(/Asia/);
+        expect(asiaTag).toBeInTheDocument();
+        expect(screen.getByText("1")).toBeInTheDocument();
+
+        // Click Asia tag
+        fireEvent.click(asiaTag);
+        const chinaChip = await screen.findByRole("button", { name: /China/ });
+        expect(chinaChip).toBeInTheDocument();
     });
 
     it("MonthNavigation heading supports keyboard activation with Enter and Space", () => {

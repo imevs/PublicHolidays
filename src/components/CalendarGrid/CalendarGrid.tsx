@@ -262,6 +262,8 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
     const [shouldAnimate, setShouldAnimate] = useState<boolean>(prevMode === mode);
     const isEditable = onNewEvent !== undefined;
 
+    const dayDialogRef = useRef<HTMLDialogElement | null>(null);
+
     const yearDaysByDate = useMemo(() => {
         const map = new Map<DateString, CalendarDayType>();
         for (const d of selectedYearDays) {
@@ -275,16 +277,57 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
         : undefined;
 
     useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            const popupElement = document.querySelector(`.${styles.popup}`);
-            if (popupElement && !popupElement.contains(event.target as Node)) {
-                setSelectedDay(null);
+        const dialog = dayDialogRef.current;
+        if (!dialog) return;
+
+        if (selectedDay) {
+            if (typeof dialog.showModal === "function" && !dialog.open) {
+                dialog.showModal();
+            } else if (!dialog.hasAttribute("open")) {
+                dialog.setAttribute("open", "");
             }
+        } else {
+            if (dialog.open) {
+                if (typeof dialog.close === "function") {
+                    dialog.close();
+                } else {
+                    dialog.removeAttribute("open");
+                }
+            }
+        }
+    }, [selectedDay]);
+
+    useEffect(() => {
+        const dialog = dayDialogRef.current;
+        if (!dialog) return;
+
+        let downTarget: EventTarget | null = null;
+        const handlePointerDown = (e: PointerEvent) => {
+            downTarget = e.target;
+        };
+        const handlePointerUp = (e: PointerEvent) => {
+            if (!dialog.open) return;
+            const rect = dialog.getBoundingClientRect();
+            const isInRect =
+                e.clientX >= rect.left &&
+                e.clientX <= rect.right &&
+                e.clientY >= rect.top &&
+                e.clientY <= rect.bottom;
+
+            if (!isInRect && downTarget === e.target) {
+                const hasClosedBy = "closedBy" in HTMLDialogElement.prototype;
+                if (!hasClosedBy) {
+                    setSelectedDay(null);
+                }
+            }
+            downTarget = null;
         };
 
-        document.addEventListener("mousedown", handleClickOutside);
+        dialog.addEventListener("pointerdown", handlePointerDown);
+        dialog.addEventListener("pointerup", handlePointerUp);
         return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
+            dialog.removeEventListener("pointerdown", handlePointerDown);
+            dialog.removeEventListener("pointerup", handlePointerUp);
         };
     }, []);
 
@@ -354,55 +397,79 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                     } : undefined}
                 />
             )}
-            {selectedDay && (
-                <div className={styles.popup}>
-                    <div className={styles.popupContent}>
-                        <h3>Events on {formatDateString(selectedDay)}</h3>
-                        <ul>
-                            {selectedDayEvents
-                                ?.filter(h => h.kind === "publicHoliday")
-                                .map((holiday, index) => (
-                                    <li key={index} data-flag={getFlagEmoji(holiday.countryCode)}>
-                                        <a target="_blank" href={getLink(undefined, holiday.country, "public holidays", countryData)}><strong>{holiday.country}</strong></a>:{" "}
-                                        <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name, countryData)}>{holiday.name}</a>
-                                    </li>
-                                ))}
-                            {selectedDayEvents
-                                ?.filter((h): h is OtherEvent => h.kind === "other")
-                                .map((holiday, index) => (
-                                    <li key={index} data-flag={holiday.icon} className={styles.customEventItem}>
-                                        <span>{holiday.name}</span>
-                                        {isEditable && (
-                                            <span className={styles.eventItemActions}>
-                                                {onEditEvent && (
-                                                    <button
-                                                        type="button"
-                                                        className={styles.smallActionBtn}
-                                                        aria-label={`Edit ${holiday.name}`}
-                                                        onClick={() => handleStartEditEvent(selectedDay, holiday)}
-                                                    >
-                                                        Edit
-                                                    </button>
-                                                )}
-                                                {onDeleteEvent && (
-                                                    <button
-                                                        type="button"
-                                                        className={`${styles.smallActionBtn} ${styles.deleteActionBtn}`}
-                                                        aria-label={`Delete ${holiday.name}`}
-                                                        onClick={() => handleDeleteFromDayPopup(holiday)}
-                                                    >
-                                                        Delete
-                                                    </button>
-                                                )}
+            <dialog
+                ref={dayDialogRef}
+                className={styles.popup}
+                {...({ closedby: "any" } as React.DialogHTMLAttributes<HTMLDialogElement>)}
+                aria-labelledby="day-popup-title"
+                onClose={() => setSelectedDay(null)}
+                onCancel={() => setSelectedDay(null)}
+            >
+                {selectedDay && (
+                    <>
+                        <div className={styles.popupHeader}>
+                            <h3 id="day-popup-title">Events on {formatDateString(selectedDay)}</h3>
+                            <button
+                                type="button"
+                                className={styles.closeBtn}
+                                aria-label="Close"
+                                onClick={() => setSelectedDay(null)}
+                            >
+                                ✕
+                            </button>
+                        </div>
+                        <div className={styles.popupBody}>
+                            <ul>
+                                {selectedDayEvents
+                                    ?.filter(h => h.kind === "publicHoliday")
+                                    .map((holiday, index) => (
+                                        <li key={index} className={styles.eventItem}>
+                                            <span className={styles.eventBadge}>{getFlagEmoji(holiday.countryCode)}</span>
+                                            <span className={styles.eventDetails}>
+                                                <a target="_blank" href={getLink(undefined, holiday.country, "public holidays", countryData)}><strong>{holiday.country}</strong></a>:{" "}
+                                                <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name, countryData)}>{holiday.name}</a>
                                             </span>
-                                        )}
-                                    </li>
-                                ))}
-                        </ul>
+                                        </li>
+                                    ))}
+                                {selectedDayEvents
+                                    ?.filter((h): h is OtherEvent => h.kind === "other")
+                                    .map((holiday, index) => (
+                                        <li key={index} className={`${styles.eventItem} ${styles.customEventItem}`}>
+                                            <span className={styles.eventBadge}>{holiday.icon}</span>
+                                            <span className={styles.eventDetails}>{holiday.name}</span>
+                                            {isEditable && (
+                                                <span className={styles.eventItemActions}>
+                                                    {onEditEvent && (
+                                                        <button
+                                                            type="button"
+                                                            className={styles.smallActionBtn}
+                                                            aria-label={`Edit ${holiday.name}`}
+                                                            onClick={() => handleStartEditEvent(selectedDay, holiday)}
+                                                        >
+                                                            Edit
+                                                        </button>
+                                                    )}
+                                                    {onDeleteEvent && (
+                                                        <button
+                                                            type="button"
+                                                            className={`${styles.smallActionBtn} ${styles.deleteActionBtn}`}
+                                                            aria-label={`Delete ${holiday.name}`}
+                                                            onClick={() => handleDeleteFromDayPopup(holiday)}
+                                                        >
+                                                            Delete
+                                                        </button>
+                                                    )}
+                                                </span>
+                                            )}
+                                        </li>
+                                    ))}
+                            </ul>
+                        </div>
                         <div className={styles.popupFooterActions}>
                             {isEditable && (
                                 <button
                                     type="button"
+                                    className={styles.primaryActionBtn}
                                     onClick={() => {
                                         const dayToAdd = selectedDay;
                                         setSelectedDay(null);
@@ -412,11 +479,11 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                                     + Add event
                                 </button>
                             )}
-                            <button type="button" onClick={() => setSelectedDay(null)}>Close</button>
+                            <button type="button" className={styles.secondaryActionBtn} onClick={() => setSelectedDay(null)}>Close</button>
                         </div>
-                    </div>
-                </div>
-            )}
+                    </>
+                )}
+            </dialog>
         </div>
     );
 };
