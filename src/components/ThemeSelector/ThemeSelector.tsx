@@ -9,14 +9,13 @@ export interface Theme {
 
 const themes: Theme[] = [
     { id: "neutral", name: "Neutral", icon: "⚪" },
-    { id: "vibrant", name: "Vibrant", icon: "🎨" },
     { id: "dark", name: "Dark", icon: "🌙" },
     { id: "ocean", name: "Ocean", icon: "🌊" },
     { id: "sunset", name: "Sunset", icon: "🌅" },
     { id: "ios", name: "iOS", icon: "🍎" },
     { id: "material", name: "Material", icon: "🔷" },
     { id: "creme", name: "Creme", icon: "☕" },
-    { id: "pencil", name: "Pencil Sketch", icon: "✏️" },
+    { id: "pencil", name: "Minimalistic", icon: "✏️" },
     { id: "seasonal", name: "Seasonal", icon: "🌍" },
     { id: "lightblue", name: "Light Blue", icon: "❄️" },
     { id: "brightblue", name: "Bright Blue", icon: "❅" },
@@ -33,7 +32,11 @@ export const ThemeSelector: React.FC = () => {
     // Initialize theme from localStorage or use default
     const [currentTheme, setCurrentTheme] = useState<string>(() => {
         try {
-            return localStorage.getItem(THEME_STORAGE_KEY) || DEFAULT_THEME;
+            const saved = localStorage.getItem(THEME_STORAGE_KEY);
+            if (saved && themes.some(t => t.id === saved)) {
+                return saved;
+            }
+            return DEFAULT_THEME;
         } catch (error) {
             console.error("Failed to read theme from localStorage:", error);
             return DEFAULT_THEME;
