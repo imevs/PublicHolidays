@@ -10,9 +10,13 @@ export interface LanguageContextValue {
 export const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 let memoryLanguage: LanguageCode = DEFAULT_LANGUAGE;
+let storageWriteFailed = false;
 const listeners = new Set<() => void>();
 
 export function getLanguageSnapshot(): LanguageCode {
+    if (storageWriteFailed) {
+        return memoryLanguage;
+    }
     try {
         if (typeof localStorage !== "undefined") {
             const saved = localStorage.getItem(LANGUAGE_STORAGE_KEY);
@@ -37,9 +41,12 @@ export function setStoredLanguage(nextLanguage: LanguageCode): void {
     try {
         if (typeof localStorage !== "undefined") {
             localStorage.setItem(LANGUAGE_STORAGE_KEY, nextLanguage);
+            storageWriteFailed = localStorage.getItem(LANGUAGE_STORAGE_KEY) !== nextLanguage;
+        } else {
+            storageWriteFailed = false;
         }
     } catch {
-        // Ignore storage errors in restricted contexts
+        storageWriteFailed = true;
     }
     if (typeof document !== "undefined" && document.documentElement) {
         document.documentElement.lang = nextLanguage;
