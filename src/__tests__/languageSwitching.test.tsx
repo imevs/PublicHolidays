@@ -1,4 +1,4 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { cleanup, render, screen, fireEvent, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 let mockSearchParams = new URLSearchParams();
@@ -41,6 +41,7 @@ describe("UI language selection and multi-language switching", () => {
     });
 
     afterEach(() => {
+        cleanup();
         jest.restoreAllMocks();
         setStoredLanguage(DEFAULT_LANGUAGE);
         localStorage.removeItem(LANGUAGE_STORAGE_KEY);
@@ -127,9 +128,10 @@ describe("UI language selection and multi-language switching", () => {
             expect(sunHeader.className.trim().split(/\s+/)).toHaveLength(2);
             expect(monHeader.className.trim().split(/\s+/)).toHaveLength(1);
 
-            // Holiday event name stays untranslated while country prefix & readable date are localized
+            // Holiday event name is localized when language matches country/local, or stays in English otherwise
             await waitFor(() => {
-                expect(screen.getAllByText(/Labour Day\/May Day/).length).toBeGreaterThan(0);
+                const expectedHolidayName = lang === "lv" ? "Darba svētki" : /Labour Day\/May Day/;
+                expect(screen.getAllByText(expectedHolidayName).length).toBeGreaterThan(0);
             });
             expect(screen.getAllByText(new RegExp(dict.countries.LV)).length).toBeGreaterThan(0);
             expect(

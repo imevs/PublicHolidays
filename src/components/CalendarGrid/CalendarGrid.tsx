@@ -16,6 +16,7 @@ import { usePrevious } from "./UsePrevious.tsx";
 import type { Description } from "../../data/holidays_descriptions/all.ts";
 import { handleKeyboardActivation } from "../../utils/a11y.ts";
 import { useTranslation } from "../../i18n/useTranslation.ts";
+import { getLocalizedHolidayName } from "../../i18n/holidayNames.ts";
 
 interface CalendarGridProps {
     onNewEvent?: (date: OtherEvent) => void; // if not defined will not show popup for new event
@@ -273,7 +274,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
         onDeleteEvent,
         countryData,
     } = props;
-    const { t, getCountryName, format } = useTranslation();
+    const { t, getCountryName, format, language } = useTranslation();
     const prevMode = usePrevious(props)?.mode;
     const [selectedDay, setSelectedDay] = useState<UTCDate | null>(null); // State for selected day in popup
     const [dateForPopup, setDateForPopup] = useState<UTCDate | null>(null);
@@ -452,7 +453,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                                                 <a target="_blank" href={getLink(undefined, holiday.country, "public holidays", countryData)}>
                                                     <strong>{getCountryName(holiday.countryCode, holiday.country)}</strong>
                                                 </a>:{" "}
-                                                <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name, countryData)}>{holiday.name}</a>
+                                                <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name, countryData)}>{getLocalizedHolidayName(holiday.name, holiday.countryCode, language)}</a>
                                             </span>
                                         </li>
                                     ))}
