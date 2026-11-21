@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import html2canvas from "html2canvas";
+import { createPortal } from "react-dom";
 import { useNavigate } from "react-router";
 import { formatDateString } from "../../utils/dateUtils.ts";
 import { getFlagEmoji } from "../../utils/countryFlags.ts";
@@ -43,7 +44,10 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
 
     const toolbarRef = useRef<HTMLDivElement | null>(null);
     const exportWrapperRef = useRef<HTMLDivElement | null>(null);
+    const exportButtonRef = useRef<HTMLButtonElement | null>(null);
+    const exportMenuRef = useRef<HTMLDivElement | null>(null);
     const subscribeDialogRef = useRef<HTMLDivElement | null>(null);
+    const [menuPosition, setMenuPosition] = useState<{ top: number; right: number } | null>(null);
 
     const allEvents = useMemo((): CalendarEvent[] => {
         return (selectedYearDays ?? []).flatMap(d => d.events);
@@ -113,11 +117,29 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
         };
     }, []);
 
-    // Close export dropdown on outside click or Escape
+    // Position and close export dropdown on outside click or Escape
     useEffect(() => {
-        if (!exportMenuOpen) return;
+        if (!exportMenuOpen) {
+            setMenuPosition(null);
+            return;
+        }
+        const updatePosition = () => {
+            if (exportButtonRef.current) {
+                const rect = exportButtonRef.current.getBoundingClientRect();
+                setMenuPosition({
+                    top: rect.bottom + 6,
+                    right: Math.max(10, window.innerWidth - rect.right),
+                });
+            }
+        };
+        updatePosition();
+
         const onDocMouseDown = (e: MouseEvent) => {
-            if (exportWrapperRef.current && !exportWrapperRef.current.contains(e.target as Node)) {
+            const target = e.target as Node;
+            if (
+                !(exportMenuRef.current && exportMenuRef.current.contains(target)) &&
+                !(exportWrapperRef.current && exportWrapperRef.current.contains(target))
+            ) {
                 setExportMenuOpen(false);
             }
         };
@@ -126,9 +148,13 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                 setExportMenuOpen(false);
             }
         };
+        window.addEventListener("resize", updatePosition);
+        window.addEventListener("scroll", updatePosition, true);
         document.addEventListener("mousedown", onDocMouseDown);
         document.addEventListener("keydown", onDocKeyDown);
         return () => {
+            window.removeEventListener("resize", updatePosition);
+            window.removeEventListener("scroll", updatePosition, true);
             document.removeEventListener("mousedown", onDocMouseDown);
             document.removeEventListener("keydown", onDocKeyDown);
         };
@@ -298,6 +324,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
 
                         <div ref={exportWrapperRef} className={styles.dropdownWrapper}>
                             <button
+                                ref={exportButtonRef}
                                 type="button"
                                 className={styles.actionButton}
                                 aria-haspopup="menu"
@@ -307,8 +334,14 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                                 <span className={styles.buttonIcon} aria-hidden="true">📥</span>
                                 Export ▾
                             </button>
-                            {exportMenuOpen && (
-                                <div role="menu" aria-label="Export options" className={styles.dropdownMenu}>
+                            {exportMenuOpen && menuPosition && typeof document !== "undefined" && createPortal(
+                                <div
+                                    ref={exportMenuRef}
+                                    role="menu"
+                                    aria-label="Export options"
+                                    className={styles.dropdownMenu}
+                                    style={{ top: menuPosition.top, right: menuPosition.right }}
+                                >
                                     <button
                                         type="button"
                                         role="menuitem"
@@ -341,7 +374,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                                         <span className={styles.buttonIcon} aria-hidden="true">📷</span>
                                         Save as Image
                                     </button>
-                                </div>
+                                </div>,
+                                document.body
                             )}
                         </div>
 
