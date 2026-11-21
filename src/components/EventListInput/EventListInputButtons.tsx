@@ -5,6 +5,7 @@ import { getFlagEmoji } from "../../utils/countryFlags.ts";
 import type { CalendarEvent } from "../../types/index.ts";
 import styles from "./EventListInputButtons.module.css";
 import { useSearchParams } from "react-router";
+import { useTranslation } from "../../i18n/useTranslation.ts";
 
 interface EventListInputButtonsProps {
     setDataText: (text: string) => void;
@@ -48,6 +49,7 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
     buttonClassName,
 }) => {
     const [searchParams] = useSearchParams();
+    const { t } = useTranslation();
     const icsLinkRef = useRef<HTMLInputElement | null>(null);
     const fileInputRef = useRef<HTMLInputElement | null>(null);
     const importButtonRef = useRef<HTMLButtonElement | null>(null);
@@ -185,14 +187,14 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
                 onClick={() => setMenuOpen(prev => !prev)}
             >
                 <span className={styles.buttonIcon} aria-hidden="true">📥</span>
-                Import ▾
+                {t.eventListInputButtons.importButton}
             </button>
 
             {menuOpen && menuPos && typeof document !== "undefined" && createPortal(
                 <div
                     ref={menuRef}
                     role="menu"
-                    aria-label="Import options"
+                    aria-label={t.eventListInputButtons.importOptionsAria}
                     className={styles.dropdownMenu}
                     style={{ top: menuPos.top, left: menuPos.left }}
                 >
@@ -205,7 +207,7 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
                             fileInputRef.current?.click();
                         }}
                     >
-                        📄 Import .ics file
+                        {t.eventListInputButtons.importIcsFile}
                     </button>
                     <button
                         type="button"
@@ -216,7 +218,7 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
                             setUrlModalOpen(true);
                         }}
                     >
-                        🔗 Load .ics from link
+                        {t.eventListInputButtons.loadIcsFromLink}
                     </button>
                 </div>,
                 document.body
@@ -240,18 +242,18 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
                     onCancel={() => setUrlModalOpen(false)}
                 >
                     <div className={styles.modalHeader}>
-                        <h3 id="url-modal-title">🔗 Load .ics from link</h3>
+                        <h3 id="url-modal-title">{t.eventListInputButtons.urlModalTitle}</h3>
                         <button
                             type="button"
                             className={styles.closeBtn}
-                            aria-label="Close"
+                            aria-label={t.eventListInputButtons.closeAria}
                             onClick={() => setUrlModalOpen(false)}
                         >
                             ✕
                         </button>
                     </div>
                     <div className={styles.modalBody}>
-                        <label htmlFor="icsLinkInput">Calendar ICS URL</label>
+                        <label htmlFor="icsLinkInput">{t.eventListInputButtons.calendarIcsUrlLabel}</label>
                         <input
                             id="icsLinkInput"
                             ref={icsLinkRef}
@@ -266,7 +268,7 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
                                     setUrlModalOpen(false);
                                 }
                             }}
-                            placeholder="Add link to .ICS file"
+                            placeholder={t.eventListInputButtons.urlPlaceholder}
                         />
                     </div>
                     <div className={styles.modalFooter}>
@@ -278,14 +280,14 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
                                 setUrlModalOpen(false);
                             }}
                         >
-                            Load ICS
+                            {t.eventListInputButtons.loadIcsButton}
                         </button>
                         <button
                             type="button"
                             className={styles.secondaryBtn}
                             onClick={() => setUrlModalOpen(false)}
                         >
-                            Cancel
+                            {t.eventListInputButtons.cancelButton}
                         </button>
                     </div>
                 </dialog>

@@ -11,10 +11,13 @@ import { EventsList } from "./components/EventsList/EventsList.tsx";
 import CountryFilter from "./components/CountryFilter/CountryFilter.tsx";
 import { ActionButtons } from "./components/EventsList/EventsListActionButtons.tsx";
 import ThemeSelector from "./components/ThemeSelector/ThemeSelector.tsx";
+import LanguageSelector from "./components/LanguageSelector/LanguageSelector.tsx";
 import { APP_BASE_NAME } from "./consts.ts";
+import { useTranslation } from "./i18n/useTranslation.ts";
 
 export const Holidays: React.FC = () => {
     const navigate = useNavigate();
+    const { language, t, format } = useTranslation();
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
     const [showAllHolidays, setShowAllHolidays] = useState(true);
 
@@ -36,8 +39,14 @@ export const Holidays: React.FC = () => {
     const [countryData, setCountryData] = useState({});
 
     useEffect(() => {
-        document.title = `Public Holidays Calendar ${currentDate.getFullYear()}`;
-    }, [currentDate]);
+        document.documentElement.lang = language;
+    }, [language]);
+
+    useEffect(() => {
+        document.title = format(t.app.holidaysDocumentTitle, {
+            year: currentDate.getFullYear(),
+        });
+    }, [currentDate, t.app.holidaysDocumentTitle, format]);
 
     useEffect(() => {
         import("./data/holidays_v2/index.ts").then(({ allHolidays }) => {
@@ -53,15 +62,18 @@ export const Holidays: React.FC = () => {
 
     return (
         <div className={styles.app}>
-            <ThemeSelector />
+            <div className={styles.topUtilityBar}>
+                <LanguageSelector />
+                <ThemeSelector />
+            </div>
             <header className={styles.header}>
                 <h1>
                     <a href="./">
-                        🌍 Public Holidays Calendar
+                        🌍 {t.app.holidaysTitle}
                     </a>
                 </h1>
-                <p>Track public holidays across multiple countries</p>
-                <nav className={styles.primaryNav} aria-label="Primary">
+                <p>{t.app.holidaysSubtitle}</p>
+                <nav className={styles.primaryNav} aria-label={t.app.navAriaLabel}>
                     <a
                         href={`/${APP_BASE_NAME}/Holidays`}
                         aria-current="page"
@@ -71,7 +83,7 @@ export const Holidays: React.FC = () => {
                             navigate(`/${APP_BASE_NAME}/Holidays${window.location.hash}`);
                         }}
                     >
-                        🌍 Public Holidays
+                        🌍 {t.app.navPublicHolidays}
                     </a>
                     <a
                         href={`/${APP_BASE_NAME}/EditEvents`}
@@ -81,7 +93,7 @@ export const Holidays: React.FC = () => {
                             navigate(`/${APP_BASE_NAME}/EditEvents${window.location.hash}`);
                         }}
                     >
-                        ✏️ Custom Events
+                        ✏️ {t.app.navCustomEvents}
                     </a>
                 </nav>
             </header>

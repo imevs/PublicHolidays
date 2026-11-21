@@ -6,6 +6,7 @@ import { getFlagEmoji } from "../../utils/countryFlags.ts";
 import type { UTCDate } from "../../utils/UTCDate.ts";
 import { getLink } from "../../data/holidays_descriptions/getLink.ts";
 import type { Description } from "../../data/holidays_descriptions/all.ts";
+import { useTranslation } from "../../i18n/useTranslation.ts";
 
 export type EventsListProps = {
     selectedYearDays: CalendarDayType[];
@@ -20,6 +21,8 @@ export function EventsList({
     mode,
     countryData,
 }: EventsListProps) {
+    const { intlLocale, getCountryName } = useTranslation();
+
     return <div className={styles.eventsList}>
         <div className={styles.eventsWrapper}>
             {selectedYearDays
@@ -28,13 +31,13 @@ export function EventsList({
                 .map(date => (
                     <div className={styles.dateEvents} key={date.date.valueOf()}>
                         <div className={styles.eventsDate}>
-                            <b>{formatDateToReadable(date.date)}</b>
+                            <b>{formatDateToReadable(date.date, intlLocale)}</b>
                         </div>
                         {date.events.map(event => (
                             event.kind === "publicHoliday"
                                 ? <div className={styles.events} key={event.name + event.countryCode}>
                                     <span>{getFlagEmoji(event.countryCode)}&nbsp;</span>
-                                    <strong>{event.country}&nbsp;</strong>
+                                    <strong>{getCountryName(event.countryCode, event.country)}&nbsp;</strong>
                                     <a target="_blank" href={getLink(event.date, event.country, event.name, countryData)}>{event.name}</a>
                                 </div>
                                 : <div className={styles.events} key={event.name}>

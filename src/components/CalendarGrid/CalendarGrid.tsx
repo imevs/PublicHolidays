@@ -3,11 +3,8 @@ import { CalendarDay as CalendarDayType, type HolidayWithCountry, type OtherEven
 import CalendarDay from "../CalendarDay/CalendarDay.tsx";
 import {
     convertDayToEUFormat,
-    dayNames,
     formatDateString,
     getDaysInMonth,
-    getMonthName,
-    isWeekend,
 } from "../../utils/dateUtils.ts";
 import styles from "./CalendarGrid.module.css";
 import MonthNavigation from "../MonthNavigation/MonthNavigation.tsx";
@@ -18,6 +15,7 @@ import EventPopup from "../EventPopup/EventPopup.tsx";
 import { usePrevious } from "./UsePrevious.tsx";
 import type { Description } from "../../data/holidays_descriptions/all.ts";
 import { handleKeyboardActivation } from "../../utils/a11y.ts";
+import { useTranslation } from "../../i18n/useTranslation.ts";
 
 interface CalendarGridProps {
     onNewEvent?: (date: OtherEvent) => void; // if not defined will not show popup for new event
@@ -37,12 +35,15 @@ function cn(classes: string) {
     return classes.split("\n").map(line => line.trim()).filter(Boolean).join(" ");
 }
 
-const DaysOfWeeks = () => dayNames.map(day => (
-    <div
-        key={day}
-        className={`${styles.calendarHeader} ${isWeekend(day) ? styles.weekend : ""}`}
-    >{day}</div>
-));
+const DaysOfWeeks = () => {
+    const { t } = useTranslation();
+    return t.dates.weekdaysShort.map((day, index) => (
+        <div
+            key={`${day}-${index}`}
+            className={`${styles.calendarHeader} ${index === 5 || index === 6 ? styles.weekend : ""}`}
+        >{day}</div>
+    ));
+};
 
 type MonthViewProps = {
     shouldAnimate?: boolean;
@@ -133,6 +134,7 @@ const YearView = ({
     shouldScrollToMonth?: boolean;
     onScrolledToMonth?: () => void;
 }) => {
+    const { t, getMonthName } = useTranslation();
     const currentYear = currentDate.getFullYear();
     const [highlightedMonth, setHighlightedMonth] = useState<number | null>(null); // State for highlighted month
     const yearGridRef = useRef<HTMLDivElement | null>(null); // Ref for the year grid container
@@ -180,7 +182,7 @@ const YearView = ({
                         >
                             <div
                                 className={styles.monthHeader}
-                                title="Click to switch on month view"
+                                title={t.calendarGrid.clickToSwitchMonthView}
                                 role="button"
                                 tabIndex={0}
                                 onClick={() => {
@@ -271,6 +273,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
         onDeleteEvent,
         countryData,
     } = props;
+    const { t, getCountryName, format } = useTranslation();
     const prevMode = usePrevious(props)?.mode;
     const [selectedDay, setSelectedDay] = useState<UTCDate | null>(null); // State for selected day in popup
     const [dateForPopup, setDateForPopup] = useState<UTCDate | null>(null);
@@ -426,11 +429,13 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                 {selectedDay && (
                     <>
                         <div className={styles.popupHeader}>
-                            <h3 id="day-popup-title">Events on {formatDateString(selectedDay)}</h3>
+                            <h3 id="day-popup-title">
+                                {format(t.calendarGrid.eventsOnDate, { date: formatDateString(selectedDay) })}
+                            </h3>
                             <button
                                 type="button"
                                 className={styles.closeBtn}
-                                aria-label="Close"
+                                aria-label={t.calendarGrid.close}
                                 onClick={() => setSelectedDay(null)}
                             >
                                 ✕
@@ -444,7 +449,9 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                                         <li key={index} className={styles.eventItem}>
                                             <span className={styles.eventBadge}>{getFlagEmoji(holiday.countryCode)}</span>
                                             <span className={styles.eventDetails}>
-                                                <a target="_blank" href={getLink(undefined, holiday.country, "public holidays", countryData)}><strong>{holiday.country}</strong></a>:{" "}
+                                                <a target="_blank" href={getLink(undefined, holiday.country, "public holidays", countryData)}>
+                                                    <strong>{getCountryName(holiday.countryCode, holiday.country)}</strong>
+                                                </a>:{" "}
                                                 <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name, countryData)}>{holiday.name}</a>
                                             </span>
                                         </li>
@@ -466,20 +473,20 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                                                         <button
                                                             type="button"
                                                             className={styles.smallActionBtn}
-                                                            aria-label={`Edit ${holiday.name}`}
+                                                            aria-label={format(t.calendarGrid.editEventAria, { name: holiday.name })}
                                                             onClick={() => handleStartEditEvent(selectedDay, holiday)}
                                                         >
-                                                            Edit
+                                                            {t.calendarGrid.edit}
                                                         </button>
                                                     )}
                                                     {onDeleteEvent && (
                                                         <button
                                                             type="button"
                                                             className={`${styles.smallActionBtn} ${styles.deleteActionBtn}`}
-                                                            aria-label={`Delete ${holiday.name}`}
+                                                            aria-label={format(t.calendarGrid.deleteEventAria, { name: holiday.name })}
                                                             onClick={() => handleDeleteFromDayPopup(holiday)}
                                                         >
-                                                            Delete
+                                                            {t.calendarGrid.delete}
                                                         </button>
                                                     )}
                                                 </span>
@@ -499,10 +506,12 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                                         handleOpenNewForDate(dayToAdd);
                                     }}
                                 >
-                                    + Add event
+                                    {t.calendarGrid.addEvent}
                                 </button>
                             )}
-                            <button type="button" className={styles.secondaryActionBtn} onClick={() => setSelectedDay(null)}>Close</button>
+                            <button type="button" className={styles.secondaryActionBtn} onClick={() => setSelectedDay(null)}>
+                                {t.calendarGrid.close}
+                            </button>
                         </div>
                     </>
                 )}

@@ -1,34 +1,36 @@
 import React, { useEffect, useState } from "react";
+import type { ThemeId } from "../../i18n/types.ts";
+import { useTranslation } from "../../i18n/useTranslation.ts";
 import styles from "./ThemeSelector.module.css";
 
 export interface Theme {
-    id: string;
-    name: string;
+    id: ThemeId;
     icon: string;
 }
 
 const themes: Theme[] = [
-    { id: "neutral", name: "Neutral", icon: "⚪" },
-    { id: "dark", name: "Dark", icon: "🌙" },
-    { id: "ocean", name: "Ocean", icon: "🌊" },
-    { id: "sunset", name: "Sunset", icon: "🌅" },
-    { id: "ios", name: "iOS", icon: "🍎" },
-    { id: "material", name: "Material", icon: "🔷" },
-    { id: "creme", name: "Creme", icon: "☕" },
-    { id: "pencil", name: "Minimalistic", icon: "✏️" },
-    { id: "seasonal", name: "Seasonal", icon: "🌍" },
-    { id: "lightblue", name: "Light Blue", icon: "❄️" },
-    { id: "brightblue", name: "Bright Blue", icon: "❅" },
+    { id: "neutral", icon: "⚪" },
+    { id: "dark", icon: "🌙" },
+    { id: "ocean", icon: "🌊" },
+    { id: "sunset", icon: "🌅" },
+    { id: "ios", icon: "🍎" },
+    { id: "material", icon: "🔷" },
+    { id: "creme", icon: "☕" },
+    { id: "pencil", icon: "✏️" },
+    { id: "seasonal", icon: "🌍" },
+    { id: "lightblue", icon: "❄️" },
+    { id: "brightblue", icon: "❅" },
 ];
 
 const THEME_STORAGE_KEY = "theme";
-const DEFAULT_THEME = "neutral";
+const DEFAULT_THEME: ThemeId = "neutral";
 
 /**
  * Self-contained theme selector component that manages theme state,
  * localStorage persistence, and DOM updates internally.
  */
 export const ThemeSelector: React.FC = () => {
+    const { t } = useTranslation();
     // Initialize theme from localStorage or use default
     const [currentTheme, setCurrentTheme] = useState<string>(() => {
         try {
@@ -65,18 +67,18 @@ export const ThemeSelector: React.FC = () => {
     return (
         <div className={styles.themeSelector}>
             <label htmlFor="theme-select" className={styles.label}>
-                <span className={styles.labelText}>Theme</span>
+                <span className={styles.labelText}>{t.themeSelector.label}</span>
             </label>
             <select
                 id="theme-select"
                 value={currentTheme}
                 onChange={(e) => handleThemeChange(e.target.value)}
                 className={styles.select}
-                aria-label="Select theme"
+                aria-label={t.themeSelector.ariaLabel}
             >
                 {themes.map((theme) => (
                     <option key={theme.id} value={theme.id}>
-                        {theme.icon} {theme.name}
+                        {theme.icon} {t.themeSelector.themes[theme.id]}
                     </option>
                 ))}
             </select>

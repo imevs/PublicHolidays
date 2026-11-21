@@ -7,6 +7,29 @@
   color: var(--text-main);
 }
 
+.topUtilityBar {
+  position: absolute;
+  top: 14px;
+  right: 20px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1100px) {
+  .topUtilityBar {
+    position: static;
+    width: 100%;
+    padding: 0 12px;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+  }
+}
+
 .header {
   text-align: center;
   color: var(--text-header);

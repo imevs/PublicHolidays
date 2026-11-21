@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styles from "./SlidingPanel.module.css";
+import { useTranslation } from "../../i18n/useTranslation.ts";
 
 interface SlidingPanelProps {
     isOpen: boolean;
@@ -25,6 +26,8 @@ export const SlidingPanel: React.FC<SlidingPanelProps> = ({
     children,
     id,
 }) => {
+    const { t } = useTranslation();
+
     useEffect(() => {
         if (!isOpen) return;
         const handleKeyDown = (event: KeyboardEvent) => {
@@ -52,7 +55,7 @@ export const SlidingPanel: React.FC<SlidingPanelProps> = ({
                 id={id}
                 className={`${styles.panel} ${isOpen ? styles.open : styles.closed}`}
                 role="region"
-                aria-label="Actions panel"
+                aria-label={t.slidingPanel.actionsPanelAria}
             >
                 <div className={styles.panelHeader}>
                     {isOpen && (

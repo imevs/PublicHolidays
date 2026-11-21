@@ -1,8 +1,4 @@
 .themeSelector {
-    position: absolute;
-    top: 14px;
-    right: 20px;
-    z-index: 100;
     display: flex;
     align-items: center;
     gap: 4px;
@@ -16,9 +12,6 @@
 
 @media (max-width: 768px) {
     .themeSelector {
-        position: static;
-        width: fit-content;
-        margin: 0 12px 0 auto;
         padding: 6px 12px;
     }
 }
@@ -51,6 +44,7 @@
     opacity: 0;
     max-width: 0;
     overflow: hidden;
+    white-space: nowrap;
     transition: opacity 0.3s ease, max-width 0.3s ease;
 }
 
@@ -58,7 +52,7 @@
 .themeSelector:hover .labelText,
 .themeSelector:focus-within .labelText {
     opacity: 1;
-    max-width: 60px;
+    max-width: 90px;
 }
 
 .select {
