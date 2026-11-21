@@ -5,6 +5,7 @@ import { createBrowserRouter, Outlet, useNavigate, useSearchParams } from "react
 import { RouterProvider } from "react-router/dom";
 import { APP_BASE_NAME } from "./consts";
 import React, { useEffect } from "react";
+import { LanguageProvider } from "./i18n/LanguageContext.tsx";
 
 export const Index: React.FC = () => {
     const [searchParams] = useSearchParams();
@@ -53,5 +54,7 @@ const router = createBrowserRouter([
 const root = document.getElementById("root")!;
 
 ReactDOM.createRoot(root).render(
-    <RouterProvider router={router} />,
+    <LanguageProvider>
+        <RouterProvider router={router} />
+    </LanguageProvider>,
 );

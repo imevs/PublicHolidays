@@ -10,6 +10,8 @@ import { ActionButtons } from "./components/EventsList/EventsListActionButtons.t
 import { EventsList } from "./components/EventsList/EventsList.tsx";
 import { APP_BASE_NAME, STORAGE_KEY } from "./consts.ts";
 import ThemeSelector from "./components/ThemeSelector/ThemeSelector.tsx";
+import LanguageSelector from "./components/LanguageSelector/LanguageSelector.tsx";
+import { useTranslation } from "./i18n/useTranslation.ts";
 
 const defaultData = `
 2025-09-10 🎂 Birthday of Joe
@@ -60,6 +62,7 @@ function formatEventLine(ev: OtherEvent): string {
 
 export const AnyEvents: React.FC = () => {
     const navigate = useNavigate();
+    const { language, t, format } = useTranslation();
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
 
     const {
@@ -78,8 +81,14 @@ export const AnyEvents: React.FC = () => {
     });
 
     useEffect(() => {
-        document.title = `Events Calendar ${currentDate.getFullYear()}`;
-    }, [currentDate]);
+        document.documentElement.lang = language;
+    }, [language]);
+
+    useEffect(() => {
+        document.title = format(t.app.eventsDocumentTitle, {
+            year: currentDate.getFullYear(),
+        });
+    }, [currentDate, t.app.eventsDocumentTitle, format]);
 
     useEffect(() => {
         localStorage.setItem(STORAGE_KEY, dataText);
@@ -125,15 +134,18 @@ export const AnyEvents: React.FC = () => {
 
     return (
         <div className={styles.app}>
-            <ThemeSelector />
+            <div className={styles.topUtilityBar}>
+                <LanguageSelector />
+                <ThemeSelector />
+            </div>
             <header className={styles.header}>
                 <h1>
                     <a href="./">
-                        🌍 Events Calendar
+                        🌍 {t.app.eventsTitle}
                     </a>
                 </h1>
-                <p>Create, import, and customize your own calendar events</p>
-                <nav className={styles.primaryNav} aria-label="Primary">
+                <p>{t.app.eventsSubtitle}</p>
+                <nav className={styles.primaryNav} aria-label={t.app.navAriaLabel}>
                     <a
                         href={`/${APP_BASE_NAME}/Holidays`}
                         className={styles.navLink}
@@ -142,7 +154,7 @@ export const AnyEvents: React.FC = () => {
                             navigate(`/${APP_BASE_NAME}/Holidays${window.location.hash}`);
                         }}
                     >
-                        🌍 Public Holidays
+                        🌍 {t.app.navPublicHolidays}
                     </a>
                     <a
                         href={`/${APP_BASE_NAME}/EditEvents`}
@@ -153,7 +165,7 @@ export const AnyEvents: React.FC = () => {
                             navigate(`/${APP_BASE_NAME}/EditEvents${window.location.hash}`);
                         }}
                     >
-                        ✏️ Custom Events
+                        ✏️ {t.app.navCustomEvents}
                     </a>
                 </nav>
             </header>

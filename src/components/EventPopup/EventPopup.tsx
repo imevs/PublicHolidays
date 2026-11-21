@@ -3,6 +3,8 @@ import styles from "./EventPopup.module.css";
 import type { OtherEvent } from "../../types/index.ts";
 import type { DateString, DateTwoParts } from "../../utils/UTCDate.ts";
 import { handleKeyboardActivation } from "../../utils/a11y.ts";
+import type { ColorKey } from "../../i18n/types.ts";
+import { useTranslation } from "../../i18n/useTranslation.ts";
 
 interface EventPopupProps {
     initialDate: DateString;
@@ -23,14 +25,14 @@ const icons = [
     "🤩", "😇", "🥰", "😤", "😈", "👻", "🔥", "🏖️", "✈️", "🏔️", "🏕️"
 ];
 
-const RANGE_COLORS = [
-    { label: "Teal", value: "#0d9488" },
-    { label: "Blue", value: "#2563eb" },
-    { label: "Purple", value: "#7c3aed" },
-    { label: "Amber", value: "#d97706" },
-    { label: "Rose", value: "#db2777" },
-    { label: "Green", value: "#059669" },
-    { label: "Red", value: "#dc2626" },
+const RANGE_COLORS: readonly { key: ColorKey; value: string }[] = [
+    { key: "teal", value: "#0d9488" },
+    { key: "blue", value: "#2563eb" },
+    { key: "purple", value: "#7c3aed" },
+    { key: "amber", value: "#d97706" },
+    { key: "rose", value: "#db2777" },
+    { key: "green", value: "#059669" },
+    { key: "red", value: "#dc2626" },
 ];
 
 const EventPopup: React.FC<EventPopupProps> = ({
@@ -40,6 +42,7 @@ const EventPopup: React.FC<EventPopupProps> = ({
     onNewEvent,
     onDeleteEvent,
 }) => {
+    const { t, format } = useTranslation();
     const dialogRef = useRef<HTMLDialogElement | null>(null);
     const nameRef = useRef<HTMLInputElement | null>(null);
     const [name, setName] = useState(() => {
@@ -156,12 +159,15 @@ const EventPopup: React.FC<EventPopupProps> = ({
         >
             <div className={styles.header}>
                 <h3 id="event-popup-title">
-                    {initialEvent ? `Edit event for ${initialDate}` : `Add new event for ${initialDate}`}
+                    {format(
+                        initialEvent ? t.eventPopup.editEventForDate : t.eventPopup.addEventForDate,
+                        { date: initialDate }
+                    )}
                 </h3>
                 <button
                     type="button"
                     className={styles.closeBtn}
-                    aria-label="Close"
+                    aria-label={t.eventPopup.closeAria}
                     onClick={() => onNewEvent(null)}
                 >
                     ✕
@@ -169,7 +175,7 @@ const EventPopup: React.FC<EventPopupProps> = ({
             </div>
             <div className={styles.body}>
                 <div className={styles.nameContainer}>
-                    <label htmlFor="eventName">Name</label>
+                    <label htmlFor="eventName">{t.eventPopup.nameLabel}</label>
                     <input
                         id="eventName"
                         ref={nameRef}
@@ -201,29 +207,29 @@ const EventPopup: React.FC<EventPopupProps> = ({
                             checked={oneTime}
                             onChange={(e) => setOneTime(e.target.checked)}
                         />
-                        <label htmlFor="oneTime" className={styles.checkboxLabel}>One-time</label>
+                        <label htmlFor="oneTime" className={styles.checkboxLabel}>{t.eventPopup.oneTimeLabel}</label>
                     </div>
 
                     <div className={styles.checkboxRow}>
                         <input type="checkbox" id="isRange" className={styles.checkbox} checked={isRange} onChange={(e) => setIsRange(e.target.checked)} />
-                        <label htmlFor="isRange" className={styles.checkboxLabel}>Date range</label>
+                        <label htmlFor="isRange" className={styles.checkboxLabel}>{t.eventPopup.dateRangeLabel}</label>
                     </div>
                 </div>
 
                 {isRange && (
                     <>
                         <div className={styles.endDateContainer}>
-                            <label htmlFor="eventEndDate">End date</label>
+                            <label htmlFor="eventEndDate">{t.eventPopup.endDateLabel}</label>
                             <input id="eventEndDate" type="date" min={initialDate} value={endDate} onChange={(e) => setEndDate(e.target.value)} />
                         </div>
                         <div className={styles.colorSection}>
-                            <span className={styles.colorLabel}>Highlight color</span>
+                            <span className={styles.colorLabel}>{t.eventPopup.highlightColorLabel}</span>
                             <div className={styles.colorSwatches}>
                                 {RANGE_COLORS.map((c) => (
                                     <button
                                         key={c.value}
                                         type="button"
-                                        aria-label={c.label}
+                                        aria-label={t.eventPopup.colors[c.key]}
                                         aria-pressed={rangeColor.toLowerCase() === c.value}
                                         className={`${styles.colorSwatch} ${rangeColor.toLowerCase() === c.value ? styles.colorSwatchActive : ""}`}
                                         style={{ backgroundColor: c.value }}
@@ -236,11 +242,11 @@ const EventPopup: React.FC<EventPopupProps> = ({
                 )}
             </div>
             <div className={styles.footer}>
-                <button type="button" className={styles.saveBtn} onClick={handleSave}>Save (Enter)</button>
+                <button type="button" className={styles.saveBtn} onClick={handleSave}>{t.eventPopup.saveButton}</button>
                 {initialEvent && onDeleteEvent && (
-                    <button type="button" className={styles.deleteBtn} onClick={onDeleteEvent}>Delete</button>
+                    <button type="button" className={styles.deleteBtn} onClick={onDeleteEvent}>{t.eventPopup.deleteButton}</button>
                 )}
-                <button type="button" className={styles.cancelBtn} onClick={() => onNewEvent(null)}>Cancel (Esc)</button>
+                <button type="button" className={styles.cancelBtn} onClick={() => onNewEvent(null)}>{t.eventPopup.cancelButton}</button>
             </div>
         </dialog>
     );

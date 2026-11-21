@@ -1,7 +1,8 @@
 import React from "react";
-import { generateYears, getMonthName } from "../../utils/dateUtils.ts";
+import { generateYears } from "../../utils/dateUtils.ts";
 import styles from "./Controls.module.css";
 import { UTCDate } from "../../utils/UTCDate.ts";
+import { useTranslation } from "../../i18n/useTranslation.ts";
 
 interface ControlsProps {
     selectedDate: UTCDate;
@@ -16,6 +17,7 @@ const Controls: React.FC<ControlsProps> = (props) => {
         onDateChange,
         onNavigateMonth,
     } = props;
+    const { t, getMonthName } = useTranslation();
     const selectedYear = selectedDate.getFullYear();
     const years = generateYears(selectedYear);
     const selectedMonth = selectedDate.getMonth();
@@ -26,15 +28,15 @@ const Controls: React.FC<ControlsProps> = (props) => {
             <div className={styles.controlsGrid}>
                 {/* Year Selection */}
                 <div className={styles.controlGroup}>
-                    <label htmlFor="select-year" className={styles.controlGroupLabel}>Select Year</label>
+                    <label htmlFor="select-year" className={styles.controlGroupLabel}>{t.controls.selectYear}</label>
                     <div className={styles.controlGroupItem}>
                         <button
                             type="button"
                             className={styles.navButton}
-                            aria-label="Previous year"
+                            aria-label={t.controls.previousYearAria}
                             onClick={() => onNavigateMonth(selectedDate.getMonth() - 12)}
                         >
-                            ←<span className={styles.navButtonText}> Previous</span>
+                            ←<span className={styles.navButtonText}> {t.controls.previous}</span>
                         </button>
                         <select
                             id="select-year"
@@ -55,25 +57,25 @@ const Controls: React.FC<ControlsProps> = (props) => {
                         <button
                             type="button"
                             className={styles.navButton}
-                            aria-label="Next year"
+                            aria-label={t.controls.nextYearAria}
                             onClick={() => onNavigateMonth(selectedDate.getMonth() + 12)}
                         >
-                            <span className={styles.navButtonText}>Next </span>→
+                            <span className={styles.navButtonText}>{t.controls.next} </span>→
                         </button>
                     </div>
                 </div>
 
                 {/* Month Selection */}
                 <div className={styles.controlGroup}>
-                    <label htmlFor="select-month" className={styles.controlGroupLabel}>Select Month</label>
+                    <label htmlFor="select-month" className={styles.controlGroupLabel}>{t.controls.selectMonth}</label>
                     <div className={styles.controlGroupItem}>
                         <button
                             type="button"
                             className={styles.navButton}
-                            aria-label="Previous month"
+                            aria-label={t.controls.previousMonthAria}
                             onClick={() => onNavigateMonth(selectedDate.getMonth() - 1)}
                         >
-                            ←<span className={styles.navButtonText}> Previous</span>
+                            ←<span className={styles.navButtonText}> {t.controls.previous}</span>
                         </button>
 
                         <select
@@ -97,10 +99,10 @@ const Controls: React.FC<ControlsProps> = (props) => {
                         <button
                             type="button"
                             className={styles.navButton}
-                            aria-label="Next month"
+                            aria-label={t.controls.nextMonthAria}
                             onClick={() => onNavigateMonth(selectedDate.getMonth() + 1)}
                         >
-                            <span className={styles.navButtonText}>Next </span>→
+                            <span className={styles.navButtonText}>{t.controls.next} </span>→
                         </button>
                     </div>
                 </div>

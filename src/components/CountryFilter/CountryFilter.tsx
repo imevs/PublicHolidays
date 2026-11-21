@@ -5,6 +5,7 @@ import { getFlagEmoji } from "../../utils/countryFlags.ts";
 import { type CountryCode, CountryName, countryNames } from "../../data/countryNames.ts";
 import { handleKeyboardActivation } from "../../utils/a11y.ts";
 import { CONTINENTS, ContinentId, ContinentMeta, loadContinent } from "./continents/index.ts";
+import { useTranslation } from "../../i18n/useTranslation.ts";
 
 export interface CountryFilterProps {
     selectedCountries: CountryCode[];
@@ -21,6 +22,7 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
     setShowAllCountries,
     setShowAllHolidays,
 }) => {
+    const { t, getCountryName, getContinentName } = useTranslation();
     const [showTimezones, setShowTimezones] = useState(false);
     const [showExtraHolidaysOnly, setShowExtraHolidaysOnly] = useState(false);
     const [activeContinent, setActiveContinent] = useState<ContinentId>("europe");
@@ -61,7 +63,7 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
 
     return (
         <div className={styles.controlGroup}>
-            <label className={styles.controlGroupLabel}>Select Countries</label>
+            <label className={styles.controlGroupLabel}>{t.countryFilter.selectCountries}</label>
             <div className={styles.checkboxContainer}>
                 <input
                     type="checkbox"
@@ -71,7 +73,7 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                     onChange={() => setShowExtraHolidaysOnly(!showExtraHolidaysOnly)}
                 />
                 <label htmlFor="showExtraHolidaysOnly" className={styles.checkboxLabel}>
-                    Show only extra holidays
+                    {t.countryFilter.showExtraHolidaysOnly}
                 </label>
                 <input
                     type="checkbox"
@@ -81,7 +83,7 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                     onChange={() => setShowTimezones(!showTimezones)}
                 />
                 <label htmlFor="showTimezones" className={styles.checkboxLabel}>
-                    {showAllCountries ? "Show timezones" : "Show local time"}
+                    {showAllCountries ? t.countryFilter.showTimezones : t.countryFilter.showLocalTime}
                 </label>
             </div>
             <div className={styles.countryFilter}>
@@ -101,9 +103,9 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                                         className={`${styles.countryChip} ${isSelected ? styles.active : ""}`}
                                         onClick={() => onToggleCountry(code)}
                                         onKeyDown={(e) => handleKeyboardActivation(e, () => onToggleCountry(code))}
-                                        title={"Current time: " + getLocalTime(code)}
+                                        title={`${t.countryFilter.currentTimePrefix} ${getLocalTime(code)}`}
                                     >
-                                        {getFlagEmoji(code)} {countryName}
+                                        {getFlagEmoji(code)} {getCountryName(code, countryName)}
                                         {showTimezones && (
                                             <span className={styles.offset}>
                                                 {countryOffsets[code] ? ` (UTC${countryOffsets[code]})` : ""}
@@ -126,7 +128,7 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                                     onClick={() => setActiveContinent(cont.id)}
                                     onKeyDown={(e) => handleKeyboardActivation(e, () => setActiveContinent(cont.id))}
                                 >
-                                    {cont.emoji} {cont.name}
+                                    {cont.emoji} {getContinentName(cont.id)}
                                     {selectedCount > 0 && (
                                         <span className={styles.continentBadge}>{selectedCount}</span>
                                     )}
@@ -146,9 +148,9 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                                 className={`${styles.countryChip} ${styles.active}`}
                                 onClick={() => onToggleCountry(code)}
                                 onKeyDown={(e) => handleKeyboardActivation(e, () => onToggleCountry(code))}
-                                title={"Current time: " + getLocalTime(code)}
+                                title={`${t.countryFilter.currentTimePrefix} ${getLocalTime(code)}`}
                             >
-                                {getFlagEmoji(code)} {countryName}
+                                {getFlagEmoji(code)} {getCountryName(code, countryName)}
                                 {showTimezones && (
                                     <span className={styles.offset}>
                                         {" - " + getLocalTime(code)}
@@ -164,7 +166,7 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                     onClick={() => setShowAllCountries(!showAllCountries)}
                     onKeyDown={(e) => handleKeyboardActivation(e, () => setShowAllCountries(!showAllCountries))}
                 >
-                    {showAllCountries ? "Hide inactive" : "Show all"}
+                    {showAllCountries ? t.countryFilter.hideInactive : t.countryFilter.showAll}
                 </div>
             </div>
         </div>

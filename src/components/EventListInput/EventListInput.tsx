@@ -4,6 +4,8 @@ import { CalendarEvent } from "../../types/index.ts";
 import styles from "./EventListInput.module.css";
 import type { DateString } from "../../utils/UTCDate.ts";
 import { getDaysInMonth } from "../../utils/dateUtils.ts";
+import type { ValidationErrorKey } from "../../i18n/types.ts";
+import { useTranslation } from "../../i18n/useTranslation.ts";
 
 const yearsRange = [2023, 2024, 2025, 2026, 2027];
 const HEX_COLOR_REGEX = /^#[0-9a-fA-F]{6}$/;
@@ -129,42 +131,42 @@ function expandDateRange(startStr: string, endStr: string): DateString[] {
     return days;
 }
 
-function validateLine(line: string): { valid: boolean; error?: string } {
+function validateLine(line: string): { valid: boolean; errorKey?: ValidationErrorKey } {
     const trimmed = line.trim();
-    if (!trimmed) { return { valid: false, error: "Empty line" }; }
+    if (!trimmed) { return { valid: false, errorKey: "emptyLine" }; }
 
     const parts = trimmed.split(/\s+/);
-    if (parts.length < 2) { return { valid: false, error: "Expect at least date and name" }; }
+    if (parts.length < 2) { return { valid: false, errorKey: "expectDateAndName" }; }
 
     const date = parts[0];
     if (HEX_COLOR_REGEX.test(parts[1])) {
         if (parts.length < 3) {
-            return { valid: false, error: "Expect at least date, color, and name" };
+            return { valid: false, errorKey: "expectDateColorAndName" };
         }
     }
 
     if (date.includes("..")) {
         const rangeParts = date.split("..");
-        if (rangeParts.length !== 2) return { valid: false, error: "Invalid date range format" };
+        if (rangeParts.length !== 2) return { valid: false, errorKey: "invalidDateRangeFormat" };
         const [startStr, endStr] = rangeParts;
         if (!isValidSingleDate(startStr) || !isValidSingleDate(endStr)) {
-            return { valid: false, error: "Invalid date in range" };
+            return { valid: false, errorKey: "invalidDateInRange" };
         }
         const startHasYear = startStr.split("-").length === 3;
         const endHasYear = endStr.split("-").length === 3;
         if (startHasYear !== endHasYear) {
-            return { valid: false, error: "Date range format mismatch" };
+            return { valid: false, errorKey: "dateRangeFormatMismatch" };
         }
         const compStart = startHasYear ? startStr : `2024-${startStr}`;
         const compEnd = endHasYear ? endStr : `2024-${endStr}`;
         if (compStart > compEnd) {
-            return { valid: false, error: "Start date must be before or equal to end date" };
+            return { valid: false, errorKey: "startAfterEnd" };
         }
         return { valid: true };
     }
 
     if (!isValidSingleDate(date)) {
-        return { valid: false, error: "Invalid date" };
+        return { valid: false, errorKey: "invalidDate" };
     }
     return { valid: true };
 }
@@ -174,6 +176,7 @@ export function EventListInput(props: {
     setDataText(text: string): void;
     setHolidaysData: (data: CalendarEvent[]) => void
 }) {
+    const { t } = useTranslation();
     const textRef = useRef<HTMLTextAreaElement | null>(null);
     const iconsRef = useRef<HTMLDivElement | null>(null);
 
@@ -199,17 +202,23 @@ export function EventListInput(props: {
 
     return <div className={styles.container}>
         <label htmlFor="events-data" className={styles.label}>
-            Calendar events. Format: <code>YYYY-MM-DD [icon] event name</code> or <code>YYYY-MM-DD..YYYY-MM-DD [icon] range</code>.
+            {t.eventListInput.formatPrefix}{" "}
+            <code>{t.eventListInput.formatSingleExample}</code>{" "}
+            {t.eventListInput.formatOr}{" "}
+            <code>{t.eventListInput.formatRangeExample}</code>.
         </label>
 
         <div className={styles.wrapper}>
             <div ref={iconsRef} className={styles.icons}>
                 {props.dataText.split("\n").map((line, idx) => {
                     const result = validateLine(line);
+                    const errorText = result.errorKey
+                        ? t.eventListInput.errors[result.errorKey]
+                        : t.eventListInput.errors.invalid;
                     return (
                         <div
                             key={idx}
-                            data-tooltip={result.valid ? undefined : (result.error || "Invalid")}
+                            data-tooltip={result.valid ? undefined : errorText}
                             className={styles.lineRow}
                         >
                             <span className={`${styles.indicator} ${result.valid ? "" : styles.indicatorInvalid}`}>

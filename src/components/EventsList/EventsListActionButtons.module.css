@@ -350,6 +350,10 @@
     .desktopLabel {
         display: none;
     }
+
+    .mobileLabel {
+        display: inline;
+    }
 }
 
 @media (max-width: 600px) and (orientation: portrait) {

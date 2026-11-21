@@ -52,26 +52,47 @@ export const getDaysInMonth = (year: number, month: number): number => {
     return new Date(year, month + 1, 0).getDate();
 };
 
-export const getMonthName = (month: number): string => {
-    return new Date(0, month).toLocaleString(dateLocale, { month: "long" });
+export const getMonthName = (month: number, locale: string = dateLocale): string => {
+    return new Date(Date.UTC(2025, month, 15)).toLocaleString(locale, {
+        month: "long",
+        timeZone: "UTC",
+    });
 };
 
 export const getNextMonth = (num: number): number => {
     return (num + 1) % 12;
 };
 
-const dateFormatter = new Intl.DateTimeFormat(dateLocale, {
-    month: "long",
-    day: "numeric",
-});
+const dateFormatterCache = new Map<string, Intl.DateTimeFormat>();
+const weekdayFormatterCache = new Map<string, Intl.DateTimeFormat>();
 
-const weekdayFormatter = new Intl.DateTimeFormat(dateLocale, {
-    weekday: "long",
-});
+function getReadableDateFormatters(locale: string) {
+    let dateFmt = dateFormatterCache.get(locale);
+    if (!dateFmt) {
+        dateFmt = new Intl.DateTimeFormat(locale, {
+            month: "long",
+            day: "numeric",
+            timeZone: "UTC",
+        });
+        dateFormatterCache.set(locale, dateFmt);
+    }
 
-export function formatDateToReadable(date: UTCDate) {
-    const formattedDate = dateFormatter.format(date.valueOf());
-    const weekday = weekdayFormatter.format(date.valueOf());
+    let weekdayFmt = weekdayFormatterCache.get(locale);
+    if (!weekdayFmt) {
+        weekdayFmt = new Intl.DateTimeFormat(locale, {
+            weekday: "long",
+            timeZone: "UTC",
+        });
+        weekdayFormatterCache.set(locale, weekdayFmt);
+    }
+
+    return { dateFmt, weekdayFmt };
+}
+
+export function formatDateToReadable(date: UTCDate, locale: string = dateLocale) {
+    const { dateFmt, weekdayFmt } = getReadableDateFormatters(locale);
+    const formattedDate = dateFmt.format(date.valueOf());
+    const weekday = weekdayFmt.format(date.valueOf());
 
     return `${formattedDate} (${weekday})`;
 }

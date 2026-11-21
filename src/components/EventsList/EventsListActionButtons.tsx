@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import html2canvas from "html2canvas";
 import { useNavigate } from "react-router";
 import { formatDateString } from "../../utils/dateUtils.ts";
@@ -9,6 +9,7 @@ import type { CalendarDay as CalendarDayType, CalendarEvent } from "../../types/
 import styles from "./EventsListActionButtons.module.css";
 import { UTCDate } from "../../utils/UTCDate.ts";
 import { EventListInputButtons } from "../EventListInput/EventListInputButtons.tsx";
+import { useTranslation } from "../../i18n/useTranslation.ts";
 
 interface ActionButtonsProps {
     selectedYearDays: CalendarDayType[];
@@ -31,6 +32,22 @@ function getCountriesNames(selectedYearDays: CalendarDayType[]) {
     ));
 }
 
+function renderSubscribeModalDescription(template: string): React.ReactNode {
+    const parts = template.split(/(\{google\}|\{apple\}|\{outlook\})/g);
+    return parts.map((part, index) => {
+        if (part === "{google}") {
+            return <strong key={index}>Google Calendar</strong>;
+        }
+        if (part === "{apple}") {
+            return <strong key={index}>Apple Calendar</strong>;
+        }
+        if (part === "{outlook}") {
+            return <strong key={index}>Outlook</strong>;
+        }
+        return <Fragment key={index}>{part}</Fragment>;
+    });
+}
+
 export const ActionButtons: React.FC<ActionButtonsProps> = ({
     selectedYearDays,
     viewMode,
@@ -41,6 +58,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
     setHolidaysData,
 }) => {
     const navigate = useNavigate();
+    const { t, getCountryName } = useTranslation();
     const [subscribeModalOpen, setSubscribeModalOpen] = useState(false);
     const [includeAlarm, setIncludeAlarm] = useState(true);
     const [statusMessage, setStatusMessage] = useState("");
@@ -159,8 +177,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
         const countries = getCountriesNames(selectedYearDays);
         const fileName = countries.length > 0 ? `${countries.join("_")}_calendar` : "custom_calendar";
         exportCalendarToFile(allEvents, fileName, { includeAlarm: withAlarm });
-        setStatusMessage("Combined ICS file downloaded");
-    }, [selectedYearDays, allEvents]);
+        setStatusMessage(t.actionButtons.combinedIcsDownloaded);
+    }, [selectedYearDays, allEvents, t.actionButtons.combinedIcsDownloaded]);
 
     const exportAllCalendars = useCallback((withAlarm = false) => {
         const publicEvents = (selectedYearDays ?? [])
@@ -172,8 +190,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                 exportCalendarToFile(countryEvents, `${country}_calendar`, { includeAlarm: withAlarm });
             }
         });
-        setStatusMessage("Separate ICS files downloaded");
-    }, [selectedYearDays]);
+        setStatusMessage(t.actionButtons.separateIcsDownloaded);
+    }, [selectedYearDays, t.actionButtons.separateIcsDownloaded]);
 
     const saveAsImage = async () => {
         const element = document.getElementById("calendar-grid-capture-container");
@@ -210,19 +228,19 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-            setStatusMessage("Calendar image saved");
+            setStatusMessage(t.actionButtons.calendarImageSaved);
         } catch (error) {
             console.error("Failed to capture calendar image:", error);
-            alert("Failed to save calendar image. Please try again.");
+            alert(t.actionButtons.saveImageFailedAlert);
         }
     };
 
     const copyShareLink = async () => {
         try {
             await navigator.clipboard.writeText(window.location.href);
-            setStatusMessage("Calendar link copied to clipboard");
+            setStatusMessage(t.actionButtons.linkCopied);
         } catch {
-            setStatusMessage("Copy failed");
+            setStatusMessage(t.actionButtons.copyFailed);
         }
     };
 
@@ -235,54 +253,63 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                     ref={toolbarRef}
                     role="toolbar"
                     {...({ focusgroup: "toolbar wrap" } as React.HTMLAttributes<HTMLDivElement>)}
-                    aria-label="Calendar actions"
+                    aria-label={t.actionButtons.calendarActionsAria}
                     className={styles.actionButtonContainer}
                 >
-                    <div role="group" aria-label="View mode" className={styles.viewModeGroup}>
+                    <div role="group" aria-label={t.actionButtons.viewModeAria} className={styles.viewModeGroup}>
                         <button
                             type="button"
                             className={styles.modeButton}
                             aria-pressed={viewMode === "year"}
-                            aria-label="Year view"
-                            title="Year view"
+                            aria-label={t.actionButtons.yearView}
+                            title={t.actionButtons.yearView}
                             onClick={() => handleSelectMode("year")}
                         >
                             <span className={styles.buttonIcon} aria-hidden="true">🗓️</span>
-                            <span className={styles.modeLabel}>Year<span className={styles.desktopLabel}>&nbsp;view</span></span>
+                            <span className={styles.modeLabel}>
+                                <span className={styles.mobileLabel}>{t.actionButtons.yearShort}</span>
+                                <span className={styles.desktopLabel}>{t.actionButtons.yearView}</span>
+                            </span>
                         </button>
                         <button
                             type="button"
                             className={styles.modeButton}
                             aria-pressed={viewMode === "month"}
-                            aria-label="Month view"
-                            title="Month view"
+                            aria-label={t.actionButtons.monthView}
+                            title={t.actionButtons.monthView}
                             onClick={() => handleSelectMode("month")}
                         >
                             <span className={styles.buttonIcon} aria-hidden="true">📅</span>
-                            <span className={styles.modeLabel}>Month<span className={styles.desktopLabel}>&nbsp;view</span></span>
+                            <span className={styles.modeLabel}>
+                                <span className={styles.mobileLabel}>{t.actionButtons.monthShort}</span>
+                                <span className={styles.desktopLabel}>{t.actionButtons.monthView}</span>
+                            </span>
                         </button>
                     </div>
 
                     <span role="separator" aria-orientation="vertical" className={styles.separator} />
 
-                    <div role="group" aria-label="Export and subscribe" className={styles.actionsGroup}>
+                    <div role="group" aria-label={t.actionButtons.exportAndSubscribeAria} className={styles.actionsGroup}>
                         <button
                             type="button"
                             className={styles.actionButton}
-                            aria-label="Subscribe / Add to Calendar"
+                            aria-label={t.actionButtons.subscribeAdd}
                             onClick={() => setSubscribeModalOpen(true)}
                         >
                             <span className={styles.buttonIcon} aria-hidden="true">🔔</span>
-                            Subscribe<span className={styles.desktopLabel}>&nbsp;/ Add to Calendar</span>
+                            <span className={styles.mobileLabel}>{t.actionButtons.subscribeShort}</span>
+                            <span className={styles.desktopLabel}>{t.actionButtons.subscribeAdd}</span>
                         </button>
 
                         <button
                             type="button"
                             className={styles.actionButton}
+                            aria-label={t.actionButtons.saveAsImage}
                             onClick={saveAsImage}
                         >
                             <span className={styles.buttonIcon} aria-hidden="true">📷</span>
-                            Save<span className={styles.desktopLabel}>&nbsp;as Image</span>
+                            <span className={styles.mobileLabel}>{t.actionButtons.saveShort}</span>
+                            <span className={styles.desktopLabel}>{t.actionButtons.saveAsImage}</span>
                         </button>
 
                         {isCustomEditor && setDataText && setHolidaysData && (
@@ -297,12 +324,13 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                             <button
                                 type="button"
                                 className={`${styles.actionButton} ${styles.iconOnlyOnMobile}`}
-                                aria-label="Create custom calendar"
-                                title="Create custom calendar"
+                                aria-label={t.actionButtons.createCustomCalendar}
+                                title={t.actionButtons.createCustomCalendar}
                                 onClick={editEvents}
                             >
                                 <span className={styles.buttonIcon} aria-hidden="true">✏️</span>
-                                <span className={styles.customizeLabel}>Customize</span><span className={styles.desktopLabel}>&nbsp;calendar</span>
+                                <span className={`${styles.customizeLabel} ${styles.mobileLabel}`}>{t.actionButtons.customizeShort}</span>
+                                <span className={`${styles.customizeLabel} ${styles.desktopLabel}`}>{t.actionButtons.customizeCalendar}</span>
                             </button>
                         )}
                     </div>
@@ -325,11 +353,11 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                         className={styles.subscribeModal}
                     >
                         <div className={styles.modalHeader}>
-                            <h3 id="subscribe-modal-title">📅 Subscribe / Add to Calendar</h3>
+                            <h3 id="subscribe-modal-title">{t.actionButtons.subscribeModalTitle}</h3>
                             <button
                                 type="button"
                                 className={styles.closeIconBtn}
-                                aria-label="Close dialog"
+                                aria-label={t.actionButtons.closeDialogAria}
                                 onClick={() => setSubscribeModalOpen(false)}
                             >
                                 ✕
@@ -337,18 +365,18 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                         </div>
 
                         <p className={styles.modalDescription}>
-                            Import events into <strong>Google Calendar</strong>, <strong>Apple Calendar</strong>, or <strong>Outlook</strong> for reliable native notifications across all your devices.
+                            {renderSubscribeModalDescription(t.actionButtons.subscribeModalDesc)}
                         </p>
 
                         <div className={styles.modalSection}>
-                            <h4>1. Download Calendar Feed (.ics) with Reminders</h4>
+                            <h4>{t.actionButtons.sectionDownloadTitle}</h4>
                             <label className={styles.alarmCheckboxLabel}>
                                 <input
                                     type="checkbox"
                                     checked={includeAlarm}
                                     onChange={(e) => setIncludeAlarm(e.target.checked)}
                                 />
-                                <span>Include native reminder (9:00 AM the day before each holiday)</span>
+                                <span>{t.actionButtons.includeReminderLabel}</span>
                             </label>
                             <div className={styles.modalButtonRow}>
                                 <button
@@ -356,7 +384,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                                     className={styles.actionButton}
                                     onClick={() => exportCalendar(includeAlarm)}
                                 >
-                                    📥 Download .ics for Calendar Import
+                                    {t.actionButtons.downloadIcsButton}
                                 </button>
                                 {!isCustomEditor && countries.length > 1 && (
                                     <button
@@ -364,7 +392,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                                         className={styles.actionButton}
                                         onClick={() => exportAllCalendars(includeAlarm)}
                                     >
-                                        🗂️ Download separate .ics per country
+                                        {t.actionButtons.downloadSeparateIcsButton}
                                     </button>
                                 )}
                             </div>
@@ -372,14 +400,14 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
 
                         {upcomingEvents.length > 0 && (
                             <div className={styles.modalSection}>
-                                <h4>2. Quick-Add Upcoming Holidays to Google Calendar</h4>
+                                <h4>{t.actionButtons.sectionGoogleTitle}</h4>
                                 <ul className={styles.upcomingList}>
                                     {upcomingEvents.map((ev, idx) => (
                                         <li key={`${ev.date}-${ev.name}-${idx}`} className={styles.upcomingItem}>
                                             <span>
                                                 <strong>{ev.date}</strong>{" "}
                                                 {ev.kind === "publicHoliday"
-                                                    ? `${getFlagEmoji(ev.countryCode)} ${ev.country}: ${ev.name}`
+                                                    ? `${getFlagEmoji(ev.countryCode)} ${getCountryName(ev.countryCode, ev.country)}: ${ev.name}`
                                                     : `${ev.icon} ${ev.name}`}
                                             </span>
                                             <a
@@ -388,7 +416,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                                                 rel="noopener noreferrer"
                                                 className={styles.gcalLink}
                                             >
-                                                + Google Calendar
+                                                {t.actionButtons.addToGoogleCalendar}
                                             </a>
                                         </li>
                                     ))}
@@ -397,21 +425,21 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                         )}
 
                         <div className={styles.modalSection}>
-                            <h4>3. Share or Bookmark View</h4>
+                            <h4>{t.actionButtons.sectionShareTitle}</h4>
                             <div className={styles.modalButtonRow}>
                                 <button
                                     type="button"
                                     className={styles.actionButton}
                                     onClick={copyShareLink}
                                 >
-                                    🔗 Copy Shareable Link
+                                    {t.actionButtons.copyShareableLink}
                                 </button>
                                 <button
                                     type="button"
                                     className={styles.secondaryButton}
                                     onClick={() => setSubscribeModalOpen(false)}
                                 >
-                                    Close
+                                    {t.actionButtons.close}
                                 </button>
                             </div>
                         </div>

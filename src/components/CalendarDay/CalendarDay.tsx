@@ -6,6 +6,7 @@ import { getLink } from "../../data/holidays_descriptions/getLink.ts";
 import { UTCDate } from "../../utils/UTCDate.ts";
 import type { Description } from "../../data/holidays_descriptions/all.ts";
 import { handleKeyboardActivation } from "../../utils/a11y.ts";
+import { useTranslation } from "../../i18n/useTranslation.ts";
 
 interface CalendarDayProps {
     day: CalendarDayType;
@@ -24,6 +25,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({
     isEditable,
     countryData,
 }) => {
+    const { getCountryName } = useTranslation();
     const hasRangeEvent = day.isCurrentMonth && day.events.some((e) => e.kind === "other" && e.isRange);
     const dayClasses = [
         styles.calendarDay,
@@ -57,7 +59,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({
                     rel="noopener noreferrer"
                 >
                     <div className={styles.event} title={`${holiday.localName}`}>
-                        {getFlagEmoji(holiday.countryCode)} {holiday.country}: {holiday.name}
+                        {getFlagEmoji(holiday.countryCode)} {getCountryName(holiday.countryCode, holiday.country)}: {holiday.name}
                     </div>
                 </a>
             ) : (
