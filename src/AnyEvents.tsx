@@ -78,6 +78,10 @@ export const AnyEvents: React.FC = () => {
     });
 
     useEffect(() => {
+        document.title = `Events Calendar ${currentDate.getFullYear()}`;
+    }, [currentDate]);
+
+    useEffect(() => {
         localStorage.setItem(STORAGE_KEY, dataText);
     }, [dataText]);
 
