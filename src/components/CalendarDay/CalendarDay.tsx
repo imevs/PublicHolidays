@@ -24,6 +24,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({
     isEditable,
     countryData,
 }) => {
+    const hasRangeEvent = day.isCurrentMonth && day.events.some((e) => e.kind === "other" && e.isRange);
     const dayClasses = [
         styles.calendarDay,
         !day.isCurrentMonth && styles.otherMonth,
@@ -31,6 +32,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({
         isSelected ? styles.selectedDate : "",
         isEditable ? styles.isClickable : "",
         day.isWeekend ? styles.holiday : "",
+        hasRangeEvent && styles.hasRangeEvent,
     ].filter(Boolean).join(" ");
 
     const monthNumber = day.date.getMonth() + 1; // 1-12
@@ -59,24 +61,35 @@ const CalendarDay: React.FC<CalendarDayProps> = ({
                     </div>
                 </a>
             ) : (
-                <div
-                    key={idx}
-                    className={styles.event}
-                    title={`${holiday.localName}`}
-                    role={isEditable && onSelectEvent ? "button" : undefined}
-                    tabIndex={isEditable && onSelectEvent ? 0 : undefined}
-                    onClick={(e) => {
-                        e.stopPropagation();
-                        if (isEditable && onSelectEvent) {
-                            onSelectEvent(day.date, holiday);
-                        }
-                    }}
-                    onKeyDown={isEditable && onSelectEvent
-                        ? (e) => handleKeyboardActivation(e, () => onSelectEvent(day.date, holiday), { stopPropagation: true })
-                        : undefined}
-                >
-                    {holiday.icon} {holiday.name}
-                </div>
+                (() => {
+                    const rangePosClass = holiday.isRange
+                        ? holiday.rangePosition === "start" ? styles.rangeStart
+                            : holiday.rangePosition === "end" ? styles.rangeEnd
+                                : holiday.rangePosition === "middle" ? styles.rangeMiddle
+                                    : styles.rangeSingle
+                        : "";
+                    const eventClass = [styles.event, holiday.isRange ? styles.rangeEvent : "", rangePosClass].filter(Boolean).join(" ");
+                    return (
+                        <div
+                            key={idx}
+                            className={eventClass}
+                            title={`${holiday.localName}`}
+                            role={isEditable && onSelectEvent ? "button" : undefined}
+                            tabIndex={isEditable && onSelectEvent ? 0 : undefined}
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                if (isEditable && onSelectEvent) {
+                                    onSelectEvent(day.date, holiday);
+                                }
+                            }}
+                            onKeyDown={isEditable && onSelectEvent
+                                ? (e) => handleKeyboardActivation(e, () => onSelectEvent(day.date, holiday), { stopPropagation: true })
+                                : undefined}
+                        >
+                            {holiday.icon} {holiday.name}
+                        </div>
+                    );
+                })()
             ))}
         </div>
     );

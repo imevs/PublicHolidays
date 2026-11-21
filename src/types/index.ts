@@ -26,8 +26,13 @@ export interface HolidayWithCountry {
 
 export interface OtherEvent {
     date: DateString;
+    endDate?: DateString;
+    rangeStart?: DateString;
+    isRange?: boolean;
+    rangePosition?: "start" | "middle" | "end" | "single";
     name: string;
     icon: string;
     localName: string;
     kind: "other";
+    color?: string;
 }

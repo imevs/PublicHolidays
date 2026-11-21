@@ -6,6 +6,7 @@ import type { DateString } from "../../utils/UTCDate.ts";
 import { getDaysInMonth } from "../../utils/dateUtils.ts";
 
 const yearsRange = [2023, 2024, 2025, 2026, 2027];
+const HEX_COLOR_REGEX = /^#[0-9a-fA-F]{6}$/;
 
 function parseData(input: string): CalendarEvent[] {
     return input.split("\n")
@@ -13,20 +14,77 @@ function parseData(input: string): CalendarEvent[] {
         .filter(s => s.length)
         .flatMap(s => {
             const parts = s.split(" ");
-            const [date, icon, ...name] = parts;
-            const description = isIcon(icon) ? name.join(" ") : icon + " " + name.join(" ");
+            const [date, second, ...rest] = parts;
+            let color: string | undefined;
+            let icon: string;
+            let nameParts: string[];
+
+            if (HEX_COLOR_REGEX.test(second)) {
+                color = second;
+                icon = rest[0] ?? "";
+                nameParts = rest.slice(1);
+            } else {
+                color = undefined;
+                icon = second ?? "";
+                nameParts = rest;
+            }
+
+            const hasIcon = isIcon(icon);
+            const iconStr = hasIcon ? icon : "";
+            const description = hasIcon ? nameParts.join(" ") : [icon, ...nameParts].filter(Boolean).join(" ");
+
+            const colorProps = color ? { color } : {};
+
+            if (date.includes("..")) {
+                const [startStr, endStr] = date.split("..");
+                const hasYear = startStr.split("-").length === 3;
+                if (hasYear) {
+                    const days = expandDateRange(startStr, endStr);
+                    return days.map((d, i) => ({
+                        name: description,
+                        icon: iconStr,
+                        date: d,
+                        rangeStart: startStr as DateString,
+                        endDate: endStr as DateString,
+                        isRange: true,
+                        rangePosition: days.length === 1 ? "single" : i === 0 ? "start" : i === days.length - 1 ? "end" : "middle",
+                        kind: "other" as const,
+                        localName: description,
+                        ...colorProps,
+                    }));
+                } else {
+                    return yearsRange.flatMap(year => {
+                        const days = expandDateRange(`${year}-${startStr}`, `${year}-${endStr}`);
+                        return days.map((d, i) => ({
+                            name: description,
+                            icon: iconStr,
+                            date: d,
+                            rangeStart: startStr as DateString,
+                            endDate: endStr as DateString,
+                            isRange: true,
+                            rangePosition: days.length === 1 ? "single" : i === 0 ? "start" : i === days.length - 1 ? "end" : "middle",
+                            kind: "other" as const,
+                            localName: description,
+                            ...colorProps,
+                        }));
+                    });
+                }
+            }
+
             return date.split("-").length === 3 ? {
                 name: description,
-                icon: isIcon(icon) ? icon : "",
+                icon: iconStr,
                 date: date as DateString,
                 kind: "other" as const,
                 localName: description,
+                ...colorProps,
             } : yearsRange.map(year => ({
                 name: description,
-                icon: isIcon(icon) ? icon : "",
+                icon: iconStr,
                 date: `${year}-${date}`,
                 kind: "other" as const,
                 localName: description,
+                ...colorProps,
             }));
         });
 }
@@ -41,6 +99,36 @@ function isIcon(symbol: string): boolean {
     return emojiRegex.test(symbol);
 }
 
+function isValidSingleDate(date: string): boolean {
+    const dateRegex = /^(\d{4}-)?\d{2}-\d{2}$/;
+    if (!dateRegex.test(date)) return false;
+
+    const parts = date.split("-").map(Number);
+    const hasYear = parts.length === 3;
+    const year = hasYear ? parts[0] : 2024;
+    const month = hasYear ? parts[1] : parts[0];
+    const day = hasYear ? parts[2] : parts[1];
+
+    return month >= 1 && month <= 12 && day >= 1 && day <= getDaysInMonth(year, month - 1);
+}
+
+function expandDateRange(startStr: string, endStr: string): DateString[] {
+    const days: DateString[] = [];
+    let curr = new Date(startStr + "T12:00:00Z");
+    const end = new Date(endStr + "T12:00:00Z");
+    if (curr.getTime() > end.getTime()) return days;
+    let count = 0;
+    while (curr.getTime() <= end.getTime() && count < 366) {
+        const y = curr.getUTCFullYear();
+        const m = String(curr.getUTCMonth() + 1).padStart(2, "0");
+        const d = String(curr.getUTCDate()).padStart(2, "0");
+        days.push(`${y}-${m}-${d}` as DateString);
+        curr.setUTCDate(curr.getUTCDate() + 1);
+        count++;
+    }
+    return days;
+}
+
 function validateLine(line: string): { valid: boolean; error?: string } {
     const trimmed = line.trim();
     if (!trimmed) { return { valid: false, error: "Empty line" }; }
@@ -49,16 +137,33 @@ function validateLine(line: string): { valid: boolean; error?: string } {
     if (parts.length < 2) { return { valid: false, error: "Expect at least date and name" }; }
 
     const date = parts[0];
-    const dateRegex = /^(\d{4}-)?\d{2}-\d{2}$/;
-    if (!dateRegex.test(date)) { return { valid: false, error: "Date must be YYYY-MM-DD or MM-DD" }; }
+    if (HEX_COLOR_REGEX.test(parts[1])) {
+        if (parts.length < 3) {
+            return { valid: false, error: "Expect at least date, color, and name" };
+        }
+    }
 
-    const dateParts = date.split("-").map(Number);
-    const hasYear = dateParts.length === 3;
-    const year = hasYear ? dateParts[0] : 2024;
-    const month = hasYear ? dateParts[1] : dateParts[0];
-    const day = hasYear ? dateParts[2] : dateParts[1];
+    if (date.includes("..")) {
+        const rangeParts = date.split("..");
+        if (rangeParts.length !== 2) return { valid: false, error: "Invalid date range format" };
+        const [startStr, endStr] = rangeParts;
+        if (!isValidSingleDate(startStr) || !isValidSingleDate(endStr)) {
+            return { valid: false, error: "Invalid date in range" };
+        }
+        const startHasYear = startStr.split("-").length === 3;
+        const endHasYear = endStr.split("-").length === 3;
+        if (startHasYear !== endHasYear) {
+            return { valid: false, error: "Date range format mismatch" };
+        }
+        const compStart = startHasYear ? startStr : `2024-${startStr}`;
+        const compEnd = endHasYear ? endStr : `2024-${endStr}`;
+        if (compStart > compEnd) {
+            return { valid: false, error: "Start date must be before or equal to end date" };
+        }
+        return { valid: true };
+    }
 
-    if (month < 1 || month > 12 || day < 1 || day > getDaysInMonth(year, month - 1)) {
+    if (!isValidSingleDate(date)) {
         return { valid: false, error: "Invalid date" };
     }
     return { valid: true };
@@ -94,7 +199,7 @@ export function EventListInput(props: {
 
     return <div className={styles.container}>
         <label htmlFor="events-data" className={styles.label}>
-            Calendar events. Format: <code>YYYY-MM-DD [icon] event name</code>.
+            Calendar events. Format: <code>YYYY-MM-DD [icon] event name</code> or <code>YYYY-MM-DD..YYYY-MM-DD [icon] range</code>.
         </label>
 
         <div className={styles.wrapper}>

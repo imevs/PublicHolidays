@@ -191,6 +191,7 @@ const YearView = ({
                                         return true;
                                     });
                                     const isDayClickable = dayHolidays.length > 0 || isEditable;
+                                    const firstRangeEvent = dayHolidays.find((h): h is OtherEvent => h.kind === "other" && Boolean(h.isRange));
                                     const handleDaySelect = () => {
                                         const date = currentDay?.date ?? new UTCDate(dateStr);
                                         if (dayHolidays.length > 0) {
@@ -208,11 +209,13 @@ const YearView = ({
                                                     ${styles.dayCell} 
                                                     ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}
                                                     ${isDayClickable ? styles.isClickable : ""}
+                                                    ${firstRangeEvent ? styles.rangeDay : ""}
                                                 `)}
                                             data-month={month + 1}
                                             style={{
                                                 borderRadius: `${day === 0 ? 10 : 0}px 0px ${day === daysInMonth - 1 ? 10 : 0}px 0px`,
-                                            }}
+                                                ...(firstRangeEvent?.color ? { "--range-color": firstRangeEvent.color } : {}),
+                                            } as React.CSSProperties}
                                             role={isDayClickable ? "button" : undefined}
                                             tabIndex={isDayClickable ? 0 : undefined}
                                             onClick={handleDaySelect}
@@ -436,7 +439,12 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                                     .map((holiday, index) => (
                                         <li key={index} className={`${styles.eventItem} ${styles.customEventItem}`}>
                                             <span className={styles.eventBadge}>{holiday.icon}</span>
-                                            <span className={styles.eventDetails}>{holiday.name}</span>
+                                            <span className={styles.eventDetails}>
+                                                {holiday.name}
+                                                {holiday.isRange && holiday.rangeStart && holiday.endDate && (
+                                                    <span className={styles.rangeSpan}> ({holiday.rangeStart} → {holiday.endDate})</span>
+                                                )}
+                                            </span>
                                             {isEditable && (
                                                 <span className={styles.eventItemActions}>
                                                     {onEditEvent && (

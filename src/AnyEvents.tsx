@@ -18,6 +18,8 @@ const defaultData = `
 2025-09-27 🎂 Birthday of Dima
 `;
 
+const HEX_COLOR_REGEX = /^#[0-9a-fA-F]{6}$/;
+
 function isIcon(symbol: string): boolean {
     if (!symbol) return false;
     if (symbol.length === 1) return true;
@@ -28,16 +30,33 @@ function isIcon(symbol: string): boolean {
 function doesLineMatchEvent(line: string, target: OtherEvent): boolean {
     const trimmed = line.trim();
     if (!trimmed) return false;
-    const [date, icon, ...name] = trimmed.split(" ");
-    const hasIcon = isIcon(icon);
-    const lineIcon = hasIcon ? icon : "";
-    const lineName = hasIcon ? name.join(" ") : [icon, ...name].join(" ");
-    const dateMatches = date === target.date || date === target.date.substring(5);
-    return dateMatches && lineIcon === target.icon && lineName === target.name;
+    const [dateToken, second, ...rest] = trimmed.split(" ");
+    const hasColor = HEX_COLOR_REGEX.test(second);
+    const lineColor = hasColor ? second : undefined;
+    const iconToken = hasColor ? rest[0] : second;
+    const nameTokens = hasColor ? rest.slice(1) : rest;
+
+    const hasIcon = isIcon(iconToken);
+    const lineIcon = hasIcon ? iconToken : "";
+    const lineName = hasIcon ? nameTokens.join(" ") : [iconToken, ...nameTokens].join(" ");
+    const [lineStart, lineEnd] = dateToken.split("..");
+
+    const colorMatches = lineColor === target.color || (!lineColor && !target.color);
+
+    if (target.isRange && target.endDate) {
+        const targetStart = target.rangeStart ?? target.date;
+        const startMatches = lineStart === targetStart || lineStart === targetStart.substring(5);
+        const endMatches = Boolean(lineEnd) && (lineEnd === target.endDate || lineEnd === target.endDate.substring(5));
+        return startMatches && endMatches && colorMatches && lineIcon === target.icon && lineName === target.name;
+    }
+    const dateMatches = dateToken === target.date || dateToken === target.date.substring(5);
+    return !lineEnd && dateMatches && colorMatches && lineIcon === target.icon && lineName === target.name;
 }
 
 function formatEventLine(ev: OtherEvent): string {
-    return [ev.date, ev.icon, ev.name].filter(Boolean).join(" ");
+    const start = ev.rangeStart ?? ev.date;
+    const datePart = ev.isRange && ev.endDate && ev.endDate !== start ? `${start}..${ev.endDate}` : ev.date;
+    return [datePart, ev.isRange && ev.color ? ev.color : "", ev.icon, ev.name].filter(Boolean).join(" ");
 }
 
 export const AnyEvents: React.FC = () => {
