@@ -13,7 +13,8 @@ jest.mock("../components/CalendarGrid/UsePrevious.tsx", () => ({
 import { Holidays } from "../Holidays.tsx";
 import { AnyEvents } from "../AnyEvents.tsx";
 import { LanguageProvider } from "../i18n/LanguageContext.tsx";
-import { LANGUAGE_STORAGE_KEY, TRANSLATIONS, getIntlLocale } from "../i18n/locales/index.ts";
+import { setStoredLanguage } from "../i18n/languageStore.ts";
+import { DEFAULT_LANGUAGE, LANGUAGE_STORAGE_KEY, TRANSLATIONS, getIntlLocale } from "../i18n/locales/index.ts";
 import type { LanguageCode } from "../i18n/types.ts";
 import { STORAGE_KEY } from "../consts.ts";
 import { formatDateToReadable } from "../utils/dateUtils.ts";
@@ -40,6 +41,8 @@ describe("UI language selection and multi-language switching", () => {
     });
 
     afterEach(() => {
+        jest.restoreAllMocks();
+        setStoredLanguage(DEFAULT_LANGUAGE);
         localStorage.removeItem(LANGUAGE_STORAGE_KEY);
         localStorage.removeItem(STORAGE_KEY);
         localStorage.removeItem("theme");
@@ -280,4 +283,55 @@ describe("UI language selection and multi-language switching", () => {
         expect(screen.getAllByRole("heading", { level: 1 })[0]).toHaveTextContent(TRANSLATIONS.en.app.holidaysTitle);
         await screen.findByRole("button", { name: new RegExp(TRANSLATIONS.en.countries.LV) });
     });
+
+    it.each<string | null>([null, "en"])(
+        "preserves selected language in memory when localStorage.setItem throws QuotaExceededError and getItem returns %s",
+        async (storedValue) => {
+            if (storedValue !== null) {
+                localStorage.setItem(LANGUAGE_STORAGE_KEY, storedValue);
+            }
+            expect(localStorage.getItem(LANGUAGE_STORAGE_KEY)).toBe(storedValue);
+
+            const consoleErrorSpy = jest.spyOn(console, "error").mockImplementation(() => {});
+            const setItemSpy = jest.spyOn(Storage.prototype, "setItem").mockImplementation(() => {
+                throw new DOMException("QuotaExceededError");
+            });
+
+            render(
+                <LanguageProvider>
+                    <Holidays />
+                </LanguageProvider>
+            );
+
+            expect(document.documentElement.lang).toBe("en");
+            expect(screen.getAllByRole("heading", { level: 1 })[0]).toHaveTextContent(TRANSLATIONS.en.app.holidaysTitle);
+
+            const langSelect = screen.getByLabelText(TRANSLATIONS.en.languageSelector.ariaLabel) as HTMLSelectElement;
+            fireEvent.change(langSelect, { target: { value: "de" } });
+
+            await waitFor(() => {
+                expect(document.documentElement.lang).toBe("de");
+            });
+            expect(screen.getAllByRole("heading", { level: 1 })[0]).toHaveTextContent(TRANSLATIONS.de.app.holidaysTitle);
+            expect(screen.getByLabelText(TRANSLATIONS.de.languageSelector.ariaLabel)).toHaveValue("de");
+            expect(localStorage.getItem(LANGUAGE_STORAGE_KEY)).toBe(storedValue);
+
+            // Ensure async holiday data settles without reverting language back to English
+            await screen.findByRole("button", { name: new RegExp(TRANSLATIONS.de.countries.LV) });
+            expect(document.documentElement.lang).toBe("de");
+            expect(screen.getAllByRole("heading", { level: 1 })[0]).toHaveTextContent(TRANSLATIONS.de.app.holidaysTitle);
+
+            // Verify recovery once storage writes succeed again
+            setItemSpy.mockRestore();
+            consoleErrorSpy.mockRestore();
+            fireEvent.change(screen.getByLabelText(TRANSLATIONS.de.languageSelector.ariaLabel), {
+                target: { value: "fr" },
+            });
+            await waitFor(() => {
+                expect(localStorage.getItem(LANGUAGE_STORAGE_KEY)).toBe("fr");
+            });
+            expect(document.documentElement.lang).toBe("fr");
+            expect(screen.getAllByRole("heading", { level: 1 })[0]).toHaveTextContent(TRANSLATIONS.fr.app.holidaysTitle);
+        }
+    );
 });
