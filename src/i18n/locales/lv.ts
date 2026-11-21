@@ -45,7 +45,6 @@ export const lv = {
     },
     countryFilter: {
         selectCountries: "Izvēlēties valstis",
-        showExtraHolidaysOnly: "Rādīt brīvdienas",
         highlightLongHolidays: "Izcelt garās brīvdienas",
         showTimezones: "Rādīt laika joslas",
         showLocalTime: "Rādīt vietējo laiku",
@@ -135,6 +134,8 @@ export const lv = {
         editEventAria: "Rediģēt {name}",
         deleteEventAria: "Dzēst {name}",
         addEvent: "+ Pievienot notikumu",
+        longHolidayTooltip: "{country}: garās brīvdienas ({days} d.)",
+        longHolidayTooltipCustom: "Garās brīvdienas ({days} d.)",
     },
     actionButtons: {
         combinedIcsDownloaded: "Apvienotais ICS fails lejupielādēts",

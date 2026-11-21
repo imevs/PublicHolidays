@@ -17,6 +17,7 @@ import type { Description } from "../../data/holidays_descriptions/all.ts";
 import { handleKeyboardActivation } from "../../utils/a11y.ts";
 import { useTranslation } from "../../i18n/useTranslation.ts";
 import { getLocalizedHolidayName } from "../../i18n/holidayNames.ts";
+import { getLongHolidayStyle, getLongHolidayTooltip } from "../../utils/longHolidayColors.ts";
 
 interface CalendarGridProps {
     onNewEvent?: (date: OtherEvent) => void; // if not defined will not show popup for new event
@@ -141,7 +142,7 @@ const YearView = ({
     shouldScrollToMonth?: boolean;
     onScrolledToMonth?: () => void;
 }) => {
-    const { t, getMonthName } = useTranslation();
+    const { t, getMonthName, getCountryName, format } = useTranslation();
     const currentYear = currentDate.getFullYear();
     const [highlightedMonth, setHighlightedMonth] = useState<number | null>(null); // State for highlighted month
     const yearGridRef = useRef<HTMLDivElement | null>(null); // Ref for the year grid container
@@ -193,6 +194,7 @@ const YearView = ({
                         });
                         const isDayClickable = dayHolidays.length > 0 || isEditable;
                         const firstRangeEvent = dayHolidays.find((h): h is OtherEvent => h.kind === "other" && Boolean(h.isRange));
+                        const longHolidayTitle = highlightLongHolidays && currentDay?.isLongHoliday ? getLongHolidayTooltip(currentDay.longHolidayDetails, getCountryName, format, t.calendarGrid.longHolidayTooltip, t.calendarGrid.longHolidayTooltipCustom) : undefined;
                         const handleDaySelect = () => {
                             const date = currentDay?.date ?? new UTCDate(dateStr);
                             if (dayHolidays.length > 0) {
@@ -215,9 +217,11 @@ const YearView = ({
                                     ${highlightLongHolidays && currentDay?.isLongHoliday ? styles.longHoliday : ""}
                                 `)}
                                 data-month={month + 1}
+                                title={longHolidayTitle}
                                 style={{
                                     borderRadius,
                                     ...(firstRangeEvent?.color ? { "--range-color": firstRangeEvent.color } : {}),
+                                    ...(highlightLongHolidays && currentDay?.isLongHoliday ? getLongHolidayStyle(currentDay.longHolidayColors, true) : undefined),
                                 } as React.CSSProperties}
                                 role={isDayClickable ? "button" : undefined}
                                 tabIndex={isDayClickable ? 0 : undefined}

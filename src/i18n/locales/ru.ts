@@ -45,7 +45,6 @@ export const ru = {
     },
     countryFilter: {
         selectCountries: "Выбрать страны",
-        showExtraHolidaysOnly: "Показать нерабочие дни",
         highlightLongHolidays: "Выделять длинные выходные",
         showTimezones: "Показать часовые пояса",
         showLocalTime: "Показать местное время",
@@ -135,6 +134,8 @@ export const ru = {
         editEventAria: "Изменить {name}",
         deleteEventAria: "Удалить {name}",
         addEvent: "+ Добавить событие",
+        longHolidayTooltip: "{country}: длинные выходные ({days} дн.)",
+        longHolidayTooltipCustom: "Длинные выходные ({days} дн.)",
     },
     actionButtons: {
         combinedIcsDownloaded: "Объединённый файл ICS скачан",

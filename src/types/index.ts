@@ -9,6 +9,10 @@ export interface CalendarDay {
     isToday: boolean;
     isWeekend: boolean;
     isLongHoliday?: boolean;
+    longHolidayCountries?: string[];
+    longHolidayColors?: string[];
+    longHolidayDays?: number;
+    longHolidayDetails?: { countryCode?: string; days: number }[];
     events: CalendarEvent[];
     dayNumber: number;
 }
