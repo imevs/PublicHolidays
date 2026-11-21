@@ -11,6 +11,7 @@ import {
 import type { CountryCode } from "../data/countryNames.ts";
 import { type DateString, type DateThreeParts, UTCDate } from "../utils/UTCDate.ts";
 import { dateLocale } from "../consts.ts";
+import { LONG_HOLIDAY_PALETTE } from "../utils/longHolidayColors.ts";
 
 const dateFormatter = new Intl.DateTimeFormat(dateLocale);
 
@@ -53,13 +54,9 @@ function getParams() {
     return new URLSearchParams(window.location.hash.replace("#", ""));
 }
 
-function markLongHolidays(days: CalendarDay[]): CalendarDay[] {
-    // A day is off if d.isWeekend || d.events.length > 0
-    // Group contiguous runs of off days.
-    // For any run with run.length >= 3 && run.some(d => d.events.length > 0), mark every day in that run with isLongHoliday: true (and false otherwise).
-    const isOff = (d: CalendarDay) => d.isWeekend || d.events.length > 0;
+function markLongHolidays(days: CalendarDay[], hasTargetEvent: (d: CalendarDay) => boolean): CalendarDay[] {
+    const isOff = (d: CalendarDay) => d.isWeekend || hasTargetEvent(d);
     
-    // We want to process runs across the entire array
     const n = days.length;
     const result = days.map(d => ({ ...d }));
     
@@ -74,7 +71,7 @@ function markLongHolidays(days: CalendarDay[]): CalendarDay[] {
             let runLength = end - start;
             let hasEvent = false;
             for (let j = start; j < end; j++) {
-                if (result[j].events.length > 0) {
+                if (hasTargetEvent(result[j])) {
                     hasEvent = true;
                     break;
                 }
@@ -82,6 +79,7 @@ function markLongHolidays(days: CalendarDay[]): CalendarDay[] {
             if (runLength >= 3 && hasEvent) {
                 for (let j = start; j < end; j++) {
                     result[j].isLongHoliday = true;
+                    result[j].longHolidayDays = runLength;
                 }
             } else {
                 for (let j = start; j < end; j++) {
@@ -101,7 +99,6 @@ function calcSelectedDays(
     holidaysIndex: HolidaysIndex,
     selectedCountries: CountryCode[],
     month: number,
-    showAllHolidays: boolean,
     onlyMonth = false,
 ) {
     const year = currentDate.getFullYear();
@@ -136,7 +133,7 @@ function calcSelectedDays(
             isCurrentYear: isCurrentYear,
             isToday,
             isWeekend: isWeekend(date.getDay()),
-            events: showAllHolidays || !isWeekend(date.getDay()) ? holidays : [],
+            events: holidays,
             dayNumber: date.getDate()
         });
         if (date.getDay() === DayIndexes.Sunday && date.getMonth() === nextMonth) {
@@ -179,7 +176,6 @@ function markLongHolidaysWithPadding(
     days: CalendarDay[],
     holidaysIndex: HolidaysIndex,
     selectedCountries: CountryCode[],
-    showAllHolidays: boolean,
 ): CalendarDay[] {
     if (days.length === 0) return days;
     const firstDate = new UTCDate(days[0].date);
@@ -192,7 +188,7 @@ function markLongHolidaysWithPadding(
     while (curr <= lastDate) {
         const date = new UTCDate(curr);
         const holidayEvents = getHolidaysForDate(date, holidaysIndex, selectedCountries);
-        const filteredEvents = showAllHolidays || !isWeekend(date.getDay()) ? holidayEvents : [];
+        const filteredEvents = holidayEvents;
         paddedDays.push({
             date,
             events: filteredEvents,
@@ -206,20 +202,65 @@ function markLongHolidaysWithPadding(
         curr.setDate(curr.getDate() + 1);
     }
 
-    const markedPadded = markLongHolidays(paddedDays);
-    const longHolidayDates = new Set<DateString>();
-    for (const d of markedPadded) {
-        if (d.isLongHoliday) {
-            longHolidayDates.add(formatDateString(d.date));
+    const longHolidayCountriesByDate = new Map<DateString, CountryCode[]>();
+    const longHolidayDetailsByDate = new Map<DateString, { countryCode?: string; days: number }[]>();
+    for (const countryCode of selectedCountries) {
+        const marked = markLongHolidays(paddedDays, d => d.events.some(e => e.kind === "publicHoliday" && e.countryCode === countryCode));
+        for (const d of marked) {
+            if (d.isLongHoliday && d.longHolidayDays) {
+                const dateStr = formatDateString(d.date);
+                let list = longHolidayCountriesByDate.get(dateStr);
+                if (!list) {
+                    list = [];
+                    longHolidayCountriesByDate.set(dateStr, list);
+                }
+                if (!list.includes(countryCode)) {
+                    list.push(countryCode);
+                }
+
+                let details = longHolidayDetailsByDate.get(dateStr);
+                if (!details) {
+                    details = [];
+                    longHolidayDetailsByDate.set(dateStr, details);
+                }
+                if (!details.some(item => item.countryCode === countryCode)) {
+                    details.push({ countryCode, days: d.longHolidayDays });
+                }
+            }
         }
     }
-    return days.map(d => ({
-        ...d,
-        isLongHoliday: longHolidayDates.has(formatDateString(d.date)),
-    }));
+
+    const customMarked = markLongHolidays(paddedDays, d => d.events.some(e => e.kind === "other"));
+    const customLongHolidayDates = new Set<DateString>();
+    const customLongHolidayDaysByDate = new Map<DateString, number>();
+    for (const d of customMarked) {
+        if (d.isLongHoliday && d.longHolidayDays) {
+            const dateStr = formatDateString(d.date);
+            customLongHolidayDates.add(dateStr);
+            customLongHolidayDaysByDate.set(dateStr, d.longHolidayDays);
+        }
+    }
+
+    return days.map(d => {
+        const dateStr = formatDateString(d.date);
+        const countries = longHolidayCountriesByDate.get(dateStr);
+        const isLong = Boolean(countries?.length) || customLongHolidayDates.has(dateStr);
+        const colors = countries?.map(code => LONG_HOLIDAY_PALETTE[selectedCountries.indexOf(code) % LONG_HOLIDAY_PALETTE.length]) ?? (isLong ? [LONG_HOLIDAY_PALETTE[0]] : undefined);
+        let details = longHolidayDetailsByDate.get(dateStr);
+        if (!details && customLongHolidayDaysByDate.has(dateStr) && !countries?.length) {
+            details = [{ days: customLongHolidayDaysByDate.get(dateStr)! }];
+        }
+        return {
+            ...d,
+            isLongHoliday: isLong,
+            ...(countries?.length ? { longHolidayCountries: countries } : {}),
+            ...(colors?.length ? { longHolidayColors: colors } : {}),
+            ...(details?.length ? { longHolidayDetails: details } : {}),
+        };
+    });
 }
 
-export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = true) => {
+export const useCalendar = (holidaysData: CalendarEvent[]) => {
     const [currentDate, setCurrentDateWithoutCheck] = useState(new UTCDate());
     const setCurrentDate = (date: UTCDate) => {
         if (date.valueOf() !== currentDate.valueOf()) {
@@ -270,14 +311,14 @@ export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = tru
     const holidaysIndex = useMemo(() => buildHolidaysIndex(holidaysData), [holidaysData]);
 
     const selectedYearDays = useMemo((): CalendarDay[] => {
-        const days = calcSelectedDays(currentDate, holidaysIndex, selectedCountries, 0, showAllHolidays);
-        return markLongHolidaysWithPadding(days, holidaysIndex, selectedCountries, showAllHolidays);
-    }, [currentDate, selectedCountries, holidaysIndex, showAllHolidays]);
+        const days = calcSelectedDays(currentDate, holidaysIndex, selectedCountries, 0);
+        return markLongHolidaysWithPadding(days, holidaysIndex, selectedCountries);
+    }, [currentDate, selectedCountries, holidaysIndex]);
 
     const selectedMonthDays = useMemo((): CalendarDay[] => {
-        const days = calcSelectedDays(currentDate, holidaysIndex, selectedCountries, currentDate.getMonth(), showAllHolidays, true);
-        return markLongHolidaysWithPadding(days, holidaysIndex, selectedCountries, showAllHolidays);
-    }, [currentDate, selectedCountries, holidaysIndex, showAllHolidays]);
+        const days = calcSelectedDays(currentDate, holidaysIndex, selectedCountries, currentDate.getMonth(), true);
+        return markLongHolidaysWithPadding(days, holidaysIndex, selectedCountries);
+    }, [currentDate, selectedCountries, holidaysIndex]);
 
     const navigateMonth = useCallback((nextMonth: number): UTCDate => {
         hasInteractedRef.current = true;

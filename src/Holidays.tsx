@@ -19,7 +19,6 @@ export const Holidays: React.FC = () => {
     const navigate = useNavigate();
     const { language, t, format } = useTranslation();
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
-    const [showAllHolidays, setShowAllHolidays] = useState(true);
     const [highlightLongHolidays, setHighlightLongHolidays] = useState(false);
 
     const {
@@ -36,7 +35,7 @@ export const Holidays: React.FC = () => {
         setShowAllCountries,
         shouldScrollToMonth,
         clearShouldScrollToMonth,
-    } = useCalendar(holidaysData, showAllHolidays);
+    } = useCalendar(holidaysData);
     const [countryData, setCountryData] = useState({});
 
     useEffect(() => {
@@ -109,7 +108,6 @@ export const Holidays: React.FC = () => {
                         setShowAllCountries={setShowAllCountries}
                         selectedCountries={selectedCountries}
                         onToggleCountry={toggleCountry}
-                        setShowAllHolidays={setShowAllHolidays}
                         highlightLongHolidays={highlightLongHolidays}
                         setHighlightLongHolidays={setHighlightLongHolidays}
                     />}

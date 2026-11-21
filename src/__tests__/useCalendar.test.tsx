@@ -266,4 +266,47 @@ describe("useCalendar", () => {
             expect(monthDay?.isLongHoliday).toBe(true);
         }
     });
+
+    it("highlights long holidays with distinct colors per selected country and combines overlapping countries", () => {
+        const events = convertEvents([
+            {
+                countryName: "Latvia",
+                countryCode: "LV",
+                holidays: [
+                    { name: "LV Fri Holiday", localName: "LV Fri Holiday", date: "2025-04-04", type: ["National holiday"] },
+                    { name: "Shared Mon Holiday", localName: "Shared Mon Holiday", date: "2025-04-14", type: ["National holiday"] },
+                ],
+            },
+            {
+                countryName: "Germany",
+                countryCode: "DE",
+                holidays: [
+                    { name: "DE Mon Holiday", localName: "DE Mon Holiday", date: "2025-04-21", type: ["National holiday"] },
+                    { name: "Shared Mon Holiday", localName: "Shared Mon Holiday", date: "2025-04-14", type: ["National holiday"] },
+                ],
+            },
+        ]);
+
+        window.location.hash = "date=2025-04-01&countries=LV,DE";
+        const { result } = renderHook(() => useCalendar(events));
+
+        const lvDay = result.current.selectedMonthDays.find(d => d.date.toISOString().startsWith("2025-04-04"));
+        const deDay = result.current.selectedMonthDays.find(d => d.date.toISOString().startsWith("2025-04-21"));
+        const sharedDay = result.current.selectedMonthDays.find(d => d.date.toISOString().startsWith("2025-04-14"));
+
+        expect(lvDay?.longHolidayCountries).toEqual(["LV"]);
+        expect(deDay?.longHolidayCountries).toEqual(["DE"]);
+        expect(lvDay?.longHolidayColors).toHaveLength(1);
+        expect(deDay?.longHolidayColors).toHaveLength(1);
+        expect(lvDay?.longHolidayColors?.[0]).not.toBe(deDay?.longHolidayColors?.[0]);
+
+        expect(sharedDay?.longHolidayCountries).toEqual(["LV", "DE"]);
+        expect(sharedDay?.longHolidayColors).toEqual([
+            lvDay?.longHolidayColors?.[0],
+            deDay?.longHolidayColors?.[0],
+        ]);
+        expect(lvDay?.longHolidayDetails).toEqual([{ countryCode: "LV", days: 3 }]);
+        expect(deDay?.longHolidayDetails).toEqual([{ countryCode: "DE", days: 3 }]);
+        expect(sharedDay?.longHolidayDetails).toEqual([{ countryCode: "LV", days: 3 }, { countryCode: "DE", days: 3 }]);
+    });
 });

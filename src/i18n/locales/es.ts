@@ -45,7 +45,6 @@ export const es = {
     },
     countryFilter: {
         selectCountries: "Seleccionar países",
-        showExtraHolidaysOnly: "Mostrar días no laborables",
         highlightLongHolidays: "Resaltar puentes y festivos largos",
         showTimezones: "Mostrar zonas horarias",
         showLocalTime: "Mostrar hora local",
@@ -135,6 +134,8 @@ export const es = {
         editEventAria: "Editar {name}",
         deleteEventAria: "Eliminar {name}",
         addEvent: "+ Añadir evento",
+        longHolidayTooltip: "{country}: puente de {days} días",
+        longHolidayTooltipCustom: "Puente de {days} días",
     },
     actionButtons: {
         combinedIcsDownloaded: "Archivo ICS combinado descargado",

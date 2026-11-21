@@ -70,7 +70,6 @@ export interface TranslationDictionary {
     };
     countryFilter: {
         selectCountries: string;
-        showExtraHolidaysOnly: string;
         highlightLongHolidays: string;
         showTimezones: string;
         showLocalTime: string;
@@ -99,6 +98,8 @@ export interface TranslationDictionary {
         editEventAria: string;
         deleteEventAria: string;
         addEvent: string;
+        longHolidayTooltip: string;
+        longHolidayTooltipCustom: string;
     };
     actionButtons: {
         combinedIcsDownloaded: string;

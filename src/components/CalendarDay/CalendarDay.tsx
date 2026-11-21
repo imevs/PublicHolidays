@@ -8,6 +8,7 @@ import type { Description } from "../../data/holidays_descriptions/all.ts";
 import { handleKeyboardActivation } from "../../utils/a11y.ts";
 import { useTranslation } from "../../i18n/useTranslation.ts";
 import { getLocalizedHolidayName } from "../../i18n/holidayNames.ts";
+import { getLongHolidayStyle, getLongHolidayTooltip } from "../../utils/longHolidayColors.ts";
 
 interface CalendarDayProps {
     day: CalendarDayType;
@@ -28,7 +29,7 @@ const CalendarDay: React.FC<CalendarDayProps> = ({
     countryData,
     highlightLongHolidays,
 }) => {
-    const { getCountryName, language } = useTranslation();
+    const { getCountryName, language, t, format } = useTranslation();
     const hasRangeEvent = day.isCurrentMonth && day.events.some((e) => e.kind === "other" && e.isRange);
     const dayClasses = [
         styles.calendarDay,
@@ -42,12 +43,15 @@ const CalendarDay: React.FC<CalendarDayProps> = ({
     ].filter(Boolean).join(" ");
 
     const monthNumber = day.date.getMonth() + 1; // 1-12
+    const longHolidayTitle = highlightLongHolidays && day.isLongHoliday ? getLongHolidayTooltip(day.longHolidayDetails, getCountryName, format, t.calendarGrid.longHolidayTooltip, t.calendarGrid.longHolidayTooltipCustom) : undefined;
 
     return (
         <div
             key={day.date.toDateString()}
             className={dayClasses}
             data-month={monthNumber}
+            title={longHolidayTitle}
+            style={highlightLongHolidays && day.isLongHoliday ? getLongHolidayStyle(day.longHolidayColors, false) : undefined}
             role={isEditable ? "button" : undefined}
             tabIndex={isEditable ? 0 : undefined}
             onClick={() => setDateForPopup(day.date)}

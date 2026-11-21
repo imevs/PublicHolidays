@@ -46,7 +46,6 @@ export const en = {
     },
     countryFilter: {
         selectCountries: "Select Countries",
-        showExtraHolidaysOnly: "Show non working days",
         highlightLongHolidays: "Highlight long holidays",
         showTimezones: "Show timezones",
         showLocalTime: "Show local time",
@@ -81,6 +80,8 @@ export const en = {
         editEventAria: "Edit {name}",
         deleteEventAria: "Delete {name}",
         addEvent: "+ Add event",
+        longHolidayTooltip: "{country}: {days}-day long holiday",
+        longHolidayTooltipCustom: "{days}-day long holiday",
     },
     actionButtons: {
         combinedIcsDownloaded: "Combined ICS file downloaded",

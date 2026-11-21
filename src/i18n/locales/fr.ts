@@ -45,7 +45,6 @@ export const fr = {
     },
     countryFilter: {
         selectCountries: "Sélectionner les pays",
-        showExtraHolidaysOnly: "Afficher les jours non ouvrés",
         highlightLongHolidays: "Mettre en évidence les longs week-ends",
         showTimezones: "Afficher les fuseaux horaires",
         showLocalTime: "Afficher l'heure locale",
@@ -135,6 +134,8 @@ export const fr = {
         editEventAria: "Modifier {name}",
         deleteEventAria: "Supprimer {name}",
         addEvent: "+ Ajouter un événement",
+        longHolidayTooltip: "{country} : long week-end de {days} jours",
+        longHolidayTooltipCustom: "Long week-end de {days} jours",
     },
     actionButtons: {
         combinedIcsDownloaded: "Fichier ICS combiné téléchargé",

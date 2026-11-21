@@ -97,7 +97,7 @@ describe("UI language selection and multi-language switching", () => {
 
             // CountryFilter labels: initially collapsed (showAllCountries = false because countries=LV)
             expect(screen.getByText(dict.countryFilter.selectCountries)).toBeInTheDocument();
-            expect(screen.getByLabelText(dict.countryFilter.showExtraHolidaysOnly)).toBeInTheDocument();
+            expect(screen.getByLabelText(dict.countryFilter.highlightLongHolidays)).toBeInTheDocument();
             expect(screen.getByLabelText(dict.countryFilter.showLocalTime)).toBeInTheDocument();
             const showAllBtn = screen.getByRole("button", { name: dict.countryFilter.showAll });
             expect(showAllBtn).toBeInTheDocument();

@@ -819,7 +819,7 @@ describe("UI, Accessibility & Year Range Fixes", () => {
                 onToggleCountry={onToggleCountry}
                 showAllCountries={true}
                 setShowAllCountries={setShowAllCountries}
-                setShowAllHolidays={jest.fn()}
+
             />
         );
 
@@ -850,7 +850,7 @@ describe("UI, Accessibility & Year Range Fixes", () => {
                 onToggleCountry={jest.fn()}
                 showAllCountries={true}
                 setShowAllCountries={jest.fn()}
-                setShowAllHolidays={jest.fn()}
+
             />
         );
 
