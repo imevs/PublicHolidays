@@ -30,7 +30,11 @@ function escapeICSText(input = "") {
         .replace(/;/g, "\\;");
 }
 
-export function buildICS(events: CalendarEvent[]) {
+export interface BuildICSOptions {
+    includeAlarm?: boolean;
+}
+
+export function buildICS(events: CalendarEvent[], options?: BuildICSOptions) {
     const lines: string[] = [
         "BEGIN:VCALENDAR",
         "VERSION:2.0",
@@ -71,6 +75,13 @@ export function buildICS(events: CalendarEvent[]) {
             lines.push(`DESCRIPTION:${description}`);
         }
         lines.push("TRANSP:TRANSPARENT");
+        if (options?.includeAlarm) {
+            lines.push("BEGIN:VALARM");
+            lines.push("TRIGGER:-PT15H");
+            lines.push("ACTION:DISPLAY");
+            lines.push(`DESCRIPTION:Reminder: ${summary}`);
+            lines.push("END:VALARM");
+        }
         lines.push("END:VEVENT");
     }
 
@@ -79,9 +90,27 @@ export function buildICS(events: CalendarEvent[]) {
     return lines.join("\r\n");
 }
 
-export function exportCalendarToFile(holidaysParsed: CalendarEvent[], fileName = "calendar_events")  {
-    const data = buildICS(holidaysParsed);
-    const blob = new Blob([data], { type: "text/plain" });
+export function buildGoogleCalendarUrl(ev: CalendarEvent): string {
+    const d = UTCDate.fromMonthAndDay(ev.date, new UTCDate().getFullYear());
+    const dtstart = formatDateToYYYYMMDD(d);
+    const dNext = new UTCDate(d);
+    dNext.setDate(dNext.getDate() + 1);
+    const dtend = formatDateToYYYYMMDD(dNext);
+    const icon = ev.kind === "other"
+        ? (ev.icon ? `${ev.icon} ` : "")
+        : `${getFlagEmoji(ev.countryCode)} ${ev.country}: `;
+    const text = encodeURIComponent(`${icon}${ev.name}`);
+    const details = encodeURIComponent(ev.localName || ev.name || "");
+    return `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${text}&dates=${dtstart}/${dtend}&details=${details}`;
+}
+
+export function exportCalendarToFile(
+    holidaysParsed: CalendarEvent[],
+    fileName = "calendar_events",
+    options?: BuildICSOptions,
+) {
+    const data = buildICS(holidaysParsed, options);
+    const blob = new Blob([data], { type: "text/calendar;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;

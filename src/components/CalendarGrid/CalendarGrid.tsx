@@ -21,6 +21,8 @@ import { handleKeyboardActivation } from "../../utils/a11y.ts";
 
 interface CalendarGridProps {
     onNewEvent?: (date: OtherEvent) => void; // if not defined will not show popup for new event
+    onEditEvent?: (originalEvent: OtherEvent, updatedEvent: OtherEvent) => void;
+    onDeleteEvent?: (eventToDelete: OtherEvent) => void;
     selectedYearDays: CalendarDayType[];
     selectedMonthDays: CalendarDayType[];
     currentDate: UTCDate;
@@ -45,6 +47,7 @@ type MonthViewProps = {
     dateForPopup: UTCDate | null;
     isEditable: boolean;
     setDateForPopup: (date: UTCDate) => void;
+    onSelectEvent?: (date: UTCDate, event: OtherEvent) => void;
     selectedDays: CalendarDayType[];
     currentDate: UTCDate;
     countryData: Record<string, Description>;
@@ -59,6 +62,7 @@ const MonthView = (props: MonthViewProps) => {
         currentDate,
         dateForPopup,
         setDateForPopup,
+        onSelectEvent,
         isEditable,
         countryData,
     } = props;
@@ -86,6 +90,7 @@ const MonthView = (props: MonthViewProps) => {
                     key={day.date + "" + index}
                     day={day}
                     setDateForPopup={setDateForPopup}
+                    onSelectEvent={onSelectEvent}
                     isSelected={false}
                     isEditable={isEditable}
                     countryData={countryData}
@@ -101,6 +106,7 @@ const MonthView = (props: MonthViewProps) => {
                     key={day.date + "" + index}
                     day={day}
                     setDateForPopup={setDateForPopup}
+                    onSelectEvent={onSelectEvent}
                     isSelected={dateForPopup === day.date}
                     isEditable={isEditable}
                     countryData={countryData}
@@ -245,12 +251,18 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
         mode,
         onModeChange,
         onNewEvent,
+        onEditEvent,
+        onDeleteEvent,
         countryData,
     } = props;
     const prevMode = usePrevious(props)?.mode;
     const [selectedDay, setSelectedDay] = useState<UTCDate | null>(null); // State for selected day in popup
     const [dateForPopup, setDateForPopup] = useState<UTCDate | null>(null);
+    const [editingEvent, setEditingEvent] = useState<OtherEvent | null>(null);
     const [shouldAnimate, setShouldAnimate] = useState<boolean>(prevMode === mode);
+    const isEditable = onNewEvent !== undefined;
+
+    const dayDialogRef = useRef<HTMLDialogElement | null>(null);
 
     const yearDaysByDate = useMemo(() => {
         const map = new Map<DateString, CalendarDayType>();
@@ -265,18 +277,79 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
         : undefined;
 
     useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            const popupElement = document.querySelector(`.${styles.popup}`);
-            if (popupElement && !popupElement.contains(event.target as Node)) {
-                setSelectedDay(null);
+        const dialog = dayDialogRef.current;
+        if (!dialog) return;
+
+        if (selectedDay) {
+            if (typeof dialog.showModal === "function" && !dialog.open) {
+                dialog.showModal();
+            } else if (!dialog.hasAttribute("open")) {
+                dialog.setAttribute("open", "");
             }
+        } else {
+            if (dialog.open) {
+                if (typeof dialog.close === "function") {
+                    dialog.close();
+                } else {
+                    dialog.removeAttribute("open");
+                }
+            }
+        }
+    }, [selectedDay]);
+
+    useEffect(() => {
+        const dialog = dayDialogRef.current;
+        if (!dialog) return;
+
+        let downTarget: EventTarget | null = null;
+        const handlePointerDown = (e: PointerEvent) => {
+            downTarget = e.target;
+        };
+        const handlePointerUp = (e: PointerEvent) => {
+            if (!dialog.open) return;
+            const rect = dialog.getBoundingClientRect();
+            const isInRect =
+                e.clientX >= rect.left &&
+                e.clientX <= rect.right &&
+                e.clientY >= rect.top &&
+                e.clientY <= rect.bottom;
+
+            if (!isInRect && downTarget === e.target) {
+                const hasClosedBy = "closedBy" in HTMLDialogElement.prototype;
+                if (!hasClosedBy) {
+                    setSelectedDay(null);
+                }
+            }
+            downTarget = null;
         };
 
-        document.addEventListener("mousedown", handleClickOutside);
+        dialog.addEventListener("pointerdown", handlePointerDown);
+        dialog.addEventListener("pointerup", handlePointerUp);
         return () => {
-            document.removeEventListener("mousedown", handleClickOutside);
+            dialog.removeEventListener("pointerdown", handlePointerDown);
+            dialog.removeEventListener("pointerup", handlePointerUp);
         };
     }, []);
+
+    const handleOpenNewForDate = (date: UTCDate) => {
+        setEditingEvent(null);
+        setDateForPopup(date);
+    };
+
+    const handleStartEditEvent = (date: UTCDate, ev: OtherEvent) => {
+        setSelectedDay(null);
+        setEditingEvent(ev);
+        setDateForPopup(date);
+    };
+
+    const handleDeleteFromDayPopup = (ev: OtherEvent) => {
+        if (!onDeleteEvent) return;
+        const remainingCount = (selectedDayEvents?.length ?? 0) - 1;
+        onDeleteEvent(ev);
+        if (remainingCount <= 0) {
+            setSelectedDay(null);
+        }
+    };
 
     return (
         <div id="calendar-grid-capture-container" className={styles.calendarGridContainer}>
@@ -287,8 +360,9 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                     onModeChange={onModeChange}
                     currentDate={currentDate}
                     dateForPopup={dateForPopup}
-                    setDateForPopup={setDateForPopup}
-                    isEditable={onNewEvent !== undefined}
+                    setDateForPopup={handleOpenNewForDate}
+                    onSelectEvent={isEditable ? handleStartEditEvent : undefined}
+                    isEditable={isEditable}
                     countryData={countryData}
                 />
                 : <YearView
@@ -296,42 +370,120 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                     onModeChange={(mode: "month" | "year", month) => { setShouldAnimate(false); onModeChange(mode, month); }}
                     currentDate={currentDate}
                     dateForPopup={dateForPopup}
-                    setDateForPopup={setDateForPopup}
-                    isEditable={onNewEvent !== undefined}
+                    setDateForPopup={handleOpenNewForDate}
+                    isEditable={isEditable}
                     setSelectedDay={setSelectedDay}
                     countryData={countryData}
                 />}
             {dateForPopup && onNewEvent && (
                 <EventPopup
                     initialDate={formatDateString(dateForPopup)}
-                    onNewEvent={(data) => { if (data) { onNewEvent(data); } setDateForPopup(null); }}
+                    initialEvent={editingEvent}
+                    onNewEvent={(data) => {
+                        if (data) {
+                            if (editingEvent && onEditEvent) {
+                                onEditEvent(editingEvent, data);
+                            } else {
+                                onNewEvent(data);
+                            }
+                        }
+                        setEditingEvent(null);
+                        setDateForPopup(null);
+                    }}
+                    onDeleteEvent={editingEvent && onDeleteEvent ? () => {
+                        onDeleteEvent(editingEvent);
+                        setEditingEvent(null);
+                        setDateForPopup(null);
+                    } : undefined}
                 />
             )}
-            {selectedDay && (
-                <div className={styles.popup}>
-                    <div className={styles.popupContent}>
-                        <h3>Events on {formatDateString(selectedDay)}</h3>
-                        <ul>
-                            {selectedDayEvents
-                                ?.filter(h => h.kind === "publicHoliday")
-                                .map((holiday, index) => (
-                                    <li key={index} data-flag={getFlagEmoji(holiday.countryCode)}>
-                                        <a target="_blank" href={getLink(undefined, holiday.country, "public holidays", countryData)}><strong>{holiday.country}</strong></a>:{" "}
-                                        <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name, countryData)}>{holiday.name}</a>
-                                    </li>
-                                ))}
-                            {selectedDayEvents
-                                ?.filter(h => h.kind === "other")
-                                .map((holiday, index) => (
-                                    <li key={index} data-flag={holiday.icon}>
-                                        <span>{holiday.name}</span>
-                                    </li>
-                                ))}
-                        </ul>
-                        <button onClick={() => setSelectedDay(null)}>Close</button>
-                    </div>
-                </div>
-            )}
+            <dialog
+                ref={dayDialogRef}
+                className={styles.popup}
+                {...({ closedby: "any" } as React.DialogHTMLAttributes<HTMLDialogElement>)}
+                aria-labelledby="day-popup-title"
+                onClose={() => setSelectedDay(null)}
+                onCancel={() => setSelectedDay(null)}
+            >
+                {selectedDay && (
+                    <>
+                        <div className={styles.popupHeader}>
+                            <h3 id="day-popup-title">Events on {formatDateString(selectedDay)}</h3>
+                            <button
+                                type="button"
+                                className={styles.closeBtn}
+                                aria-label="Close"
+                                onClick={() => setSelectedDay(null)}
+                            >
+                                ✕
+                            </button>
+                        </div>
+                        <div className={styles.popupBody}>
+                            <ul>
+                                {selectedDayEvents
+                                    ?.filter(h => h.kind === "publicHoliday")
+                                    .map((holiday, index) => (
+                                        <li key={index} className={styles.eventItem}>
+                                            <span className={styles.eventBadge}>{getFlagEmoji(holiday.countryCode)}</span>
+                                            <span className={styles.eventDetails}>
+                                                <a target="_blank" href={getLink(undefined, holiday.country, "public holidays", countryData)}><strong>{holiday.country}</strong></a>:{" "}
+                                                <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name, countryData)}>{holiday.name}</a>
+                                            </span>
+                                        </li>
+                                    ))}
+                                {selectedDayEvents
+                                    ?.filter((h): h is OtherEvent => h.kind === "other")
+                                    .map((holiday, index) => (
+                                        <li key={index} className={`${styles.eventItem} ${styles.customEventItem}`}>
+                                            <span className={styles.eventBadge}>{holiday.icon}</span>
+                                            <span className={styles.eventDetails}>{holiday.name}</span>
+                                            {isEditable && (
+                                                <span className={styles.eventItemActions}>
+                                                    {onEditEvent && (
+                                                        <button
+                                                            type="button"
+                                                            className={styles.smallActionBtn}
+                                                            aria-label={`Edit ${holiday.name}`}
+                                                            onClick={() => handleStartEditEvent(selectedDay, holiday)}
+                                                        >
+                                                            Edit
+                                                        </button>
+                                                    )}
+                                                    {onDeleteEvent && (
+                                                        <button
+                                                            type="button"
+                                                            className={`${styles.smallActionBtn} ${styles.deleteActionBtn}`}
+                                                            aria-label={`Delete ${holiday.name}`}
+                                                            onClick={() => handleDeleteFromDayPopup(holiday)}
+                                                        >
+                                                            Delete
+                                                        </button>
+                                                    )}
+                                                </span>
+                                            )}
+                                        </li>
+                                    ))}
+                            </ul>
+                        </div>
+                        <div className={styles.popupFooterActions}>
+                            {isEditable && (
+                                <button
+                                    type="button"
+                                    className={styles.primaryActionBtn}
+                                    onClick={() => {
+                                        const dayToAdd = selectedDay;
+                                        setSelectedDay(null);
+                                        handleOpenNewForDate(dayToAdd);
+                                    }}
+                                >
+                                    + Add event
+                                </button>
+                            )}
+                            <button type="button" className={styles.secondaryActionBtn} onClick={() => setSelectedDay(null)}>Close</button>
+                        </div>
+                    </>
+                )}
+            </dialog>
         </div>
     );
 };

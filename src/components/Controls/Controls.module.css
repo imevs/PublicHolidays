@@ -2,6 +2,7 @@
   padding: 20px;
   background: var(--controls-bg-gradient);
   border-bottom: 1px solid var(--controls-border);
+  border-radius: 20px 20px 0 0;
 }
 
 .controlsGrid {
@@ -49,6 +50,7 @@
 @media (max-width: 1200px) {
   .controls {
     padding: 15px;
+    border-radius: 0;
   }
 }
 
