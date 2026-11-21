@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { exportCalendarToFile, parseICS } from "../../utils/generateICS.ts";
+import { createPortal } from "react-dom";
+import { parseICS } from "../../utils/generateICS.ts";
 import { getFlagEmoji } from "../../utils/countryFlags.ts";
 import type { CalendarEvent } from "../../types/index.ts";
 import styles from "./EventListInputButtons.module.css";
@@ -8,7 +9,7 @@ import { useSearchParams } from "react-router";
 interface EventListInputButtonsProps {
     setDataText: (text: string) => void;
     setHolidaysData: (data: CalendarEvent[]) => void;
-    holidaysParsed: CalendarEvent[];
+    buttonClassName?: string;
 }
 const proxy = "https://api.codetabs.com/v1/proxy/?quest=";
 
@@ -44,12 +45,20 @@ function isCalendarStateHash(hash: string): boolean {
 export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
     setDataText,
     setHolidaysData,
-    holidaysParsed,
+    buttonClassName,
 }) => {
     const [searchParams] = useSearchParams();
     const icsLinkRef = useRef<HTMLInputElement | null>(null);
     const fileInputRef = useRef<HTMLInputElement | null>(null);
+    const importButtonRef = useRef<HTMLButtonElement | null>(null);
+    const menuRef = useRef<HTMLDivElement | null>(null);
+    const urlDialogRef = useRef<HTMLDialogElement | null>(null);
+    const wrapperRef = useRef<HTMLDivElement | null>(null);
+
     const [icsUrl, setIcsUrl] = useState("");
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [urlModalOpen, setUrlModalOpen] = useState(false);
+    const [menuPos, setMenuPos] = useState<{ top: number; right: number } | null>(null);
 
     const handleICS = useCallback((text: string) => {
         if (!text || !text.includes("BEGIN:VCALENDAR")) {
@@ -72,7 +81,68 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
             setIcsUrl(rawUrl);
             loadExternalCalendar(url).then(handleICS);
         }
-    }, []);
+    }, [searchParams, handleICS]);
+
+    useEffect(() => {
+        if (!menuOpen) {
+            setMenuPos(null);
+            return;
+        }
+        const updatePos = () => {
+            if (importButtonRef.current) {
+                const rect = importButtonRef.current.getBoundingClientRect();
+                setMenuPos({
+                    top: rect.bottom + 6,
+                    right: Math.max(10, window.innerWidth - rect.right),
+                });
+            }
+        };
+        updatePos();
+
+        const onMouseDown = (e: MouseEvent) => {
+            const target = e.target as Node;
+            if (
+                !(menuRef.current && menuRef.current.contains(target)) &&
+                !(wrapperRef.current && wrapperRef.current.contains(target))
+            ) {
+                setMenuOpen(false);
+            }
+        };
+        const onKeyDown = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                setMenuOpen(false);
+            }
+        };
+
+        window.addEventListener("resize", updatePos);
+        window.addEventListener("scroll", updatePos, true);
+        document.addEventListener("mousedown", onMouseDown);
+        document.addEventListener("keydown", onKeyDown);
+        return () => {
+            window.removeEventListener("resize", updatePos);
+            window.removeEventListener("scroll", updatePos, true);
+            document.removeEventListener("mousedown", onMouseDown);
+            document.removeEventListener("keydown", onKeyDown);
+        };
+    }, [menuOpen]);
+
+    useEffect(() => {
+        const dialog = urlDialogRef.current;
+        if (!dialog) return;
+        if (urlModalOpen) {
+            if (typeof dialog.showModal === "function" && !dialog.open) {
+                dialog.showModal();
+            } else if (!dialog.hasAttribute("open")) {
+                dialog.setAttribute("open", "");
+            }
+        } else {
+            if (dialog.open) {
+                dialog.close();
+            } else if (dialog.hasAttribute("open")) {
+                dialog.removeAttribute("open");
+            }
+        }
+    }, [urlModalOpen]);
 
     const handleImportFile = (e: React.ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0];
@@ -94,23 +164,54 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
         }
     }, [icsUrl, handleICS]);
 
-    const exportCalendar = useCallback(() => {
-        exportCalendarToFile(holidaysParsed);
-    }, [holidaysParsed]);
-
     return (
-        <div className={styles.controls}>
-            <div className={styles.controlsGroup}>
-                <input
-                    ref={icsLinkRef}
-                    value={icsUrl}
-                    type="url"
-                    onChange={e => setIcsUrl(e.target.value)}
-                    placeholder="Add link to .ICS file"
-                />
-                <button onClick={loadCalendar}>Load ICS</button>
-            </div>
-            <button onClick={() => fileInputRef.current?.click()}>Import .ics</button>
+        <div ref={wrapperRef} className={styles.dropdownWrapper}>
+            <button
+                ref={importButtonRef}
+                type="button"
+                className={buttonClassName || styles.importButton}
+                aria-haspopup="menu"
+                aria-expanded={menuOpen}
+                onClick={() => setMenuOpen(prev => !prev)}
+            >
+                <span className={styles.buttonIcon} aria-hidden="true">📥</span>
+                Import ▾
+            </button>
+
+            {menuOpen && menuPos && typeof document !== "undefined" && createPortal(
+                <div
+                    ref={menuRef}
+                    role="menu"
+                    aria-label="Import options"
+                    className={styles.dropdownMenu}
+                    style={{ top: menuPos.top, right: menuPos.right }}
+                >
+                    <button
+                        type="button"
+                        role="menuitem"
+                        className={styles.dropdownItem}
+                        onClick={() => {
+                            setMenuOpen(false);
+                            fileInputRef.current?.click();
+                        }}
+                    >
+                        📄 Import .ics file
+                    </button>
+                    <button
+                        type="button"
+                        role="menuitem"
+                        className={styles.dropdownItem}
+                        onClick={() => {
+                            setMenuOpen(false);
+                            setUrlModalOpen(true);
+                        }}
+                    >
+                        🔗 Load .ics from link
+                    </button>
+                </div>,
+                document.body
+            )}
+
             <input
                 ref={fileInputRef}
                 type="file"
@@ -118,7 +219,67 @@ export const EventListInputButtons: React.FC<EventListInputButtonsProps> = ({
                 style={{ display: "none" }}
                 onChange={handleImportFile}
             />
-            <button onClick={exportCalendar}>Save to .ics</button>
+
+            {urlModalOpen && (
+                <dialog
+                    ref={urlDialogRef}
+                    className={styles.urlDialog}
+                    {...({ closedby: "any" } as React.DialogHTMLAttributes<HTMLDialogElement>)}
+                    aria-labelledby="url-modal-title"
+                    onClose={() => setUrlModalOpen(false)}
+                    onCancel={() => setUrlModalOpen(false)}
+                >
+                    <div className={styles.modalHeader}>
+                        <h3 id="url-modal-title">🔗 Load .ics from link</h3>
+                        <button
+                            type="button"
+                            className={styles.closeBtn}
+                            aria-label="Close"
+                            onClick={() => setUrlModalOpen(false)}
+                        >
+                            ✕
+                        </button>
+                    </div>
+                    <div className={styles.modalBody}>
+                        <label htmlFor="icsLinkInput">Calendar ICS URL</label>
+                        <input
+                            id="icsLinkInput"
+                            ref={icsLinkRef}
+                            value={icsUrl}
+                            type="url"
+                            autoFocus
+                            onChange={e => setIcsUrl(e.target.value)}
+                            onKeyDown={e => {
+                                if (e.key === "Enter") {
+                                    e.preventDefault();
+                                    loadCalendar();
+                                    setUrlModalOpen(false);
+                                }
+                            }}
+                            placeholder="Add link to .ICS file"
+                        />
+                    </div>
+                    <div className={styles.modalFooter}>
+                        <button
+                            type="button"
+                            className={styles.primaryBtn}
+                            onClick={() => {
+                                loadCalendar();
+                                setUrlModalOpen(false);
+                            }}
+                        >
+                            Load ICS
+                        </button>
+                        <button
+                            type="button"
+                            className={styles.secondaryBtn}
+                            onClick={() => setUrlModalOpen(false)}
+                        >
+                            Cancel
+                        </button>
+                    </div>
+                </dialog>
+            )}
         </div>
     );
 };

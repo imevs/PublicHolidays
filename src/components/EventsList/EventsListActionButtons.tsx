@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import html2canvas from "html2canvas";
-import { createPortal } from "react-dom";
 import { useNavigate } from "react-router";
 import { formatDateString } from "../../utils/dateUtils.ts";
 import { getFlagEmoji } from "../../utils/countryFlags.ts";
@@ -9,6 +8,7 @@ import { APP_BASE_NAME, STORAGE_KEY } from "../../consts.ts";
 import type { CalendarDay as CalendarDayType, CalendarEvent } from "../../types/index.ts";
 import styles from "./EventsListActionButtons.module.css";
 import { UTCDate } from "../../utils/UTCDate.ts";
+import { EventListInputButtons } from "../EventListInput/EventListInputButtons.tsx";
 
 interface ActionButtonsProps {
     selectedYearDays: CalendarDayType[];
@@ -16,6 +16,8 @@ interface ActionButtonsProps {
     toggleMode(): void;
     onSetMode?: (mode: "month" | "year") => void;
     isCustomEditor?: boolean;
+    setDataText?: (text: string) => void;
+    setHolidaysData?: (data: CalendarEvent[]) => void;
 }
 
 function getCountriesNames(selectedYearDays: CalendarDayType[]) {
@@ -35,19 +37,16 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
     toggleMode,
     onSetMode,
     isCustomEditor = false,
+    setDataText,
+    setHolidaysData,
 }) => {
     const navigate = useNavigate();
-    const [exportMenuOpen, setExportMenuOpen] = useState(false);
     const [subscribeModalOpen, setSubscribeModalOpen] = useState(false);
     const [includeAlarm, setIncludeAlarm] = useState(true);
     const [statusMessage, setStatusMessage] = useState("");
 
     const toolbarRef = useRef<HTMLDivElement | null>(null);
-    const exportWrapperRef = useRef<HTMLDivElement | null>(null);
-    const exportButtonRef = useRef<HTMLButtonElement | null>(null);
-    const exportMenuRef = useRef<HTMLDivElement | null>(null);
     const subscribeDialogRef = useRef<HTMLDivElement | null>(null);
-    const [menuPosition, setMenuPosition] = useState<{ top: number; right: number } | null>(null);
 
     const allEvents = useMemo((): CalendarEvent[] => {
         return (selectedYearDays ?? []).flatMap(d => d.events);
@@ -117,49 +116,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
         };
     }, []);
 
-    // Position and close export dropdown on outside click or Escape
-    useEffect(() => {
-        if (!exportMenuOpen) {
-            setMenuPosition(null);
-            return;
-        }
-        const updatePosition = () => {
-            if (exportButtonRef.current) {
-                const rect = exportButtonRef.current.getBoundingClientRect();
-                setMenuPosition({
-                    top: rect.bottom + 6,
-                    right: Math.max(10, window.innerWidth - rect.right),
-                });
-            }
-        };
-        updatePosition();
-
-        const onDocMouseDown = (e: MouseEvent) => {
-            const target = e.target as Node;
-            if (
-                !(exportMenuRef.current && exportMenuRef.current.contains(target)) &&
-                !(exportWrapperRef.current && exportWrapperRef.current.contains(target))
-            ) {
-                setExportMenuOpen(false);
-            }
-        };
-        const onDocKeyDown = (e: KeyboardEvent) => {
-            if (e.key === "Escape") {
-                setExportMenuOpen(false);
-            }
-        };
-        window.addEventListener("resize", updatePosition);
-        window.addEventListener("scroll", updatePosition, true);
-        document.addEventListener("mousedown", onDocMouseDown);
-        document.addEventListener("keydown", onDocKeyDown);
-        return () => {
-            window.removeEventListener("resize", updatePosition);
-            window.removeEventListener("scroll", updatePosition, true);
-            document.removeEventListener("mousedown", onDocMouseDown);
-            document.removeEventListener("keydown", onDocKeyDown);
-        };
-    }, [exportMenuOpen]);
-
     // Close subscribe modal on Escape
     useEffect(() => {
         if (!subscribeModalOpen) return;
@@ -202,7 +158,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
         const countries = getCountriesNames(selectedYearDays);
         const fileName = countries.length > 0 ? `${countries.join("_")}_calendar` : "custom_calendar";
         exportCalendarToFile(allEvents, fileName, { includeAlarm: withAlarm });
-        setExportMenuOpen(false);
         setStatusMessage("Combined ICS file downloaded");
     }, [selectedYearDays, allEvents]);
 
@@ -216,12 +171,10 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                 exportCalendarToFile(countryEvents, `${country}_calendar`, { includeAlarm: withAlarm });
             }
         });
-        setExportMenuOpen(false);
         setStatusMessage("Separate ICS files downloaded");
     }, [selectedYearDays]);
 
     const saveAsImage = async () => {
-        setExportMenuOpen(false);
         const element = document.getElementById("calendar-grid-capture-container");
         if (!element) return;
 
@@ -294,7 +247,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                             onClick={() => handleSelectMode("year")}
                         >
                             <span className={styles.buttonIcon} aria-hidden="true">🗓️</span>
-                            <span className={styles.modeLabel}>Year<span className={styles.desktopLabel}> view</span></span>
+                            <span className={styles.modeLabel}>Year<span className={styles.desktopLabel}>&nbsp;view</span></span>
                         </button>
                         <button
                             type="button"
@@ -305,7 +258,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                             onClick={() => handleSelectMode("month")}
                         >
                             <span className={styles.buttonIcon} aria-hidden="true">📅</span>
-                            <span className={styles.modeLabel}>Month<span className={styles.desktopLabel}> view</span></span>
+                            <span className={styles.modeLabel}>Month<span className={styles.desktopLabel}>&nbsp;view</span></span>
                         </button>
                     </div>
 
@@ -319,65 +272,25 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                             onClick={() => setSubscribeModalOpen(true)}
                         >
                             <span className={styles.buttonIcon} aria-hidden="true">🔔</span>
-                            Subscribe<span className={styles.desktopLabel}> / Add to Calendar</span>
+                            Subscribe<span className={styles.desktopLabel}>&nbsp;/ Add to Calendar</span>
                         </button>
 
-                        <div ref={exportWrapperRef} className={styles.dropdownWrapper}>
-                            <button
-                                ref={exportButtonRef}
-                                type="button"
-                                className={styles.actionButton}
-                                aria-haspopup="menu"
-                                aria-expanded={exportMenuOpen}
-                                onClick={() => setExportMenuOpen(prev => !prev)}
-                            >
-                                <span className={styles.buttonIcon} aria-hidden="true">📥</span>
-                                Export ▾
-                            </button>
-                            {exportMenuOpen && menuPosition && typeof document !== "undefined" && createPortal(
-                                <div
-                                    ref={exportMenuRef}
-                                    role="menu"
-                                    aria-label="Export options"
-                                    className={styles.dropdownMenu}
-                                    style={{ top: menuPosition.top, right: menuPosition.right }}
-                                >
-                                    <button
-                                        type="button"
-                                        role="menuitem"
-                                        data-export-item="true"
-                                        className={styles.dropdownItem}
-                                        onClick={() => exportCalendar(false)}
-                                    >
-                                        <span className={styles.buttonIcon} aria-hidden="true">📄</span>
-                                        Download combined ICS file
-                                    </button>
-                                    {!isCustomEditor && (
-                                        <button
-                                            type="button"
-                                            role="menuitem"
-                                            data-export-item="true"
-                                            className={styles.dropdownItem}
-                                            onClick={() => exportAllCalendars(false)}
-                                        >
-                                            <span className={styles.buttonIcon} aria-hidden="true">🗂️</span>
-                                            Download separate ICS files
-                                        </button>
-                                    )}
-                                    <button
-                                        type="button"
-                                        role="menuitem"
-                                        data-export-item="true"
-                                        className={styles.dropdownItem}
-                                        onClick={saveAsImage}
-                                    >
-                                        <span className={styles.buttonIcon} aria-hidden="true">📷</span>
-                                        Save as Image
-                                    </button>
-                                </div>,
-                                document.body
-                            )}
-                        </div>
+                        <button
+                            type="button"
+                            className={styles.actionButton}
+                            onClick={saveAsImage}
+                        >
+                            <span className={styles.buttonIcon} aria-hidden="true">📷</span>
+                            Save<span className={styles.desktopLabel}>&nbsp;as Image</span>
+                        </button>
+
+                        {isCustomEditor && setDataText && setHolidaysData && (
+                            <EventListInputButtons
+                                setDataText={setDataText}
+                                setHolidaysData={setHolidaysData}
+                                buttonClassName={styles.actionButton}
+                            />
+                        )}
 
                         {!isCustomEditor && (
                             <button
@@ -388,7 +301,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                                 onClick={editEvents}
                             >
                                 <span className={styles.buttonIcon} aria-hidden="true">✏️</span>
-                                <span className={styles.customizeLabel}>Customize</span><span className={styles.desktopLabel}> calendar</span>
+                                <span className={styles.customizeLabel}>Customize</span><span className={styles.desktopLabel}>&nbsp;calendar</span>
                             </button>
                         )}
                     </div>

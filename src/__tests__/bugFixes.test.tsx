@@ -1061,7 +1061,6 @@ describe("External ICS loader & URL handling (Item 3.1)", () => {
             <EventListInputButtons
                 setDataText={setDataText}
                 setHolidaysData={setHolidaysData}
-                holidaysParsed={[]}
             />
         );
 
@@ -1105,9 +1104,11 @@ describe("External ICS loader & URL handling (Item 3.1)", () => {
             <EventListInputButtons
                 setDataText={setDataText}
                 setHolidaysData={setHolidaysData}
-                holidaysParsed={[]}
             />
         );
+
+        fireEvent.click(screen.getByRole("button", { name: /Import ▾/i }));
+        fireEvent.click(screen.getByRole("menuitem", { name: /Load \.ics from link/i }));
 
         const urlInput = screen.getByPlaceholderText("Add link to .ICS file");
         fireEvent.change(urlInput, { target: { value: "https://example.com/bad.html" } });
@@ -1119,7 +1120,11 @@ describe("External ICS loader & URL handling (Item 3.1)", () => {
         expect(setHolidaysData).not.toHaveBeenCalled();
         expect(setDataText).not.toHaveBeenCalled();
 
-        fireEvent.change(urlInput, { target: { value: "https://example.com/good.ics" } });
+        fireEvent.click(screen.getByRole("button", { name: /Import ▾/i }));
+        fireEvent.click(screen.getByRole("menuitem", { name: /Load \.ics from link/i }));
+
+        const urlInput2 = screen.getByPlaceholderText("Add link to .ICS file");
+        fireEvent.change(urlInput2, { target: { value: "https://example.com/good.ics" } });
         fireEvent.click(screen.getByRole("button", { name: "Load ICS" }));
         await waitFor(() => {
             expect(setHolidaysData).toHaveBeenCalledTimes(1);
@@ -1151,7 +1156,6 @@ describe("External ICS loader & URL handling (Item 3.1)", () => {
             <EventListInputButtons
                 setDataText={jest.fn()}
                 setHolidaysData={jest.fn()}
-                holidaysParsed={[]}
             />
         );
 
