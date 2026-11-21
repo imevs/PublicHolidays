@@ -109,6 +109,32 @@ describe("useCalendar", () => {
         }
     });
 
+    it("manages shouldScrollToMonth state correctly based on initial hash load, user interaction, and skipMonthScroll", () => {
+        window.location.hash = "date=2025-05-01";
+        const { result, rerender } = renderHook(() => useCalendar(convertEvents(Object.values(allHolidays))));
+
+        expect(result.current.shouldScrollToMonth).toBe(true);
+
+        act(() => {
+            result.current.clearShouldScrollToMonth();
+        });
+        expect(result.current.shouldScrollToMonth).toBe(false);
+
+        act(() => {
+            result.current.navigateMonth(5);
+        });
+        expect(result.current.shouldScrollToMonth).toBe(false);
+
+        sessionStorage.setItem("skipMonthScroll", "1");
+        window.location.hash = "date=2025-06-01";
+        act(() => {
+            sessionStorage.removeItem("skipMonthScroll");
+            rerender();
+        });
+        expect(result.current.shouldScrollToMonth).toBe(false);
+        expect(sessionStorage.getItem("skipMonthScroll")).toBeNull();
+    });
+
     it("check current date time zone is US/Eastern", () => {
         const date = new UTCDate("2025-01-01");
         expect(date.getTimezoneOffset()).toBe(300); // EST timezone offset

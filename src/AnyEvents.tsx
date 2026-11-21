@@ -70,6 +70,8 @@ export const AnyEvents: React.FC = () => {
         navigateMonth,
         handleModeChange,
         handleDateChange,
+        shouldScrollToMonth,
+        clearShouldScrollToMonth,
     } = useCalendar(holidaysData);
     const [dataText, setDataText] = useState<string>(() => {
         return localStorage.getItem(STORAGE_KEY) ?? defaultData.trim();
@@ -180,6 +182,8 @@ export const AnyEvents: React.FC = () => {
                         onNewEvent={onNewEvent}
                         onEditEvent={onEditEvent}
                         onDeleteEvent={onDeleteEvent}
+                        shouldScrollToMonth={shouldScrollToMonth}
+                        onScrolledToMonth={clearShouldScrollToMonth}
                     />
 
                     <EventsList

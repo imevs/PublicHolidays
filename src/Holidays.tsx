@@ -30,6 +30,8 @@ export const Holidays: React.FC = () => {
         handleModeChange,
         showAllCountries,
         setShowAllCountries,
+        shouldScrollToMonth,
+        clearShouldScrollToMonth,
     } = useCalendar(holidaysData, showAllHolidays);
     const [countryData, setCountryData] = useState({});
 
@@ -108,6 +110,8 @@ export const Holidays: React.FC = () => {
                         mode={mode}
                         onModeChange={handleModeChange}
                         countryData={countryData}
+                        shouldScrollToMonth={shouldScrollToMonth}
+                        onScrolledToMonth={clearShouldScrollToMonth}
                     />
 
                     <EventsList

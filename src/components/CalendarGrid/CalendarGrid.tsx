@@ -29,6 +29,8 @@ interface CalendarGridProps {
     mode: "month" | "year";
     countryData: Record<string, Description>;
     onModeChange: (mode: "month" | "year", month: number) => void;
+    shouldScrollToMonth?: boolean;
+    onScrolledToMonth?: () => void;
 }
 
 function cn(classes: string) {
@@ -124,10 +126,17 @@ const YearView = ({
     setDateForPopup,
     isEditable,
     setSelectedDay,
-}: MonthViewProps & { setSelectedDay: (date: UTCDate | null) => void; }) => {
+    shouldScrollToMonth,
+    onScrolledToMonth,
+}: MonthViewProps & {
+    setSelectedDay: (date: UTCDate | null) => void;
+    shouldScrollToMonth?: boolean;
+    onScrolledToMonth?: () => void;
+}) => {
     const currentYear = currentDate.getFullYear();
     const [highlightedMonth, setHighlightedMonth] = useState<number | null>(null); // State for highlighted month
     const yearGridRef = useRef<HTMLDivElement | null>(null); // Ref for the year grid container
+    const isFirstRenderRef = useRef(true);
 
     const currentMonth = currentDate.getMonth();
     const daysByDate = useMemo(() => {
@@ -140,14 +149,18 @@ const YearView = ({
     const dateForPopupStr = dateForPopup ? formatDateString(dateForPopup) : null;
 
     useEffect(() => {
-        if (yearGridRef.current) {
+        if (shouldScrollToMonth && yearGridRef.current) {
             const monthElement = yearGridRef.current.querySelectorAll(`.${styles.monthContainer}`)[currentMonth];
             if (monthElement && !currentDate.isToday()) {
                 monthElement.scrollIntoView({ behavior: "smooth", block: "center" });
                 setHighlightedMonth(currentMonth);
             }
+            onScrolledToMonth?.();
+        } else if (!isFirstRenderRef.current) {
+            setHighlightedMonth(currentMonth);
         }
-    }, [currentMonth]);
+        isFirstRenderRef.current = false;
+    }, [currentMonth, shouldScrollToMonth, currentDate, onScrolledToMonth]);
 
     return (
         <>
@@ -377,6 +390,8 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                     isEditable={isEditable}
                     setSelectedDay={setSelectedDay}
                     countryData={countryData}
+                    shouldScrollToMonth={props.shouldScrollToMonth}
+                    onScrolledToMonth={props.onScrolledToMonth}
                 />}
             {dateForPopup && onNewEvent && (
                 <EventPopup

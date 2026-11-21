@@ -137,6 +137,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
     };
 
     const editEvents = () => {
+        sessionStorage.setItem("skipMonthScroll", "1");
         const holidayLines = (selectedYearDays ?? [])
             .flatMap(day => day.events
                 .filter(event => event.kind === "publicHoliday")
