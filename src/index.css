@@ -206,96 +206,6 @@ body {
 }
 
 /* Vibrant Theme - Bold purple gradients and vivid colors */
-[data-theme='vibrant'] {
-  --app-bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --text-main: #333;
-  --text-header: white;
-  --text-muted: rgba(255, 255, 255, 0.9);
-
-  --container-bg: white;
-  --container-shadow: rgba(0, 0, 0, 0.1);
-
-  --button-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --button-text: white;
-  --button-shadow: rgba(102, 126, 234, 0.4);
-
-  --grid-bg: #e9ecef;
-  --grid-header-bg: #495057;
-  --grid-header-text: white;
-
-  --day-cell-bg: white;
-  --day-border: #ddd;
-  --day-hover: #f8f9fa;
-
-  --holiday-bg: #ffefef;
-  --selected-day-bg: #ddd;
-
-  --popup-bg: white;
-  --popup-border: #ccc;
-
-  --input-bg: white;
-  --input-border: #ccc;
-
-  --weekend-bg: lightcoral;
-
-  --controls-bg-gradient: linear-gradient(90deg, #f8f9fa 0%, #e9ecef 100%);
-  --controls-border: #dee2e6;
-  --controls-label: #495057;
-  --input-text: #495057;
-  --input-focus-border: #667eea;
-
-  --link-color: #0066cc;
-  --link-hover: #004499;
-
-  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --primary-blue: #0078d4;
-  --primary-blue-hover: #005bb5;
-
-  --checkbox-checked-bg: #0078d4;
-  --checkbox-mark-color: #fff;
-
-  --status-valid-bg: #d4f8e8;
-  --status-valid-text: #05684a;
-  --status-valid-border: #9fe6c8;
-
-  --status-invalid-bg: #fdecea;
-  --status-invalid-text: #a33;
-  --status-invalid-border: #f5c6c6;
-
-  --tooltip-bg: white;
-  --tooltip-border: black;
-  --tooltip-border-hover: red;
-  --tooltip-text: black;
-
-  --overlay-bg: rgba(0, 0, 0, 0.5);
-
-  --emoji-popup-bg: white;
-  --emoji-popup-border: #ccc;
-  --emoji-popup-shadow: rgba(0, 0, 0, 0.1);
-  --emoji-button-bg: #3b82f6;
-
-  --header-text-shadow: rgba(0, 0, 0, 0.3);
-
-  --theme-toggle-bg: rgba(255, 255, 255, 0.2);
-  --theme-toggle-border: rgba(255, 255, 255, 0.3);
-  --theme-toggle-hover-bg: rgba(255, 255, 255, 0.3);
-
-  --event-bg-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-  --event-shadow: rgba(0, 0, 0, 0.1);
-
-  --holiday-text: lightcoral;
-
-  --highlight-month-bg: rgba(0, 123, 255, 0.1);
-
-  --select-focus-shadow: rgba(102, 126, 234, 0.1);
-  --button-disabled-bg: #6c757d;
-
-  --text-inverse: #ffffff;
-  --input-border-dark: black;
-  --checkbox-bg: #ffffff;
-  --text-white: white;
-  --flag-shadow: 0px 0px 1px rgba(255, 255, 255, 0.4);
-}
 
 /* Ocean Theme - Refreshing blue and teal tones */
 [data-theme='ocean'] {
@@ -1594,23 +1504,43 @@ a:hover {
 }
 
 @media print {
+  *, *::before, *::after {
+    print-color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+  }
+
   @page {
     size: A4 portrait;
     margin: 10mm;
   }
 
+  #root::before, #root::after, body::before, body::after {
+    display: none !important;
+    content: none !important;
+  }
+
   html,
   body,
   #root,
-  [class*="app"],
-  [class*="container"] {
-    background: #ffffff !important;
-    color: #111827 !important;
+  [class*="_app_"] {
+    background: var(--container-bg) !important;
+    color: var(--text-main) !important;
     box-shadow: none !important;
     border-radius: 0 !important;
     padding: 0 !important;
     margin: 0 !important;
-    min-height: auto !important;
+    min-height: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  [class*="container"] {
+    background: var(--container-bg) !important;
+    color: var(--text-main) !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
   }
@@ -1636,13 +1566,13 @@ a:hover {
     width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+    background: var(--container-bg) !important;
   }
 
   #calendar-grid-print-container h1 {
     font-size: 1.25rem !important;
     margin: 0 0 8px 0 !important;
     text-align: center !important;
-    color: #111827 !important;
   }
 
   /* Year View A4 3x4 grid */
@@ -1664,7 +1594,6 @@ a:hover {
   [class*="monthHeader"] {
     font-size: 0.9rem !important;
     margin-bottom: 2px !important;
-    color: #111827 !important;
   }
 
   [class*="dayCell"] {
@@ -1710,6 +1639,7 @@ a:hover {
     page-break-before: always !important;
     margin-top: 0 !important;
     display: block !important;
+    background: var(--container-bg) !important;
   }
 
   [class*="eventsWrapper"] {
