@@ -143,6 +143,10 @@ export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = tru
     const [mode, setMode] = useState<"month" | "year">("year");
     const [showAllCountries, setShowAllCountries] = useState(false);
 
+    const [hasInteractedRef] = useState(() => ({ current: false }));
+    const [shouldScrollToMonth, setShouldScrollToMonth] = useState(false);
+    const clearShouldScrollToMonth = useCallback(() => setShouldScrollToMonth(false), []);
+
     const loadStateFromSearchParams = useCallback(() => {
         const urlSearchParams = getParams();
         const countries = urlSearchParams.get("countries") ?? "";
@@ -151,7 +155,14 @@ export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = tru
         }
         const date = urlSearchParams.get("date") ?? "";
         if (date) {
+            const skipScroll = sessionStorage.getItem("skipMonthScroll") === "1";
+            if (skipScroll) {
+                sessionStorage.removeItem("skipMonthScroll");
+            }
             setCurrentDate(new UTCDate(date as DateThreeParts));
+            if (!hasInteractedRef.current && !skipScroll) {
+                setShouldScrollToMonth(true);
+            }
         }
         const urlMode = urlSearchParams.get("mode") as "month" | "year";
         if (urlMode === "month" || urlMode === "year") {
@@ -180,6 +191,8 @@ export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = tru
     }, [currentDate, selectedCountries, holidaysIndex, showAllHolidays]);
 
     const navigateMonth = useCallback((nextMonth: number): UTCDate => {
+        hasInteractedRef.current = true;
+        setShouldScrollToMonth(false);
         const newDate = new UTCDate(currentDate);
         newDate.setDate(1);
         newDate.setMonth(nextMonth);
@@ -202,6 +215,8 @@ export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = tru
     }, []);
 
     const handleDateChange = useCallback((newDate: UTCDate): void => {
+        hasInteractedRef.current = true;
+        setShouldScrollToMonth(false);
         const params = getParams();
         params.set("date", dateFormatter.format(newDate.valueOf()));
         window.location.hash = decodeURIComponent(params.toString());
@@ -209,6 +224,8 @@ export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = tru
     }, []);
 
     const handleModeChange = useCallback((newMode: "month" | "year", month: number): void => {
+        hasInteractedRef.current = true;
+        setShouldScrollToMonth(false);
         const params = getParams();
         params.set("mode", newMode);
         if (newMode === "month") {
@@ -240,5 +257,7 @@ export const useCalendar = (holidaysData: CalendarEvent[], showAllHolidays = tru
         handleModeChange,
         showAllCountries,
         setShowAllCountries: onShowAllCountries,
+        shouldScrollToMonth,
+        clearShouldScrollToMonth,
     };
 };
