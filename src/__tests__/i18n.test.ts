@@ -9,7 +9,7 @@ import {
     SUPPORTED_LANGUAGES,
     TRANSLATIONS,
 } from "../i18n/locales/index.ts";
-import type { ContinentId, LanguageCode } from "../i18n/types.ts";
+import type { ContinentId, LanguageCode, LanguageCode as Language } from "../i18n/types.ts";
 import { formatDateToReadable } from "../utils/dateUtils.ts";
 import { UTCDate } from "../utils/UTCDate.ts";
 
@@ -110,5 +110,22 @@ describe("i18n dictionaries and helpers", () => {
             expect(formatted).toContain("1");
             expect(formatted).toMatch(/\(.+\)/);
         }
+    });
+});
+
+import { getLocalizedHolidayName } from "../i18n/holidayNames.ts";
+
+describe("Holiday Name Localization", () => {
+    test("getLocalizedHolidayName translates correctly for supported country/language pairs", () => {
+        expect(getLocalizedHolidayName("New Year's Day", "LV", "lv")).toBe("Jaungada diena");
+        expect(getLocalizedHolidayName("New Year's Day", "DE", "de")).toBe("Neujahr");
+        expect(getLocalizedHolidayName("New Year's Day", "FR", "fr")).toBe("Jour de l'an");
+        expect(getLocalizedHolidayName("New Year's Day", "ES", "es")).toBe("Año Nuevo");
+        expect(getLocalizedHolidayName("New Year's Day", "RU", "ru")).toBe("Новый год");
+    });
+
+    test("getLocalizedHolidayName returns English name when non-matching language is active", () => {
+        expect(getLocalizedHolidayName("New Year's Day", "LV", "de")).toBe("New Year's Day");
+        expect(getLocalizedHolidayName("New Year's Day", "LV", "en" as unknown as Language)).toBe("New Year's Day");
     });
 });
