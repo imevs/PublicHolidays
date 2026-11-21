@@ -20,7 +20,17 @@ function clearFromEmoji(s: string): string {
 const icons = [
     "🎈", "🎁", "🎂", "💍", "👸", "👴🏼", "👵", "😀", "😁", "😂",
     "🤣", "😊", "😍", "😎", "😏", "🤔", "😴", "😡", "😭", "🤯",
-    "🤩", "😇", "🥰", "😤", "😈", "👻", "🔥"
+    "🤩", "😇", "🥰", "😤", "😈", "👻", "🔥", "🏖️", "✈️", "🏔️", "🏕️"
+];
+
+const RANGE_COLORS = [
+    { label: "Teal", value: "#0d9488" },
+    { label: "Blue", value: "#2563eb" },
+    { label: "Purple", value: "#7c3aed" },
+    { label: "Amber", value: "#d97706" },
+    { label: "Rose", value: "#db2777" },
+    { label: "Green", value: "#059669" },
+    { label: "Red", value: "#dc2626" },
 ];
 
 const EventPopup: React.FC<EventPopupProps> = ({
@@ -37,6 +47,9 @@ const EventPopup: React.FC<EventPopupProps> = ({
         return initialEvent.icon ? `${initialEvent.icon} ${initialEvent.name}` : initialEvent.name;
     });
     const [oneTime, setOneTime] = useState(initialOneTime);
+    const [isRange, setIsRange] = useState(() => Boolean(initialEvent?.isRange && initialEvent?.endDate));
+    const [endDate, setEndDate] = useState<string>(() => { if (!initialEvent?.endDate) return initialDate; return initialEvent.endDate.split("-").length === 3 ? initialEvent.endDate : `${initialDate.slice(0, 4)}-${initialEvent.endDate}`; });
+    const [rangeColor, setRangeColor] = useState(initialEvent?.color || "#0d9488");
     const [icon, setIcon] = useState(initialEvent?.icon || "🎂");
 
     useEffect(() => {
@@ -85,14 +98,14 @@ const EventPopup: React.FC<EventPopupProps> = ({
     }, [onNewEvent]);
 
     const handleSave = useCallback(() => {
-        onNewEvent({
-            date: oneTime ? initialDate : initialDate.substring(5) as DateTwoParts,
-            name: clearFromEmoji(name),
-            icon: icon,
-            localName: "",
-            kind: "other",
-        });
-    }, [onNewEvent, oneTime, initialDate, name, icon]);
+        const startDateStr = oneTime ? initialDate : (initialDate.substring(5) as DateTwoParts);
+        if (isRange && endDate > initialDate) {
+            const endDateStr = oneTime ? (endDate as DateString) : (endDate.substring(5) as DateTwoParts);
+            onNewEvent({ date: startDateStr, rangeStart: startDateStr, endDate: endDateStr, isRange: true, color: rangeColor, name: clearFromEmoji(name), icon, localName: "", kind: "other" });
+        } else {
+            onNewEvent({ date: startDateStr, name: clearFromEmoji(name), icon, localName: "", kind: "other" });
+        }
+    }, [onNewEvent, oneTime, initialDate, name, icon, isRange, endDate, rangeColor]);
 
     const selectIcon = useCallback((selectedIcon: string) => {
         setIcon(selectedIcon);
@@ -179,16 +192,48 @@ const EventPopup: React.FC<EventPopupProps> = ({
                     ))}
                 </div>
 
-                <div className={styles.checkboxRow}>
-                    <input
-                        type="checkbox"
-                        id="oneTime"
-                        className={styles.checkbox}
-                        checked={oneTime}
-                        onChange={(e) => setOneTime(e.target.checked)}
-                    />
-                    <label htmlFor="oneTime" className={styles.checkboxLabel}>One-time</label>
+                <div className={styles.checkboxGroup}>
+                    <div className={styles.checkboxRow}>
+                        <input
+                            type="checkbox"
+                            id="oneTime"
+                            className={styles.checkbox}
+                            checked={oneTime}
+                            onChange={(e) => setOneTime(e.target.checked)}
+                        />
+                        <label htmlFor="oneTime" className={styles.checkboxLabel}>One-time</label>
+                    </div>
+
+                    <div className={styles.checkboxRow}>
+                        <input type="checkbox" id="isRange" className={styles.checkbox} checked={isRange} onChange={(e) => setIsRange(e.target.checked)} />
+                        <label htmlFor="isRange" className={styles.checkboxLabel}>Date range</label>
+                    </div>
                 </div>
+
+                {isRange && (
+                    <>
+                        <div className={styles.endDateContainer}>
+                            <label htmlFor="eventEndDate">End date</label>
+                            <input id="eventEndDate" type="date" min={initialDate} value={endDate} onChange={(e) => setEndDate(e.target.value)} />
+                        </div>
+                        <div className={styles.colorSection}>
+                            <span className={styles.colorLabel}>Highlight color</span>
+                            <div className={styles.colorSwatches}>
+                                {RANGE_COLORS.map((c) => (
+                                    <button
+                                        key={c.value}
+                                        type="button"
+                                        aria-label={c.label}
+                                        aria-pressed={rangeColor.toLowerCase() === c.value}
+                                        className={`${styles.colorSwatch} ${rangeColor.toLowerCase() === c.value ? styles.colorSwatchActive : ""}`}
+                                        style={{ backgroundColor: c.value }}
+                                        onClick={() => setRangeColor(c.value)}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </>
+                )}
             </div>
             <div className={styles.footer}>
                 <button type="button" className={styles.saveBtn} onClick={handleSave}>Save (Enter)</button>

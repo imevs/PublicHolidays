@@ -101,6 +101,9 @@
   background-color: var(--holiday-bg);
 }
 
+.rangeDay { background: color-mix(in srgb, #0d9488 16%, var(--day-cell-bg)); border-bottom: 2px solid #0d9488; }
+.rangeSpan { font-size: 0.85em; opacity: 0.78; margin-left: 4px; }
+
 .dayCell.selectedDate {
   background: var(--selected-day-bg);
 }
