@@ -1,0 +1,184 @@
+.seoSection {
+    padding: 32px 24px 36px;
+    border-top: 1px solid var(--controls-border);
+    background: var(--container-bg);
+    color: var(--text-main);
+    border-radius: 0 0 20px 20px;
+}
+
+.sectionInner {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.sectionHeading {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 14px;
+}
+
+.subHeading {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 8px;
+}
+
+.featuresGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.featureCard {
+    background: var(--controls-bg-gradient);
+    border: 1px solid var(--controls-border);
+    border-radius: 14px;
+    padding: 16px 18px;
+}
+
+.featureTitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    margin: 0 0 6px;
+}
+
+.featureDesc {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--controls-label);
+    margin: 0;
+}
+
+.featureCard .featureActionButton {
+    margin-top: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-radius: 10px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.featureCard .featureActionButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px var(--button-shadow);
+}
+
+.featureCard .featureActionButton:focus-visible {
+    outline: 2px solid var(--input-focus-border);
+    outline-offset: 2px;
+}
+
+.presetsDesc {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: var(--controls-label);
+    margin: 0 0 12px;
+}
+
+.presetsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.presetPill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid var(--controls-border);
+    background: var(--day-cell-bg);
+    color: var(--link-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.presetPill:hover {
+    background: var(--day-hover);
+    border-color: var(--input-focus-border);
+    color: var(--link-hover);
+    transform: translateY(-1px);
+}
+
+.presetPill:focus-visible {
+    outline: 2px solid var(--input-focus-border);
+    outline-offset: 2px;
+}
+
+.presetCodes {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--controls-label);
+}
+
+.faqList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faqItem {
+    border: 1px solid var(--controls-border);
+    border-radius: 12px;
+    background: var(--day-cell-bg);
+    padding: 12px 8px;
+}
+
+.faqQuestion {
+    font-size: 0.96rem;
+    font-weight: 600;
+    color: var(--text-main);
+    cursor: pointer;
+    list-style-position: inside;
+    padding-left: 6px;
+}
+
+.faqQuestion:focus-visible {
+    outline: 2px solid var(--input-focus-border);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.faqAnswer {
+    margin: 10px 0 0;
+    padding-left: 6px;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--controls-label);
+}
+
+@media (max-width: 768px) {
+    .seoSection {
+        padding: 24px 16px 28px;
+    }
+
+    .featuresGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1200px) {
+    .seoSection {
+        border-radius: 0;
+    }
+}
+
+@media print {
+    .seoSection {
+        display: none !important;
+    }
+}

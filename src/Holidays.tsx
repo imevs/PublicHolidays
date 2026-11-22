@@ -14,7 +14,14 @@ import { loadContinentHolidays, getMissingContinents, getContinentCacheKey } fro
 export const Holidays: React.FC = () => {
     const { t, format } = useTranslation();
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
-    const [highlightLongHolidays, setHighlightLongHolidays] = useState(false);
+    const [highlightLongHolidays, setHighlightLongHolidays] = useState(() => {
+        const fromSession = sessionStorage.getItem("enableLongHolidays") === "1";
+        if (fromSession) {
+            sessionStorage.removeItem("enableLongHolidays");
+            return true;
+        }
+        return false;
+    });
     const loadedContinentsRef = useRef<Set<string>>(new Set());
 
     const {
@@ -68,6 +75,11 @@ export const Holidays: React.FC = () => {
         });
     }, []);
 
+    const handleHighlightLongHolidays = () => {
+        setHighlightLongHolidays(true);
+        document.getElementById("calendar-grid-print-container")?.scrollIntoView?.({ behavior: "smooth" });
+    };
+
     return (
         <AppLayout
             title={t.app.holidaysTitle}
@@ -76,6 +88,7 @@ export const Holidays: React.FC = () => {
             description={description}
             keywords={keywords}
             activeRoute="Holidays"
+            onHighlightLongHolidays={handleHighlightLongHolidays}
         >
             <Controls
                 selectedDate={currentDate}

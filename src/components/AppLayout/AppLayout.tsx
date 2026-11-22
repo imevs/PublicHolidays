@@ -6,6 +6,7 @@ import ThemeSelector from "../ThemeSelector/ThemeSelector.tsx";
 import { APP_BASE_NAME } from "../../consts.ts";
 import { updatePageMetadata } from "../../utils/seo.ts";
 import { useTranslation } from "../../i18n/useTranslation.ts";
+import { SeoLandingSection } from "../SeoLandingSection/SeoLandingSection.tsx";
 
 export interface AppLayoutProps {
     title: string;
@@ -14,6 +15,7 @@ export interface AppLayoutProps {
     description: string;
     keywords: string;
     activeRoute: "Holidays" | "EditEvents";
+    onHighlightLongHolidays?: () => void;
     children: React.ReactNode;
 }
 
@@ -24,6 +26,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
     description,
     keywords,
     activeRoute,
+    onHighlightLongHolidays,
     children,
 }) => {
     const navigate = useNavigate();
@@ -82,6 +85,10 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
 
             <div className={styles.container}>
                 {children}
+                <SeoLandingSection
+                    activeRoute={activeRoute}
+                    onHighlightLongHolidays={onHighlightLongHolidays}
+                />
             </div>
         </div>
     );

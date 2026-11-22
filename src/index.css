@@ -1742,6 +1742,8 @@ a:hover {
   nav,
   dialog,
   [class*="themeSelector"],
+  [class*="languageSelector"],
+  [class*="topUtilityBar"],
   [class*="controls"],
   [class*="stickyToolbarWrapper"],
   [class*="panel"],
