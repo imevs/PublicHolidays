@@ -35,6 +35,7 @@ export const es = {
             seasonal: "Estacional",
             lightblue: "Azul claro",
             brightblue: "Azul brillante",
+            book: "Libro",
         },
     },
     controls: {

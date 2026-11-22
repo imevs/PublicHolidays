@@ -1499,6 +1499,193 @@ a:hover {
   z-index: -1;
 }
 
+/* Book Theme - Tactile parchment paper texture, stacked page edges, and spine crease */
+[data-theme='book'] {
+  --paper-grain-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.44 0 0 0 0 0.33 0 0 0 0 0.19 0 0 0 0.09 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23paper)'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(0deg,
+      rgba(120, 88, 48, 0.018) 0px,
+      rgba(120, 88, 48, 0.018) 1px,
+      transparent 1px,
+      transparent 4px),
+    repeating-linear-gradient(90deg,
+      rgba(120, 88, 48, 0.014) 0px,
+      rgba(120, 88, 48, 0.014) 1px,
+      transparent 1px,
+      transparent 5px);
+
+  --paper-texture-bg:
+    var(--paper-grain-image),
+    linear-gradient(90deg,
+      rgba(145, 112, 72, 0.08) 0%,
+      transparent 4%,
+      transparent 46%,
+      rgba(92, 62, 30, 0.1) 50%,
+      transparent 54%,
+      transparent 96%,
+      rgba(145, 112, 72, 0.08) 100%),
+    radial-gradient(ellipse at 50% 45%, #fbf7ee 0%, #f6f0e2 62%, #efe5d0 100%);
+
+  --app-bg-gradient:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='desk'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0.36 0 0 0 0 0.25 0 0 0 0 0.14 0 0 0 0.07 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23desk)'/%3E%3C/svg%3E"),
+    radial-gradient(circle at 50% 25%, #eadfcb 0%, #d8c7ab 58%, #c2ad8c 100%);
+
+  --text-main: #2e2217;
+  --text-header: #26180d;
+  --text-muted: rgba(58, 42, 26, 0.74);
+
+  --container-bg: var(--paper-texture-bg);
+  --container-shadow: rgba(48, 32, 16, 0.28);
+
+  --button-bg: linear-gradient(135deg, #70492b 0%, #52331b 100%);
+  --button-text: #fbf7ee;
+  --button-shadow: rgba(62, 38, 18, 0.3);
+
+  --grid-bg: #d9cbb3;
+  --grid-header-bg: #5c3d24;
+  --grid-header-text: #fbf7ee;
+
+  --day-cell-bg: #fbf7ee;
+  --day-border: #d8cab3;
+  --day-hover: #efe5d0;
+
+  --holiday-bg: #f3e0c8;
+  --selected-day-bg: #e7cfa8;
+
+  --popup-bg: #fbf7ee;
+  --popup-border: #cbb99e;
+  --popup-text: #2e2217;
+
+  --input-bg: #fdfaf2;
+  --input-border: #cbb99e;
+
+  --weekend-bg: #e8d9c0;
+
+  --controls-bg-gradient:
+    var(--paper-grain-image),
+    linear-gradient(90deg, #faf4e7 0%, #f1e6d2 100%);
+  --controls-border: #d5c5ab;
+  --controls-label: #4a3420;
+  --input-text: #2e2217;
+  --input-focus-border: #70492b;
+
+  --link-color: #6b4226;
+  --link-hover: #472914;
+
+  --primary-gradient: linear-gradient(135deg, #70492b 0%, #52331b 100%);
+  --primary-blue: #70492b;
+  --primary-blue-hover: #52331b;
+
+  --checkbox-checked-bg: #70492b;
+  --checkbox-mark-color: #fbf7ee;
+
+  --status-valid-bg: #e6efe2;
+  --status-valid-text: #285232;
+  --status-valid-border: #b3ccb0;
+
+  --status-invalid-bg: #f5e2df;
+  --status-invalid-text: #7b2d26;
+  --status-invalid-border: #d8b2ac;
+
+  --tooltip-bg: #fbf7ee;
+  --tooltip-border: #bfa98b;
+  --tooltip-border-hover: #70492b;
+  --tooltip-text: #2e2217;
+
+  --overlay-bg: rgba(42, 28, 14, 0.54);
+
+  --emoji-popup-bg: #fbf7ee;
+  --emoji-popup-border: #cbb99e;
+  --emoji-popup-shadow: rgba(48, 32, 16, 0.16);
+  --emoji-button-bg: #70492b;
+
+  --header-text-shadow: rgba(255, 250, 238, 0.65);
+
+  --theme-toggle-bg: rgba(251, 247, 238, 0.6);
+  --theme-toggle-border: rgba(92, 61, 36, 0.25);
+  --theme-toggle-hover-bg: rgba(251, 247, 238, 0.85);
+
+  --event-bg-gradient: linear-gradient(135deg, #8c5933 0%, #683e1f 100%);
+  --event-shadow: rgba(48, 32, 16, 0.18);
+
+  --holiday-text: #7a421d;
+
+  --highlight-month-bg: rgba(112, 73, 43, 0.12);
+
+  --select-focus-shadow: rgba(112, 73, 43, 0.16);
+  --button-disabled-bg: #b8a890;
+
+  --text-inverse: #fbf7ee;
+  --input-border-dark: #70492b;
+  --checkbox-bg: #fdfaf2;
+  --text-white: #fbf7ee;
+  --flag-shadow: 0px 1px 2px rgba(48, 32, 16, 0.2);
+
+  font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
+}
+
+[data-theme='book'] [class*="app"],
+[data-theme='book'] button,
+[data-theme='book'] select,
+[data-theme='book'] input,
+[data-theme='book'] textarea {
+  font-family: 'Georgia', 'Palatino Linotype', 'Book Antiqua', 'Times New Roman', serif;
+}
+
+[data-theme='book'] [class*="container"] {
+  background: var(--paper-texture-bg);
+  border: 1px solid #c9b79c;
+  border-radius: 10px;
+  box-shadow:
+    -4px 0 0 -1px #efe5d0,
+    -5px 0 0 -1px #bfa98b,
+    4px 0 0 -1px #efe5d0,
+    5px 0 0 -1px #bfa98b,
+    0 1px 0 #d9ccb8,
+    0 4px 0 #f5eedf,
+    0 5px 0 #cbbba2,
+    0 8px 0 #efe6d4,
+    0 9px 0 #bda98e,
+    0 0 0 3px #6b462b,
+    0 22px 45px rgba(48, 32, 16, 0.28);
+}
+
+[data-theme='book'] [class*="flipStage"] {
+  background: var(--paper-texture-bg);
+  border-radius: 10px;
+  box-shadow: inset 0 0 28px rgba(102, 74, 42, 0.14);
+}
+
+[data-theme='book'] [class*="flipStage"]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(50% - 14px);
+  width: 28px;
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(72, 48, 22, 0.08) 38%,
+    rgba(54, 34, 14, 0.22) 50%,
+    rgba(72, 48, 22, 0.08) 62%,
+    transparent 100%
+  );
+}
+
+[data-theme='book'] [class*="calendarGrid"],
+[data-theme='book'] [class*="yearGrid"],
+[data-theme='book'] [class*="monthContainer"] {
+  background: var(--paper-texture-bg);
+}
+
+[data-theme='book'] [class*="calendarDay"],
+[data-theme='book'] [class*="dayCell"] {
+  background-image: var(--paper-grain-image);
+}
+
 #root {
   min-height: 100vh;
 }
@@ -1514,9 +1701,15 @@ a:hover {
     margin: 10mm;
   }
 
-  #root::before, #root::after, body::before, body::after {
+  #root::before, #root::after, body::before, body::after,
+  [data-theme='book'] [class*="flipStage"]::before {
     display: none !important;
     content: none !important;
+  }
+
+  [data-theme='book'] [class*="flipStage"] {
+    background: var(--container-bg) !important;
+    box-shadow: none !important;
   }
 
   html,

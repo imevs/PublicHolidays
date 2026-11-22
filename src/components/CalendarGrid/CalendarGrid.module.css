@@ -15,6 +15,17 @@
   position: relative;
 }
 
+.flipStage {
+  position: relative;
+  display: flow-root;
+  overflow: visible;
+}
+
+:global([data-theme='book']) .flipStage {
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+
 .calendarHeader {
   background: var(--grid-header-bg);
   color: var(--grid-header-text);
@@ -36,12 +47,6 @@
     margin: 20px;
     overflow: scroll;
     width: calc(100% - 2 * 20px);
-
-    &.hidden,
-    &.animateHidingForward,
-    &.animateHidingBackward {
-      margin-top: 0;
-    }
   }
 }
 
@@ -356,69 +361,469 @@ dialog.popup .closeBtn:focus-visible {
   }
 }
 
-.animateHidingForward,
-.animateHidingBackward {
-  z-index: 1;
-}
-
-.hidden,
-.animateHidingForward,
-.animateHidingBackward {
+.hidden {
   opacity: 0;
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   pointer-events: none;
-  margin-top: 10px;
-  animation-duration: 0.5s;
-  animation-timing-function: ease-in;
+}
+
+.flipOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  transform-style: preserve-3d;
+}
+
+:global([data-theme='book']) .animateHidingForward,
+:global([data-theme='book']) .animateHidingBackward {
+  animation-duration: 0.75s;
+  animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
 
-.animateHidingForward {
-  animation-name: animateHidingForward, animateHidingOpacity;
+:global([data-theme='book']) .animateHidingForward {
+  animation-name: flipOverlayFadeOut;
 }
 
-.animateHidingBackward {
-  animation-name: animateHidingBackward, animateHidingOpacity;
+:global([data-theme='book']) .animateHidingBackward {
+  animation-name: flipOverlayFadeOut;
 }
 
-@keyframes animateHidingOpacity {
+.flipStationaryHalf {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: 1;
+  transform: translateZ(1px);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.yearGrid.flipStationaryHalf,
+.yearGrid.flipLeafFront,
+.yearGrid.flipLeafBack {
+  background: var(--paper-texture-bg, var(--container-bg, #ffffff));
+}
+
+.calendarGrid.flipStationaryHalf,
+.calendarGrid.flipLeafFront,
+.calendarGrid.flipLeafBack {
+  background: var(--paper-texture-bg, var(--grid-bg, #ffffff));
+}
+
+:global([data-theme='book']) .flipCastShadow::before {
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(66, 42, 18, 0.24) 50%,
+    transparent 100%
+  );
+}
+
+:global([data-theme='book']) .animateHidingForward .flipCastShadow::after {
+  background: linear-gradient(
+    to right,
+    rgba(66, 42, 18, 0) 0%,
+    rgba(66, 42, 18, 0.28) 48%,
+    rgba(52, 32, 12, 0.34) 52%,
+    rgba(66, 42, 18, 0) 85%
+  );
+}
+
+:global([data-theme='book']) .animateHidingBackward .flipCastShadow::after {
+  background: linear-gradient(
+    to left,
+    rgba(66, 42, 18, 0) 0%,
+    rgba(66, 42, 18, 0.28) 48%,
+    rgba(52, 32, 12, 0.34) 52%,
+    rgba(66, 42, 18, 0) 85%
+  );
+}
+
+:global([data-theme='book']) .animateHidingForward .flipLeafFront::after {
+  background: linear-gradient(
+    to right,
+    transparent 48%,
+    rgba(66, 42, 18, 0.28) 50%,
+    rgba(255, 250, 236, 0.34) 68%,
+    rgba(78, 52, 24, 0.18) 100%
+  );
+}
+
+:global([data-theme='book']) .animateHidingBackward .flipLeafFront::after {
+  background: linear-gradient(
+    to left,
+    transparent 48%,
+    rgba(66, 42, 18, 0.28) 50%,
+    rgba(255, 250, 236, 0.34) 68%,
+    rgba(78, 52, 24, 0.18) 100%
+  );
+}
+
+:global([data-theme='book']) .animateHidingForward .flipLeafBack::after {
+  background: linear-gradient(
+    to left,
+    transparent 48%,
+    rgba(66, 42, 18, 0.26) 50%,
+    rgba(255, 250, 236, 0.32) 68%,
+    rgba(78, 52, 24, 0.16) 100%
+  );
+}
+
+:global([data-theme='book']) .animateHidingBackward .flipLeafBack::after {
+  background: linear-gradient(
+    to right,
+    transparent 48%,
+    rgba(66, 42, 18, 0.26) 50%,
+    rgba(255, 250, 236, 0.32) 68%,
+    rgba(78, 52, 24, 0.16) 100%
+  );
+}
+
+.animateHidingForward .flipStationaryHalf {
+  clip-path: inset(0 50% 0 0);
+  animation: flipStationaryShade 0.75s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.animateHidingBackward .flipStationaryHalf {
+  clip-path: inset(0 0 0 50%);
+  animation: flipStationaryShade 0.75s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.flipCastShadow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  transform: translateZ(1.5px);
+  overflow: hidden;
+}
+
+.flipCastShadow::before,
+.flipCastShadow::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.flipCastShadow::before {
+  left: calc(50% - 18px);
+  width: 36px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.16) 50%,
+    transparent 100%
+  );
+  animation: flipSpineShadow 0.75s ease-in-out forwards;
+}
+
+.animateHidingForward .flipCastShadow::after {
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.22) 48%,
+    rgba(0, 0, 0, 0.28) 52%,
+    rgba(0, 0, 0, 0) 85%
+  );
+  animation: flipCastForward 0.75s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.animateHidingBackward .flipCastShadow::after {
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.22) 48%,
+    rgba(0, 0, 0, 0.28) 52%,
+    rgba(0, 0, 0, 0) 85%
+  );
+  animation: flipCastBackward 0.75s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.flipLeaf {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.animateHidingForward .flipLeaf {
+  animation: flipLeafTurnForward 0.75s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.animateHidingBackward .flipLeaf {
+  animation: flipLeafTurnBackward 0.75s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.flipLeafFront,
+.flipLeafBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.flipLeafBack {
+  transform: rotateY(180deg);
+}
+
+.animateHidingForward .flipLeafFront {
+  clip-path: inset(0 0 0 50%);
+}
+
+.animateHidingForward .flipLeafBack {
+  clip-path: inset(0 50% 0 0);
+}
+
+.animateHidingBackward .flipLeafFront {
+  clip-path: inset(0 50% 0 0);
+}
+
+.animateHidingBackward .flipLeafBack {
+  clip-path: inset(0 0 0 50%);
+}
+
+.flipLeafFront::after,
+.flipLeafBack::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.animateHidingForward .flipLeafFront::after {
+  background: linear-gradient(
+    to right,
+    transparent 48%,
+    rgba(0, 0, 0, 0.22) 50%,
+    rgba(255, 255, 255, 0.24) 68%,
+    rgba(0, 0, 0, 0.14) 100%
+  );
+  animation: flipLeafFrontShade 0.75s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.animateHidingBackward .flipLeafFront::after {
+  background: linear-gradient(
+    to left,
+    transparent 48%,
+    rgba(0, 0, 0, 0.22) 50%,
+    rgba(255, 255, 255, 0.24) 68%,
+    rgba(0, 0, 0, 0.14) 100%
+  );
+  animation: flipLeafFrontShade 0.75s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.animateHidingForward .flipLeafBack::after {
+  background: linear-gradient(
+    to left,
+    transparent 48%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(255, 255, 255, 0.22) 68%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
+  animation: flipLeafBackShade 0.75s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+.animateHidingBackward .flipLeafBack::after {
+  background: linear-gradient(
+    to right,
+    transparent 48%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(255, 255, 255, 0.22) 68%,
+    rgba(0, 0, 0, 0.12) 100%
+  );
+  animation: flipLeafBackShade 0.75s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+:global([data-theme='book']) .animateShowingForward,
+:global([data-theme='book']) .animateShowingBackward {
+  animation: pageRevealBase 0.75s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
+}
+
+@keyframes flipOverlayFadeOut {
+  0%,
+  96% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes flipStationaryShade {
   0% {
+    filter: brightness(1);
     opacity: 1;
   }
-
-  90% {
+  50% {
+    filter: brightness(0.95);
     opacity: 1;
   }
+  94% {
+    filter: brightness(0.88);
+    opacity: 1;
+  }
+  100% {
+    filter: brightness(0.88);
+    opacity: 0;
+  }
+}
 
+@keyframes flipSpineShadow {
+  0% {
+    opacity: 0;
+  }
+  20%,
+  75% {
+    opacity: 1;
+  }
   100% {
     opacity: 0;
   }
 }
 
-@keyframes animateHidingForward {
+@keyframes flipCastForward {
   0% {
-    transform: translateX(0);
+    opacity: 0;
+    transform: translateX(6%);
   }
-
-  90% {
-    transform: translateX(-100%);
+  35% {
+    opacity: 0.9;
+    transform: translateX(0%);
   }
-
+  70% {
+    opacity: 0.85;
+    transform: translateX(-8%);
+  }
   100% {
-    transform: translateX(-100%);
+    opacity: 0;
+    transform: translateX(-14%);
   }
 }
 
-@keyframes animateHidingBackward {
+@keyframes flipCastBackward {
   0% {
-    transform: translateX(0);
+    opacity: 0;
+    transform: translateX(-6%);
   }
-
-  90% {
-    transform: translateX(100%);
+  35% {
+    opacity: 0.9;
+    transform: translateX(0%);
   }
-
+  70% {
+    opacity: 0.85;
+    transform: translateX(8%);
+  }
   100% {
-    transform: translateX(100%);
+    opacity: 0;
+    transform: translateX(14%);
+  }
+}
+
+@keyframes flipLeafTurnForward {
+  0% {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+  50% {
+    transform: translateZ(8px) rotateY(-90deg) scale(1.015);
+  }
+  96%,
+  100% {
+    transform: translateZ(2px) rotateY(-180deg);
+  }
+}
+
+@keyframes flipLeafTurnBackward {
+  0% {
+    transform: translateZ(2px) rotateY(0deg);
+  }
+  50% {
+    transform: translateZ(8px) rotateY(90deg) scale(1.015);
+  }
+  96%,
+  100% {
+    transform: translateZ(2px) rotateY(180deg);
+  }
+}
+
+@keyframes flipLeafFrontShade {
+  0% {
+    opacity: 0;
+  }
+  45%,
+  55% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes flipLeafBackShade {
+  0%,
+  45% {
+    opacity: 0.9;
+  }
+  65% {
+    opacity: 0.65;
+  }
+  96%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pageRevealBase {
+  0% {
+    filter: brightness(0.92);
+  }
+  60% {
+    filter: brightness(0.98);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flipOverlay,
+  .animateHidingForward,
+  .animateHidingBackward,
+  .animateShowingForward,
+  .animateShowingBackward,
+  .flipStationaryHalf,
+  .flipCastShadow,
+  .flipCastShadow::before,
+  .flipCastShadow::after,
+  .flipLeaf,
+  .flipLeafFront::after,
+  .flipLeafBack::after {
+    animation: none !important;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .animateHidingForward,
+  .animateHidingBackward {
+    display: none !important;
   }
 }

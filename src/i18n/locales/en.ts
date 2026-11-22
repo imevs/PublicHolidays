@@ -36,6 +36,7 @@ export const en = {
             seasonal: "Seasonal",
             lightblue: "Light Blue",
             brightblue: "Bright Blue",
+            book: "Book",
         },
     },
     controls: {

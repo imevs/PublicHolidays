@@ -35,6 +35,7 @@ export const ru = {
             seasonal: "Сезонная",
             lightblue: "Голубая",
             brightblue: "Ярко-синяя",
+            book: "Книга",
         },
     },
     controls: {

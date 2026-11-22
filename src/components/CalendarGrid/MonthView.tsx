@@ -6,6 +6,7 @@ import { Description } from "../../data/holidays_descriptions/all.ts";
 import CalendarDay from "../CalendarDay/CalendarDay.tsx";
 import MonthNavigation from "../MonthNavigation/MonthNavigation.tsx";
 import { usePrevious } from "./UsePrevious.tsx";
+import { useIsBookTheme } from "./useIsBookTheme.ts";
 
 export type MonthViewProps = {
     shouldAnimate?: boolean;
@@ -46,53 +47,79 @@ export const MonthView = (props: MonthViewProps) => {
         highlightLongHolidays,
     } = props;
 
+    const isBookTheme = useIsBookTheme();
     const prevDays = usePrevious(selectedDays);
     const prevDate = usePrevious(currentDate);
-    const classes = styles.calendarGrid + " " + (
-        prevDate && shouldAnimate ? (
-            prevDate.valueOf() < currentDate.valueOf()
-                ? styles.animateHidingForward
-                : styles.animateHidingBackward
-        ) : styles.hidden
+    const isAnimating = Boolean(isBookTheme && prevDate && shouldAnimate && prevDate.valueOf() !== currentDate.valueOf());
+    const isForward = Boolean(prevDate && prevDate.valueOf() < currentDate.valueOf());
+    const overlayClasses = `${styles.flipOverlay} ${
+        isForward ? styles.animateHidingForward : styles.animateHidingBackward
+    }`;
+    const activeClasses = `${styles.calendarGrid}${
+        isAnimating
+            ? ` ${isForward ? styles.animateShowingForward : styles.animateShowingBackward}`
+            : ""
+    }`;
+
+    const renderMonthGridContent = (days: CalendarDayType[], isSnapshot: boolean) => (
+        <>
+            <DaysOfWeeks />
+
+            {days.map((day, index) => (
+                <CalendarDay
+                    key={day.date + "" + index}
+                    day={day}
+                    setDateForPopup={setDateForPopup}
+                    onSelectEvent={onSelectEvent}
+                    isSelected={isSnapshot ? false : dateForPopup === day.date}
+                    isEditable={isSnapshot ? false : isEditable}
+                    countryData={countryData}
+                    highlightLongHolidays={highlightLongHolidays}
+                />
+            ))}
+        </>
     );
+
+    if (!isBookTheme) {
+        return <>
+            <MonthNavigation
+                currentDate={currentDate}
+                onNavigateYear={() => onModeChange("year", 1)}
+            />
+
+            <div className={styles.calendarGrid}>
+                {renderMonthGridContent(selectedDays, false)}
+            </div>
+        </>;
+    }
+
     return <>
         <MonthNavigation
             currentDate={currentDate}
             onNavigateYear={() => onModeChange("year", 1)}
         />
 
-        {prevDays && <div key={currentDate.valueOf()} className={classes}>
-            <DaysOfWeeks />
+        <div className={styles.flipStage}>
+            {isAnimating && prevDays && (
+                <div key={currentDate.valueOf()} aria-hidden="true" className={overlayClasses}>
+                    <div className={`${styles.calendarGrid} ${styles.flipStationaryHalf}`}>
+                        {renderMonthGridContent(prevDays, true)}
+                    </div>
+                    <div className={styles.flipCastShadow} />
+                    <div className={styles.flipLeaf}>
+                        <div className={`${styles.calendarGrid} ${styles.flipLeafFront}`}>
+                            {renderMonthGridContent(prevDays, true)}
+                        </div>
+                        <div className={`${styles.calendarGrid} ${styles.flipLeafBack}`}>
+                            {renderMonthGridContent(selectedDays, true)}
+                        </div>
+                    </div>
+                </div>
+            )}
 
-            {prevDays.map((day, index) => (
-                <CalendarDay
-                    key={day.date + "" + index}
-                    day={day}
-                    setDateForPopup={setDateForPopup}
-                    onSelectEvent={onSelectEvent}
-                    isSelected={false}
-                    isEditable={isEditable}
-                    countryData={countryData}
-                    highlightLongHolidays={highlightLongHolidays}
-                />
-            ))}
-        </div>}
-
-        <div className={styles.calendarGrid}>
-            <DaysOfWeeks />
-
-            {selectedDays.map((day, index) => (
-                <CalendarDay
-                    key={day.date + "" + index}
-                    day={day}
-                    setDateForPopup={setDateForPopup}
-                    onSelectEvent={onSelectEvent}
-                    isSelected={dateForPopup === day.date}
-                    isEditable={isEditable}
-                    countryData={countryData}
-                    highlightLongHolidays={highlightLongHolidays}
-                />
-            ))}
+            <div key={`active-${currentDate.valueOf()}`} className={activeClasses}>
+                {renderMonthGridContent(selectedDays, false)}
+            </div>
         </div>
     </>;
 };

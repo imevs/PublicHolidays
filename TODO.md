@@ -5,6 +5,7 @@ redesign edit event window
 add vacations or range of events at custom calendar
 remove duplicated buttons
 print mode
+page-flip animation for months/years
 
 next:
 show long weekends, show 3-day weekend, 4-day weekends
@@ -14,4 +15,3 @@ multilanguage support
 
 animated icons for each holiday
 add rain animation for autumn, snow for winter, fog for spring, sun for summer
-page-flip animation for months/years
