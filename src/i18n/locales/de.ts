@@ -2,8 +2,12 @@ import type { TranslationDictionary } from "../types.ts";
 
 export const de = {
     app: {
-        holidaysDocumentTitle: "Feiertagskalender {year}",
-        eventsDocumentTitle: "Ereigniskalender {year}",
+        holidaysDocumentTitle: "Gesetzliche Feiertage Kalender {year} — Internationaler & Bankfeiertage Kalender",
+        eventsDocumentTitle: "Ereigniskalender {year} — Druckbarer Feiertags- & Veranstaltungskalender",
+        holidaysMetaDescription: "Interaktiver Feiertagskalender {year}. Vergleiche gesetzliche Feiertage, Bankfeiertage und lange Wochenenden in mehreren Ländern in Monats- oder Jahresansicht, oder exportiere einen druckbaren Feiertagskalender.",
+        holidaysMetaKeywords: "feiertage, feiertage {year}, {year} feiertage, feiertagskalender, feiertagskalender {year}, {year} feiertagskalender, gesetzlicher feiertagskalender, internationaler feiertagskalender, globaler feiertagskalender, weltweite feiertage, bankfeiertage kalender, bankfeiertage {year}, feiertage vergleichen, druckbarer feiertagskalender, kostenloser druckbarer kalender {year}, langes wochenende",
+        eventsMetaDescription: "Kostenloser eigener Veranstaltungskalender {year} und druckbarer Feiertagskalender. Erstellen, ICS importieren und eigene Kalenderereignisse in Monats- und Jahresansicht anpassen.",
+        eventsMetaKeywords: "eigener veranstaltungskalender, feiertagskalender {year}, {year} kalender, druckbarer feiertagskalender, kostenloser druckbarer kalender {year}, veranstaltungskalender {year}, benutzerdefinierter feiertagskalender",
         holidaysTitle: "Feiertagskalender",
         holidaysSubtitle: "Behalten Sie gesetzliche Feiertage in mehreren Ländern im Blick",
         eventsTitle: "Ereigniskalender",

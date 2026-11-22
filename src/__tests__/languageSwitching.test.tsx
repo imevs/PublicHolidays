@@ -73,6 +73,12 @@ describe("UI language selection and multi-language switching", () => {
 
             // Document title & header & primary navigation
             expect(document.title).toBe(dict.app.holidaysDocumentTitle.replace("{year}", "2025"));
+            expect(document.querySelector("meta[name=\"description\"]")?.getAttribute("content")).toBe(
+                dict.app.holidaysMetaDescription.replace("{year}", "2025")
+            );
+            expect(document.querySelector("meta[name=\"keywords\"]")?.getAttribute("content")).toBe(
+                dict.app.holidaysMetaKeywords.replace(/\{year\}/g, "2025")
+            );
             expect(screen.getAllByRole("heading", { level: 1 })[0]).toHaveTextContent(dict.app.holidaysTitle);
             expect(screen.getByText(dict.app.holidaysSubtitle)).toBeInTheDocument();
             expect(screen.getByRole("navigation", { name: dict.app.navAriaLabel })).toBeInTheDocument();
@@ -186,6 +192,12 @@ describe("UI language selection and multi-language switching", () => {
             });
 
             expect(document.title).toBe(dict.app.eventsDocumentTitle.replace("{year}", "2025"));
+            expect(document.querySelector("meta[name=\"description\"]")?.getAttribute("content")).toBe(
+                dict.app.eventsMetaDescription.replace("{year}", "2025")
+            );
+            expect(document.querySelector("meta[name=\"keywords\"]")?.getAttribute("content")).toBe(
+                dict.app.eventsMetaKeywords.replace(/\{year\}/g, "2025")
+            );
             expect(screen.getAllByRole("heading", { level: 1 })[0]).toHaveTextContent(dict.app.eventsTitle);
             expect(screen.getByText(dict.app.eventsSubtitle)).toBeInTheDocument();
 

@@ -11,6 +11,7 @@ import { EventsList } from "./components/EventsList/EventsList.tsx";
 import { APP_BASE_NAME, STORAGE_KEY } from "./consts.ts";
 import ThemeSelector from "./components/ThemeSelector/ThemeSelector.tsx";
 import LanguageSelector from "./components/LanguageSelector/LanguageSelector.tsx";
+import { updatePageMetadata } from "./utils/seo.ts";
 import { useTranslation } from "./i18n/useTranslation.ts";
 
 const defaultData = `
@@ -85,10 +86,13 @@ export const AnyEvents: React.FC = () => {
     }, [language]);
 
     useEffect(() => {
-        document.title = format(t.app.eventsDocumentTitle, {
-            year: currentDate.getFullYear(),
+        const year = currentDate.getFullYear();
+        updatePageMetadata({
+            title: format(t.app.eventsDocumentTitle, { year }),
+            description: format(t.app.eventsMetaDescription, { year }),
+            keywords: format(t.app.eventsMetaKeywords, { year }),
         });
-    }, [currentDate, t.app.eventsDocumentTitle, format]);
+    }, [currentDate, t.app.eventsDocumentTitle, t.app.eventsMetaDescription, t.app.eventsMetaKeywords, format]);
 
     useEffect(() => {
         localStorage.setItem(STORAGE_KEY, dataText);
