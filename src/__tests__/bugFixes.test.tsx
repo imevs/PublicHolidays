@@ -365,7 +365,7 @@ describe("notifications and EventsListActionButtons", () => {
 
         try {
             render(<AnyEvents />);
-            expect(document.title).toBe("Events Calendar 2025");
+            expect(document.title).toBe("Custom Event Calendar 2025 — Printable Holiday & Events Calendar");
 
             // Unified primary navigation is present with aria-current="page" on Custom Events
             const customNav = screen.getByRole("link", { name: /Custom Events/i });

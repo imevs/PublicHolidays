@@ -41,6 +41,10 @@ export interface TranslationDictionary {
     app: {
         holidaysDocumentTitle: string;
         eventsDocumentTitle: string;
+        holidaysMetaDescription: string;
+        holidaysMetaKeywords: string;
+        eventsMetaDescription: string;
+        eventsMetaKeywords: string;
         holidaysTitle: string;
         holidaysSubtitle: string;
         eventsTitle: string;

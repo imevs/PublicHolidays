@@ -2,8 +2,12 @@ import type { TranslationDictionary } from "../types.ts";
 
 export const ru = {
     app: {
-        holidaysDocumentTitle: "Календарь праздников {year}",
-        eventsDocumentTitle: "Календарь событий {year}",
+        holidaysDocumentTitle: "Календарь Праздников {year} — Государственные & Банковские Праздники",
+        eventsDocumentTitle: "Календарь Событий {year} — Пользовательский & Печатный Календарь",
+        holidaysMetaDescription: "Интерактивный календарь государственных праздников {year}. Сравните праздники, банковские праздники и длинные выходные в разных странах в режиме месяца или года, или скачайте печатный календарь.",
+        holidaysMetaKeywords: "prazdniki, kalendar prazdnikov, kalendar gosudarstvennykh prazdnikov, {year} prazdniki, prazdniki {year}, kalendar prazdnikov {year}, {year} kalendar prazdnikov, mezhdunarodny kalendar prazdnikov, globalny kalendar prazdnikov, mirovye prazdniki, bankovskie prazdniki, bankovskie prazdniki {year}, sravnit prazdniki, pechatny kalendar prazdnikov, besplatny pechatny kalendar {year}, dlinnye vykhodnye",
+        eventsMetaDescription: "Бесплатный пользовательский календарь событий {year} и печатный календарь праздников. Создавайте, импортируйте ICS и настраивайте собственные события в режиме месяца и года.",
+        eventsMetaKeywords: "polzovatelsky kalendar sobytii, kalendar prazdnikov {year}, {year} kalendar, pechatny kalendar prazdnikov, besplatny pechatny kalendar {year}, kalendar sobytii {year}, polzovatelsky kalendar prazdnikov",
         holidaysTitle: "Календарь государственных праздников",
         holidaysSubtitle: "Отслеживайте государственные праздники разных стран",
         eventsTitle: "Календарь событий",

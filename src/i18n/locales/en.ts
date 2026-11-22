@@ -3,8 +3,12 @@ import type { TranslationDictionary } from "../types.ts";
 
 export const en = {
     app: {
-        holidaysDocumentTitle: "Public Holidays Calendar {year}",
-        eventsDocumentTitle: "Events Calendar {year}",
+        holidaysDocumentTitle: "Public Holidays Calendar {year} — International & Bank Holidays Calendar",
+        eventsDocumentTitle: "Custom Event Calendar {year} — Printable Holiday & Events Calendar",
+        holidaysMetaDescription: "Interactive Public Holidays Calendar {year}. Compare public holidays, bank holidays, and long weekends across multiple countries in month or year view, or export a printable holiday calendar.",
+        holidaysMetaKeywords: "public holidays, public holidays {year}, {year} public holidays, holiday calendar, holiday calendar {year}, {year} holiday calendar, public holiday calendar, international holiday calendar, global holiday calendar, world holidays, bank holidays calendar, bank holidays {year}, compare public holidays, printable holiday calendar, free printable calendar {year}",
+        eventsMetaDescription: "Free Custom Event Calendar {year} and printable holiday calendar. Create, import ICS, and customize your own calendar events in month and year view.",
+        eventsMetaKeywords: "custom event calendar, holiday calendar {year}, {year} calendar, printable holiday calendar, free printable calendar {year}, event calendar {year}, custom holiday calendar",
         holidaysTitle: "Public Holidays Calendar",
         holidaysSubtitle: "Track public holidays across multiple countries",
         eventsTitle: "Events Calendar",

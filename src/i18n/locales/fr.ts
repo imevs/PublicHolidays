@@ -2,8 +2,12 @@ import type { TranslationDictionary } from "../types.ts";
 
 export const fr = {
     app: {
-        holidaysDocumentTitle: "Calendrier des jours fériés {year}",
-        eventsDocumentTitle: "Calendrier des événements {year}",
+        holidaysDocumentTitle: "Calendrier des Jours Fériés {year} — Jours Fériés Légaux & Bancaires",
+        eventsDocumentTitle: "Calendrier d'Événements {year} — Calendrier Personnalisé & Imprimable",
+        holidaysMetaDescription: "Calendrier interactif des jours fériés {year}. Comparez les jours fériés légaux, bancaires et ponts dans de nombreux pays en vue mensuelle ou annuelle, ou exportez un calendrier de vacances imprimable.",
+        holidaysMetaKeywords: "jours feries, jours feries {year}, {year} jours feries, calendrier des jours feries, calendrier des jours feries {year}, {year} calendrier des jours feries, calendrier de jours feries, calendrier international des jours feries, calendrier mondial, jours feries bancaires, jours feries bancaires {year}, comparer les jours feries, calendrier des jours feries imprimable, calendrier imprimable gratuit {year}, ponts",
+        eventsMetaDescription: "Calendrier d'événements personnalisés gratuit {year} et calendrier de vacances imprimable. Créez, importez ICS et personnalisez vos propres événements en vue mensuelle et annuelle.",
+        eventsMetaKeywords: "calendrier d'evenements personnalises, calendrier des jours feries {year}, {year} calendrier, calendrier des jours feries imprimable, calendrier imprimable gratuit {year}, calendrier d'evenements {year}, calendrier de jours feries personnalise",
         holidaysTitle: "Calendrier des jours fériés",
         holidaysSubtitle: "Suivez les jours fériés dans plusieurs pays",
         eventsTitle: "Calendrier des événements",

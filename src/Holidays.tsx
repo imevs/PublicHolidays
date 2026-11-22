@@ -13,6 +13,7 @@ import { ActionButtons } from "./components/EventsList/EventsListActionButtons.t
 import ThemeSelector from "./components/ThemeSelector/ThemeSelector.tsx";
 import LanguageSelector from "./components/LanguageSelector/LanguageSelector.tsx";
 import { APP_BASE_NAME } from "./consts.ts";
+import { updatePageMetadata } from "./utils/seo.ts";
 import { useTranslation } from "./i18n/useTranslation.ts";
 
 export const Holidays: React.FC = () => {
@@ -43,10 +44,13 @@ export const Holidays: React.FC = () => {
     }, [language]);
 
     useEffect(() => {
-        document.title = format(t.app.holidaysDocumentTitle, {
-            year: currentDate.getFullYear(),
+        const year = currentDate.getFullYear();
+        updatePageMetadata({
+            title: format(t.app.holidaysDocumentTitle, { year }),
+            description: format(t.app.holidaysMetaDescription, { year }),
+            keywords: format(t.app.holidaysMetaKeywords, { year }),
         });
-    }, [currentDate, t.app.holidaysDocumentTitle, format]);
+    }, [currentDate, t.app.holidaysDocumentTitle, t.app.holidaysMetaDescription, t.app.holidaysMetaKeywords, format]);
 
     useEffect(() => {
         import("./data/holidays_v2/index.ts").then(({ allHolidays }) => {

@@ -2,8 +2,12 @@ import type { TranslationDictionary } from "../types.ts";
 
 export const lv = {
     app: {
-        holidaysDocumentTitle: "Svētku dienu kalendārs {year}",
-        eventsDocumentTitle: "Notikumu kalendārs {year}",
+        holidaysDocumentTitle: "Svētku Dienu Kalendārs {year} — Starptautiskais & Brīvdienu Kalendārs",
+        eventsDocumentTitle: "Pielāgots Notikumu Kalendārs {year} — Drukājams Kalendārs",
+        holidaysMetaDescription: "Interaktīvs svētku dienu kalendārs {year}. Salīdziniet valsts svētkus, brīvdienas un garās nedēļas nogales vairākās valstīs mēneša vai gada skatā, vai eksportējiet drukājamu svētku kalendāru.",
+        holidaysMetaKeywords: "svetku dienas, svetku dienas {year}, {year} svetku dienas, svetku kalendars, svetku kalendars {year}, {year} svetku kalendars, valsts svetku kalendars, starptautiskais svetku kalendars, pasaules svetki, banku brivdienu kalendars, banku brivdienas {year}, salidzinat svetku dienas, drukajams svetku kalendars, bezmaksas drukajams kalendars {year}, garas brivdienas",
+        eventsMetaDescription: "Bezmaksas pielāgots notikumu kalendārs {year} un drukājams svētku kalendārs. Izveidojiet, importējiet ICS un pielāgojiet savus kalendāra notikumus mēneša un gada skatā.",
+        eventsMetaKeywords: "pielagots notikumu kalendars, svetku kalendars {year}, {year} kalendars, drukajams svetku kalendars, bezmaksas drukajams kalendars {year}, notikumu kalendars {year}, pielagots svetku kalendars",
         holidaysTitle: "Svētku dienu kalendārs",
         holidaysSubtitle: "Sekojiet līdzi valsts svētku dienām dažādās valstīs",
         eventsTitle: "Notikumu kalendārs",

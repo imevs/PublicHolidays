@@ -2,8 +2,12 @@ import type { TranslationDictionary } from "../types.ts";
 
 export const es = {
     app: {
-        holidaysDocumentTitle: "Calendario de días festivos {year}",
-        eventsDocumentTitle: "Calendario de eventos {year}",
+        holidaysDocumentTitle: "Calendario de Días Festivos {year} — Festivos Nacionales y Bancarios",
+        eventsDocumentTitle: "Calendario de Eventos {year} — Calendario Personalizado y Para Imprimir",
+        holidaysMetaDescription: "Calendario interactivo de días festivos {year}. Compara festivos nacionales, bancarios y puentes en múltiples países en vista mensual o anual, o exporta un calendario de festivos imprimible.",
+        holidaysMetaKeywords: "dias festivos, dias festivos {year}, {year} dias festivos, calendario de festivos, calendario de festivos {year}, {year} calendario de festivos, calendario de dias festivos, calendario internacional de festivos, calendario mundial, festivos bancarios, festivos bancarios {year}, comparar dias festivos, calendario de festivos imprimible, calendario imprimible gratis {year}, puentes",
+        eventsMetaDescription: "Calendario de eventos personalizados gratuito {year} y calendario de festivos imprimible. Crea, importa ICS y personaliza tus propios eventos en vista mensual y anual.",
+        eventsMetaKeywords: "calendario de eventos personalizados, calendario de festivos {year}, {year} calendario, calendario de festivos imprimible, calendario imprimible gratis {year}, calendario de eventos {year}, calendario de festivos personalizado",
         holidaysTitle: "Calendario de días festivos",
         holidaysSubtitle: "Consulta los días festivos de varios países",
         eventsTitle: "Calendario de eventos",
