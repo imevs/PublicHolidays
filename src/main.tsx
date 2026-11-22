@@ -6,20 +6,25 @@ import { RouterProvider } from "react-router/dom";
 import { APP_BASE_NAME } from "./consts";
 import React, { useEffect } from "react";
 import { LanguageProvider } from "./i18n/LanguageContext.tsx";
+import { Holidays } from "./Holidays.tsx";
 
 export const Index: React.FC = () => {
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
+    const path = searchParams?.get("path");
+    const shouldRedirect = Boolean(path?.includes(APP_BASE_NAME));
 
     useEffect(() => {
-        const path = searchParams?.get("path");
-        if (path?.includes(APP_BASE_NAME)) {
-            navigate(path?.replace("/" + APP_BASE_NAME + "/", "") + location.hash);
-        } else {
-            navigate("Holidays");
+        if (shouldRedirect && path) {
+            navigate(path.replace("/" + APP_BASE_NAME + "/", "") + location.hash, { replace: true });
         }
-    }, []);
-    return null;
+    }, [shouldRedirect, path, navigate]);
+
+    if (shouldRedirect) {
+        return null;
+    }
+
+    return <Holidays />;
 };
 
 const App = () => {
@@ -37,9 +42,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "Holidays",
-                async lazy() {
-                    return { Component: (await import("./Holidays.tsx")).Holidays };
-                },
+                Component: Holidays,
             },
             {
                 path: "EditEvents",
@@ -51,10 +54,12 @@ const router = createBrowserRouter([
     },
 ]);
 
-const root = document.getElementById("root")!;
+const root = document.getElementById("root");
 
-ReactDOM.createRoot(root).render(
-    <LanguageProvider>
-        <RouterProvider router={router} />
-    </LanguageProvider>,
-);
+if (root) {
+    ReactDOM.createRoot(root).render(
+        <LanguageProvider>
+            <RouterProvider router={router} />
+        </LanguageProvider>,
+    );
+}

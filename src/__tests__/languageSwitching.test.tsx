@@ -115,7 +115,7 @@ describe("UI language selection and multi-language switching", () => {
             fireEvent.click(showAllBtn);
             expect(screen.getByLabelText(dict.countryFilter.showTimezones)).toBeInTheDocument();
             expect(screen.getByRole("button", { name: dict.countryFilter.hideInactive })).toBeInTheDocument();
-            expect(screen.getByText(new RegExp(dict.continents.asia))).toBeInTheDocument();
+            expect(screen.getByRole("button", { name: new RegExp(dict.continents.asia) })).toBeInTheDocument();
             expect(await screen.findByRole("button", { name: new RegExp(dict.countries.DE) })).toBeInTheDocument();
 
             // MonthNavigation & CalendarGrid weekdays (and index-based weekend styling!)

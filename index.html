@@ -29,12 +29,63 @@
       "keywords": "public holidays, holiday calendar, international holiday calendar, bank holidays, long weekends, custom event calendar"
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I compare public holidays across multiple countries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the country filter above the calendar or pick a regional preset to select any combination of 50+ countries. Holidays for all chosen countries appear side-by-side in both Year and Month views."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the long weekend and bridge day finder work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Enable Highlight long holidays in the country filter bar to automatically highlight any 3 or more consecutive non-working days (public holidays combined with adjacent weekends) in color-coded streaks per country."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I print the calendar or export holidays to Google, Apple, or Outlook?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Use your browser's print dialog for print-optimized A4 layouts, click Save as Image to export a PNG, or open Subscribe / Add to Calendar to download combined or per-country .ics files with optional reminders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I create and save a custom event calendar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Switch to the Custom Events tab to add single-day events or multi-day date ranges with custom icons and colors, or import an existing .ics feed. Your custom schedule is saved locally in your browser without cookies or accounts."
+          }
+        }
+      ]
+    }
+    </script>
     <link rel="manifest" href="manifest.webmanifest">
     <meta name="theme-color" content="#3b82f6">
     <link rel="apple-touch-icon" href="icons/icon-192.svg">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main style="max-width:960px;margin:2rem auto;padding:1.5rem;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6;color:#1f2937;">
+        <h1>Public Holidays Calendar 2026 &amp; 2027</h1>
+        <p>Free interactive international holiday calendar for comparing national public holidays, bank holidays, and long weekends across 50+ countries in Europe, North America, Asia, South America, and Oceania.</p>
+        <ul>
+          <li><strong>Multi-Country Public Holiday Comparison:</strong> Compare holidays across 50+ countries side-by-side in year and month views.</li>
+          <li><strong>Long Weekend &amp; Bridge Day Finder:</strong> Automatically highlight 3+ day long holiday streaks and extended weekends.</li>
+          <li><strong>Printable &amp; Exportable Calendars:</strong> Print clean A4 layouts, export high-resolution PNG images, or download .ics feeds for Google Calendar, Apple Calendar, and Outlook.</li>
+          <li><strong>Custom Event Calendar Builder:</strong> Create custom schedules with date ranges, color tags, and .ics import with zero cookies.</li>
+        </ul>
+      </main>
+    </div>
     <script type="module" src="src/main.tsx"></script>
   </body>
 </html>

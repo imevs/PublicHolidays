@@ -86,3 +86,9 @@
     color: var(--text-main);
     padding: 8px;
 }
+
+@media print {
+    .languageSelector {
+        display: none !important;
+    }
+}

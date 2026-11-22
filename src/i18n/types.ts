@@ -176,4 +176,40 @@ export interface TranslationDictionary {
     slidingPanel: {
         actionsPanelAria: string;
     };
+    seoLanding: {
+        sectionAriaLabel: string;
+        featuresHeading: string;
+        features: {
+            multiCountryTitle: string;
+            multiCountryDesc: string;
+            longWeekendsTitle: string;
+            longWeekendsDesc: string;
+            printableExportTitle: string;
+            printableExportDesc: string;
+            customBuilderTitle: string;
+            customBuilderDesc: string;
+        };
+        presetsHeading: string;
+        presetsDesc: string;
+        presets: {
+            baltic: string;
+            dach: string;
+            ukUsCa: string;
+            nordic: string;
+            westernEurope: string;
+            southernEurope: string;
+            asiaPacific: string;
+        };
+        faqHeading: string;
+        faqs: {
+            compareQuestion: string;
+            compareAnswer: string;
+            longWeekendsQuestion: string;
+            longWeekendsAnswer: string;
+            exportPrintQuestion: string;
+            exportPrintAnswer: string;
+            customCalendarQuestion: string;
+            customCalendarAnswer: string;
+        };
+    };
 }
