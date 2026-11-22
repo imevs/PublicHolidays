@@ -30,8 +30,9 @@ export const generateYears = (selectedYear?: number): number[] => {
     return Array.from({ length: endYear - startYear + 1 }, (_, i) => startYear + i);
 };
 
-export const formatDateString = (date: UTCDate): DateString => {
-    return date.toISOString().split("T")[0] as unknown as DateString;
+export const formatDateString = (date: UTCDate | Date | string | number): DateString => {
+    const d = date instanceof UTCDate ? date : new UTCDate(date as ConstructorParameters<typeof UTCDate>[0]);
+    return d.toISOString().split("T")[0] as unknown as DateString;
 };
 
 export function convertDayToEUFormat(dayOfWeek: number): number {

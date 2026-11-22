@@ -1,15 +1,17 @@
-import React, { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useMemo, useRef, useState } from "react";
+import { useTranslation } from "../../i18n/useTranslation.ts";
 import html2canvas from "html2canvas";
 import { useNavigate } from "react-router";
 import { formatDateString } from "../../utils/dateUtils.ts";
 import { getFlagEmoji } from "../../utils/countryFlags.ts";
-import { buildGoogleCalendarUrl, exportCalendarToFile } from "../../utils/generateICS.ts";
+import { exportCalendarToFile } from "../../utils/generateICS.ts";
 import { APP_BASE_NAME, STORAGE_KEY } from "../../consts.ts";
 import type { CalendarDay as CalendarDayType, CalendarEvent } from "../../types/index.ts";
 import styles from "./EventsListActionButtons.module.css";
 import { UTCDate } from "../../utils/UTCDate.ts";
 import { EventListInputButtons } from "../EventListInput/EventListInputButtons.tsx";
-import { useTranslation } from "../../i18n/useTranslation.ts";
+import { useToolbarRovingTabIndex } from "../../hooks/useToolbarRovingTabIndex.ts";
+import { SubscribeModal } from "./SubscribeModal.tsx";
 
 interface ActionButtonsProps {
     selectedYearDays: CalendarDayType[];
@@ -32,21 +34,7 @@ function getCountriesNames(selectedYearDays: CalendarDayType[]) {
     ));
 }
 
-function renderSubscribeModalDescription(template: string): React.ReactNode {
-    const parts = template.split(/(\{google\}|\{apple\}|\{outlook\})/g);
-    return parts.map((part, index) => {
-        if (part === "{google}") {
-            return <strong key={index}>Google Calendar</strong>;
-        }
-        if (part === "{apple}") {
-            return <strong key={index}>Apple Calendar</strong>;
-        }
-        if (part === "{outlook}") {
-            return <strong key={index}>Outlook</strong>;
-        }
-        return <Fragment key={index}>{part}</Fragment>;
-    });
-}
+
 
 export const ActionButtons: React.FC<ActionButtonsProps> = ({
     selectedYearDays,
@@ -58,7 +46,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
     setHolidaysData,
 }) => {
     const navigate = useNavigate();
-    const { t, getCountryName } = useTranslation();
+    const { t } = useTranslation();
     const [subscribeModalOpen, setSubscribeModalOpen] = useState(false);
     const [includeAlarm, setIncludeAlarm] = useState(true);
     const [statusMessage, setStatusMessage] = useState("");
@@ -76,75 +64,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
         return (future.length > 0 ? future : allEvents).slice(0, 5);
     }, [allEvents]);
 
-    // Roving tabindex fallback for toolbar when native focusgroup is unsupported
-    useEffect(() => {
-        const bar = toolbarRef.current;
-        if (!bar || ("focusGroup" in HTMLElement.prototype)) {
-            return;
-        }
-        const getItems = () => Array.from(
-            bar.querySelectorAll<HTMLButtonElement>("button:not([data-export-item])")
-        );
-        const items = getItems();
-        items.forEach((b, i) => {
-            b.tabIndex = i === 0 ? 0 : -1;
-        });
-
-        const onFocusIn = (e: FocusEvent) => {
-            const currentItems = getItems();
-            const target = e.target as HTMLButtonElement;
-            if (currentItems.includes(target)) {
-                currentItems.forEach(b => {
-                    b.tabIndex = b === target ? 0 : -1;
-                });
-            }
-        };
-
-        const onKeyDown = (e: KeyboardEvent) => {
-            const currentItems = getItems();
-            const idx = currentItems.indexOf(document.activeElement as HTMLButtonElement);
-            if (idx < 0) return;
-
-            const rtl = getComputedStyle(bar).direction === "rtl";
-            const steps: Record<string, number> = {
-                ArrowRight: rtl ? -1 : 1,
-                ArrowLeft: rtl ? 1 : -1,
-            };
-
-            let nextIdx = -1;
-            if (e.key in steps) {
-                nextIdx = (idx + steps[e.key] + currentItems.length) % currentItems.length;
-            } else if (e.key === "Home") {
-                nextIdx = 0;
-            } else if (e.key === "End") {
-                nextIdx = currentItems.length - 1;
-            }
-
-            if (nextIdx >= 0) {
-                e.preventDefault();
-                currentItems[nextIdx]?.focus();
-            }
-        };
-
-        bar.addEventListener("focusin", onFocusIn);
-        bar.addEventListener("keydown", onKeyDown);
-        return () => {
-            bar.removeEventListener("focusin", onFocusIn);
-            bar.removeEventListener("keydown", onKeyDown);
-        };
-    }, []);
-
-    // Close subscribe modal on Escape
-    useEffect(() => {
-        if (!subscribeModalOpen) return;
-        const onKeyDown = (e: KeyboardEvent) => {
-            if (e.key === "Escape") {
-                setSubscribeModalOpen(false);
-            }
-        };
-        document.addEventListener("keydown", onKeyDown);
-        return () => document.removeEventListener("keydown", onKeyDown);
-    }, [subscribeModalOpen]);
+    useToolbarRovingTabIndex(toolbarRef);
 
     const handleSelectMode = (targetMode: "month" | "year") => {
         if (onSetMode) {
@@ -339,113 +259,19 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
 
             <p role="status" className={styles.srStatus}>{statusMessage}</p>
 
-            {subscribeModalOpen && (
-                <>
-                    <div
-                        className={styles.modalBackdrop}
-                        onClick={() => setSubscribeModalOpen(false)}
-                    />
-                    <div
-                        ref={subscribeDialogRef}
-                        role="dialog"
-                        aria-modal="true"
-                        aria-labelledby="subscribe-modal-title"
-                        className={styles.subscribeModal}
-                    >
-                        <div className={styles.modalHeader}>
-                            <h3 id="subscribe-modal-title">{t.actionButtons.subscribeModalTitle}</h3>
-                            <button
-                                type="button"
-                                className={styles.closeIconBtn}
-                                aria-label={t.actionButtons.closeDialogAria}
-                                onClick={() => setSubscribeModalOpen(false)}
-                            >
-                                ✕
-                            </button>
-                        </div>
-
-                        <p className={styles.modalDescription}>
-                            {renderSubscribeModalDescription(t.actionButtons.subscribeModalDesc)}
-                        </p>
-
-                        <div className={styles.modalSection}>
-                            <h4>{t.actionButtons.sectionDownloadTitle}</h4>
-                            <label className={styles.alarmCheckboxLabel}>
-                                <input
-                                    type="checkbox"
-                                    checked={includeAlarm}
-                                    onChange={(e) => setIncludeAlarm(e.target.checked)}
-                                />
-                                <span>{t.actionButtons.includeReminderLabel}</span>
-                            </label>
-                            <div className={styles.modalButtonRow}>
-                                <button
-                                    type="button"
-                                    className={styles.actionButton}
-                                    onClick={() => exportCalendar(includeAlarm)}
-                                >
-                                    {t.actionButtons.downloadIcsButton}
-                                </button>
-                                {!isCustomEditor && countries.length > 1 && (
-                                    <button
-                                        type="button"
-                                        className={styles.actionButton}
-                                        onClick={() => exportAllCalendars(includeAlarm)}
-                                    >
-                                        {t.actionButtons.downloadSeparateIcsButton}
-                                    </button>
-                                )}
-                            </div>
-                        </div>
-
-                        {upcomingEvents.length > 0 && (
-                            <div className={styles.modalSection}>
-                                <h4>{t.actionButtons.sectionGoogleTitle}</h4>
-                                <ul className={styles.upcomingList}>
-                                    {upcomingEvents.map((ev, idx) => (
-                                        <li key={`${ev.date}-${ev.name}-${idx}`} className={styles.upcomingItem}>
-                                            <span>
-                                                <strong>{ev.date}</strong>{" "}
-                                                {ev.kind === "publicHoliday"
-                                                    ? `${getFlagEmoji(ev.countryCode)} ${getCountryName(ev.countryCode, ev.country)}: ${ev.name}`
-                                                    : `${ev.icon} ${ev.name}`}
-                                            </span>
-                                            <a
-                                                href={buildGoogleCalendarUrl(ev)}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className={styles.gcalLink}
-                                            >
-                                                {t.actionButtons.addToGoogleCalendar}
-                                            </a>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        )}
-
-                        <div className={styles.modalSection}>
-                            <h4>{t.actionButtons.sectionShareTitle}</h4>
-                            <div className={styles.modalButtonRow}>
-                                <button
-                                    type="button"
-                                    className={styles.actionButton}
-                                    onClick={copyShareLink}
-                                >
-                                    {t.actionButtons.copyShareableLink}
-                                </button>
-                                <button
-                                    type="button"
-                                    className={styles.secondaryButton}
-                                    onClick={() => setSubscribeModalOpen(false)}
-                                >
-                                    {t.actionButtons.close}
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </>
-            )}
+            <SubscribeModal
+                isOpen={subscribeModalOpen}
+                onClose={() => setSubscribeModalOpen(false)}
+                subscribeDialogRef={subscribeDialogRef}
+                includeAlarm={includeAlarm}
+                setIncludeAlarm={setIncludeAlarm}
+                onExportICS={exportCalendar}
+                onExportSeparateICS={exportAllCalendars}
+                onCopyShareLink={copyShareLink}
+                upcomingEvents={upcomingEvents}
+                isCustomEditor={isCustomEditor}
+                countriesCount={countries.length}
+            />
         </>
     );
 };
