@@ -33,12 +33,6 @@ import { convertEvents } from "../utils/convertEvents.ts";
 import { transformNationalHolidays } from "../utils/filterNationalHolidays.cjs";
 import { Holidays } from "../Holidays.tsx";
 import { AnyEvents } from "../AnyEvents.tsx";
-import {
-    startNotificationsCommand,
-    stopNotificationsCommand,
-    getNotificationsStatusCommand,
-    notificationsWereSet,
-} from "../notifications/types.ts";
 
 describe("timeZones", () => {
     it("provides valid non-empty IANA timezones and offsets for all countries", () => {
@@ -247,53 +241,7 @@ describe("EventListInput", () => {
     });
 });
 
-describe("notifications and EventsListActionButtons", () => {
-    it("falls back to registration.active when controller is null and avoids duplicate message listeners", async () => {
-        const postMessage = jest.fn();
-        const addEventListener = jest.fn();
-        const register = jest.fn().mockResolvedValue(undefined);
-        const activeSW = { postMessage } as unknown as ServiceWorker;
-
-        Object.defineProperty(navigator, "serviceWorker", {
-            configurable: true,
-            value: {
-                controller: null,
-                register,
-                ready: Promise.resolve({ active: activeSW }),
-                addEventListener,
-            },
-        });
-        Object.defineProperty(window, "Notification", {
-            configurable: true,
-            value: {
-                permission: "granted",
-                requestPermission: jest.fn().mockResolvedValue("granted"),
-            },
-        });
-
-        await jest.isolateModulesAsync(async () => {
-            const { initServiceWorker, registerNotifications } = await import("../notifications/notifications.ts");
-            const cb1 = jest.fn();
-            const cb2 = jest.fn();
-
-            const sw1 = await initServiceWorker(cb1);
-            const sw2 = await initServiceWorker(cb2);
-
-            expect(sw1).toBe(activeSW);
-            expect(sw2).toBe(activeSW);
-            expect(addEventListener).toHaveBeenCalledTimes(1);
-
-            await registerNotifications(
-                [{ date: "2026-11-21", name: "Holiday", localName: "Holiday", country: "Latvia", countryCode: "LV" }],
-                false,
-                cb2
-            );
-            expect(postMessage).toHaveBeenCalledWith(expect.objectContaining({
-                type: startNotificationsCommand,
-            }));
-        });
-    });
-
+describe("EventsListActionButtons and AnyEvents", () => {
     it("ActionButtons Subscribe / Add to Calendar reads latest selectedYearDays and exports ICS with reminders", async () => {
         const OriginalResizeObserver = globalThis.ResizeObserver;
         globalThis.ResizeObserver = jest.fn().mockImplementation(() => ({
@@ -401,127 +349,6 @@ describe("notifications and EventsListActionButtons", () => {
             localStorage.removeItem("calendar_data");
             HTMLElement.prototype.scrollIntoView = origScrollIntoView;
             globalThis.ResizeObserver = OriginalResizeObserver;
-        }
-    });
-});
-
-describe("Service Worker (SW.ts)", () => {
-    it("uses countryCodes & eventData[0].date on notificationclick, tracks active status with periodicSync, and formats notification title", async () => {
-        const listeners: Record<string, (e: unknown) => void> = {};
-        const openWindow = jest.fn().mockResolvedValue(undefined);
-        const showNotification = jest.fn().mockResolvedValue(undefined);
-        const clientPostMessage = jest.fn();
-        const periodicRegister = jest.fn().mockResolvedValue(undefined);
-        const periodicUnregister = jest.fn().mockResolvedValue(undefined);
-
-        const g = globalThis as Record<string, unknown>;
-        const prevSelf = g.self;
-
-        g.self = {
-            skipWaiting: jest.fn(),
-            setInterval: globalThis.setInterval.bind(globalThis),
-            addEventListener: (type: string, cb: (e: unknown) => void) => {
-                listeners[type] = cb;
-            },
-            registration: {
-                periodicSync: {
-                    register: periodicRegister,
-                    unregister: periodicUnregister,
-                },
-                showNotification,
-            },
-            clients: {
-                claim: jest.fn(),
-                matchAll: jest.fn().mockResolvedValue([{ postMessage: clientPostMessage }]),
-                openWindow,
-            },
-        };
-
-        try {
-            await jest.isolateModulesAsync(async () => {
-                await import("../assets/SW.ts");
-
-                const tomorrow = new Date();
-                tomorrow.setDate(tomorrow.getDate() + 1);
-                const tomorrowString = tomorrow.toLocaleDateString("en-CA", {
-                    year: "numeric",
-                    month: "numeric",
-                    day: "numeric",
-                });
-
-                const dtoList = [
-                    {
-                        date: tomorrowString,
-                        name: "Test Holiday",
-                        localName: "Test Holiday",
-                        country: "Latvia",
-                        countryCode: "LV",
-                    },
-                    {
-                        date: tomorrowString,
-                        name: "Another Holiday",
-                        localName: "Another Holiday",
-                        country: "Germany",
-                        countryCode: "DE",
-                    },
-                ];
-
-                // 1. Register notifications via periodicSync
-                const waitPromises: Promise<unknown>[] = [];
-                listeners["message"]({
-                    data: { type: startNotificationsCommand, events: dtoList },
-                    waitUntil: (p: Promise<unknown>) => waitPromises.push(p),
-                });
-                await Promise.all(waitPromises);
-                expect(periodicRegister).toHaveBeenCalledWith("holiday-check", expect.any(Object));
-
-                // 2. Check status: must be true even though periodicSync succeeded (interval === 0)
-                listeners["message"]({ data: { type: getNotificationsStatusCommand } });
-                await Promise.resolve();
-                expect(clientPostMessage).toHaveBeenLastCalledWith({
-                    type: notificationsWereSet,
-                    status: true,
-                });
-
-                // 3. Trigger periodicsync to check notification title formatting
-                const syncPromises: Promise<unknown>[] = [];
-                listeners["periodicsync"]({
-                    tag: "holiday-check",
-                    waitUntil: (p: Promise<unknown>) => syncPromises.push(p),
-                });
-                await Promise.all(syncPromises);
-                expect(showNotification).toHaveBeenCalledWith(
-                    `It's a holiday tomorrow ${tomorrowString}! 🙌`,
-                    expect.any(Object)
-                );
-
-                // 4. Trigger notificationclick
-                const clickPromises: Promise<unknown>[] = [];
-                listeners["notificationclick"]({
-                    notification: { close: jest.fn(), data: dtoList },
-                    waitUntil: (p: Promise<unknown>) => clickPromises.push(p),
-                });
-                await Promise.all(clickPromises);
-                expect(openWindow).toHaveBeenCalledWith(
-                    `/PublicHolidays/Holidays#countries=LV,DE&mode=month&date=${tomorrowString}`
-                );
-
-                // 5. Stop notifications and verify status becomes false
-                const stopPromises: Promise<unknown>[] = [];
-                listeners["message"]({
-                    data: { type: stopNotificationsCommand },
-                    waitUntil: (p: Promise<unknown>) => stopPromises.push(p),
-                });
-                await Promise.all(stopPromises);
-                listeners["message"]({ data: { type: getNotificationsStatusCommand } });
-                await Promise.resolve();
-                expect(clientPostMessage).toHaveBeenLastCalledWith({
-                    type: notificationsWereSet,
-                    status: false,
-                });
-            });
-        } finally {
-            g.self = prevSelf;
         }
     });
 });

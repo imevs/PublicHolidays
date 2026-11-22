@@ -23,7 +23,7 @@ module.exports = [
         languageOptions: {
             parser,
             parserOptions: {
-                project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.sw.json'],
+                project: ['./tsconfig.json', './tsconfig.node.json'],
                 tsconfigRootDir: process.cwd(),
             },
         },
