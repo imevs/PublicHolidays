@@ -30,7 +30,9 @@ import type { CalendarDay, CalendarEvent } from "../types/index.ts";
 import { buildHolidaysIndex, getHolidaysForDate, useCalendar } from "../hooks/useCalendar.ts";
 import { allHolidays } from "../data/holidays_v2/index.ts";
 import { convertEvents } from "../utils/convertEvents.ts";
-import { transformNationalHolidays } from "../utils/filterNationalHolidays.cjs";
+import { transformNationalHolidays, transformEuropeYearModule } from "../utils/filterNationalHolidays.ts";
+import { isDateInYearOrBoundary, filterByYear } from "../data/holidays_v2/continents/filterByYear.ts";
+import { getContinentCacheKey, getMissingContinents } from "../data/holidays_v2/continents/index.ts";
 import { Holidays } from "../Holidays.tsx";
 import { AnyEvents } from "../AnyEvents.tsx";
 
@@ -994,5 +996,99 @@ describe("External ICS loader & URL handling (Item 3.1)", () => {
         expect(fetchMock).toHaveBeenCalledWith(
             "https://api.codetabs.com/v1/proxy/?quest=" + encodeURIComponent("https://example.com/cal.ics%23team-events")
         );
+    });
+});
+
+describe("Cross-year boundary holidays & Europe continent cache keys", () => {
+    it("isDateInYearOrBoundary includes target year, Dec 25-31 of previous year, and Jan 1-7 of next year", () => {
+        expect(isDateInYearOrBoundary("2025-05-01", 2025)).toBe(true);
+        expect(isDateInYearOrBoundary("2024-12-25", 2025)).toBe(true);
+        expect(isDateInYearOrBoundary("2024-12-31", 2025)).toBe(true);
+        expect(isDateInYearOrBoundary("2026-01-01", 2025)).toBe(true);
+        expect(isDateInYearOrBoundary("2026-01-07", 2025)).toBe(true);
+
+        expect(isDateInYearOrBoundary("2024-12-24", 2025)).toBe(false);
+        expect(isDateInYearOrBoundary("2026-01-08", 2025)).toBe(false);
+        expect(isDateInYearOrBoundary("", 2025)).toBe(false);
+
+        const filtered = filterByYear(
+            {
+                LV: {
+                    countryCode: "LV",
+                    holidays: [
+                        { date: "2024-12-24" },
+                        { date: "2024-12-25" },
+                        { date: "2025-11-18" },
+                        { date: "2026-01-01" },
+                        { date: "2026-01-08" },
+                    ],
+                },
+            },
+            2025
+        );
+        expect(filtered[0].holidays.map(h => h.date)).toEqual([
+            "2024-12-25",
+            "2025-11-18",
+            "2026-01-01",
+        ]);
+    });
+
+    it("getContinentCacheKey and getMissingContinents handle supported Europe years and europe-all fallback", () => {
+        expect(getContinentCacheKey("europe", 2024)).toBe("europe-2024");
+        expect(getContinentCacheKey("europe", 2028)).toBe("europe-2028");
+        expect(getContinentCacheKey("europe", 2023)).toBe("europe-all");
+        expect(getContinentCacheKey("europe", 2029)).toBe("europe-all");
+        expect(getContinentCacheKey("asia", 2025)).toBe("asia");
+
+        const loaded = new Set<string>(["europe-2025"]);
+        expect(getMissingContinents(["LV", "DE"], loaded, 2025)).toEqual([]);
+        expect(getMissingContinents(["LV"], loaded, 2026)).toEqual(["europe"]);
+        expect(getMissingContinents(["LV", "US"], loaded, 2025)).toEqual(["northAmerica"]);
+
+        const loadedAll = new Set<string>(["europe-all"]);
+        expect(getMissingContinents(["LV"], loadedAll, 2023)).toEqual([]);
+        expect(getMissingContinents(["LV"], loadedAll, 2025)).toEqual([]);
+        expect(getMissingContinents(["LV"], loadedAll, 2030)).toEqual([]);
+    });
+
+    it("transformEuropeYearModule includes cross-year boundary National holidays", () => {
+        const sampleLV = [
+            "export const holidays_LV = {",
+            "    countryCode: \"LV\",",
+            "    countryName: \"Latvia\",",
+            "    holidays: [",
+            "        { \"date\": \"2024-12-24\", \"name\": \"Christmas Eve\", \"type\": [\"National holiday\"] },",
+            "        { \"date\": \"2024-12-25\", \"name\": \"Christmas Day\", \"type\": [\"National holiday\"] },",
+            "        { \"date\": \"2025-11-18\", \"name\": \"Proclamation Day\", \"type\": [\"National holiday\"] },",
+            "        { \"date\": \"2026-01-01\", \"name\": \"New Year's Day\", \"type\": [\"National holiday\"] },",
+            "        { \"date\": \"2026-01-08\", \"name\": \"Outside Window\", \"type\": [\"National holiday\"] },",
+            "        { \"date\": \"2025-05-04\", \"name\": \"Observance\", \"type\": [\"Observance\"] }",
+            "    ]",
+            "} as const;",
+        ].join("\n");
+
+        const mockFs = {
+            existsSync: (p: string) => p.endsWith("LV.ts"),
+            readFileSync: () => sampleLV,
+        };
+        const mockPath = {
+            join: (...parts: string[]) => parts.join("/"),
+        };
+
+        const out = transformEuropeYearModule(
+            "",
+            "/app/src/data/holidays_v2/continents/europe-2025.ts",
+            mockFs,
+            mockPath
+        );
+        expect(out).not.toBeNull();
+        expect(out!.map).toBeNull();
+        const jsonStr = out!.code.replace(/^export const holidays = /, "").replace(/;$/, "");
+        const parsed = JSON.parse(jsonStr);
+        expect(parsed.LV.holidays.map((h: { date: string }) => h.date)).toEqual([
+            "2024-12-25",
+            "2025-11-18",
+            "2026-01-01",
+        ]);
     });
 });

@@ -9,13 +9,13 @@ import CountryFilter from "./components/CountryFilter/CountryFilter.tsx";
 import { ActionButtons } from "./components/EventsList/EventsListActionButtons.tsx";
 import { useTranslation } from "./i18n/useTranslation.ts";
 import { AppLayout } from "./components/AppLayout/AppLayout.tsx";
-import { loadContinentHolidays, getMissingContinents, ContinentId } from "./data/holidays_v2/continents";
+import { loadContinentHolidays, getMissingContinents, getContinentCacheKey } from "./data/holidays_v2/continents";
 
 export const Holidays: React.FC = () => {
     const { t, format } = useTranslation();
     const [holidaysData, setHolidaysData] = useState<CalendarEvent[]>([]);
     const [highlightLongHolidays, setHighlightLongHolidays] = useState(false);
-    const loadedContinentsRef = useRef<Set<ContinentId>>(new Set());
+    const loadedContinentsRef = useRef<Set<string>>(new Set());
 
     const {
         currentDate,
@@ -41,12 +41,12 @@ export const Holidays: React.FC = () => {
 
     useEffect(() => {
         let isMounted = true;
-        const missing = getMissingContinents(selectedCountries, loadedContinentsRef.current);
+        const missing = getMissingContinents(selectedCountries, loadedContinentsRef.current, year);
         if (missing.length > 0) {
-            Promise.all(missing.map(c => loadContinentHolidays(c))).then(results => {
+            Promise.all(missing.map(c => loadContinentHolidays(c, year))).then(results => {
                 if (!isMounted) return;
                 for (const m of missing) {
-                    loadedContinentsRef.current.add(m);
+                    loadedContinentsRef.current.add(getContinentCacheKey(m, year));
                 }
                 const newCountryHolidays = results.flat();
                 const converted = convertEvents(newCountryHolidays);
@@ -60,7 +60,7 @@ export const Holidays: React.FC = () => {
         return () => {
             isMounted = false;
         };
-    }, [selectedCountries]);
+    }, [selectedCountries, year]);
 
     useEffect(() => {
         import("./data/holidays_descriptions/all.ts").then(data => {

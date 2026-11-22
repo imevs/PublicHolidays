@@ -63,19 +63,51 @@ export const COUNTRY_TO_CONTINENT: Partial<Record<CountryCode, ContinentId>> = {
     NZ: "oceania",
 };
 
-const continentCache = new Map<ContinentId, Promise<CountryHolidays[]>>();
+const continentCache = new Map<string, Promise<CountryHolidays[]>>();
 
-export async function loadContinentHolidays(continentId: ContinentId): Promise<CountryHolidays[]> {
-    if (continentCache.has(continentId)) {
-        return continentCache.get(continentId)!;
+export function getContinentCacheKey(continentId: ContinentId, year?: number): string {
+    const targetYear = year ?? new Date().getUTCFullYear();
+    const isSupportedEuropeYear = continentId === "europe" && targetYear >= 2024 && targetYear <= 2028;
+    return continentId === "europe"
+        ? (isSupportedEuropeYear ? `europe-${targetYear}` : "europe-all")
+        : continentId;
+}
+
+export async function loadContinentHolidays(continentId: ContinentId, year?: number): Promise<CountryHolidays[]> {
+    const targetYear = year ?? new Date().getUTCFullYear();
+    const cacheKey = getContinentCacheKey(continentId, year);
+
+    if (continentCache.has(cacheKey)) {
+        return continentCache.get(cacheKey)!;
     }
 
     const promise = (async () => {
         let mod: { holidays: Record<string, CountryHolidays> };
+        if (continentId === "europe") {
+            switch (targetYear) {
+                case 2024:
+                    mod = await import("./europe-2024");
+                    break;
+                case 2025:
+                    mod = await import("./europe-2025");
+                    break;
+                case 2026:
+                    mod = await import("./europe-2026");
+                    break;
+                case 2027:
+                    mod = await import("./europe-2027");
+                    break;
+                case 2028:
+                    mod = await import("./europe-2028");
+                    break;
+                default:
+                    mod = await import("./europe");
+                    return Object.values(mod.holidays);
+            }
+            return Object.values(mod.holidays);
+        }
+
         switch (continentId) {
-            case "europe":
-                mod = await import("./europe");
-                break;
             case "asia":
                 mod = await import("./asia");
                 break;
@@ -92,21 +124,31 @@ export async function loadContinentHolidays(continentId: ContinentId): Promise<C
                 throw new Error(`Unknown continent: ${continentId}`);
         }
         return Object.values(mod.holidays);
-    })();
+    })().catch((err) => {
+        continentCache.delete(cacheKey);
+        throw err;
+    });
 
-    continentCache.set(continentId, promise);
+    continentCache.set(cacheKey, promise);
     return promise;
 }
 
 export function getMissingContinents(
     countryCodes: CountryCode[],
-    loadedContinents: Set<ContinentId>
+    loadedContinents: Set<string>,
+    year?: number
 ): ContinentId[] {
     const missing = new Set<ContinentId>();
     for (const code of countryCodes) {
         const continent = COUNTRY_TO_CONTINENT[code];
-        if (continent && !loadedContinents.has(continent)) {
-            missing.add(continent);
+        if (continent) {
+            if (continent === "europe" && loadedContinents.has("europe-all")) {
+                continue;
+            }
+            const key = getContinentCacheKey(continent, year);
+            if (!loadedContinents.has(key)) {
+                missing.add(continent);
+            }
         }
     }
     return Array.from(missing);

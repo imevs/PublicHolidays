@@ -3,14 +3,14 @@ import react from "@vitejs/plugin-react";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import fs from "fs";
 import path from "path";
-import { transformNationalHolidays } from "./src/utils/filterNationalHolidays.cjs";
+import { transformNationalHolidays, transformEuropeYearModule } from "./src/utils/filterNationalHolidays";
 
 export function filterNationalHolidaysPlugin(): Plugin {
     return {
         name: "filter-national-holidays",
         enforce: "pre",
         transform(code, id) {
-            return transformNationalHolidays(code, id);
+            return transformEuropeYearModule(code, id, fs, path) ?? transformNationalHolidays(code, id);
         },
     };
 }
