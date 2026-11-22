@@ -20,6 +20,7 @@ const themes: Theme[] = [
     { id: "seasonal", icon: "🌍" },
     { id: "lightblue", icon: "❄️" },
     { id: "brightblue", icon: "❅" },
+    { id: "book", icon: "📖" },
 ];
 
 const THEME_STORAGE_KEY = "theme";

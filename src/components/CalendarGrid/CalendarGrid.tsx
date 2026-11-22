@@ -45,7 +45,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
     const [selectedDay, setSelectedDay] = useState<UTCDate | null>(null); // State for selected day in popup
     const [dateForPopup, setDateForPopup] = useState<UTCDate | null>(null);
     const [editingEvent, setEditingEvent] = useState<OtherEvent | null>(null);
-    const [shouldAnimate, setShouldAnimate] = useState<boolean>(prevMode === mode);
+    const canAnimate = prevMode === mode;
     const isEditable = onNewEvent !== undefined;
 
     const dayDialogRef = useRef<HTMLDialogElement | null>(null);
@@ -141,7 +141,7 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
         <div id="calendar-grid-capture-container" className={styles.calendarGridContainer}>
             {mode === "month"
                 ? <MonthView
-                    shouldAnimate={shouldAnimate}
+                    shouldAnimate={canAnimate}
                     selectedDays={selectedMonthDays}
                     onModeChange={onModeChange}
                     currentDate={currentDate}
@@ -153,8 +153,9 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                     highlightLongHolidays={props.highlightLongHolidays}
                 />
                 : <YearView
+                    shouldAnimate={canAnimate}
                     selectedDays={selectedYearDays}
-                    onModeChange={(mode: "month" | "year", month) => { setShouldAnimate(false); onModeChange(mode, month); }}
+                    onModeChange={onModeChange}
                     currentDate={currentDate}
                     dateForPopup={dateForPopup}
                     setDateForPopup={handleOpenNewForDate}

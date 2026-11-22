@@ -22,7 +22,8 @@ export type ThemeId =
     | "pencil"
     | "seasonal"
     | "lightblue"
-    | "brightblue";
+    | "brightblue"
+    | "book";
 
 export type ColorKey = "teal" | "blue" | "purple" | "amber" | "rose" | "green" | "red";
 

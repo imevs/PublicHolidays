@@ -35,6 +35,7 @@ export const lv = {
             seasonal: "Sezonas",
             lightblue: "Gaiši zils",
             brightblue: "Spilgti zils",
+            book: "Grāmata",
         },
     },
     controls: {
