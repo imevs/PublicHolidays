@@ -1,4 +1,4 @@
-# This is a basic workflow to help you get started with Actions
+# This workflow is a basic workflow to help you get started with Actions
 
 name: CI
 
@@ -13,6 +13,11 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -20,7 +25,8 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
-      APP_FOLDER_NAME: ${{ github.ref_name == 'main' && 'main' || format('{0}', github.ref_name) }}
+      BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+      APP_FOLDER_NAME: ${{ (github.head_ref || github.ref_name) == 'main' && 'main' || format('{0}', github.head_ref || github.ref_name) }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -31,7 +37,7 @@ jobs:
         name: Determine deploy condition
         # Compute the branch/event condition once and expose it as a step output
         run: |
-          echo "should_deploy=${{ github.event_name == 'push' && (github.ref_name == 'main' || startsWith(github.ref_name, 'bugfix') || startsWith(github.ref_name, 'feature')) }}" >> $GITHUB_OUTPUT
+          echo "should_deploy=${{ (github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository)) && (env.BRANCH_NAME == 'main' || startsWith(env.BRANCH_NAME, 'bugfix') || startsWith(env.BRANCH_NAME, 'bug-fix') || startsWith(env.BRANCH_NAME, 'feature')) }}" >> $GITHUB_OUTPUT
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -52,30 +58,32 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            // Find the branch name from the ref (refs/heads/<branch>)
-            const branch = context.ref.replace('refs/heads/', '');
+            const branch = process.env.BRANCH_NAME || context.ref.replace('refs/heads/', '');
+            let prNumber = context.payload.pull_request?.number;
 
-            // List open PRs where the head matches this branch
-            const pulls = await github.rest.pulls.list({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              head: `${context.repo.owner}:${branch}`,
-              state: 'open'
-            });
+            if (!prNumber) {
+              // List open PRs where the head matches this branch
+              const pulls = await github.rest.pulls.list({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                head: `${context.repo.owner}:${branch}`,
+                state: 'open'
+              });
 
-            if (!pulls.data || pulls.data.length === 0) {
-              core.info(`No open pull request found for branch: ${branch}. Skipping PR comment.`);
-              return;
+              if (!pulls.data || pulls.data.length === 0) {
+                core.info(`No open pull request found for branch: ${branch}. Skipping PR comment.`);
+                return;
+              }
+              prNumber = pulls.data[0].number;
             }
 
-            const pr = pulls.data[0];
             const pagesUrl = `https://${context.repo.owner}.github.io/${context.repo.repo}/${process.env.APP_FOLDER_NAME}`;
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              issue_number: pr.number,
+              issue_number: prNumber,
               body: `✅ Your changes have been deployed to GitHub Pages.\n\n📍 Preview: ${pagesUrl}`
             });
 
-            core.info(`Posted deployment comment to PR #${pr.number}`);
+            core.info(`Posted deployment comment to PR #${prNumber}`);
