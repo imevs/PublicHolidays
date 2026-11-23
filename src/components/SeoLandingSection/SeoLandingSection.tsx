@@ -80,6 +80,7 @@ export const SeoLandingSection: React.FC<SeoLandingSectionProps> = ({
         params.set("countries", countries);
         const nextHash = decodeURIComponent(params.toString());
 
+        sessionStorage.setItem("skipMonthScroll", "1");
         if (activeRoute === "EditEvents") {
             navigate(`/${APP_BASE_NAME}/Holidays#${nextHash}`);
         } else {
