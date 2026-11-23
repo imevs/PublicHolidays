@@ -64,6 +64,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
                         className={styles.navLink}
                         onClick={(e) => {
                             e.preventDefault();
+                            sessionStorage.setItem("skipMonthScroll", "1");
                             navigate(`/${APP_BASE_NAME}/Holidays${window.location.hash}`);
                         }}
                     >
@@ -75,6 +76,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({
                         className={styles.navLink}
                         onClick={(e) => {
                             e.preventDefault();
+                            sessionStorage.setItem("skipMonthScroll", "1");
                             navigate(`/${APP_BASE_NAME}/EditEvents${window.location.hash}`);
                         }}
                     >

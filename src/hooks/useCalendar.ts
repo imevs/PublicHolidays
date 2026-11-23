@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { CalendarDay, CalendarEvent } from "../types/index.ts";
 import {
     convertDayToEUFormat,
@@ -271,11 +271,12 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     const [mode, setMode] = useState<"month" | "year">("year");
     const [showAllCountries, setShowAllCountries] = useState(false);
 
+    const isInitialMountRef = useRef(true);
     const [hasInteractedRef] = useState(() => ({ current: false }));
     const [shouldScrollToMonth, setShouldScrollToMonth] = useState(false);
     const clearShouldScrollToMonth = useCallback(() => setShouldScrollToMonth(false), []);
 
-    const loadStateFromSearchParams = useCallback(() => {
+    const loadStateFromSearchParams = useCallback((isInitialLoad = false) => {
         const urlSearchParams = getParams();
         const countries = urlSearchParams.get("countries") ?? "";
         if (countries) {
@@ -288,7 +289,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
                 sessionStorage.removeItem("skipMonthScroll");
             }
             setCurrentDate(new UTCDate(date as DateThreeParts));
-            if (!hasInteractedRef.current && !skipScroll) {
+            if (isInitialLoad && !hasInteractedRef.current && !skipScroll) {
                 setShouldScrollToMonth(true);
             }
         }
@@ -301,10 +302,12 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     }, []);
 
     useEffect(() => {
-        loadStateFromSearchParams();
-        window.addEventListener("hashchange", loadStateFromSearchParams);
+        loadStateFromSearchParams(isInitialMountRef.current);
+        isInitialMountRef.current = false;
+        const handleHashChange = () => loadStateFromSearchParams(false);
+        window.addEventListener("hashchange", handleHashChange);
         return () => {
-            window.removeEventListener("hashchange", loadStateFromSearchParams);
+            window.removeEventListener("hashchange", handleHashChange);
         };
     }, []);
 
@@ -333,6 +336,8 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     }, [currentDate]);
 
     const toggleCountry = useCallback((countryCode: CountryCode): void => {
+        hasInteractedRef.current = true;
+        setShouldScrollToMonth(false);
         setSelectedCountries(prev => {
             const newCountries = prev.includes(countryCode)
                 ? prev.filter(c => c !== countryCode)
@@ -369,6 +374,8 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     }, [currentDate]);
 
     const onShowAllCountries = useCallback((state: boolean) => {
+        hasInteractedRef.current = true;
+        setShouldScrollToMonth(false);
         const params = getParams();
         params.set("all", state ? "1" : "0");
         window.location.hash = decodeURIComponent(params.toString());
