@@ -1563,6 +1563,33 @@ export const holidays_HR: CountryHolidays = {
             "type": [
                 "National holiday"
             ]
+        },
+        {
+            "date": "2025-12-24",
+            "endDate": "2026-01-09",
+            "localName": "Winter holidays",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-30",
+            "endDate": "2026-04-06",
+            "localName": "Spring holidays",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-15",
+            "endDate": "2026-08-31",
+            "localName": "Summer holidays",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

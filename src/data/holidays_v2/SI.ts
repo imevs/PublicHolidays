@@ -1107,6 +1107,60 @@ export const holidays_SI: CountryHolidays = {
             "type": [
                 "National holiday"
             ]
+        },
+        {
+            "date": "2025-12-25",
+            "endDate": "2026-01-02",
+            "localName": "Primary schools",
+            "name": "New Year holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-20",
+            "localName": "Regions: ZR",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-23",
+            "endDate": "2026-02-27",
+            "localName": "Regions: VR",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-27",
+            "endDate": "2026-05-01",
+            "localName": "Primary schools",
+            "name": "Maydays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-28",
+            "endDate": "2026-04-30",
+            "localName": "Secondary schools",
+            "name": "Maydays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-26",
+            "endDate": "2026-08-31",
+            "localName": "Summer holidays",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

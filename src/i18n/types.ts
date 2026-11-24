@@ -76,6 +76,7 @@ export interface TranslationDictionary {
     countryFilter: {
         selectCountries: string;
         highlightLongHolidays: string;
+        showSchoolHolidays: string;
         showTimezones: string;
         showLocalTime: string;
         currentTimePrefix: string;

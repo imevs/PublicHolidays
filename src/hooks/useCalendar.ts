@@ -20,7 +20,7 @@ export interface HolidaysIndex {
     publicByDateAndCountry: Map<DateString, Map<CountryCode, CalendarEvent[]>>;
 }
 
-export function buildHolidaysIndex(holidaysData: CalendarEvent[]): HolidaysIndex {
+export function buildHolidaysIndex(holidaysData: CalendarEvent[], showSchoolHolidays = false): HolidaysIndex {
     const otherByDate = new Map<DateString, CalendarEvent[]>();
     const publicByDateAndCountry = new Map<DateString, Map<CountryCode, CalendarEvent[]>>();
 
@@ -32,18 +32,20 @@ export function buildHolidaysIndex(holidaysData: CalendarEvent[]): HolidaysIndex
                 otherByDate.set(h.date, list);
             }
             list.push(h);
-        } else if (h.kind === "publicHoliday" && h.type?.includes("National holiday") === true) {
-            let byCountry = publicByDateAndCountry.get(h.date);
-            if (!byCountry) {
-                byCountry = new Map<CountryCode, CalendarEvent[]>();
-                publicByDateAndCountry.set(h.date, byCountry);
+        } else if (h.kind === "publicHoliday") {
+            if (h.type?.includes("National holiday") === true || (showSchoolHolidays && h.type?.includes("School Holiday") === true)) {
+                let byCountry = publicByDateAndCountry.get(h.date);
+                if (!byCountry) {
+                    byCountry = new Map<CountryCode, CalendarEvent[]>();
+                    publicByDateAndCountry.set(h.date, byCountry);
+                }
+                let list = byCountry.get(h.countryCode);
+                if (!list) {
+                    list = [];
+                    byCountry.set(h.countryCode, list);
+                }
+                list.push(h);
             }
-            let list = byCountry.get(h.countryCode);
-            if (!list) {
-                list = [];
-                byCountry.set(h.countryCode, list);
-            }
-            list.push(h);
         }
     }
 
@@ -205,7 +207,7 @@ function markLongHolidaysWithPadding(
     const longHolidayCountriesByDate = new Map<DateString, CountryCode[]>();
     const longHolidayDetailsByDate = new Map<DateString, { countryCode?: string; days: number }[]>();
     for (const countryCode of selectedCountries) {
-        const marked = markLongHolidays(paddedDays, d => d.events.some(e => e.kind === "publicHoliday" && e.countryCode === countryCode));
+        const marked = markLongHolidays(paddedDays, d => d.events.some(e => e.kind === "publicHoliday" && e.countryCode === countryCode && e.type?.includes("National holiday") === true));
         for (const d of marked) {
             if (d.isLongHoliday && d.longHolidayDays) {
                 const dateStr = formatDateString(d.date);
@@ -270,6 +272,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
     const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(["LV"]);
     const [mode, setMode] = useState<"month" | "year">("year");
     const [showAllCountries, setShowAllCountries] = useState(false);
+    const [showSchoolHolidays, setShowSchoolHolidays] = useState(false);
 
     const isInitialMountRef = useRef(true);
     const [hasInteractedRef] = useState(() => ({ current: false }));
@@ -299,6 +302,8 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         }
         const showAll = urlSearchParams.get("all") as "1" | "0";
         setShowAllCountries(showAll === "1");
+        const schoolHolidays = urlSearchParams.get("school");
+        setShowSchoolHolidays(schoolHolidays === "1");
     }, []);
 
     useEffect(() => {
@@ -311,7 +316,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         };
     }, []);
 
-    const holidaysIndex = useMemo(() => buildHolidaysIndex(holidaysData), [holidaysData]);
+    const holidaysIndex = useMemo(() => buildHolidaysIndex(holidaysData, showSchoolHolidays), [holidaysData, showSchoolHolidays]);
 
     const selectedYearDays = useMemo((): CalendarDay[] => {
         const days = calcSelectedDays(currentDate, holidaysIndex, selectedCountries, 0);
@@ -358,6 +363,17 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         setCurrentDate(newDate);
     }, []);
 
+    const onShowSchoolHolidays = useCallback((state: boolean) => {
+        const params = getParams();
+        if (state) {
+            params.set("school", "1");
+        } else {
+            params.delete("school");
+        }
+        window.location.hash = decodeURIComponent(params.toString());
+        setShowSchoolHolidays(state);
+    }, []);
+
     const handleModeChange = useCallback((newMode: "month" | "year", month: number): void => {
         hasInteractedRef.current = true;
         setShouldScrollToMonth(false);
@@ -394,6 +410,8 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         handleModeChange,
         showAllCountries,
         setShowAllCountries: onShowAllCountries,
+        showSchoolHolidays,
+        setShowSchoolHolidays: onShowSchoolHolidays,
         shouldScrollToMonth,
         clearShouldScrollToMonth,
     };

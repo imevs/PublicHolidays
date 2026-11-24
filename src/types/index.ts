@@ -21,6 +21,10 @@ export type CalendarEvent = HolidayWithCountry | OtherEvent;
 
 export interface HolidayWithCountry {
     date: DateString;
+    endDate?: DateString;
+    rangeStart?: DateString;
+    isRange?: boolean;
+    rangePosition?: "start" | "middle" | "end" | "single";
     name: string;
     localName: string;
     kind: "publicHoliday";

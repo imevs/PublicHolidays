@@ -1483,6 +1483,60 @@ export const holidays_RO: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-20",
+            "endDate": "2026-01-07",
+            "localName": "Winter holidays",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-09",
+            "endDate": "2026-02-13",
+            "localName": "Regions: BN, CJ, TM",
+            "name": "Ski holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-20",
+            "localName": "Regions: AG, AR, BH, BU, BV, BZ, CL, CS, DB, DJ, GJ, HD, IF, IL, IS, MH, OT, PH, SJ, TL, TR, VL",
+            "name": "Ski holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-23",
+            "endDate": "2026-02-27",
+            "localName": "Regions: AB, BC, BR, BT, CT, CV, GL, GR, HR, MM, MS, NT, SB, SM, SV, VN, VS",
+            "name": "Ski holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-04",
+            "endDate": "2026-04-14",
+            "localName": "Spring holidays",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-20",
+            "endDate": "2026-09-06",
+            "localName": "Summer holidays",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

@@ -1219,6 +1219,84 @@ export const holidays_LI: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-24",
+            "endDate": "2026-01-06",
+            "localName": "Christmas holidays",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-14",
+            "endDate": "2026-02-22",
+            "localName": "Sport holidays",
+            "name": "Sport holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-02",
+            "localName": "From noon",
+            "name": "No lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-03",
+            "endDate": "2026-04-19",
+            "localName": "Spring holidays",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-15",
+            "localName": "No lessons",
+            "name": "No lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-05",
+            "localName": "No lessons",
+            "name": "No lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-04",
+            "endDate": "2026-08-16",
+            "localName": "Summer holidays",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-03",
+            "endDate": "2026-10-18",
+            "localName": "Autumn holidays",
+            "name": "Autumn holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-24",
+            "endDate": "2027-01-06",
+            "localName": "Christmas holidays",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

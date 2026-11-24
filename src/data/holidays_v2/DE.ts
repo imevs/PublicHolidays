@@ -4744,6 +4744,1486 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Half-day holiday"
             ]
+        },
+        {
+            "date": "2025-12-17",
+            "endDate": "2026-01-02",
+            "localName": "Regions: HH",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2025-12-19",
+            "endDate": "2026-01-06",
+            "localName": "Regions: SH",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2025-12-20",
+            "endDate": "2026-01-03",
+            "localName": "Regions: MV",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2025-12-22",
+            "endDate": "2026-01-02",
+            "localName": "Regions: BB",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2025-12-22",
+            "endDate": "2026-01-02",
+            "localName": "Regions: SL",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-01-30",
+            "localName": "Regions: HH",
+            "name": "Mid-Year Break",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-01-31",
+            "endDate": "2026-02-06",
+            "localName": "Regions: ST",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-02",
+            "endDate": "2026-02-03",
+            "localName": "Regions: HB",
+            "name": "Mid-Year Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-02",
+            "endDate": "2026-02-07",
+            "localName": "Regions: BB",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-09",
+            "endDate": "2026-02-14",
+            "localName": "Regions: MV",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-20",
+            "localName": "Regions: SL",
+            "name": "Carnival Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-20",
+            "localName": "Regions: BY",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-21",
+            "localName": "Regions: TH",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-02",
+            "endDate": "2026-03-13",
+            "localName": "Regions: HH",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-23",
+            "endDate": "2026-04-07",
+            "localName": "Regions: HB",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-26",
+            "endDate": "2026-04-10",
+            "localName": "Regions: SH",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-30",
+            "endDate": "2026-04-10",
+            "localName": "Regions: BB",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-30",
+            "endDate": "2026-04-04",
+            "localName": "Regions: ST",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-03",
+            "endDate": "2026-04-10",
+            "localName": "Regions: SN",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-07",
+            "endDate": "2026-04-17",
+            "localName": "Regions: SL",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-11",
+            "endDate": "2026-05-15",
+            "localName": "Regions: HH",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-15",
+            "localName": "Regions: MV",
+            "name": "Additional holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-15",
+            "localName": "Regions: SH",
+            "name": "Ascension",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-15",
+            "localName": "Regions: HB",
+            "name": "Day after Ascension",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-15",
+            "localName": "Regions: BE",
+            "name": "Day off",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-15",
+            "localName": "Regions: TH",
+            "name": "Day off from school",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-15",
+            "localName": "Regions: BB",
+            "name": "Variable holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-22",
+            "endDate": "2026-05-26",
+            "localName": "Regions: MV",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-26",
+            "localName": "Regions: BB",
+            "name": "Pentecost holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-26",
+            "localName": "Regions: HB",
+            "name": "Pentecost Holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-26",
+            "localName": "Regions: NW",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-29",
+            "endDate": "2026-08-07",
+            "localName": "Regions: HE",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-02",
+            "endDate": "2026-08-12",
+            "localName": "Regions: HB",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-04",
+            "endDate": "2026-08-08",
+            "localName": "Regions: SH\nIslands Sylt, Föhr, Amrum, Helgoland and the Halligen",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-09",
+            "endDate": "2026-08-22",
+            "localName": "Regions: BB",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-09",
+            "endDate": "2026-08-19",
+            "localName": "Regions: HH",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-13",
+            "endDate": "2026-08-22",
+            "localName": "Regions: MV",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-20",
+            "endDate": "2026-09-01",
+            "localName": "Regions: NW",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-30",
+            "endDate": "2026-09-12",
+            "localName": "Regions: BW",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-08-03",
+            "endDate": "2026-09-14",
+            "localName": "Regions: BY",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-05",
+            "endDate": "2026-10-16",
+            "localName": "Regions: RP",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-12",
+            "endDate": "2026-10-24",
+            "localName": "Regions: HB",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-15",
+            "endDate": "2026-10-24",
+            "localName": "Regions: MV",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-17",
+            "endDate": "2026-10-31",
+            "localName": "Regions: NW",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-19",
+            "endDate": "2026-10-30",
+            "localName": "Regions: BB",
+            "name": "Autumn holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-19",
+            "endDate": "2026-10-24",
+            "localName": "Regions: MV",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-26",
+            "endDate": "2026-10-30",
+            "localName": "Regions: BW",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-11-02",
+            "endDate": "2026-11-06",
+            "localName": "Regions: BY",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-11-26",
+            "localName": "Regions: MV",
+            "name": "Additional holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-11-27",
+            "localName": "Regions: MV",
+            "name": "Additional holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-19",
+            "endDate": "2027-01-02",
+            "localName": "Regions: MV",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-21",
+            "endDate": "2026-12-31",
+            "localName": "Regions: SL",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-23",
+            "endDate": "2027-01-02",
+            "localName": "Regions: BB",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-23",
+            "endDate": "2027-01-02",
+            "localName": "Regions: SN",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-24",
+            "endDate": "2027-01-08",
+            "localName": "Regions: BY",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-01-29",
+            "localName": "Regions: HH",
+            "name": "Mid-Year Break",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-01",
+            "endDate": "2027-02-02",
+            "localName": "Regions: HB",
+            "name": "Mid-Year Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-01",
+            "endDate": "2027-02-06",
+            "localName": "Regions: BB",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-01",
+            "endDate": "2027-02-06",
+            "localName": "Regions: ST",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-08",
+            "endDate": "2027-02-12",
+            "localName": "Regions: SL",
+            "name": "Carnival Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-08",
+            "endDate": "2027-02-12",
+            "localName": "Regions: BY",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-08",
+            "endDate": "2027-02-13",
+            "localName": "Regions: MV",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-01",
+            "endDate": "2027-03-12",
+            "localName": "Regions: HH",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-22",
+            "endDate": "2027-04-02",
+            "localName": "Regions: BE",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-22",
+            "endDate": "2027-03-27",
+            "localName": "Regions: ST",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-24",
+            "endDate": "2027-04-02",
+            "localName": "Regions: MV",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-26",
+            "endDate": "2027-04-02",
+            "localName": "Regions: SN",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-30",
+            "endDate": "2027-04-03",
+            "localName": "Regions: BW",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-07",
+            "localName": "Regions: MV",
+            "name": "Additional holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-07",
+            "localName": "Regions: SH",
+            "name": "Ascension",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-07",
+            "localName": "Regions: HB",
+            "name": "Day after Ascension",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-07",
+            "localName": "Regions: BE",
+            "name": "Day off",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-07",
+            "localName": "Regions: TH",
+            "name": "Day off from school",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-07",
+            "endDate": "2027-05-14",
+            "localName": "Regions: HH",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-07",
+            "localName": "Regions: BB",
+            "name": "Variable holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-14",
+            "endDate": "2027-05-18",
+            "localName": "Regions: MV",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-15",
+            "endDate": "2027-05-18",
+            "localName": "Regions: SN",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-18",
+            "localName": "Regions: BB",
+            "name": "Pentecost holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-18",
+            "localName": "Regions: HB",
+            "name": "Pentecost Holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-18",
+            "endDate": "2027-05-19",
+            "localName": "Regions: BE",
+            "name": "Pentecost holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-18",
+            "localName": "Regions: NW",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-06-28",
+            "endDate": "2027-08-06",
+            "localName": "Regions: HE",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-01",
+            "endDate": "2027-08-14",
+            "localName": "Regions: BB",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-01",
+            "endDate": "2027-08-11",
+            "localName": "Regions: HH",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-03",
+            "endDate": "2027-08-07",
+            "localName": "Regions: SH\nIslands Sylt, Föhr, Amrum, Helgoland and the Halligen",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-05",
+            "endDate": "2027-08-14",
+            "localName": "Regions: MV",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-08",
+            "endDate": "2027-08-18",
+            "localName": "Regions: HB",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-10",
+            "endDate": "2027-08-20",
+            "localName": "Regions: SN",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-12",
+            "endDate": "2027-08-28",
+            "localName": "Regions: MV",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-19",
+            "endDate": "2027-08-31",
+            "localName": "Regions: NW",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-29",
+            "endDate": "2027-09-11",
+            "localName": "Regions: BW",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-08-02",
+            "endDate": "2027-09-13",
+            "localName": "Regions: BY",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-10-04",
+            "endDate": "2027-10-15",
+            "localName": "Regions: RP",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-10-09",
+            "endDate": "2027-10-23",
+            "localName": "Regions: TH",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-10-11",
+            "endDate": "2027-10-23",
+            "localName": "Regions: BB",
+            "name": "Autumn holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-10-11",
+            "endDate": "2027-10-22",
+            "localName": "Regions: HH",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-10-14",
+            "endDate": "2027-10-23",
+            "localName": "Regions: MV",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-10-16",
+            "endDate": "2027-10-23",
+            "localName": "Regions: MV",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-10-18",
+            "endDate": "2027-10-23",
+            "localName": "Regions: ST",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-10-23",
+            "endDate": "2027-11-06",
+            "localName": "Regions: NW",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-11-02",
+            "endDate": "2027-11-05",
+            "localName": "Regions: BY",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-11-25",
+            "localName": "Regions: MV",
+            "name": "Additional holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-11-26",
+            "localName": "Regions: MV",
+            "name": "Additional holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-12-20",
+            "endDate": "2027-12-31",
+            "localName": "Regions: HH",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-12-22",
+            "endDate": "2027-12-31",
+            "localName": "Regions: BE",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-12-22",
+            "endDate": "2027-12-31",
+            "localName": "Regions: MV",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-12-23",
+            "endDate": "2027-12-31",
+            "localName": "Regions: BB",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-12-23",
+            "endDate": "2027-12-31",
+            "localName": "Regions: TH",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-12-24",
+            "endDate": "2028-01-07",
+            "localName": "Regions: BY",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-01-28",
+            "localName": "Regions: HH",
+            "name": "Mid-Year Break",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-01-31",
+            "endDate": "2028-02-01",
+            "localName": "Regions: HB",
+            "name": "Mid-Year Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-01-31",
+            "endDate": "2028-02-05",
+            "localName": "Regions: BB",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-05",
+            "endDate": "2028-02-12",
+            "localName": "Regions: MV",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-07",
+            "endDate": "2028-02-12",
+            "localName": "Regions: ST",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-14",
+            "endDate": "2028-02-26",
+            "localName": "Regions: SN",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-18",
+            "localName": "Regions: MV",
+            "name": "School free",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-21",
+            "endDate": "2028-02-29",
+            "localName": "Regions: SL",
+            "name": "Carnival Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-28",
+            "endDate": "2028-03-03",
+            "localName": "Regions: BY",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-03-06",
+            "endDate": "2028-03-17",
+            "localName": "Regions: HH",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-03-09",
+            "localName": "Regions: MV",
+            "name": "Additional holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-03-10",
+            "localName": "Regions: MV",
+            "name": "Additional holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-04-03",
+            "endDate": "2028-04-14",
+            "localName": "Regions: HE",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-04-10",
+            "endDate": "2028-04-22",
+            "localName": "Regions: BB",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-04-10",
+            "endDate": "2028-04-21",
+            "localName": "Regions: BY",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-04-12",
+            "endDate": "2028-04-21",
+            "localName": "Regions: MV",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-04-14",
+            "endDate": "2028-04-22",
+            "localName": "Regions: SN",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-04-18",
+            "endDate": "2028-04-22",
+            "localName": "Regions: BW",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-05-22",
+            "endDate": "2028-05-26",
+            "localName": "Regions: HH",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-05-26",
+            "localName": "Regions: MV",
+            "name": "Additional holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-05-26",
+            "localName": "Regions: SH",
+            "name": "Ascension",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-05-26",
+            "localName": "Regions: HB",
+            "name": "Day after Ascension",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-05-26",
+            "localName": "Regions: BE",
+            "name": "Day off",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-05-26",
+            "localName": "Regions: TH",
+            "name": "Day off from school",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-05-26",
+            "localName": "Regions: BB",
+            "name": "Variable holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-06-01",
+            "endDate": "2028-06-02",
+            "localName": "Regions: BE",
+            "name": "Pentecost holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-06-02",
+            "endDate": "2028-06-06",
+            "localName": "Regions: MV",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-06-03",
+            "endDate": "2028-06-10",
+            "localName": "Regions: ST",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-06-06",
+            "localName": "Regions: HB",
+            "name": "Pentecost Holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-06-06",
+            "endDate": "2028-06-16",
+            "localName": "Regions: BY",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-06-24",
+            "endDate": "2028-07-28",
+            "localName": "Regions: SH\nIslands Sylt, Föhr, Amrum, Helgoland and the Halligen",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-06-26",
+            "endDate": "2028-08-05",
+            "localName": "Regions: MV",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-06-29",
+            "endDate": "2028-08-12",
+            "localName": "Regions: BB",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-07-01",
+            "endDate": "2028-08-12",
+            "localName": "Regions: BE",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-07-03",
+            "endDate": "2028-08-11",
+            "localName": "Regions: HE",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-07-10",
+            "endDate": "2028-08-22",
+            "localName": "Regions: NW",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-07-17",
+            "endDate": "2028-09-02",
+            "localName": "Regions: MV",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-07-20",
+            "endDate": "2028-08-30",
+            "localName": "Regions: HB",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-07-22",
+            "endDate": "2028-09-01",
+            "localName": "Regions: SN",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-07-27",
+            "endDate": "2028-09-09",
+            "localName": "Regions: BW",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-07-31",
+            "endDate": "2028-09-11",
+            "localName": "Regions: BY",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-02",
+            "localName": "Regions: MV",
+            "name": "Additional holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-02",
+            "endDate": "2028-10-14",
+            "localName": "Regions: BB",
+            "name": "Autumn holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-02",
+            "endDate": "2028-10-13",
+            "localName": "Regions: HH",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-02",
+            "localName": "Regions: HB",
+            "name": "Day before the 3 October",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-02",
+            "localName": "Regions: ST",
+            "name": "Holiday Day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-09",
+            "endDate": "2028-10-20",
+            "localName": "Regions: HE",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-16",
+            "endDate": "2028-10-30",
+            "localName": "Regions: SH",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-23",
+            "endDate": "2028-10-28",
+            "localName": "Regions: MV",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-30",
+            "localName": "Regions: MV",
+            "name": "Additional holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-30",
+            "endDate": "2028-11-03",
+            "localName": "Regions: BW",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-30",
+            "localName": "Regions: HH",
+            "name": "Bridge Day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-30",
+            "localName": "Regions: BB",
+            "name": "Variable holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-12-18",
+            "endDate": "2028-12-29",
+            "localName": "Regions: HH",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-12-20",
+            "endDate": "2029-01-02",
+            "localName": "Regions: SL",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-12-21",
+            "endDate": "2029-01-02",
+            "localName": "Regions: MV",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-12-22",
+            "endDate": "2029-01-02",
+            "localName": "Regions: BB",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-12-22",
+            "endDate": "2029-01-02",
+            "localName": "Regions: MV",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-12-23",
+            "endDate": "2029-01-03",
+            "localName": "Regions: SN",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-12-27",
+            "endDate": "2029-01-06",
+            "localName": "Regions: HB",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

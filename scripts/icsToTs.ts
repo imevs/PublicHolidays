@@ -1,13 +1,15 @@
 import fs from "fs/promises";
 import path from "path";
+import { pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 import { type CountryCode, countryNames } from "../src/data/countryNames.ts";
 import type { Holiday } from "../src/data/holidays_v2/types.ts";
 
 const DEFAULT_OUT_DIR = "holidays_from_ics";
+const DEFAULT_ACTUAL_DATA_DIR = "src/data/holidays_v2";
 const DEFAULT_HOLIDAY_TYPE = "National holiday";
 const USAGE =
-    "Usage: node ./scripts/icsToTs.ts <icsDir> [--outDir=folder] [--years=2024,2025] [--countries=AL,US] [--defaultType=\"National holiday\"] (or --icsDir=<icsDir>)";
+    "Usage: node ./scripts/icsToTs.ts <icsDir> [--outDir=folder] [--append] [--years=2024,2025] [--countries=AL,US] [--defaultType=\"National holiday\"] (or --icsDir=<icsDir>)";
 
 const COUNTRY_ALIASES: Record<string, CountryCode> = {
     "türkiye": "TR",
@@ -17,6 +19,7 @@ const COUNTRY_ALIASES: Record<string, CountryCode> = {
 type CliOptions = {
     icsDir: string;
     outDir: string;
+    append: boolean;
     years: Set<number> | null;
     countries: Set<CountryCode> | null;
     defaultType: string;
@@ -27,6 +30,7 @@ function parseCliArgs(): CliOptions {
         options: {
             icsDir: { type: "string" },
             outDir: { type: "string" },
+            append: { type: "boolean", short: "a" },
             years: { type: "string" },
             countries: { type: "string" },
             defaultType: { type: "string" },
@@ -53,7 +57,8 @@ function parseCliArgs(): CliOptions {
         throw new Error(USAGE);
     }
 
-    const outDir = values.outDir ?? DEFAULT_OUT_DIR;
+    const append = Boolean(values.append);
+    const outDir = values.outDir ?? (append ? DEFAULT_ACTUAL_DATA_DIR : DEFAULT_OUT_DIR);
     if (!outDir) {
         throw new Error("--outDir cannot be empty.");
     }
@@ -99,7 +104,7 @@ function parseCliArgs(): CliOptions {
         countries = new Set(validCodes);
     }
 
-    return { icsDir, outDir, years, countries, defaultType };
+    return { icsDir, outDir, append, years, countries, defaultType };
 }
 
 function normalizeCountryKey(raw: string): string {
@@ -140,6 +145,28 @@ function formatIcsDate(raw: string): string | null {
     return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
 }
 
+function computeInclusiveEndDate(startDate: string, rawDtEnd: string): string | null {
+    const match = rawDtEnd.trim().match(/^(\d{4})(\d{2})(\d{2})(?:T(\d{2})(\d{2})(\d{2}))?/);
+    if (!match) {
+        return null;
+    }
+    const year = Number(match[1]);
+    const month = Number(match[2]);
+    const day = Number(match[3]);
+    if (month < 1 || month > 12 || day < 1 || day > 31) {
+        return null;
+    }
+    const isExclusive = !match[4] || (match[4] === "00" && match[5] === "00" && match[6] === "00");
+    let endDate: string;
+    if (isExclusive) {
+        const dt = new Date(Date.UTC(year, month - 1, day - 1));
+        endDate = `${dt.getUTCFullYear()}-${String(dt.getUTCMonth() + 1).padStart(2, "0")}-${String(dt.getUTCDate()).padStart(2, "0")}`;
+    } else {
+        endDate = `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    }
+    return endDate > startDate ? endDate : null;
+}
+
 function splitPropertyLine(line: string): { propName: string; propValue: string } | null {
     let inQuotes = false;
     for (let i = 0; i < line.length; i++) {
@@ -165,6 +192,7 @@ function parseIcsContent(content: string, defaultType: string): Holiday[] {
     let inEvent = false;
     let nestedDepth = 0;
     let date: string | null = null;
+    let rawEndDate: string | null = null;
     let summary = "";
     let description = "";
     let status = "";
@@ -175,6 +203,7 @@ function parseIcsContent(content: string, defaultType: string): Holiday[] {
             inEvent = true;
             nestedDepth = 0;
             date = null;
+            rawEndDate = null;
             summary = "";
             description = "";
             status = "";
@@ -187,8 +216,10 @@ function parseIcsContent(content: string, defaultType: string): Holiday[] {
                 const type = categories.length > 0
                     ? categories
                     : (defaultType ? [defaultType] : []);
+                const endDate = rawEndDate ? computeInclusiveEndDate(date, rawEndDate) : null;
                 const holiday: Holiday = {
                     date,
+                    ...(endDate ? { endDate } : {}),
                     localName: description || summary,
                     name: summary,
                 };
@@ -228,6 +259,8 @@ function parseIcsContent(content: string, defaultType: string): Holiday[] {
         const { propName, propValue } = parsed;
         if (propName === "DTSTART") {
             date = formatIcsDate(propValue);
+        } else if (propName === "DTEND") {
+            rawEndDate = propValue;
         } else if (propName === "SUMMARY") {
             summary = stripLeadingFlagEmoji(unescapeIcsText(propValue.trim()));
         } else if (propName === "DESCRIPTION") {
@@ -248,7 +281,7 @@ function parseIcsContent(content: string, defaultType: string): Holiday[] {
 
 function filterAndDedupeHolidays(holidays: Holiday[], years: Set<number> | null): Holiday[] {
     const filtered = years
-        ? holidays.filter(h => years.has(Number(h.date.slice(0, 4))))
+        ? holidays.filter(h => years.has(Number(h.date.slice(0, 4))) || (h.endDate !== undefined && years.has(Number(h.endDate.slice(0, 4)))))
         : holidays;
 
     const seen = new Set<string>();
@@ -304,6 +337,7 @@ async function saveToTsFile(
     countryCode: CountryCode,
     countryName: string,
     data: Holiday[],
+    logMessage?: string,
 ): Promise<void> {
     await fs.mkdir(outDir, { recursive: true });
     const filePath = path.join(outDir, `${countryCode}.ts`);
@@ -318,7 +352,33 @@ export const holidays_${countryCode}: CountryHolidays = {
 `;
 
     await fs.writeFile(filePath, content, "utf-8");
-    console.log(`Saved: ${filePath}`);
+    console.log(logMessage ?? `Saved: ${filePath}`);
+}
+
+async function fileExists(filePath: string): Promise<boolean> {
+    try {
+        await fs.access(filePath);
+        return true;
+    } catch {
+        return false;
+    }
+}
+
+async function readExistingHolidays(
+    outDir: string,
+    countryCode: CountryCode,
+): Promise<Holiday[] | null> {
+    const filePath = path.join(outDir, `${countryCode}.ts`);
+    if (!(await fileExists(filePath))) {
+        return null;
+    }
+
+    const mod = await import(pathToFileURL(path.resolve(filePath)).href);
+    const countryData = mod[`holidays_${countryCode}`];
+    if (!countryData || !Array.isArray(countryData.holidays)) {
+        throw new Error(`Invalid holiday data in ${filePath}: expected exported holidays_${countryCode}.holidays array.`);
+    }
+    return [...countryData.holidays];
 }
 
 async function generateTypesFile(outDir: string): Promise<void> {
@@ -328,6 +388,7 @@ async function generateTypesFile(outDir: string): Promise<void> {
 
 export type Holiday = {
     date: string;
+    endDate?: string;
     localName: string;
     name: string;
     type?: string[];
@@ -373,7 +434,7 @@ ${exports}
 
 async function main() {
     try {
-        const { icsDir, outDir, years, countries, defaultType } = parseCliArgs();
+        const { icsDir, outDir, append, years, countries, defaultType } = parseCliArgs();
         const nameToCode = buildNameToCodeMap();
         const entries = await fs.readdir(icsDir, { withFileTypes: true });
 
@@ -420,15 +481,60 @@ async function main() {
         }
 
         const sortedCodes = [...holidaysByCountry.keys()].sort();
+        let addedNewCountry = false;
         for (const countryCode of sortedCodes) {
             const countryName = countryNames[countryCode];
-            const holidays = filterAndDedupeHolidays(holidaysByCountry.get(countryCode) ?? [], years);
-            await saveToTsFile(outDir, countryCode, countryName, holidays);
+            const newHolidays = filterAndDedupeHolidays(holidaysByCountry.get(countryCode) ?? [], years);
+            const filePath = path.join(outDir, `${countryCode}.ts`);
+
+            if (append) {
+                const existingHolidays = await readExistingHolidays(outDir, countryCode);
+                if (existingHolidays !== null) {
+                    const existingMap = new Map<string, Holiday>();
+                    for (const eh of existingHolidays) {
+                        existingMap.set(`${eh.date}|${eh.name}`, eh);
+                    }
+                    let updatedCount = 0;
+                    const toAdd: Holiday[] = [];
+
+                    for (const nh of newHolidays) {
+                        const key = `${nh.date}|${nh.name}`;
+                        const existing = existingMap.get(key);
+                        if (existing) {
+                            if (nh.endDate !== undefined && existing.endDate !== nh.endDate) {
+                                existing.endDate = nh.endDate;
+                                updatedCount++;
+                            }
+                        } else {
+                            toAdd.push(nh);
+                        }
+                    }
+
+                    if (toAdd.length === 0 && updatedCount === 0) {
+                        console.log(`Skipped (no new holidays): ${filePath}`);
+                        continue;
+                    }
+                    const merged = [...existingHolidays, ...toAdd];
+                    const msgParts: string[] = [];
+                    if (toAdd.length > 0) msgParts.push(`appended ${toAdd.length} holiday(s)`);
+                    if (updatedCount > 0) msgParts.push(`updated ${updatedCount} holiday(s)`);
+                    await saveToTsFile(outDir, countryCode, countryName, merged, `Appended/updated (${msgParts.join(", ")}) to: ${filePath}`);
+                } else {
+                    await saveToTsFile(outDir, countryCode, countryName, newHolidays);
+                    addedNewCountry = true;
+                }
+            } else {
+                await saveToTsFile(outDir, countryCode, countryName, newHolidays);
+            }
         }
 
         if (sortedCodes.length > 0) {
-            await generateTypesFile(outDir);
-            await generateIndexFile(outDir);
+            if (!append || !(await fileExists(path.join(outDir, "types.ts")))) {
+                await generateTypesFile(outDir);
+            }
+            if (!append || addedNewCountry || !(await fileExists(path.join(outDir, "index.ts")))) {
+                await generateIndexFile(outDir);
+            }
             console.log(`Done! Processed ${sortedCodes.length} countries.`);
         } else {
             console.log("No countries processed.");

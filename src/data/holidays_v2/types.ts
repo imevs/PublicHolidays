@@ -2,6 +2,7 @@
 
 export type Holiday = {
     date: string;
+    endDate?: string;
     localName: string;
     name: string;
     type?: string[];

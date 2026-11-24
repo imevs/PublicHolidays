@@ -1123,6 +1123,103 @@ export const holidays_LT: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-24",
+            "endDate": "2026-01-04",
+            "localName": "Christmas Holidays",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-22",
+            "localName": "Winter Holidays",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-30",
+            "endDate": "2026-05-05",
+            "localName": "Primary and secondary education",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-06",
+            "endDate": "2026-04-12",
+            "localName": "secondary school programme",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-09-01",
+            "localName": "First Day of School",
+            "name": "First Day of School",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-11-02",
+            "endDate": "2026-11-08",
+            "localName": "Autumn Holidays",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-23",
+            "endDate": "2027-01-03",
+            "localName": "Christmas Holidays",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-15",
+            "endDate": "2027-02-21",
+            "localName": "Winter Holidays",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-22",
+            "endDate": "2027-03-28",
+            "localName": "Primary and secondary education",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-29",
+            "endDate": "2027-04-04",
+            "localName": "secondary school programme",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-09-01",
+            "localName": "First Day of School",
+            "name": "First Day of School",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

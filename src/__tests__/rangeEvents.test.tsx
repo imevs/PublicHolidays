@@ -17,6 +17,8 @@ import { AnyEvents } from "../AnyEvents.tsx";
 import { UTCDate } from "../utils/UTCDate.ts";
 import type { CountryCode } from "../data/countryNames.ts";
 import { STORAGE_KEY } from "../consts.ts";
+import { convertEvents } from "../utils/convertEvents.ts";
+import type { CalendarDay as CalendarDayType } from "../types/index.ts";
 
 describe("Range Events Feature", () => {
     beforeAll(() => {
@@ -26,6 +28,65 @@ describe("Range Events Feature", () => {
             unobserve = jest.fn();
             disconnect = jest.fn();
         };
+    });
+
+    it("5. convertEvents and CalendarDay handle publicHoliday date ranges correctly", () => {
+        const countryHolidays = [
+            {
+                countryCode: "LV" as CountryCode,
+                countryName: "Latvia",
+                holidays: [
+                    {
+                        date: "2025-10-20",
+                        endDate: "2025-10-22",
+                        name: "Autumn Holiday",
+                        localName: "Autumn Holiday",
+                        type: ["School Holiday"],
+                    },
+                ],
+            },
+        ];
+
+        const converted = convertEvents(countryHolidays);
+        expect(converted).toHaveLength(3);
+        expect(converted[0]).toMatchObject({
+            date: "2025-10-20",
+            endDate: "2025-10-22",
+            rangeStart: "2025-10-20",
+            isRange: true,
+            rangePosition: "start",
+            kind: "publicHoliday",
+        });
+        expect(converted[1]).toMatchObject({
+            date: "2025-10-21",
+            rangePosition: "middle",
+            isRange: true,
+        });
+        expect(converted[2]).toMatchObject({
+            date: "2025-10-22",
+            rangePosition: "end",
+            isRange: true,
+        });
+
+        const day: CalendarDayType = {
+            date: new UTCDate("2025-10-20"),
+            isCurrentYear: true,
+            isCurrentMonth: true,
+            isSideMonth: false,
+            isToday: false,
+            isWeekend: false,
+            dayNumber: 20,
+            events: [converted[0]],
+        };
+
+        const { container } = render(
+            <CalendarDay countryData={{}} day={day} setDateForPopup={() => {}} isEditable={true} />
+        );
+        expect(container.firstChild).toBeInTheDocument();
+
+        const eventDiv = screen.getByText(/Autumn Holiday/);
+        expect(eventDiv).toBeInTheDocument();
+        expect(screen.getByText(/\(2025-10-20 → 2025-10-22\)/)).toBeInTheDocument();
     });
 
     it("1. EventListInput: validates and expands a YYYY-MM-DD..YYYY-MM-DD range into 3 OtherEvent items, and verifies invalid range (!) indicator", () => {
@@ -146,6 +207,7 @@ describe("Range Events Feature", () => {
         const { container } = render(
             <CalendarDay countryData={{}} day={day} setDateForPopup={() => {}} isEditable={true} />
         );
+        expect(container.firstChild).toBeInTheDocument();
 
         const eventDiv = screen.getByText(/Vacation/);
         expect(eventDiv).toBeInTheDocument();

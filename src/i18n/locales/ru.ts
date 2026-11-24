@@ -51,6 +51,7 @@ export const ru = {
     countryFilter: {
         selectCountries: "Выбрать страны",
         highlightLongHolidays: "Выделять длинные выходные",
+        showSchoolHolidays: "Показать школьные каникулы",
         showTimezones: "Показать часовые пояса",
         showLocalTime: "Показать местное время",
         currentTimePrefix: "Местное время:",

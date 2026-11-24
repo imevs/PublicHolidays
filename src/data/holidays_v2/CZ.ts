@@ -1283,6 +1283,288 @@ export const holidays_CZ: CountryHolidays = {
             "type": [
                 "National holiday"
             ]
+        },
+        {
+            "date": "2025-12-22",
+            "endDate": "2026-01-02",
+            "localName": "Christmas holidays",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-01-30",
+            "localName": "Half-term holidays",
+            "name": "Half-term holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-02",
+            "endDate": "2026-02-08",
+            "localName": "Regions: JC-PT, JC-ST, JC-TA, KR-JC, KR-RK, MO-OP, OL-JE, OL-OC, OL-SU, ST-MB, ST-PB, US-CV, US-MO, US-UL",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-09",
+            "endDate": "2026-02-15",
+            "localName": "Regions: JC-CB, JC-CK, KR-TU, MO-OV, OL-PV, PA-CR, PA-PU, PA-SY, PA-UO, PL-KT, PL-RO, ST-BE, ST-BN",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-22",
+            "localName": "Regions: JM-BK, JM-BM, JM-BO, JM-BV, JM-HO, JM-VY, JM-ZN, MO-KI, PL-DO, PL-TC, US-LN",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-23",
+            "endDate": "2026-03-01",
+            "localName": "Regions: JC-JH, KA-CH, KA-KV, KA-SO, MO-FM, OL-PR, ST-NB, US-DC, US-LT",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-02",
+            "endDate": "2026-03-08",
+            "localName": "Regions: KR-HK, MO-NJ, PL-PJ, PL-PM, PL-PS, ST-ME, ST-PH, ST-PZ, ST-RA, US-TP, ZL-KM, ZL-UH, ZL-VS, ZL-ZL",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-09",
+            "endDate": "2026-03-15",
+            "localName": "Regions: JC-PI, KR-NA, LI-CL, LI-JN, LI-LB, LI-SM, MO-BR, ST-KH, ST-KL, ST-KO, VY-HB, VY-JI, VY-PE, VY-TR, VY-ZR",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-02",
+            "localName": "Easter holidays",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-01",
+            "endDate": "2026-08-31",
+            "localName": "Summer holidays",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-29",
+            "endDate": "2026-10-30",
+            "localName": "Autumn holidays",
+            "name": "Autumn holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-23",
+            "endDate": "2027-01-03",
+            "localName": "Christmas holidays",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-01-29",
+            "localName": "Half-term holidays",
+            "name": "Half-term holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-01",
+            "endDate": "2027-02-07",
+            "localName": "Regions: JC-PI, KR-NA, LI-CL, LI-JN, LI-LB, LI-SM, MO-BR, ST-KH, ST-KL, ST-KO, VY-HB, VY-JI, VY-PE, VY-TR, VY-ZR",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-08",
+            "endDate": "2027-02-14",
+            "localName": "Regions: JC-PT, JC-ST, JC-TA, KR-JC, KR-RK, MO-OP, OL-JE, OL-OC, OL-SU, ST-MB, ST-PB, US-CV, US-MO, US-UL",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-15",
+            "endDate": "2027-02-21",
+            "localName": "Regions: JC-CB, JC-CK, KR-TU, MO-OV, OL-PV, PA-CR, PA-PU, PA-SY, PA-UO, PL-KT, PL-RO, ST-BE, ST-BN",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-22",
+            "endDate": "2027-02-28",
+            "localName": "Regions: JM-BK, JM-BM, JM-BO, JM-BV, JM-HO, JM-VY, JM-ZN, MO-KI, PL-DO, PL-TC, US-LN",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-01",
+            "endDate": "2027-03-07",
+            "localName": "Regions: JC-JH, KA-CH, KA-KV, KA-SO, MO-FM, OL-PR, ST-NB, US-DC, US-LT",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-08",
+            "endDate": "2027-03-14",
+            "localName": "Regions: KR-HK, MO-NJ, PL-PJ, PL-PM, PL-PS, ST-ME, ST-PH, ST-PZ, ST-RA, US-TP, ZL-KM, ZL-UH, ZL-VS, ZL-ZL",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-25",
+            "localName": "Easter holidays",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-01",
+            "endDate": "2027-08-31",
+            "localName": "Summer holidays",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-10-27",
+            "endDate": "2027-10-29",
+            "localName": "Autumn holidays",
+            "name": "Autumn holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-12-23",
+            "endDate": "2028-01-02",
+            "localName": "Christmas holidays",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-04",
+            "localName": "Half-term holidays",
+            "name": "Half-term holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-07",
+            "endDate": "2028-02-13",
+            "localName": "Regions: KR-HK, MO-NJ, PL-PJ, PL-PM, PL-PS, ST-ME, ST-PH, ST-PZ, ST-RA, US-TP, ZL-KM, ZL-UH, ZL-VS, ZL-ZL",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-14",
+            "endDate": "2028-02-20",
+            "localName": "Regions: JC-PI, KR-NA, LI-CL, LI-JN, LI-LB, LI-SM, MO-BR, ST-KH, ST-KL, ST-KO, VY-HB, VY-JI, VY-PE, VY-TR, VY-ZR",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-21",
+            "endDate": "2028-02-27",
+            "localName": "Regions: JC-PT, JC-ST, JC-TA, KR-JC, KR-RK, MO-OP, OL-JE, OL-OC, OL-SU, ST-MB, ST-PB, US-CV, US-MO, US-UL",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-28",
+            "endDate": "2028-03-05",
+            "localName": "Regions: JC-CB, JC-CK, KR-TU, MO-OV, OL-PV, PA-CR, PA-PU, PA-SY, PA-UO, PL-KT, PL-RO, ST-BE, ST-BN",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-03-06",
+            "endDate": "2028-03-12",
+            "localName": "Regions: JM-BK, JM-BM, JM-BO, JM-BV, JM-HO, JM-VY, JM-ZN, MO-KI, PL-DO, PL-TC, US-LN",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-03-13",
+            "endDate": "2028-03-19",
+            "localName": "Regions: JC-JH, KA-CH, KA-KV, KA-SO, MO-FM, OL-PR, ST-NB, US-DC, US-LT",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-04-13",
+            "localName": "Easter holidays",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-07-01",
+            "endDate": "2028-09-03",
+            "localName": "Summer holidays",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

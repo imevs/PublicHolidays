@@ -1099,6 +1099,78 @@ export const holidays_PL: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2026-01-19",
+            "endDate": "2026-02-01",
+            "localName": "Regions: MZ, PK, PM, SL, WN",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-02",
+            "endDate": "2026-02-15",
+            "localName": "Regions: DS, KP, LD, MA, OP, ZP",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-03-01",
+            "localName": "Regions: LB, LU, PD, SK, WP",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-02",
+            "endDate": "2026-04-07",
+            "localName": "Regions: DS, KP, LB, LD, LU, MA, MZ, OP, PD, PK, PM, SK, SL, WN, WP, ZP",
+            "name": "Spring Break",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-27",
+            "endDate": "2026-08-31",
+            "localName": "Regions: DS, KP, LB, LD, LU, MA, MZ, OP, PD, PK, PM, SK, SL, WN, WP, ZP",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-01-18",
+            "endDate": "2027-01-31",
+            "localName": "Regions: DS, LD, OP, PD, PK, SK",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-01",
+            "endDate": "2027-02-14",
+            "localName": "Regions: LU, MZ, PM, SL",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-15",
+            "endDate": "2027-02-28",
+            "localName": "Regions: KP, MA, WN, WP, ZP",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

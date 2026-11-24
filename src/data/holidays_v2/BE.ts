@@ -1363,6 +1363,203 @@ export const holidays_BE: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-22",
+            "endDate": "2026-01-03",
+            "localName": "Winter Holidays",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-21",
+            "localName": "Carnival Holidays",
+            "name": "Carnival Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-06",
+            "endDate": "2026-04-18",
+            "localName": "Spring Holidays",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-27",
+            "endDate": "2026-05-10",
+            "localName": "Spring Holidays",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-01",
+            "endDate": "2026-08-31",
+            "localName": "Summer Holidays",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-04",
+            "endDate": "2026-08-23",
+            "localName": "Summer Holidays",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-19",
+            "endDate": "2026-11-01",
+            "localName": "All Saints Holidays",
+            "name": "All Saints Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-11-02",
+            "endDate": "2026-11-08",
+            "localName": "All Saints Holidays",
+            "name": "All Saints Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-21",
+            "endDate": "2027-01-03",
+            "localName": "Winter Holidays",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-08",
+            "endDate": "2027-02-14",
+            "localName": "Carnival Holidays",
+            "name": "Carnival Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-22",
+            "endDate": "2027-03-07",
+            "localName": "Carnival Holidays",
+            "name": "Carnival Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-29",
+            "endDate": "2027-04-11",
+            "localName": "Spring Holidays",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-04-26",
+            "endDate": "2027-05-09",
+            "localName": "Spring Holidays",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-01",
+            "endDate": "2027-08-31",
+            "localName": "Summer Holidays",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-03",
+            "localName": "Start of Summer Holidays",
+            "name": "Start of Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-11-01",
+            "endDate": "2027-11-07",
+            "localName": "All Saints Holidays",
+            "name": "All Saints Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-12-27",
+            "endDate": "2028-01-09",
+            "localName": "Winter Holidays",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-28",
+            "endDate": "2028-03-05",
+            "localName": "Carnival Holidays",
+            "name": "Carnival Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-04-03",
+            "endDate": "2028-04-17",
+            "localName": "Spring Holidays",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-07-01",
+            "endDate": "2028-08-31",
+            "localName": "Summer Holidays",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-30",
+            "endDate": "2028-11-05",
+            "localName": "All Saints Holidays",
+            "name": "All Saints Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-12-25",
+            "endDate": "2029-01-07",
+            "localName": "Winter Holidays",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

@@ -1235,6 +1235,51 @@ export const holidays_MC: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-20",
+            "endDate": "2026-01-04",
+            "localName": "Christmas holidays",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-14",
+            "endDate": "2026-03-01",
+            "localName": "Winter half-term-holidays",
+            "name": "Winter half-term-holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-11",
+            "endDate": "2026-04-26",
+            "localName": "Spring half-term-holidays",
+            "name": "Spring half-term-holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-21",
+            "endDate": "2026-05-25",
+            "localName": "Grand Prix and Whit Monday",
+            "name": "Grand Prix and Whit Monday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-27",
+            "endDate": "2026-09-06",
+            "localName": "Summer holidays",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

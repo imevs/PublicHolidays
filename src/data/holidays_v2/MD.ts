@@ -1881,6 +1881,42 @@ export const holidays_MD: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-25",
+            "endDate": "2026-01-08",
+            "localName": "Winter holidays",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-05",
+            "endDate": "2026-03-08",
+            "localName": "Spring holidays",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-11",
+            "endDate": "2026-04-20",
+            "localName": "Easter holidays",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-30",
+            "endDate": "2026-08-31",
+            "localName": "Summer holidays",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

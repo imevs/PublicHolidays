@@ -102,7 +102,12 @@ export const YearView = ({
                 return true;
             });
             const isDayClickable = !isSnapshot && (dayHolidays.length > 0 || isEditable);
-            const firstRangeEvent = dayHolidays.find((h): h is OtherEvent => h.kind === "other" && Boolean(h.isRange));
+            const isSchoolHoliday = (h: CalendarDayType["events"][number]) =>
+                h.kind === "publicHoliday" && h.type?.includes("School Holiday") === true;
+            const hasSchoolHoliday = dayHolidays.some(isSchoolHoliday);
+            const hasNonSchoolHoliday = dayHolidays.some((h) => !isSchoolHoliday(h));
+            const firstCustomRangeEvent = dayHolidays.find((h): h is OtherEvent => h.kind === "other" && Boolean(h.isRange));
+            const hasNonSchoolRangeEvent = dayHolidays.some((h) => Boolean(h.isRange) && !isSchoolHoliday(h));
             const longHolidayTitle = highlightLongHolidays && currentDay?.isLongHoliday ? getLongHolidayTooltip(currentDay.longHolidayDetails, getCountryName, format, t.calendarGrid.longHolidayTooltip, t.calendarGrid.longHolidayTooltipCustom) : undefined;
             const handleDaySelect = () => {
                 const date = currentDay?.date ?? new UTCDate(dateStr);
@@ -120,16 +125,17 @@ export const YearView = ({
                         ${!isSnapshot && dateForPopupStr === dateStr ? styles.selectedDate : ""} 
                         ${styles.dayCell} 
                         ${isOtherMonth ? styles.otherMonth : ""}
-                        ${dayHolidays.length > 0 || currentDay?.isWeekend ? styles.holiday : ""}
+                        ${hasNonSchoolHoliday || currentDay?.isWeekend ? styles.holiday : ""}
                         ${isDayClickable ? styles.isClickable : ""}
-                        ${firstRangeEvent ? styles.rangeDay : ""}
+                        ${hasNonSchoolRangeEvent ? styles.rangeDay : ""}
+                        ${hasSchoolHoliday ? styles.schoolHolidayDay : ""}
                         ${highlightLongHolidays && currentDay?.isLongHoliday ? styles.longHoliday : ""}
                     `)}
                     data-month={isSnapshot ? undefined : month + 1}
                     title={longHolidayTitle}
                     style={{
                         borderRadius,
-                        ...(firstRangeEvent?.color ? { "--range-color": firstRangeEvent.color } : {}),
+                        ...(firstCustomRangeEvent?.color ? { "--range-color": firstCustomRangeEvent.color } : {}),
                         ...(highlightLongHolidays && currentDay?.isLongHoliday ? getLongHolidayStyle(currentDay.longHolidayColors, true) : undefined),
                     } as React.CSSProperties}
                     role={isDayClickable ? "button" : undefined}

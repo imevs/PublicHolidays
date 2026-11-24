@@ -875,6 +875,59 @@ export const holidays_MT: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-23",
+            "endDate": "2026-01-06",
+            "localName": "Christmas holidays",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-17",
+            "localName": "Carnival holidays",
+            "name": "Carnival holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-18",
+            "localName": "Compensation for holidays at weekends",
+            "name": "Compensation for holidays at weekends",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-01",
+            "endDate": "2026-04-08",
+            "localName": "Easter holidays",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-09",
+            "endDate": "2026-04-10",
+            "localName": "Compensation for holidays at weekends",
+            "name": "Compensation for holidays at weekends",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-01",
+            "endDate": "2026-09-29",
+            "localName": "Summer holidays",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

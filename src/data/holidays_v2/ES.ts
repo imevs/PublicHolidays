@@ -3003,6 +3003,386 @@ export const holidays_ES: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-19",
+            "endDate": "2026-01-08",
+            "localName": "Regions: CL",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2025-12-20",
+            "endDate": "2026-01-06",
+            "localName": "Regions: AR",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2025-12-22",
+            "endDate": "2026-01-06",
+            "localName": "Regions: CM",
+            "name": "Christmas break",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2025-12-22",
+            "endDate": "2026-01-05",
+            "localName": "Regions: AN-MA",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2025-12-23",
+            "endDate": "2026-01-06",
+            "localName": "Regions: AN-HL",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2025-12-24",
+            "endDate": "2026-01-06",
+            "localName": "Regions: AN-AL",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2025-12-24",
+            "endDate": "2026-01-05",
+            "localName": "Regions: CB",
+            "name": "No lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-01-07",
+            "localName": "Regions: AN-AL",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-12",
+            "endDate": "2026-02-13",
+            "localName": "Regions: CE",
+            "name": "Non-teaching days",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-13",
+            "localName": "Regions: AS",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-17",
+            "localName": "Regions: CL",
+            "name": "Carnivals",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-20",
+            "localName": "Regions: CB",
+            "name": "No lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "localName": "Regions: AS",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-17",
+            "localName": "Regions: CM",
+            "name": "Non-teaching days",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-17",
+            "localName": "Regions: AS",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-19",
+            "localName": "Regions: AR-HU, AR-TE",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-20",
+            "localName": "Regions: AR-HU, AR-TE",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-23",
+            "endDate": "2026-02-26",
+            "localName": "Regions: AN-MA",
+            "name": "White Week",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-27",
+            "localName": "Regions: RI",
+            "name": "Educational Community Day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-27",
+            "localName": "Regions: AN-AL",
+            "name": "Educational Community Days",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-27",
+            "localName": "Regions: IB",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-02",
+            "localName": "Regions: AN-CO",
+            "name": "Educational Community Days",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-02",
+            "localName": "Regions: AN-AL",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-06",
+            "localName": "Regions: AR-ZG",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-23",
+            "endDate": "2026-03-27",
+            "localName": "Regions: CE",
+            "name": "Non-teaching days",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-26",
+            "endDate": "2026-04-07",
+            "localName": "Regions: CL",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-27",
+            "localName": "Regions: MD",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-28",
+            "endDate": "2026-04-05",
+            "localName": "Regions: MD",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-30",
+            "endDate": "2026-04-06",
+            "localName": "Regions: CM",
+            "name": "Easter break",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-30",
+            "endDate": "2026-04-01",
+            "localName": "Regions: AN-HL",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-30",
+            "endDate": "2026-04-01",
+            "localName": "Regions: CB",
+            "name": "No lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-02",
+            "endDate": "2026-04-06",
+            "localName": "Regions: PV",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-06",
+            "localName": "Regions: MD",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-24",
+            "localName": "Regions: AR-ZG",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-02",
+            "localName": "Regions: CM",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-04",
+            "localName": "Regions: AN-AL",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-25",
+            "endDate": "2026-05-26",
+            "localName": "Regions: CE",
+            "name": "Non-teaching days",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-05",
+            "localName": "Regions: AN-GR",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-08",
+            "localName": "Regions: RI",
+            "name": "Non-teaching day",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-17",
+            "localName": "Regions: CM",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-19",
+            "localName": "Regions: AR",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-22",
+            "localName": "Regions: AN-CO",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-23",
+            "localName": "Regions: AN-AL",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-24",
+            "localName": "Regions: CL",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-23",
+            "localName": "Regions: EX",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

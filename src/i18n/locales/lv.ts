@@ -51,6 +51,7 @@ export const lv = {
     countryFilter: {
         selectCountries: "Izvēlēties valstis",
         highlightLongHolidays: "Izcelt garās brīvdienas",
+        showSchoolHolidays: "Rādīt skolēnu brīvlaikus",
         showTimezones: "Rādīt laika joslas",
         showLocalTime: "Rādīt vietējo laiku",
         currentTimePrefix: "Pašreizējais laiks:",

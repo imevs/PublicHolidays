@@ -1,6 +1,7 @@
 const COUNTRY_HOLIDAY_FILE_RE = /src\/data\/holidays_v2\/[A-Z]{2}\.ts$/;
 const EUROPE_YEAR_FILE_RE = /src\/data\/holidays_v2\/continents\/europe-(\d{4})\.ts$/;
 const HOLIDAYS_ARRAY_RE = /(holidays:\s*)(\[[\s\S]*\])(\s*\}\s*as const;?)/;
+const INCLUDED_HOLIDAY_TYPES = new Set(["National holiday", "School Holiday"]);
 const EUROPE_COUNTRIES = [
     "AD", "AL", "AT", "BA", "BE", "BG", "BY", "CH", "CY", "CZ",
     "DE", "DK", "EE", "ES", "FI", "FR", "GB", "GR", "HR", "HU",
@@ -28,15 +29,15 @@ function isNationalHoliday(entry: unknown): entry is { date?: unknown; type: unk
         return false;
     }
     const { type } = entry as { type?: unknown };
-    return Array.isArray(type) && type.includes("National holiday");
+    return Array.isArray(type) && type.some((t) => typeof t === "string" && INCLUDED_HOLIDAY_TYPES.has(t));
 }
 
-function isNationalHolidayWithDate(entry: unknown): entry is { date: string; type: unknown[] } {
+function isNationalHolidayWithDate(entry: unknown): entry is { date: string; endDate?: unknown; type: unknown[] } {
     return isNationalHoliday(entry) && typeof entry.date === "string";
 }
 
 /**
- * Filters a country holiday TypeScript module so only "National holiday" entries remain.
+ * Filters a country holiday TypeScript module so only "National holiday" and "School Holiday" entries remain.
  */
 export function transformNationalHolidays(code: string, id: string): TransformResult | null {
     const normalizedId = id.replace(/\\/g, "/");
@@ -74,7 +75,7 @@ export function transformNationalHolidays(code: string, id: string): TransformRe
 }
 
 /**
- * Generates per-year Europe holiday bundles filtered to national holidays within the year and week-boundary window.
+ * Generates per-year Europe holiday bundles filtered to national and school holidays within the year and week-boundary window.
  */
 export function transformEuropeYearModule(
     _code: string,
@@ -89,10 +90,7 @@ export function transformEuropeYearModule(
     }
 
     const year = Number(yearMatch[1]);
-    const yearPrefix = `${yearMatch[1]}-`;
     const prevYearStart = `${year - 1}-12-25`;
-    const prevYearEnd = `${year - 1}-12-31`;
-    const nextYearStart = `${year + 1}-01-01`;
     const nextYearEnd = `${year + 1}-01-07`;
     const result: Record<string, { countryCode: string; countryName: string; holidays: unknown[] }> = {};
 
@@ -119,11 +117,13 @@ export function transformEuropeYearModule(
         }
 
         const filtered = (parsed as unknown[]).filter(
-            (h): h is { date: string; type: unknown[] } =>
-                isNationalHolidayWithDate(h) &&
-                (h.date.startsWith(yearPrefix) ||
-                    (h.date >= prevYearStart && h.date <= prevYearEnd) ||
-                    (h.date >= nextYearStart && h.date <= nextYearEnd))
+            (h): h is { date: string; endDate?: unknown; type: unknown[] } => {
+                if (!isNationalHolidayWithDate(h)) {
+                    return false;
+                }
+                const endDate = typeof h.endDate === "string" ? h.endDate : h.date;
+                return h.date <= nextYearEnd && endDate >= prevYearStart;
+            }
         );
 
         result[countryCode] = {

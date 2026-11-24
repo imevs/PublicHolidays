@@ -52,6 +52,7 @@ export const en = {
     countryFilter: {
         selectCountries: "Select Countries",
         highlightLongHolidays: "Highlight long holidays",
+        showSchoolHolidays: "Show school holidays",
         showTimezones: "Show timezones",
         showLocalTime: "Show local time",
         currentTimePrefix: "Current time:",

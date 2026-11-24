@@ -1383,6 +1383,159 @@ export const holidays_SE: CountryHolidays = {
             "type": [
                 "De facto holiday"
             ]
+        },
+        {
+            "date": "2025-12-22",
+            "endDate": "2026-01-08",
+            "localName": "Exact dates vary slightly by municipality",
+            "name": "Christmas holidays (Jullov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-09",
+            "endDate": "2026-02-13",
+            "localName": "Regions: Gothenburg, West Sweden\nWeek 7",
+            "name": "Winter holidays (Sportlov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-20",
+            "localName": "Regions: Malmö, Skåne\nWeek 8",
+            "name": "Winter holidays (Sportlov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-23",
+            "endDate": "2026-02-27",
+            "localName": "Regions: Stockholm, Uppsala, East Sweden\nWeek 9",
+            "name": "Winter holidays (Sportlov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-02",
+            "endDate": "2026-03-06",
+            "localName": "Regions: Northern Sweden\nWeek 10",
+            "name": "Winter holidays (Sportlov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-30",
+            "endDate": "2026-04-02",
+            "localName": "Regions: Gothenburg, Malmö\nWeek 14",
+            "name": "Easter holidays (Påsklov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-07",
+            "endDate": "2026-04-10",
+            "localName": "Regions: Stockholm\nWeek 15",
+            "name": "Easter holidays (Påsklov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-13",
+            "endDate": "2026-08-16",
+            "localName": "Typical municipal dates",
+            "name": "Summer holidays (Sommarlov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-26",
+            "endDate": "2026-10-30",
+            "localName": "Week 44",
+            "name": "Autumn holidays (Höstlov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-19",
+            "endDate": "2027-01-10",
+            "localName": "Exact dates vary slightly by municipality",
+            "name": "Christmas holidays (Jullov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-15",
+            "endDate": "2027-02-19",
+            "localName": "Regions: Malmö, South Sweden\nWeek 7",
+            "name": "Winter holidays (Sportlov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-22",
+            "endDate": "2027-02-26",
+            "localName": "Regions: Gothenburg, West Sweden\nWeek 8",
+            "name": "Winter holidays (Sportlov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-01",
+            "endDate": "2027-03-05",
+            "localName": "Regions: Stockholm, Uppsala, East Sweden\nWeek 9",
+            "name": "Winter holidays (Sportlov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-08",
+            "endDate": "2027-03-12",
+            "localName": "Regions: Northern Sweden\nWeek 10",
+            "name": "Winter holidays (Sportlov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-22",
+            "endDate": "2027-03-25",
+            "localName": "Regions: Malmö, Lund\nWeek 12",
+            "name": "Easter holidays (Påsklov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-30",
+            "endDate": "2027-04-02",
+            "localName": "Regions: Stockholm\nWeek 13",
+            "name": "Easter holidays (Påsklov)",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-06-12",
+            "endDate": "2027-08-15",
+            "localName": "Typical municipal dates",
+            "name": "Summer holidays (Sommarlov)",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

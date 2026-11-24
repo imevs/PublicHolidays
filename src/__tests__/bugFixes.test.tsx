@@ -546,7 +546,7 @@ describe("Performance & Bundle optimizations (Section 3)", () => {
         }
     });
 
-    it("transformNationalHolidays filters country holiday files to only National holiday entries", () => {
+    it("transformNationalHolidays filters country holiday files to only National holiday and School Holiday entries", () => {
         const sampleModule = [
             "import type { CountryHolidays } from \"./types\";",
             "",
@@ -565,6 +565,12 @@ describe("Performance & Bundle optimizations (Section 3)", () => {
             "            \"localName\": \"Local New Year\",",
             "            \"name\": \"Local New Year\",",
             "            \"type\": [\"Local holiday\"]",
+            "        },",
+            "        {",
+            "            \"date\": \"2025-10-20\",",
+            "            \"localName\": \"Autumn Break\",",
+            "            \"name\": \"Autumn Break\",",
+            "            \"type\": [\"School Holiday\"]",
             "        },",
             "        {",
             "            \"date\": \"2025-12-25\",",
@@ -591,6 +597,7 @@ describe("Performance & Bundle optimizations (Section 3)", () => {
         expect(posixResult).not.toBeNull();
         expect(posixResult?.map).toBeNull();
         expect(posixResult?.code).toContain("\"New Year's Day\"");
+        expect(posixResult?.code).toContain("\"Autumn Break\"");
         expect(posixResult?.code).toContain("\"Christmas $100\"");
         expect(posixResult?.code).not.toContain("\"Local New Year\"");
         expect(posixResult?.code).not.toContain("\"Valentine's Day\"");
@@ -1058,8 +1065,9 @@ describe("Cross-year boundary holidays & Europe continent cache keys", () => {
             "    countryName: \"Latvia\",",
             "    holidays: [",
             "        { \"date\": \"2024-12-24\", \"name\": \"Christmas Eve\", \"type\": [\"National holiday\"] },",
-            "        { \"date\": \"2024-12-25\", \"name\": \"Christmas Day\", \"type\": [\"National holiday\"] },",
+            "        { \"date\": \"2024-12-22\", \"endDate\": \"2025-01-04\", \"name\": \"Christmas Holidays\", \"type\": [\"School Holiday\"] },",
             "        { \"date\": \"2025-11-18\", \"name\": \"Proclamation Day\", \"type\": [\"National holiday\"] },",
+            "        { \"date\": \"2025-10-20\", \"name\": \"Autumn Break\", \"type\": [\"School Holiday\"] },",
             "        { \"date\": \"2026-01-01\", \"name\": \"New Year's Day\", \"type\": [\"National holiday\"] },",
             "        { \"date\": \"2026-01-08\", \"name\": \"Outside Window\", \"type\": [\"National holiday\"] },",
             "        { \"date\": \"2025-05-04\", \"name\": \"Observance\", \"type\": [\"Observance\"] }",
@@ -1086,8 +1094,9 @@ describe("Cross-year boundary holidays & Europe continent cache keys", () => {
         const jsonStr = out!.code.replace(/^export const holidays = /, "").replace(/;$/, "");
         const parsed = JSON.parse(jsonStr);
         expect(parsed.LV.holidays.map((h: { date: string }) => h.date)).toEqual([
-            "2024-12-25",
+            "2024-12-22",
             "2025-11-18",
+            "2025-10-20",
             "2026-01-01",
         ]);
     });

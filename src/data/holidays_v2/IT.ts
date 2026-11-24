@@ -1115,6 +1115,148 @@ export const holidays_IT: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-22",
+            "endDate": "2026-01-06",
+            "localName": "Regions: AB, BA, LI, MO, PI, PU, TR-TN, UM",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2025-12-23",
+            "endDate": "2026-01-06",
+            "localName": "Regions: CL, CM, FV, LA, LO, MA, SA, SI",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2025-12-24",
+            "endDate": "2026-01-06",
+            "localName": "Regions: ER, TO, TR-BZ, VA, VE",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-14",
+            "endDate": "2026-02-17",
+            "localName": "Regions: PI",
+            "name": "floating holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-17",
+            "localName": "Regions: CM, LI, LO",
+            "name": "floating holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-17",
+            "localName": "Regions: SA",
+            "name": "floating holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-02",
+            "endDate": "2026-04-07",
+            "localName": "Regions: AB, BA, CL, CM, ER, FV, LA, LI, LO, MA, MO, PI, PU, SA, SI, TO, UM, VA, VE",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-24",
+            "localName": "Regions: TR-TN",
+            "name": "floating holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-28",
+            "localName": "Regions: SA",
+            "name": "floating holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-02",
+            "localName": "Regions: AB, BA, CL, FV, MA, MO, PI, PU, SA, TR-TN, UM, VA, VE",
+            "name": "floating holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-01",
+            "localName": "Regions: AB, BA, FV, LI, MA, MO, PI, PU, TR-BZ, TR-TN, UM, VA, VE",
+            "name": "floating holiday",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-06",
+            "localName": "Regions: CM, ER, MA, VE",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-08",
+            "localName": "Regions: CL, LA, LO, SA",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-09",
+            "localName": "Regions: AB, FV, MO, PU, SI, UM",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-10",
+            "localName": "Regions: BA, PI, TO, TR-TN, VA",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-11",
+            "localName": "Regions: LI",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-16",
+            "localName": "Regions: TR-BZ",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

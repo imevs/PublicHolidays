@@ -223,6 +223,9 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                                                     <strong>{getCountryName(holiday.countryCode, holiday.country)}</strong>
                                                 </a>:{" "}
                                                 <a target="_blank" href={getLink(holiday.date, holiday.country, holiday.name, countryData)}>{getLocalizedHolidayName(holiday.name, holiday.countryCode, language)}</a>
+                                                {holiday.isRange && holiday.rangeStart && holiday.endDate && (
+                                                    <span className={styles.rangeSpan}> ({holiday.rangeStart} → {holiday.endDate})</span>
+                                                )}
                                             </span>
                                         </li>
                                     ))}

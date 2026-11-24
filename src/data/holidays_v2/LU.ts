@@ -898,6 +898,105 @@ export const holidays_LU: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-20",
+            "endDate": "2026-01-04",
+            "localName": "Christmas Holidays",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-14",
+            "endDate": "2026-02-22",
+            "localName": "Carnival Holidays",
+            "name": "Carnival Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-28",
+            "endDate": "2026-04-12",
+            "localName": "Easter Holidays",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-23",
+            "endDate": "2026-05-31",
+            "localName": "Pentecost Holidays",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-16",
+            "endDate": "2026-09-14",
+            "localName": "Summer Holidays",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-31",
+            "endDate": "2026-11-08",
+            "localName": "All Saints Day Holidays",
+            "name": "All Saints Day Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-19",
+            "endDate": "2027-01-03",
+            "localName": "Christmas Holidays",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-06",
+            "endDate": "2027-02-14",
+            "localName": "Carnival Holidays",
+            "name": "Carnival Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-27",
+            "endDate": "2027-04-11",
+            "localName": "Easter Holidays",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-29",
+            "endDate": "2027-06-06",
+            "localName": "Pentecost Holidays",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-16",
+            "endDate": "2027-09-14",
+            "localName": "Summer Holidays",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

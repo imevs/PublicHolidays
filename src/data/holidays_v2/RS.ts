@@ -1504,6 +1504,51 @@ export const holidays_RS: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-31",
+            "endDate": "2026-01-16",
+            "localName": "Winter holidays",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-20",
+            "localName": "Sretenje holidays",
+            "name": "Sretenje holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-10",
+            "endDate": "2026-04-14",
+            "localName": "Spring holidays",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-15",
+            "endDate": "2026-08-31",
+            "localName": "primary schools",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-22",
+            "endDate": "2026-08-31",
+            "localName": "post-primary schools",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

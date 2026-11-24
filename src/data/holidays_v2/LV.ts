@@ -1115,6 +1115,69 @@ export const holidays_LV: CountryHolidays = {
             "type": [
                 "National holiday"
             ]
+        },
+        {
+            "date": "2025-12-22",
+            "endDate": "2026-01-02",
+            "localName": "Cabinet of Ministers Regulation No. 819 (2025/2026)",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-09",
+            "endDate": "2026-03-13",
+            "localName": "Cabinet of Ministers Regulation No. 819 (2025/2026)",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-01",
+            "endDate": "2026-08-31",
+            "localName": "Grades 1-8 and 10-11 (Cabinet of Ministers Regulation No. 819)",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-19",
+            "endDate": "2026-10-23",
+            "localName": "Cabinet of Ministers Regulation No. 768 (2026/2027)",
+            "name": "Autumn holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-21",
+            "endDate": "2027-01-01",
+            "localName": "Cabinet of Ministers Regulation No. 768 (2026/2027)",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-08",
+            "endDate": "2027-03-12",
+            "localName": "Cabinet of Ministers Regulation No. 768 (2026/2027)",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-06-01",
+            "endDate": "2027-08-31",
+            "localName": "Grades 1-8 and 10-11 (Cabinet of Ministers Regulation No. 768)",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

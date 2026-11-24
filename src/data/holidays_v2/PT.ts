@@ -1715,6 +1715,165 @@ export const holidays_PT: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-16",
+            "endDate": "2026-01-05",
+            "localName": "Christmas holidays",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-18",
+            "localName": "Carnival holidays",
+            "name": "Carnival holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-30",
+            "endDate": "2026-04-10",
+            "localName": "Easter holidays",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-06",
+            "endDate": "2026-09-10",
+            "localName": "9th, 11th and 12th grades",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-13",
+            "endDate": "2026-09-10",
+            "localName": "5th, 6th, 7th, 8th and 10th grades",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-01",
+            "endDate": "2026-09-10",
+            "localName": "Pre-school education and 1st, 2nd, 3rd and 4th grades",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-16",
+            "endDate": "2026-12-31",
+            "localName": "Christmas holidays",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-08",
+            "endDate": "2027-02-10",
+            "localName": "Carnival holidays",
+            "name": "Carnival holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-22",
+            "endDate": "2027-04-02",
+            "localName": "Easter holidays",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-06-05",
+            "endDate": "2027-09-12",
+            "localName": "9th, 11th and 12th grades",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-06-12",
+            "endDate": "2027-09-12",
+            "localName": "5th, 6th, 7th, 8th and 10th grades",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-01",
+            "endDate": "2027-09-12",
+            "localName": "Pre-school education and 1st, 2nd, 3rd and 4th grades",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-12-20",
+            "endDate": "2027-12-31",
+            "localName": "Christmas holidays",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-28",
+            "endDate": "2028-03-01",
+            "localName": "Carnival holidays",
+            "name": "Carnival holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-04-03",
+            "endDate": "2028-04-17",
+            "localName": "Easter holidays",
+            "name": "Easter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-06-07",
+            "localName": "9th, 11th and 12th grades",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-06-14",
+            "localName": "5th, 6th, 7th, 8th and 10th grades",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-06-30",
+            "localName": "Pre-school education and 1st, 2nd, 3rd and 4th grades",
+            "name": "End of lessons",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

@@ -1558,6 +1558,258 @@ export const holidays_AT: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-24",
+            "endDate": "2026-01-06",
+            "localName": "Christmas Holidays",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-02",
+            "endDate": "2026-02-07",
+            "localName": "Regions: NÖ, WI",
+            "name": "Semester Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-09",
+            "endDate": "2026-02-14",
+            "localName": "Regions: BL, KÄ, SB, TI, VA",
+            "name": "Semester Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "endDate": "2026-02-21",
+            "localName": "Regions: OÖ, SM",
+            "name": "Semester Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-28",
+            "endDate": "2026-04-06",
+            "localName": "Easter Holidays",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-23",
+            "endDate": "2026-05-25",
+            "localName": "Pentecost Holidays",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-04",
+            "endDate": "2026-09-06",
+            "localName": "Regions: BL, NÖ, WI",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-11",
+            "endDate": "2026-09-13",
+            "localName": "Regions: KÄ, OÖ, SB, SM, TI, VA",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-27",
+            "endDate": "2026-10-31",
+            "localName": "Autumn Holidays",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-24",
+            "endDate": "2027-01-06",
+            "localName": "Christmas Holidays",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-01-30",
+            "endDate": "2027-02-06",
+            "localName": "Regions: NÖ, WI",
+            "name": "Semester Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-08",
+            "endDate": "2027-02-13",
+            "localName": "Regions: BL, KÄ, SB, TI, VA",
+            "name": "Semester Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-15",
+            "endDate": "2027-02-20",
+            "localName": "Regions: OÖ, SM",
+            "name": "Semester Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-20",
+            "endDate": "2027-03-29",
+            "localName": "Easter Holidays",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-05-15",
+            "endDate": "2027-05-17",
+            "localName": "Pentecost Holidays",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-03",
+            "endDate": "2027-09-05",
+            "localName": "Regions: BL, NÖ, WI",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-07-10",
+            "endDate": "2027-09-12",
+            "localName": "Regions: KÄ, OÖ, SB, SM, TI, VA",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-10-27",
+            "endDate": "2027-10-31",
+            "localName": "Autumn Holidays",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-12-24",
+            "endDate": "2028-01-06",
+            "localName": "Christmas Holidays",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-05",
+            "endDate": "2028-02-12",
+            "localName": "Regions: NÖ, WI",
+            "name": "Semester Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-14",
+            "endDate": "2028-02-19",
+            "localName": "Regions: BL, KÄ, SB, TI, VA",
+            "name": "Semester Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-02-21",
+            "endDate": "2028-02-26",
+            "localName": "Regions: OÖ, SM",
+            "name": "Semester Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-04-08",
+            "endDate": "2028-04-17",
+            "localName": "Easter Holidays",
+            "name": "Easter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-06-03",
+            "endDate": "2028-06-05",
+            "localName": "Pentecost Holidays",
+            "name": "Pentecost Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-07-01",
+            "endDate": "2028-09-03",
+            "localName": "Regions: BL, NÖ, WI",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-07-08",
+            "endDate": "2028-09-10",
+            "localName": "Regions: KÄ, OÖ, SB, SM, TI, VA",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-10-27",
+            "endDate": "2028-10-31",
+            "localName": "Autumn Holidays",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2028-12-24",
+            "endDate": "2029-01-06",
+            "localName": "Christmas Holidays",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

@@ -1623,6 +1623,32 @@ export const holidays_AL: CountryHolidays = {
             "type": [
                 "National holiday"
             ]
+        },
+        {
+            "date": "2025-12-22",
+            "endDate": "2026-01-02",
+            "localName": "Christmas holidays",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-30",
+            "endDate": "2026-04-03",
+            "localName": "Spring holidays",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-13",
+            "localName": "End of lessons\"",
+            "name": "End of lessons\"",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

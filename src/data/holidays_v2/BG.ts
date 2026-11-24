@@ -1163,6 +1163,86 @@ export const holidays_BG: CountryHolidays = {
             "type": [
                 "National holiday"
             ]
+        },
+        {
+            "date": "2025-12-24",
+            "endDate": "2026-01-04",
+            "localName": "Christmas holidays",
+            "name": "Christmas holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-01-31",
+            "endDate": "2026-02-02",
+            "localName": "Winter holidays",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-03-02",
+            "localName": "No school",
+            "name": "No school",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-04",
+            "endDate": "2026-04-13",
+            "localName": "Grade 1-11",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-08",
+            "endDate": "2026-04-13",
+            "localName": "Grade 12",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-16",
+            "endDate": "2026-09-14",
+            "localName": "Grade 12",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-05-30",
+            "endDate": "2026-09-14",
+            "localName": "Grade 1-3",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-13",
+            "endDate": "2026-09-14",
+            "localName": "Grade 4-6",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-07-01",
+            "endDate": "2026-09-14",
+            "localName": "Grade 5-6 (sports schools)",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

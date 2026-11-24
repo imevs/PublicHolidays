@@ -51,6 +51,7 @@ export const fr = {
     countryFilter: {
         selectCountries: "Sélectionner les pays",
         highlightLongHolidays: "Mettre en évidence les longs week-ends",
+        showSchoolHolidays: "Afficher les vacances scolaires",
         showTimezones: "Afficher les fuseaux horaires",
         showLocalTime: "Afficher l'heure locale",
         currentTimePrefix: "Heure actuelle :",

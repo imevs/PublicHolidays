@@ -1235,6 +1235,87 @@ export const holidays_EE: CountryHolidays = {
             "type": [
                 "Observance"
             ]
+        },
+        {
+            "date": "2025-12-22",
+            "endDate": "2026-01-11",
+            "localName": "Christmas Holidays",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-02-23",
+            "endDate": "2026-03-01",
+            "localName": "Winter Holidays",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-04-13",
+            "endDate": "2026-04-19",
+            "localName": "Spring Holidays",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-06-17",
+            "endDate": "2026-08-31",
+            "localName": "Summer Holidays",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-10-26",
+            "endDate": "2026-11-01",
+            "localName": "Autumn Holidays",
+            "name": "Autumn Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-23",
+            "endDate": "2027-01-10",
+            "localName": "Christmas Holidays",
+            "name": "Christmas Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-02-22",
+            "endDate": "2027-02-28",
+            "localName": "Winter Holidays",
+            "name": "Winter Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-04-12",
+            "endDate": "2027-04-18",
+            "localName": "Spring Holidays",
+            "name": "Spring Holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-06-14",
+            "endDate": "2027-08-31",
+            "localName": "Summer Holidays",
+            "name": "Summer Holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

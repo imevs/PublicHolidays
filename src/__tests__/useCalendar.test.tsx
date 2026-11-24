@@ -6,6 +6,7 @@ import { useCalendar } from "../hooks/useCalendar.ts";
 import { allHolidays } from "../data/holidays_v2/index.ts";
 import { convertEvents } from "../utils/convertEvents.ts";
 import { UTCDate } from "../utils/UTCDate.ts";
+import type { CalendarEvent } from "../types/index.ts";
 
 describe("useCalendar", () => {
     beforeEach(() => {
@@ -328,5 +329,69 @@ describe("useCalendar", () => {
         expect(lvDay?.longHolidayDetails).toEqual([{ countryCode: "LV", days: 3 }]);
         expect(deDay?.longHolidayDetails).toEqual([{ countryCode: "DE", days: 3 }]);
         expect(sharedDay?.longHolidayDetails).toEqual([{ countryCode: "LV", days: 3 }, { countryCode: "DE", days: 3 }]);
+    });
+
+    it("handles school holidays visibility, syncing, and long holiday exclusion", () => {
+        const events: CalendarEvent[] = convertEvents([
+            {
+                countryName: "Latvia",
+                countryCode: "LV",
+                holidays: [
+                    { name: "School Break", localName: "School Break", date: "2025-05-12", type: ["School Holiday"] },
+                    { name: "National Day", localName: "National Day", date: "2025-05-13", type: ["National holiday"] },
+                ],
+            },
+        ]);
+
+        window.location.hash = "date=2025-05-01&countries=LV";
+        const { result } = renderHook(() => useCalendar(events));
+
+        // Hidden by default
+        let day12 = result.current.selectedMonthDays.find(d => d.date.toISOString().startsWith("2025-05-12"));
+        expect(day12?.events.some(e => "type" in e && (e.type as string[])?.includes("School Holiday"))).toBe(false);
+
+        // Show school holidays
+        act(() => {
+            result.current.setShowSchoolHolidays(true);
+        });
+        expect(window.location.hash).toContain("school=1");
+        expect(result.current.showSchoolHolidays).toBe(true);
+
+        day12 = result.current.selectedMonthDays.find(d => d.date.toISOString().startsWith("2025-05-12"));
+        expect(day12?.events.some(e => "type" in e && (e.type as string[])?.includes("School Holiday"))).toBe(true);
+
+        // Hide again
+        act(() => {
+            result.current.setShowSchoolHolidays(false);
+        });
+        expect(window.location.hash).not.toContain("school=1");
+        expect(result.current.showSchoolHolidays).toBe(false);
+
+        // Initial hash load
+        window.location.hash = "date=2025-05-01&countries=LV&school=1";
+        const { result: result2 } = renderHook(() => useCalendar(events));
+        expect(result2.current.showSchoolHolidays).toBe(true);
+        const day12_loaded = result2.current.selectedMonthDays.find(d => d.date.toISOString().startsWith("2025-05-12"));
+        expect(day12_loaded?.events.some(e => "type" in e && (e.type as string[])?.includes("School Holiday"))).toBe(true);
+
+        // School holidays do not trigger long holiday streaks
+        // Create a sequence of 3 school holidays surrounding a weekend or consecutive days
+        const schoolStreakEvents: CalendarEvent[] = convertEvents([
+            {
+                countryName: "Latvia",
+                countryCode: "LV",
+                holidays: [
+                    { name: "S1", localName: "S1", date: "2025-05-05", type: ["School Holiday"] },
+                    { name: "S2", localName: "S2", date: "2025-05-06", type: ["School Holiday"] },
+                    { name: "S3", localName: "S3", date: "2025-05-07", type: ["School Holiday"] },
+                ],
+            },
+        ]);
+        window.location.hash = "date=2025-05-01&countries=LV&school=1";
+        const { result: resultStreak } = renderHook(() => useCalendar(schoolStreakEvents));
+        const sDays = resultStreak.current.selectedMonthDays.filter(d => ["2025-05-05", "2025-05-06", "2025-05-07"].some(dateStr => d.date.toISOString().startsWith(dateStr)));
+        for (const d of sDays) {
+            expect(d.isLongHoliday).not.toBe(true);
+        }
     });
 });

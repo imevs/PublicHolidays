@@ -36,6 +36,8 @@ export const Holidays: React.FC = () => {
         handleModeChange,
         showAllCountries,
         setShowAllCountries,
+        showSchoolHolidays,
+        setShowSchoolHolidays,
         shouldScrollToMonth,
         clearShouldScrollToMonth,
     } = useCalendar(holidaysData);
@@ -101,6 +103,8 @@ export const Holidays: React.FC = () => {
                     onToggleCountry={toggleCountry}
                     highlightLongHolidays={highlightLongHolidays}
                     setHighlightLongHolidays={setHighlightLongHolidays}
+                    showSchoolHolidays={showSchoolHolidays}
+                    setShowSchoolHolidays={setShowSchoolHolidays}
                 />}
             />
             <ActionButtons
