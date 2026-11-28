@@ -354,16 +354,16 @@ export const holidays_BY: CountryHolidays = {
         },
         {
             "date": "2025-04-26",
-            "localName": "Special Working Day is a working day on weekend in Belarus",
-            "name": "Special Working Day",
+            "localName": "Day of Remembrance of the Chernobyl Tragedy is an observance in Belarus",
+            "name": "Day of Remembrance of the Chernobyl Tragedy",
             "type": [
                 "Observance"
             ]
         },
         {
             "date": "2025-04-26",
-            "localName": "Day of Remembrance of the Chernobyl Tragedy is an observance in Belarus",
-            "name": "Day of Remembrance of the Chernobyl Tragedy",
+            "localName": "Special Working Day is a working day on weekend in Belarus",
+            "name": "Special Working Day",
             "type": [
                 "Observance"
             ]
@@ -918,18 +918,18 @@ export const holidays_BY: CountryHolidays = {
         },
         {
             "date": "2027-05-09",
-            "localName": "Victory Day is a national holiday in Belarus",
-            "name": "Victory Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-05-09",
             "localName": "Day of the National Emblem and Flag of Belarus is an observance in Belarus",
             "name": "Day of the National Emblem and Flag of Belarus",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2027-05-09",
+            "localName": "Victory Day is a national holiday in Belarus",
+            "name": "Victory Day",
+            "type": [
+                "National holiday"
             ]
         },
         {

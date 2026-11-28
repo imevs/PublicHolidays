@@ -41,6 +41,17 @@
   border-color: var(--input-focus-border);
 }
 
+.countryChip.disabled,
+.continentTag.disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.countryChip.disabled:hover,
+.continentTag.disabled:hover {
+  border-color: var(--input-border);
+}
+
 .checkboxContainer {
   display: flex;
   align-items: center;

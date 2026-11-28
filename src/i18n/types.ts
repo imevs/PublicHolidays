@@ -82,6 +82,7 @@ export interface TranslationDictionary {
         currentTimePrefix: string;
         hideInactive: string;
         showAll: string;
+        noSchoolHolidayData: string;
     };
     continents: Record<ContinentId, string>;
     countries: Record<CountryCode, string>;

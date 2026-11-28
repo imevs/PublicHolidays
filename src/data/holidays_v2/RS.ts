@@ -413,15 +413,6 @@ export const holidays_RS: CountryHolidays = {
         },
         {
             "date": "2025-04-19",
-            "localName": "Holy Saturday is the day before Easter Sunday.",
-            "name": "Western Easter Saturday",
-            "type": [
-                "Christian",
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2025-04-19",
             "localName": "The Saturday before Easter Sunday is also known as Holy Saturday for many Orthodox churches worldwide.",
             "name": "Holy Saturday",
             "type": [
@@ -430,9 +421,9 @@ export const holidays_RS: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-20",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Western Easter Sunday",
+            "date": "2025-04-19",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Western Easter Saturday",
             "type": [
                 "Christian",
                 "Optional holiday"
@@ -445,6 +436,15 @@ export const holidays_RS: CountryHolidays = {
             "type": [
                 "National holiday",
                 "Orthodox"
+            ]
+        },
+        {
+            "date": "2025-04-20",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Western Easter Sunday",
+            "type": [
+                "Christian",
+                "Optional holiday"
             ]
         },
         {
@@ -682,15 +682,6 @@ export const holidays_RS: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-12-27",
-            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-            "name": "Mother's Day",
-            "type": [
-                "Observance",
-                "Orthodox"
-            ]
-        },
-        {
             "date": "2026-03-20",
             "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
             "name": "Eid al-Fitr (Provisional)",
@@ -887,6 +878,15 @@ export const holidays_RS: CountryHolidays = {
             ]
         },
         {
+            "date": "2026-12-27",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance",
+                "Orthodox"
+            ]
+        },
+        {
             "date": "2026-12-31",
             "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
             "name": "Western New Year's Eve",
@@ -1050,19 +1050,19 @@ export const holidays_RS: CountryHolidays = {
         },
         {
             "date": "2027-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labor Holiday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-05-01",
             "localName": "The Saturday before Easter Sunday is also known as Holy Saturday for many Orthodox churches worldwide.",
             "name": "Holy Saturday",
             "type": [
                 "National holiday",
                 "Orthodox"
+            ]
+        },
+        {
+            "date": "2027-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labor Holiday",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1320,15 +1320,6 @@ export const holidays_RS: CountryHolidays = {
         },
         {
             "date": "2028-04-15",
-            "localName": "Holy Saturday is the day before Easter Sunday.",
-            "name": "Western Easter Saturday",
-            "type": [
-                "Christian",
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2028-04-15",
             "localName": "The Saturday before Easter Sunday is also known as Holy Saturday for many Orthodox churches worldwide.",
             "name": "Holy Saturday",
             "type": [
@@ -1337,9 +1328,9 @@ export const holidays_RS: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-16",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Western Easter Sunday",
+            "date": "2028-04-15",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Western Easter Saturday",
             "type": [
                 "Christian",
                 "Optional holiday"
@@ -1352,6 +1343,15 @@ export const holidays_RS: CountryHolidays = {
             "type": [
                 "National holiday",
                 "Orthodox"
+            ]
+        },
+        {
+            "date": "2028-04-16",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Western Easter Sunday",
+            "type": [
+                "Christian",
+                "Optional holiday"
             ]
         },
         {

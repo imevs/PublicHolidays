@@ -689,19 +689,19 @@ export const holidays_CY: CountryHolidays = {
         },
         {
             "date": "2027-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labour Day/May Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-05-01",
             "localName": "The Saturday before Easter Sunday is also known as Holy Saturday for many Orthodox churches worldwide.",
             "name": "Holy Saturday (Orthodox)",
             "type": [
                 "Observance",
                 "Orthodox"
+            ]
+        },
+        {
+            "date": "2027-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labour Day/May Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -733,19 +733,19 @@ export const holidays_CY: CountryHolidays = {
         },
         {
             "date": "2027-06-21",
+            "localName": "June Solstice in Cyprus (Nicosia)",
+            "name": "June Solstice",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2027-06-21",
             "localName": "Orthodox Pentecost Monday is a national holiday and Orthodox holiday in Cyprus",
             "name": "Orthodox Pentecost Monday",
             "type": [
                 "National holiday",
                 "Orthodox"
-            ]
-        },
-        {
-            "date": "2027-06-21",
-            "localName": "June Solstice in Cyprus (Nicosia)",
-            "name": "June Solstice",
-            "type": [
-                "Season"
             ]
         },
         {

@@ -70,18 +70,18 @@ export const holidays_DK: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in Denmark",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-03-31",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -150,18 +150,18 @@ export const holidays_DK: CountryHolidays = {
         },
         {
             "date": "2024-06-05",
-            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-            "name": "Father's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-06-05",
             "localName": "Constitution Day is a private sector holiday in Denmark",
             "name": "Constitution Day",
             "type": [
                 "Optional holiday"
+            ]
+        },
+        {
+            "date": "2024-06-05",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -213,14 +213,6 @@ export const holidays_DK: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-12-24",
-            "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
-            "name": "Christmas Eve",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2024-12-25",
             "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
             "name": "Christmas Day",
@@ -234,14 +226,6 @@ export const holidays_DK: CountryHolidays = {
             "name": "2nd Christmas Day",
             "type": [
                 "National holiday"
-            ]
-        },
-        {
-            "date": "2024-12-31",
-            "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -374,18 +358,18 @@ export const holidays_DK: CountryHolidays = {
         },
         {
             "date": "2025-06-05",
-            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-            "name": "Father's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-06-05",
             "localName": "Constitution Day is a private sector holiday in Denmark",
             "name": "Constitution Day",
             "type": [
                 "Optional holiday"
+            ]
+        },
+        {
+            "date": "2025-06-05",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -453,14 +437,6 @@ export const holidays_DK: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-12-24",
-            "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
-            "name": "Christmas Eve",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2025-12-25",
             "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
             "name": "Christmas Day",
@@ -474,14 +450,6 @@ export const holidays_DK: CountryHolidays = {
             "name": "2nd Christmas Day",
             "type": [
                 "National holiday"
-            ]
-        },
-        {
-            "date": "2025-12-31",
-            "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -526,18 +494,18 @@ export const holidays_DK: CountryHolidays = {
         },
         {
             "date": "2026-03-29",
-            "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
-            "name": "Palm Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-03-29",
             "localName": "Daylight Saving Time starts in Denmark",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2026-03-29",
+            "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
+            "name": "Palm Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -574,18 +542,18 @@ export const holidays_DK: CountryHolidays = {
         },
         {
             "date": "2026-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labor Day",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2026-05-01",
             "localName": "Great Prayer Day is an observance in Denmark",
             "name": "Great Prayer Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2026-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labor Day",
+            "type": [
+                "Optional holiday"
             ]
         },
         {
@@ -630,18 +598,18 @@ export const holidays_DK: CountryHolidays = {
         },
         {
             "date": "2026-06-05",
-            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-            "name": "Father's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-06-05",
             "localName": "Constitution Day is a private sector holiday in Denmark",
             "name": "Constitution Day",
             "type": [
                 "Optional holiday"
+            ]
+        },
+        {
+            "date": "2026-06-05",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -693,14 +661,6 @@ export const holidays_DK: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-12-24",
-            "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
-            "name": "Christmas Eve",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2026-12-25",
             "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
             "name": "Christmas Day",
@@ -714,14 +674,6 @@ export const holidays_DK: CountryHolidays = {
             "name": "2nd Christmas Day",
             "type": [
                 "National holiday"
-            ]
-        },
-        {
-            "date": "2026-12-31",
-            "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -790,18 +742,18 @@ export const holidays_DK: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-03-28",
             "localName": "Daylight Saving Time starts in Denmark",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -870,18 +822,18 @@ export const holidays_DK: CountryHolidays = {
         },
         {
             "date": "2027-06-05",
-            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-            "name": "Father's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-06-05",
             "localName": "Constitution Day is a private sector holiday in Denmark",
             "name": "Constitution Day",
             "type": [
                 "Optional holiday"
+            ]
+        },
+        {
+            "date": "2027-06-05",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -902,18 +854,18 @@ export const holidays_DK: CountryHolidays = {
         },
         {
             "date": "2027-10-31",
-            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-            "name": "Halloween",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-10-31",
             "localName": "Daylight Saving Time ends in Denmark",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-10-31",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -922,14 +874,6 @@ export const holidays_DK: CountryHolidays = {
             "name": "December Solstice",
             "type": [
                 "Season"
-            ]
-        },
-        {
-            "date": "2027-12-24",
-            "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
-            "name": "Christmas Eve",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -954,14 +898,6 @@ export const holidays_DK: CountryHolidays = {
             "name": "2nd Christmas Day",
             "type": [
                 "National holiday"
-            ]
-        },
-        {
-            "date": "2027-12-31",
-            "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1102,10 +1038,10 @@ export const holidays_DK: CountryHolidays = {
         },
         {
             "date": "2028-06-05",
-            "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
-            "name": "Pentecost Monday",
+            "localName": "Constitution Day is a private sector holiday in Denmark",
+            "name": "Constitution Day",
             "type": [
-                "National holiday"
+                "Optional holiday"
             ]
         },
         {
@@ -1118,10 +1054,10 @@ export const holidays_DK: CountryHolidays = {
         },
         {
             "date": "2028-06-05",
-            "localName": "Constitution Day is a private sector holiday in Denmark",
-            "name": "Constitution Day",
+            "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
+            "name": "Pentecost Monday",
             "type": [
-                "Optional holiday"
+                "National holiday"
             ]
         },
         {
@@ -1173,14 +1109,6 @@ export const holidays_DK: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-12-24",
-            "localName": "Christmas Eve is the day before Christmas Day and falls on December 24 in the Gregorian calendar.",
-            "name": "Christmas Eve",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2028-12-25",
             "localName": "Christmas Day is one of the biggest Christian celebrations and falls on December 25 in the Gregorian calendar.",
             "name": "Christmas Day",
@@ -1194,14 +1122,6 @@ export const holidays_DK: CountryHolidays = {
             "name": "2nd Christmas Day",
             "type": [
                 "National holiday"
-            ]
-        },
-        {
-            "date": "2028-12-31",
-            "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Observance"
             ]
         },
         {

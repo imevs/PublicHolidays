@@ -670,18 +670,18 @@ export const holidays_ME: CountryHolidays = {
         },
         {
             "date": "2026-03-20",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Ramdan Bayram (Provisional)",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2026-03-20",
             "localName": "March Equinox in Montenegro (Podgorica)",
             "name": "March Equinox",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2026-03-20",
+            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Ramdan Bayram (Provisional)",
+            "type": [
+                "Optional holiday"
             ]
         },
         {
@@ -1038,14 +1038,6 @@ export const holidays_ME: CountryHolidays = {
         },
         {
             "date": "2027-05-02",
-            "localName": "Millions of Orthodox Christians around the world often celebrate Easter Sunday at a different time to the date set by many western churches.",
-            "name": "Orthodox Easter Sunday",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2027-05-02",
             "localName": "Labour Day/May Day Holiday is a national holiday in Montenegro",
             "name": "Labour Day/May Day Holiday",
             "type": [
@@ -1053,9 +1045,9 @@ export const holidays_ME: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-05-03",
-            "localName": "Orthodox Easter Monday is the day after the Orthodox Easter Sunday.",
-            "name": "Orthodox Easter Monday",
+            "date": "2027-05-02",
+            "localName": "Millions of Orthodox Christians around the world often celebrate Easter Sunday at a different time to the date set by many western churches.",
+            "name": "Orthodox Easter Sunday",
             "type": [
                 "Optional holiday"
             ]
@@ -1066,6 +1058,14 @@ export const holidays_ME: CountryHolidays = {
             "name": "Labour Day/May Day Holiday Observed",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2027-05-03",
+            "localName": "Orthodox Easter Monday is the day after the Orthodox Easter Sunday.",
+            "name": "Orthodox Easter Monday",
+            "type": [
+                "Optional holiday"
             ]
         },
         {
@@ -1318,14 +1318,6 @@ export const holidays_ME: CountryHolidays = {
         },
         {
             "date": "2028-04-14",
-            "localName": "Millions of Orthodox Christians around the world annually observe Good Friday to commemorate the events leading up to Jesus Christ's crucifixion.",
-            "name": "Orthodox Good Friday",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2028-04-14",
             "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
             "name": "Good Friday",
             "type": [
@@ -1333,9 +1325,9 @@ export const holidays_ME: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-16",
-            "localName": "Millions of Orthodox Christians around the world often celebrate Easter Sunday at a different time to the date set by many western churches.",
-            "name": "Orthodox Easter Sunday",
+            "date": "2028-04-14",
+            "localName": "Millions of Orthodox Christians around the world annually observe Good Friday to commemorate the events leading up to Jesus Christ's crucifixion.",
+            "name": "Orthodox Good Friday",
             "type": [
                 "Optional holiday"
             ]
@@ -1349,9 +1341,9 @@ export const holidays_ME: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-17",
-            "localName": "Orthodox Easter Monday is the day after the Orthodox Easter Sunday.",
-            "name": "Orthodox Easter Monday",
+            "date": "2028-04-16",
+            "localName": "Millions of Orthodox Christians around the world often celebrate Easter Sunday at a different time to the date set by many western churches.",
+            "name": "Orthodox Easter Sunday",
             "type": [
                 "Optional holiday"
             ]
@@ -1360,6 +1352,14 @@ export const holidays_ME: CountryHolidays = {
             "date": "2028-04-17",
             "localName": "Easter Monday is the day after Easter Sunday.",
             "name": "Easter Monday",
+            "type": [
+                "Optional holiday"
+            ]
+        },
+        {
+            "date": "2028-04-17",
+            "localName": "Orthodox Easter Monday is the day after the Orthodox Easter Sunday.",
+            "name": "Orthodox Easter Monday",
             "type": [
                 "Optional holiday"
             ]

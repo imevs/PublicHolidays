@@ -38,14 +38,6 @@ export const holidays_MT: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Freedom Day is a national holiday in Malta",
-            "name": "Freedom Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
             "name": "Easter Sunday",
             "type": [
@@ -53,11 +45,11 @@ export const holidays_MT: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-04-01",
-            "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Easter Monday",
+            "date": "2024-03-31",
+            "localName": "Freedom Day is a national holiday in Malta",
+            "name": "Freedom Day",
             "type": [
-                "Observance"
+                "National holiday"
             ]
         },
         {
@@ -66,6 +58,14 @@ export const holidays_MT: CountryHolidays = {
             "name": "Bank Holiday",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2024-04-01",
+            "localName": "Easter Monday is the day after Easter Sunday.",
+            "name": "Easter Monday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -166,18 +166,18 @@ export const holidays_MT: CountryHolidays = {
         },
         {
             "date": "2024-12-26",
-            "localName": "Boxing Day is a observance in Malta",
-            "name": "Boxing Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-12-26",
             "localName": "Bank Holiday is a bank holiday in Malta",
             "name": "Bank Holiday",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2024-12-26",
+            "localName": "Boxing Day is a observance in Malta",
+            "name": "Boxing Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -239,17 +239,17 @@ export const holidays_MT: CountryHolidays = {
         {
             "date": "2025-04-21",
             "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Easter Monday",
+            "name": "Bank Holiday",
             "type": [
-                "Observance"
+                "National holiday"
             ]
         },
         {
             "date": "2025-04-21",
             "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Bank Holiday",
+            "name": "Easter Monday",
             "type": [
-                "National holiday"
+                "Observance"
             ]
         },
         {
@@ -350,18 +350,18 @@ export const holidays_MT: CountryHolidays = {
         },
         {
             "date": "2025-12-26",
-            "localName": "Boxing Day is a observance in Malta",
-            "name": "Boxing Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-12-26",
             "localName": "Bank Holiday is a bank holiday in Malta",
             "name": "Bank Holiday",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2025-12-26",
+            "localName": "Boxing Day is a observance in Malta",
+            "name": "Boxing Day",
+            "type": [
+                "Observance"
             ]
         },
         {

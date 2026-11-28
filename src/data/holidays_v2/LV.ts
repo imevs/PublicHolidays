@@ -46,18 +46,18 @@ export const holidays_LV: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in Latvia",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-03-31",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -70,16 +70,16 @@ export const holidays_LV: CountryHolidays = {
         },
         {
             "date": "2024-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labour Day/May Day",
+            "localName": "Constituent Assembly Convocation Day is a national holiday in Latvia",
+            "name": "Constituent Assembly Convocation Day",
             "type": [
                 "National holiday"
             ]
         },
         {
             "date": "2024-05-01",
-            "localName": "Constituent Assembly Convocation Day is a national holiday in Latvia",
-            "name": "Constituent Assembly Convocation Day",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labour Day/May Day",
             "type": [
                 "National holiday"
             ]
@@ -286,16 +286,16 @@ export const holidays_LV: CountryHolidays = {
         },
         {
             "date": "2025-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labour Day/May Day",
+            "localName": "Constituent Assembly Convocation Day is a national holiday in Latvia",
+            "name": "Constituent Assembly Convocation Day",
             "type": [
                 "National holiday"
             ]
         },
         {
             "date": "2025-05-01",
-            "localName": "Constituent Assembly Convocation Day is a national holiday in Latvia",
-            "name": "Constituent Assembly Convocation Day",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labour Day/May Day",
             "type": [
                 "National holiday"
             ]
@@ -445,6 +445,22 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
+            "date": "2026-01-02",
+            "localName": "Cabinet Order 330 transfers this working day to 2026-01-17 for state-budget institutions operating a Monday–Friday five-day week. Other employers may adopt the arrangement voluntarily.",
+            "name": "Transferred day off (State budget institutions)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-01-17",
+            "localName": "Working Saturday replacing 2026-01-02 under Cabinet Order 330, for state-budget institutions operating a Monday–Friday five-day week. This is a working day, not a public holiday.",
+            "name": "Make-up working day (State budget institutions)",
+            "type": [
+                "Working day"
+            ]
+        },
+        {
             "date": "2026-02-14",
             "localName": "February 14 is Valentine's Day or Saint Valentine's Feast. The day of love owes its origins to ancient Roman and European Christian traditions.",
             "name": "Valentine's Day",
@@ -502,16 +518,16 @@ export const holidays_LV: CountryHolidays = {
         },
         {
             "date": "2026-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labour Day/May Day",
+            "localName": "Constituent Assembly Convocation Day is a national holiday in Latvia",
+            "name": "Constituent Assembly Convocation Day",
             "type": [
                 "National holiday"
             ]
         },
         {
             "date": "2026-05-01",
-            "localName": "Constituent Assembly Convocation Day is a national holiday in Latvia",
-            "name": "Constituent Assembly Convocation Day",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labour Day/May Day",
             "type": [
                 "National holiday"
             ]
@@ -549,6 +565,14 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
+            "date": "2026-06-22",
+            "localName": "Cabinet Order 330 transfers this working day to 2026-06-27 for state-budget institutions operating a Monday–Friday five-day week. Other employers may adopt the arrangement voluntarily.",
+            "name": "Transferred day off (State budget institutions)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
             "date": "2026-06-23",
             "localName": "Midsummer Eve is a national holiday in Latvia",
             "name": "Midsummer Eve",
@@ -562,6 +586,14 @@ export const holidays_LV: CountryHolidays = {
             "name": "Midsummer Day",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2026-06-27",
+            "localName": "Working Saturday replacing 2026-06-22 under Cabinet Order 330, for state-budget institutions operating a Monday–Friday five-day week. This is a working day, not a public holiday.",
+            "name": "Make-up working day (State budget institutions)",
+            "type": [
+                "Working day"
             ]
         },
         {
@@ -645,38 +677,6 @@ export const holidays_LV: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-01-02",
-            "localName": "Cabinet Order 330 transfers this working day to 2026-01-17 for state-budget institutions operating a Monday–Friday five-day week. Other employers may adopt the arrangement voluntarily.",
-            "name": "Transferred day off (State budget institutions)",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-01-17",
-            "localName": "Working Saturday replacing 2026-01-02 under Cabinet Order 330, for state-budget institutions operating a Monday–Friday five-day week. This is a working day, not a public holiday.",
-            "name": "Make-up working day (State budget institutions)",
-            "type": [
-                "Working day"
-            ]
-        },
-        {
-            "date": "2026-06-22",
-            "localName": "Cabinet Order 330 transfers this working day to 2026-06-27 for state-budget institutions operating a Monday–Friday five-day week. Other employers may adopt the arrangement voluntarily.",
-            "name": "Transferred day off (State budget institutions)",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-06-27",
-            "localName": "Working Saturday replacing 2026-06-22 under Cabinet Order 330, for state-budget institutions operating a Monday–Friday five-day week. This is a working day, not a public holiday.",
-            "name": "Make-up working day (State budget institutions)",
-            "type": [
-                "Working day"
-            ]
-        },
-        {
             "date": "2027-01-01",
             "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
             "name": "New Year's Day",
@@ -718,18 +718,18 @@ export const holidays_LV: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-03-28",
             "localName": "Daylight Saving Time starts in Latvia",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -742,16 +742,16 @@ export const holidays_LV: CountryHolidays = {
         },
         {
             "date": "2027-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labour Day/May Day",
+            "localName": "Constituent Assembly Convocation Day is a national holiday in Latvia",
+            "name": "Constituent Assembly Convocation Day",
             "type": [
                 "National holiday"
             ]
         },
         {
             "date": "2027-05-01",
-            "localName": "Constituent Assembly Convocation Day is a national holiday in Latvia",
-            "name": "Constituent Assembly Convocation Day",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labour Day/May Day",
             "type": [
                 "National holiday"
             ]
@@ -822,18 +822,18 @@ export const holidays_LV: CountryHolidays = {
         },
         {
             "date": "2027-10-31",
-            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-            "name": "Halloween",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-10-31",
             "localName": "Daylight Saving Time ends in Latvia",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-10-31",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -950,16 +950,16 @@ export const holidays_LV: CountryHolidays = {
         },
         {
             "date": "2028-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labour Day/May Day",
+            "localName": "Constituent Assembly Convocation Day is a national holiday in Latvia",
+            "name": "Constituent Assembly Convocation Day",
             "type": [
                 "National holiday"
             ]
         },
         {
             "date": "2028-05-01",
-            "localName": "Constituent Assembly Convocation Day is a national holiday in Latvia",
-            "name": "Constituent Assembly Convocation Day",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labour Day/May Day",
             "type": [
                 "National holiday"
             ]

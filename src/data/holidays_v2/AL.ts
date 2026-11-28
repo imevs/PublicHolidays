@@ -94,18 +94,18 @@ export const holidays_AL: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in Albania",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-03-31",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -169,6 +169,14 @@ export const holidays_AL: CountryHolidays = {
         },
         {
             "date": "2024-05-06",
+            "localName": "Day off for Easter Sunday (Orthodox) is a national holiday in Albania",
+            "name": "Day off for Easter Sunday (Orthodox)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-05-06",
             "localName": "Orthodox Easter Monday is the day after the Orthodox Easter Sunday.",
             "name": "Easter Monday (Orthodox)",
             "type": [
@@ -177,11 +185,11 @@ export const holidays_AL: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-05-06",
-            "localName": "Day off for Easter Sunday (Orthodox) is a national holiday in Albania",
-            "name": "Day off for Easter Sunday (Orthodox)",
+            "date": "2024-06-16",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
             "type": [
-                "National holiday"
+                "Observance"
             ]
         },
         {
@@ -190,14 +198,6 @@ export const holidays_AL: CountryHolidays = {
             "name": "Feast of the Sacrifice",
             "type": [
                 "National holiday"
-            ]
-        },
-        {
-            "date": "2024-06-16",
-            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-            "name": "Father's Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -386,18 +386,18 @@ export const holidays_AL: CountryHolidays = {
         },
         {
             "date": "2025-03-30",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
-            "name": "Eid al-Fitr",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-03-30",
             "localName": "Daylight Saving Time starts in Albania",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2025-03-30",
+            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
+            "name": "Eid al-Fitr",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -419,19 +419,19 @@ export const holidays_AL: CountryHolidays = {
         },
         {
             "date": "2025-04-19",
-            "localName": "Holy Saturday is the day before Easter Sunday.",
-            "name": "Holy Saturday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-04-19",
             "localName": "The Saturday before Easter Sunday is also known as Holy Saturday for many Orthodox churches worldwide.",
             "name": "Easter Saturday (Orthodox)",
             "type": [
                 "Observance",
                 "Orthodox"
+            ]
+        },
+        {
+            "date": "2025-04-19",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Holy Saturday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -461,6 +461,14 @@ export const holidays_AL: CountryHolidays = {
         },
         {
             "date": "2025-04-21",
+            "localName": "Day off for Easter Sunday (Orthodox) is a national holiday in Albania",
+            "name": "Day off for Easter Sunday (Orthodox)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2025-04-21",
             "localName": "Easter Monday is the day after Easter Sunday.",
             "name": "Easter Monday",
             "type": [
@@ -474,14 +482,6 @@ export const holidays_AL: CountryHolidays = {
             "type": [
                 "Observance",
                 "Orthodox"
-            ]
-        },
-        {
-            "date": "2025-04-21",
-            "localName": "Day off for Easter Sunday (Orthodox) is a national holiday in Albania",
-            "name": "Day off for Easter Sunday (Orthodox)",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -793,19 +793,19 @@ export const holidays_AL: CountryHolidays = {
         },
         {
             "date": "2026-04-13",
+            "localName": "Weekday off on Monday 13 April 2026 because Orthodox Easter Sunday falls on Sunday and is a day off. Orthodox Easter Monday stays an observance.",
+            "name": "Day off for Easter Sunday (Orthodox)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-04-13",
             "localName": "Orthodox Easter Monday is the day after the Orthodox Easter Sunday.",
             "name": "Easter Monday (Orthodox)",
             "type": [
                 "Observance",
                 "Orthodox"
-            ]
-        },
-        {
-            "date": "2026-04-13",
-            "localName": "Weekday off on Monday 13 April 2026 because Orthodox Easter Sunday falls on Sunday and is a day off. Orthodox Easter Monday stays an observance.",
-            "name": "Day off for Easter Sunday (Orthodox)",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -1090,18 +1090,18 @@ export const holidays_AL: CountryHolidays = {
         },
         {
             "date": "2027-03-29",
-            "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Easter Monday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-29",
             "localName": "Day off for Easter Sunday is a national holiday in Albania",
             "name": "Day off for Easter Sunday",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2027-03-29",
+            "localName": "Easter Monday is the day after Easter Sunday.",
+            "name": "Easter Monday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1115,19 +1115,19 @@ export const holidays_AL: CountryHolidays = {
         },
         {
             "date": "2027-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "International Worker's Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-05-01",
             "localName": "The Saturday before Easter Sunday is also known as Holy Saturday for many Orthodox churches worldwide.",
             "name": "Easter Saturday (Orthodox)",
             "type": [
                 "Observance",
                 "Orthodox"
+            ]
+        },
+        {
+            "date": "2027-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "International Worker's Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1365,6 +1365,14 @@ export const holidays_AL: CountryHolidays = {
             ]
         },
         {
+            "date": "2028-02-28",
+            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Day off for Eid al-Fitr (Provisional)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
             "date": "2028-03-08",
             "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
             "name": "Mother's Day",
@@ -1423,19 +1431,19 @@ export const holidays_AL: CountryHolidays = {
         },
         {
             "date": "2028-04-15",
-            "localName": "Holy Saturday is the day before Easter Sunday.",
-            "name": "Holy Saturday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-04-15",
             "localName": "The Saturday before Easter Sunday is also known as Holy Saturday for many Orthodox churches worldwide.",
             "name": "Easter Saturday (Orthodox)",
             "type": [
                 "Observance",
                 "Orthodox"
+            ]
+        },
+        {
+            "date": "2028-04-15",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Holy Saturday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1465,6 +1473,14 @@ export const holidays_AL: CountryHolidays = {
         },
         {
             "date": "2028-04-17",
+            "localName": "Day off for Easter Sunday (Orthodox) is a national holiday in Albania",
+            "name": "Day off for Easter Sunday (Orthodox)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-04-17",
             "localName": "Easter Monday is the day after Easter Sunday.",
             "name": "Easter Monday",
             "type": [
@@ -1478,14 +1494,6 @@ export const holidays_AL: CountryHolidays = {
             "type": [
                 "Observance",
                 "Orthodox"
-            ]
-        },
-        {
-            "date": "2028-04-17",
-            "localName": "Day off for Easter Sunday (Orthodox) is a national holiday in Albania",
-            "name": "Day off for Easter Sunday (Orthodox)",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -1614,40 +1622,6 @@ export const holidays_AL: CountryHolidays = {
             "name": "New Year's Eve",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2028-02-28",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Day off for Eid al-Fitr (Provisional)",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-12-22",
-            "endDate": "2026-01-02",
-            "localName": "Christmas holidays",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-30",
-            "endDate": "2026-04-03",
-            "localName": "Spring holidays",
-            "name": "Spring holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-06-13",
-            "localName": "End of lessons\"",
-            "name": "End of lessons\"",
-            "type": [
-                "School Holiday"
             ]
         }
     ]

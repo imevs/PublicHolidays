@@ -30,18 +30,18 @@ export const holidays_PT: CountryHolidays = {
         },
         {
             "date": "2024-03-19",
-            "localName": "St. Joseph's Day is a district holiday in Portugal",
-            "name": "St. Joseph's Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-03-19",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2024-03-19",
+            "localName": "St. Joseph's Day is a district holiday in Portugal",
+            "name": "St. Joseph's Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -62,18 +62,18 @@ export const holidays_PT: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in Portugal",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-03-31",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -374,18 +374,18 @@ export const holidays_PT: CountryHolidays = {
         },
         {
             "date": "2025-03-19",
-            "localName": "St. Joseph's Day is a district holiday in Portugal",
-            "name": "St. Joseph's Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-03-19",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2025-03-19",
+            "localName": "St. Joseph's Day is a district holiday in Portugal",
+            "name": "St. Joseph's Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -718,18 +718,18 @@ export const holidays_PT: CountryHolidays = {
         },
         {
             "date": "2026-03-19",
-            "localName": "St. Joseph's Day is a district holiday in Portugal",
-            "name": "St. Joseph's Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-03-19",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2026-03-19",
+            "localName": "St. Joseph's Day is a district holiday in Portugal",
+            "name": "St. Joseph's Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -1070,18 +1070,18 @@ export const holidays_PT: CountryHolidays = {
         },
         {
             "date": "2027-03-19",
-            "localName": "St. Joseph's Day is a district holiday in Portugal",
-            "name": "St. Joseph's Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-03-19",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2027-03-19",
+            "localName": "St. Joseph's Day is a district holiday in Portugal",
+            "name": "St. Joseph's Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -1102,18 +1102,18 @@ export const holidays_PT: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-03-28",
             "localName": "Daylight Saving Time starts in Portugal",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1406,18 +1406,18 @@ export const holidays_PT: CountryHolidays = {
         },
         {
             "date": "2028-03-19",
-            "localName": "St. Joseph's Day is a district holiday in Portugal",
-            "name": "St. Joseph's Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-03-19",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2028-03-19",
+            "localName": "St. Joseph's Day is a district holiday in Portugal",
+            "name": "St. Joseph's Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -1829,48 +1829,6 @@ export const holidays_PT: CountryHolidays = {
             "endDate": "2027-12-31",
             "localName": "Christmas holidays",
             "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-02-28",
-            "endDate": "2028-03-01",
-            "localName": "Carnival holidays",
-            "name": "Carnival holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-04-03",
-            "endDate": "2028-04-17",
-            "localName": "Easter holidays",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-06-07",
-            "localName": "9th, 11th and 12th grades",
-            "name": "End of lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-06-14",
-            "localName": "5th, 6th, 7th, 8th and 10th grades",
-            "name": "End of lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-06-30",
-            "localName": "Pre-school education and 1st, 2nd, 3rd and 4th grades",
-            "name": "End of lessons",
             "type": [
                 "School Holiday"
             ]

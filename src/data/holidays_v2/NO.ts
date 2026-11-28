@@ -31,16 +31,16 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2024-02-11",
-            "localName": "Mother's Day is on the second Sunday in February in Norway.",
-            "name": "Mother's Day",
+            "localName": "For Carnival, Norwegians traditionally serve wheat buns filled with whipped cream.",
+            "name": "Carnival",
             "type": [
                 "Observance"
             ]
         },
         {
             "date": "2024-02-11",
-            "localName": "For Carnival, Norwegians traditionally serve wheat buns filled with whipped cream.",
-            "name": "Carnival",
+            "localName": "Mother's Day is on the second Sunday in February in Norway.",
+            "name": "Mother's Day",
             "type": [
                 "Observance"
             ]
@@ -111,19 +111,19 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
+            "localName": "Daylight Saving Time starts in Norway",
+            "name": "Daylight Saving Time starts",
+            "type": [
+                "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-03-31",
             "localName": "Easter Sunday is a day off for most in Norway.",
             "name": "Easter Sunday",
             "type": [
                 "National holiday",
                 "Flag day"
-            ]
-        },
-        {
-            "date": "2024-03-31",
-            "localName": "Daylight Saving Time starts in Norway",
-            "name": "Daylight Saving Time starts",
-            "type": [
-                "Clock change/Daylight Saving Time"
             ]
         },
         {
@@ -154,7 +154,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2024-05-09",
-            "localName": "",
+            "localName": "Ascension Day",
             "name": "Ascension Day",
             "type": [
                 "National holiday"
@@ -220,7 +220,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2024-06-24",
-            "localName": "",
+            "localName": "St. John's Day",
             "name": "St. John's Day",
             "type": [
                 "Observance"
@@ -276,18 +276,18 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2024-10-27",
-            "localName": "Repentance Day is a observance in Norway",
-            "name": "Repentance Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-10-27",
             "localName": "Daylight Saving Time ends in Norway",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-10-27",
+            "localName": "Repentance Day is a observance in Norway",
+            "name": "Repentance Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -316,7 +316,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2024-12-01",
-            "localName": "",
+            "localName": "First Advent Sunday",
             "name": "First Advent Sunday",
             "type": [
                 "Observance"
@@ -546,18 +546,10 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2025-05-29",
-            "localName": "",
+            "localName": "Ascension Day",
             "name": "Ascension Day",
             "type": [
                 "National holiday"
-            ]
-        },
-        {
-            "date": "2025-06-07",
-            "localName": "Whit Saturday is not a public holiday in Norway, but shops close earlier than normal.",
-            "name": "Pentecost Eve",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -566,6 +558,14 @@ export const holidays_NO: CountryHolidays = {
             "name": "Dissolution of Union With Sweden (1905)",
             "type": [
                 "Flag day"
+            ]
+        },
+        {
+            "date": "2025-06-07",
+            "localName": "Whit Saturday is not a public holiday in Norway, but shops close earlier than normal.",
+            "name": "Pentecost Eve",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -603,7 +603,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2025-06-24",
-            "localName": "",
+            "localName": "St. John's Day",
             "name": "St. John's Day",
             "type": [
                 "Observance"
@@ -643,7 +643,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2025-09-08",
-            "localName": "",
+            "localName": "Election Day",
             "name": "Election Day",
             "type": [
                 "Flag day"
@@ -667,18 +667,18 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2025-10-26",
-            "localName": "Repentance Day is a observance in Norway",
-            "name": "Repentance Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-10-26",
             "localName": "Daylight Saving Time ends in Norway",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2025-10-26",
+            "localName": "Repentance Day is a observance in Norway",
+            "name": "Repentance Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -707,7 +707,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2025-11-30",
-            "localName": "",
+            "localName": "First Advent Sunday",
             "name": "First Advent Sunday",
             "type": [
                 "Observance"
@@ -731,18 +731,18 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2025-12-21",
-            "localName": "Fourth Advent Sunday is a observance in Norway",
-            "name": "Fourth Advent Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-12-21",
             "localName": "December Solstice in Norway (Oslo)",
             "name": "December Solstice",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2025-12-21",
+            "localName": "Fourth Advent Sunday is a observance in Norway",
+            "name": "Fourth Advent Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -853,18 +853,18 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2026-03-29",
-            "localName": "Palm Sunday is the Sunday before Easter Sunday and commemorates Jesus' arrival in Jerusalem.",
-            "name": "Palm Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-03-29",
             "localName": "Daylight Saving Time starts in Norway",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2026-03-29",
+            "localName": "Palm Sunday is the Sunday before Easter Sunday and commemorates Jesus' arrival in Jerusalem.",
+            "name": "Palm Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -928,7 +928,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2026-05-14",
-            "localName": "",
+            "localName": "Ascension Day",
             "name": "Ascension Day",
             "type": [
                 "National holiday"
@@ -994,7 +994,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2026-06-24",
-            "localName": "",
+            "localName": "St. John's Day",
             "name": "St. John's Day",
             "type": [
                 "Observance"
@@ -1050,18 +1050,18 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2026-10-25",
-            "localName": "Repentance Day is a observance in Norway",
-            "name": "Repentance Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-10-25",
             "localName": "Daylight Saving Time ends in Norway",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2026-10-25",
+            "localName": "Repentance Day is a observance in Norway",
+            "name": "Repentance Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1090,7 +1090,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2026-11-29",
-            "localName": "",
+            "localName": "First Advent Sunday",
             "name": "First Advent Sunday",
             "type": [
                 "Observance"
@@ -1268,19 +1268,19 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
+            "localName": "Daylight Saving Time starts in Norway",
+            "name": "Daylight Saving Time starts",
+            "type": [
+                "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
             "localName": "Easter Sunday is a day off for most in Norway.",
             "name": "Easter Sunday",
             "type": [
                 "National holiday",
                 "Flag day"
-            ]
-        },
-        {
-            "date": "2027-03-28",
-            "localName": "Daylight Saving Time starts in Norway",
-            "name": "Daylight Saving Time starts",
-            "type": [
-                "Clock change/Daylight Saving Time"
             ]
         },
         {
@@ -1302,7 +1302,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2027-05-06",
-            "localName": "",
+            "localName": "Ascension Day",
             "name": "Ascension Day",
             "type": [
                 "National holiday"
@@ -1377,7 +1377,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2027-06-24",
-            "localName": "",
+            "localName": "St. John's Day",
             "name": "St. John's Day",
             "type": [
                 "Observance"
@@ -1433,10 +1433,10 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2027-10-31",
-            "localName": "Repentance Day is a observance in Norway",
-            "name": "Repentance Day",
+            "localName": "Daylight Saving Time ends in Norway",
+            "name": "Daylight Saving Time ends",
             "type": [
-                "Observance"
+                "Clock change/Daylight Saving Time"
             ]
         },
         {
@@ -1449,10 +1449,10 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2027-10-31",
-            "localName": "Daylight Saving Time ends in Norway",
-            "name": "Daylight Saving Time ends",
+            "localName": "Repentance Day is a observance in Norway",
+            "name": "Repentance Day",
             "type": [
-                "Clock change/Daylight Saving Time"
+                "Observance"
             ]
         },
         {
@@ -1473,7 +1473,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2027-11-28",
-            "localName": "",
+            "localName": "First Advent Sunday",
             "name": "First Advent Sunday",
             "type": [
                 "Observance"
@@ -1703,7 +1703,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2028-05-25",
-            "localName": "",
+            "localName": "Ascension Day",
             "name": "Ascension Day",
             "type": [
                 "National holiday"
@@ -1760,7 +1760,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2028-06-24",
-            "localName": "",
+            "localName": "St. John's Day",
             "name": "St. John's Day",
             "type": [
                 "Observance"
@@ -1816,18 +1816,18 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2028-10-29",
-            "localName": "Repentance Day is a observance in Norway",
-            "name": "Repentance Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-10-29",
             "localName": "Daylight Saving Time ends in Norway",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2028-10-29",
+            "localName": "Repentance Day is a observance in Norway",
+            "name": "Repentance Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1856,7 +1856,7 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2028-12-03",
-            "localName": "",
+            "localName": "First Advent Sunday",
             "name": "First Advent Sunday",
             "type": [
                 "Observance"
@@ -1888,16 +1888,16 @@ export const holidays_NO: CountryHolidays = {
         },
         {
             "date": "2028-12-24",
-            "localName": "Fourth Advent Sunday is a observance in Norway",
-            "name": "Fourth Advent Sunday",
+            "localName": "Norwegians exchange gifts and get together for the main Christmas celebrations on December 24.",
+            "name": "Christmas Eve",
             "type": [
                 "Observance"
             ]
         },
         {
             "date": "2028-12-24",
-            "localName": "Norwegians exchange gifts and get together for the main Christmas celebrations on December 24.",
-            "name": "Christmas Eve",
+            "localName": "Fourth Advent Sunday is a observance in Norway",
+            "name": "Fourth Advent Sunday",
             "type": [
                 "Observance"
             ]

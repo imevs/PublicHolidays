@@ -1093,6 +1093,14 @@ export const holidays_KR: CountryHolidays = {
             ]
         },
         {
+            "date": "2028-01-26",
+            "localName": "Provisional Korean lunar-calendar forecast for the day before Seollal; the 2028 official almanac has not been verified.",
+            "name": "Seollal Holiday (provisional forecast)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
             "date": "2028-01-27",
             "localName": "Provisional Korean lunar-calendar forecast for the three-day Seollal holiday under the public holiday regulation. The 2028 official almanac has not yet been verified.",
             "name": "Seollal (Provisional)",
@@ -1138,6 +1146,14 @@ export const holidays_KR: CountryHolidays = {
             "name": "Arbor Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2028-04-12",
+            "localName": "Regular National Assembly election date calculated under Public Official Election Act Article 34: the first Wednesday after the date 50 days before the term ends on 29 May 2028. Regular election days are public holidays under the public holiday regulation.",
+            "name": "National Assembly Election Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1261,6 +1277,14 @@ export const holidays_KR: CountryHolidays = {
             ]
         },
         {
+            "date": "2028-10-05",
+            "localName": "Provisional substitute after the Chuseok period because 3 October coincides with National Foundation Day. Based on the public holiday regulation and Korean lunar calendar; awaiting the official 2028 almanac.",
+            "name": "Chuseok Substitute (provisional forecast)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
             "date": "2028-10-09",
             "localName": "Hangeul Proclamation Day is a national holiday in South Korea",
             "name": "Hangeul Proclamation Day",
@@ -1306,30 +1330,6 @@ export const holidays_KR: CountryHolidays = {
             "name": "New Year's Eve",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2028-01-26",
-            "localName": "Provisional Korean lunar-calendar forecast for the day before Seollal; the 2028 official almanac has not been verified.",
-            "name": "Seollal Holiday (provisional forecast)",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2028-10-05",
-            "localName": "Provisional substitute after the Chuseok period because 3 October coincides with National Foundation Day. Based on the public holiday regulation and Korean lunar calendar; awaiting the official 2028 almanac.",
-            "name": "Chuseok Substitute (provisional forecast)",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2028-04-12",
-            "localName": "Regular National Assembly election date calculated under Public Official Election Act Article 34: the first Wednesday after the date 50 days before the term ends on 29 May 2028. Regular election days are public holidays under the public holiday regulation.",
-            "name": "National Assembly Election Day",
-            "type": [
-                "National holiday"
             ]
         }
     ]

@@ -58,19 +58,19 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2024-01-25",
+            "localName": "Burns Night celebrates the life and work of Robert Burns and Scottish culture in general. It is on or around January 25 each year.",
+            "name": "Burns Night",
+            "type": [
+                "Local observance"
+            ]
+        },
+        {
+            "date": "2024-01-25",
             "localName": "Tu B'Shevat is known as the “New Year for Trees”, is one of the four Jewish New Years.",
             "name": "Tu B'Shevat",
             "type": [
                 "Observance",
                 "Hebrew"
-            ]
-        },
-        {
-            "date": "2024-01-25",
-            "localName": "Burns Night celebrates the life and work of Robert Burns and Scottish culture in general. It is on or around January 25 each year.",
-            "name": "Burns Night",
-            "type": [
-                "Local observance"
             ]
         },
         {
@@ -224,15 +224,6 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection. The Easter egg hunt is one of the most popular Easter traditions",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in the United Kingdom",
             "name": "Daylight Saving Time starts",
             "type": [
@@ -240,11 +231,11 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-04-01",
-            "localName": "Easter Monday is the day after Easter Sunday. It is a bank holiday in England, Wales and Northern Ireland but not in Scotland.",
-            "name": "Easter Monday",
+            "date": "2024-03-31",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection. The Easter egg hunt is one of the most popular Easter traditions",
+            "name": "Easter Sunday",
             "type": [
-                "Local observance",
+                "Observance",
                 "Christian"
             ]
         },
@@ -294,19 +285,19 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2024-04-23",
+            "localName": "National Shakespeare Day, also known as Shakespeare Day, is annually held on April 23.",
+            "name": "Shakespeare Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2024-04-23",
             "localName": "St George's Day in England is a celebration of Saint George, a Christian martyr and soldier in the Roman army.",
             "name": "St. George's Day",
             "type": [
                 "Local observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2024-04-23",
-            "localName": "National Shakespeare Day, also known as Shakespeare Day, is annually held on April 23.",
-            "name": "Shakespeare Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -338,6 +329,15 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2024-05-05",
+            "localName": "Many Orthodox Christians in the United Kingdom commemorate Jesus Christ's resurrection on Easter Day, also known as Pascha.",
+            "name": "Orthodox Easter",
+            "type": [
+                "Observance",
+                "Orthodox"
+            ]
+        },
+        {
+            "date": "2024-05-05",
             "localName": "Yom Hashoah, held on the 27th day of the month of Nisan, remembers the Holocaust victims who died during World War II.",
             "name": "Yom HaShoah",
             "type": [
@@ -346,12 +346,11 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-05-05",
-            "localName": "Many Orthodox Christians in the United Kingdom commemorate Jesus Christ's resurrection on Easter Day, also known as Pascha.",
-            "name": "Orthodox Easter",
+            "date": "2024-05-06",
+            "localName": "May Day, or the Early May Bank holiday, is on the first Monday of May each year.",
+            "name": "Early May Bank Holiday",
             "type": [
-                "Observance",
-                "Orthodox"
+                "National holiday"
             ]
         },
         {
@@ -361,14 +360,6 @@ export const holidays_GB: CountryHolidays = {
             "type": [
                 "Observance",
                 "Orthodox"
-            ]
-        },
-        {
-            "date": "2024-05-06",
-            "localName": "May Day, or the Early May Bank holiday, is on the first Monday of May each year.",
-            "name": "Early May Bank Holiday",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -409,20 +400,20 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2024-05-26",
-            "localName": "Trinity Sunday, which is the first Sunday after Pentecost, is a Christian feast that is observed in many churches in the United Kingdom.",
-            "name": "Trinity Sunday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2024-05-26",
             "localName": "Jewish people observe Lag BaOmer on the 18th day of the month of Iyar in the Jewish calendar.",
             "name": "Lag B'Omer",
             "type": [
                 "Observance",
                 "Hebrew"
+            ]
+        },
+        {
+            "date": "2024-05-26",
+            "localName": "Trinity Sunday, which is the first Sunday after Pentecost, is a Christian feast that is observed in many churches in the United Kingdom.",
+            "name": "Trinity Sunday",
+            "type": [
+                "Observance",
+                "Christian"
             ]
         },
         {
@@ -546,8 +537,8 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2024-08-26",
-            "localName": "Janmashtami (Smarta) is a Hindu holiday in the United Kingdom",
-            "name": "Janmashtami (Smarta)",
+            "localName": "Krishna Janmashtami is a Hindu festival that celebrates the birth of Krishna, the eighth incarnation of the god Vishnu. It is celebrated on the eighth day of the Hindu month of Bhadrava (Bhadrapada), which is usually in August or September.",
+            "name": "Janmashtami",
             "type": [
                 "Observance",
                 "Hinduism"
@@ -555,8 +546,8 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2024-08-26",
-            "localName": "Krishna Janmashtami is a Hindu festival that celebrates the birth of Krishna, the eighth incarnation of the god Vishnu. It is celebrated on the eighth day of the Hindu month of Bhadrava (Bhadrapada), which is usually in August or September.",
-            "name": "Janmashtami",
+            "localName": "Janmashtami (Smarta) is a Hindu holiday in the United Kingdom",
+            "name": "Janmashtami (Smarta)",
             "type": [
                 "Observance",
                 "Hinduism"
@@ -782,19 +773,19 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2024-12-26",
+            "localName": "Boxing Day is a holiday in the United Kingdom that falls on December 26 each year.",
+            "name": "Boxing Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-12-26",
             "localName": "Jewish people around the world celebrate Hanukkah to commemorate an event traditionally termed the miracle of the cruse of oil.",
             "name": "First Day of Hanukkah",
             "type": [
                 "Observance",
                 "Hebrew"
-            ]
-        },
-        {
-            "date": "2024-12-26",
-            "localName": "Boxing Day is a holiday in the United Kingdom that falls on December 26 each year.",
-            "name": "Boxing Day",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -815,19 +806,19 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2025-01-02",
+            "localName": "January 2 is an annual bank holiday and the last day of the Hogmanay (New Year) celebrations in Scotland.",
+            "name": "2nd January",
+            "type": [
+                "Local holiday"
+            ]
+        },
+        {
+            "date": "2025-01-02",
             "localName": "The eighth and last day of Hanukkah marks the end of a period in which Jews commemorate the miracle of the cruse of oil.",
             "name": "Last day of Hanukkah",
             "type": [
                 "Observance",
                 "Hebrew"
-            ]
-        },
-        {
-            "date": "2025-01-02",
-            "localName": "January 2 is an annual bank holiday and the last day of the Hogmanay (New Year) celebrations in Scotland.",
-            "name": "2nd January",
-            "type": [
-                "Local holiday"
             ]
         },
         {
@@ -999,6 +990,14 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2025-03-30",
+            "localName": "Daylight Saving Time starts in the United Kingdom",
+            "name": "Daylight Saving Time starts",
+            "type": [
+                "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2025-03-30",
             "localName": "Eid ul-Fitr is a Muslim celebration that marks the end of the month-long fast of Ramadan.",
             "name": "Eid ul Fitr",
             "type": [
@@ -1015,14 +1014,6 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-03-30",
-            "localName": "Daylight Saving Time starts in the United Kingdom",
-            "name": "Daylight Saving Time starts",
-            "type": [
-                "Clock change/Daylight Saving Time"
-            ]
-        },
-        {
             "date": "2025-03-31",
             "localName": "Eid ul-Fitr is a Muslim celebration that marks the end of the month-long fast of Ramadan.",
             "name": "Eid ul Fitr",
@@ -1033,20 +1024,20 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2025-04-13",
-            "localName": "Palm Sunday in the United Kingdom celebrates Jesus Christ's entry into Jerusalem. It is also the Sunday before Easter Sunday.",
-            "name": "Palm Sunday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2025-04-13",
             "localName": "Passover marks the Israelites' liberation from slavery and their exodus from Egypt around 3000 years ago.",
             "name": "First day of Passover",
             "type": [
                 "Observance",
                 "Hebrew"
+            ]
+        },
+        {
+            "date": "2025-04-13",
+            "localName": "Palm Sunday in the United Kingdom celebrates Jesus Christ's entry into Jerusalem. It is also the Sunday before Easter Sunday.",
+            "name": "Palm Sunday",
+            "type": [
+                "Observance",
+                "Christian"
             ]
         },
         {
@@ -1060,20 +1051,20 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2025-04-18",
-            "localName": "Many Orthodox Christians in the United Kingdom remember the events leading up to Jesus Christ's crucifixion on Great Friday, also known as Holy Friday.",
-            "name": "Orthodox Good Friday",
-            "type": [
-                "Observance",
-                "Orthodox"
-            ]
-        },
-        {
-            "date": "2025-04-18",
             "localName": "Good Friday is just before Easter Sunday and is a public holiday in the United Kingdom.",
             "name": "Good Friday",
             "type": [
                 "National holiday",
                 "Christian"
+            ]
+        },
+        {
+            "date": "2025-04-18",
+            "localName": "Many Orthodox Christians in the United Kingdom remember the events leading up to Jesus Christ's crucifixion on Great Friday, also known as Holy Friday.",
+            "name": "Orthodox Good Friday",
+            "type": [
+                "Observance",
+                "Orthodox"
             ]
         },
         {
@@ -1096,6 +1087,15 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2025-04-20",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection. The Easter egg hunt is one of the most popular Easter traditions",
+            "name": "Easter Sunday",
+            "type": [
+                "Observance",
+                "Christian"
+            ]
+        },
+        {
+            "date": "2025-04-20",
             "localName": "On the 8th and last day of Passover, Jews in the UK commemorate the Parting of the Red Sea and the Israelites' escape from Egypt.",
             "name": "Last day of Passover",
             "type": [
@@ -1113,12 +1113,12 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-20",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection. The Easter egg hunt is one of the most popular Easter traditions",
-            "name": "Easter Sunday",
+            "date": "2025-04-21",
+            "localName": "Easter Monday is the day after Easter Sunday. It is a bank holiday in England, Wales and Northern Ireland but not in Scotland.",
+            "name": "Easter Monday",
             "type": [
-                "Observance",
-                "Christian"
+                "Christian",
+                "Common local holiday"
             ]
         },
         {
@@ -1131,27 +1131,17 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-21",
-            "localName": "Easter Monday is the day after Easter Sunday. It is a bank holiday in England, Wales and Northern Ireland but not in Scotland.",
-            "name": "Easter Monday",
-            "type": [
-                "Local observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2025-04-21",
-            "localName": "Easter Monday is the day after Easter Sunday. It is a bank holiday in England, Wales and Northern Ireland but not in Scotland.",
-            "name": "Easter Monday",
-            "type": [
-                "Christian",
-                "Common local holiday"
-            ]
-        },
-        {
             "date": "2025-04-22",
             "localName": "Stephen Lawrence Day is an annual observance in the UK commemorating the racially motivated murder of Stephen Lawrence.",
             "name": "Stephen Lawrence Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-04-23",
+            "localName": "National Shakespeare Day, also known as Shakespeare Day, is annually held on April 23.",
+            "name": "Shakespeare Day",
             "type": [
                 "Observance"
             ]
@@ -1163,14 +1153,6 @@ export const holidays_GB: CountryHolidays = {
             "type": [
                 "Local observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2025-04-23",
-            "localName": "National Shakespeare Day, also known as Shakespeare Day, is annually held on April 23.",
-            "name": "Shakespeare Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1280,19 +1262,19 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2025-06-15",
+            "localName": "Father's Day in the United Kingdom honors fathers and celebrates fatherhood.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-06-15",
             "localName": "Trinity Sunday, which is the first Sunday after Pentecost, is a Christian feast that is observed in many churches in the United Kingdom.",
             "name": "Trinity Sunday",
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2025-06-15",
-            "localName": "Father's Day in the United Kingdom honors fathers and celebrates fatherhood.",
-            "name": "Father's Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1774,19 +1756,19 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2026-02-17",
-            "localName": "Lunar New Year in the United Kingdom (UK) marks the start of the New Year in the Chinese calendar.",
-            "name": "Lunar New Year",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-02-17",
             "localName": "Shrove Tuesday is also known as Pancake Tuesday in the United Kingdom.",
             "name": "Carnival / Shrove Tuesday / Pancake Day",
             "type": [
                 "Observance",
                 "Christian"
+            ]
+        },
+        {
+            "date": "2026-02-17",
+            "localName": "Lunar New Year in the United Kingdom (UK) marks the start of the New Year in the Chinese calendar.",
+            "name": "Lunar New Year",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1853,19 +1835,19 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2026-03-20",
-            "localName": "March Equinox in the United Kingdom (London)",
-            "name": "March Equinox",
-            "type": [
-                "Season"
-            ]
-        },
-        {
-            "date": "2026-03-20",
             "localName": "Eid ul-Fitr is a Muslim celebration that marks the end of the month-long fast of Ramadan. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
             "name": "Eid ul Fitr (Provisional)",
             "type": [
                 "Observance",
                 "Muslim"
+            ]
+        },
+        {
+            "date": "2026-03-20",
+            "localName": "March Equinox in the United Kingdom (London)",
+            "name": "March Equinox",
+            "type": [
+                "Season"
             ]
         },
         {
@@ -1927,15 +1909,6 @@ export const holidays_GB: CountryHolidays = {
             "name": "Easter Sunday",
             "type": [
                 "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2026-04-06",
-            "localName": "Easter Monday is the day after Easter Sunday. It is a bank holiday in England, Wales and Northern Ireland but not in Scotland.",
-            "name": "Easter Monday",
-            "type": [
-                "Local observance",
                 "Christian"
             ]
         },
@@ -2082,19 +2055,19 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2026-05-25",
-            "localName": "The spring bank holiday in the United Kingdom is on the last Monday of May each year.",
-            "name": "Spring Bank Holiday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-05-25",
             "localName": "Whit Monday is a Christian observance also known as Pentecost Monday. It is the day after Pentecost, or Whitsunday.",
             "name": "Pentecost Monday",
             "type": [
                 "Observance",
                 "Christian"
+            ]
+        },
+        {
+            "date": "2026-05-25",
+            "localName": "The spring bank holiday in the United Kingdom is on the last Monday of May each year.",
+            "name": "Spring Bank Holiday",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -2151,18 +2124,18 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2026-06-21",
-            "localName": "June Solstice in the United Kingdom (London)",
-            "name": "June Solstice",
-            "type": [
-                "Season"
-            ]
-        },
-        {
-            "date": "2026-06-21",
             "localName": "Father's Day in the United Kingdom honors fathers and celebrates fatherhood.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2026-06-21",
+            "localName": "June Solstice in the United Kingdom (London)",
+            "name": "June Solstice",
+            "type": [
+                "Season"
             ]
         },
         {
@@ -2314,20 +2287,20 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2026-10-04",
-            "localName": "Simchat Torah (Simchas Torah or Simhat Torah) is a Jewish holiday that celebrates the completion of the annual reading of the Torah.",
-            "name": "Simchat Torah",
-            "type": [
-                "Observance",
-                "Hebrew"
-            ]
-        },
-        {
-            "date": "2026-10-04",
             "localName": "Many churches in the United Kingdom celebrate the Feast of St Francis of Assisi to honor St Francis, the patron saint of animals and the environment, on October 4 each year.",
             "name": "Feast of St Francis of Assisi",
             "type": [
                 "Observance",
                 "Christian"
+            ]
+        },
+        {
+            "date": "2026-10-04",
+            "localName": "Simchat Torah (Simchas Torah or Simhat Torah) is a Jewish holiday that celebrates the completion of the annual reading of the Torah.",
+            "name": "Simchat Torah",
+            "type": [
+                "Observance",
+                "Hebrew"
             ]
         },
         {
@@ -2502,20 +2475,20 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2027-01-06",
-            "localName": "Isra and Mi'raj (Isra Me'raj, Israa and Mi'raaj, Laylat Al-Isra wa Al-Miraj, Lailat al Miraj, Night Journey and Ascension to Heaven) marks the night that the Prophet Mohammad traveled from Mecca to Jerusalem, ascended to heaven and returned. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Isra and Mi'raj (Provisional)",
-            "type": [
-                "Observance",
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2027-01-06",
             "localName": "Epiphany marks the visit of the Magi to Jesus and celebrates the revelation of God incarnate as Jesus Christ.",
             "name": "Epiphany",
             "type": [
                 "Observance",
                 "Christian"
+            ]
+        },
+        {
+            "date": "2027-01-06",
+            "localName": "Isra and Mi'raj (Isra Me'raj, Israa and Mi'raaj, Laylat Al-Isra wa Al-Miraj, Lailat al Miraj, Night Journey and Ascension to Heaven) marks the night that the Prophet Mohammad traveled from Mecca to Jerusalem, ascended to heaven and returned. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Isra and Mi'raj (Provisional)",
+            "type": [
+                "Observance",
+                "Muslim"
             ]
         },
         {
@@ -2695,15 +2668,6 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection. The Easter egg hunt is one of the most popular Easter traditions",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2027-03-28",
             "localName": "Daylight Saving Time starts in the United Kingdom",
             "name": "Daylight Saving Time starts",
             "type": [
@@ -2711,11 +2675,11 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-03-29",
-            "localName": "Easter Monday is the day after Easter Sunday. It is a bank holiday in England, Wales and Northern Ireland but not in Scotland.",
-            "name": "Easter Monday",
+            "date": "2027-03-28",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection. The Easter egg hunt is one of the most popular Easter traditions",
+            "name": "Easter Sunday",
             "type": [
-                "Local observance",
+                "Observance",
                 "Christian"
             ]
         },
@@ -2747,19 +2711,19 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2027-04-23",
+            "localName": "National Shakespeare Day, also known as Shakespeare Day, is annually held on April 23.",
+            "name": "Shakespeare Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-04-23",
             "localName": "St George's Day in England is a celebration of Saint George, a Christian martyr and soldier in the Roman army.",
             "name": "St. George's Day",
             "type": [
                 "Local observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2027-04-23",
-            "localName": "National Shakespeare Day, also known as Shakespeare Day, is annually held on April 23.",
-            "name": "Shakespeare Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -2800,19 +2764,19 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2027-05-03",
+            "localName": "May Day, or the Early May Bank holiday, is on the first Monday of May each year.",
+            "name": "Early May Bank Holiday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-05-03",
             "localName": "Many Orthodox churches in the United Kingdom observe Easter Monday on the day after the Orthodox Easter Sunday date.",
             "name": "Orthodox Easter Monday",
             "type": [
                 "Observance",
                 "Orthodox"
-            ]
-        },
-        {
-            "date": "2027-05-03",
-            "localName": "May Day, or the Early May Bank holiday, is on the first Monday of May each year.",
-            "name": "Early May Bank Holiday",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -2853,20 +2817,20 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2027-05-17",
-            "localName": "Whit Monday is a Christian observance also known as Pentecost Monday. It is the day after Pentecost, or Whitsunday.",
-            "name": "Pentecost Monday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2027-05-17",
             "localName": "Eid ul-Adha is an Islamic festival to remember Ibrahim's willingness to sacrifice his son to God. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
             "name": "Eid al-Adha (Provisional)",
             "type": [
                 "Observance",
                 "Muslim"
+            ]
+        },
+        {
+            "date": "2027-05-17",
+            "localName": "Whit Monday is a Christian observance also known as Pentecost Monday. It is the day after Pentecost, or Whitsunday.",
+            "name": "Pentecost Monday",
+            "type": [
+                "Observance",
+                "Christian"
             ]
         },
         {
@@ -3008,8 +2972,8 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2027-08-25",
-            "localName": "Janmashtami (Smarta) is a Hindu holiday in the United Kingdom",
-            "name": "Janmashtami (Smarta)",
+            "localName": "Krishna Janmashtami is a Hindu festival that celebrates the birth of Krishna, the eighth incarnation of the god Vishnu. It is celebrated on the eighth day of the Hindu month of Bhadrava (Bhadrapada), which is usually in August or September.",
+            "name": "Janmashtami",
             "type": [
                 "Observance",
                 "Hinduism"
@@ -3017,8 +2981,8 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2027-08-25",
-            "localName": "Krishna Janmashtami is a Hindu festival that celebrates the birth of Krishna, the eighth incarnation of the god Vishnu. It is celebrated on the eighth day of the Hindu month of Bhadrava (Bhadrapada), which is usually in August or September.",
-            "name": "Janmashtami",
+            "localName": "Janmashtami (Smarta) is a Hindu holiday in the United Kingdom",
+            "name": "Janmashtami (Smarta)",
             "type": [
                 "Observance",
                 "Hinduism"
@@ -3105,18 +3069,18 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2027-10-31",
-            "localName": "Halloween is an observance celebrated at the end of October by holding parties, dressing up and going 'trick-or-treating'.",
-            "name": "Halloween",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-10-31",
             "localName": "Daylight Saving Time ends in the United Kingdom",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-10-31",
+            "localName": "Halloween is an observance celebrated at the end of October by holding parties, dressing up and going 'trick-or-treating'.",
+            "name": "Halloween",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -3199,6 +3163,15 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2027-12-25",
+            "localName": "Christmas Day is a holiday that traditionally celebrates Jesus Christ's birth. It is on December 25 in the United Kingdom.",
+            "name": "Christmas Day",
+            "type": [
+                "National holiday",
+                "Christian"
+            ]
+        },
+        {
+            "date": "2027-12-25",
             "localName": "Jewish people around the world celebrate Hanukkah to commemorate an event traditionally termed the miracle of the cruse of oil.",
             "name": "First Day of Hanukkah",
             "type": [
@@ -3207,12 +3180,11 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-12-25",
-            "localName": "Christmas Day is a holiday that traditionally celebrates Jesus Christ's birth. It is on December 25 in the United Kingdom.",
-            "name": "Christmas Day",
+            "date": "2027-12-26",
+            "localName": "Boxing Day is a holiday in the United Kingdom that falls on December 26 each year.",
+            "name": "Boxing Day",
             "type": [
-                "National holiday",
-                "Christian"
+                "National holiday"
             ]
         },
         {
@@ -3222,14 +3194,6 @@ export const holidays_GB: CountryHolidays = {
             "type": [
                 "Observance",
                 "Muslim"
-            ]
-        },
-        {
-            "date": "2027-12-26",
-            "localName": "Boxing Day is a holiday in the United Kingdom that falls on December 26 each year.",
-            "name": "Boxing Day",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -3396,19 +3360,19 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2028-03-01",
-            "localName": "People in Wales and Welsh communities around the world celebrate the life of their patron saint, St David, and the culture of their country on St David's Day.",
-            "name": "St. David's Day",
+            "localName": "Ash Wednesday is a Christian observance in the United Kingdom. It is the first day of Lent.",
+            "name": "Carnival / Ash Wednesday",
             "type": [
-                "Local observance",
+                "Observance",
                 "Christian"
             ]
         },
         {
             "date": "2028-03-01",
-            "localName": "Ash Wednesday is a Christian observance in the United Kingdom. It is the first day of Lent.",
-            "name": "Carnival / Ash Wednesday",
+            "localName": "People in Wales and Welsh communities around the world celebrate the life of their patron saint, St David, and the culture of their country on St David's Day.",
+            "name": "St. David's Day",
             "type": [
-                "Observance",
+                "Local observance",
                 "Christian"
             ]
         },
@@ -3440,18 +3404,18 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2028-03-26",
-            "localName": "Mother's Day, or Mothering Sunday, is traditionally a day to visit your mother church. It is now an occasion to bring gifts to your own mother.",
-            "name": "Mother's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-03-26",
             "localName": "Daylight Saving Time starts in the United Kingdom",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2028-03-26",
+            "localName": "Mother's Day, or Mothering Sunday, is traditionally a day to visit your mother church. It is now an occasion to bring gifts to your own mother.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -3483,20 +3447,20 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2028-04-14",
-            "localName": "Many Orthodox Christians in the United Kingdom remember the events leading up to Jesus Christ's crucifixion on Great Friday, also known as Holy Friday.",
-            "name": "Orthodox Good Friday",
-            "type": [
-                "Observance",
-                "Orthodox"
-            ]
-        },
-        {
-            "date": "2028-04-14",
             "localName": "Good Friday is just before Easter Sunday and is a public holiday in the United Kingdom.",
             "name": "Good Friday",
             "type": [
                 "National holiday",
                 "Christian"
+            ]
+        },
+        {
+            "date": "2028-04-14",
+            "localName": "Many Orthodox Christians in the United Kingdom remember the events leading up to Jesus Christ's crucifixion on Great Friday, also known as Holy Friday.",
+            "name": "Orthodox Good Friday",
+            "type": [
+                "Observance",
+                "Orthodox"
             ]
         },
         {
@@ -3519,15 +3483,6 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2028-04-16",
-            "localName": "Many Orthodox Christians in the United Kingdom commemorate Jesus Christ's resurrection on Easter Day, also known as Pascha.",
-            "name": "Orthodox Easter",
-            "type": [
-                "Observance",
-                "Orthodox"
-            ]
-        },
-        {
-            "date": "2028-04-16",
             "localName": "Easter Sunday commemorates Jesus Christ's resurrection. The Easter egg hunt is one of the most popular Easter traditions",
             "name": "Easter Sunday",
             "type": [
@@ -3536,9 +3491,9 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-17",
-            "localName": "Many Orthodox churches in the United Kingdom observe Easter Monday on the day after the Orthodox Easter Sunday date.",
-            "name": "Orthodox Easter Monday",
+            "date": "2028-04-16",
+            "localName": "Many Orthodox Christians in the United Kingdom commemorate Jesus Christ's resurrection on Easter Day, also known as Pascha.",
+            "name": "Orthodox Easter",
             "type": [
                 "Observance",
                 "Orthodox"
@@ -3555,11 +3510,11 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2028-04-17",
-            "localName": "Easter Monday is the day after Easter Sunday. It is a bank holiday in England, Wales and Northern Ireland but not in Scotland.",
-            "name": "Easter Monday",
+            "localName": "Many Orthodox churches in the United Kingdom observe Easter Monday on the day after the Orthodox Easter Sunday date.",
+            "name": "Orthodox Easter Monday",
             "type": [
-                "Local observance",
-                "Christian"
+                "Observance",
+                "Orthodox"
             ]
         },
         {
@@ -3581,6 +3536,14 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2028-04-23",
+            "localName": "National Shakespeare Day, also known as Shakespeare Day, is annually held on April 23.",
+            "name": "Shakespeare Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-04-23",
             "localName": "St George's Day in England is a celebration of Saint George, a Christian martyr and soldier in the Roman army.",
             "name": "St. George's Day",
             "type": [
@@ -3589,11 +3552,12 @@ export const holidays_GB: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-23",
-            "localName": "National Shakespeare Day, also known as Shakespeare Day, is annually held on April 23.",
-            "name": "Shakespeare Day",
+            "date": "2028-04-24",
+            "localName": "St George's Day in England is a celebration of Saint George, a Christian martyr and soldier in the Roman army.",
+            "name": "St. George's Day",
             "type": [
-                "Observance"
+                "Observance",
+                "Christian"
             ]
         },
         {
@@ -3603,15 +3567,6 @@ export const holidays_GB: CountryHolidays = {
             "type": [
                 "Observance",
                 "Hebrew"
-            ]
-        },
-        {
-            "date": "2028-04-24",
-            "localName": "St George's Day in England is a celebration of Saint George, a Christian martyr and soldier in the Roman army.",
-            "name": "St. George's Day",
-            "type": [
-                "Observance",
-                "Christian"
             ]
         },
         {
@@ -3797,8 +3752,8 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2028-08-13",
-            "localName": "Janmashtami (Smarta) is a Hindu holiday in the United Kingdom",
-            "name": "Janmashtami (Smarta)",
+            "localName": "Krishna Janmashtami is a Hindu festival that celebrates the birth of Krishna, the eighth incarnation of the god Vishnu. It is celebrated on the eighth day of the Hindu month of Bhadrava (Bhadrapada), which is usually in August or September.",
+            "name": "Janmashtami",
             "type": [
                 "Observance",
                 "Hinduism"
@@ -3806,8 +3761,8 @@ export const holidays_GB: CountryHolidays = {
         },
         {
             "date": "2028-08-13",
-            "localName": "Krishna Janmashtami is a Hindu festival that celebrates the birth of Krishna, the eighth incarnation of the god Vishnu. It is celebrated on the eighth day of the Hindu month of Bhadrava (Bhadrapada), which is usually in August or September.",
-            "name": "Janmashtami",
+            "localName": "Janmashtami (Smarta) is a Hindu holiday in the United Kingdom",
+            "name": "Janmashtami (Smarta)",
             "type": [
                 "Observance",
                 "Hinduism"

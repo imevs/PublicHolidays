@@ -57,6 +57,7 @@ export const lv = {
         currentTimePrefix: "Pašreizējais laiks:",
         hideInactive: "Slēpt neaktīvās",
         showAll: "Rādīt visas",
+        noSchoolHolidayData: "Nav datu par skolēnu brīvlaikiem",
     },
     continents: {
         europe: "Eiropa",

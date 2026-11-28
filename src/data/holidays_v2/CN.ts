@@ -806,16 +806,16 @@ export const holidays_CN: CountryHolidays = {
         },
         {
             "date": "2025-10-06",
-            "localName": "National Day Golden Week holiday is a national holiday in China",
-            "name": "National Day Golden Week holiday",
+            "localName": "Mid-Autumn Festival is a national holiday in China",
+            "name": "Mid-Autumn Festival",
             "type": [
                 "National holiday"
             ]
         },
         {
             "date": "2025-10-06",
-            "localName": "Mid-Autumn Festival is a national holiday in China",
-            "name": "Mid-Autumn Festival",
+            "localName": "National Day Golden Week holiday is a national holiday in China",
+            "name": "National Day Golden Week holiday",
             "type": [
                 "National holiday"
             ]
@@ -1022,18 +1022,18 @@ export const holidays_CN: CountryHolidays = {
         },
         {
             "date": "2026-03-20",
-            "localName": "Zhonghe Festival is an observance in China",
-            "name": "Zhonghe Festival",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-03-20",
             "localName": "March Equinox in China (Beijing)",
             "name": "March Equinox",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2026-03-20",
+            "localName": "Zhonghe Festival is an observance in China",
+            "name": "Zhonghe Festival",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1461,6 +1461,30 @@ export const holidays_CN: CountryHolidays = {
             ]
         },
         {
+            "date": "2027-05-02",
+            "localName": "Second statutory Labour Day holiday, 2 May, under Article 2 of the national holiday regulation as amended in November 2024.",
+            "name": "Labour Day Holiday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-05-03",
+            "localName": "Provisional forecast of the weekday substitute required when a national holiday falls on a weekend under Article 6. The State Council annual transfer schedule can choose different dates and has not been verified for this year.",
+            "name": "Labour Day Substitute (provisional forecast)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-05-04",
+            "localName": "Provisional forecast of the weekday substitute required when a national holiday falls on a weekend under Article 6. The State Council annual transfer schedule can choose different dates and has not been verified for this year.",
+            "name": "Labour Day Substitute (provisional forecast)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
             "date": "2027-05-04",
             "localName": "Youth Day is a half day holiday in China",
             "name": "Youth Day",
@@ -1637,33 +1661,17 @@ export const holidays_CN: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-05-02",
-            "localName": "Second statutory Labour Day holiday, 2 May, under Article 2 of the national holiday regulation as amended in November 2024.",
-            "name": "Labour Day Holiday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-05-03",
-            "localName": "Provisional forecast of the weekday substitute required when a national holiday falls on a weekend under Article 6. The State Council annual transfer schedule can choose different dates and has not been verified for this year.",
-            "name": "Labour Day Substitute (provisional forecast)",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-05-04",
-            "localName": "Provisional forecast of the weekday substitute required when a national holiday falls on a weekend under Article 6. The State Council annual transfer schedule can choose different dates and has not been verified for this year.",
-            "name": "Labour Day Substitute (provisional forecast)",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
             "date": "2028-01-01",
             "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
             "name": "New Year's Day",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-01-03",
+            "localName": "Provisional forecast of the weekday substitute required when a national holiday falls on a weekend under Article 6. The State Council annual transfer schedule can choose different dates and has not been verified for this year.",
+            "name": "New Year Substitute (provisional forecast)",
             "type": [
                 "National holiday"
             ]
@@ -1781,6 +1789,14 @@ export const holidays_CN: CountryHolidays = {
             ]
         },
         {
+            "date": "2028-05-02",
+            "localName": "Second statutory Labour Day holiday, 2 May, under Article 2 of the national holiday regulation as amended in November 2024.",
+            "name": "Labour Day Holiday",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
             "date": "2028-05-04",
             "localName": "Youth Day is a half day holiday in China",
             "name": "Youth Day",
@@ -1792,6 +1808,14 @@ export const holidays_CN: CountryHolidays = {
             "date": "2028-05-28",
             "localName": "The Dragon Boat Festival is also known as the Duanwu Festival in China. It is celebrated on the fifth day of the fifth month on the Chinese lunisolar calendar.",
             "name": "Dragon Boat Festival",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-05-29",
+            "localName": "Provisional forecast of the weekday substitute required when a national holiday falls on a weekend under Article 6. The State Council annual transfer schedule can choose different dates and has not been verified for this year.",
+            "name": "Dragon Boat Festival Substitute (provisional forecast)",
             "type": [
                 "National holiday"
             ]
@@ -1954,30 +1978,6 @@ export const holidays_CN: CountryHolidays = {
             "name": "Christmas Day",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2028-05-02",
-            "localName": "Second statutory Labour Day holiday, 2 May, under Article 2 of the national holiday regulation as amended in November 2024.",
-            "name": "Labour Day Holiday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2028-01-03",
-            "localName": "Provisional forecast of the weekday substitute required when a national holiday falls on a weekend under Article 6. The State Council annual transfer schedule can choose different dates and has not been verified for this year.",
-            "name": "New Year Substitute (provisional forecast)",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2028-05-29",
-            "localName": "Provisional forecast of the weekday substitute required when a national holiday falls on a weekend under Article 6. The State Council annual transfer schedule can choose different dates and has not been verified for this year.",
-            "name": "Dragon Boat Festival Substitute (provisional forecast)",
-            "type": [
-                "National holiday"
             ]
         }
     ]

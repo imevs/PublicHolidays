@@ -106,18 +106,18 @@ export const holidays_MK: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in North Macedonia",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-03-31",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -263,18 +263,18 @@ export const holidays_MK: CountryHolidays = {
         },
         {
             "date": "2024-09-08",
-            "localName": "Independence Day is a national holiday in North Macedonia",
-            "name": "Independence Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-09-08",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2024-09-08",
+            "localName": "Independence Day is a national holiday in North Macedonia",
+            "name": "Independence Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -375,18 +375,18 @@ export const holidays_MK: CountryHolidays = {
         },
         {
             "date": "2024-12-21",
-            "localName": "Turkish Language Day (Turkish community) is a optional holiday in North Macedonia",
-            "name": "Turkish Language Day (Turkish community)",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2024-12-21",
             "localName": "December Solstice in North Macedonia (Skopje)",
             "name": "December Solstice",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2024-12-21",
+            "localName": "Turkish Language Day (Turkish community) is a optional holiday in North Macedonia",
+            "name": "Turkish Language Day (Turkish community)",
+            "type": [
+                "Optional holiday"
             ]
         },
         {
@@ -490,18 +490,18 @@ export const holidays_MK: CountryHolidays = {
         },
         {
             "date": "2025-03-30",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
-            "name": "Eid al-Fitr",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-03-30",
             "localName": "Daylight Saving Time starts in North Macedonia",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2025-03-30",
+            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
+            "name": "Eid al-Fitr",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -514,6 +514,14 @@ export const holidays_MK: CountryHolidays = {
         },
         {
             "date": "2025-04-18",
+            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
+            "name": "Good Friday",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-04-18",
             "localName": "Millions of Orthodox Christians around the world annually observe Good Friday to commemorate the events leading up to Jesus Christ's crucifixion.",
             "name": "Good Friday (Orthodox)",
             "type": [
@@ -522,9 +530,9 @@ export const holidays_MK: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-18",
-            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
-            "name": "Good Friday",
+            "date": "2025-04-19",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Easter Saturday",
             "type": [
                 "Observance"
             ]
@@ -539,9 +547,9 @@ export const holidays_MK: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-19",
-            "localName": "Holy Saturday is the day before Easter Sunday.",
-            "name": "Easter Saturday",
+            "date": "2025-04-20",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
             "type": [
                 "Observance"
             ]
@@ -556,11 +564,11 @@ export const holidays_MK: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-20",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
+            "date": "2025-04-21",
+            "localName": "Easter Monday is the day after Easter Sunday.",
+            "name": "Easter Monday",
             "type": [
-                "Observance"
+                "Optional holiday"
             ]
         },
         {
@@ -570,14 +578,6 @@ export const holidays_MK: CountryHolidays = {
             "type": [
                 "National holiday",
                 "Orthodox"
-            ]
-        },
-        {
-            "date": "2025-04-21",
-            "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Easter Monday",
-            "type": [
-                "Optional holiday"
             ]
         },
         {
@@ -743,18 +743,18 @@ export const holidays_MK: CountryHolidays = {
         },
         {
             "date": "2025-12-21",
-            "localName": "Turkish Language Day (Turkish community) is a optional holiday in North Macedonia",
-            "name": "Turkish Language Day (Turkish community)",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2025-12-21",
             "localName": "December Solstice in North Macedonia (Skopje)",
             "name": "December Solstice",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2025-12-21",
+            "localName": "Turkish Language Day (Turkish community) is a optional holiday in North Macedonia",
+            "name": "Turkish Language Day (Turkish community)",
+            "type": [
+                "Optional holiday"
             ]
         },
         {
@@ -1135,18 +1135,18 @@ export const holidays_MK: CountryHolidays = {
         },
         {
             "date": "2026-12-21",
-            "localName": "Turkish Language Day (Turkish community) is a optional holiday in North Macedonia",
-            "name": "Turkish Language Day (Turkish community)",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2026-12-21",
             "localName": "December Solstice in North Macedonia (Skopje)",
             "name": "December Solstice",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2026-12-21",
+            "localName": "Turkish Language Day (Turkish community) is a optional holiday in North Macedonia",
+            "name": "Turkish Language Day (Turkish community)",
+            "type": [
+                "Optional holiday"
             ]
         },
         {
@@ -1274,18 +1274,18 @@ export const holidays_MK: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-28",
             "localName": "Daylight Saving Time starts in North Macedonia",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1463,18 +1463,18 @@ export const holidays_MK: CountryHolidays = {
         },
         {
             "date": "2027-10-31",
-            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-            "name": "Halloween",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-10-31",
             "localName": "Daylight Saving Time ends in North Macedonia",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-10-31",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1650,6 +1650,14 @@ export const holidays_MK: CountryHolidays = {
         },
         {
             "date": "2028-04-14",
+            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
+            "name": "Good Friday",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-04-14",
             "localName": "Millions of Orthodox Christians around the world annually observe Good Friday to commemorate the events leading up to Jesus Christ's crucifixion.",
             "name": "Good Friday (Orthodox)",
             "type": [
@@ -1658,9 +1666,9 @@ export const holidays_MK: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-14",
-            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
-            "name": "Good Friday",
+            "date": "2028-04-15",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Easter Saturday",
             "type": [
                 "Observance"
             ]
@@ -1675,9 +1683,9 @@ export const holidays_MK: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-15",
-            "localName": "Holy Saturday is the day before Easter Sunday.",
-            "name": "Easter Saturday",
+            "date": "2028-04-16",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
             "type": [
                 "Observance"
             ]
@@ -1692,11 +1700,11 @@ export const holidays_MK: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-16",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
+            "date": "2028-04-17",
+            "localName": "Easter Monday is the day after Easter Sunday.",
+            "name": "Easter Monday",
             "type": [
-                "Observance"
+                "Optional holiday"
             ]
         },
         {
@@ -1706,14 +1714,6 @@ export const holidays_MK: CountryHolidays = {
             "type": [
                 "National holiday",
                 "Orthodox"
-            ]
-        },
-        {
-            "date": "2028-04-17",
-            "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Easter Monday",
-            "type": [
-                "Optional holiday"
             ]
         },
         {
@@ -1879,18 +1879,18 @@ export const holidays_MK: CountryHolidays = {
         },
         {
             "date": "2028-12-21",
-            "localName": "Turkish Language Day (Turkish community) is a optional holiday in North Macedonia",
-            "name": "Turkish Language Day (Turkish community)",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2028-12-21",
             "localName": "December Solstice in North Macedonia (Skopje)",
             "name": "December Solstice",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2028-12-21",
+            "localName": "Turkish Language Day (Turkish community) is a optional holiday in North Macedonia",
+            "name": "Turkish Language Day (Turkish community)",
+            "type": [
+                "Optional holiday"
             ]
         },
         {

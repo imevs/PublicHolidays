@@ -314,7 +314,7 @@ export const holidays_UA: CountryHolidays = {
         },
         {
             "date": "2024-12-25",
-            "localName": "",
+            "localName": "Christmas Day",
             "name": "Christmas Day",
             "type": [
                 "Observance"
@@ -379,18 +379,18 @@ export const holidays_UA: CountryHolidays = {
         },
         {
             "date": "2025-03-30",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
-            "name": "Ramadan Bayram",
-            "type": [
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2025-03-30",
             "localName": "Daylight Saving Time starts in Ukraine",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2025-03-30",
+            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
+            "name": "Ramadan Bayram",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -533,16 +533,16 @@ export const holidays_UA: CountryHolidays = {
         },
         {
             "date": "2025-07-06",
-            "localName": "Navy Day is a national Ukrainian observance that is celebrated on the last Sunday in July each year.",
-            "name": "Navy Day",
+            "localName": "Kupala Night is celebrated in Ukraine on July 7 each year.",
+            "name": "Kupala Night",
             "type": [
                 "Observance"
             ]
         },
         {
             "date": "2025-07-06",
-            "localName": "Kupala Night is celebrated in Ukraine on July 7 each year.",
-            "name": "Kupala Night",
+            "localName": "Navy Day is a national Ukrainian observance that is celebrated on the last Sunday in July each year.",
+            "name": "Navy Day",
             "type": [
                 "Observance"
             ]
@@ -654,7 +654,7 @@ export const holidays_UA: CountryHolidays = {
         },
         {
             "date": "2025-12-25",
-            "localName": "",
+            "localName": "Christmas Day",
             "name": "Christmas Day",
             "type": [
                 "Observance"
@@ -719,18 +719,18 @@ export const holidays_UA: CountryHolidays = {
         },
         {
             "date": "2026-03-20",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Ramadan Bayram (Provisional)",
-            "type": [
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2026-03-20",
             "localName": "March Equinox in Ukraine (Kyiv)",
             "name": "March Equinox",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2026-03-20",
+            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Ramadan Bayram (Provisional)",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -994,7 +994,7 @@ export const holidays_UA: CountryHolidays = {
         },
         {
             "date": "2026-12-25",
-            "localName": "",
+            "localName": "Christmas Day",
             "name": "Christmas Day",
             "type": [
                 "Observance"
@@ -1334,7 +1334,7 @@ export const holidays_UA: CountryHolidays = {
         },
         {
             "date": "2027-12-25",
-            "localName": "",
+            "localName": "Christmas Day",
             "name": "Christmas Day",
             "type": [
                 "Observance"
@@ -1342,7 +1342,7 @@ export const holidays_UA: CountryHolidays = {
         },
         {
             "date": "2027-12-27",
-            "localName": "",
+            "localName": "Christmas Day Observed",
             "name": "Christmas Day Observed",
             "type": [
                 "Observance"
@@ -1682,7 +1682,7 @@ export const holidays_UA: CountryHolidays = {
         },
         {
             "date": "2028-12-25",
-            "localName": "",
+            "localName": "Christmas Day",
             "name": "Christmas Day",
             "type": [
                 "Observance"

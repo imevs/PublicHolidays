@@ -3,6 +3,7 @@ import { countryOffsets, getLocalTime } from "../../utils/timeZones.ts";
 import styles from "./CountryFilter.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags.ts";
 import { type CountryCode, CountryName, countryNames } from "../../data/countryNames.ts";
+import { hasSchoolHolidayData } from "../../data/schoolHolidayCountries.ts";
 import { handleKeyboardActivation } from "../../utils/a11y.ts";
 import { CONTINENTS, ContinentId, ContinentMeta, loadContinent } from "./continents/index.ts";
 import { useTranslation } from "../../i18n/useTranslation.ts";
@@ -113,16 +114,19 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                                 const countryName = countryNames[code];
                                 if (!countryName) return null;
                                 const isSelected = selectedCountries.includes(code);
+                                const noSchoolData = Boolean(showSchoolHolidays) && !hasSchoolHolidayData(code);
+                                const isDisabled = noSchoolData && !isSelected;
                                 return (
                                     <div
                                         key={code}
                                         role="button"
-                                        tabIndex={0}
+                                        tabIndex={isDisabled ? -1 : 0}
                                         aria-pressed={isSelected}
-                                        className={`${styles.countryChip} ${isSelected ? styles.active : ""}`}
-                                        onClick={() => onToggleCountry(code)}
-                                        onKeyDown={(e) => handleKeyboardActivation(e, () => onToggleCountry(code))}
-                                        title={`${t.countryFilter.currentTimePrefix} ${getLocalTime(code)}`}
+                                        aria-disabled={isDisabled || undefined}
+                                        className={`${styles.countryChip} ${isSelected ? styles.active : ""} ${noSchoolData ? styles.disabled : ""}`}
+                                        onClick={isDisabled ? undefined : () => onToggleCountry(code)}
+                                        onKeyDown={isDisabled ? undefined : (e) => handleKeyboardActivation(e, () => onToggleCountry(code))}
+                                        title={noSchoolData ? t.countryFilter.noSchoolHolidayData : `${t.countryFilter.currentTimePrefix} ${getLocalTime(code)}`}
                                     >
                                         {getFlagEmoji(code)} {getCountryName(code, countryName)}
                                         {showTimezones && (
@@ -137,15 +141,18 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                         {CONTINENTS.map((cont) => {
                             if (cont.id === activeContinent) return null;
                             const selectedCount = cont.countries.filter((c) => selectedCountries.includes(c)).length;
+                            const isContinentDisabled = Boolean(showSchoolHolidays) && !cont.countries.some(hasSchoolHolidayData);
                             return (
                                 <div
                                     key={cont.id}
                                     role="button"
-                                    tabIndex={0}
+                                    tabIndex={isContinentDisabled ? -1 : 0}
                                     aria-expanded={false}
-                                    className={styles.continentTag}
-                                    onClick={() => setActiveContinent(cont.id)}
-                                    onKeyDown={(e) => handleKeyboardActivation(e, () => setActiveContinent(cont.id))}
+                                    aria-disabled={isContinentDisabled || undefined}
+                                    className={`${styles.continentTag} ${isContinentDisabled ? styles.disabled : ""}`}
+                                    onClick={isContinentDisabled ? undefined : () => setActiveContinent(cont.id)}
+                                    onKeyDown={isContinentDisabled ? undefined : (e) => handleKeyboardActivation(e, () => setActiveContinent(cont.id))}
+                                    title={isContinentDisabled ? t.countryFilter.noSchoolHolidayData : undefined}
                                 >
                                     {cont.emoji} {getContinentName(cont.id)}
                                     {selectedCount > 0 && (
@@ -158,25 +165,28 @@ const CountryFilter: React.FC<CountryFilterProps> = ({
                 ) : (
                     (Object.entries(countryNames) as [CountryCode, CountryName][])
                         .filter(([code]) => selectedCountries.includes(code))
-                        .map(([code, countryName]) => (
-                            <div
-                                key={code}
-                                role="button"
-                                tabIndex={0}
-                                aria-pressed={true}
-                                className={`${styles.countryChip} ${styles.active}`}
-                                onClick={() => onToggleCountry(code)}
-                                onKeyDown={(e) => handleKeyboardActivation(e, () => onToggleCountry(code))}
-                                title={`${t.countryFilter.currentTimePrefix} ${getLocalTime(code)}`}
-                            >
-                                {getFlagEmoji(code)} {getCountryName(code, countryName)}
-                                {showTimezones && (
-                                    <span className={styles.offset}>
-                                        {" - " + getLocalTime(code)}
-                                    </span>
-                                )}
-                            </div>
-                        ))
+                        .map(([code, countryName]) => {
+                            const noSchoolData = Boolean(showSchoolHolidays) && !hasSchoolHolidayData(code);
+                            return (
+                                <div
+                                    key={code}
+                                    role="button"
+                                    tabIndex={0}
+                                    aria-pressed={true}
+                                    className={`${styles.countryChip} ${styles.active} ${noSchoolData ? styles.disabled : ""}`}
+                                    onClick={() => onToggleCountry(code)}
+                                    onKeyDown={(e) => handleKeyboardActivation(e, () => onToggleCountry(code))}
+                                    title={noSchoolData ? t.countryFilter.noSchoolHolidayData : `${t.countryFilter.currentTimePrefix} ${getLocalTime(code)}`}
+                                >
+                                    {getFlagEmoji(code)} {getCountryName(code, countryName)}
+                                    {showTimezones && (
+                                        <span className={styles.offset}>
+                                            {" - " + getLocalTime(code)}
+                                        </span>
+                                    )}
+                                </div>
+                            );
+                        })
                 )}
                 <div
                     role="button"

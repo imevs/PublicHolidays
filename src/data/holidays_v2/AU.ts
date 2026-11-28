@@ -65,22 +65,6 @@ export const holidays_AU: CountryHolidays = {
             "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
             "name": "Lunar New Year",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-02-10",
-            "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
-            "name": "Lunar New Year",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-02-10",
-            "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
-            "name": "Lunar New Year",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -94,16 +78,16 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2024-02-12",
-            "localName": "The Royal Hobart Regatta is an annual public holiday in southern Tasmania, Australia, on the second Monday in February.",
-            "name": "Royal Hobart Regatta",
+            "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
+            "name": "Day off for Lunar New Year",
             "type": [
                 "Local holiday"
             ]
         },
         {
             "date": "2024-02-12",
-            "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
-            "name": "Day off for Lunar New Year",
+            "localName": "The Royal Hobart Regatta is an annual public holiday in southern Tasmania, Australia, on the second Monday in February.",
+            "name": "Royal Hobart Regatta",
             "type": [
                 "Local holiday"
             ]
@@ -150,22 +134,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2024-03-11",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2024-03-11",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Eight Hours Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2024-03-11",
             "localName": "Adelaide Cup is a state holiday and a horse racing event in South Australia.",
             "name": "Adelaide Cup",
             "type": [
@@ -178,6 +146,22 @@ export const holidays_AU: CountryHolidays = {
             "name": "Canberra Day",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2024-03-11",
+            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
+            "name": "Eight Hours Day",
+            "type": [
+                "Common local holiday"
+            ]
+        },
+        {
+            "date": "2024-03-11",
+            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
+            "name": "Labour Day",
+            "type": [
+                "Common local holiday"
             ]
         },
         {
@@ -261,15 +245,6 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-03-29",
-            "localName": "Good Friday is two days before Easter Sunday and is a national holiday in Australia.",
-            "name": "Good Friday",
-            "type": [
-                "National holiday",
-                "Christian"
-            ]
-        },
-        {
             "date": "2024-03-30",
             "localName": "Holy Saturday is the day before Easter Sunday and is a public holiday in some states and the two territories in Australia.",
             "name": "Holy Saturday",
@@ -283,63 +258,6 @@ export const holidays_AU: CountryHolidays = {
             "name": "Easter Sunday",
             "type": [
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2024-03-31",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2024-03-31",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2024-03-31",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2024-03-31",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-03-31",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-03-31",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2024-04-01",
-            "localName": "Easter Monday is the day after Easter Sunday and is a nationwide holiday in Australia.",
-            "name": "Easter Monday",
-            "type": [
-                "National holiday",
-                "Christian"
             ]
         },
         {
@@ -456,18 +374,10 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2024-05-06",
-            "localName": "Yom Hashoah remembers the lives and sacrifices of about six million Holocaust victims who died during World War II. This observance is annually held on the 27th day of the month of Nisan.",
-            "name": "Yom HaShoah",
+            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
+            "name": "Labour Day",
             "type": [
-                "Hebrew"
-            ]
-        },
-        {
-            "date": "2024-05-06",
-            "localName": "Many Orthodox churches in Australia observe Easter Monday on the day after the Orthodox Easter Sunday date.",
-            "name": "Orthodox Easter Monday",
-            "type": [
-                "Orthodox"
+                "Common local holiday"
             ]
         },
         {
@@ -480,10 +390,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2024-05-06",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
+            "localName": "Many Orthodox churches in Australia observe Easter Monday on the day after the Orthodox Easter Sunday date.",
+            "name": "Orthodox Easter Monday",
             "type": [
-                "Common local holiday"
+                "Orthodox"
+            ]
+        },
+        {
+            "date": "2024-05-06",
+            "localName": "Yom Hashoah remembers the lives and sacrifices of about six million Holocaust victims who died during World War II. This observance is annually held on the 27th day of the month of Nisan.",
+            "name": "Yom HaShoah",
+            "type": [
+                "Hebrew"
             ]
         },
         {
@@ -528,14 +446,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2024-05-26",
-            "localName": "Many churches in Australia observe Trinity Sunday, a Christian feast that occurs on the first Sunday after Pentecost.",
-            "name": "Trinity Sunday",
-            "type": [
-                "Christian"
-            ]
-        },
-        {
-            "date": "2024-05-26",
             "localName": "Many Jewish Australians observe Lag B'Omer on the 18th day of the month of Iyar in the Jewish calendar.",
             "name": "Lag B'Omer",
             "type": [
@@ -548,6 +458,14 @@ export const holidays_AU: CountryHolidays = {
             "name": "National Sorry Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2024-05-26",
+            "localName": "Many churches in Australia observe Trinity Sunday, a Christian feast that occurs on the first Sunday after Pentecost.",
+            "name": "Trinity Sunday",
+            "type": [
+                "Christian"
             ]
         },
         {
@@ -632,18 +550,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2024-07-07",
-            "localName": "The first day of Muharram, which is the first month in the Islamic calendar, marks the start of the Islamic New Year.",
-            "name": "Muharram",
-            "type": [
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2024-07-07",
             "localName": "First Day of NAIDOC Week is an observance in Australia",
             "name": "First Day of NAIDOC Week",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2024-07-07",
+            "localName": "The first day of Muharram, which is the first month in the Islamic calendar, marks the start of the Islamic New Year.",
+            "name": "Muharram",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -704,18 +622,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2024-09-16",
-            "localName": "Eid Milad ul-Nabi marks the anniversary of the Prophet Muhammad's birth and death.",
-            "name": "Milad un Nabi",
-            "type": [
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2024-09-16",
             "localName": "Mawlid, or Milad, marks the birth of the Islamic prophet Muhammed, or Mohamed, in the year 570 of the Gregorian calendar.",
             "name": "Hari Maulad Nabi",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2024-09-16",
+            "localName": "Eid Milad ul-Nabi marks the anniversary of the Prophet Muhammad's birth and death.",
+            "name": "Milad un Nabi",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -768,14 +686,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2024-10-07",
-            "localName": "Territory Day is a state holiday in Australia",
-            "name": "Territory Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-10-07",
             "localName": "The King's birthday is an annual public holiday in parts of Australia celebrating the official birthday of King Charles III.",
             "name": "King's Birthday",
             "type": [
@@ -792,10 +702,10 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2024-10-07",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
+            "localName": "Territory Day is a state holiday in Australia",
+            "name": "Territory Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
@@ -832,18 +742,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2024-10-24",
-            "localName": "Shemini Atzeret (or Shmini Atzeret) is a Jewish holiday dedicated to the love of God, while Simchat Torah (Simchas Torah or Simhat Torah) marks the end of Sukkot and celebrates the completion of the annual reading of the Torah.",
-            "name": "Shemini Atzeret",
-            "type": [
-                "Hebrew"
-            ]
-        },
-        {
-            "date": "2024-10-24",
             "localName": "Royal Hobart Show is a state holiday in Australia",
             "name": "Royal Hobart Show",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2024-10-24",
+            "localName": "Shemini Atzeret (or Shmini Atzeret) is a Jewish holiday dedicated to the love of God, while Simchat Torah (Simchas Torah or Simhat Torah) marks the end of Sukkot and celebrates the completion of the annual reading of the Torah.",
+            "name": "Shemini Atzeret",
+            "type": [
+                "Hebrew"
             ]
         },
         {
@@ -939,30 +849,6 @@ export const holidays_AU: CountryHolidays = {
             "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
             "name": "Christmas Eve",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -971,24 +857,7 @@ export const holidays_AU: CountryHolidays = {
             "localName": "Christians celebrate the birth of Jesus on Christmas Day, which is in the middle of summer in Australia.",
             "name": "Christmas Day",
             "type": [
-                "National holiday",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2024-12-25",
-            "localName": "Christians celebrate the birth of Jesus on Christmas Day, which is in the middle of summer in Australia.",
-            "name": "Christmas Day",
-            "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-12-26",
-            "localName": "The first day of Hanukkah is the start of the Hanukkah period, which lasts for 8 days, from the 25th day of the month of Kislev to the second day of Tevet in the Hebrew calendar.",
-            "name": "First Day of Hanukkah",
-            "type": [
-                "Hebrew"
             ]
         },
         {
@@ -1002,24 +871,16 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2024-12-26",
+            "localName": "The first day of Hanukkah is the start of the Hanukkah period, which lasts for 8 days, from the 25th day of the month of Kislev to the second day of Tevet in the Hebrew calendar.",
+            "name": "First Day of Hanukkah",
+            "type": [
+                "Hebrew"
+            ]
+        },
+        {
+            "date": "2024-12-26",
             "localName": "Proclamation Day is a state holiday in Australia",
             "name": "Proclamation Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-12-31",
-            "localName": "Many Australians celebrate New Year's Eve on December 31 each year, which coincides with the date before New Year's Day in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-12-31",
-            "localName": "Many Australians celebrate New Year's Eve on December 31 each year, which coincides with the date before New Year's Day in the Gregorian calendar.",
-            "name": "New Year's Eve",
             "type": [
                 "Local holiday"
             ]
@@ -1101,22 +962,6 @@ export const holidays_AU: CountryHolidays = {
             "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
             "name": "Lunar New Year",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-01-29",
-            "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
-            "name": "Lunar New Year",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-01-29",
-            "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
-            "name": "Lunar New Year",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -1186,22 +1031,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2025-03-10",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2025-03-10",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Eight Hours Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2025-03-10",
             "localName": "Adelaide Cup is a state holiday and a horse racing event in South Australia.",
             "name": "Adelaide Cup",
             "type": [
@@ -1214,6 +1043,22 @@ export const holidays_AU: CountryHolidays = {
             "name": "Canberra Day",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2025-03-10",
+            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
+            "name": "Eight Hours Day",
+            "type": [
+                "Common local holiday"
+            ]
+        },
+        {
+            "date": "2025-03-10",
+            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
+            "name": "Labour Day",
+            "type": [
+                "Common local holiday"
             ]
         },
         {
@@ -1234,18 +1079,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2025-03-20",
-            "localName": "National Close the Gap Day raises awareness about the health and life expectancy gap between Aboriginal and Torres Strait Islander peoples and other Australians.",
-            "name": "National Close the Gap Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-03-20",
             "localName": "March Equinox in Australia (Sydney)",
             "name": "March Equinox",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2025-03-20",
+            "localName": "National Close the Gap Day raises awareness about the health and life expectancy gap between Aboriginal and Torres Strait Islander peoples and other Australians.",
+            "name": "National Close the Gap Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1306,18 +1151,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2025-04-13",
-            "localName": "Palm Sunday in Australia celebrates Jesus Christ's entry into Jerusalem. It is also the Sunday before Easter Sunday.",
-            "name": "Palm Sunday",
-            "type": [
-                "Christian"
-            ]
-        },
-        {
-            "date": "2025-04-13",
             "localName": "Passover is a Jewish observance of the liberation from slavery and the Israelites' exodus from Egypt around 3000 years ago.",
             "name": "First day of Passover",
             "type": [
                 "Hebrew"
+            ]
+        },
+        {
+            "date": "2025-04-13",
+            "localName": "Palm Sunday in Australia celebrates Jesus Christ's entry into Jerusalem. It is also the Sunday before Easter Sunday.",
+            "name": "Palm Sunday",
+            "type": [
+                "Christian"
             ]
         },
         {
@@ -1330,6 +1175,14 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2025-04-18",
+            "localName": "Good Friday is two days before Easter Sunday and is a national holiday in Australia.",
+            "name": "Good Friday",
+            "type": [
+                "Local holiday"
+            ]
+        },
+        {
+            "date": "2025-04-18",
             "localName": "Many Orthodox Christians in Australia remember the events leading up to Jesus Christ's crucifixion on Great Friday.",
             "name": "Orthodox Good Friday",
             "type": [
@@ -1337,20 +1190,11 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-18",
-            "localName": "Good Friday is two days before Easter Sunday and is a national holiday in Australia.",
-            "name": "Good Friday",
+            "date": "2025-04-19",
+            "localName": "Holy Saturday is the day before Easter Sunday and is a public holiday in some states and the two territories in Australia.",
+            "name": "Holy Saturday",
             "type": [
-                "National holiday",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2025-04-18",
-            "localName": "Good Friday is two days before Easter Sunday and is a national holiday in Australia.",
-            "name": "Good Friday",
-            "type": [
-                "Local holiday"
+                "Common local holiday"
             ]
         },
         {
@@ -1362,9 +1206,9 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-19",
-            "localName": "Holy Saturday is the day before Easter Sunday and is a public holiday in some states and the two territories in Australia.",
-            "name": "Holy Saturday",
+            "date": "2025-04-20",
+            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
+            "name": "Easter Sunday",
             "type": [
                 "Common local holiday"
             ]
@@ -1386,59 +1230,11 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-20",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
+            "date": "2025-04-21",
+            "localName": "Easter Monday is the day after Easter Sunday and is a nationwide holiday in Australia.",
+            "name": "Easter Monday",
             "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2025-04-20",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2025-04-20",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2025-04-20",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2025-04-20",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2025-04-20",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-04-20",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
+                "Local observance"
             ]
         },
         {
@@ -1447,23 +1243,6 @@ export const holidays_AU: CountryHolidays = {
             "name": "Orthodox Easter Monday",
             "type": [
                 "Orthodox"
-            ]
-        },
-        {
-            "date": "2025-04-21",
-            "localName": "Easter Monday is the day after Easter Sunday and is a nationwide holiday in Australia.",
-            "name": "Easter Monday",
-            "type": [
-                "National holiday",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2025-04-21",
-            "localName": "Easter Monday is the day after Easter Sunday and is a nationwide holiday in Australia.",
-            "name": "Easter Monday",
-            "type": [
-                "Local observance"
             ]
         },
         {
@@ -1509,7 +1288,7 @@ export const holidays_AU: CountryHolidays = {
         {
             "date": "2025-05-05",
             "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "May Day",
+            "name": "Labour Day",
             "type": [
                 "Common local holiday"
             ]
@@ -1517,7 +1296,7 @@ export const holidays_AU: CountryHolidays = {
         {
             "date": "2025-05-05",
             "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
+            "name": "May Day",
             "type": [
                 "Common local holiday"
             ]
@@ -1556,6 +1335,14 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2025-06-02",
+            "localName": "Reconciliation Day is a state holiday in the Australian Capital Territory.",
+            "name": "Reconciliation Day",
+            "type": [
+                "Local holiday"
+            ]
+        },
+        {
+            "date": "2025-06-02",
             "localName": "Shavuot, also known as the Festival of Weeks, is one of three major Jewish festivals celebrated among many Jewish Australians.",
             "name": "Shavuot",
             "type": [
@@ -1571,9 +1358,9 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-06-02",
-            "localName": "Reconciliation Day is a state holiday in the Australian Capital Territory.",
-            "name": "Reconciliation Day",
+            "date": "2025-06-06",
+            "localName": "Eid al-Adha (Id ul-Adha) is an Islamic festival falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to commemorate the willingness of Ibrahim (Abraham) to sacrifice his son.",
+            "name": "Day off for Hari Raya Haji",
             "type": [
                 "Local holiday"
             ]
@@ -1584,14 +1371,6 @@ export const holidays_AU: CountryHolidays = {
             "name": "Eid al-Adha",
             "type": [
                 "Muslim"
-            ]
-        },
-        {
-            "date": "2025-06-06",
-            "localName": "Eid al-Adha (Id ul-Adha) is an Islamic festival falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to commemorate the willingness of Ibrahim (Abraham) to sacrifice his son.",
-            "name": "Day off for Hari Raya Haji",
-            "type": [
-                "Local holiday"
             ]
         },
         {
@@ -1620,26 +1399,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2025-06-09",
+            "localName": "The King's birthday is an annual public holiday in parts of Australia celebrating the official birthday of King Charles III.",
+            "name": "King's Birthday",
+            "type": [
+                "Common local holiday"
+            ]
+        },
+        {
+            "date": "2025-06-09",
             "localName": "Whit Monday is a Christian observance also known as Pentecost Monday. It is the day after Pentecost, or Whitsunday.",
             "name": "Pentecost Monday",
             "type": [
                 "Christian"
-            ]
-        },
-        {
-            "date": "2025-06-09",
-            "localName": "The King's birthday is an annual public holiday in parts of Australia celebrating the official birthday of King Charles III.",
-            "name": "King's Birthday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2025-06-09",
-            "localName": "The King's birthday is an annual public holiday in parts of Australia celebrating the official birthday of King Charles III.",
-            "name": "King's Birthday",
-            "type": [
-                "Common local holiday"
             ]
         },
         {
@@ -1732,18 +1503,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2025-09-05",
-            "localName": "Eid Milad ul-Nabi marks the anniversary of the Prophet Muhammad's birth and death.",
-            "name": "Milad un Nabi",
-            "type": [
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2025-09-05",
             "localName": "Mawlid, or Milad, marks the birth of the Islamic prophet Muhammed, or Mohamed, in the year 570 of the Gregorian calendar.",
             "name": "Hari Maulad Nabi",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2025-09-05",
+            "localName": "Eid Milad ul-Nabi marks the anniversary of the Prophet Muhammad's birth and death.",
+            "name": "Milad un Nabi",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -1756,18 +1527,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2025-09-23",
-            "localName": "September Equinox in Australia (Sydney)",
-            "name": "September Equinox",
-            "type": [
-                "Season"
-            ]
-        },
-        {
-            "date": "2025-09-23",
             "localName": "Rosh Hashana, also spelled Rosh Hashanah, is commonly known as the Jewish New Year. The event begins on the first day of Tishrei (or Tishri), which is the seventh month in the Jewish calendar.",
             "name": "Rosh Hashana",
             "type": [
                 "Hebrew"
+            ]
+        },
+        {
+            "date": "2025-09-23",
+            "localName": "September Equinox in Australia (Sydney)",
+            "name": "September Equinox",
+            "type": [
+                "Season"
             ]
         },
         {
@@ -1812,14 +1583,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2025-10-06",
-            "localName": "Territory Day is a state holiday in Australia",
-            "name": "Territory Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-10-06",
             "localName": "The King's birthday is an annual public holiday in parts of Australia celebrating the official birthday of King Charles III.",
             "name": "King's Birthday",
             "type": [
@@ -1836,10 +1599,10 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2025-10-06",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
+            "localName": "Territory Day is a state holiday in Australia",
+            "name": "Territory Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
@@ -1868,18 +1631,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2025-10-15",
-            "localName": "Simchat Torah (Simchas Torah or Simhat Torah) is a Jewish holiday that celebrates the completion of the annual reading of the Torah.",
-            "name": "Simchat Torah",
-            "type": [
-                "Hebrew"
-            ]
-        },
-        {
-            "date": "2025-10-15",
             "localName": "International Pregnancy and Infant Loss Remembrance Day is an observance in Australia",
             "name": "International Pregnancy and Infant Loss Remembrance Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2025-10-15",
+            "localName": "Simchat Torah (Simchas Torah or Simhat Torah) is a Jewish holiday that celebrates the completion of the annual reading of the Torah.",
+            "name": "Simchat Torah",
+            "type": [
+                "Hebrew"
             ]
         },
         {
@@ -1995,39 +1758,6 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-12-25",
-            "localName": "Christians celebrate the birth of Jesus on Christmas Day, which is in the middle of summer in Australia.",
-            "name": "Christmas Day",
-            "type": [
-                "National holiday",
-                "Christian"
-            ]
-        },
-        {
             "date": "2025-12-25",
             "localName": "Christians celebrate the birth of Jesus on Christmas Day, which is in the middle of summer in Australia.",
             "name": "Christmas Day",
@@ -2050,22 +1780,6 @@ export const holidays_AU: CountryHolidays = {
             "name": "Proclamation Day",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-12-31",
-            "localName": "Many Australians celebrate New Year's Eve on December 31 each year, which coincides with the date before New Year's Day in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-12-31",
-            "localName": "Many Australians celebrate New Year's Eve on December 31 each year, which coincides with the date before New Year's Day in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -2169,31 +1883,7 @@ export const holidays_AU: CountryHolidays = {
             "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
             "name": "Lunar New Year",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-02-17",
-            "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
-            "name": "Lunar New Year",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-02-17",
-            "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
-            "name": "Lunar New Year",
-            "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-02-19",
-            "localName": "Many Muslims in Australia welcome Ramadan as period of fasting, self-evaluation and spiritual growth. Ramadan is the ninth month in the Islamic calendar.",
-            "name": "Ramadan Start",
-            "type": [
-                "Muslim"
             ]
         },
         {
@@ -2210,6 +1900,14 @@ export const holidays_AU: CountryHolidays = {
             "name": "Lunar New Year Holiday (Day 2)",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2026-02-19",
+            "localName": "Many Muslims in Australia welcome Ramadan as period of fasting, self-evaluation and spiritual growth. Ramadan is the ninth month in the Islamic calendar.",
+            "name": "Ramadan Start",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -2230,22 +1928,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2026-03-09",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2026-03-09",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Eight Hours Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2026-03-09",
             "localName": "Adelaide Cup is a state holiday and a horse racing event in South Australia.",
             "name": "Adelaide Cup",
             "type": [
@@ -2258,6 +1940,22 @@ export const holidays_AU: CountryHolidays = {
             "name": "Canberra Day",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2026-03-09",
+            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
+            "name": "Eight Hours Day",
+            "type": [
+                "Common local holiday"
+            ]
+        },
+        {
+            "date": "2026-03-09",
+            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
+            "name": "Labour Day",
+            "type": [
+                "Common local holiday"
             ]
         },
         {
@@ -2302,18 +2000,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2026-03-21",
-            "localName": "March Equinox in Australia (Sydney)",
-            "name": "March Equinox",
-            "type": [
-                "Season"
-            ]
-        },
-        {
-            "date": "2026-03-21",
             "localName": "Harmony Day is a national observance that celebrates Australia's cultural, linguistic and religious diversity on March 21 every year.",
             "name": "Harmony Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2026-03-21",
+            "localName": "March Equinox in Australia (Sydney)",
+            "name": "March Equinox",
+            "type": [
+                "Season"
             ]
         },
         {
@@ -2334,14 +2032,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2026-04-02",
-            "localName": "Many Christians in the Australia celebrate Maundy Thursday on the Thursday before Good Friday.",
-            "name": "Maundy Thursday",
-            "type": [
-                "Christian"
-            ]
-        },
-        {
-            "date": "2026-04-02",
             "localName": "Passover is a Jewish observance of the liberation from slavery and the Israelites' exodus from Egypt around 3000 years ago.",
             "name": "First day of Passover",
             "type": [
@@ -2349,11 +2039,10 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-04-03",
-            "localName": "Good Friday is two days before Easter Sunday and is a national holiday in Australia.",
-            "name": "Good Friday",
+            "date": "2026-04-02",
+            "localName": "Many Christians in the Australia celebrate Maundy Thursday on the Thursday before Good Friday.",
+            "name": "Maundy Thursday",
             "type": [
-                "National holiday",
                 "Christian"
             ]
         },
@@ -2390,62 +2079,6 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-04-05",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2026-04-05",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-04-05",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-04-05",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2026-04-05",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2026-04-05",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2026-04-06",
-            "localName": "Self Determination Day is a state holiday in Australia",
-            "name": "Self Determination Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
             "date": "2026-04-06",
             "localName": "Easter Monday is the day after Easter Sunday and is a nationwide holiday in Australia.",
             "name": "Easter Monday",
@@ -2455,11 +2088,10 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2026-04-06",
-            "localName": "Easter Monday is the day after Easter Sunday and is a nationwide holiday in Australia.",
-            "name": "Easter Monday",
+            "localName": "Self Determination Day is a state holiday in Australia",
+            "name": "Self Determination Day",
             "type": [
-                "National holiday",
-                "Christian"
+                "Local holiday"
             ]
         },
         {
@@ -2561,7 +2193,7 @@ export const holidays_AU: CountryHolidays = {
         {
             "date": "2026-05-04",
             "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "May Day",
+            "name": "Labour Day",
             "type": [
                 "Common local holiday"
             ]
@@ -2569,7 +2201,7 @@ export const holidays_AU: CountryHolidays = {
         {
             "date": "2026-05-04",
             "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
+            "name": "May Day",
             "type": [
                 "Common local holiday"
             ]
@@ -2656,16 +2288,16 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2026-06-01",
-            "localName": "Foundation Day is a public holiday in the state of Western Australia to commemorate the founding of the first British colony in the state.",
-            "name": "Western Australia Day",
+            "localName": "Reconciliation Day is a state holiday in the Australian Capital Territory.",
+            "name": "Reconciliation Day",
             "type": [
                 "Local holiday"
             ]
         },
         {
             "date": "2026-06-01",
-            "localName": "Reconciliation Day is a state holiday in the Australian Capital Territory.",
-            "name": "Reconciliation Day",
+            "localName": "Foundation Day is a public holiday in the state of Western Australia to commemorate the founding of the first British colony in the state.",
+            "name": "Western Australia Day",
             "type": [
                 "Local holiday"
             ]
@@ -2684,14 +2316,6 @@ export const holidays_AU: CountryHolidays = {
             "name": "Queensland Day",
             "type": [
                 "Local observance"
-            ]
-        },
-        {
-            "date": "2026-06-08",
-            "localName": "The King's birthday is an annual public holiday in parts of Australia celebrating the official birthday of King Charles III.",
-            "name": "King's Birthday",
-            "type": [
-                "Common local holiday"
             ]
         },
         {
@@ -2776,18 +2400,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2026-08-26",
-            "localName": "Eid Milad ul-Nabi marks the anniversary of the Prophet Muhammad's birth and death. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Milad un Nabi (Provisional)",
-            "type": [
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2026-08-26",
             "localName": "Mawlid, or Milad, marks the birth of the Islamic prophet Muhammed, or Mohamed, in the year 570 of the Gregorian calendar.",
             "name": "Hari Maulad Nabi",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2026-08-26",
+            "localName": "Eid Milad ul-Nabi marks the anniversary of the Prophet Muhammad's birth and death. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Milad un Nabi (Provisional)",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -2888,14 +2512,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2026-10-05",
-            "localName": "Territory Day is a state holiday in Australia",
-            "name": "Territory Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-10-05",
             "localName": "The King's birthday is an annual public holiday in parts of Australia celebrating the official birthday of King Charles III.",
             "name": "King's Birthday",
             "type": [
@@ -2912,10 +2528,10 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2026-10-05",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
+            "localName": "Territory Day is a state holiday in Australia",
+            "name": "Territory Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
@@ -3039,39 +2655,6 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-12-25",
-            "localName": "Christians celebrate the birth of Jesus on Christmas Day, which is in the middle of summer in Australia.",
-            "name": "Christmas Day",
-            "type": [
-                "National holiday",
-                "Christian"
-            ]
-        },
-        {
             "date": "2026-12-25",
             "localName": "Christians celebrate the birth of Jesus on Christmas Day, which is in the middle of summer in Australia.",
             "name": "Christmas Day",
@@ -3094,22 +2677,6 @@ export const holidays_AU: CountryHolidays = {
             "name": "Boxing Day Observed",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-12-31",
-            "localName": "Many Australians celebrate New Year's Eve on December 31 each year, which coincides with the date before New Year's Day in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-12-31",
-            "localName": "Many Australians celebrate New Year's Eve on December 31 each year, which coincides with the date before New Year's Day in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -3174,22 +2741,6 @@ export const holidays_AU: CountryHolidays = {
             "name": "Australia Day",
             "type": [
                 "National holiday"
-            ]
-        },
-        {
-            "date": "2027-02-06",
-            "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
-            "name": "Lunar New Year",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-02-06",
-            "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
-            "name": "Lunar New Year",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -3266,22 +2817,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2027-03-08",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2027-03-08",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Eight Hours Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2027-03-08",
             "localName": "Adelaide Cup is a state holiday and a horse racing event in South Australia.",
             "name": "Adelaide Cup",
             "type": [
@@ -3297,11 +2832,19 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-03-10",
-            "localName": "Eid al-Fitr, which is on the first day of the Islamic month of Shawwal, marks the end of the month-long fast of Ramadan. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Eid ul Fitr (Provisional)",
+            "date": "2027-03-08",
+            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
+            "name": "Eight Hours Day",
             "type": [
-                "Muslim"
+                "Common local holiday"
+            ]
+        },
+        {
+            "date": "2027-03-08",
+            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
+            "name": "Labour Day",
+            "type": [
+                "Common local holiday"
             ]
         },
         {
@@ -3310,6 +2853,14 @@ export const holidays_AU: CountryHolidays = {
             "name": "Hari Raya Puasa (Provisional)",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2027-03-10",
+            "localName": "Eid al-Fitr, which is on the first day of the Islamic month of Shawwal, marks the end of the month-long fast of Ramadan. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Eid ul Fitr (Provisional)",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -3324,6 +2875,14 @@ export const holidays_AU: CountryHolidays = {
             "date": "2027-03-18",
             "localName": "National Close the Gap Day raises awareness about the health and life expectancy gap between Aboriginal and Torres Strait Islander peoples and other Australians.",
             "name": "National Close the Gap Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-03-21",
+            "localName": "Harmony Day is a national observance that celebrates Australia's cultural, linguistic and religious diversity on March 21 every year.",
+            "name": "Harmony Day",
             "type": [
                 "Observance"
             ]
@@ -3345,14 +2904,6 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-03-21",
-            "localName": "Harmony Day is a national observance that celebrates Australia's cultural, linguistic and religious diversity on March 21 every year.",
-            "name": "Harmony Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2027-03-23",
             "localName": "Purim commemorates a time when Jewish people were saved from death around the fourth century BCE, according to the Book of Esther.",
             "name": "Purim",
@@ -3365,15 +2916,6 @@ export const holidays_AU: CountryHolidays = {
             "localName": "Many Christians in the Australia celebrate Maundy Thursday on the Thursday before Good Friday.",
             "name": "Maundy Thursday",
             "type": [
-                "Christian"
-            ]
-        },
-        {
-            "date": "2027-03-26",
-            "localName": "Good Friday is two days before Easter Sunday and is a national holiday in Australia.",
-            "name": "Good Friday",
-            "type": [
-                "National holiday",
                 "Christian"
             ]
         },
@@ -3402,68 +2944,11 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-03-28",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2027-03-28",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2027-03-28",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2027-03-28",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-28",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-28",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
             "date": "2027-03-29",
             "localName": "Easter Monday is the day after Easter Sunday and is a nationwide holiday in Australia.",
             "name": "Easter Monday",
             "type": [
                 "Local observance"
-            ]
-        },
-        {
-            "date": "2027-03-29",
-            "localName": "Easter Monday is the day after Easter Sunday and is a nationwide holiday in Australia.",
-            "name": "Easter Monday",
-            "type": [
-                "National holiday",
-                "Christian"
             ]
         },
         {
@@ -3556,10 +3041,10 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2027-05-03",
-            "localName": "Many Orthodox churches in Australia observe Easter Monday on the day after the Orthodox Easter Sunday date.",
-            "name": "Orthodox Easter Monday",
+            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
+            "name": "Labour Day",
             "type": [
-                "Orthodox"
+                "Common local holiday"
             ]
         },
         {
@@ -3572,10 +3057,10 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2027-05-03",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
+            "localName": "Many Orthodox churches in Australia observe Easter Monday on the day after the Orthodox Easter Sunday date.",
+            "name": "Orthodox Easter Monday",
             "type": [
-                "Common local holiday"
+                "Orthodox"
             ]
         },
         {
@@ -3620,14 +3105,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2027-05-17",
-            "localName": "Whit Monday is a Christian observance also known as Pentecost Monday. It is the day after Pentecost, or Whitsunday.",
-            "name": "Pentecost Monday",
-            "type": [
-                "Christian"
-            ]
-        },
-        {
-            "date": "2027-05-17",
             "localName": "Many Muslims in Australia celebrate Eid al- Adha around the 10th to the 13th days of the Islamic month of Dhu al-Hijjah. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
             "name": "Eid al-Adha (Provisional)",
             "type": [
@@ -3640,6 +3117,14 @@ export const holidays_AU: CountryHolidays = {
             "name": "Hari Raya Haji (Provisional)",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2027-05-17",
+            "localName": "Whit Monday is a Christian observance also known as Pentecost Monday. It is the day after Pentecost, or Whitsunday.",
+            "name": "Pentecost Monday",
+            "type": [
+                "Christian"
             ]
         },
         {
@@ -3684,18 +3169,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2027-06-06",
-            "localName": "The first day of Muharram, which is the first month in the Islamic calendar, marks the start of the Islamic New Year. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Muharram (Provisional)",
-            "type": [
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2027-06-06",
             "localName": "The King's birthday is an annual public holiday in parts of Australia celebrating the official birthday of King Charles III. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
             "name": "King's Birthday (Provisional)",
             "type": [
                 "Common local holiday"
+            ]
+        },
+        {
+            "date": "2027-06-06",
+            "localName": "The first day of Muharram, which is the first month in the Islamic calendar, marks the start of the Islamic New Year. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Muharram (Provisional)",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -3796,18 +3281,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2027-08-15",
-            "localName": "Eid Milad ul-Nabi marks the anniversary of the Prophet Muhammad's birth and death. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Milad un Nabi (Provisional)",
-            "type": [
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2027-08-15",
             "localName": "Mawlid, or Milad, marks the birth of the Islamic prophet Muhammed, or Mohamed, in the year 570 of the Gregorian calendar.",
             "name": "Hari Maulad Nabi",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2027-08-15",
+            "localName": "Eid Milad ul-Nabi marks the anniversary of the Prophet Muhammad's birth and death. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Milad un Nabi (Provisional)",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -3876,14 +3361,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2027-10-04",
-            "localName": "Territory Day is a state holiday in Australia",
-            "name": "Territory Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-10-04",
             "localName": "The King's birthday is an annual public holiday in parts of Australia celebrating the official birthday of King Charles III.",
             "name": "King's Birthday",
             "type": [
@@ -3900,10 +3377,10 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2027-10-04",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
+            "localName": "Territory Day is a state holiday in Australia",
+            "name": "Territory Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
@@ -4051,25 +3528,9 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
+            "date": "2027-12-25",
+            "localName": "Christians celebrate the birth of Jesus on Christmas Day, which is in the middle of summer in Australia.",
+            "name": "Christmas Day",
             "type": [
                 "Local holiday"
             ]
@@ -4083,20 +3544,12 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-12-25",
-            "localName": "Christians celebrate the birth of Jesus on Christmas Day, which is in the middle of summer in Australia.",
-            "name": "Christmas Day",
+            "date": "2027-12-26",
+            "localName": "December 26 is the Boxing Day holiday celebrated in Australia.",
+            "name": "Boxing Day",
             "type": [
                 "National holiday",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2027-12-25",
-            "localName": "Christians celebrate the birth of Jesus on Christmas Day, which is in the middle of summer in Australia.",
-            "name": "Christmas Day",
-            "type": [
-                "Local holiday"
             ]
         },
         {
@@ -4105,15 +3558,6 @@ export const holidays_AU: CountryHolidays = {
             "name": "Isra and Mi'raj (Provisional)",
             "type": [
                 "Muslim"
-            ]
-        },
-        {
-            "date": "2027-12-26",
-            "localName": "December 26 is the Boxing Day holiday celebrated in Australia.",
-            "name": "Boxing Day",
-            "type": [
-                "National holiday",
-                "Christian"
             ]
         },
         {
@@ -4138,22 +3582,6 @@ export const holidays_AU: CountryHolidays = {
             "name": "New Year's Eve",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-12-31",
-            "localName": "Many Australians celebrate New Year's Eve on December 31 each year, which coincides with the date before New Year's Day in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-12-31",
-            "localName": "Many Australians celebrate New Year's Eve on December 31 each year, which coincides with the date before New Year's Day in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -4210,22 +3638,6 @@ export const holidays_AU: CountryHolidays = {
             "name": "Australia Day",
             "type": [
                 "National holiday"
-            ]
-        },
-        {
-            "date": "2028-01-26",
-            "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
-            "name": "Lunar New Year",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-01-26",
-            "localName": "Lunar New Year marks the first day of the New Year in the Chinese calendar.",
-            "name": "Lunar New Year",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -4342,22 +3754,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2028-03-13",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2028-03-13",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Eight Hours Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2028-03-13",
             "localName": "Adelaide Cup is a state holiday and a horse racing event in South Australia.",
             "name": "Adelaide Cup",
             "type": [
@@ -4370,6 +3766,22 @@ export const holidays_AU: CountryHolidays = {
             "name": "Canberra Day",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2028-03-13",
+            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
+            "name": "Eight Hours Day",
+            "type": [
+                "Common local holiday"
+            ]
+        },
+        {
+            "date": "2028-03-13",
+            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
+            "name": "Labour Day",
+            "type": [
+                "Common local holiday"
             ]
         },
         {
@@ -4446,23 +3858,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2028-04-14",
-            "localName": "Many Orthodox Christians in Australia remember the events leading up to Jesus Christ's crucifixion on Great Friday.",
-            "name": "Orthodox Good Friday",
-            "type": [
-                "Orthodox"
-            ]
-        },
-        {
-            "date": "2028-04-14",
-            "localName": "Good Friday is two days before Easter Sunday and is a national holiday in Australia.",
-            "name": "Good Friday",
-            "type": [
-                "National holiday",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2028-04-14",
             "localName": "Good Friday is two days before Easter Sunday and is a national holiday in Australia.",
             "name": "Good Friday",
             "type": [
@@ -4470,9 +3865,9 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-15",
-            "localName": "Many Orthodox Christians in Australia remember Jesus Christ's burial and his descent into Hades on Holy Saturday.",
-            "name": "Orthodox Holy Saturday",
+            "date": "2028-04-14",
+            "localName": "Many Orthodox Christians in Australia remember the events leading up to Jesus Christ's crucifixion on Great Friday.",
+            "name": "Orthodox Good Friday",
             "type": [
                 "Orthodox"
             ]
@@ -4486,9 +3881,9 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-16",
-            "localName": "Many Orthodox Christians in Australia celebrate Jesus Christ's resurrection on Easter Sunday, also known as Pascha.",
-            "name": "Orthodox Easter",
+            "date": "2028-04-15",
+            "localName": "Many Orthodox Christians in Australia remember Jesus Christ's burial and his descent into Hades on Holy Saturday.",
+            "name": "Orthodox Holy Saturday",
             "type": [
                 "Orthodox"
             ]
@@ -4503,56 +3898,8 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2028-04-16",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2028-04-16",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-04-16",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2028-04-16",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2028-04-16",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2028-04-16",
-            "localName": "On Easter Sunday, Christians celebrate the resurrection of Jesus Christ after his crucifixion.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-04-17",
-            "localName": "Many Orthodox churches in Australia observe Easter Monday on the day after the Orthodox Easter Sunday date.",
-            "name": "Orthodox Easter Monday",
+            "localName": "Many Orthodox Christians in Australia celebrate Jesus Christ's resurrection on Easter Sunday, also known as Pascha.",
+            "name": "Orthodox Easter",
             "type": [
                 "Orthodox"
             ]
@@ -4567,19 +3914,10 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2028-04-17",
-            "localName": "Easter Monday is the day after Easter Sunday and is a nationwide holiday in Australia.",
-            "name": "Easter Monday",
+            "localName": "Many Orthodox churches in Australia observe Easter Monday on the day after the Orthodox Easter Sunday date.",
+            "name": "Orthodox Easter Monday",
             "type": [
-                "National holiday",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2028-04-18",
-            "localName": "The last day of Passover marks the end of the Passover period, which lasts for seven or eight days.",
-            "name": "Last day of Passover",
-            "type": [
-                "Hebrew"
+                "Orthodox"
             ]
         },
         {
@@ -4588,6 +3926,14 @@ export const holidays_AU: CountryHolidays = {
             "name": "Easter Tuesday",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2028-04-18",
+            "localName": "The last day of Passover marks the end of the Passover period, which lasts for seven or eight days.",
+            "name": "Last day of Passover",
+            "type": [
+                "Hebrew"
             ]
         },
         {
@@ -4617,7 +3963,7 @@ export const holidays_AU: CountryHolidays = {
         {
             "date": "2028-05-01",
             "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "May Day",
+            "name": "Labour Day",
             "type": [
                 "Common local holiday"
             ]
@@ -4625,7 +3971,7 @@ export const holidays_AU: CountryHolidays = {
         {
             "date": "2028-05-01",
             "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
+            "name": "May Day",
             "type": [
                 "Common local holiday"
             ]
@@ -4808,18 +4154,18 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2028-08-03",
-            "localName": "Eid Milad ul-Nabi marks the anniversary of the Prophet Muhammad's birth and death. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Milad un Nabi (Provisional)",
-            "type": [
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2028-08-03",
             "localName": "Mawlid, or Milad, marks the birth of the Islamic prophet Muhammed, or Mohamed, in the year 570 of the Gregorian calendar.",
             "name": "Hari Maulad Nabi",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2028-08-03",
+            "localName": "Eid Milad ul-Nabi marks the anniversary of the Prophet Muhammad's birth and death. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Milad un Nabi (Provisional)",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -4912,14 +4258,6 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2028-10-02",
-            "localName": "Territory Day is a state holiday in Australia",
-            "name": "Territory Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-10-02",
             "localName": "The King's birthday is an annual public holiday in parts of Australia celebrating the official birthday of King Charles III.",
             "name": "King's Birthday",
             "type": [
@@ -4936,10 +4274,10 @@ export const holidays_AU: CountryHolidays = {
         },
         {
             "date": "2028-10-02",
-            "localName": "Labour Day in Australia celebrates workers' role in contributing towards the nation's economy. It is an annual public holiday but its date varies across the states and territories.",
-            "name": "Labour Day",
+            "localName": "Territory Day is a state holiday in Australia",
+            "name": "Territory Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
@@ -5111,39 +4449,6 @@ export const holidays_AU: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-12-24",
-            "localName": "Christmas Eve in Australia is annually celebrated on December 24, which is the day before Christmas Day.",
-            "name": "Christmas Eve",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-12-25",
-            "localName": "Christians celebrate the birth of Jesus on Christmas Day, which is in the middle of summer in Australia.",
-            "name": "Christmas Day",
-            "type": [
-                "National holiday",
-                "Christian"
-            ]
-        },
-        {
             "date": "2028-12-25",
             "localName": "Christians celebrate the birth of Jesus on Christmas Day, which is in the middle of summer in Australia.",
             "name": "Christmas Day",
@@ -5158,22 +4463,6 @@ export const holidays_AU: CountryHolidays = {
             "type": [
                 "National holiday",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2028-12-31",
-            "localName": "Many Australians celebrate New Year's Eve on December 31 each year, which coincides with the date before New Year's Day in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-12-31",
-            "localName": "Many Australians celebrate New Year's Eve on December 31 each year, which coincides with the date before New Year's Day in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Observance"
             ]
         },
         {

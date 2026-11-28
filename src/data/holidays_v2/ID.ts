@@ -62,18 +62,18 @@ export const holidays_ID: CountryHolidays = {
         },
         {
             "date": "2024-03-12",
-            "localName": "Ramadan is a period of prayer, reflection and fasting for many Muslims worldwide. It is the ninth month in the Islamic calendar.",
-            "name": "Ramadan Start",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-03-12",
             "localName": "Joint Holiday for Bali's Day of Silence and Hindu New Year (Nyepi) is a joint holiday in Indonesia",
             "name": "Joint Holiday for Bali's Day of Silence and Hindu New Year (Nyepi)",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2024-03-12",
+            "localName": "Ramadan is a period of prayer, reflection and fasting for many Muslims worldwide. It is the ninth month in the Islamic calendar.",
+            "name": "Ramadan Start",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -981,14 +981,6 @@ export const holidays_ID: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-03-21",
-            "localName": "March Equinox in Indonesia (Jakarta)",
-            "name": "March Equinox",
-            "type": [
-                "Season"
-            ]
-        },
-        {
             "date": "2027-03-10",
             "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
             "name": "Idul Fitri (Provisional)",
@@ -1002,6 +994,14 @@ export const holidays_ID: CountryHolidays = {
             "name": "Idul Fitri Holiday (Provisional)",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2027-03-21",
+            "localName": "March Equinox in Indonesia (Jakarta)",
+            "name": "March Equinox",
+            "type": [
+                "Season"
             ]
         },
         {
@@ -1077,17 +1077,17 @@ export const holidays_ID: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-08-17",
-            "localName": "Indonesian Independence Day is a public holiday in Indonesia",
-            "name": "Indonesian Independence Day",
+            "date": "2027-08-15",
+            "localName": "Mawlid, or Milad, marks the birth of the Islamic prophet Muhammed, or Mohamed, in the year 570 of the Gregorian calendar. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Maulid Nabi Muhammad (Provisional)",
             "type": [
                 "National holiday"
             ]
         },
         {
-            "date": "2027-08-15",
-            "localName": "Mawlid, or Milad, marks the birth of the Islamic prophet Muhammed, or Mohamed, in the year 570 of the Gregorian calendar. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Maulid Nabi Muhammad (Provisional)",
+            "date": "2027-08-17",
+            "localName": "Indonesian Independence Day is a public holiday in Indonesia",
+            "name": "Indonesian Independence Day",
             "type": [
                 "National holiday"
             ]
@@ -1117,19 +1117,19 @@ export const holidays_ID: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-12-31",
-            "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
-            "name": "New Year's Eve",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2027-12-26",
             "localName": "Provisional calculation of the second Isra and Mi'raj occurrence in Gregorian 2027, using holidays 0.104. The government's annual holiday decree and lunar calendar confirmation have not been verified.",
             "name": "Isra and Mi'raj (provisional forecast)",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2027-12-31",
+            "localName": "New Year's Eve is the last day of the year, December 31, in the Gregorian calendar.",
+            "name": "New Year's Eve",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1309,19 +1309,19 @@ export const holidays_ID: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-12-21",
-            "localName": "December Solstice in Indonesia (Jakarta)",
-            "name": "December Solstice",
-            "type": [
-                "Season"
-            ]
-        },
-        {
             "date": "2028-12-14",
             "localName": "Isra and Mi'raj (Isra Me'raj, Israa and Mi'raaj, Laylat Al-Isra wa Al-Miraj, Lailat al Miraj, Night Journey and Ascension to Heaven) marks the night that the Prophet Mohammad traveled from Mecca to Jerusalem, ascended to heaven and returned. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
             "name": "Ascension of the Prophet Muhammad (Provisional)",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2028-12-21",
+            "localName": "December Solstice in Indonesia (Jakarta)",
+            "name": "December Solstice",
+            "type": [
+                "Season"
             ]
         },
         {

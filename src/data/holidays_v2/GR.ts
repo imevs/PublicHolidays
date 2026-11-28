@@ -54,16 +54,16 @@ export const holidays_GR: CountryHolidays = {
         },
         {
             "date": "2024-03-25",
-            "localName": "Greek Independence Day is a national holiday in Greece",
-            "name": "Greek Independence Day",
+            "localName": "Annunciation of the Virgin Mary is a national holiday in Greece",
+            "name": "Annunciation of the Virgin Mary",
             "type": [
                 "National holiday"
             ]
         },
         {
             "date": "2024-03-25",
-            "localName": "Annunciation of the Virgin Mary is a national holiday in Greece",
-            "name": "Annunciation of the Virgin Mary",
+            "localName": "Greek Independence Day is a national holiday in Greece",
+            "name": "Greek Independence Day",
             "type": [
                 "National holiday"
             ]
@@ -270,16 +270,16 @@ export const holidays_GR: CountryHolidays = {
         },
         {
             "date": "2025-03-25",
-            "localName": "Greek Independence Day is a national holiday in Greece",
-            "name": "Greek Independence Day",
+            "localName": "Annunciation of the Virgin Mary is a national holiday in Greece",
+            "name": "Annunciation of the Virgin Mary",
             "type": [
                 "National holiday"
             ]
         },
         {
             "date": "2025-03-25",
-            "localName": "Annunciation of the Virgin Mary is a national holiday in Greece",
-            "name": "Annunciation of the Virgin Mary",
+            "localName": "Greek Independence Day is a national holiday in Greece",
+            "name": "Greek Independence Day",
             "type": [
                 "National holiday"
             ]
@@ -478,16 +478,16 @@ export const holidays_GR: CountryHolidays = {
         },
         {
             "date": "2026-03-25",
-            "localName": "Greek Independence Day is a national holiday in Greece",
-            "name": "Greek Independence Day",
+            "localName": "Annunciation of the Virgin Mary is a national holiday in Greece",
+            "name": "Annunciation of the Virgin Mary",
             "type": [
                 "National holiday"
             ]
         },
         {
             "date": "2026-03-25",
-            "localName": "Annunciation of the Virgin Mary is a national holiday in Greece",
-            "name": "Annunciation of the Virgin Mary",
+            "localName": "Greek Independence Day is a national holiday in Greece",
+            "name": "Greek Independence Day",
             "type": [
                 "National holiday"
             ]
@@ -686,16 +686,16 @@ export const holidays_GR: CountryHolidays = {
         },
         {
             "date": "2027-03-25",
-            "localName": "Greek Independence Day is a national holiday in Greece",
-            "name": "Greek Independence Day",
+            "localName": "Annunciation of the Virgin Mary is a national holiday in Greece",
+            "name": "Annunciation of the Virgin Mary",
             "type": [
                 "National holiday"
             ]
         },
         {
             "date": "2027-03-25",
-            "localName": "Annunciation of the Virgin Mary is a national holiday in Greece",
-            "name": "Annunciation of the Virgin Mary",
+            "localName": "Greek Independence Day is a national holiday in Greece",
+            "name": "Greek Independence Day",
             "type": [
                 "National holiday"
             ]
@@ -742,14 +742,6 @@ export const holidays_GR: CountryHolidays = {
         },
         {
             "date": "2027-06-20",
-            "localName": "Orthodox Holy Spirit Sunday is a observance in Greece",
-            "name": "Orthodox Holy Spirit Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-06-20",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
@@ -757,11 +749,11 @@ export const holidays_GR: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-06-21",
-            "localName": "Orthodox Holy Spirit Monday is a de facto holiday in Greece",
-            "name": "Orthodox Holy Spirit Monday",
+            "date": "2027-06-20",
+            "localName": "Orthodox Holy Spirit Sunday is a observance in Greece",
+            "name": "Orthodox Holy Spirit Sunday",
             "type": [
-                "De facto holiday"
+                "Observance"
             ]
         },
         {
@@ -770,6 +762,14 @@ export const holidays_GR: CountryHolidays = {
             "name": "June Solstice",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2027-06-21",
+            "localName": "Orthodox Holy Spirit Monday is a de facto holiday in Greece",
+            "name": "Orthodox Holy Spirit Monday",
+            "type": [
+                "De facto holiday"
             ]
         },
         {
@@ -894,16 +894,16 @@ export const holidays_GR: CountryHolidays = {
         },
         {
             "date": "2028-03-25",
-            "localName": "Greek Independence Day is a national holiday in Greece",
-            "name": "Greek Independence Day",
+            "localName": "Annunciation of the Virgin Mary is a national holiday in Greece",
+            "name": "Annunciation of the Virgin Mary",
             "type": [
                 "National holiday"
             ]
         },
         {
             "date": "2028-03-25",
-            "localName": "Annunciation of the Virgin Mary is a national holiday in Greece",
-            "name": "Annunciation of the Virgin Mary",
+            "localName": "Greek Independence Day is a national holiday in Greece",
+            "name": "Greek Independence Day",
             "type": [
                 "National holiday"
             ]

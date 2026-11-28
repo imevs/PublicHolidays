@@ -78,18 +78,18 @@ export const holidays_LI: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in Liechtenstein",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-03-31",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -286,18 +286,18 @@ export const holidays_LI: CountryHolidays = {
         },
         {
             "date": "2025-03-19",
-            "localName": "St Joseph's Day is a national holiday in Liechtenstein",
-            "name": "St Joseph's Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-03-19",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2025-03-19",
+            "localName": "St Joseph's Day is a national holiday in Liechtenstein",
+            "name": "St Joseph's Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -526,18 +526,18 @@ export const holidays_LI: CountryHolidays = {
         },
         {
             "date": "2026-03-19",
-            "localName": "St Joseph's Day is a national holiday in Liechtenstein",
-            "name": "St Joseph's Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-03-19",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2026-03-19",
+            "localName": "St Joseph's Day is a national holiday in Liechtenstein",
+            "name": "St Joseph's Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -814,18 +814,18 @@ export const holidays_LI: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-28",
             "localName": "Daylight Saving Time starts in Liechtenstein",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {

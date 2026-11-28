@@ -38,18 +38,18 @@ export const holidays_FR: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Many Christians in France celebrate Jesus Christ's resurrection on Easter Sunday.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in France",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-03-31",
+            "localName": "Many Christians in France celebrate Jesus Christ's resurrection on Easter Sunday.",
+            "name": "Easter Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -246,18 +246,18 @@ export const holidays_FR: CountryHolidays = {
         },
         {
             "date": "2025-03-30",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
-            "name": "Eid al-Fitr",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-03-30",
             "localName": "Daylight Saving Time starts in France",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2025-03-30",
+            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
+            "name": "Eid al-Fitr",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -694,18 +694,18 @@ export const holidays_FR: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
-            "localName": "Many Christians in France celebrate Jesus Christ's resurrection on Easter Sunday.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-28",
             "localName": "Daylight Saving Time starts in France",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
+            "localName": "Many Christians in France celebrate Jesus Christ's resurrection on Easter Sunday.",
+            "name": "Easter Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1082,346 +1082,6 @@ export const holidays_FR: CountryHolidays = {
             "name": "New Year's Eve",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2025-12-14",
-            "endDate": "2026-01-11",
-            "localName": "Regions: YT",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2025-12-20",
-            "endDate": "2026-01-20",
-            "localName": "Regions: RU",
-            "name": "Southern summer holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2025-12-21",
-            "endDate": "2026-01-04",
-            "localName": "Regions: AR, BF, BT, CV, GE, HF, IF, NA, NO, OC, PC, PL, ZA, ZB, ZC",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-08",
-            "endDate": "2026-02-22",
-            "localName": "Regions: BL, GP, MF",
-            "name": "Carnival holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-08",
-            "endDate": "2026-02-22",
-            "localName": "Regions: AR, BF, NA, ZA",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-15",
-            "endDate": "2026-03-01",
-            "localName": "Regions: BT, CV, GE, HF, NO, PC, PL, ZB",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-22",
-            "endDate": "2026-03-08",
-            "localName": "Regions: IF, OC, ZC",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-01",
-            "endDate": "2026-03-15",
-            "localName": "Regions: RU",
-            "name": "Holidays after third period",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-02",
-            "endDate": "2026-03-08",
-            "localName": "Regions: YT",
-            "name": "February holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-28",
-            "endDate": "2026-04-12",
-            "localName": "Regions: MQ",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-02",
-            "endDate": "2026-04-15",
-            "localName": "Regions: GY",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-03",
-            "endDate": "2026-04-19",
-            "localName": "Regions: BL, GP, MF",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-05",
-            "endDate": "2026-04-19",
-            "localName": "Regions: AR, BF, NA, ZA",
-            "name": "Spring Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-12",
-            "endDate": "2026-04-26",
-            "localName": "Regions: BT, CV, GE, HF, NO, PC, PL, ZB",
-            "name": "Spring Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-18",
-            "endDate": "2026-05-04",
-            "localName": "Regions: BL, GP, MF",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-19",
-            "endDate": "2026-05-03",
-            "localName": "Regions: IF, OC, ZC",
-            "name": "Spring Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-26",
-            "endDate": "2026-05-11",
-            "localName": "Regions: YT",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-03",
-            "endDate": "2026-05-17",
-            "localName": "Regions: RU",
-            "name": "Holidays after fourth period",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-15",
-            "endDate": "2026-05-16",
-            "localName": "Regions: MQ",
-            "name": "No lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-15",
-            "endDate": "2026-05-16",
-            "localName": "Regions: BL, GP",
-            "name": "Week in May",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-04",
-            "localName": "Regions: BL, GP, MF",
-            "name": "End of lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-05",
-            "endDate": "2026-08-17",
-            "localName": "Regions: RU",
-            "name": "Southern winter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-05",
-            "endDate": "2026-08-31",
-            "localName": "Regions: AR, BF, BT, CV, GE, HF, IF, NA, NO, OC, PC, PL, ZA, ZB, ZC",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-10-11",
-            "endDate": "2026-10-24",
-            "localName": "Regions: RU",
-            "name": "Holidays after first period",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-10-18",
-            "endDate": "2026-11-01",
-            "localName": "Regions: AR, BF, BT, CV, GE, HF, IF, NA, NO, OC, PC, PL, ZA, ZB, ZC",
-            "name": "All Saints Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-12-20",
-            "endDate": "2027-01-03",
-            "localName": "Regions: AR, BF, BT, CV, GE, HF, IF, NA, NO, OC, PC, PL, ZA, ZB, ZC",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-12-20",
-            "endDate": "2027-01-31",
-            "localName": "Regions: RU",
-            "name": "Southern summer holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-07",
-            "endDate": "2027-02-21",
-            "localName": "Regions: IF, ZC",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-14",
-            "endDate": "2027-02-28",
-            "localName": "Regions: AR, BF, NA, ZA",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-21",
-            "endDate": "2027-03-07",
-            "localName": "Regions: BT, CV, GE, HF, NO, PC, PL, ZB",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-03-17",
-            "endDate": "2027-03-29",
-            "localName": "Regions: RU",
-            "name": "Holidays after third period",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-04-04",
-            "endDate": "2027-04-18",
-            "localName": "Regions: IF, OC, ZC",
-            "name": "Spring Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-04-11",
-            "endDate": "2027-04-25",
-            "localName": "Regions: AR, BF, NA, ZA",
-            "name": "Spring Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-04-18",
-            "endDate": "2027-05-02",
-            "localName": "Regions: BT, CV, GE, HF, NO, PC, PL, ZB",
-            "name": "Spring Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-06",
-            "endDate": "2027-05-09",
-            "localName": "Regions: AR, BF, BT, CV, GE, HF, IF, NA, NO, OC, PC, PL, ZA, ZB, ZC",
-            "name": "Ascension Bridge",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-06",
-            "endDate": "2027-05-18",
-            "localName": "Regions: RU",
-            "name": "Holidays after fourth period",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-03",
-            "localName": "Regions: AR, BF, BT, CV, GE, HF, IF, NA, NO, OC, PC, PL, ZA, ZB, ZC",
-            "name": "End of lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-11",
-            "endDate": "2027-08-15",
-            "localName": "Regions: RU",
-            "name": "Southern winter holidays",
-            "type": [
-                "School Holiday"
             ]
         }
     ]

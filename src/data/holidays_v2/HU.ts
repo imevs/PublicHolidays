@@ -1032,6 +1032,42 @@ export const holidays_HU: CountryHolidays = {
             "type": [
                 "School Holiday"
             ]
+        },
+        {
+            "date": "2026-10-23",
+            "endDate": "2026-11-01",
+            "localName": "2026/2027 academic year decree (Őszi szünet)",
+            "name": "Autumn holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2026-12-19",
+            "endDate": "2027-01-03",
+            "localName": "2026/2027 academic year decree (Téli szünet)",
+            "name": "Winter holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-03-25",
+            "endDate": "2027-04-04",
+            "localName": "2026/2027 academic year decree (Tavaszi szünet)",
+            "name": "Spring holidays",
+            "type": [
+                "School Holiday"
+            ]
+        },
+        {
+            "date": "2027-06-19",
+            "endDate": "2027-08-31",
+            "localName": "2026/2027 academic year decree (Nyári szünet)",
+            "name": "Summer holidays",
+            "type": [
+                "School Holiday"
+            ]
         }
     ]
 } as const;

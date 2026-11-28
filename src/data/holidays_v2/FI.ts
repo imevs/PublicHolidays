@@ -287,18 +287,18 @@ export const holidays_FI: CountryHolidays = {
         },
         {
             "date": "2025-06-21",
-            "localName": "Midsummer is a national holiday in Finland",
-            "name": "Midsummer",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-06-21",
             "localName": "June Solstice in Finland (Helsinki)",
             "name": "June Solstice",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2025-06-21",
+            "localName": "Midsummer is a national holiday in Finland",
+            "name": "Midsummer",
+            "type": [
+                "National holiday"
             ]
         },
         {

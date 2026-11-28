@@ -1115,42 +1115,6 @@ export const holidays_IE: CountryHolidays = {
             "type": [
                 "Observance"
             ]
-        },
-        {
-            "date": "2025-12-19",
-            "endDate": "2026-01-04",
-            "localName": "Christmas",
-            "name": "Christmas",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-16",
-            "endDate": "2026-02-20",
-            "localName": "Post-primary schools",
-            "name": "February mid-term break",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-19",
-            "endDate": "2026-02-20",
-            "localName": "Primary schools",
-            "name": "February mid-term break",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-27",
-            "endDate": "2026-04-12",
-            "localName": "Easter",
-            "name": "Easter",
-            "type": [
-                "School Holiday"
-            ]
         }
     ]
 } as const;

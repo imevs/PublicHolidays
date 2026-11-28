@@ -188,18 +188,18 @@ export const holidays_MD: CountryHolidays = {
         },
         {
             "date": "2024-05-09",
-            "localName": "Victory Day is a national holiday in Moldova",
-            "name": "Victory Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-05-09",
             "localName": "Europe Day is a observance in Moldova",
             "name": "Europe Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2024-05-09",
+            "localName": "Victory Day is a national holiday in Moldova",
+            "name": "Victory Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -284,16 +284,16 @@ export const holidays_MD: CountryHolidays = {
         },
         {
             "date": "2024-06-30",
-            "localName": "Peoples Port Day is a observance in Moldova",
-            "name": "Peoples Port Day",
+            "localName": "Competition Day is a observance in Moldova",
+            "name": "Competition Day",
             "type": [
                 "Observance"
             ]
         },
         {
             "date": "2024-06-30",
-            "localName": "Competition Day is a observance in Moldova",
-            "name": "Competition Day",
+            "localName": "Peoples Port Day is a observance in Moldova",
+            "name": "Peoples Port Day",
             "type": [
                 "Observance"
             ]
@@ -575,19 +575,19 @@ export const holidays_MD: CountryHolidays = {
         },
         {
             "date": "2025-04-19",
+            "localName": "Day of Victims of Organized Famine of 1946-1947 is a observance in Moldova",
+            "name": "Day of Victims of Organized Famine of 1946-1947",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-04-19",
             "localName": "The Saturday before Easter Sunday is also known as Holy Saturday for many Orthodox churches worldwide.",
             "name": "Orthodox Holy Saturday",
             "type": [
                 "Observance",
                 "Orthodox"
-            ]
-        },
-        {
-            "date": "2025-04-19",
-            "localName": "Day of Victims of Organized Famine of 1946-1947 is a observance in Moldova",
-            "name": "Day of Victims of Organized Famine of 1946-1947",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -642,18 +642,18 @@ export const holidays_MD: CountryHolidays = {
         },
         {
             "date": "2025-05-09",
-            "localName": "Victory Day is a national holiday in Moldova",
-            "name": "Victory Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-05-09",
             "localName": "Europe Day is a observance in Moldova",
             "name": "Europe Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2025-05-09",
+            "localName": "Victory Day is a national holiday in Moldova",
+            "name": "Victory Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1040,18 +1040,18 @@ export const holidays_MD: CountryHolidays = {
         },
         {
             "date": "2026-05-09",
-            "localName": "Victory Day is a national holiday in Moldova",
-            "name": "Victory Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-05-09",
             "localName": "Europe Day is a observance in Moldova",
             "name": "Europe Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2026-05-09",
+            "localName": "Victory Day is a national holiday in Moldova",
+            "name": "Victory Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1323,19 +1323,19 @@ export const holidays_MD: CountryHolidays = {
         },
         {
             "date": "2027-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "International Day of Solidarity of Workers",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2027-05-01",
             "localName": "The Saturday before Easter Sunday is also known as Holy Saturday for many Orthodox churches worldwide.",
             "name": "Orthodox Holy Saturday",
             "type": [
                 "Observance",
                 "Orthodox"
-            ]
-        },
-        {
-            "date": "2027-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "International Day of Solidarity of Workers",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -1358,18 +1358,18 @@ export const holidays_MD: CountryHolidays = {
         },
         {
             "date": "2027-05-09",
-            "localName": "Victory Day is a national holiday in Moldova",
-            "name": "Victory Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-05-09",
             "localName": "Europe Day is a observance in Moldova",
             "name": "Europe Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2027-05-09",
+            "localName": "Victory Day is a national holiday in Moldova",
+            "name": "Victory Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1494,18 +1494,18 @@ export const holidays_MD: CountryHolidays = {
         },
         {
             "date": "2027-10-31",
-            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-            "name": "Halloween",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-10-31",
             "localName": "Daylight Saving Time ends in Moldova",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-10-31",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
+            "type": [
+                "Observance"
             ]
         },
         {

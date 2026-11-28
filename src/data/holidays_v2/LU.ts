@@ -250,19 +250,19 @@ export const holidays_LU: CountryHolidays = {
         },
         {
             "date": "2025-06-08",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2025-06-08",
             "localName": "Many Christians all over the world annually observe Pentecost, also known as Whitsunday or Whit Sunday.",
             "name": "Pentecost Sunday",
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2025-06-08",
-            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-            "name": "Mother's Day",
-            "type": [
-                "Observance"
             ]
         },
         {

@@ -486,18 +486,18 @@ export const holidays_TR: CountryHolidays = {
         },
         {
             "date": "2026-03-20",
-            "localName": "The Ramadan Feast is a three-day festival and one of the most important religious holidays in Turkey. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Ramadan Feast (Provisional)",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-03-20",
             "localName": "March Equinox in Turkey (Istanbul)",
             "name": "March Equinox",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2026-03-20",
+            "localName": "The Ramadan Feast is a three-day festival and one of the most important religious holidays in Turkey. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Ramadan Feast (Provisional)",
+            "type": [
+                "National holiday"
             ]
         },
         {

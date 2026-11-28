@@ -38,16 +38,16 @@ export const holidays_HR: CountryHolidays = {
         },
         {
             "date": "2024-01-15",
-            "localName": "Day of the International Recognition of the Republic of Croatia is a observance in Croatia",
-            "name": "Day of the International Recognition of the Republic of Croatia",
+            "localName": "Day of Peaceful Reintegration of the Croatian Danube Region is a observance in Croatia",
+            "name": "Day of Peaceful Reintegration of the Croatian Danube Region",
             "type": [
                 "Observance"
             ]
         },
         {
             "date": "2024-01-15",
-            "localName": "Day of Peaceful Reintegration of the Croatian Danube Region is a observance in Croatia",
-            "name": "Day of Peaceful Reintegration of the Croatian Danube Region",
+            "localName": "Day of the International Recognition of the Republic of Croatia is a observance in Croatia",
+            "name": "Day of the International Recognition of the Republic of Croatia",
             "type": [
                 "Observance"
             ]
@@ -350,16 +350,16 @@ export const holidays_HR: CountryHolidays = {
         },
         {
             "date": "2025-01-15",
-            "localName": "Day of the International Recognition of the Republic of Croatia is a observance in Croatia",
-            "name": "Day of the International Recognition of the Republic of Croatia",
+            "localName": "Day of Peaceful Reintegration of the Croatian Danube Region is a observance in Croatia",
+            "name": "Day of Peaceful Reintegration of the Croatian Danube Region",
             "type": [
                 "Observance"
             ]
         },
         {
             "date": "2025-01-15",
-            "localName": "Day of Peaceful Reintegration of the Croatian Danube Region is a observance in Croatia",
-            "name": "Day of Peaceful Reintegration of the Croatian Danube Region",
+            "localName": "Day of the International Recognition of the Republic of Croatia is a observance in Croatia",
+            "name": "Day of the International Recognition of the Republic of Croatia",
             "type": [
                 "Observance"
             ]
@@ -662,16 +662,16 @@ export const holidays_HR: CountryHolidays = {
         },
         {
             "date": "2026-01-15",
-            "localName": "Day of the International Recognition of the Republic of Croatia is an observance in Croatia",
-            "name": "Day of the International Recognition of the Republic of Croatia",
+            "localName": "Day of Peaceful Reintegration of the Croatian Danube Region is an observance in Croatia",
+            "name": "Day of Peaceful Reintegration of the Croatian Danube Region",
             "type": [
                 "Observance"
             ]
         },
         {
             "date": "2026-01-15",
-            "localName": "Day of Peaceful Reintegration of the Croatian Danube Region is an observance in Croatia",
-            "name": "Day of Peaceful Reintegration of the Croatian Danube Region",
+            "localName": "Day of the International Recognition of the Republic of Croatia is an observance in Croatia",
+            "name": "Day of the International Recognition of the Republic of Croatia",
             "type": [
                 "Observance"
             ]
@@ -702,18 +702,18 @@ export const holidays_HR: CountryHolidays = {
         },
         {
             "date": "2026-03-20",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Ramadan Bayram (Provisional)",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2026-03-20",
             "localName": "March Equinox in Croatia (Zagreb)",
             "name": "March Equinox",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2026-03-20",
+            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Ramadan Bayram (Provisional)",
+            "type": [
+                "Optional holiday"
             ]
         },
         {
@@ -974,16 +974,16 @@ export const holidays_HR: CountryHolidays = {
         },
         {
             "date": "2027-01-15",
-            "localName": "Day of the International Recognition of the Republic of Croatia is a observance in Croatia",
-            "name": "Day of the International Recognition of the Republic of Croatia",
+            "localName": "Day of Peaceful Reintegration of the Croatian Danube Region is a observance in Croatia",
+            "name": "Day of Peaceful Reintegration of the Croatian Danube Region",
             "type": [
                 "Observance"
             ]
         },
         {
             "date": "2027-01-15",
-            "localName": "Day of Peaceful Reintegration of the Croatian Danube Region is a observance in Croatia",
-            "name": "Day of Peaceful Reintegration of the Croatian Danube Region",
+            "localName": "Day of the International Recognition of the Republic of Croatia is a observance in Croatia",
+            "name": "Day of the International Recognition of the Republic of Croatia",
             "type": [
                 "Observance"
             ]
@@ -1286,16 +1286,16 @@ export const holidays_HR: CountryHolidays = {
         },
         {
             "date": "2028-01-15",
-            "localName": "Day of the International Recognition of the Republic of Croatia is a observance in Croatia",
-            "name": "Day of the International Recognition of the Republic of Croatia",
+            "localName": "Day of Peaceful Reintegration of the Croatian Danube Region is a observance in Croatia",
+            "name": "Day of Peaceful Reintegration of the Croatian Danube Region",
             "type": [
                 "Observance"
             ]
         },
         {
             "date": "2028-01-15",
-            "localName": "Day of Peaceful Reintegration of the Croatian Danube Region is a observance in Croatia",
-            "name": "Day of Peaceful Reintegration of the Croatian Danube Region",
+            "localName": "Day of the International Recognition of the Republic of Croatia is a observance in Croatia",
+            "name": "Day of the International Recognition of the Republic of Croatia",
             "type": [
                 "Observance"
             ]

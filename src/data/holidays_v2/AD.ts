@@ -79,18 +79,18 @@ export const holidays_AD: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in Andorra",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-03-31",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -778,18 +778,18 @@ export const holidays_AD: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-28",
             "localName": "Daylight Saving Time starts in Andorra",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1228,41 +1228,6 @@ export const holidays_AD: CountryHolidays = {
             "endDate": "2027-01-06",
             "localName": "Christmas holidays",
             "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-08",
-            "endDate": "2027-02-12",
-            "localName": "Carnival holidays",
-            "name": "Carnival holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-03-22",
-            "endDate": "2027-04-02",
-            "localName": "Easter holidays",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-17",
-            "endDate": "2027-05-21",
-            "localName": "Pentecost holidays",
-            "name": "Pentecost holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-02",
-            "localName": "End of lessons",
-            "name": "End of lessons",
             "type": [
                 "School Holiday"
             ]

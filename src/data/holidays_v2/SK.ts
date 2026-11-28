@@ -71,18 +71,18 @@ export const holidays_SK: CountryHolidays = {
         },
         {
             "date": "2024-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labor Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-05-01",
             "localName": "Accession to the European Union Day is an observance in Slovakia",
             "name": "Accession to the European Union Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2024-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labor Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -151,18 +151,18 @@ export const holidays_SK: CountryHolidays = {
         },
         {
             "date": "2024-07-05",
-            "localName": "St. Cyril & St. Methodius Day is a national holiday in Slovakia",
-            "name": "St. Cyril & St. Methodius Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-07-05",
             "localName": "Foreign Slovaks Day is an observance in Slovakia",
             "name": "Foreign Slovaks Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2024-07-05",
+            "localName": "St. Cyril & St. Methodius Day is a national holiday in Slovakia",
+            "name": "St. Cyril & St. Methodius Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -424,18 +424,18 @@ export const holidays_SK: CountryHolidays = {
         },
         {
             "date": "2025-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labor Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-05-01",
             "localName": "Accession to the European Union Day is an observance in Slovakia",
             "name": "Accession to the European Union Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2025-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labor Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -504,18 +504,18 @@ export const holidays_SK: CountryHolidays = {
         },
         {
             "date": "2025-07-05",
-            "localName": "St. Cyril & St. Methodius Day is a national holiday in Slovakia",
-            "name": "St. Cyril & St. Methodius Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-07-05",
             "localName": "Foreign Slovaks Day is an observance in Slovakia",
             "name": "Foreign Slovaks Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2025-07-05",
+            "localName": "St. Cyril & St. Methodius Day is a national holiday in Slovakia",
+            "name": "St. Cyril & St. Methodius Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -777,18 +777,18 @@ export const holidays_SK: CountryHolidays = {
         },
         {
             "date": "2026-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labor Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-05-01",
             "localName": "Accession to the European Union Day is an observance in Slovakia",
             "name": "Accession to the European Union Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2026-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labor Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -857,18 +857,18 @@ export const holidays_SK: CountryHolidays = {
         },
         {
             "date": "2026-07-05",
-            "localName": "St. Cyril & St. Methodius Day is a national holiday in Slovakia",
-            "name": "St. Cyril & St. Methodius Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-07-05",
             "localName": "Day of Slovaks Abroad is an observance in Slovakia",
             "name": "Foreign Slovaks Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2026-07-05",
+            "localName": "St. Cyril & St. Methodius Day is a national holiday in Slovakia",
+            "name": "St. Cyril & St. Methodius Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1130,18 +1130,18 @@ export const holidays_SK: CountryHolidays = {
         },
         {
             "date": "2027-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labor Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-05-01",
             "localName": "Accession to the European Union Day is an observance in Slovakia",
             "name": "Accession to the European Union Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2027-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labor Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1210,18 +1210,18 @@ export const holidays_SK: CountryHolidays = {
         },
         {
             "date": "2027-07-05",
-            "localName": "St. Cyril & St. Methodius Day is a national holiday in Slovakia",
-            "name": "St. Cyril & St. Methodius Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-07-05",
             "localName": "Foreign Slovaks Day is an observance in Slovakia",
             "name": "Foreign Slovaks Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2027-07-05",
+            "localName": "St. Cyril & St. Methodius Day is a national holiday in Slovakia",
+            "name": "St. Cyril & St. Methodius Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1483,18 +1483,18 @@ export const holidays_SK: CountryHolidays = {
         },
         {
             "date": "2028-05-01",
-            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
-            "name": "Labor Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2028-05-01",
             "localName": "Accession to the European Union Day is an observance in Slovakia",
             "name": "Accession to the European Union Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2028-05-01",
+            "localName": "Labor Day, International Workers' Day, and May Day, is a day off for workers in many countries around the world.",
+            "name": "Labor Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1563,18 +1563,18 @@ export const holidays_SK: CountryHolidays = {
         },
         {
             "date": "2028-07-05",
-            "localName": "St. Cyril & St. Methodius Day is a national holiday in Slovakia",
-            "name": "St. Cyril & St. Methodius Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2028-07-05",
             "localName": "Foreign Slovaks Day is an observance in Slovakia",
             "name": "Foreign Slovaks Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2028-07-05",
+            "localName": "St. Cyril & St. Methodius Day is a national holiday in Slovakia",
+            "name": "St. Cyril & St. Methodius Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1767,186 +1767,6 @@ export const holidays_SK: CountryHolidays = {
             "name": "Day of the Declaration of Slovakia as an Independent Ecclesiastic Province",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2025-12-22",
-            "endDate": "2026-01-07",
-            "localName": "Regions: BC, BL, KI, NI, PV, TA, TC, ZI",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-16",
-            "endDate": "2026-02-20",
-            "localName": "Regions: BL, NI, TA",
-            "name": "Spring holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-23",
-            "endDate": "2026-02-27",
-            "localName": "Regions: BC, TC, ZI",
-            "name": "Spring holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-02",
-            "endDate": "2026-03-06",
-            "localName": "Regions: KI, PV",
-            "name": "Spring holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-02",
-            "endDate": "2026-04-07",
-            "localName": "Regions: BC, BL, KI, NI, PV, TA, TC, ZI",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-01",
-            "endDate": "2026-08-31",
-            "localName": "Regions: BC, BL, KI, NI, PV, TA, TC, ZI",
-            "name": "Summer holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-10-29",
-            "endDate": "2026-10-30",
-            "localName": "Regions: BC, BL, KI, NI, PV, TA, TC, ZI",
-            "name": "Autumn holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-12-23",
-            "endDate": "2027-01-07",
-            "localName": "Regions: BC, BL, KI, NI, PV, TA, TC, ZI",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-15",
-            "endDate": "2027-02-19",
-            "localName": "Regions: BC, TC, ZI",
-            "name": "Spring holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-22",
-            "endDate": "2027-02-26",
-            "localName": "Regions: KI, PV",
-            "name": "Spring holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-03-01",
-            "endDate": "2027-03-05",
-            "localName": "Regions: BL, NI, TA",
-            "name": "Spring holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-03-25",
-            "endDate": "2027-03-30",
-            "localName": "Regions: BC, BL, KI, NI, PV, TA, TC, ZI",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-01",
-            "endDate": "2027-08-31",
-            "localName": "Regions: BC, BL, KI, NI, PV, TA, TC, ZI",
-            "name": "Summer holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-10-28",
-            "endDate": "2027-10-29",
-            "localName": "Regions: BC, BL, KI, NI, PV, TA, TC, ZI",
-            "name": "Autumn holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-12-23",
-            "endDate": "2028-01-07",
-            "localName": "Regions: BC, BL, KI, NI, PV, TA, TC, ZI",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-02-21",
-            "endDate": "2028-02-25",
-            "localName": "Regions: KI, PV",
-            "name": "Spring holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-02-28",
-            "endDate": "2028-03-03",
-            "localName": "Regions: BL, NI, TA",
-            "name": "Spring holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-03-06",
-            "endDate": "2028-03-10",
-            "localName": "Regions: BC, TC, ZI",
-            "name": "Spring holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-04-13",
-            "endDate": "2028-04-18",
-            "localName": "Regions: BC, BL, KI, NI, PV, TA, TC, ZI",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-07-03",
-            "endDate": "2028-09-01",
-            "localName": "Regions: BC, BL, KI, NI, PV, TA, TC, ZI",
-            "name": "Summer holidays",
-            "type": [
-                "School Holiday"
             ]
         }
     ]

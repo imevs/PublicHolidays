@@ -549,6 +549,14 @@ export const holidays_BR: CountryHolidays = {
             ]
         },
         {
+            "date": "2026-04-20",
+            "localName": "Portaria MGI 11.460/2025 declares this 2026 date ponto facultativo for federal direct, autarchic and foundational public administration, with essential services preserved. It is not a universal private-sector holiday.",
+            "name": "Federal Public Service Optional Holiday (2026-04-20)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
             "date": "2026-04-21",
             "localName": "Tiradentes Day is a national holiday in Brazil",
             "name": "Tiradentes Day",
@@ -576,6 +584,14 @@ export const holidays_BR: CountryHolidays = {
             "date": "2026-06-04",
             "localName": "Corpus Christi is a Christian feast in honor of the Holy Eucharist.",
             "name": "Corpus Christi",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-06-05",
+            "localName": "Portaria MGI 11.460/2025 declares this 2026 date ponto facultativo for federal direct, autarchic and foundational public administration, with essential services preserved. It is not a universal private-sector holiday.",
+            "name": "Federal Public Service Optional Holiday (2026-06-05)",
             "type": [
                 "National holiday"
             ]
@@ -696,22 +712,6 @@ export const holidays_BR: CountryHolidays = {
             "date": "2026-12-31",
             "localName": "Portaria MGI 11.460/2025 grants federal public-administration optional leave from 13:00 on this date in 2026. This is a partial public-service closure; essential services are maintained and private-sector leave depends on applicable rules.",
             "name": "New Year's Eve (Federal public service, from 1pm)",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-04-20",
-            "localName": "Portaria MGI 11.460/2025 declares this 2026 date ponto facultativo for federal direct, autarchic and foundational public administration, with essential services preserved. It is not a universal private-sector holiday.",
-            "name": "Federal Public Service Optional Holiday (2026-04-20)",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-06-05",
-            "localName": "Portaria MGI 11.460/2025 declares this 2026 date ponto facultativo for federal direct, autarchic and foundational public administration, with essential services preserved. It is not a universal private-sector holiday.",
-            "name": "Federal Public Service Optional Holiday (2026-06-05)",
             "type": [
                 "National holiday"
             ]

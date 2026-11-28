@@ -30,14 +30,6 @@ export const holidays_NZ: CountryHolidays = {
         },
         {
             "date": "2024-01-29",
-            "localName": "Northland Anniversary Day is a local holiday in New Zealand",
-            "name": "Northland Anniversary Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-01-29",
             "localName": "Auckland Anniversary Day is a local holiday in New Zealand",
             "name": "Auckland Anniversary Day",
             "type": [
@@ -48,6 +40,14 @@ export const holidays_NZ: CountryHolidays = {
             "date": "2024-01-29",
             "localName": "Nelson Anniversary Day is a local holiday in New Zealand",
             "name": "Nelson Anniversary Day",
+            "type": [
+                "Local holiday"
+            ]
+        },
+        {
+            "date": "2024-01-29",
+            "localName": "Northland Anniversary Day is a local holiday in New Zealand",
+            "name": "Northland Anniversary Day",
             "type": [
                 "Local holiday"
             ]
@@ -118,18 +118,18 @@ export const holidays_NZ: CountryHolidays = {
         },
         {
             "date": "2024-04-01",
-            "localName": "Easter Monday is the day after Easter Sunday and is a public holiday in New Zealand.",
-            "name": "Easter Monday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-04-01",
             "localName": "April Fools is a observance in New Zealand",
             "name": "April Fools",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2024-04-01",
+            "localName": "Easter Monday is the day after Easter Sunday and is a public holiday in New Zealand.",
+            "name": "Easter Monday",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -334,16 +334,16 @@ export const holidays_NZ: CountryHolidays = {
         },
         {
             "date": "2025-01-27",
-            "localName": "Northland Anniversary Day is a local holiday in New Zealand",
-            "name": "Northland Anniversary Day",
+            "localName": "Auckland Anniversary Day is a local holiday in New Zealand",
+            "name": "Auckland Anniversary Day",
             "type": [
                 "Local holiday"
             ]
         },
         {
             "date": "2025-01-27",
-            "localName": "Auckland Anniversary Day is a local holiday in New Zealand",
-            "name": "Auckland Anniversary Day",
+            "localName": "Northland Anniversary Day is a local holiday in New Zealand",
+            "name": "Northland Anniversary Day",
             "type": [
                 "Local holiday"
             ]
@@ -638,16 +638,16 @@ export const holidays_NZ: CountryHolidays = {
         },
         {
             "date": "2026-01-26",
-            "localName": "Northland Anniversary Day is a local holiday in New Zealand",
-            "name": "Northland Anniversary Day",
+            "localName": "Auckland Anniversary Day is a local holiday in New Zealand",
+            "name": "Auckland Anniversary Day",
             "type": [
                 "Local holiday"
             ]
         },
         {
             "date": "2026-01-26",
-            "localName": "Auckland Anniversary Day is a local holiday in New Zealand",
-            "name": "Auckland Anniversary Day",
+            "localName": "Northland Anniversary Day is a local holiday in New Zealand",
+            "name": "Northland Anniversary Day",
             "type": [
                 "Local holiday"
             ]
@@ -966,14 +966,6 @@ export const holidays_NZ: CountryHolidays = {
         },
         {
             "date": "2027-02-01",
-            "localName": "Northland Anniversary Day is a local holiday in New Zealand",
-            "name": "Northland Anniversary Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-02-01",
             "localName": "Auckland Anniversary Day is a local holiday in New Zealand",
             "name": "Auckland Anniversary Day",
             "type": [
@@ -984,6 +976,14 @@ export const holidays_NZ: CountryHolidays = {
             "date": "2027-02-01",
             "localName": "Nelson Anniversary Day is a local holiday in New Zealand",
             "name": "Nelson Anniversary Day",
+            "type": [
+                "Local holiday"
+            ]
+        },
+        {
+            "date": "2027-02-01",
+            "localName": "Northland Anniversary Day is a local holiday in New Zealand",
+            "name": "Northland Anniversary Day",
             "type": [
                 "Local holiday"
             ]
@@ -1318,14 +1318,6 @@ export const holidays_NZ: CountryHolidays = {
         },
         {
             "date": "2028-01-31",
-            "localName": "Northland Anniversary Day is a local holiday in New Zealand",
-            "name": "Northland Anniversary Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-01-31",
             "localName": "Auckland Anniversary Day is a local holiday in New Zealand",
             "name": "Auckland Anniversary Day",
             "type": [
@@ -1336,6 +1328,14 @@ export const holidays_NZ: CountryHolidays = {
             "date": "2028-01-31",
             "localName": "Nelson Anniversary Day is a local holiday in New Zealand",
             "name": "Nelson Anniversary Day",
+            "type": [
+                "Local holiday"
+            ]
+        },
+        {
+            "date": "2028-01-31",
+            "localName": "Northland Anniversary Day is a local holiday in New Zealand",
+            "name": "Northland Anniversary Day",
             "type": [
                 "Local holiday"
             ]
@@ -1374,18 +1374,18 @@ export const holidays_NZ: CountryHolidays = {
         },
         {
             "date": "2028-03-20",
-            "localName": "Otago Anniversary Day is a local holiday in New Zealand",
-            "name": "Otago Anniversary Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-03-20",
             "localName": "March Equinox in New Zealand (Wellington)",
             "name": "March Equinox",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2028-03-20",
+            "localName": "Otago Anniversary Day is a local holiday in New Zealand",
+            "name": "Otago Anniversary Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {

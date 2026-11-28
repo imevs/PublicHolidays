@@ -58,6 +58,7 @@ export const en = {
         currentTimePrefix: "Current time:",
         hideInactive: "Hide inactive",
         showAll: "Show all",
+        noSchoolHolidayData: "No school holiday data available",
     },
     continents: {
         europe: "Europe",

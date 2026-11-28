@@ -46,18 +46,18 @@ export const holidays_BE: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in Belgium",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-03-31",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -142,7 +142,7 @@ export const holidays_BE: CountryHolidays = {
         },
         {
             "date": "2024-07-11",
-            "localName": "",
+            "localName": "Day of the Flemish Community",
             "name": "Day of the Flemish Community",
             "type": [
                 "Local holiday"
@@ -414,7 +414,7 @@ export const holidays_BE: CountryHolidays = {
         },
         {
             "date": "2025-07-11",
-            "localName": "",
+            "localName": "Day of the Flemish Community",
             "name": "Day of the Flemish Community",
             "type": [
                 "Local holiday"
@@ -686,7 +686,7 @@ export const holidays_BE: CountryHolidays = {
         },
         {
             "date": "2026-07-11",
-            "localName": "",
+            "localName": "Day of the Flemish Community",
             "name": "Day of the Flemish Community",
             "type": [
                 "Local holiday"
@@ -862,18 +862,18 @@ export const holidays_BE: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-28",
             "localName": "Daylight Saving Time starts in Belgium",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -958,7 +958,7 @@ export const holidays_BE: CountryHolidays = {
         },
         {
             "date": "2027-07-11",
-            "localName": "",
+            "localName": "Day of the Flemish Community",
             "name": "Day of the Flemish Community",
             "type": [
                 "Local holiday"
@@ -1006,18 +1006,18 @@ export const holidays_BE: CountryHolidays = {
         },
         {
             "date": "2027-10-31",
-            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-            "name": "Halloween",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-10-31",
             "localName": "Daylight Saving Time ends in Belgium",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-10-31",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1230,7 +1230,7 @@ export const holidays_BE: CountryHolidays = {
         },
         {
             "date": "2028-07-11",
-            "localName": "",
+            "localName": "Day of the Flemish Community",
             "name": "Day of the Flemish Community",
             "type": [
                 "Local holiday"

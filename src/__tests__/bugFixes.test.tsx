@@ -1101,3 +1101,35 @@ describe("Cross-year boundary holidays & Europe continent cache keys", () => {
         ]);
     });
 });
+
+describe("CountryFilter inactive state for school holidays", () => {
+    it("disables countries and continents without school holiday data when showSchoolHolidays is true", async () => {
+        const onToggleCountry = jest.fn();
+        render(
+            <CountryFilter
+                selectedCountries={["LV"]}
+                onToggleCountry={onToggleCountry}
+                showAllCountries={true}
+                setShowAllCountries={jest.fn()}
+                showSchoolHolidays={true}
+                setShowSchoolHolidays={jest.fn()}
+            />
+        );
+
+        // Germany (DE) has school holiday data
+        const germanyChip = await screen.findByText(/Germany/);
+        expect(germanyChip.closest("div")).not.toHaveAttribute("aria-disabled");
+        fireEvent.click(germanyChip.closest("div")!);
+        expect(onToggleCountry).toHaveBeenCalledWith("DE");
+
+        onToggleCountry.mockClear();
+
+        // United Kingdom or Norway or United States (Asia or North America continent / non-school-holiday country)
+        // Let's switch to Asia or check a country in Europe without school data like United Kingdom if present, or switch to Asia continent tag
+        const asiaTag = screen.getByText(/Asia/);
+        expect(asiaTag.closest("div")).toHaveAttribute("aria-disabled", "true");
+        fireEvent.click(asiaTag.closest("div")!);
+        // setActiveContinent should not be called or click should be disabled
+        // In CountryFilter, click is undefined or doesn't change activeContinent
+    });
+});

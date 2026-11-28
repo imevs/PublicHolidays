@@ -70,18 +70,18 @@ export const holidays_LT: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in Lithuania",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-03-31",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -742,18 +742,18 @@ export const holidays_LT: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-03-28",
             "localName": "Daylight Saving Time starts in Lithuania",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -830,18 +830,18 @@ export const holidays_LT: CountryHolidays = {
         },
         {
             "date": "2027-10-31",
-            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-            "name": "Halloween",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-10-31",
             "localName": "Daylight Saving Time ends in Lithuania",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-10-31",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1144,7 +1144,7 @@ export const holidays_LT: CountryHolidays = {
         },
         {
             "date": "2026-03-30",
-            "endDate": "2026-05-05",
+            "endDate": "2026-04-05",
             "localName": "Primary and secondary education",
             "name": "Spring Holidays",
             "type": [
@@ -1161,9 +1161,10 @@ export const holidays_LT: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-09-01",
-            "localName": "First Day of School",
-            "name": "First Day of School",
+            "date": "2026-06-01",
+            "endDate": "2026-08-31",
+            "localName": "Grades 1-8 and 10-11 (approximate start; varies by grade)",
+            "name": "Summer Holidays",
             "type": [
                 "School Holiday"
             ]
@@ -1178,7 +1179,7 @@ export const holidays_LT: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-12-23",
+            "date": "2026-12-21",
             "endDate": "2027-01-03",
             "localName": "Christmas Holidays",
             "name": "Christmas Holidays",
@@ -1214,9 +1215,10 @@ export const holidays_LT: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-09-01",
-            "localName": "First Day of School",
-            "name": "First Day of School",
+            "date": "2027-06-01",
+            "endDate": "2027-08-31",
+            "localName": "Grades 1-8 and 10-11 (approximate start; varies by grade)",
+            "name": "Summer Holidays",
             "type": [
                 "School Holiday"
             ]

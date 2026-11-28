@@ -56,19 +56,19 @@ export const holidays_AT: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
+            "localName": "Daylight Saving Time starts in Austria",
+            "name": "Daylight Saving Time starts",
+            "type": [
+                "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2024-03-31",
             "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
             "name": "Easter Sunday",
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2024-03-31",
-            "localName": "Daylight Saving Time starts in Austria",
-            "name": "Daylight Saving Time starts",
-            "type": [
-                "Clock change/Daylight Saving Time"
             ]
         },
         {
@@ -514,18 +514,18 @@ export const holidays_AT: CountryHolidays = {
         },
         {
             "date": "2025-10-26",
-            "localName": "National Day on October 26 is a public holiday in Austria.",
-            "name": "National Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-10-26",
             "localName": "Daylight Saving Time ends in Austria",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2025-10-26",
+            "localName": "National Day on October 26 is a public holiday in Austria.",
+            "name": "National Day",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -660,19 +660,19 @@ export const holidays_AT: CountryHolidays = {
         },
         {
             "date": "2026-03-29",
+            "localName": "Daylight Saving Time starts in Austria",
+            "name": "Daylight Saving Time starts",
+            "type": [
+                "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2026-03-29",
             "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
             "name": "Palm Sunday",
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2026-03-29",
-            "localName": "Daylight Saving Time starts in Austria",
-            "name": "Daylight Saving Time starts",
-            "type": [
-                "Clock change/Daylight Saving Time"
             ]
         },
         {
@@ -989,19 +989,19 @@ export const holidays_AT: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
+            "localName": "Daylight Saving Time starts in Austria",
+            "name": "Daylight Saving Time starts",
+            "type": [
+                "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
             "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
             "name": "Easter Sunday",
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2027-03-28",
-            "localName": "Daylight Saving Time starts in Austria",
-            "name": "Daylight Saving Time starts",
-            "type": [
-                "Clock change/Daylight Saving Time"
             ]
         },
         {
@@ -1144,18 +1144,18 @@ export const holidays_AT: CountryHolidays = {
         },
         {
             "date": "2027-10-31",
-            "localName": "Reformation Day is a observance in Austria",
-            "name": "Reformation Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-10-31",
             "localName": "Daylight Saving Time ends in Austria",
             "name": "Daylight Saving Time ends",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-10-31",
+            "localName": "Reformation Day is a observance in Austria",
+            "name": "Reformation Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1557,258 +1557,6 @@ export const holidays_AT: CountryHolidays = {
             "name": "New Year's Eve",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2025-12-24",
-            "endDate": "2026-01-06",
-            "localName": "Christmas Holidays",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-02",
-            "endDate": "2026-02-07",
-            "localName": "Regions: NÖ, WI",
-            "name": "Semester Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-09",
-            "endDate": "2026-02-14",
-            "localName": "Regions: BL, KÄ, SB, TI, VA",
-            "name": "Semester Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-16",
-            "endDate": "2026-02-21",
-            "localName": "Regions: OÖ, SM",
-            "name": "Semester Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-28",
-            "endDate": "2026-04-06",
-            "localName": "Easter Holidays",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-23",
-            "endDate": "2026-05-25",
-            "localName": "Pentecost Holidays",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-04",
-            "endDate": "2026-09-06",
-            "localName": "Regions: BL, NÖ, WI",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-11",
-            "endDate": "2026-09-13",
-            "localName": "Regions: KÄ, OÖ, SB, SM, TI, VA",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-10-27",
-            "endDate": "2026-10-31",
-            "localName": "Autumn Holidays",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-12-24",
-            "endDate": "2027-01-06",
-            "localName": "Christmas Holidays",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-01-30",
-            "endDate": "2027-02-06",
-            "localName": "Regions: NÖ, WI",
-            "name": "Semester Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-08",
-            "endDate": "2027-02-13",
-            "localName": "Regions: BL, KÄ, SB, TI, VA",
-            "name": "Semester Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-15",
-            "endDate": "2027-02-20",
-            "localName": "Regions: OÖ, SM",
-            "name": "Semester Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-03-20",
-            "endDate": "2027-03-29",
-            "localName": "Easter Holidays",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-15",
-            "endDate": "2027-05-17",
-            "localName": "Pentecost Holidays",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-03",
-            "endDate": "2027-09-05",
-            "localName": "Regions: BL, NÖ, WI",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-10",
-            "endDate": "2027-09-12",
-            "localName": "Regions: KÄ, OÖ, SB, SM, TI, VA",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-10-27",
-            "endDate": "2027-10-31",
-            "localName": "Autumn Holidays",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-12-24",
-            "endDate": "2028-01-06",
-            "localName": "Christmas Holidays",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-02-05",
-            "endDate": "2028-02-12",
-            "localName": "Regions: NÖ, WI",
-            "name": "Semester Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-02-14",
-            "endDate": "2028-02-19",
-            "localName": "Regions: BL, KÄ, SB, TI, VA",
-            "name": "Semester Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-02-21",
-            "endDate": "2028-02-26",
-            "localName": "Regions: OÖ, SM",
-            "name": "Semester Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-04-08",
-            "endDate": "2028-04-17",
-            "localName": "Easter Holidays",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-06-03",
-            "endDate": "2028-06-05",
-            "localName": "Pentecost Holidays",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-07-01",
-            "endDate": "2028-09-03",
-            "localName": "Regions: BL, NÖ, WI",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-07-08",
-            "endDate": "2028-09-10",
-            "localName": "Regions: KÄ, OÖ, SB, SM, TI, VA",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-27",
-            "endDate": "2028-10-31",
-            "localName": "Autumn Holidays",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-12-24",
-            "endDate": "2029-01-06",
-            "localName": "Christmas Holidays",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
             ]
         }
     ]

@@ -485,6 +485,14 @@ export const holidays_EE: CountryHolidays = {
             ]
         },
         {
+            "date": "2026-01-30",
+            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
+            "name": "Estonian Literature Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
             "date": "2026-02-02",
             "localName": "Anniversary of Tartu Peace Treaty is an observance in Estonia",
             "name": "Anniversary of Tartu Peace Treaty",
@@ -554,6 +562,14 @@ export const holidays_EE: CountryHolidays = {
             "name": "Pentecost",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2026-06-01",
+            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
+            "name": "Child Protection Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -637,6 +653,14 @@ export const holidays_EE: CountryHolidays = {
             ]
         },
         {
+            "date": "2026-10-01",
+            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
+            "name": "Local Self-Government Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
             "date": "2026-10-17",
             "localName": "Finno-Ugric Day is an observance in Estonia",
             "name": "Finno-Ugric Day",
@@ -701,30 +725,6 @@ export const holidays_EE: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-01-30",
-            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
-            "name": "Estonian Literature Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-06-01",
-            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
-            "name": "Child Protection Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-10-01",
-            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
-            "name": "Local Self-Government Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2027-01-01",
             "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
             "name": "New Year's Day",
@@ -736,6 +736,14 @@ export const holidays_EE: CountryHolidays = {
             "date": "2027-01-06",
             "localName": "Epiphany is a Christian holiday celebrated globally on January 6 each year. It commemorates two events recorded in the Bible: the three wise men's visit to baby Jesus; and Jesus' baptism.",
             "name": "Epiphany",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-01-30",
+            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
+            "name": "Estonian Literature Day",
             "type": [
                 "Observance"
             ]
@@ -810,6 +818,14 @@ export const holidays_EE: CountryHolidays = {
             "name": "Pentecost",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2027-06-01",
+            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
+            "name": "Child Protection Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -893,6 +909,14 @@ export const holidays_EE: CountryHolidays = {
             ]
         },
         {
+            "date": "2027-10-01",
+            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
+            "name": "Local Self-Government Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
             "date": "2027-10-16",
             "localName": "Finno-Ugric Day is a observance in Estonia",
             "name": "Finno-Ugric Day",
@@ -957,30 +981,6 @@ export const holidays_EE: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-01-30",
-            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
-            "name": "Estonian Literature Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-06-01",
-            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
-            "name": "Child Protection Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-10-01",
-            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
-            "name": "Local Self-Government Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2028-01-01",
             "localName": "New Year's Day is the first day of the year, or January 1, in the Gregorian calendar.",
             "name": "New Year's Day",
@@ -992,6 +992,14 @@ export const holidays_EE: CountryHolidays = {
             "date": "2028-01-06",
             "localName": "Epiphany is a Christian holiday celebrated globally on January 6 each year. It commemorates two events recorded in the Bible: the three wise men's visit to baby Jesus; and Jesus' baptism.",
             "name": "Epiphany",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-01-30",
+            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
+            "name": "Estonian Literature Day",
             "type": [
                 "Observance"
             ]
@@ -1056,6 +1064,14 @@ export const holidays_EE: CountryHolidays = {
             "date": "2028-05-14",
             "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
             "name": "Mother's Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-06-01",
+            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
+            "name": "Child Protection Day",
             "type": [
                 "Observance"
             ]
@@ -1149,6 +1165,14 @@ export const holidays_EE: CountryHolidays = {
             ]
         },
         {
+            "date": "2028-10-01",
+            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
+            "name": "Local Self-Government Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
             "date": "2028-10-21",
             "localName": "Finno-Ugric Day is a observance in Estonia",
             "name": "Finno-Ugric Day",
@@ -1210,30 +1234,6 @@ export const holidays_EE: CountryHolidays = {
             "name": "Boxing Day",
             "type": [
                 "National holiday"
-            ]
-        },
-        {
-            "date": "2028-01-30",
-            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
-            "name": "Estonian Literature Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-06-01",
-            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
-            "name": "Child Protection Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-10-01",
-            "localName": "The Public Holidays and Days of National Importance Act section 3 establishes this recurring national observance. It is not one of the statutory days of rest in sections 1 and 2.",
-            "name": "Local Self-Government Day",
-            "type": [
-                "Observance"
             ]
         },
         {

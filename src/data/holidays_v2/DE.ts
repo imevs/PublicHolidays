@@ -21,15 +21,6 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-01-06",
-            "localName": "Epiphany on January 6 is a public holiday in 3 German states  and commemorates the Bible story of  the Magi's visit to baby Jesus.",
-            "name": "Epiphany",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2024-01-22",
             "localName": "Franco-German Day is a observance in Germany",
             "name": "Franco-German Day",
@@ -86,22 +77,6 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Observance",
                 "Muslim"
-            ]
-        },
-        {
-            "date": "2024-03-08",
-            "localName": "International Women's Day is a observance in Germany",
-            "name": "International Women's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-03-08",
-            "localName": "International Women's Day is a observance in Germany",
-            "name": "International Women's Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -165,15 +140,6 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-03-28",
-            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-            "name": "Maundy Thursday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2024-03-29",
             "localName": "Many Christians in Germany observe the Good Friday public holiday to mark the crucifixion of Jesus Christ.",
             "name": "Good Friday",
@@ -193,11 +159,10 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Easter Sunday is a holiday in Germany to celebrate the Jesus Christ's resurrection, according to the Christian Bible.",
-            "name": "Easter Sunday",
+            "localName": "Daylight Saving Time starts in Germany",
+            "name": "Daylight Saving Time starts",
             "type": [
-                "Observance",
-                "Christian"
+                "Clock change/Daylight Saving Time"
             ]
         },
         {
@@ -207,14 +172,6 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Christian",
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2024-03-31",
-            "localName": "Daylight Saving Time starts in Germany",
-            "name": "Daylight Saving Time starts",
-            "type": [
-                "Clock change/Daylight Saving Time"
             ]
         },
         {
@@ -237,19 +194,19 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2024-04-23",
-            "localName": "German Beer Day is a observance in Germany",
-            "name": "German Beer Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-04-23",
             "localName": "During Passover, the Jewish people remember the liberation of the Israelites from slavery, their exodus from Egypt, and that their first-born children were spared during the 10th plague, as told in the Haggadah.",
             "name": "First Day of Passover",
             "type": [
                 "Observance",
                 "Hebrew"
+            ]
+        },
+        {
+            "date": "2024-04-23",
+            "localName": "German Beer Day is a observance in Germany",
+            "name": "German Beer Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -313,16 +270,8 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2024-05-08",
-            "localName": "",
+            "localName": "Anniversary of the End of World War II",
             "name": "Anniversary of the End of World War II",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-05-09",
-            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-            "name": "Father's Day",
             "type": [
                 "Observance"
             ]
@@ -345,20 +294,19 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-05-12",
-            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-            "name": "Mother's Day",
+            "date": "2024-05-09",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
             "type": [
                 "Observance"
             ]
         },
         {
-            "date": "2024-05-19",
-            "localName": "Pentecost is a Christian holiday to remember the Holy Spirit's descent onto Jesus' followers.",
-            "name": "Pentecost Sunday",
+            "date": "2024-05-12",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
             "type": [
-                "Observance",
-                "Christian"
+                "Observance"
             ]
         },
         {
@@ -448,14 +396,6 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2024-06-17",
-            "localName": "Remembrance of the Victims of SED Injustice is a observance in Germany",
-            "name": "Remembrance of the Victims of SED Injustice",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-06-17",
             "localName": "Anniversary of the Popular Uprising in the GDR is a observance in Germany",
             "name": "Anniversary of the Popular Uprising in the GDR",
             "type": [
@@ -469,6 +409,14 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Observance",
                 "Muslim"
+            ]
+        },
+        {
+            "date": "2024-06-17",
+            "localName": "Remembrance of the Victims of SED Injustice is a observance in Germany",
+            "name": "Remembrance of the Victims of SED Injustice",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -524,15 +472,6 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-08-15",
-            "localName": "The Feast of the Assumption of Mary is an occasion for Catholics to honor the belief that God assumed the Virgin Mary to heaven. It is a public holiday in some parts of Germany on August 15 each year.",
-            "name": "Assumption of Mary",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2024-09-01",
             "localName": "Anti War Day is a observance in Germany",
             "name": "Anti War Day",
@@ -552,14 +491,6 @@ export const holidays_DE: CountryHolidays = {
             "date": "2024-09-14",
             "localName": "German Language Day is a observance in Germany",
             "name": "German Language Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-09-20",
-            "localName": "German World Children's Day is a observance in Germany",
-            "name": "German World Children's Day",
             "type": [
                 "Observance"
             ]
@@ -590,19 +521,19 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2024-10-03",
+            "localName": "German Unity Day celebrates Germany's unification in 1990. It is on October 3 each year.",
+            "name": "Day of German Unity",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2024-10-03",
             "localName": "Rosh Hashana, commonly known as the Jewish New Year, is the first day of Tishrei, the seventh month in the Hebrew calendar.",
             "name": "Rosh Hashana",
             "type": [
                 "Observance",
                 "Hebrew"
-            ]
-        },
-        {
-            "date": "2024-10-03",
-            "localName": "German Unity Day celebrates Germany's unification in 1990. It is on October 3 each year.",
-            "name": "Day of German Unity",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -727,27 +658,18 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2024-10-31",
-            "localName": "Reformation Day in Germany is annually observed on October 31 to remember the Reformation, a time of big religious change between 1517 CE and 1648 CE.",
-            "name": "Reformation Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2024-10-31",
-            "localName": "Reformation Day in Germany is annually observed on October 31 to remember the Reformation, a time of big religious change between 1517 CE and 1648 CE.",
-            "name": "Reformation Day",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2024-10-31",
             "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
             "name": "Halloween",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2024-10-31",
+            "localName": "Reformation Day in Germany is annually observed on October 31 to remember the Reformation, a time of big religious change between 1517 CE and 1648 CE.",
+            "name": "Reformation Day",
+            "type": [
+                "Common local holiday"
             ]
         },
         {
@@ -760,29 +682,12 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-11-01",
-            "localName": "All Saints' Day is an annual public holiday in five German states to remember all Christian saints on November 1.",
-            "name": "All Saints' Day",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2024-11-02",
             "localName": "All Souls' Day falls on November 2 each year. It is a day of alms giving and prayers for the dead.",
             "name": "All Souls' Day",
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2024-11-09",
-            "localName": "Night of Broken Glass Remembrance Day is a observance in Germany",
-            "name": "Night of Broken Glass Remembrance Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -802,6 +707,14 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
+            "date": "2024-11-09",
+            "localName": "Night of Broken Glass Remembrance Day is a observance in Germany",
+            "name": "Night of Broken Glass Remembrance Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
             "date": "2024-11-11",
             "localName": "St. Martin's Day is celebrated in Germany every year on November 11.",
             "name": "St. Martin's Day",
@@ -814,23 +727,6 @@ export const holidays_DE: CountryHolidays = {
             "date": "2024-11-17",
             "localName": "On the National Day of Mourning (Volkstrauertag) many Germans commemorate all victims of war and tyranny.",
             "name": "National Day of Mourning",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-11-20",
-            "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
-            "name": "Repentance Day",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2024-11-20",
-            "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
-            "name": "Repentance Day",
             "type": [
                 "Observance"
             ]
@@ -872,8 +768,8 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2024-12-08",
-            "localName": "Second Advent Sunday is a observance and Christian holiday in Germany",
-            "name": "Second Advent Sunday",
+            "localName": "The Feast of the Immaculate Conception is a Christian observance on December 8 each year.",
+            "name": "Feast of the Immaculate Conception",
             "type": [
                 "Observance",
                 "Christian"
@@ -881,8 +777,8 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2024-12-08",
-            "localName": "The Feast of the Immaculate Conception is a Christian observance on December 8 each year.",
-            "name": "Feast of the Immaculate Conception",
+            "localName": "Second Advent Sunday is a observance and Christian holiday in Germany",
+            "name": "Second Advent Sunday",
             "type": [
                 "Observance",
                 "Christian"
@@ -974,15 +870,6 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-01-06",
-            "localName": "Epiphany on January 6 is a public holiday in 3 German states  and commemorates the Bible story of  the Magi's visit to baby Jesus.",
-            "name": "Epiphany",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2025-01-22",
             "localName": "Franco-German Day is a observance in Germany",
             "name": "Franco-German Day",
@@ -1039,22 +926,6 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2025-03-08",
-            "localName": "International Women's Day is a observance in Germany",
-            "name": "International Women's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-03-08",
-            "localName": "International Women's Day is a observance in Germany",
-            "name": "International Women's Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1118,20 +989,20 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2025-04-13",
-            "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
-            "name": "Palm Sunday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2025-04-13",
             "localName": "During Passover, the Jewish people remember the liberation of the Israelites from slavery, their exodus from Egypt, and that their first-born children were spared during the 10th plague, as told in the Haggadah.",
             "name": "First Day of Passover",
             "type": [
                 "Observance",
                 "Hebrew"
+            ]
+        },
+        {
+            "date": "2025-04-13",
+            "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
+            "name": "Palm Sunday",
+            "type": [
+                "Observance",
+                "Christian"
             ]
         },
         {
@@ -1141,15 +1012,6 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Observance",
                 "Hebrew"
-            ]
-        },
-        {
-            "date": "2025-04-17",
-            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-            "name": "Maundy Thursday",
-            "type": [
-                "Observance",
-                "Christian"
             ]
         },
         {
@@ -1195,15 +1057,6 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Observance",
                 "Hebrew"
-            ]
-        },
-        {
-            "date": "2025-04-20",
-            "localName": "Easter Sunday is a holiday in Germany to celebrate the Jesus Christ's resurrection, according to the Christian Bible.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance",
-                "Christian"
             ]
         },
         {
@@ -1273,14 +1126,6 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-05-08",
-            "localName": "Germany commemorates the end of the Second World War on May 8 every year.",
-            "name": "Anniversary of the End of World War II",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2025-05-09",
             "localName": "Europe Day (European Union) is a observance in Germany",
             "name": "Europe Day (European Union)",
@@ -1306,19 +1151,19 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2025-05-29",
-            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-            "name": "Father's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-05-29",
             "localName": "Ascension Day in Germany is on a Thursday 39 days after Easter Sunday.",
             "name": "Ascension Day",
             "type": [
                 "National holiday",
                 "Christian"
+            ]
+        },
+        {
+            "date": "2025-05-29",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1374,15 +1219,6 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-06-08",
-            "localName": "Pentecost is a Christian holiday to remember the Holy Spirit's descent onto Jesus' followers.",
-            "name": "Pentecost Sunday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2025-06-09",
             "localName": "The Second Day of Pentecost is, which is on the Monday after Pentecost (or Whitsunday), is a public holiday in Germany.",
             "name": "Pentecost Monday",
@@ -1409,16 +1245,16 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2025-06-17",
-            "localName": "Remembrance of the Victims of SED Injustice is a observance in Germany",
-            "name": "Remembrance of the Victims of SED Injustice",
+            "localName": "Anniversary of the Popular Uprising in the GDR is a observance in Germany",
+            "name": "Anniversary of the Popular Uprising in the GDR",
             "type": [
                 "Observance"
             ]
         },
         {
             "date": "2025-06-17",
-            "localName": "Anniversary of the Popular Uprising in the GDR is a observance in Germany",
-            "name": "Anniversary of the Popular Uprising in the GDR",
+            "localName": "Remembrance of the Victims of SED Injustice is a observance in Germany",
+            "name": "Remembrance of the Victims of SED Injustice",
             "type": [
                 "Observance"
             ]
@@ -1485,15 +1321,6 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-08-15",
-            "localName": "The Feast of the Assumption of Mary is an occasion for Catholics to honor the belief that God assumed the Virgin Mary to heaven. It is a public holiday in some parts of Germany on August 15 each year.",
-            "name": "Assumption of Mary",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2025-09-01",
             "localName": "Anti War Day is a observance in Germany",
             "name": "Anti War Day",
@@ -1519,26 +1346,18 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2025-09-20",
-            "localName": "German World Children's Day is a common local holiday in Germany",
-            "name": "German World Children's Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2025-09-20",
-            "localName": "German World Children's Day is a observance in Germany",
-            "name": "German World Children's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-09-20",
             "localName": "First day of Wiesn (Oktoberfest) is a observance in Germany",
             "name": "First day of Wiesn (Oktoberfest)",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2025-09-20",
+            "localName": "German World Children's Day is a common local holiday in Germany",
+            "name": "German World Children's Day",
+            "type": [
+                "Common local holiday"
             ]
         },
         {
@@ -1680,11 +1499,10 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2025-10-31",
-            "localName": "Reformation Day in Germany is annually observed on October 31 to remember the Reformation, a time of big religious change between 1517 CE and 1648 CE.",
-            "name": "Reformation Day",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
             "type": [
-                "Observance",
-                "Christian"
+                "Observance"
             ]
         },
         {
@@ -1693,14 +1511,6 @@ export const holidays_DE: CountryHolidays = {
             "name": "Reformation Day",
             "type": [
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2025-10-31",
-            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-            "name": "Halloween",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1713,29 +1523,12 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-11-01",
-            "localName": "All Saints' Day is an annual public holiday in five German states to remember all Christian saints on November 1.",
-            "name": "All Saints' Day",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2025-11-02",
             "localName": "All Souls' Day falls on November 2 each year. It is a day of alms giving and prayers for the dead.",
             "name": "All Souls' Day",
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2025-11-09",
-            "localName": "Night of Broken Glass Remembrance Day is a observance in Germany",
-            "name": "Night of Broken Glass Remembrance Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1755,6 +1548,14 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
+            "date": "2025-11-09",
+            "localName": "Night of Broken Glass Remembrance Day is a observance in Germany",
+            "name": "Night of Broken Glass Remembrance Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
             "date": "2025-11-11",
             "localName": "St. Martin's Day is celebrated in Germany every year on November 11.",
             "name": "St. Martin's Day",
@@ -1769,23 +1570,6 @@ export const holidays_DE: CountryHolidays = {
             "name": "National Day of Mourning",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2025-11-19",
-            "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
-            "name": "Repentance Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-11-19",
-            "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
-            "name": "Repentance Day",
-            "type": [
-                "Observance",
-                "Christian"
             ]
         },
         {
@@ -1860,19 +1644,19 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2025-12-21",
+            "localName": "December Solstice in Germany (Berlin)",
+            "name": "December Solstice",
+            "type": [
+                "Season"
+            ]
+        },
+        {
+            "date": "2025-12-21",
             "localName": "Fourth Advent Sunday is a observance and Christian holiday in Germany",
             "name": "Fourth Advent Sunday",
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2025-12-21",
-            "localName": "December Solstice in Germany (Berlin)",
-            "name": "December Solstice",
-            "type": [
-                "Season"
             ]
         },
         {
@@ -1923,15 +1707,6 @@ export const holidays_DE: CountryHolidays = {
             "localName": "Epiphany on January 6 is a public holiday in 3 German states  and commemorates the Bible story of  the Magi's visit to baby Jesus.",
             "name": "Epiphany",
             "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2026-01-06",
-            "localName": "Epiphany on January 6 is a public holiday in 3 German states  and commemorates the Bible story of  the Magi's visit to baby Jesus.",
-            "name": "Epiphany",
-            "type": [
                 "Common local holiday"
             ]
         },
@@ -1961,20 +1736,20 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2026-02-16",
-            "localName": "Carnival Monday is two days before Ash Wednesday and parades are held in many Catholic areas of Germany.",
-            "name": "Shrove Monday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2026-02-16",
             "localName": "Hizir Fast is an observance and Muslim holiday in Germany",
             "name": "Hizir Fast",
             "type": [
                 "Observance",
                 "Muslim"
+            ]
+        },
+        {
+            "date": "2026-02-16",
+            "localName": "Carnival Monday is two days before Ash Wednesday and parades are held in many Catholic areas of Germany.",
+            "name": "Shrove Monday",
+            "type": [
+                "Observance",
+                "Christian"
             ]
         },
         {
@@ -1992,22 +1767,6 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2026-03-08",
-            "localName": "International Women's Day is an observance in Germany",
-            "name": "International Women's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-03-08",
-            "localName": "International Women's Day is an observance in Germany",
-            "name": "International Women's Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -2063,15 +1822,6 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2026-03-29",
-            "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
-            "name": "Palm Sunday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2026-03-29",
             "localName": "Daylight Saving Time starts in Germany",
             "name": "Daylight Saving Time starts",
             "type": [
@@ -2079,18 +1829,9 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-04-02",
-            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-            "name": "Maundy Thursday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2026-04-02",
-            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-            "name": "Maundy Thursday",
+            "date": "2026-03-29",
+            "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
+            "name": "Palm Sunday",
             "type": [
                 "Observance",
                 "Christian"
@@ -2103,6 +1844,15 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Observance",
                 "Hebrew"
+            ]
+        },
+        {
+            "date": "2026-04-02",
+            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
+            "name": "Maundy Thursday",
+            "type": [
+                "Observance",
+                "Christian"
             ]
         },
         {
@@ -2127,15 +1877,6 @@ export const holidays_DE: CountryHolidays = {
             "date": "2026-04-04",
             "localName": "Holy Saturday is the day before Easter Sunday.",
             "name": "Holy Saturday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2026-04-05",
-            "localName": "Easter Sunday is a holiday in Germany to celebrate the Jesus Christ's resurrection, according to the Christian Bible.",
-            "name": "Easter Sunday",
             "type": [
                 "Observance",
                 "Christian"
@@ -2243,19 +1984,19 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2026-05-14",
-            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-            "name": "Father's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-05-14",
             "localName": "Ascension Day in Germany is on a Thursday 39 days after Easter Sunday.",
             "name": "Ascension Day",
             "type": [
                 "National holiday",
                 "Christian"
+            ]
+        },
+        {
+            "date": "2026-05-14",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -2291,15 +2032,6 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Christian",
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2026-05-24",
-            "localName": "Pentecost is a Christian holiday to remember the Holy Spirit's descent onto Jesus' followers.",
-            "name": "Pentecost Sunday",
-            "type": [
-                "Observance",
-                "Christian"
             ]
         },
         {
@@ -2355,16 +2087,16 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2026-06-17",
-            "localName": "Remembrance of the Victims of SED Injustice is an observance in Germany",
-            "name": "Remembrance of the Victims of SED Injustice",
+            "localName": "Anniversary of the Popular Uprising in the GDR is an observance in Germany",
+            "name": "Anniversary of the Popular Uprising in the GDR",
             "type": [
                 "Observance"
             ]
         },
         {
             "date": "2026-06-17",
-            "localName": "Anniversary of the Popular Uprising in the GDR is an observance in Germany",
-            "name": "Anniversary of the Popular Uprising in the GDR",
+            "localName": "Remembrance of the Victims of SED Injustice is an observance in Germany",
+            "name": "Remembrance of the Victims of SED Injustice",
             "type": [
                 "Observance"
             ]
@@ -2425,15 +2157,6 @@ export const holidays_DE: CountryHolidays = {
             "localName": "The Feast of the Assumption of Mary is an occasion for Catholics to honor the belief that God assumed the Virgin Mary to heaven. It is a public holiday in some parts of Germany on August 15 each year.",
             "name": "Assumption of Mary",
             "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2026-08-15",
-            "localName": "The Feast of the Assumption of Mary is an occasion for Catholics to honor the belief that God assumed the Virgin Mary to heaven. It is a public holiday in some parts of Germany on August 15 each year.",
-            "name": "Assumption of Mary",
-            "type": [
                 "Christian",
                 "Common local holiday"
             ]
@@ -2448,19 +2171,19 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2026-09-12",
+            "localName": "German Language Day is an observance in Germany",
+            "name": "German Language Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2026-09-12",
             "localName": "Rosh Hashana, commonly known as the Jewish New Year, is the first day of Tishrei, the seventh month in the Hebrew calendar.",
             "name": "Rosh Hashana",
             "type": [
                 "Observance",
                 "Hebrew"
-            ]
-        },
-        {
-            "date": "2026-09-12",
-            "localName": "German Language Day is an observance in Germany",
-            "name": "German Language Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -2494,14 +2217,6 @@ export const holidays_DE: CountryHolidays = {
             "name": "German World Children's Day",
             "type": [
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2026-09-20",
-            "localName": "German World Children's Day is an observance in Germany",
-            "name": "German World Children's Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -2559,19 +2274,19 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2026-10-03",
+            "localName": "German Unity Day celebrates Germany's unification in 1990. It is on October 3 each year.",
+            "name": "Day of German Unity",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2026-10-03",
             "localName": "Shemini Atzeret (or Shmini Atzeret) is a Jewish holiday dedicated to the love of God, while Simchat Torah (Simchas Torah or Simhat Torah) and celebrates the completion of the annual reading of the Torah.",
             "name": "Shemini Atzeret",
             "type": [
                 "Observance",
                 "Hebrew"
-            ]
-        },
-        {
-            "date": "2026-10-03",
-            "localName": "German Unity Day celebrates Germany's unification in 1990. It is on October 3 each year.",
-            "name": "Day of German Unity",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -2625,23 +2340,6 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2026-10-31",
-            "localName": "Reformation Day in Germany is annually observed on October 31 to remember the Reformation, a time of big religious change between 1517 CE and 1648 CE.",
-            "name": "Reformation Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2026-10-31",
-            "localName": "Reformation Day in Germany is annually observed on October 31 to remember the Reformation, a time of big religious change between 1517 CE and 1648 CE.",
-            "name": "Reformation Day",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2026-10-31",
             "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
             "name": "Halloween",
             "type": [
@@ -2649,12 +2347,11 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-11-01",
-            "localName": "All Saints' Day is an annual public holiday in five German states to remember all Christian saints on November 1.",
-            "name": "All Saints' Day",
+            "date": "2026-10-31",
+            "localName": "Reformation Day in Germany is annually observed on October 31 to remember the Reformation, a time of big religious change between 1517 CE and 1648 CE.",
+            "name": "Reformation Day",
             "type": [
-                "Observance",
-                "Christian"
+                "Common local holiday"
             ]
         },
         {
@@ -2677,14 +2374,6 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2026-11-09",
-            "localName": "Night of Broken Glass Remembrance Day is an observance in Germany",
-            "name": "Night of Broken Glass Remembrance Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-11-09",
             "localName": "9th of November is an observance in Germany",
             "name": "9th of November",
             "type": [
@@ -2695,6 +2384,14 @@ export const holidays_DE: CountryHolidays = {
             "date": "2026-11-09",
             "localName": "Fall of the Berlin Wall is an observance in Germany",
             "name": "Fall of the Berlin Wall",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2026-11-09",
+            "localName": "Night of Broken Glass Remembrance Day is an observance in Germany",
+            "name": "Night of Broken Glass Remembrance Day",
             "type": [
                 "Observance"
             ]
@@ -2721,25 +2418,8 @@ export const holidays_DE: CountryHolidays = {
             "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
             "name": "Repentance Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-11-18",
-            "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
-            "name": "Repentance Day",
-            "type": [
                 "Christian",
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2026-11-18",
-            "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
-            "name": "Repentance Day",
-            "type": [
-                "Observance",
-                "Christian"
             ]
         },
         {
@@ -2761,8 +2441,8 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2026-12-06",
-            "localName": "Second Advent Sunday is an observance and Christian holiday in Germany",
-            "name": "Second Advent Sunday",
+            "localName": "St. Nicholas Day is celebrated on December 6 in many European countries, as well as areas across the world that boast a strong European influence.",
+            "name": "Saint Nicholas Day",
             "type": [
                 "Observance",
                 "Christian"
@@ -2770,8 +2450,8 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2026-12-06",
-            "localName": "St. Nicholas Day is celebrated on December 6 in many European countries, as well as areas across the world that boast a strong European influence.",
-            "name": "Saint Nicholas Day",
+            "localName": "Second Advent Sunday is an observance and Christian holiday in Germany",
+            "name": "Second Advent Sunday",
             "type": [
                 "Observance",
                 "Christian"
@@ -2868,15 +2548,6 @@ export const holidays_DE: CountryHolidays = {
             "localName": "Epiphany on January 6 is a public holiday in 3 German states  and commemorates the Bible story of  the Magi's visit to baby Jesus.",
             "name": "Epiphany",
             "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2027-01-06",
-            "localName": "Epiphany on January 6 is a public holiday in 3 German states  and commemorates the Bible story of  the Magi's visit to baby Jesus.",
-            "name": "Epiphany",
-            "type": [
                 "Common local holiday"
             ]
         },
@@ -2941,22 +2612,6 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2027-03-08",
-            "localName": "International Women's Day is a observance in Germany",
-            "name": "International Women's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-08",
-            "localName": "International Women's Day is a observance in Germany",
-            "name": "International Women's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-08",
             "localName": "International Women's Day is a common local holiday in Germany",
             "name": "International Women's Day",
             "type": [
@@ -2999,15 +2654,6 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2027-03-21",
-            "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
-            "name": "Palm Sunday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2027-03-21",
             "localName": "Alevitic New Year is a observance and Muslim holiday in Germany",
             "name": "Alevitic New Year",
             "type": [
@@ -3016,9 +2662,9 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-03-25",
-            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-            "name": "Maundy Thursday",
+            "date": "2027-03-21",
+            "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
+            "name": "Palm Sunday",
             "type": [
                 "Observance",
                 "Christian"
@@ -3053,28 +2699,19 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
+            "localName": "Daylight Saving Time starts in Germany",
+            "name": "Daylight Saving Time starts",
+            "type": [
+                "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
             "localName": "Easter Sunday is a holiday in Germany to celebrate the Jesus Christ's resurrection, according to the Christian Bible.",
             "name": "Easter Sunday",
             "type": [
                 "Christian",
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2027-03-28",
-            "localName": "Easter Sunday is a holiday in Germany to celebrate the Jesus Christ's resurrection, according to the Christian Bible.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2027-03-28",
-            "localName": "Daylight Saving Time starts in Germany",
-            "name": "Daylight Saving Time starts",
-            "type": [
-                "Clock change/Daylight Saving Time"
             ]
         },
         {
@@ -3088,19 +2725,19 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2027-04-22",
-            "localName": "Girls' Day / Boys' Day is a observance in Germany",
-            "name": "Girls' Day / Boys' Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-04-22",
             "localName": "During Passover, the Jewish people remember the liberation of the Israelites from slavery, their exodus from Egypt, and that their first-born children were spared during the 10th plague, as told in the Haggadah.",
             "name": "First Day of Passover",
             "type": [
                 "Observance",
                 "Hebrew"
+            ]
+        },
+        {
+            "date": "2027-04-22",
+            "localName": "Girls' Day / Boys' Day is a observance in Germany",
+            "name": "Girls' Day / Boys' Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -3164,14 +2801,6 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2027-05-06",
-            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-            "name": "Father's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-05-06",
             "localName": "Ascension Day in Germany is on a Thursday 39 days after Easter Sunday.",
             "name": "Ascension Day",
             "type": [
@@ -3180,17 +2809,17 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-05-08",
-            "localName": "",
-            "name": "Anniversary of the End of World War II",
+            "date": "2027-05-06",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
             "type": [
                 "Observance"
             ]
         },
         {
-            "date": "2027-05-09",
-            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-            "name": "Mother's Day",
+            "date": "2027-05-08",
+            "localName": "Anniversary of the End of World War II",
+            "name": "Anniversary of the End of World War II",
             "type": [
                 "Observance"
             ]
@@ -3199,6 +2828,14 @@ export const holidays_DE: CountryHolidays = {
             "date": "2027-05-09",
             "localName": "Europe Day (European Union) is a observance in Germany",
             "name": "Europe Day (European Union)",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-05-09",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
             "type": [
                 "Observance"
             ]
@@ -3213,12 +2850,12 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-05-16",
-            "localName": "Pentecost is a Christian holiday to remember the Holy Spirit's descent onto Jesus' followers.",
-            "name": "Pentecost Sunday",
+            "date": "2027-05-17",
+            "localName": "Eid al-Adha (Id ul-Adha) is an Islamic festival falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to commemorate the willingness of Ibrahim (Abraham) to sacrifice his son. Provisional Islamic observance date; religious communities may announce different dates. Berlin's official religious school calendar expressly treats Islamic dates as preliminary and subject to community changes. This is a religious observance.",
+            "name": "Eid al-Adha (Provisional)",
             "type": [
                 "Observance",
-                "Christian"
+                "Muslim"
             ]
         },
         {
@@ -3228,15 +2865,6 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "National holiday",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2027-05-17",
-            "localName": "Eid al-Adha (Id ul-Adha) is an Islamic festival falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to commemorate the willingness of Ibrahim (Abraham) to sacrifice his son. Provisional Islamic observance date; religious communities may announce different dates. Berlin's official religious school calendar expressly treats Islamic dates as preliminary and subject to community changes. This is a religious observance.",
-            "name": "Eid al-Adha (Provisional)",
-            "type": [
-                "Observance",
-                "Muslim"
             ]
         },
         {
@@ -3292,14 +2920,6 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2027-06-15",
-            "localName": "Veterans Day is a observance in Germany",
-            "name": "Veterans Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-06-15",
             "localName": "Ashura is a observance and Muslim holiday in Germany Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
             "name": "Ashura (Provisional)",
             "type": [
@@ -3308,9 +2928,9 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-06-17",
-            "localName": "Remembrance of the Victims of SED Injustice is a observance in Germany",
-            "name": "Remembrance of the Victims of SED Injustice",
+            "date": "2027-06-15",
+            "localName": "Veterans Day is a observance in Germany",
+            "name": "Veterans Day",
             "type": [
                 "Observance"
             ]
@@ -3319,6 +2939,14 @@ export const holidays_DE: CountryHolidays = {
             "date": "2027-06-17",
             "localName": "Anniversary of the Popular Uprising in the GDR is a observance in Germany",
             "name": "Anniversary of the Popular Uprising in the GDR",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-06-17",
+            "localName": "Remembrance of the Victims of SED Injustice is a observance in Germany",
+            "name": "Remembrance of the Victims of SED Injustice",
             "type": [
                 "Observance"
             ]
@@ -3370,15 +2998,6 @@ export const holidays_DE: CountryHolidays = {
             "localName": "The Feast of the Assumption of Mary is an occasion for Catholics to honor the belief that God assumed the Virgin Mary to heaven. It is a public holiday in some parts of Germany on August 15 each year.",
             "name": "Assumption of Mary",
             "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2027-08-15",
-            "localName": "The Feast of the Assumption of Mary is an occasion for Catholics to honor the belief that God assumed the Virgin Mary to heaven. It is a public holiday in some parts of Germany on August 15 each year.",
-            "name": "Assumption of Mary",
-            "type": [
                 "Christian",
                 "Common local holiday"
             ]
@@ -3411,14 +3030,6 @@ export const holidays_DE: CountryHolidays = {
             "date": "2027-09-18",
             "localName": "First day of Wiesn (Oktoberfest) is a observance in Germany",
             "name": "First day of Wiesn (Oktoberfest)",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-09-20",
-            "localName": "German World Children's Day is a observance in Germany",
-            "name": "German World Children's Day",
             "type": [
                 "Observance"
             ]
@@ -3562,19 +3173,10 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2027-10-31",
-            "localName": "Reformation Day in Germany is annually observed on October 31 to remember the Reformation, a time of big religious change between 1517 CE and 1648 CE.",
-            "name": "Reformation Day",
+            "localName": "Daylight Saving Time ends in Germany",
+            "name": "Daylight Saving Time ends",
             "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2027-10-31",
-            "localName": "Reformation Day in Germany is annually observed on October 31 to remember the Reformation, a time of big religious change between 1517 CE and 1648 CE.",
-            "name": "Reformation Day",
-            "type": [
-                "Common local holiday"
+                "Clock change/Daylight Saving Time"
             ]
         },
         {
@@ -3587,10 +3189,10 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2027-10-31",
-            "localName": "Daylight Saving Time ends in Germany",
-            "name": "Daylight Saving Time ends",
+            "localName": "Reformation Day in Germany is annually observed on October 31 to remember the Reformation, a time of big religious change between 1517 CE and 1648 CE.",
+            "name": "Reformation Day",
             "type": [
-                "Clock change/Daylight Saving Time"
+                "Common local holiday"
             ]
         },
         {
@@ -3603,29 +3205,12 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-11-01",
-            "localName": "All Saints' Day is an annual public holiday in five German states to remember all Christian saints on November 1.",
-            "name": "All Saints' Day",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2027-11-02",
             "localName": "All Souls' Day falls on November 2 each year. It is a day of alms giving and prayers for the dead.",
             "name": "All Souls' Day",
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2027-11-09",
-            "localName": "Night of Broken Glass Remembrance Day is a observance in Germany",
-            "name": "Night of Broken Glass Remembrance Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -3640,6 +3225,14 @@ export const holidays_DE: CountryHolidays = {
             "date": "2027-11-09",
             "localName": "Fall of the Berlin Wall is a observance in Germany",
             "name": "Fall of the Berlin Wall",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2027-11-09",
+            "localName": "Night of Broken Glass Remembrance Day is a observance in Germany",
+            "name": "Night of Broken Glass Remembrance Day",
             "type": [
                 "Observance"
             ]
@@ -3666,25 +3259,8 @@ export const holidays_DE: CountryHolidays = {
             "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
             "name": "Repentance Day",
             "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2027-11-17",
-            "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
-            "name": "Repentance Day",
-            "type": [
                 "Christian",
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2027-11-17",
-            "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
-            "name": "Repentance Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -3817,15 +3393,6 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-01-06",
-            "localName": "Epiphany on January 6 is a public holiday in 3 German states  and commemorates the Bible story of  the Magi's visit to baby Jesus.",
-            "name": "Epiphany",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2028-01-22",
             "localName": "Franco-German Day is a observance in Germany",
             "name": "Franco-German Day",
@@ -3891,22 +3458,6 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2028-03-08",
-            "localName": "International Women's Day is a observance in Germany",
-            "name": "International Women's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-03-08",
-            "localName": "International Women's Day is a observance in Germany",
-            "name": "International Women's Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -3996,15 +3547,6 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-13",
-            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-            "name": "Maundy Thursday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2028-04-14",
             "localName": "Many Christians in Germany observe the Good Friday public holiday to mark the crucifixion of Jesus Christ.",
             "name": "Good Friday",
@@ -4029,15 +3571,6 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Christian",
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2028-04-16",
-            "localName": "Easter Sunday is a holiday in Germany to celebrate the Jesus Christ's resurrection, according to the Christian Bible.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance",
-                "Christian"
             ]
         },
         {
@@ -4101,14 +3634,6 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2028-05-05",
-            "localName": "Europe Day (Council of Europe) is a observance in Germany",
-            "name": "Europe Day (Council of Europe)",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-05-05",
             "localName": "Eid al-Adha (Id ul-Adha) is an Islamic festival falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to commemorate the willingness of Ibrahim (Abraham) to sacrifice his son. Provisional Islamic observance date; religious communities may announce different dates. Berlin's official religious school calendar expressly treats Islamic dates as preliminary and subject to community changes. This is a religious observance.",
             "name": "Eid al-Adha (Provisional)",
             "type": [
@@ -4117,8 +3642,16 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
+            "date": "2028-05-05",
+            "localName": "Europe Day (Council of Europe) is a observance in Germany",
+            "name": "Europe Day (Council of Europe)",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
             "date": "2028-05-08",
-            "localName": "",
+            "localName": "Anniversary of the End of World War II",
             "name": "Anniversary of the End of World War II",
             "type": [
                 "Observance"
@@ -4150,19 +3683,19 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2028-05-25",
-            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
-            "name": "Father's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-05-25",
             "localName": "Ascension Day in Germany is on a Thursday 39 days after Easter Sunday.",
             "name": "Ascension Day",
             "type": [
                 "National holiday",
                 "Christian"
+            ]
+        },
+        {
+            "date": "2028-05-25",
+            "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
+            "name": "Father's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -4193,14 +3726,6 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2028-06-03",
-            "localName": "European Bicycle Day is a observance in Germany",
-            "name": "European Bicycle Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-06-03",
             "localName": "Ashura is a observance and Muslim holiday in Germany Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
             "name": "Ashura (Provisional)",
             "type": [
@@ -4209,12 +3734,11 @@ export const holidays_DE: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-06-04",
-            "localName": "Pentecost is a Christian holiday to remember the Holy Spirit's descent onto Jesus' followers.",
-            "name": "Pentecost Sunday",
+            "date": "2028-06-03",
+            "localName": "European Bicycle Day is a observance in Germany",
+            "name": "European Bicycle Day",
             "type": [
-                "Observance",
-                "Christian"
+                "Observance"
             ]
         },
         {
@@ -4254,18 +3778,18 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2028-06-17",
-            "localName": "Remembrance of the Victims of SED Injustice is a observance in Germany",
-            "name": "Remembrance of the Victims of SED Injustice",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-06-17",
             "localName": "Anniversary of the Popular Uprising in the GDR is a local holiday in Germany",
             "name": "Anniversary of the Popular Uprising in the GDR",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2028-06-17",
+            "localName": "Remembrance of the Victims of SED Injustice is a observance in Germany",
+            "name": "Remembrance of the Victims of SED Injustice",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -4286,19 +3810,19 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2028-06-24",
+            "localName": "Architecture Day is a observance in Germany",
+            "name": "Architecture Day",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-06-24",
             "localName": "St. John's Day is a observance and Christian holiday in Germany",
             "name": "St. John's Day",
             "type": [
                 "Observance",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2028-06-24",
-            "localName": "Architecture Day is a observance in Germany",
-            "name": "Architecture Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -4317,15 +3841,6 @@ export const holidays_DE: CountryHolidays = {
             "type": [
                 "Christian",
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2028-08-15",
-            "localName": "The Feast of the Assumption of Mary is an occasion for Catholics to honor the belief that God assumed the Virgin Mary to heaven. It is a public holiday in some parts of Germany on August 15 each year.",
-            "name": "Assumption of Mary",
-            "type": [
-                "Observance",
-                "Christian"
             ]
         },
         {
@@ -4356,14 +3871,6 @@ export const holidays_DE: CountryHolidays = {
             "date": "2028-09-16",
             "localName": "First day of Wiesn (Oktoberfest) is a observance in Germany",
             "name": "First day of Wiesn (Oktoberfest)",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-09-20",
-            "localName": "German World Children's Day is a observance in Germany",
-            "name": "German World Children's Day",
             "type": [
                 "Observance"
             ]
@@ -4515,11 +4022,10 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2028-10-31",
-            "localName": "Reformation Day in Germany is annually observed on October 31 to remember the Reformation, a time of big religious change between 1517 CE and 1648 CE.",
-            "name": "Reformation Day",
+            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
+            "name": "Halloween",
             "type": [
-                "Observance",
-                "Christian"
+                "Observance"
             ]
         },
         {
@@ -4528,23 +4034,6 @@ export const holidays_DE: CountryHolidays = {
             "name": "Reformation Day",
             "type": [
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2028-10-31",
-            "localName": "Halloween is a festive occasion that is celebrated in many countries on October 31 each year.",
-            "name": "Halloween",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-11-01",
-            "localName": "All Saints' Day is an annual public holiday in five German states to remember all Christian saints on November 1.",
-            "name": "All Saints' Day",
-            "type": [
-                "Observance",
-                "Christian"
             ]
         },
         {
@@ -4567,14 +4056,6 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2028-11-09",
-            "localName": "Night of Broken Glass Remembrance Day is a observance in Germany",
-            "name": "Night of Broken Glass Remembrance Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-11-09",
             "localName": "9th of November is a observance in Germany",
             "name": "9th of November",
             "type": [
@@ -4585,6 +4066,14 @@ export const holidays_DE: CountryHolidays = {
             "date": "2028-11-09",
             "localName": "Fall of the Berlin Wall is a observance in Germany",
             "name": "Fall of the Berlin Wall",
+            "type": [
+                "Observance"
+            ]
+        },
+        {
+            "date": "2028-11-09",
+            "localName": "Night of Broken Glass Remembrance Day is a observance in Germany",
+            "name": "Night of Broken Glass Remembrance Day",
             "type": [
                 "Observance"
             ]
@@ -4611,25 +4100,8 @@ export const holidays_DE: CountryHolidays = {
             "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
             "name": "Repentance Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-11-22",
-            "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
-            "name": "Repentance Day",
-            "type": [
                 "Christian",
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2028-11-22",
-            "localName": "The Day of Prayer and Repentance is a Protestant holiday and a public holiday in the state of Saxony (Sachsen) on the last Wednesday before November 23.",
-            "name": "Repentance Day",
-            "type": [
-                "Observance",
-                "Christian"
             ]
         },
         {
@@ -4703,20 +4175,20 @@ export const holidays_DE: CountryHolidays = {
         },
         {
             "date": "2028-12-24",
-            "localName": "Fourth Advent Sunday is a observance and Christian holiday in Germany",
-            "name": "Fourth Advent Sunday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2028-12-24",
             "localName": "Christmas Eve is the day before Christmas Day and the start of the Christmas celebration. It always falls on December 24 in Germany.",
             "name": "Christmas Eve",
             "type": [
                 "Christian",
                 "Half-day holiday"
+            ]
+        },
+        {
+            "date": "2028-12-24",
+            "localName": "Fourth Advent Sunday is a observance and Christian holiday in Germany",
+            "name": "Fourth Advent Sunday",
+            "type": [
+                "Observance",
+                "Christian"
             ]
         },
         {
@@ -4743,1486 +4215,6 @@ export const holidays_DE: CountryHolidays = {
             "name": "New Year's Eve",
             "type": [
                 "Half-day holiday"
-            ]
-        },
-        {
-            "date": "2025-12-17",
-            "endDate": "2026-01-02",
-            "localName": "Regions: HH",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2025-12-19",
-            "endDate": "2026-01-06",
-            "localName": "Regions: SH",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2025-12-20",
-            "endDate": "2026-01-03",
-            "localName": "Regions: MV",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2025-12-22",
-            "endDate": "2026-01-02",
-            "localName": "Regions: BB",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2025-12-22",
-            "endDate": "2026-01-02",
-            "localName": "Regions: SL",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-01-30",
-            "localName": "Regions: HH",
-            "name": "Mid-Year Break",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-01-31",
-            "endDate": "2026-02-06",
-            "localName": "Regions: ST",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-02",
-            "endDate": "2026-02-03",
-            "localName": "Regions: HB",
-            "name": "Mid-Year Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-02",
-            "endDate": "2026-02-07",
-            "localName": "Regions: BB",
-            "name": "Winter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-09",
-            "endDate": "2026-02-14",
-            "localName": "Regions: MV",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-16",
-            "endDate": "2026-02-20",
-            "localName": "Regions: SL",
-            "name": "Carnival Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-16",
-            "endDate": "2026-02-20",
-            "localName": "Regions: BY",
-            "name": "Spring Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-16",
-            "endDate": "2026-02-21",
-            "localName": "Regions: TH",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-02",
-            "endDate": "2026-03-13",
-            "localName": "Regions: HH",
-            "name": "Spring Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-23",
-            "endDate": "2026-04-07",
-            "localName": "Regions: HB",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-26",
-            "endDate": "2026-04-10",
-            "localName": "Regions: SH",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-30",
-            "endDate": "2026-04-10",
-            "localName": "Regions: BB",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-30",
-            "endDate": "2026-04-04",
-            "localName": "Regions: ST",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-03",
-            "endDate": "2026-04-10",
-            "localName": "Regions: SN",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-07",
-            "endDate": "2026-04-17",
-            "localName": "Regions: SL",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-11",
-            "endDate": "2026-05-15",
-            "localName": "Regions: HH",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-15",
-            "localName": "Regions: MV",
-            "name": "Additional holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-15",
-            "localName": "Regions: SH",
-            "name": "Ascension",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-15",
-            "localName": "Regions: HB",
-            "name": "Day after Ascension",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-15",
-            "localName": "Regions: BE",
-            "name": "Day off",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-15",
-            "localName": "Regions: TH",
-            "name": "Day off from school",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-15",
-            "localName": "Regions: BB",
-            "name": "Variable holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-22",
-            "endDate": "2026-05-26",
-            "localName": "Regions: MV",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-26",
-            "localName": "Regions: BB",
-            "name": "Pentecost holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-26",
-            "localName": "Regions: HB",
-            "name": "Pentecost Holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-26",
-            "localName": "Regions: NW",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-06-29",
-            "endDate": "2026-08-07",
-            "localName": "Regions: HE",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-02",
-            "endDate": "2026-08-12",
-            "localName": "Regions: HB",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-04",
-            "endDate": "2026-08-08",
-            "localName": "Regions: SH\nIslands Sylt, Föhr, Amrum, Helgoland and the Halligen",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-09",
-            "endDate": "2026-08-22",
-            "localName": "Regions: BB",
-            "name": "Summer holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-09",
-            "endDate": "2026-08-19",
-            "localName": "Regions: HH",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-13",
-            "endDate": "2026-08-22",
-            "localName": "Regions: MV",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-20",
-            "endDate": "2026-09-01",
-            "localName": "Regions: NW",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-30",
-            "endDate": "2026-09-12",
-            "localName": "Regions: BW",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-08-03",
-            "endDate": "2026-09-14",
-            "localName": "Regions: BY",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-10-05",
-            "endDate": "2026-10-16",
-            "localName": "Regions: RP",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-10-12",
-            "endDate": "2026-10-24",
-            "localName": "Regions: HB",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-10-15",
-            "endDate": "2026-10-24",
-            "localName": "Regions: MV",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-10-17",
-            "endDate": "2026-10-31",
-            "localName": "Regions: NW",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-10-19",
-            "endDate": "2026-10-30",
-            "localName": "Regions: BB",
-            "name": "Autumn holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-10-19",
-            "endDate": "2026-10-24",
-            "localName": "Regions: MV",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-10-26",
-            "endDate": "2026-10-30",
-            "localName": "Regions: BW",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-11-02",
-            "endDate": "2026-11-06",
-            "localName": "Regions: BY",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-11-26",
-            "localName": "Regions: MV",
-            "name": "Additional holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-11-27",
-            "localName": "Regions: MV",
-            "name": "Additional holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-12-19",
-            "endDate": "2027-01-02",
-            "localName": "Regions: MV",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-12-21",
-            "endDate": "2026-12-31",
-            "localName": "Regions: SL",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-12-23",
-            "endDate": "2027-01-02",
-            "localName": "Regions: BB",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-12-23",
-            "endDate": "2027-01-02",
-            "localName": "Regions: SN",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-12-24",
-            "endDate": "2027-01-08",
-            "localName": "Regions: BY",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-01-29",
-            "localName": "Regions: HH",
-            "name": "Mid-Year Break",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-01",
-            "endDate": "2027-02-02",
-            "localName": "Regions: HB",
-            "name": "Mid-Year Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-01",
-            "endDate": "2027-02-06",
-            "localName": "Regions: BB",
-            "name": "Winter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-01",
-            "endDate": "2027-02-06",
-            "localName": "Regions: ST",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-08",
-            "endDate": "2027-02-12",
-            "localName": "Regions: SL",
-            "name": "Carnival Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-08",
-            "endDate": "2027-02-12",
-            "localName": "Regions: BY",
-            "name": "Spring Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-08",
-            "endDate": "2027-02-13",
-            "localName": "Regions: MV",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-03-01",
-            "endDate": "2027-03-12",
-            "localName": "Regions: HH",
-            "name": "Spring Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-03-22",
-            "endDate": "2027-04-02",
-            "localName": "Regions: BE",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-03-22",
-            "endDate": "2027-03-27",
-            "localName": "Regions: ST",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-03-24",
-            "endDate": "2027-04-02",
-            "localName": "Regions: MV",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-03-26",
-            "endDate": "2027-04-02",
-            "localName": "Regions: SN",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-03-30",
-            "endDate": "2027-04-03",
-            "localName": "Regions: BW",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-07",
-            "localName": "Regions: MV",
-            "name": "Additional holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-07",
-            "localName": "Regions: SH",
-            "name": "Ascension",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-07",
-            "localName": "Regions: HB",
-            "name": "Day after Ascension",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-07",
-            "localName": "Regions: BE",
-            "name": "Day off",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-07",
-            "localName": "Regions: TH",
-            "name": "Day off from school",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-07",
-            "endDate": "2027-05-14",
-            "localName": "Regions: HH",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-07",
-            "localName": "Regions: BB",
-            "name": "Variable holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-14",
-            "endDate": "2027-05-18",
-            "localName": "Regions: MV",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-15",
-            "endDate": "2027-05-18",
-            "localName": "Regions: SN",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-18",
-            "localName": "Regions: BB",
-            "name": "Pentecost holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-18",
-            "localName": "Regions: HB",
-            "name": "Pentecost Holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-18",
-            "endDate": "2027-05-19",
-            "localName": "Regions: BE",
-            "name": "Pentecost holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-05-18",
-            "localName": "Regions: NW",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-06-28",
-            "endDate": "2027-08-06",
-            "localName": "Regions: HE",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-01",
-            "endDate": "2027-08-14",
-            "localName": "Regions: BB",
-            "name": "Summer holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-01",
-            "endDate": "2027-08-11",
-            "localName": "Regions: HH",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-03",
-            "endDate": "2027-08-07",
-            "localName": "Regions: SH\nIslands Sylt, Föhr, Amrum, Helgoland and the Halligen",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-05",
-            "endDate": "2027-08-14",
-            "localName": "Regions: MV",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-08",
-            "endDate": "2027-08-18",
-            "localName": "Regions: HB",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-10",
-            "endDate": "2027-08-20",
-            "localName": "Regions: SN",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-12",
-            "endDate": "2027-08-28",
-            "localName": "Regions: MV",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-19",
-            "endDate": "2027-08-31",
-            "localName": "Regions: NW",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-07-29",
-            "endDate": "2027-09-11",
-            "localName": "Regions: BW",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-08-02",
-            "endDate": "2027-09-13",
-            "localName": "Regions: BY",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-10-04",
-            "endDate": "2027-10-15",
-            "localName": "Regions: RP",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-10-09",
-            "endDate": "2027-10-23",
-            "localName": "Regions: TH",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-10-11",
-            "endDate": "2027-10-23",
-            "localName": "Regions: BB",
-            "name": "Autumn holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-10-11",
-            "endDate": "2027-10-22",
-            "localName": "Regions: HH",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-10-14",
-            "endDate": "2027-10-23",
-            "localName": "Regions: MV",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-10-16",
-            "endDate": "2027-10-23",
-            "localName": "Regions: MV",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-10-18",
-            "endDate": "2027-10-23",
-            "localName": "Regions: ST",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-10-23",
-            "endDate": "2027-11-06",
-            "localName": "Regions: NW",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-11-02",
-            "endDate": "2027-11-05",
-            "localName": "Regions: BY",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-11-25",
-            "localName": "Regions: MV",
-            "name": "Additional holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-11-26",
-            "localName": "Regions: MV",
-            "name": "Additional holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-12-20",
-            "endDate": "2027-12-31",
-            "localName": "Regions: HH",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-12-22",
-            "endDate": "2027-12-31",
-            "localName": "Regions: BE",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-12-22",
-            "endDate": "2027-12-31",
-            "localName": "Regions: MV",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-12-23",
-            "endDate": "2027-12-31",
-            "localName": "Regions: BB",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-12-23",
-            "endDate": "2027-12-31",
-            "localName": "Regions: TH",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-12-24",
-            "endDate": "2028-01-07",
-            "localName": "Regions: BY",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-01-28",
-            "localName": "Regions: HH",
-            "name": "Mid-Year Break",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-01-31",
-            "endDate": "2028-02-01",
-            "localName": "Regions: HB",
-            "name": "Mid-Year Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-01-31",
-            "endDate": "2028-02-05",
-            "localName": "Regions: BB",
-            "name": "Winter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-02-05",
-            "endDate": "2028-02-12",
-            "localName": "Regions: MV",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-02-07",
-            "endDate": "2028-02-12",
-            "localName": "Regions: ST",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-02-14",
-            "endDate": "2028-02-26",
-            "localName": "Regions: SN",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-02-18",
-            "localName": "Regions: MV",
-            "name": "School free",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-02-21",
-            "endDate": "2028-02-29",
-            "localName": "Regions: SL",
-            "name": "Carnival Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-02-28",
-            "endDate": "2028-03-03",
-            "localName": "Regions: BY",
-            "name": "Spring Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-03-06",
-            "endDate": "2028-03-17",
-            "localName": "Regions: HH",
-            "name": "Spring Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-03-09",
-            "localName": "Regions: MV",
-            "name": "Additional holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-03-10",
-            "localName": "Regions: MV",
-            "name": "Additional holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-04-03",
-            "endDate": "2028-04-14",
-            "localName": "Regions: HE",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-04-10",
-            "endDate": "2028-04-22",
-            "localName": "Regions: BB",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-04-10",
-            "endDate": "2028-04-21",
-            "localName": "Regions: BY",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-04-12",
-            "endDate": "2028-04-21",
-            "localName": "Regions: MV",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-04-14",
-            "endDate": "2028-04-22",
-            "localName": "Regions: SN",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-04-18",
-            "endDate": "2028-04-22",
-            "localName": "Regions: BW",
-            "name": "Easter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-05-22",
-            "endDate": "2028-05-26",
-            "localName": "Regions: HH",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-05-26",
-            "localName": "Regions: MV",
-            "name": "Additional holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-05-26",
-            "localName": "Regions: SH",
-            "name": "Ascension",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-05-26",
-            "localName": "Regions: HB",
-            "name": "Day after Ascension",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-05-26",
-            "localName": "Regions: BE",
-            "name": "Day off",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-05-26",
-            "localName": "Regions: TH",
-            "name": "Day off from school",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-05-26",
-            "localName": "Regions: BB",
-            "name": "Variable holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-06-01",
-            "endDate": "2028-06-02",
-            "localName": "Regions: BE",
-            "name": "Pentecost holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-06-02",
-            "endDate": "2028-06-06",
-            "localName": "Regions: MV",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-06-03",
-            "endDate": "2028-06-10",
-            "localName": "Regions: ST",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-06-06",
-            "localName": "Regions: HB",
-            "name": "Pentecost Holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-06-06",
-            "endDate": "2028-06-16",
-            "localName": "Regions: BY",
-            "name": "Pentecost Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-06-24",
-            "endDate": "2028-07-28",
-            "localName": "Regions: SH\nIslands Sylt, Föhr, Amrum, Helgoland and the Halligen",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-06-26",
-            "endDate": "2028-08-05",
-            "localName": "Regions: MV",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-06-29",
-            "endDate": "2028-08-12",
-            "localName": "Regions: BB",
-            "name": "Summer holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-07-01",
-            "endDate": "2028-08-12",
-            "localName": "Regions: BE",
-            "name": "Summer holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-07-03",
-            "endDate": "2028-08-11",
-            "localName": "Regions: HE",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-07-10",
-            "endDate": "2028-08-22",
-            "localName": "Regions: NW",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-07-17",
-            "endDate": "2028-09-02",
-            "localName": "Regions: MV",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-07-20",
-            "endDate": "2028-08-30",
-            "localName": "Regions: HB",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-07-22",
-            "endDate": "2028-09-01",
-            "localName": "Regions: SN",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-07-27",
-            "endDate": "2028-09-09",
-            "localName": "Regions: BW",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-07-31",
-            "endDate": "2028-09-11",
-            "localName": "Regions: BY",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-02",
-            "localName": "Regions: MV",
-            "name": "Additional holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-02",
-            "endDate": "2028-10-14",
-            "localName": "Regions: BB",
-            "name": "Autumn holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-02",
-            "endDate": "2028-10-13",
-            "localName": "Regions: HH",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-02",
-            "localName": "Regions: HB",
-            "name": "Day before the 3 October",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-02",
-            "localName": "Regions: ST",
-            "name": "Holiday Day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-09",
-            "endDate": "2028-10-20",
-            "localName": "Regions: HE",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-16",
-            "endDate": "2028-10-30",
-            "localName": "Regions: SH",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-23",
-            "endDate": "2028-10-28",
-            "localName": "Regions: MV",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-30",
-            "localName": "Regions: MV",
-            "name": "Additional holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-30",
-            "endDate": "2028-11-03",
-            "localName": "Regions: BW",
-            "name": "Autumn Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-30",
-            "localName": "Regions: HH",
-            "name": "Bridge Day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-10-30",
-            "localName": "Regions: BB",
-            "name": "Variable holiday",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-12-18",
-            "endDate": "2028-12-29",
-            "localName": "Regions: HH",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-12-20",
-            "endDate": "2029-01-02",
-            "localName": "Regions: SL",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-12-21",
-            "endDate": "2029-01-02",
-            "localName": "Regions: MV",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-12-22",
-            "endDate": "2029-01-02",
-            "localName": "Regions: BB",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-12-22",
-            "endDate": "2029-01-02",
-            "localName": "Regions: MV",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-12-23",
-            "endDate": "2029-01-03",
-            "localName": "Regions: SN",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2028-12-27",
-            "endDate": "2029-01-06",
-            "localName": "Regions: HB",
-            "name": "Christmas Holidays",
-            "type": [
-                "School Holiday"
             ]
         }
     ]

@@ -573,6 +573,14 @@ export const holidays_PL: CountryHolidays = {
             ]
         },
         {
+            "date": "2026-08-14",
+            "localName": "Prime Minister Order 2 of January 5, 2026 appoints August 14 and December 28 as days off for members of the civil service corps, compensating the statutory holidays on Saturday August 15 and December 26. Other employers determine their own compensatory leave arrangements.",
+            "name": "Civil Service Compensatory Holiday (2026-08-14)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
             "date": "2026-08-15",
             "localName": "The Day of Assumption, also known as the Miracle upon the Vistula, is a national holiday in Poland on August 15 each year.",
             "name": "Assumption of Mary",
@@ -645,27 +653,19 @@ export const holidays_PL: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-12-31",
-            "localName": "Many people in Poland celebrate New Year's Eve, which is the last day of the year in the Gregorian calendar, on December 31.",
-            "name": "New Year's Eve",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-08-14",
-            "localName": "Prime Minister Order 2 of January 5, 2026 appoints August 14 and December 28 as days off for members of the civil service corps, compensating the statutory holidays on Saturday August 15 and December 26. Other employers determine their own compensatory leave arrangements.",
-            "name": "Civil Service Compensatory Holiday (2026-08-14)",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
             "date": "2026-12-28",
             "localName": "Prime Minister Order 2 of January 5, 2026 appoints August 14 and December 28 as days off for members of the civil service corps, compensating the statutory holidays on Saturday August 15 and December 26. Other employers determine their own compensatory leave arrangements.",
             "name": "Civil Service Compensatory Holiday (2026-12-28)",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2026-12-31",
+            "localName": "Many people in Poland celebrate New Year's Eve, which is the last day of the year in the Gregorian calendar, on December 31.",
+            "name": "New Year's Eve",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1098,78 +1098,6 @@ export const holidays_PL: CountryHolidays = {
             "name": "New Year's Eve",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2026-01-19",
-            "endDate": "2026-02-01",
-            "localName": "Regions: MZ, PK, PM, SL, WN",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-02",
-            "endDate": "2026-02-15",
-            "localName": "Regions: DS, KP, LD, MA, OP, ZP",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-16",
-            "endDate": "2026-03-01",
-            "localName": "Regions: LB, LU, PD, SK, WP",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-02",
-            "endDate": "2026-04-07",
-            "localName": "Regions: DS, KP, LB, LD, LU, MA, MZ, OP, PD, PK, PM, SK, SL, WN, WP, ZP",
-            "name": "Spring Break",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-06-27",
-            "endDate": "2026-08-31",
-            "localName": "Regions: DS, KP, LB, LD, LU, MA, MZ, OP, PD, PK, PM, SK, SL, WN, WP, ZP",
-            "name": "Summer Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-01-18",
-            "endDate": "2027-01-31",
-            "localName": "Regions: DS, LD, OP, PD, PK, SK",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-01",
-            "endDate": "2027-02-14",
-            "localName": "Regions: LU, MZ, PM, SL",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2027-02-15",
-            "endDate": "2027-02-28",
-            "localName": "Regions: KP, MA, WN, WP, ZP",
-            "name": "Winter Holidays",
-            "type": [
-                "School Holiday"
             ]
         }
     ]

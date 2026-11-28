@@ -73,18 +73,18 @@ export const holidays_BA: CountryHolidays = {
         },
         {
             "date": "2024-03-08",
-            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-            "name": "Mother's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-03-08",
             "localName": "Brčko District Establishment Day is a local holiday in Bosnia-Herzegovina",
             "name": "Brčko District Establishment Day",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2024-03-08",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -205,14 +205,6 @@ export const holidays_BA: CountryHolidays = {
         },
         {
             "date": "2024-05-09",
-            "localName": "Victory Day is a working holiday in Bosnia-Herzegovina",
-            "name": "Victory Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-05-09",
             "localName": "Victory Day is a local holiday in Bosnia-Herzegovina",
             "name": "Victory Day",
             "type": [
@@ -229,18 +221,18 @@ export const holidays_BA: CountryHolidays = {
         },
         {
             "date": "2024-06-16",
-            "localName": "Eid al-Adha (Id ul-Adha) is an Islamic festival falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to commemorate the willingness of Ibrahim (Abraham) to sacrifice his son.",
-            "name": "Feast of the Sacrifice",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2024-06-16",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2024-06-16",
+            "localName": "Eid al-Adha (Id ul-Adha) is an Islamic festival falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to commemorate the willingness of Ibrahim (Abraham) to sacrifice his son.",
+            "name": "Feast of the Sacrifice",
+            "type": [
+                "Optional holiday"
             ]
         },
         {
@@ -400,18 +392,18 @@ export const holidays_BA: CountryHolidays = {
         },
         {
             "date": "2025-03-08",
-            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-            "name": "Mother's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-03-08",
             "localName": "Brčko District Establishment Day is a local holiday in Bosnia-Herzegovina",
             "name": "Brčko District Establishment Day",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2025-03-08",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -432,6 +424,14 @@ export const holidays_BA: CountryHolidays = {
         },
         {
             "date": "2025-04-18",
+            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
+            "name": "Good Friday",
+            "type": [
+                "Optional holiday"
+            ]
+        },
+        {
+            "date": "2025-04-18",
             "localName": "Millions of Orthodox Christians around the world annually observe Good Friday to commemorate the events leading up to Jesus Christ's crucifixion.",
             "name": "Orthodox Good Friday",
             "type": [
@@ -440,11 +440,11 @@ export const holidays_BA: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-18",
-            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
-            "name": "Good Friday",
+            "date": "2025-04-19",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Holy Saturday",
             "type": [
-                "Optional holiday"
+                "Observance"
             ]
         },
         {
@@ -457,11 +457,11 @@ export const holidays_BA: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-19",
-            "localName": "Holy Saturday is the day before Easter Sunday.",
-            "name": "Holy Saturday",
+            "date": "2025-04-20",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
             "type": [
-                "Observance"
+                "Optional holiday"
             ]
         },
         {
@@ -474,9 +474,9 @@ export const holidays_BA: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-20",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
+            "date": "2025-04-21",
+            "localName": "Easter Monday is the day after Easter Sunday.",
+            "name": "Easter Monday",
             "type": [
                 "Optional holiday"
             ]
@@ -487,14 +487,6 @@ export const holidays_BA: CountryHolidays = {
             "name": "Orthodox Easter Monday",
             "type": [
                 "Orthodox",
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2025-04-21",
-            "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Easter Monday",
-            "type": [
                 "Optional holiday"
             ]
         },
@@ -512,14 +504,6 @@ export const holidays_BA: CountryHolidays = {
             "name": "Labor Day (Day 2)",
             "type": [
                 "National holiday"
-            ]
-        },
-        {
-            "date": "2025-05-09",
-            "localName": "Victory Day is a working holiday in Bosnia-Herzegovina",
-            "name": "Victory Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -711,18 +695,18 @@ export const holidays_BA: CountryHolidays = {
         },
         {
             "date": "2026-03-08",
-            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-            "name": "Mother's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-03-08",
             "localName": "Brčko District Establishment Day is a local holiday in Bosnia-Herzegovina",
             "name": "Brčko District Establishment Day",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2026-03-08",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -831,14 +815,6 @@ export const holidays_BA: CountryHolidays = {
             "name": "Victory Day",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-05-09",
-            "localName": "Victory Day is a working holiday in Bosnia-Herzegovina",
-            "name": "Victory Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1014,18 +990,18 @@ export const holidays_BA: CountryHolidays = {
         },
         {
             "date": "2027-03-08",
-            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-            "name": "Mother's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-08",
             "localName": "Brčko District Establishment Day is a local holiday in Bosnia-Herzegovina",
             "name": "Brčko District Establishment Day",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2027-03-08",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1126,14 +1102,6 @@ export const holidays_BA: CountryHolidays = {
             "type": [
                 "Orthodox",
                 "Optional holiday"
-            ]
-        },
-        {
-            "date": "2027-05-09",
-            "localName": "Victory Day is a working holiday in Bosnia-Herzegovina",
-            "name": "Victory Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1333,18 +1301,18 @@ export const holidays_BA: CountryHolidays = {
         },
         {
             "date": "2028-03-08",
-            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
-            "name": "Mother's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-03-08",
             "localName": "Brčko District Establishment Day is a local holiday in Bosnia-Herzegovina",
             "name": "Brčko District Establishment Day",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2028-03-08",
+            "localName": "Mother's Day celebrates the achievements and efforts of mothers and mother figures.",
+            "name": "Mother's Day",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1357,6 +1325,14 @@ export const holidays_BA: CountryHolidays = {
         },
         {
             "date": "2028-04-14",
+            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
+            "name": "Good Friday",
+            "type": [
+                "Optional holiday"
+            ]
+        },
+        {
+            "date": "2028-04-14",
             "localName": "Millions of Orthodox Christians around the world annually observe Good Friday to commemorate the events leading up to Jesus Christ's crucifixion.",
             "name": "Orthodox Good Friday",
             "type": [
@@ -1365,11 +1341,11 @@ export const holidays_BA: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-14",
-            "localName": "Good Friday is a global Christian observance two days before Easter Sunday.",
-            "name": "Good Friday",
+            "date": "2028-04-15",
+            "localName": "Holy Saturday is the day before Easter Sunday.",
+            "name": "Holy Saturday",
             "type": [
-                "Optional holiday"
+                "Observance"
             ]
         },
         {
@@ -1382,11 +1358,11 @@ export const holidays_BA: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-15",
-            "localName": "Holy Saturday is the day before Easter Sunday.",
-            "name": "Holy Saturday",
+            "date": "2028-04-16",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
             "type": [
-                "Observance"
+                "Optional holiday"
             ]
         },
         {
@@ -1399,9 +1375,9 @@ export const holidays_BA: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-16",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
+            "date": "2028-04-17",
+            "localName": "Easter Monday is the day after Easter Sunday.",
+            "name": "Easter Monday",
             "type": [
                 "Optional holiday"
             ]
@@ -1412,14 +1388,6 @@ export const holidays_BA: CountryHolidays = {
             "name": "Orthodox Easter Monday",
             "type": [
                 "Orthodox",
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2028-04-17",
-            "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Easter Monday",
-            "type": [
                 "Optional holiday"
             ]
         },
@@ -1445,14 +1413,6 @@ export const holidays_BA: CountryHolidays = {
             "name": "Feast of the Sacrifice (Provisional)",
             "type": [
                 "Optional holiday"
-            ]
-        },
-        {
-            "date": "2028-05-09",
-            "localName": "Victory Day is a working holiday in Bosnia-Herzegovina",
-            "name": "Victory Day",
-            "type": [
-                "Observance"
             ]
         },
         {

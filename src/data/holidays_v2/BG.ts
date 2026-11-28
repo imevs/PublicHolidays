@@ -214,18 +214,18 @@ export const holidays_BG: CountryHolidays = {
         },
         {
             "date": "2024-12-26",
-            "localName": "Second day of Christmas is a national holiday in Bulgaria",
-            "name": "Second day of Christmas",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-12-26",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2024-12-26",
+            "localName": "Second day of Christmas is a national holiday in Bulgaria",
+            "name": "Second day of Christmas",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -438,18 +438,18 @@ export const holidays_BG: CountryHolidays = {
         },
         {
             "date": "2025-12-26",
-            "localName": "Second day of Christmas is a national holiday in Bulgaria",
-            "name": "Second day of Christmas",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-12-26",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2025-12-26",
+            "localName": "Second day of Christmas is a national holiday in Bulgaria",
+            "name": "Second day of Christmas",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -678,18 +678,18 @@ export const holidays_BG: CountryHolidays = {
         },
         {
             "date": "2026-12-26",
-            "localName": "Second day of Christmas is a national holiday in Bulgaria",
-            "name": "Second day of Christmas",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-12-26",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2026-12-26",
+            "localName": "Second day of Christmas is a national holiday in Bulgaria",
+            "name": "Second day of Christmas",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -902,18 +902,18 @@ export const holidays_BG: CountryHolidays = {
         },
         {
             "date": "2027-12-26",
-            "localName": "Second day of Christmas is a national holiday in Bulgaria",
-            "name": "Second day of Christmas",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-12-26",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2027-12-26",
+            "localName": "Second day of Christmas is a national holiday in Bulgaria",
+            "name": "Second day of Christmas",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1142,18 +1142,18 @@ export const holidays_BG: CountryHolidays = {
         },
         {
             "date": "2028-12-26",
-            "localName": "Second day of Christmas is a national holiday in Bulgaria",
-            "name": "Second day of Christmas",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2028-12-26",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2028-12-26",
+            "localName": "Second day of Christmas is a national holiday in Bulgaria",
+            "name": "Second day of Christmas",
+            "type": [
+                "National holiday"
             ]
         },
         {

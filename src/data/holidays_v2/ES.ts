@@ -45,9 +45,9 @@ export const holidays_ES: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-02-13",
-            "localName": "Shrove Tuesday is a religious holiday before the fasting period of Lent. It is celebrated by eating pancakes and holding Carnival parades.",
-            "name": "Carnival Tuesday",
+            "date": "2024-02-14",
+            "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
+            "name": "Ash Wednesday",
             "type": [
                 "Observance"
             ]
@@ -56,14 +56,6 @@ export const holidays_ES: CountryHolidays = {
             "date": "2024-02-14",
             "localName": "February 14 is Valentine's Day or Saint Valentine's Feast. The day of love owes its origins to ancient Roman and European Christian traditions.",
             "name": "Valentine's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-02-14",
-            "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
-            "name": "Ash Wednesday",
             "type": [
                 "Observance"
             ]
@@ -101,14 +93,6 @@ export const holidays_ES: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-03-19",
-            "localName": "Saint Joseph's Day honors St Joseph, the Virgin Mary's spouse. It is a public holiday in some parts of Spain on March 19 each year.",
-            "name": "San Jose",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2024-03-20",
             "localName": "March Equinox in Spain (Madrid)",
             "name": "March Equinox",
@@ -120,14 +104,6 @@ export const holidays_ES: CountryHolidays = {
             "date": "2024-03-24",
             "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
             "name": "Palm Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-03-28",
-            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-            "name": "Maundy Thursday",
             "type": [
                 "Observance"
             ]
@@ -158,14 +134,6 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2024-03-31",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-03-31",
             "localName": "Daylight Saving Time starts in Spain",
             "name": "Daylight Saving Time starts",
             "type": [
@@ -173,9 +141,9 @@ export const holidays_ES: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-04-01",
-            "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Easter Monday",
+            "date": "2024-03-31",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
             "type": [
                 "Observance"
             ]
@@ -197,11 +165,11 @@ export const holidays_ES: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-04-10",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
-            "name": "Eid al-Fitr",
+            "date": "2024-04-23",
+            "localName": "Castile and León Day is celebrated in the Spanish autonomous community of Castile and León on April 23 every year.",
+            "name": "Castile and León Day",
             "type": [
-                "Observance"
+                "Local holiday"
             ]
         },
         {
@@ -218,14 +186,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "St George's Day",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2024-04-23",
-            "localName": "Castile and León Day is celebrated in the Spanish autonomous community of Castile and León on April 23 every year.",
-            "name": "Castile and León Day",
-            "type": [
-                "Local holiday"
             ]
         },
         {
@@ -286,14 +246,6 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2024-05-30",
-            "localName": "Corpus Christi is a Christian feast in honor of the Holy Eucharist.",
-            "name": "Corpus Christi",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-05-30",
             "localName": "The Day of the Canary Islands marks the anniversary of the autonomous Canary Islands Parliament's first session. It is a local public holiday on the Canary Islands on May 30 each year.",
             "name": "Day of the Canary Islands",
             "type": [
@@ -310,18 +262,18 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2024-06-09",
-            "localName": "The Day of the Region of Murcia marks the anniversary of when the autonomy of Murcia's statutes was approved. It is an annual public holiday in Murcia, Spain, on June 9.",
-            "name": "Day of Murcia",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-06-09",
             "localName": "The Day of La Rioja is an annual public holiday in the Spanish autonomous community of La Rioja on June 9.",
             "name": "Day of La Rioja",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2024-06-09",
+            "localName": "The Day of the Region of Murcia marks the anniversary of when the autonomy of Murcia's statutes was approved. It is an annual public holiday in Murcia, Spain, on June 9.",
+            "name": "Day of Murcia",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -361,14 +313,6 @@ export const holidays_ES: CountryHolidays = {
             "localName": "Saint John the Baptist Day is annually held on June 24 to honor the life of St John, an early Christian saint. It is a public holiday in Catalonia, Spain.",
             "name": "Saint John the Baptist Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-06-24",
-            "localName": "Saint John the Baptist Day is annually held on June 24 to honor the life of St John, an early Christian saint. It is a public holiday in Catalonia, Spain.",
-            "name": "Saint John the Baptist Day",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -378,14 +322,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "Feast of Saint James the Apostle",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-07-25",
-            "localName": "Saint James' Day is an occasion to honor the life and deeds of one of Jesus' disciples. It is a public holiday in the autonomous communities of the Basque Country and Galicia in Spain on July 25.",
-            "name": "Feast of Saint James the Apostle",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -593,14 +529,6 @@ export const holidays_ES: CountryHolidays = {
             "localName": "The Feast of St Stephen is a holiday to commemorate the life and death of an early Christian saint.",
             "name": "St Stephen's Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-12-26",
-            "localName": "The Feast of St Stephen is a holiday to commemorate the life and death of an early Christian saint.",
-            "name": "St Stephen's Day",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -705,14 +633,6 @@ export const holidays_ES: CountryHolidays = {
             "localName": "Saint Joseph's Day honors St Joseph, the Virgin Mary's spouse. It is a public holiday in some parts of Spain on March 19 each year.",
             "name": "San Jose",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-03-19",
-            "localName": "Saint Joseph's Day honors St Joseph, the Virgin Mary's spouse. It is a public holiday in some parts of Spain on March 19 each year.",
-            "name": "San Jose",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -741,14 +661,6 @@ export const holidays_ES: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-03-31",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
-            "name": "Eid al-Fitr",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2025-04-13",
             "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
             "name": "Palm Sunday",
@@ -762,14 +674,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "Maundy Thursday",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-04-17",
-            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-            "name": "Maundy Thursday",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -801,13 +705,13 @@ export const holidays_ES: CountryHolidays = {
             "localName": "Easter Monday is the day after Easter Sunday.",
             "name": "Easter Monday",
             "type": [
-                "Observance"
+                "Local holiday"
             ]
         },
         {
-            "date": "2025-04-21",
-            "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Easter Monday",
+            "date": "2025-04-23",
+            "localName": "Castile and León Day is celebrated in the Spanish autonomous community of Castile and León on April 23 every year.",
+            "name": "Castile and León Day",
             "type": [
                 "Local holiday"
             ]
@@ -826,14 +730,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "St George's Day",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2025-04-23",
-            "localName": "Castile and León Day is celebrated in the Spanish autonomous community of Castile and León on April 23 every year.",
-            "name": "Castile and León Day",
-            "type": [
-                "Local holiday"
             ]
         },
         {
@@ -902,10 +798,10 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2025-06-09",
-            "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
-            "name": "Pentecost Monday",
+            "localName": "The Day of La Rioja is an annual public holiday in the Spanish autonomous community of La Rioja on June 9.",
+            "name": "Day of La Rioja",
             "type": [
-                "Observance"
+                "Local holiday"
             ]
         },
         {
@@ -918,10 +814,10 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2025-06-09",
-            "localName": "The Day of La Rioja is an annual public holiday in the Spanish autonomous community of La Rioja on June 9.",
-            "name": "Day of La Rioja",
+            "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
+            "name": "Pentecost Monday",
             "type": [
-                "Local holiday"
+                "Observance"
             ]
         },
         {
@@ -941,14 +837,6 @@ export const holidays_ES: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-06-19",
-            "localName": "Corpus Christi is a Christian feast in honor of the Holy Eucharist.",
-            "name": "Corpus Christi",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2025-06-21",
             "localName": "June Solstice in Spain (Madrid)",
             "name": "June Solstice",
@@ -962,22 +850,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "Saint John the Baptist Day",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-06-24",
-            "localName": "Saint John the Baptist Day is annually held on June 24 to honor the life of St John, an early Christian saint. It is a public holiday in Catalonia, Spain.",
-            "name": "Saint John the Baptist Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-07-25",
-            "localName": "Saint James' Day is an occasion to honor the life and deeds of one of Jesus' disciples. It is a public holiday in the autonomous communities of the Basque Country and Galicia in Spain on July 25.",
-            "name": "Feast of Saint James the Apostle",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1301,27 +1173,11 @@ export const holidays_ES: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-03-19",
-            "localName": "Saint Joseph's Day honors St Joseph, the Virgin Mary's spouse. It is a public holiday in some parts of Spain on March 19 each year.",
-            "name": "San Jose",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2026-03-20",
             "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
             "name": "Eid al-Fitr",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-03-20",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight.",
-            "name": "Eid al-Fitr",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1334,18 +1190,18 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2026-03-29",
-            "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
-            "name": "Palm Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-03-29",
             "localName": "Daylight Saving Time starts in Spain",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2026-03-29",
+            "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
+            "name": "Palm Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -1354,14 +1210,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "Maundy Thursday",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-04-02",
-            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-            "name": "Maundy Thursday",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1393,13 +1241,13 @@ export const holidays_ES: CountryHolidays = {
             "localName": "Easter Monday is the day after Easter Sunday.",
             "name": "Easter Monday",
             "type": [
-                "Observance"
+                "Local holiday"
             ]
         },
         {
-            "date": "2026-04-06",
-            "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Easter Monday",
+            "date": "2026-04-23",
+            "localName": "Castile and León Day is celebrated in the Spanish autonomous community of Castile and León on April 23 every year.",
+            "name": "Castile and León Day",
             "type": [
                 "Local holiday"
             ]
@@ -1418,14 +1266,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "St George's Day",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2026-04-23",
-            "localName": "Castile and León Day is celebrated in the Spanish autonomous community of Castile and León on April 23 every year.",
-            "name": "Castile and León Day",
-            "type": [
-                "Local holiday"
             ]
         },
         {
@@ -1505,13 +1345,13 @@ export const holidays_ES: CountryHolidays = {
             "localName": "Corpus Christi is a Christian feast in honor of the Holy Eucharist.",
             "name": "Corpus Christi",
             "type": [
-                "Observance"
+                "Local holiday"
             ]
         },
         {
-            "date": "2026-06-04",
-            "localName": "Corpus Christi is a Christian feast in honor of the Holy Eucharist.",
-            "name": "Corpus Christi",
+            "date": "2026-06-09",
+            "localName": "The Day of La Rioja is an annual public holiday in the Spanish autonomous community of La Rioja on June 9.",
+            "name": "Day of La Rioja",
             "type": [
                 "Local holiday"
             ]
@@ -1520,14 +1360,6 @@ export const holidays_ES: CountryHolidays = {
             "date": "2026-06-09",
             "localName": "The Day of the Region of Murcia marks the anniversary of when the autonomy of Murcia's statutes was approved. It is an annual public holiday in Murcia, Spain, on June 9.",
             "name": "Day of Murcia",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-06-09",
-            "localName": "The Day of La Rioja is an annual public holiday in the Spanish autonomous community of La Rioja on June 9.",
-            "name": "Day of La Rioja",
             "type": [
                 "Local holiday"
             ]
@@ -1553,23 +1385,7 @@ export const holidays_ES: CountryHolidays = {
             "localName": "Saint John the Baptist Day is annually held on June 24 to honor the life of St John, an early Christian saint. It is a public holiday in Catalonia, Spain.",
             "name": "Saint John the Baptist Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-06-24",
-            "localName": "Saint John the Baptist Day is annually held on June 24 to honor the life of St John, an early Christian saint. It is a public holiday in Catalonia, Spain.",
-            "name": "Saint John the Baptist Day",
-            "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-07-25",
-            "localName": "Saint James' Day is an occasion to honor the life and deeds of one of Jesus' disciples. It is a public holiday in the autonomous communities of the Basque Country and Galicia in Spain on July 25.",
-            "name": "Feast of Saint James the Apostle",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1789,14 +1605,6 @@ export const holidays_ES: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-12-26",
-            "localName": "The Feast of St Stephen is a holiday to commemorate the life and death of an early Christian saint.",
-            "name": "St Stephen's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2026-12-27",
             "localName": "Feast of the Holy Family is an observance in Spain",
             "name": "Feast of the Holy Family",
@@ -1878,16 +1686,16 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2027-03-01",
-            "localName": "The Day of Andalucía, also known as Andalucía Day, is an annual public holiday in the Andalucía autonomous community in Spain on February 28.",
-            "name": "Day off for Day of Andalucía",
+            "localName": "The Day of the Balearic Islands is held on March 1 to remember the date when the Balearic Islands' Statute of Autonomy came into effect. It is a local public holiday in this area in Spain.",
+            "name": "Day of the Balearic Islands",
             "type": [
                 "Local holiday"
             ]
         },
         {
             "date": "2027-03-01",
-            "localName": "The Day of the Balearic Islands is held on March 1 to remember the date when the Balearic Islands' Statute of Autonomy came into effect. It is a local public holiday in this area in Spain.",
-            "name": "Day of the Balearic Islands",
+            "localName": "The Day of Andalucía, also known as Andalucía Day, is an annual public holiday in the Andalucía autonomous community in Spain on February 28.",
+            "name": "Day off for Day of Andalucía",
             "type": [
                 "Local holiday"
             ]
@@ -1901,25 +1709,9 @@ export const holidays_ES: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-03-10",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight. Provisional lunar date for 2027. The final religious-community date has not been verified for this observance; it does not itself create a general public holiday.",
-            "name": "Eid al-Fitr (Provisional)",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2027-03-19",
             "localName": "Father's Day celebrates fatherhood and male parenting on different dates worldwide.",
             "name": "Father's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-19",
-            "localName": "Saint Joseph's Day honors St Joseph, the Virgin Mary's spouse. It is a public holiday in some parts of Spain on March 19 each year.",
-            "name": "San Jose",
             "type": [
                 "Observance"
             ]
@@ -1953,14 +1745,6 @@ export const holidays_ES: CountryHolidays = {
             "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
             "name": "Maundy Thursday",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-25",
-            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-            "name": "Maundy Thursday",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -1982,18 +1766,18 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2027-03-28",
-            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-28",
             "localName": "Daylight Saving Time starts in Spain",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2027-03-28",
+            "localName": "Easter Sunday commemorates Jesus Christ's resurrection, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -2005,11 +1789,11 @@ export const holidays_ES: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-03-29",
-            "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Easter Monday",
+            "date": "2027-04-23",
+            "localName": "Castile and León Day is celebrated in the Spanish autonomous community of Castile and León on April 23 every year.",
+            "name": "Castile and León Day",
             "type": [
-                "Observance"
+                "Local holiday"
             ]
         },
         {
@@ -2026,14 +1810,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "St George's Day",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2027-04-23",
-            "localName": "Castile and León Day is celebrated in the Spanish autonomous community of Castile and León on April 23 every year.",
-            "name": "Castile and León Day",
-            "type": [
-                "Local holiday"
             ]
         },
         {
@@ -2070,10 +1846,10 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2027-05-17",
-            "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
-            "name": "Pentecost Monday",
+            "localName": "Eid al-Adha (Id ul-Adha) is an Islamic festival falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to commemorate the willingness of Ibrahim (Abraham) to sacrifice his son. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Eid al-Adha (Provisional)",
             "type": [
-                "Observance"
+                "Local holiday"
             ]
         },
         {
@@ -2086,26 +1862,18 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2027-05-17",
-            "localName": "Eid al-Adha (Id ul-Adha) is an Islamic festival falling on the 10th day of the month of Dhul Hijja (Thou al-Hijja) to commemorate the willingness of Ibrahim (Abraham) to sacrifice his son. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Eid al-Adha (Provisional)",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-05-27",
-            "localName": "Corpus Christi is a Christian feast in honor of the Holy Eucharist.",
-            "name": "Corpus Christi",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-05-27",
-            "localName": "Corpus Christi is a Christian feast in honor of the Holy Eucharist.",
-            "name": "Corpus Christi",
+            "localName": "Whit Monday, or Pentecost Monday, is a Christian holiday that falls on the day after Pentecost, which is also known as Whit Sunday or Whitsunday.",
+            "name": "Pentecost Monday",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2027-05-27",
+            "localName": "Corpus Christi is a Christian feast in honor of the Holy Eucharist.",
+            "name": "Corpus Christi",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -2126,16 +1894,16 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2027-06-09",
-            "localName": "The Day of the Region of Murcia marks the anniversary of when the autonomy of Murcia's statutes was approved. It is an annual public holiday in Murcia, Spain, on June 9.",
-            "name": "Day of Murcia",
+            "localName": "The Day of La Rioja is an annual public holiday in the Spanish autonomous community of La Rioja on June 9.",
+            "name": "Day of La Rioja",
             "type": [
                 "Local holiday"
             ]
         },
         {
             "date": "2027-06-09",
-            "localName": "The Day of La Rioja is an annual public holiday in the Spanish autonomous community of La Rioja on June 9.",
-            "name": "Day of La Rioja",
+            "localName": "The Day of the Region of Murcia marks the anniversary of when the autonomy of Murcia's statutes was approved. It is an annual public holiday in Murcia, Spain, on June 9.",
+            "name": "Day of Murcia",
             "type": [
                 "Local holiday"
             ]
@@ -2161,23 +1929,7 @@ export const holidays_ES: CountryHolidays = {
             "localName": "Saint John the Baptist Day is annually held on June 24 to honor the life of St John, an early Christian saint. It is a public holiday in Catalonia, Spain.",
             "name": "Saint John the Baptist Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-06-24",
-            "localName": "Saint John the Baptist Day is annually held on June 24 to honor the life of St John, an early Christian saint. It is a public holiday in Catalonia, Spain.",
-            "name": "Saint John the Baptist Day",
-            "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-07-25",
-            "localName": "Saint James' Day is an occasion to honor the life and deeds of one of Jesus' disciples. It is a public holiday in the autonomous communities of the Basque Country and Galicia in Spain on July 25.",
-            "name": "Feast of Saint James the Apostle",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -2382,26 +2134,18 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2027-12-26",
-            "localName": "The Feast of St Stephen is a holiday to commemorate the life and death of an early Christian saint.",
-            "name": "St Stephen's Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-12-26",
-            "localName": "The Feast of St Stephen is a holiday to commemorate the life and death of an early Christian saint.",
-            "name": "St Stephen's Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-12-26",
             "localName": "Feast of the Holy Family is a observance in Spain",
             "name": "Feast of the Holy Family",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2027-12-26",
+            "localName": "The Feast of St Stephen is a holiday to commemorate the life and death of an early Christian saint.",
+            "name": "St Stephen's Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -2453,9 +2197,9 @@ export const holidays_ES: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-02-27",
-            "localName": "Eid al-Fitr is a holiday to mark the end of the Islamic month of Ramadan, during which Muslims fast during the hours of daylight. Provisional lunar date for 2028. The final religious-community date has not been verified for this observance; it does not itself create a general public holiday.",
-            "name": "Eid al-Fitr (Provisional)",
+            "date": "2028-02-28",
+            "localName": "Carnival Monday is a observance in Spain",
+            "name": "Carnival Monday",
             "type": [
                 "Observance"
             ]
@@ -2469,17 +2213,17 @@ export const holidays_ES: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-02-28",
-            "localName": "Carnival Monday is a observance in Spain",
-            "name": "Carnival Monday",
+            "date": "2028-02-29",
+            "localName": "Shrove Tuesday is a religious holiday before the fasting period of Lent. It is celebrated by eating pancakes and holding Carnival parades.",
+            "name": "Carnival Tuesday",
             "type": [
                 "Observance"
             ]
         },
         {
-            "date": "2028-02-29",
-            "localName": "Shrove Tuesday is a religious holiday before the fasting period of Lent. It is celebrated by eating pancakes and holding Carnival parades.",
-            "name": "Carnival Tuesday",
+            "date": "2028-03-01",
+            "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
+            "name": "Ash Wednesday",
             "type": [
                 "Observance"
             ]
@@ -2490,14 +2234,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "Day of the Balearic Islands",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-03-01",
-            "localName": "Ash Wednesday marks the first day of Lent in western Christian churches.",
-            "name": "Ash Wednesday",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -2514,14 +2250,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "San Jose",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-03-19",
-            "localName": "Saint Joseph's Day honors St Joseph, the Virgin Mary's spouse. It is a public holiday in some parts of Spain on March 19 each year.",
-            "name": "San Jose",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -2544,14 +2272,6 @@ export const holidays_ES: CountryHolidays = {
             "date": "2028-04-09",
             "localName": "Palm Sunday is a Christian feast that commemorates Jesus Christ's entry into Jerusalem. It is also the start of Holy Week.",
             "name": "Palm Sunday",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-04-13",
-            "localName": "Maundy Thursday is a Christian observance on the Thursday during Holy Week. It is the day before Good Friday.",
-            "name": "Maundy Thursday",
             "type": [
                 "Observance"
             ]
@@ -2593,13 +2313,13 @@ export const holidays_ES: CountryHolidays = {
             "localName": "Easter Monday is the day after Easter Sunday.",
             "name": "Easter Monday",
             "type": [
-                "Observance"
+                "Local holiday"
             ]
         },
         {
-            "date": "2028-04-17",
-            "localName": "Easter Monday is the day after Easter Sunday.",
-            "name": "Easter Monday",
+            "date": "2028-04-23",
+            "localName": "Castile and León Day is celebrated in the Spanish autonomous community of Castile and León on April 23 every year.",
+            "name": "Castile and León Day",
             "type": [
                 "Local holiday"
             ]
@@ -2618,14 +2338,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "St George's Day",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2028-04-23",
-            "localName": "Castile and León Day is celebrated in the Spanish autonomous community of Castile and León on April 23 every year.",
-            "name": "Castile and León Day",
-            "type": [
-                "Local holiday"
             ]
         },
         {
@@ -2710,16 +2422,16 @@ export const holidays_ES: CountryHolidays = {
         },
         {
             "date": "2028-06-09",
-            "localName": "The Day of the Region of Murcia marks the anniversary of when the autonomy of Murcia's statutes was approved. It is an annual public holiday in Murcia, Spain, on June 9.",
-            "name": "Day of Murcia",
+            "localName": "The Day of La Rioja is an annual public holiday in the Spanish autonomous community of La Rioja on June 9.",
+            "name": "Day of La Rioja",
             "type": [
                 "Local holiday"
             ]
         },
         {
             "date": "2028-06-09",
-            "localName": "The Day of La Rioja is an annual public holiday in the Spanish autonomous community of La Rioja on June 9.",
-            "name": "Day of La Rioja",
+            "localName": "The Day of the Region of Murcia marks the anniversary of when the autonomy of Murcia's statutes was approved. It is an annual public holiday in Murcia, Spain, on June 9.",
+            "name": "Day of Murcia",
             "type": [
                 "Local holiday"
             ]
@@ -2730,14 +2442,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "San Antonio (Provisional)",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-06-15",
-            "localName": "Corpus Christi is a Christian feast in honor of the Holy Eucharist.",
-            "name": "Corpus Christi",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -2761,23 +2465,7 @@ export const holidays_ES: CountryHolidays = {
             "localName": "Saint John the Baptist Day is annually held on June 24 to honor the life of St John, an early Christian saint. It is a public holiday in Catalonia, Spain.",
             "name": "Saint John the Baptist Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-06-24",
-            "localName": "Saint John the Baptist Day is annually held on June 24 to honor the life of St John, an early Christian saint. It is a public holiday in Catalonia, Spain.",
-            "name": "Saint John the Baptist Day",
-            "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-07-25",
-            "localName": "Saint James' Day is an occasion to honor the life and deeds of one of Jesus' disciples. It is a public holiday in the autonomous communities of the Basque Country and Galicia in Spain on July 25.",
-            "name": "Feast of Saint James the Apostle",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -2977,14 +2665,6 @@ export const holidays_ES: CountryHolidays = {
             "localName": "The Feast of St Stephen is a holiday to commemorate the life and death of an early Christian saint.",
             "name": "St Stephen's Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-12-26",
-            "localName": "The Feast of St Stephen is a holiday to commemorate the life and death of an early Christian saint.",
-            "name": "St Stephen's Day",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -3002,386 +2682,6 @@ export const holidays_ES: CountryHolidays = {
             "name": "New Year's Eve",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2025-12-19",
-            "endDate": "2026-01-08",
-            "localName": "Regions: CL",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2025-12-20",
-            "endDate": "2026-01-06",
-            "localName": "Regions: AR",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2025-12-22",
-            "endDate": "2026-01-06",
-            "localName": "Regions: CM",
-            "name": "Christmas break",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2025-12-22",
-            "endDate": "2026-01-05",
-            "localName": "Regions: AN-MA",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2025-12-23",
-            "endDate": "2026-01-06",
-            "localName": "Regions: AN-HL",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2025-12-24",
-            "endDate": "2026-01-06",
-            "localName": "Regions: AN-AL",
-            "name": "Christmas holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2025-12-24",
-            "endDate": "2026-01-05",
-            "localName": "Regions: CB",
-            "name": "No lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-01-07",
-            "localName": "Regions: AN-AL",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-12",
-            "endDate": "2026-02-13",
-            "localName": "Regions: CE",
-            "name": "Non-teaching days",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-13",
-            "localName": "Regions: AS",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-16",
-            "endDate": "2026-02-17",
-            "localName": "Regions: CL",
-            "name": "Carnivals",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-16",
-            "endDate": "2026-02-20",
-            "localName": "Regions: CB",
-            "name": "No lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-16",
-            "localName": "Regions: AS",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-16",
-            "endDate": "2026-02-17",
-            "localName": "Regions: CM",
-            "name": "Non-teaching days",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-17",
-            "localName": "Regions: AS",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-19",
-            "localName": "Regions: AR-HU, AR-TE",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-20",
-            "localName": "Regions: AR-HU, AR-TE",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-23",
-            "endDate": "2026-02-26",
-            "localName": "Regions: AN-MA",
-            "name": "White Week",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-27",
-            "localName": "Regions: RI",
-            "name": "Educational Community Day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-27",
-            "localName": "Regions: AN-AL",
-            "name": "Educational Community Days",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-02-27",
-            "localName": "Regions: IB",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-02",
-            "localName": "Regions: AN-CO",
-            "name": "Educational Community Days",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-02",
-            "localName": "Regions: AN-AL",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-06",
-            "localName": "Regions: AR-ZG",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-23",
-            "endDate": "2026-03-27",
-            "localName": "Regions: CE",
-            "name": "Non-teaching days",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-26",
-            "endDate": "2026-04-07",
-            "localName": "Regions: CL",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-27",
-            "localName": "Regions: MD",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-28",
-            "endDate": "2026-04-05",
-            "localName": "Regions: MD",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-30",
-            "endDate": "2026-04-06",
-            "localName": "Regions: CM",
-            "name": "Easter break",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-30",
-            "endDate": "2026-04-01",
-            "localName": "Regions: AN-HL",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-03-30",
-            "endDate": "2026-04-01",
-            "localName": "Regions: CB",
-            "name": "No lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-02",
-            "endDate": "2026-04-06",
-            "localName": "Regions: PV",
-            "name": "Easter holidays",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-06",
-            "localName": "Regions: MD",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-04-24",
-            "localName": "Regions: AR-ZG",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-02",
-            "localName": "Regions: CM",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-04",
-            "localName": "Regions: AN-AL",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-05-25",
-            "endDate": "2026-05-26",
-            "localName": "Regions: CE",
-            "name": "Non-teaching days",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-06-05",
-            "localName": "Regions: AN-GR",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-06-08",
-            "localName": "Regions: RI",
-            "name": "Non-teaching day",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-06-17",
-            "localName": "Regions: CM",
-            "name": "End of lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-06-19",
-            "localName": "Regions: AR",
-            "name": "End of lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-06-22",
-            "localName": "Regions: AN-CO",
-            "name": "End of lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-06-23",
-            "localName": "Regions: AN-AL",
-            "name": "End of lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-06-24",
-            "localName": "Regions: CL",
-            "name": "End of lessons",
-            "type": [
-                "School Holiday"
-            ]
-        },
-        {
-            "date": "2026-07-23",
-            "localName": "Regions: EX",
-            "name": "End of lessons",
-            "type": [
-                "School Holiday"
             ]
         }
     ]

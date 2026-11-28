@@ -86,18 +86,18 @@ export const holidays_JP: CountryHolidays = {
         },
         {
             "date": "2024-03-20",
-            "localName": "Spring Equinox is a national holiday in Japan",
-            "name": "Spring Equinox",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-03-20",
             "localName": "March Equinox in Japan (Tokyo)",
             "name": "March Equinox",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2024-03-20",
+            "localName": "Spring Equinox is a national holiday in Japan",
+            "name": "Spring Equinox",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -382,18 +382,18 @@ export const holidays_JP: CountryHolidays = {
         },
         {
             "date": "2025-03-20",
-            "localName": "Spring Equinox is a national holiday in Japan",
-            "name": "Spring Equinox",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-03-20",
             "localName": "March Equinox in Japan (Tokyo)",
             "name": "March Equinox",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2025-03-20",
+            "localName": "Spring Equinox is a national holiday in Japan",
+            "name": "Spring Equinox",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -502,18 +502,18 @@ export const holidays_JP: CountryHolidays = {
         },
         {
             "date": "2025-09-23",
-            "localName": "September Equinox in Japan (Tokyo)",
-            "name": "September Equinox",
-            "type": [
-                "Season"
-            ]
-        },
-        {
-            "date": "2025-09-23",
             "localName": "Autumn Equinox is a national holiday in Japan",
             "name": "Autumn Equinox",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2025-09-23",
+            "localName": "September Equinox in Japan (Tokyo)",
+            "name": "September Equinox",
+            "type": [
+                "Season"
             ]
         },
         {
@@ -654,18 +654,18 @@ export const holidays_JP: CountryHolidays = {
         },
         {
             "date": "2026-03-20",
-            "localName": "Spring Equinox is a national holiday in Japan",
-            "name": "Spring Equinox",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-03-20",
             "localName": "March Equinox in Japan (Tokyo)",
             "name": "March Equinox",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2026-03-20",
+            "localName": "Spring Equinox is a national holiday in Japan",
+            "name": "Spring Equinox",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -1190,18 +1190,18 @@ export const holidays_JP: CountryHolidays = {
         },
         {
             "date": "2028-03-20",
-            "localName": "Spring Equinox is a national holiday in Japan",
-            "name": "Spring Equinox",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2028-03-20",
             "localName": "March Equinox in Japan (Tokyo)",
             "name": "March Equinox",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2028-03-20",
+            "localName": "Spring Equinox is a national holiday in Japan",
+            "name": "Spring Equinox",
+            "type": [
+                "National holiday"
             ]
         },
         {

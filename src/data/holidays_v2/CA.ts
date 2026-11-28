@@ -103,18 +103,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2024-02-19",
-            "localName": "Louis Riel Day celebrates the achievements and life of Louis Riel, a Canadian politician who was a leader of the Métis people.",
-            "name": "Louis Riel Day",
+            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
+            "name": "Family Day",
             "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-02-19",
-            "localName": "Nova Scotia Heritage Day is a day off for Canadians in Nova Scotia. It aims to recognize cultural or historical contributions to the province.",
-            "name": "Nova Scotia Heritage Day",
-            "type": [
-                "Local holiday"
+                "Common local holiday"
             ]
         },
         {
@@ -127,18 +119,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2024-02-19",
-            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
-            "name": "Family Day",
+            "localName": "Louis Riel Day celebrates the achievements and life of Louis Riel, a Canadian politician who was a leader of the Métis people.",
+            "name": "Louis Riel Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
             "date": "2024-02-19",
-            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
-            "name": "Family Day",
+            "localName": "Nova Scotia Heritage Day is a day off for Canadians in Nova Scotia. It aims to recognize cultural or historical contributions to the province.",
+            "name": "Nova Scotia Heritage Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
@@ -167,18 +159,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2024-03-11",
-            "localName": "Many Muslims in Canada welcome Ramadan as period of fasting, self-evaluation and spiritual growth. Ramadan is the ninth month in the Islamic calendar.",
-            "name": "Ramadan Start",
-            "type": [
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2024-03-11",
             "localName": "The Commonwealth of Nations, which includes Canada, is commemorated on Commonwealth Day.",
             "name": "Commonwealth Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2024-03-11",
+            "localName": "Many Muslims in Canada welcome Ramadan as period of fasting, self-evaluation and spiritual growth. Ramadan is the ninth month in the Islamic calendar.",
+            "name": "Ramadan Start",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -234,14 +226,6 @@ export const holidays_CA: CountryHolidays = {
             "localName": "On Good Friday, Christians commemorate the crucifixion of Jesus Christ and it is a statutory holiday in many parts of Canada.",
             "name": "Good Friday",
             "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2024-03-29",
-            "localName": "On Good Friday, Christians commemorate the crucifixion of Jesus Christ and it is a statutory holiday in many parts of Canada.",
-            "name": "Good Friday",
-            "type": [
                 "National holiday",
                 "Christian"
             ]
@@ -259,15 +243,6 @@ export const holidays_CA: CountryHolidays = {
             "localName": "Easter Sunday is the most important day in the Christian church calendar in Canada. It celebrates the resurrection of Jesus Christ after his crucifixion, according to Christian belief.",
             "name": "Easter Sunday",
             "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
-            "date": "2024-03-31",
-            "localName": "Easter Sunday is the most important day in the Christian church calendar in Canada. It celebrates the resurrection of Jesus Christ after his crucifixion, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -277,22 +252,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "Easter Monday",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-04-01",
-            "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
-            "name": "Easter Monday",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2024-04-01",
-            "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
-            "name": "Easter Monday",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -377,18 +336,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2024-05-06",
-            "localName": "Yom Hashoah commemorates the lives of about six million Jewish people who died during World War II. This observance is annually held on the 27th day of the month of Nisan.",
-            "name": "Yom HaShoah",
-            "type": [
-                "Hebrew"
-            ]
-        },
-        {
-            "date": "2024-05-06",
             "localName": "Many Orthodox churches in Canada observe Easter Monday on the day after the Orthodox Easter Sunday date.",
             "name": "Orthodox Easter Monday",
             "type": [
                 "Orthodox"
+            ]
+        },
+        {
+            "date": "2024-05-06",
+            "localName": "Yom Hashoah commemorates the lives of about six million Jewish people who died during World War II. This observance is annually held on the 27th day of the month of Nisan.",
+            "name": "Yom HaShoah",
+            "type": [
+                "Hebrew"
             ]
         },
         {
@@ -425,18 +384,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2024-05-20",
-            "localName": "Whit Monday is a Christian observance also known as Pentecost Monday. It is the day after Pentecost, or Whitsunday.",
-            "name": "Pentecost Monday",
-            "type": [
-                "Christian"
-            ]
-        },
-        {
-            "date": "2024-05-20",
             "localName": "National Patriots' Day is an annual holiday in Québec, Canada, on the Monday before May 25.",
             "name": "National Patriots' Day",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2024-05-20",
+            "localName": "Whit Monday is a Christian observance also known as Pentecost Monday. It is the day after Pentecost, or Whitsunday.",
+            "name": "Pentecost Monday",
+            "type": [
+                "Christian"
             ]
         },
         {
@@ -449,18 +408,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2024-05-26",
-            "localName": "Trinity Sunday is the first Sunday after Pentecost and is celebrated by many Christians in Canada.",
-            "name": "Trinity Sunday",
-            "type": [
-                "Christian"
-            ]
-        },
-        {
-            "date": "2024-05-26",
             "localName": "Many Jewish people in Canada observe Lag B'Omer on the 18th day of the month of Iyar in the Jewish calendar.",
             "name": "Lag B'Omer",
             "type": [
                 "Hebrew"
+            ]
+        },
+        {
+            "date": "2024-05-26",
+            "localName": "Trinity Sunday is the first Sunday after Pentecost and is celebrated by many Christians in Canada.",
+            "name": "Trinity Sunday",
+            "type": [
+                "Christian"
             ]
         },
         {
@@ -508,14 +467,6 @@ export const holidays_CA: CountryHolidays = {
             "localName": "National Indigenous Peoples Day celebrates Canada's Indigenous culture and the achievements made by the country's indigenous peoples.",
             "name": "National Indigenous Peoples Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-06-21",
-            "localName": "National Indigenous Peoples Day celebrates Canada's Indigenous culture and the achievements made by the country's indigenous peoples.",
-            "name": "National Indigenous Peoples Day",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -537,18 +488,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2024-07-01",
-            "localName": "Memorial Day is observed in Newfoundland and Labrador, Canada, on July 1 each year.",
-            "name": "Memorial Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-07-01",
             "localName": "Canada Day is a federal holiday on July 1 to mark the anniversary of the date that Canada became a self-governing country.",
             "name": "Canada Day",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2024-07-01",
+            "localName": "Memorial Day is observed in Newfoundland and Labrador, Canada, on July 1 each year.",
+            "name": "Memorial Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -585,10 +536,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2024-08-05",
-            "localName": "Many Canadian provinces and territories have a civic holiday to celebrate some aspect of their culture or history on the first Monday of August.",
-            "name": "Civic/Provincial Day",
+            "localName": "British Columbia Day is a statutory holiday in the Canadian province of British Columbia.",
+            "name": "British Columbia Day",
             "type": [
-                "Local observance"
+                "Local holiday"
             ]
         },
         {
@@ -597,6 +548,30 @@ export const holidays_CA: CountryHolidays = {
             "name": "Civic/Provincial Day",
             "type": [
                 "Common local holiday"
+            ]
+        },
+        {
+            "date": "2024-08-05",
+            "localName": "Heritage Day is celebrated in Alberta on the first Monday of August. Although it is not a statutory holiday, it may used as an optional holiday to celebrate Canadian heritage in the province.",
+            "name": "Heritage Day",
+            "type": [
+                "Optional holiday"
+            ]
+        },
+        {
+            "date": "2024-08-05",
+            "localName": "Natal Day is a civic holiday to celebrate the “birthday” of the Nova Scotia province. It is held on the first Monday of August.",
+            "name": "Natal Day",
+            "type": [
+                "Local observance"
+            ]
+        },
+        {
+            "date": "2024-08-05",
+            "localName": "New Brunswick Day is an opportunity for Canadians from the province of New Brunswick to celebrate their history and culture. It is celebrated on the first Monday of August.",
+            "name": "New Brunswick Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -613,38 +588,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "Terry Fox Day",
             "type": [
                 "Local observance"
-            ]
-        },
-        {
-            "date": "2024-08-05",
-            "localName": "New Brunswick Day is an opportunity for Canadians from the province of New Brunswick to celebrate their history and culture. It is celebrated on the first Monday of August.",
-            "name": "New Brunswick Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-08-05",
-            "localName": "British Columbia Day is a statutory holiday in the Canadian province of British Columbia.",
-            "name": "British Columbia Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-08-05",
-            "localName": "Natal Day is a civic holiday to celebrate the “birthday” of the Nova Scotia province. It is held on the first Monday of August.",
-            "name": "Natal Day",
-            "type": [
-                "Local observance"
-            ]
-        },
-        {
-            "date": "2024-08-05",
-            "localName": "Heritage Day is celebrated in Alberta on the first Monday of August. Although it is not a statutory holiday, it may used as an optional holiday to celebrate Canadian heritage in the province.",
-            "name": "Heritage Day",
-            "type": [
-                "Optional holiday"
             ]
         },
         {
@@ -720,22 +663,6 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2024-09-30",
-            "localName": "National Day for Truth and Reconciliation is a federal employees holiday in Canada",
-            "name": "National Day for Truth and Reconciliation",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-09-30",
-            "localName": "National Day for Truth and Reconciliation is a statutory province/territory holiday in Canada",
-            "name": "National Day for Truth and Reconciliation",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
             "date": "2024-10-03",
             "localName": "Rosh Hashana, also spelled Rosh Hashanah, is commonly known as the Jewish New Year. The event begins on the first day of Tishrei (or Tishri), which is the seventh month in the Jewish calendar.",
             "name": "Rosh Hashana",
@@ -764,23 +691,7 @@ export const holidays_CA: CountryHolidays = {
             "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
             "name": "Thanksgiving Day",
             "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-10-14",
-            "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
-            "name": "Thanksgiving Day",
-            "type": [
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2024-10-14",
-            "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
-            "name": "Thanksgiving Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -878,14 +789,6 @@ export const holidays_CA: CountryHolidays = {
             "localName": "Remembrance Day commemorates civilians and military personnel who lost their lives in armed conflicts.",
             "name": "Remembrance Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-11-11",
-            "localName": "Remembrance Day commemorates civilians and military personnel who lost their lives in armed conflicts.",
-            "name": "Remembrance Day",
-            "type": [
                 "National holiday"
             ]
         },
@@ -926,14 +829,6 @@ export const holidays_CA: CountryHolidays = {
             "localName": "Christmas Eve in Canada is the day before Christmas Day and always falls on December 24 according to the Gregorian calendar.",
             "name": "Christmas Eve",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2024-12-24",
-            "localName": "Christmas Eve in Canada is the day before Christmas Day and always falls on December 24 according to the Gregorian calendar.",
-            "name": "Christmas Eve",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -944,6 +839,14 @@ export const holidays_CA: CountryHolidays = {
             "type": [
                 "National holiday",
                 "Christian"
+            ]
+        },
+        {
+            "date": "2024-12-26",
+            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
+            "name": "Boxing Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -960,30 +863,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "Kwanzaa (first day)",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2024-12-26",
-            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Boxing Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2024-12-26",
-            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Boxing Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2024-12-26",
-            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Boxing Day",
-            "type": [
-                "Optional holiday"
             ]
         },
         {
@@ -1085,18 +964,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2025-02-17",
-            "localName": "Louis Riel Day celebrates the achievements and life of Louis Riel, a Canadian politician who was a leader of the Métis people.",
-            "name": "Louis Riel Day",
+            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
+            "name": "Family Day",
             "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-02-17",
-            "localName": "Nova Scotia Heritage Day is a day off for Canadians in Nova Scotia. It aims to recognize cultural or historical contributions to the province.",
-            "name": "Nova Scotia Heritage Day",
-            "type": [
-                "Local holiday"
+                "Common local holiday"
             ]
         },
         {
@@ -1109,18 +980,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2025-02-17",
-            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
-            "name": "Family Day",
+            "localName": "Louis Riel Day celebrates the achievements and life of Louis Riel, a Canadian politician who was a leader of the Métis people.",
+            "name": "Louis Riel Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
             "date": "2025-02-17",
-            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
-            "name": "Family Day",
+            "localName": "Nova Scotia Heritage Day is a day off for Canadians in Nova Scotia. It aims to recognize cultural or historical contributions to the province.",
+            "name": "Nova Scotia Heritage Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
@@ -1192,14 +1063,6 @@ export const holidays_CA: CountryHolidays = {
             "localName": "St Patrick's Day commemorates the life and work of St Patrick, a Christian missionary who lived in the fourth and fifth centuries.",
             "name": "St. Patrick's Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-03-17",
-            "localName": "St Patrick's Day commemorates the life and work of St Patrick, a Christian missionary who lived in the fourth and fifth centuries.",
-            "name": "St. Patrick's Day",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -1253,18 +1116,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2025-04-13",
-            "localName": "Palm Sunday in Canada celebrates Jesus Christ's entry into Jerusalem. It is also the Sunday before Easter Sunday.",
-            "name": "Palm Sunday",
-            "type": [
-                "Christian"
-            ]
-        },
-        {
-            "date": "2025-04-13",
             "localName": "Passover marks the Israelites' liberation from slavery and their exodus from Egypt around 3000 years ago.",
             "name": "First day of Passover",
             "type": [
                 "Hebrew"
+            ]
+        },
+        {
+            "date": "2025-04-13",
+            "localName": "Palm Sunday in Canada celebrates Jesus Christ's entry into Jerusalem. It is also the Sunday before Easter Sunday.",
+            "name": "Palm Sunday",
+            "type": [
+                "Christian"
             ]
         },
         {
@@ -1273,14 +1136,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "Maundy Thursday",
             "type": [
                 "Christian"
-            ]
-        },
-        {
-            "date": "2025-04-18",
-            "localName": "Many Orthodox Christians in Canada remember the events leading up to Jesus Christ's crucifixion on Great Friday.",
-            "name": "Orthodox Good Friday",
-            "type": [
-                "Orthodox"
             ]
         },
         {
@@ -1294,10 +1149,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2025-04-18",
-            "localName": "On Good Friday, Christians commemorate the crucifixion of Jesus Christ and it is a statutory holiday in many parts of Canada.",
-            "name": "Good Friday",
+            "localName": "Many Orthodox Christians in Canada remember the events leading up to Jesus Christ's crucifixion on Great Friday.",
+            "name": "Orthodox Good Friday",
             "type": [
-                "Optional holiday"
+                "Orthodox"
             ]
         },
         {
@@ -1318,6 +1173,14 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2025-04-20",
+            "localName": "Easter Sunday is the most important day in the Christian church calendar in Canada. It celebrates the resurrection of Jesus Christ after his crucifixion, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "Local holiday"
+            ]
+        },
+        {
+            "date": "2025-04-20",
             "localName": "The last day of Passover marks the end of the Passover period, which lasts for seven or eight days.",
             "name": "Last day of Passover",
             "type": [
@@ -1333,20 +1196,11 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-04-20",
-            "localName": "Easter Sunday is the most important day in the Christian church calendar in Canada. It celebrates the resurrection of Jesus Christ after his crucifixion, according to Christian belief.",
-            "name": "Easter Sunday",
+            "date": "2025-04-21",
+            "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
+            "name": "Easter Monday",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-04-20",
-            "localName": "Easter Sunday is the most important day in the Christian church calendar in Canada. It celebrates the resurrection of Jesus Christ after his crucifixion, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance",
-                "Christian"
             ]
         },
         {
@@ -1355,30 +1209,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "Orthodox Easter Monday",
             "type": [
                 "Orthodox"
-            ]
-        },
-        {
-            "date": "2025-04-21",
-            "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
-            "name": "Easter Monday",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2025-04-21",
-            "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
-            "name": "Easter Monday",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-04-21",
-            "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
-            "name": "Easter Monday",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -1479,18 +1309,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2025-06-15",
-            "localName": "Trinity Sunday is the first Sunday after Pentecost and is celebrated by many Christians in Canada.",
-            "name": "Trinity Sunday",
-            "type": [
-                "Christian"
-            ]
-        },
-        {
-            "date": "2025-06-15",
             "localName": "Father's Day celebrates the contribution that fathers and father figures make to their children's lives.",
             "name": "Father's Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2025-06-15",
+            "localName": "Trinity Sunday is the first Sunday after Pentecost and is celebrated by many Christians in Canada.",
+            "name": "Trinity Sunday",
+            "type": [
+                "Christian"
             ]
         },
         {
@@ -1502,11 +1332,11 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-06-21",
-            "localName": "National Indigenous Peoples Day celebrates Canada's Indigenous culture and the achievements made by the country's indigenous peoples.",
-            "name": "National Indigenous Peoples Day",
+            "date": "2025-06-20",
+            "localName": "June Solstice in Canada (Ottawa)",
+            "name": "June Solstice",
             "type": [
-                "Observance"
+                "Season"
             ]
         },
         {
@@ -1515,14 +1345,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "National Indigenous Peoples Day",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-06-20",
-            "localName": "June Solstice in Canada (Ottawa)",
-            "name": "June Solstice",
-            "type": [
-                "Season"
             ]
         },
         {
@@ -1551,18 +1373,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2025-07-01",
-            "localName": "Memorial Day is observed in Newfoundland and Labrador, Canada, on July 1 each year.",
-            "name": "Memorial Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-07-01",
             "localName": "Canada Day is a federal holiday on July 1 to mark the anniversary of the date that Canada became a self-governing country.",
             "name": "Canada Day",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2025-07-01",
+            "localName": "Memorial Day is observed in Newfoundland and Labrador, Canada, on July 1 each year.",
+            "name": "Memorial Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -1607,6 +1429,14 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2025-08-04",
+            "localName": "British Columbia Day is a statutory holiday in the Canadian province of British Columbia.",
+            "name": "British Columbia Day",
+            "type": [
+                "Local holiday"
+            ]
+        },
+        {
+            "date": "2025-08-04",
             "localName": "Many Canadian provinces and territories have a civic holiday to celebrate some aspect of their culture or history on the first Monday of August.",
             "name": "Civic/Provincial Day",
             "type": [
@@ -1615,10 +1445,26 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2025-08-04",
-            "localName": "Many Canadian provinces and territories have a civic holiday to celebrate some aspect of their culture or history on the first Monday of August.",
-            "name": "Civic/Provincial Day",
+            "localName": "Heritage Day is celebrated in Alberta on the first Monday of August. Although it is not a statutory holiday, it may used as an optional holiday to celebrate Canadian heritage in the province.",
+            "name": "Heritage Day",
+            "type": [
+                "Optional holiday"
+            ]
+        },
+        {
+            "date": "2025-08-04",
+            "localName": "Natal Day is a civic holiday to celebrate the “birthday” of the Nova Scotia province. It is held on the first Monday of August.",
+            "name": "Natal Day",
             "type": [
                 "Local observance"
+            ]
+        },
+        {
+            "date": "2025-08-04",
+            "localName": "New Brunswick Day is an opportunity for Canadians from the province of New Brunswick to celebrate their history and culture. It is celebrated on the first Monday of August.",
+            "name": "New Brunswick Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -1635,38 +1481,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "Terry Fox Day",
             "type": [
                 "Local observance"
-            ]
-        },
-        {
-            "date": "2025-08-04",
-            "localName": "New Brunswick Day is an opportunity for Canadians from the province of New Brunswick to celebrate their history and culture. It is celebrated on the first Monday of August.",
-            "name": "New Brunswick Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-08-04",
-            "localName": "British Columbia Day is a statutory holiday in the Canadian province of British Columbia.",
-            "name": "British Columbia Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-08-04",
-            "localName": "Natal Day is a civic holiday to celebrate the “birthday” of the Nova Scotia province. It is held on the first Monday of August.",
-            "name": "Natal Day",
-            "type": [
-                "Local observance"
-            ]
-        },
-        {
-            "date": "2025-08-04",
-            "localName": "Heritage Day is celebrated in Alberta on the first Monday of August. Although it is not a statutory holiday, it may used as an optional holiday to celebrate Canadian heritage in the province.",
-            "name": "Heritage Day",
-            "type": [
-                "Optional holiday"
             ]
         },
         {
@@ -1735,22 +1549,6 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2025-09-30",
-            "localName": "National Day for Truth and Reconciliation is a statutory province/territory holiday in Canada",
-            "name": "National Day for Truth and Reconciliation",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2025-09-30",
-            "localName": "National Day for Truth and Reconciliation is a federal employees holiday in Canada",
-            "name": "National Day for Truth and Reconciliation",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-09-30",
             "localName": "National Day for Truth and Reconciliation is a optional holiday in Canada",
             "name": "National Day for Truth and Reconciliation",
             "type": [
@@ -1794,23 +1592,7 @@ export const holidays_CA: CountryHolidays = {
             "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
             "name": "Thanksgiving Day",
             "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-10-13",
-            "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
-            "name": "Thanksgiving Day",
-            "type": [
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2025-10-13",
-            "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
-            "name": "Thanksgiving Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -1896,14 +1678,6 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2025-11-11",
-            "localName": "Remembrance Day commemorates civilians and military personnel who lost their lives in armed conflicts.",
-            "name": "Remembrance Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2025-11-30",
             "localName": "Many Christians in Canada celebrate the first Sunday of Advent in the lead up to Christmas.",
             "name": "First Sunday of Advent",
@@ -1956,14 +1730,6 @@ export const holidays_CA: CountryHolidays = {
             "localName": "Christmas Eve in Canada is the day before Christmas Day and always falls on December 24 according to the Gregorian calendar.",
             "name": "Christmas Eve",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-12-24",
-            "localName": "Christmas Eve in Canada is the day before Christmas Day and always falls on December 24 according to the Gregorian calendar.",
-            "name": "Christmas Eve",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -1978,22 +1744,6 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2025-12-26",
-            "localName": "Kwanzaa is a week-long holiday honoring the culture and traditions of African people and their descendants worldwide.",
-            "name": "Kwanzaa (first day)",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2025-12-26",
-            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Boxing Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2025-12-26",
             "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
             "name": "Boxing Day",
             "type": [
@@ -2002,10 +1752,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2025-12-26",
-            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Boxing Day",
+            "localName": "Kwanzaa is a week-long holiday honoring the culture and traditions of African people and their descendants worldwide.",
+            "name": "Kwanzaa (first day)",
             "type": [
-                "Optional holiday"
+                "Observance"
             ]
         },
         {
@@ -2059,18 +1809,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2026-02-02",
-            "localName": "Tu B'Shevat is known as the “New Year for Trees”, is a Jewish festival that marks the start of a new cycle for the tithe on fruit trees.",
-            "name": "Tu B'Shevat",
-            "type": [
-                "Hebrew"
-            ]
-        },
-        {
-            "date": "2026-02-02",
             "localName": "Groundhog Day is celebrated in Canada on February 2 each year.",
             "name": "Groundhog Day",
             "type": [
                 "Observance"
+            ]
+        },
+        {
+            "date": "2026-02-02",
+            "localName": "Tu B'Shevat is known as the “New Year for Trees”, is a Jewish festival that marks the start of a new cycle for the tithe on fruit trees.",
+            "name": "Tu B'Shevat",
+            "type": [
+                "Hebrew"
             ]
         },
         {
@@ -2091,18 +1841,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2026-02-16",
-            "localName": "Louis Riel Day celebrates the achievements and life of Louis Riel, a Canadian politician who was a leader of the Métis people.",
-            "name": "Louis Riel Day",
+            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
+            "name": "Family Day",
             "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-02-16",
-            "localName": "Nova Scotia Heritage Day is a day off for Canadians in Nova Scotia. It aims to recognize cultural or historical contributions to the province.",
-            "name": "Nova Scotia Heritage Day",
-            "type": [
-                "Local holiday"
+                "Common local holiday"
             ]
         },
         {
@@ -2115,18 +1857,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2026-02-16",
-            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
-            "name": "Family Day",
+            "localName": "Louis Riel Day celebrates the achievements and life of Louis Riel, a Canadian politician who was a leader of the Métis people.",
+            "name": "Louis Riel Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
             "date": "2026-02-16",
-            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
-            "name": "Family Day",
+            "localName": "Nova Scotia Heritage Day is a day off for Canadians in Nova Scotia. It aims to recognize cultural or historical contributions to the province.",
+            "name": "Nova Scotia Heritage Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
@@ -2251,18 +1993,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2026-04-02",
-            "localName": "Many Christians in the Canada celebrate Maundy Thursday on the Thursday before Good Friday.",
-            "name": "Maundy Thursday",
-            "type": [
-                "Christian"
-            ]
-        },
-        {
-            "date": "2026-04-02",
             "localName": "Passover marks the Israelites' liberation from slavery and their exodus from Egypt around 3000 years ago.",
             "name": "First day of Passover",
             "type": [
                 "Hebrew"
+            ]
+        },
+        {
+            "date": "2026-04-02",
+            "localName": "Many Christians in the Canada celebrate Maundy Thursday on the Thursday before Good Friday.",
+            "name": "Maundy Thursday",
+            "type": [
+                "Christian"
             ]
         },
         {
@@ -2272,14 +2014,6 @@ export const holidays_CA: CountryHolidays = {
             "type": [
                 "National holiday",
                 "Christian"
-            ]
-        },
-        {
-            "date": "2026-04-03",
-            "localName": "On Good Friday, Christians commemorate the crucifixion of Jesus Christ and it is a statutory holiday in many parts of Canada.",
-            "name": "Good Friday",
-            "type": [
-                "Optional holiday"
             ]
         },
         {
@@ -2299,20 +2033,19 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-04-05",
-            "localName": "Easter Sunday is the most important day in the Christian church calendar in Canada. It celebrates the resurrection of Jesus Christ after his crucifixion, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2026-04-06",
             "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
             "name": "Easter Monday",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2026-04-06",
+            "localName": "Easter Monday is a designated paid holiday for eligible federal public-service employees throughout Canada under the applicable employment terms and collective agreements. This employee-scoped occurrence does not grant a general day off to all Canadian workers; holiday pay and eligibility depend on employment status.",
+            "name": "Easter Monday (Federal Public Service)",
+            "type": [
+                "National holiday"
             ]
         },
         {
@@ -2321,14 +2054,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "Easter Monday (Public Service)",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-04-06",
-            "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
-            "name": "Easter Monday",
-            "type": [
-                "Optional holiday"
             ]
         },
         {
@@ -2517,10 +2242,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2026-06-21",
-            "localName": "National Indigenous Peoples Day celebrates Canada's Indigenous culture and the achievements made by the country's indigenous peoples.",
-            "name": "National Indigenous Peoples Day",
+            "localName": "June Solstice in Canada (Ottawa)",
+            "name": "June Solstice",
             "type": [
-                "Observance"
+                "Season"
             ]
         },
         {
@@ -2529,14 +2254,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "National Indigenous Peoples Day",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-06-21",
-            "localName": "June Solstice in Canada (Ottawa)",
-            "name": "June Solstice",
-            "type": [
-                "Season"
             ]
         },
         {
@@ -2565,18 +2282,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2026-07-01",
-            "localName": "Memorial Day is observed in Newfoundland and Labrador, Canada, on July 1 each year.",
-            "name": "Memorial Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-07-01",
             "localName": "Canada Day is a federal holiday on July 1 to mark the anniversary of the date that Canada became a self-governing country.",
             "name": "Canada Day",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2026-07-01",
+            "localName": "Memorial Day is observed in Newfoundland and Labrador, Canada, on July 1 each year.",
+            "name": "Memorial Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -2605,6 +2322,14 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2026-08-03",
+            "localName": "British Columbia Day is a statutory holiday in the Canadian province of British Columbia.",
+            "name": "British Columbia Day",
+            "type": [
+                "Local holiday"
+            ]
+        },
+        {
+            "date": "2026-08-03",
             "localName": "Many Canadian provinces and territories have a civic holiday to celebrate some aspect of their culture or history on the first Monday of August.",
             "name": "Civic/Provincial Day",
             "type": [
@@ -2613,10 +2338,26 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2026-08-03",
-            "localName": "Many Canadian provinces and territories have a civic holiday to celebrate some aspect of their culture or history on the first Monday of August.",
-            "name": "Civic/Provincial Day",
+            "localName": "Heritage Day is celebrated in Alberta on the first Monday of August. Although it is not a statutory holiday, it may used as an optional holiday to celebrate Canadian heritage in the province.",
+            "name": "Heritage Day",
+            "type": [
+                "Optional holiday"
+            ]
+        },
+        {
+            "date": "2026-08-03",
+            "localName": "Natal Day is a civic holiday to celebrate the “birthday” of the Nova Scotia province. It is held on the first Monday of August.",
+            "name": "Natal Day",
             "type": [
                 "Local observance"
+            ]
+        },
+        {
+            "date": "2026-08-03",
+            "localName": "New Brunswick Day is an opportunity for Canadians from the province of New Brunswick to celebrate their history and culture. It is celebrated on the first Monday of August.",
+            "name": "New Brunswick Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -2633,38 +2374,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "Terry Fox Day",
             "type": [
                 "Local observance"
-            ]
-        },
-        {
-            "date": "2026-08-03",
-            "localName": "New Brunswick Day is an opportunity for Canadians from the province of New Brunswick to celebrate their history and culture. It is celebrated on the first Monday of August.",
-            "name": "New Brunswick Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-08-03",
-            "localName": "British Columbia Day is a statutory holiday in the Canadian province of British Columbia.",
-            "name": "British Columbia Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-08-03",
-            "localName": "Natal Day is a civic holiday to celebrate the “birthday” of the Nova Scotia province. It is held on the first Monday of August.",
-            "name": "Natal Day",
-            "type": [
-                "Local observance"
-            ]
-        },
-        {
-            "date": "2026-08-03",
-            "localName": "Heritage Day is celebrated in Alberta on the first Monday of August. Although it is not a statutory holiday, it may used as an optional holiday to celebrate Canadian heritage in the province.",
-            "name": "Heritage Day",
-            "type": [
-                "Optional holiday"
             ]
         },
         {
@@ -2749,26 +2458,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2026-09-30",
-            "localName": "National Day for Truth and Reconciliation is a statutory province/territory holiday in Canada",
-            "name": "National Day for Truth and Reconciliation",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-09-30",
             "localName": "National Day for Truth and Reconciliation is a optional holiday in Canada",
             "name": "National Day for Truth and Reconciliation",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2026-09-30",
-            "localName": "National Day for Truth and Reconciliation is a federal employees holiday in Canada",
-            "name": "National Day for Truth and Reconciliation",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -2808,23 +2501,7 @@ export const holidays_CA: CountryHolidays = {
             "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
             "name": "Thanksgiving Day",
             "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-10-12",
-            "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
-            "name": "Thanksgiving Day",
-            "type": [
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2026-10-12",
-            "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
-            "name": "Thanksgiving Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -2886,14 +2563,6 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2026-11-11",
-            "localName": "Remembrance Day commemorates civilians and military personnel who lost their lives in armed conflicts.",
-            "name": "Remembrance Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2026-11-29",
             "localName": "Many Christians in Canada celebrate the first Sunday of Advent in the lead up to Christmas.",
             "name": "First Sunday of Advent",
@@ -2946,14 +2615,6 @@ export const holidays_CA: CountryHolidays = {
             "localName": "Christmas Eve in Canada is the day before Christmas Day and always falls on December 24 according to the Gregorian calendar.",
             "name": "Christmas Eve",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-12-24",
-            "localName": "Christmas Eve in Canada is the day before Christmas Day and always falls on December 24 according to the Gregorian calendar.",
-            "name": "Christmas Eve",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -2968,34 +2629,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2026-12-26",
-            "localName": "Kwanzaa is a week-long holiday honoring the culture and traditions of African people and their descendants worldwide.",
-            "name": "Kwanzaa (first day)",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2026-12-26",
-            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Boxing Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2026-12-26",
-            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Boxing Day",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
-            "date": "2026-12-26",
             "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
             "name": "Boxing Day",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2026-12-26",
+            "localName": "Kwanzaa is a week-long holiday honoring the culture and traditions of African people and their descendants worldwide.",
+            "name": "Kwanzaa (first day)",
+            "type": [
+                "Observance"
             ]
         },
         {
@@ -3004,14 +2649,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "New Year's Eve",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2026-04-06",
-            "localName": "Easter Monday is a designated paid holiday for eligible federal public-service employees throughout Canada under the applicable employment terms and collective agreements. This employee-scoped occurrence does not grant a general day off to all Canadian workers; holiday pay and eligibility depend on employment status.",
-            "name": "Easter Monday (Federal Public Service)",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -3024,19 +2661,19 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2027-01-06",
-            "localName": "Isra and Mi'raj (Isra Me'raj, Israa and Mi'raaj, Laylat Al-Isra wa Al-Miraj, Lailat al Miraj, Night Journey and Ascension to Heaven) marks the night when the Prophet Mohammad traveled from Mecca to Jerusalem, ascended to heaven and returned. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Isra and Mi'raj (Provisional)",
-            "type": [
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2027-01-06",
             "localName": "Many people in Canada annually observe Epiphany, or Three Kings' Day, on January 6. It is a Christian observance.",
             "name": "Epiphany",
             "type": [
                 "Observance",
                 "Christian"
+            ]
+        },
+        {
+            "date": "2027-01-06",
+            "localName": "Isra and Mi'raj (Isra Me'raj, Israa and Mi'raaj, Laylat Al-Isra wa Al-Miraj, Lailat al Miraj, Night Journey and Ascension to Heaven) marks the night when the Prophet Mohammad traveled from Mecca to Jerusalem, ascended to heaven and returned. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Isra and Mi'raj (Provisional)",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -3113,16 +2750,24 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2027-02-15",
-            "localName": "Louis Riel Day celebrates the achievements and life of Louis Riel, a Canadian politician who was a leader of the Métis people.",
-            "name": "Louis Riel Day",
+            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
+            "name": "Family Day",
+            "type": [
+                "Common local holiday"
+            ]
+        },
+        {
+            "date": "2027-02-15",
+            "localName": "Islander Day is a day off for many people in the province of Prince Edward Island in Canada.",
+            "name": "Islander Day",
             "type": [
                 "Local holiday"
             ]
         },
         {
             "date": "2027-02-15",
-            "localName": "Nova Scotia Heritage Day is a day off for Canadians in Nova Scotia. It aims to recognize cultural or historical contributions to the province.",
-            "name": "Nova Scotia Heritage Day",
+            "localName": "Louis Riel Day celebrates the achievements and life of Louis Riel, a Canadian politician who was a leader of the Métis people.",
+            "name": "Louis Riel Day",
             "type": [
                 "Local holiday"
             ]
@@ -3137,26 +2782,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2027-02-15",
-            "localName": "Islander Day is a day off for many people in the province of Prince Edward Island in Canada.",
-            "name": "Islander Day",
+            "localName": "Nova Scotia Heritage Day is a day off for Canadians in Nova Scotia. It aims to recognize cultural or historical contributions to the province.",
+            "name": "Nova Scotia Heritage Day",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-02-15",
-            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
-            "name": "Family Day",
-            "type": [
-                "Common local holiday"
-            ]
-        },
-        {
-            "date": "2027-02-15",
-            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
-            "name": "Family Day",
-            "type": [
-                "Common local holiday"
             ]
         },
         {
@@ -3265,14 +2894,6 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-03-26",
-            "localName": "On Good Friday, Christians commemorate the crucifixion of Jesus Christ and it is a statutory holiday in many parts of Canada.",
-            "name": "Good Friday",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
             "date": "2027-03-27",
             "localName": "Holy Saturday is the day before Easter Sunday in Canada.",
             "name": "Holy Saturday",
@@ -3289,15 +2910,6 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-03-28",
-            "localName": "Easter Sunday is the most important day in the Christian church calendar in Canada. It celebrates the resurrection of Jesus Christ after his crucifixion, according to Christian belief.",
-            "name": "Easter Sunday",
-            "type": [
-                "Observance",
-                "Christian"
-            ]
-        },
-        {
             "date": "2027-03-29",
             "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
             "name": "Easter Monday",
@@ -3307,10 +2919,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2027-03-29",
-            "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
-            "name": "Easter Monday",
+            "localName": "Easter Monday is a designated paid holiday for eligible federal public-service employees throughout Canada under the applicable employment terms and collective agreements. This employee-scoped occurrence does not grant a general day off to all Canadian workers; holiday pay and eligibility depend on employment status.",
+            "name": "Easter Monday (Federal Public Service)",
             "type": [
-                "Optional holiday"
+                "National holiday"
             ]
         },
         {
@@ -3435,18 +3047,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2027-05-17",
-            "localName": "Whit Monday is a Christian observance also known as Pentecost Monday. It is the day after Pentecost, or Whitsunday.",
-            "name": "Pentecost Monday",
-            "type": [
-                "Christian"
-            ]
-        },
-        {
-            "date": "2027-05-17",
             "localName": "Many Muslims in Canada celebrate Eid al-Adha around the 10th to the 13th days of the Islamic month of Dhu al-Hijjah. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
             "name": "Eid al-Adha (Provisional)",
             "type": [
                 "Muslim"
+            ]
+        },
+        {
+            "date": "2027-05-17",
+            "localName": "Whit Monday is a Christian observance also known as Pentecost Monday. It is the day after Pentecost, or Whitsunday.",
+            "name": "Pentecost Monday",
+            "type": [
+                "Christian"
             ]
         },
         {
@@ -3523,22 +3135,6 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2027-06-21",
-            "localName": "National Indigenous Peoples Day celebrates Canada's Indigenous culture and the achievements made by the country's indigenous peoples.",
-            "name": "National Indigenous Peoples Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-06-21",
-            "localName": "National Indigenous Peoples Day celebrates Canada's Indigenous culture and the achievements made by the country's indigenous peoples.",
-            "name": "National Indigenous Peoples Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-06-21",
             "localName": "Newfoundland and Labrador's June holiday commemorates John Cabot's arrival at the province on June 24, 1497.",
             "name": "June Holiday",
             "type": [
@@ -3554,17 +3150,17 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-06-24",
-            "localName": "Saint Jean Baptiste Day (Fête nationale du Québec, Quebec National Holiday, la Saint-Jean, St. John the Baptist Day) is the national holiday of the Canadian province of Quebec.",
-            "name": "St. Jean Baptiste Day",
+            "date": "2027-06-21",
+            "localName": "National Indigenous Peoples Day celebrates Canada's Indigenous culture and the achievements made by the country's indigenous peoples.",
+            "name": "National Indigenous Peoples Day",
             "type": [
                 "Local holiday"
             ]
         },
         {
-            "date": "2027-07-01",
-            "localName": "Memorial Day is observed in Newfoundland and Labrador, Canada, on July 1 each year.",
-            "name": "Memorial Day",
+            "date": "2027-06-24",
+            "localName": "Saint Jean Baptiste Day (Fête nationale du Québec, Quebec National Holiday, la Saint-Jean, St. John the Baptist Day) is the national holiday of the Canadian province of Quebec.",
+            "name": "St. Jean Baptiste Day",
             "type": [
                 "Local holiday"
             ]
@@ -3575,6 +3171,14 @@ export const holidays_CA: CountryHolidays = {
             "name": "Canada Day",
             "type": [
                 "National holiday"
+            ]
+        },
+        {
+            "date": "2027-07-01",
+            "localName": "Memorial Day is observed in Newfoundland and Labrador, Canada, on July 1 each year.",
+            "name": "Memorial Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -3595,10 +3199,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2027-08-02",
-            "localName": "Many Canadian provinces and territories have a civic holiday to celebrate some aspect of their culture or history on the first Monday of August.",
-            "name": "Civic/Provincial Day",
+            "localName": "British Columbia Day is a statutory holiday in the Canadian province of British Columbia.",
+            "name": "British Columbia Day",
             "type": [
-                "Local observance"
+                "Local holiday"
             ]
         },
         {
@@ -3607,6 +3211,30 @@ export const holidays_CA: CountryHolidays = {
             "name": "Civic/Provincial Day",
             "type": [
                 "Common local holiday"
+            ]
+        },
+        {
+            "date": "2027-08-02",
+            "localName": "Heritage Day is celebrated in Alberta on the first Monday of August. Although it is not a statutory holiday, it may used as an optional holiday to celebrate Canadian heritage in the province.",
+            "name": "Heritage Day",
+            "type": [
+                "Optional holiday"
+            ]
+        },
+        {
+            "date": "2027-08-02",
+            "localName": "Natal Day is a civic holiday to celebrate the “birthday” of the Nova Scotia province. It is held on the first Monday of August.",
+            "name": "Natal Day",
+            "type": [
+                "Local observance"
+            ]
+        },
+        {
+            "date": "2027-08-02",
+            "localName": "New Brunswick Day is an opportunity for Canadians from the province of New Brunswick to celebrate their history and culture. It is celebrated on the first Monday of August.",
+            "name": "New Brunswick Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -3623,38 +3251,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "Terry Fox Day",
             "type": [
                 "Local observance"
-            ]
-        },
-        {
-            "date": "2027-08-02",
-            "localName": "New Brunswick Day is an opportunity for Canadians from the province of New Brunswick to celebrate their history and culture. It is celebrated on the first Monday of August.",
-            "name": "New Brunswick Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-08-02",
-            "localName": "British Columbia Day is a statutory holiday in the Canadian province of British Columbia.",
-            "name": "British Columbia Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-08-02",
-            "localName": "Natal Day is a civic holiday to celebrate the “birthday” of the Nova Scotia province. It is held on the first Monday of August.",
-            "name": "Natal Day",
-            "type": [
-                "Local observance"
-            ]
-        },
-        {
-            "date": "2027-08-02",
-            "localName": "Heritage Day is celebrated in Alberta on the first Monday of August. Although it is not a statutory holiday, it may used as an optional holiday to celebrate Canadian heritage in the province.",
-            "name": "Heritage Day",
-            "type": [
-                "Optional holiday"
             ]
         },
         {
@@ -3675,18 +3271,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2027-08-15",
-            "localName": "Mawlid, or Milad, marks the birth of the Islamic prophet Muhammed, or Mohamed, in the year 570 of the Gregorian calendar. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
-            "name": "Milad un Nabi (Provisional)",
-            "type": [
-                "Muslim"
-            ]
-        },
-        {
-            "date": "2027-08-15",
             "localName": "The Feast of the Assumption of Mary in Canada is observed as a Holy Day of Obligation - a day when some Christian denominations are obliged to attend mass, on August 15 each year.",
             "name": "Assumption of Mary",
             "type": [
                 "Christian"
+            ]
+        },
+        {
+            "date": "2027-08-15",
+            "localName": "Mawlid, or Milad, marks the birth of the Islamic prophet Muhammed, or Mohamed, in the year 570 of the Gregorian calendar. Provisional date: official confirmation has not been recorded for this occurrence. The date or holiday arrangements may change.",
+            "name": "Milad un Nabi (Provisional)",
+            "type": [
+                "Muslim"
             ]
         },
         {
@@ -3723,26 +3319,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2027-09-30",
-            "localName": "National Day for Truth and Reconciliation is a statutory province/territory holiday in Canada",
-            "name": "National Day for Truth and Reconciliation",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-09-30",
             "localName": "National Day for Truth and Reconciliation is a optional holiday in Canada",
             "name": "National Day for Truth and Reconciliation",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-09-30",
-            "localName": "National Day for Truth and Reconciliation is a federal employees holiday in Canada",
-            "name": "National Day for Truth and Reconciliation",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -3763,22 +3343,6 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2027-10-11",
-            "localName": "Yom Kippur is an important Jewish holiday that falls on the 10th day of the month of Tishrei in the Jewish calendar.",
-            "name": "Yom Kippur",
-            "type": [
-                "Hebrew"
-            ]
-        },
-        {
-            "date": "2027-10-11",
-            "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
-            "name": "Thanksgiving Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-10-11",
             "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
             "name": "Thanksgiving Day",
             "type": [
@@ -3787,10 +3351,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2027-10-11",
-            "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
-            "name": "Thanksgiving Day",
+            "localName": "Yom Kippur is an important Jewish holiday that falls on the 10th day of the month of Tishrei in the Jewish calendar.",
+            "name": "Yom Kippur",
             "type": [
-                "Observance"
+                "Hebrew"
             ]
         },
         {
@@ -3880,14 +3444,6 @@ export const holidays_CA: CountryHolidays = {
             "localName": "Remembrance Day commemorates civilians and military personnel who lost their lives in armed conflicts.",
             "name": "Remembrance Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2027-11-11",
-            "localName": "Remembrance Day commemorates civilians and military personnel who lost their lives in armed conflicts.",
-            "name": "Remembrance Day",
-            "type": [
                 "National holiday"
             ]
         },
@@ -3932,11 +3488,12 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-12-24",
-            "localName": "Christmas Eve in Canada is the day before Christmas Day and always falls on December 24 according to the Gregorian calendar.",
-            "name": "Christmas Eve",
+            "date": "2027-12-25",
+            "localName": "Christians celebrate the birth of Jesus Christ on Christmas Day in Canada.",
+            "name": "Christmas Day",
             "type": [
-                "Observance"
+                "National holiday",
+                "Christian"
             ]
         },
         {
@@ -3948,12 +3505,11 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-12-25",
-            "localName": "Christians celebrate the birth of Jesus Christ on Christmas Day in Canada.",
-            "name": "Christmas Day",
+            "date": "2027-12-26",
+            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
+            "name": "Boxing Day",
             "type": [
-                "National holiday",
-                "Christian"
+                "Local holiday"
             ]
         },
         {
@@ -3973,41 +3529,17 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2027-12-26",
+            "date": "2027-12-27",
             "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Boxing Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2027-12-26",
-            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Boxing Day",
+            "name": "Day off for Boxing Day",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-12-26",
-            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Boxing Day",
-            "type": [
-                "Optional holiday"
             ]
         },
         {
             "date": "2027-12-27",
             "localName": "Christians celebrate the birth of Jesus Christ on Christmas Day in Canada.",
             "name": "Day off for Christmas Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2027-12-27",
-            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Day off for Boxing Day",
             "type": [
                 "Local holiday"
             ]
@@ -4026,14 +3558,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "New Year's Eve",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2027-03-29",
-            "localName": "Easter Monday is a designated paid holiday for eligible federal public-service employees throughout Canada under the applicable employment terms and collective agreements. This employee-scoped occurrence does not grant a general day off to all Canadian workers; holiday pay and eligibility depend on employment status.",
-            "name": "Easter Monday (Federal Public Service)",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -4135,18 +3659,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2028-02-21",
-            "localName": "Louis Riel Day celebrates the achievements and life of Louis Riel, a Canadian politician who was a leader of the Métis people.",
-            "name": "Louis Riel Day",
+            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
+            "name": "Family Day",
             "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-02-21",
-            "localName": "Nova Scotia Heritage Day is a day off for Canadians in Nova Scotia. It aims to recognize cultural or historical contributions to the province.",
-            "name": "Nova Scotia Heritage Day",
-            "type": [
-                "Local holiday"
+                "Common local holiday"
             ]
         },
         {
@@ -4159,18 +3675,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2028-02-21",
-            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
-            "name": "Family Day",
+            "localName": "Louis Riel Day celebrates the achievements and life of Louis Riel, a Canadian politician who was a leader of the Métis people.",
+            "name": "Louis Riel Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
             "date": "2028-02-21",
-            "localName": "Family Day is a public holiday in the Canadian provinces of Alberta, Ontario, Saskatchewan, British Columbia, and New Brunswick.",
-            "name": "Family Day",
+            "localName": "Nova Scotia Heritage Day is a day off for Canadians in Nova Scotia. It aims to recognize cultural or historical contributions to the province.",
+            "name": "Nova Scotia Heritage Day",
             "type": [
-                "Common local holiday"
+                "Local holiday"
             ]
         },
         {
@@ -4223,18 +3739,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2028-03-12",
-            "localName": "Purim commemorates a time when Jewish people were saved from death around the fourth century BCE, according to the Book of Esther.",
-            "name": "Purim",
-            "type": [
-                "Hebrew"
-            ]
-        },
-        {
-            "date": "2028-03-12",
             "localName": "Daylight Saving Time starts in Canada",
             "name": "Daylight Saving Time starts",
             "type": [
                 "Clock change/Daylight Saving Time"
+            ]
+        },
+        {
+            "date": "2028-03-12",
+            "localName": "Purim commemorates a time when Jewish people were saved from death around the fourth century BCE, according to the Book of Esther.",
+            "name": "Purim",
+            "type": [
+                "Hebrew"
             ]
         },
         {
@@ -4254,19 +3770,19 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-03-20",
-            "localName": "St Patrick's Day commemorates the life and work of St Patrick, a Christian missionary who lived in the fourth and fifth centuries.",
-            "name": "St. Patrick's Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
             "date": "2028-03-19",
             "localName": "March Equinox in Canada (Ottawa)",
             "name": "March Equinox",
             "type": [
                 "Season"
+            ]
+        },
+        {
+            "date": "2028-03-20",
+            "localName": "St Patrick's Day commemorates the life and work of St Patrick, a Christian missionary who lived in the fourth and fifth centuries.",
+            "name": "St. Patrick's Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -4311,14 +3827,6 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2028-04-14",
-            "localName": "Many Orthodox Christians in Canada remember the events leading up to Jesus Christ's crucifixion on Great Friday.",
-            "name": "Orthodox Good Friday",
-            "type": [
-                "Orthodox"
-            ]
-        },
-        {
-            "date": "2028-04-14",
             "localName": "On Good Friday, Christians commemorate the crucifixion of Jesus Christ and it is a statutory holiday in many parts of Canada.",
             "name": "Good Friday",
             "type": [
@@ -4328,10 +3836,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2028-04-14",
-            "localName": "On Good Friday, Christians commemorate the crucifixion of Jesus Christ and it is a statutory holiday in many parts of Canada.",
-            "name": "Good Friday",
+            "localName": "Many Orthodox Christians in Canada remember the events leading up to Jesus Christ's crucifixion on Great Friday.",
+            "name": "Orthodox Good Friday",
             "type": [
-                "Optional holiday"
+                "Orthodox"
             ]
         },
         {
@@ -4352,6 +3860,14 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2028-04-16",
+            "localName": "Easter Sunday is the most important day in the Christian church calendar in Canada. It celebrates the resurrection of Jesus Christ after his crucifixion, according to Christian belief.",
+            "name": "Easter Sunday",
+            "type": [
+                "Local holiday"
+            ]
+        },
+        {
+            "date": "2028-04-16",
             "localName": "Orthodox Christians in Canada celebrate Jesus Christ's resurrection on Easter Sunday, also known as Pascha.",
             "name": "Orthodox Easter",
             "type": [
@@ -4359,18 +3875,25 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-16",
-            "localName": "Easter Sunday is the most important day in the Christian church calendar in Canada. It celebrates the resurrection of Jesus Christ after his crucifixion, according to Christian belief.",
-            "name": "Easter Sunday",
+            "date": "2028-04-17",
+            "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
+            "name": "Easter Monday",
             "type": [
-                "Observance",
-                "Christian"
+                "Local holiday"
             ]
         },
         {
-            "date": "2028-04-16",
-            "localName": "Easter Sunday is the most important day in the Christian church calendar in Canada. It celebrates the resurrection of Jesus Christ after his crucifixion, according to Christian belief.",
-            "name": "Easter Sunday",
+            "date": "2028-04-17",
+            "localName": "Easter Monday is a designated paid holiday for eligible federal public-service employees throughout Canada under the applicable employment terms and collective agreements. This employee-scoped occurrence does not grant a general day off to all Canadian workers; holiday pay and eligibility depend on employment status.",
+            "name": "Easter Monday (Federal Public Service)",
+            "type": [
+                "National holiday"
+            ]
+        },
+        {
+            "date": "2028-04-17",
+            "localName": "Easter Monday is paid leave for eligible public-service employees in New Brunswick, Northwest Territories and Nunavut under their applicable public-service policies or collective agreements. It is not a general Employment Standards Act holiday in New Brunswick or Northwest Territories. Eligibility and other employers' leave arrangements depend on the applicable policy or agreement.",
+            "name": "Easter Monday (Public Service)",
             "type": [
                 "Local holiday"
             ]
@@ -4384,41 +3907,9 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-04-17",
-            "localName": "Easter Monday is paid leave for eligible public-service employees in New Brunswick, Northwest Territories and Nunavut under their applicable public-service policies or collective agreements. It is not a general Employment Standards Act holiday in New Brunswick or Northwest Territories. Eligibility and other employers' leave arrangements depend on the applicable policy or agreement.",
-            "name": "Easter Monday (Public Service)",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-04-17",
-            "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
-            "name": "Easter Monday",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-04-17",
-            "localName": "Easter Monday is the day after Easter Sunday and a holiday for many Canadians.",
-            "name": "Easter Monday",
-            "type": [
-                "Optional holiday"
-            ]
-        },
-        {
             "date": "2028-04-18",
             "localName": "The last day of Passover marks the end of the Passover period, which lasts for seven or eight days.",
             "name": "Last day of Passover",
-            "type": [
-                "Hebrew"
-            ]
-        },
-        {
-            "date": "2028-04-24",
-            "localName": "Yom Hashoah commemorates the lives of about six million Jewish people who died during World War II. This observance is annually held on the 27th day of the month of Nisan.",
-            "name": "Yom HaShoah",
             "type": [
                 "Hebrew"
             ]
@@ -4429,6 +3920,14 @@ export const holidays_CA: CountryHolidays = {
             "name": "St. George's Day",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2028-04-24",
+            "localName": "Yom Hashoah commemorates the lives of about six million Jewish people who died during World War II. This observance is annually held on the 27th day of the month of Nisan.",
+            "name": "Yom HaShoah",
+            "type": [
+                "Hebrew"
             ]
         },
         {
@@ -4564,14 +4063,6 @@ export const holidays_CA: CountryHolidays = {
             "localName": "National Indigenous Peoples Day celebrates Canada's Indigenous culture and the achievements made by the country's indigenous peoples.",
             "name": "National Indigenous Peoples Day",
             "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-06-21",
-            "localName": "National Indigenous Peoples Day celebrates Canada's Indigenous culture and the achievements made by the country's indigenous peoples.",
-            "name": "National Indigenous Peoples Day",
-            "type": [
                 "Local holiday"
             ]
         },
@@ -4593,26 +4084,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2028-07-01",
+            "localName": "Canada Day is a federal holiday on July 1 to mark the anniversary of the date that Canada became a self-governing country.",
+            "name": "Canada Day",
+            "type": [
+                "Local holiday"
+            ]
+        },
+        {
+            "date": "2028-07-01",
             "localName": "Memorial Day is observed in Newfoundland and Labrador, Canada, on July 1 each year.",
             "name": "Memorial Day",
             "type": [
                 "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-07-01",
-            "localName": "Canada Day is a federal holiday on July 1 to mark the anniversary of the date that Canada became a self-governing country.",
-            "name": "Canada Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-07-01",
-            "localName": "Canada Day is a federal holiday on July 1 to mark the anniversary of the date that Canada became a self-governing country.",
-            "name": "Canada Day",
-            "type": [
-                "National holiday"
             ]
         },
         {
@@ -4673,6 +4156,14 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2028-08-07",
+            "localName": "British Columbia Day is a statutory holiday in the Canadian province of British Columbia.",
+            "name": "British Columbia Day",
+            "type": [
+                "Local holiday"
+            ]
+        },
+        {
+            "date": "2028-08-07",
             "localName": "Many Canadian provinces and territories have a civic holiday to celebrate some aspect of their culture or history on the first Monday of August.",
             "name": "Civic/Provincial Day",
             "type": [
@@ -4681,10 +4172,26 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2028-08-07",
-            "localName": "Many Canadian provinces and territories have a civic holiday to celebrate some aspect of their culture or history on the first Monday of August.",
-            "name": "Civic/Provincial Day",
+            "localName": "Heritage Day is celebrated in Alberta on the first Monday of August. Although it is not a statutory holiday, it may used as an optional holiday to celebrate Canadian heritage in the province.",
+            "name": "Heritage Day",
+            "type": [
+                "Optional holiday"
+            ]
+        },
+        {
+            "date": "2028-08-07",
+            "localName": "Natal Day is a civic holiday to celebrate the “birthday” of the Nova Scotia province. It is held on the first Monday of August.",
+            "name": "Natal Day",
             "type": [
                 "Local observance"
+            ]
+        },
+        {
+            "date": "2028-08-07",
+            "localName": "New Brunswick Day is an opportunity for Canadians from the province of New Brunswick to celebrate their history and culture. It is celebrated on the first Monday of August.",
+            "name": "New Brunswick Day",
+            "type": [
+                "Local holiday"
             ]
         },
         {
@@ -4701,38 +4208,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "Terry Fox Day",
             "type": [
                 "Local observance"
-            ]
-        },
-        {
-            "date": "2028-08-07",
-            "localName": "New Brunswick Day is an opportunity for Canadians from the province of New Brunswick to celebrate their history and culture. It is celebrated on the first Monday of August.",
-            "name": "New Brunswick Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-08-07",
-            "localName": "British Columbia Day is a statutory holiday in the Canadian province of British Columbia.",
-            "name": "British Columbia Day",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-08-07",
-            "localName": "Natal Day is a civic holiday to celebrate the “birthday” of the Nova Scotia province. It is held on the first Monday of August.",
-            "name": "Natal Day",
-            "type": [
-                "Local observance"
-            ]
-        },
-        {
-            "date": "2028-08-07",
-            "localName": "Heritage Day is celebrated in Alberta on the first Monday of August. Although it is not a statutory holiday, it may used as an optional holiday to celebrate Canadian heritage in the province.",
-            "name": "Heritage Day",
-            "type": [
-                "Optional holiday"
             ]
         },
         {
@@ -4785,34 +4260,18 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2028-09-30",
-            "localName": "Yom Kippur is an important Jewish holiday that falls on the 10th day of the month of Tishrei in the Jewish calendar.",
-            "name": "Yom Kippur",
-            "type": [
-                "Hebrew"
-            ]
-        },
-        {
-            "date": "2028-09-30",
-            "localName": "National Day for Truth and Reconciliation is a statutory province/territory holiday in Canada",
-            "name": "National Day for Truth and Reconciliation",
-            "type": [
-                "Local holiday"
-            ]
-        },
-        {
-            "date": "2028-09-30",
-            "localName": "National Day for Truth and Reconciliation is a federal employees holiday in Canada",
-            "name": "National Day for Truth and Reconciliation",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2028-09-30",
             "localName": "National Day for Truth and Reconciliation is a optional holiday in Canada",
             "name": "National Day for Truth and Reconciliation",
             "type": [
                 "Local holiday"
+            ]
+        },
+        {
+            "date": "2028-09-30",
+            "localName": "Yom Kippur is an important Jewish holiday that falls on the 10th day of the month of Tishrei in the Jewish calendar.",
+            "name": "Yom Kippur",
+            "type": [
+                "Hebrew"
             ]
         },
         {
@@ -4836,23 +4295,7 @@ export const holidays_CA: CountryHolidays = {
             "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
             "name": "Thanksgiving Day",
             "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2028-10-09",
-            "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
-            "name": "Thanksgiving Day",
-            "type": [
                 "Common local holiday"
-            ]
-        },
-        {
-            "date": "2028-10-09",
-            "localName": "Thanksgiving Day is a holiday to give thanks for the blessings in one's life, particularly the harvest. It is a day off work for many Canadians.",
-            "name": "Thanksgiving Day",
-            "type": [
-                "Observance"
             ]
         },
         {
@@ -4938,14 +4381,6 @@ export const holidays_CA: CountryHolidays = {
             ]
         },
         {
-            "date": "2028-11-11",
-            "localName": "Remembrance Day commemorates civilians and military personnel who lost their lives in armed conflicts.",
-            "name": "Remembrance Day",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
             "date": "2028-12-03",
             "localName": "Many Christians in Canada celebrate the first Sunday of Advent in the lead up to Christmas.",
             "name": "First Sunday of Advent",
@@ -5020,22 +4455,6 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2028-12-26",
-            "localName": "Kwanzaa is a week-long holiday honoring the culture and traditions of African people and their descendants worldwide.",
-            "name": "Kwanzaa (first day)",
-            "type": [
-                "Observance"
-            ]
-        },
-        {
-            "date": "2028-12-26",
-            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Boxing Day",
-            "type": [
-                "National holiday"
-            ]
-        },
-        {
-            "date": "2028-12-26",
             "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
             "name": "Boxing Day",
             "type": [
@@ -5044,10 +4463,10 @@ export const holidays_CA: CountryHolidays = {
         },
         {
             "date": "2028-12-26",
-            "localName": "The day after Christmas Day is known as Boxing Day and is a holiday in many parts of Canada.",
-            "name": "Boxing Day",
+            "localName": "Kwanzaa is a week-long holiday honoring the culture and traditions of African people and their descendants worldwide.",
+            "name": "Kwanzaa (first day)",
             "type": [
-                "Optional holiday"
+                "Observance"
             ]
         },
         {
@@ -5056,14 +4475,6 @@ export const holidays_CA: CountryHolidays = {
             "name": "New Year's Eve",
             "type": [
                 "Observance"
-            ]
-        },
-        {
-            "date": "2028-04-17",
-            "localName": "Easter Monday is a designated paid holiday for eligible federal public-service employees throughout Canada under the applicable employment terms and collective agreements. This employee-scoped occurrence does not grant a general day off to all Canadian workers; holiday pay and eligibility depend on employment status.",
-            "name": "Easter Monday (Federal Public Service)",
-            "type": [
-                "National holiday"
             ]
         }
     ]

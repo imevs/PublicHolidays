@@ -57,6 +57,7 @@ export const ru = {
         currentTimePrefix: "Местное время:",
         hideInactive: "Скрыть неактивные",
         showAll: "Показать все",
+        noSchoolHolidayData: "Нет данных о школьных каникулах",
     },
     continents: {
         europe: "Европа",
