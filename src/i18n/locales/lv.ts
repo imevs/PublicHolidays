@@ -133,6 +133,10 @@ export const lv = {
         clickToSeeWholeYear: "Noklikšķiniet, lai redzētu visu gadu",
     },
     calendarGrid: {
+    plannerRegionAria: "Gada plānotājs {year}. gadam",
+    legendHoliday: "Svētku diena",
+    legendSchoolHoliday: "Skolēnu brīvlaiks",
+    legendWeekend: "Brīvdienas",
         clickToSwitchMonthView: "Noklikšķiniet, lai pārslēgtos uz mēneša skatu",
         eventsOnDate: "Notikumi {date}",
         close: "Aizvērt",
@@ -145,6 +149,8 @@ export const lv = {
         longHolidayTooltipCustom: "Garās brīvdienas ({days} d.)",
     },
     actionButtons: {
+    plannerShort: "Plānotājs",
+    plannerView: "Gada plānotājs",
         combinedIcsDownloaded: "Apvienotais ICS fails lejupielādēts",
         separateIcsDownloaded: "Atsevišķie ICS faili lejupielādēti",
         calendarImageSaved: "Kalendāra attēls saglabāts",

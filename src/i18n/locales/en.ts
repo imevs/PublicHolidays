@@ -79,6 +79,10 @@ export const en = {
         clickToSeeWholeYear: "Click to see whole year",
     },
     calendarGrid: {
+    plannerRegionAria: "Year planner calendar for {year}",
+    legendHoliday: "Public holiday",
+    legendSchoolHoliday: "School holiday",
+    legendWeekend: "Weekend",
         clickToSwitchMonthView: "Click to switch on month view",
         eventsOnDate: "Events on {date}",
         close: "Close",
@@ -91,6 +95,8 @@ export const en = {
         longHolidayTooltipCustom: "{days}-day long holiday",
     },
     actionButtons: {
+    plannerShort: "Planner",
+    plannerView: "Year planner",
         combinedIcsDownloaded: "Combined ICS file downloaded",
         separateIcsDownloaded: "Separate ICS files downloaded",
         calendarImageSaved: "Calendar image saved",

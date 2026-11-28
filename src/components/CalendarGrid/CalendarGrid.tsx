@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { CalendarDay as CalendarDayType, type OtherEvent } from "../../types/index.ts";
+import { CalendarDay as CalendarDayType, type CalendarMode, type OtherEvent } from "../../types/index.ts";
 import { formatDateString } from "../../utils/dateUtils.ts";
 import styles from "./CalendarGrid.module.css";
 import { getFlagEmoji } from "../../utils/countryFlags.ts";
@@ -12,6 +12,7 @@ import { useTranslation } from "../../i18n/useTranslation.ts";
 import { getLocalizedHolidayName } from "../../i18n/holidayNames.ts";
 import { MonthView } from "./MonthView.tsx";
 import { YearView } from "./YearView.tsx";
+import { YearPlannerView } from "./YearPlannerView.tsx";
 
 interface CalendarGridProps {
     onNewEvent?: (date: OtherEvent) => void; // if not defined will not show popup for new event
@@ -20,9 +21,9 @@ interface CalendarGridProps {
     selectedYearDays: CalendarDayType[];
     selectedMonthDays: CalendarDayType[];
     currentDate: UTCDate;
-    mode: "month" | "year";
+    mode: CalendarMode;
     countryData: Record<string, Description>;
-    onModeChange: (mode: "month" | "year", month: number) => void;
+    onModeChange: (mode: CalendarMode, month: number) => void;
     shouldScrollToMonth?: boolean;
     onScrolledToMonth?: () => void;
     highlightLongHolidays?: boolean;
@@ -139,8 +140,8 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
 
     return (
         <div id="calendar-grid-capture-container" className={styles.calendarGridContainer}>
-            {mode === "month"
-                ? <MonthView
+            {mode === "month" ? (
+                <MonthView
                     shouldAnimate={canAnimate}
                     selectedDays={selectedMonthDays}
                     onModeChange={onModeChange}
@@ -152,7 +153,21 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                     countryData={countryData}
                     highlightLongHolidays={props.highlightLongHolidays}
                 />
-                : <YearView
+            ) : mode === "planner" ? (
+                <YearPlannerView
+                    shouldAnimate={canAnimate}
+                    selectedDays={selectedYearDays}
+                    onModeChange={onModeChange}
+                    currentDate={currentDate}
+                    dateForPopup={dateForPopup}
+                    setDateForPopup={handleOpenNewForDate}
+                    isEditable={isEditable}
+                    setSelectedDay={setSelectedDay}
+                    countryData={countryData}
+                    highlightLongHolidays={props.highlightLongHolidays}
+                />
+            ) : (
+                <YearView
                     shouldAnimate={canAnimate}
                     selectedDays={selectedYearDays}
                     onModeChange={onModeChange}
@@ -165,7 +180,8 @@ const CalendarGrid: React.FC<CalendarGridProps> = (props) => {
                     shouldScrollToMonth={props.shouldScrollToMonth}
                     onScrolledToMonth={props.onScrolledToMonth}
                     highlightLongHolidays={props.highlightLongHolidays}
-                />}
+                />
+            )}
             {dateForPopup && onNewEvent && (
                 <EventPopup
                     initialDate={formatDateString(dateForPopup)}

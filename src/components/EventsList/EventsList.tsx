@@ -1,4 +1,4 @@
-import { CalendarDay as CalendarDayType } from "../../types/index.ts";
+import { CalendarDay as CalendarDayType, CalendarMode } from "../../types/index.ts";
 import { formatDateToReadable } from "../../utils/dateUtils.ts";
 
 import styles from "./EventsList.module.css";
@@ -12,7 +12,7 @@ import { getLocalizedHolidayName } from "../../i18n/holidayNames.ts";
 export type EventsListProps = {
     selectedYearDays: CalendarDayType[];
     currentDate: UTCDate;
-    mode: "month" | "year";
+    mode: CalendarMode;
     countryData: Record<string, Description>;
 }
 

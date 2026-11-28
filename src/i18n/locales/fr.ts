@@ -133,6 +133,10 @@ export const fr = {
         clickToSeeWholeYear: "Cliquer pour voir toute l'année",
     },
     calendarGrid: {
+    plannerRegionAria: "Planning annuel pour {year}",
+    legendHoliday: "Jour férié",
+    legendSchoolHoliday: "Vacances scolaires",
+    legendWeekend: "Week-end",
         clickToSwitchMonthView: "Cliquer pour passer à la vue mensuelle",
         eventsOnDate: "Événements du {date}",
         close: "Fermer",
@@ -145,6 +149,8 @@ export const fr = {
         longHolidayTooltipCustom: "Long week-end de {days} jours",
     },
     actionButtons: {
+    plannerShort: "Planning",
+    plannerView: "Planning annuel",
         combinedIcsDownloaded: "Fichier ICS combiné téléchargé",
         separateIcsDownloaded: "Fichiers ICS séparés téléchargés",
         calendarImageSaved: "Image du calendrier enregistrée",

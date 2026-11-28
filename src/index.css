@@ -1847,4 +1847,98 @@ a:hover {
     page-break-inside: avoid;
     margin-bottom: 10px !important;
   }
+
+  /* Year Planner A4 landscape single-page fitting */
+  [class*="plannerWrapper"] {
+    overflow: visible !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  [class*="plannerTable"] {
+    min-inline-size: 0 !important;
+    width: 100% !important;
+    font-size: 0.56rem !important;
+  }
+
+  [class*="plannerMonthBtn"] {
+    padding: 3px 2px !important;
+    font-size: 0.65rem !important;
+  }
+
+  [class*="plannerCell"],
+  [class*="plannerEmptyCell"] {
+    block-size: 17px !important;
+    padding: 1px 2px !important;
+  }
+
+  [class*="plannerWeekday"],
+  [class*="plannerEventLabel"] {
+    font-size: 0.52rem !important;
+  }
+
+  [class*="plannerWeekNum"] {
+    font-size: 0.48rem !important;
+  }
+
+  [class*="plannerLegend"] {
+    margin: 4px 0 0 0 !important;
+    font-size: 0.62rem !important;
+    gap: 12px !important;
+  }
+
+  /* Landscape / Year Planner: 3-column compact EventsList on page 2 */
+  #calendar-grid-print-container:has([class*="plannerTable"]) [class*="eventsList"] {
+    margin: 0 !important;
+  }
+
+  #calendar-grid-print-container:has([class*="plannerTable"]) [class*="eventsWrapper"] {
+    column-count: 3 !important;
+    column-gap: 14px !important;
+    font-size: 0.72rem !important;
+    line-height: 1.25 !important;
+  }
+
+  #calendar-grid-print-container:has([class*="plannerTable"]) [class*="dateEvents"] {
+    padding-bottom: 4px !important;
+    margin-bottom: 4px !important;
+  }
+
+  #calendar-grid-print-container:has([class*="plannerTable"]) [class*="eventsDate"] {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+
+  #calendar-grid-print-container:has([class*="plannerTable"]) [class*="events"] {
+    padding-left: 10px !important;
+  }
+}
+
+@media print and (orientation: landscape) {
+  [class*="eventsList"] {
+    margin: 0 !important;
+  }
+
+  [class*="eventsWrapper"] {
+    column-count: 3 !important;
+    column-gap: 14px !important;
+    font-size: 0.72rem !important;
+    line-height: 1.25 !important;
+  }
+
+  [class*="dateEvents"] {
+    padding-bottom: 4px !important;
+    margin-bottom: 4px !important;
+  }
+
+  [class*="eventsDate"] {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+  }
+
+  [class*="events"] {
+    padding-left: 10px !important;
+  }
 }

@@ -33,6 +33,8 @@ export interface HolidayWithCountry {
     countryCode: CountryCode;
 }
 
+export type CalendarMode = "month" | "year" | "planner";
+
 export interface OtherEvent {
     date: DateString;
     endDate?: DateString;

@@ -1,6 +1,6 @@
 import { useTranslation } from "../../i18n/useTranslation.ts";
 import styles from "./CalendarGrid.module.css";
-import { CalendarDay as CalendarDayType, OtherEvent } from "../../types/index.ts";
+import type { CalendarDay as CalendarDayType, CalendarMode, OtherEvent } from "../../types/index.ts";
 import { UTCDate } from "../../utils/UTCDate.ts";
 import { Description } from "../../data/holidays_descriptions/all.ts";
 import CalendarDay from "../CalendarDay/CalendarDay.tsx";
@@ -17,7 +17,7 @@ export type MonthViewProps = {
     selectedDays: CalendarDayType[];
     currentDate: UTCDate;
     countryData: Record<string, Description>;
-    onModeChange: (mode: "month" | "year", month: number) => void;
+    onModeChange: (mode: CalendarMode, month: number) => void;
     highlightLongHolidays?: boolean;
 };
 

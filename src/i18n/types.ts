@@ -97,6 +97,10 @@ export interface TranslationDictionary {
         clickToSeeWholeYear: string;
     };
     calendarGrid: {
+    plannerRegionAria: string;
+    legendHoliday: string;
+    legendSchoolHoliday: string;
+    legendWeekend: string;
         clickToSwitchMonthView: string;
         eventsOnDate: string;
         close: string;
@@ -109,6 +113,8 @@ export interface TranslationDictionary {
         longHolidayTooltipCustom: string;
     };
     actionButtons: {
+    plannerShort: string;
+    plannerView: string;
         combinedIcsDownloaded: string;
         separateIcsDownloaded: string;
         calendarImageSaved: string;

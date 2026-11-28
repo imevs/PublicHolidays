@@ -133,6 +133,10 @@ export const ru = {
         clickToSeeWholeYear: "Нажмите, чтобы увидеть весь год",
     },
     calendarGrid: {
+    plannerRegionAria: "Годовой планер на {year}",
+    legendHoliday: "Праздник",
+    legendSchoolHoliday: "Школьные каникулы",
+    legendWeekend: "Выходные",
         clickToSwitchMonthView: "Нажмите, чтобы переключиться на вид месяца",
         eventsOnDate: "События на {date}",
         close: "Закрыть",
@@ -145,6 +149,8 @@ export const ru = {
         longHolidayTooltipCustom: "Длинные выходные ({days} дн.)",
     },
     actionButtons: {
+    plannerShort: "Планер",
+    plannerView: "Годовой планер",
         combinedIcsDownloaded: "Объединённый файл ICS скачан",
         separateIcsDownloaded: "Отдельные файлы ICS скачаны",
         calendarImageSaved: "Изображение календаря сохранено",

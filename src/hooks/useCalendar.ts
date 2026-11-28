@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { CalendarDay, CalendarEvent } from "../types/index.ts";
+import { CalendarDay, CalendarEvent, CalendarMode } from "../types/index.ts";
 import {
     convertDayToEUFormat,
     DayIndexes,
@@ -270,7 +270,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         }
     };
     const [selectedCountries, setSelectedCountries] = useState<CountryCode[]>(["LV"]);
-    const [mode, setMode] = useState<"month" | "year">("year");
+    const [mode, setMode] = useState<CalendarMode>("year");
     const [showAllCountries, setShowAllCountries] = useState(false);
     const [showSchoolHolidays, setShowSchoolHolidays] = useState(false);
 
@@ -296,8 +296,8 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
                 setShouldScrollToMonth(true);
             }
         }
-        const urlMode = urlSearchParams.get("mode") as "month" | "year";
-        if (urlMode === "month" || urlMode === "year") {
+        const urlMode = urlSearchParams.get("mode") as CalendarMode;
+        if (urlMode === "month" || urlMode === "year" || urlMode === "planner") {
             setMode(urlMode);
         }
         const showAll = urlSearchParams.get("all") as "1" | "0";
@@ -374,7 +374,7 @@ export const useCalendar = (holidaysData: CalendarEvent[]) => {
         setShowSchoolHolidays(state);
     }, []);
 
-    const handleModeChange = useCallback((newMode: "month" | "year", month: number): void => {
+    const handleModeChange = useCallback((newMode: CalendarMode, month: number): void => {
         hasInteractedRef.current = true;
         setShouldScrollToMonth(false);
         const params = getParams();

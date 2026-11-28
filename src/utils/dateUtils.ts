@@ -53,11 +53,14 @@ export const getDaysInMonth = (year: number, month: number): number => {
     return new Date(year, month + 1, 0).getDate();
 };
 
-export const getMonthName = (month: number, locale: string = dateLocale): string => {
-    return new Date(Date.UTC(2025, month, 15)).toLocaleString(locale, {
-        month: "long",
-        timeZone: "UTC",
-    });
+export const getISOWeekNumber = (date: UTCDate): number => {
+    const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+    // Set to nearest Thursday: current date + 4 - current day number
+    // Make Sunday's day number 7
+    const dayNum = d.getUTCDay() || 7;
+    d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+    const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+    return Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
 };
 
 export const getNextMonth = (num: number): number => {

@@ -15,9 +15,9 @@ import { SubscribeModal } from "./SubscribeModal.tsx";
 
 interface ActionButtonsProps {
     selectedYearDays: CalendarDayType[];
-    viewMode: "month" | "year";
+    viewMode: "month" | "year" | "planner";
     toggleMode(): void;
-    onSetMode?: (mode: "month" | "year") => void;
+    onSetMode?: (mode: "month" | "year" | "planner") => void;
     isCustomEditor?: boolean;
     setDataText?: (text: string) => void;
     setHolidaysData?: (data: CalendarEvent[]) => void;
@@ -66,7 +66,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
 
     useToolbarRovingTabIndex(toolbarRef);
 
-    const handleSelectMode = (targetMode: "month" | "year") => {
+    const handleSelectMode = (targetMode: "month" | "year" | "planner") => {
         if (onSetMode) {
             onSetMode(targetMode);
         } else if (viewMode !== targetMode) {
@@ -177,6 +177,20 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
                     className={styles.actionButtonContainer}
                 >
                     <div role="group" aria-label={t.actionButtons.viewModeAria} className={styles.viewModeGroup}>
+                        <button
+                            type="button"
+                            className={styles.modeButton}
+                            aria-pressed={viewMode === "planner"}
+                            aria-label={t.actionButtons.plannerView}
+                            title={t.actionButtons.plannerView}
+                            onClick={() => handleSelectMode("planner")}
+                        >
+                            <span className={styles.buttonIcon} aria-hidden="true">📋</span>
+                            <span className={styles.modeLabel}>
+                                <span className={styles.mobileLabel}>{t.actionButtons.plannerShort}</span>
+                                <span className={styles.desktopLabel}>{t.actionButtons.plannerView}</span>
+                            </span>
+                        </button>
                         <button
                             type="button"
                             className={styles.modeButton}
